@@ -1,0 +1,9 @@
+:root {
+    --border-color: gray;
+    --app-bg-left-color: #f1effe;
+    --app-bg-center-color: white;
+    --app-bg-right-color: #fee4ce;
+    --app-bg-header: rgba(227, 251, 249, 0.79);
+    --app-bg-footer: rgba(227, 226, 226, 0.79);
+    --app-font-color: #363535;
+}

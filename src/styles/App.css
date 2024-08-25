@@ -1,9 +1,3 @@
-:root {
-    --border-color: gray;
-    --app-bg-left-color: #f1effe;
-    --app-bg-center-color: white;
-    --app-bg-right-color: #fee4ce
-}
 
 .border {
     border: 1px solid var(--border-color);
@@ -174,7 +168,8 @@
 }
 
 .align-center {
-    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .left {

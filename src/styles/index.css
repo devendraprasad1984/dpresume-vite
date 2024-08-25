@@ -1,7 +1,8 @@
 html {
-
+    margin: 10px;
 }
 
 body {
     box-sizing: border-box;
+    color: var(--app-font-color);
 }

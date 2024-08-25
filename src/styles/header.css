@@ -1,0 +1,5 @@
+.header {
+    min-height: 120px;
+    flex: 1;
+    background-color: var(--app-bg-header);
+}

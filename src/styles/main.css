@@ -1,16 +1,3 @@
 .main-outer {
     height: 98vh;
 }
-
-.header {
-    flex: 1;
-}
-
-.body {
-    flex: 1 1 100%;
-    height: 90vh;
-}
-
-.footer {
-    flex: 1;
-}
