@@ -1,4 +1,5 @@
 import "./styles/root.css";
+import "./styles/routes.css";
 import "./styles/main.css";
 import "./styles/shared.css";
 import "./styles/header.css";
