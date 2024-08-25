@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = () => {
-    return <div className="relative wid100 height100">
+    return <div className="relative wid100 height100p">
         <img src="images/coding-bg.jpeg" alt="coding background" className="wid100 height100p"/>
         <div className="flex row space-between absolute glass wid100 top">
             <div className="wid10">
