@@ -1,0 +1,9 @@
+.main-left{
+    background-color: var(--app-bg-left-color);
+}
+.main-center{
+    background-color: var(--app-bg-center-color);
+}
+.main-right{
+    background-color: var(--app-bg-right-color);
+}

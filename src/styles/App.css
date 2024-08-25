@@ -1,5 +1,8 @@
 :root {
     --border-color: gray;
+    --app-bg-left-color: #f1effe;
+    --app-bg-center-color: white;
+    --app-bg-right-color: #fee4ce
 }
 
 .border {
