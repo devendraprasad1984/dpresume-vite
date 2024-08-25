@@ -1,42 +1,185 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+    --border-color: gray;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.border {
+    border: 1px solid var(--border-color);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fixed {
+    position: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.absolute {
+    position: absolute;
 }
 
-.card {
-  padding: 2em;
+.flex {
+    display: flex;
 }
 
-.read-the-docs {
-  color: #888;
+.basis {
+    flex-basis: auto;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.shrink {
+    flex-shrink: 1;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.col-reverse {
+    flex-direction: column-reverse;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-even {
+    justify-content: space-evenly;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid2x2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid3x3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid4x4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-auto {
+    grid-template-columns: repeat(auto-fit, 1fr);
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.overflow {
+    overflow: auto;
+}
+
+.gap1 {
+    gap: 12px;
+}
+
+.gap2 {
+    gap: 20px;
+}
+
+.gap5 {
+    gap: 30px;
+}
+
+.gap10 {
+    gap: 40px;
+}
+
+.pad5 {
+    padding: 5px;
+}
+
+.pad10 {
+    padding: 10px;
+}
+
+.pad15 {
+    padding: 15px;
+}
+
+.pad20 {
+    padding: 20px;
+}
+
+.wid10 {
+    width: 10%;
+}
+
+.wid20 {
+    width: 20%;
+}
+
+.wid30 {
+    width: 30%;
+}
+
+.wid40 {
+    width: 40%;
+}
+
+.wid50 {
+    width: 50%;
+}
+
+.wid60 {
+    width: 60%;
+}
+
+.wid70 {
+    width: 70%;
+}
+
+.wid80 {
+    width: 80%;
+}
+
+.wid90 {
+    width: 90%;
+}
+
+.wid100 {
+    width: 100%;
+}
+
+.align-center {
+    align-content: center;
+}
+
+.left {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.right {
+    text-align: right;
+    justify-content: flex-end;
 }
