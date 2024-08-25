@@ -3,12 +3,16 @@
     height: 90vh;
 }
 
-.main-left{
+.main-left {
     background-color: var(--app-bg-left-color);
 }
-.main-center{
+
+.main-center {
     background-color: var(--app-bg-center-color);
+    flex: 0 1 100%;
+    height: auto;
 }
-.main-right{
+
+.main-right {
     background-color: var(--app-bg-right-color);
 }

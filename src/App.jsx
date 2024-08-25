@@ -1,6 +1,6 @@
 import "./styles/root.css";
 import "./styles/main.css";
-import "./styles/App.css";
+import "./styles/shared.css";
 import "./styles/header.css";
 import "./styles/body.css";
 import "./styles/footer.css";

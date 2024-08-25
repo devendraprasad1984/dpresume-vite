@@ -1,5 +1,4 @@
 .footer {
-    flex: 1;
-    min-height: 100px;
     background-color: var(--app-bg-footer);
+    color: var(--footer-text-color);
 }

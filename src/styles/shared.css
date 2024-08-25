@@ -7,6 +7,10 @@
     position: fixed;
 }
 
+.relative {
+    position: relative;
+}
+
 .absolute {
     position: absolute;
 }
@@ -127,6 +131,30 @@
     padding: 20px;
 }
 
+.margin10 {
+    margin: 10px;
+}
+
+.margin20 {
+    margin: 20px;
+}
+
+.margin--x-10 {
+    margin: 0 10px 0 10px;
+}
+
+.margin--y-10 {
+    margin: 10px 0 10px 0;
+}
+
+.margin--x-20 {
+    margin: 0 20px 0 20px;
+}
+
+.margin--y-20 {
+    margin: 20px 0 20px 0;
+}
+
 .wid10 {
     width: 10%;
 }
@@ -167,17 +195,92 @@
     width: 100%;
 }
 
+.height100p {
+    height: 100%;
+}
+
+.height100 {
+    height: 100px;
+}
+
+.height150 {
+    height: 150px;
+}
+
+.height200 {
+    height: 200px;
+}
+
+.height300 {
+    height: 300px;
+}
+
+.height450 {
+    height: 450px;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
 .align-center {
     align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .left {
     text-align: left;
-    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .right {
     text-align: right;
-    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.size12 {
+    font-size: 12px;
+}
+
+.size14 {
+    font-size: 14px;
+}
+
+.size16 {
+    font-size: 16px;
+}
+
+.size20 {
+    font-size: 20px;
+}
+
+.size24 {
+    font-size: 24px;
+}
+
+.size30 {
+    font-size: 30px;
+}
+
+.size38 {
+    font-size: 38px;
+}
+
+.size48 {
+    font-size: 48px;
+}
+
+.glass {
+    background: rgba(241, 241, 241, 0.65);
+    border-radius: 24px !important;
+    width: inherit;
+    height: inherit;
 }
