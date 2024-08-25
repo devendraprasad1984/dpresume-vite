@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
-    return <div className="flex row space-between pad20">
+    return <div className="flex row space-between pad20 mcol">
         <div className="flex col gap1">
             <h2>HEADING</h2>
             <span>anchor1</span>
