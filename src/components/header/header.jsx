@@ -2,9 +2,11 @@ import React from 'react';
 
 const Header = () => {
     return <div className="relative wid100 height100">
-        <img src="images/coding-bg.jpeg" alt="coding background" className="wid100 height100"/>
-        <div className="flex row space-between absolute glass wid100 top height100p">
-            <div className="wid10">my pic</div>
+        <img src="images/coding-bg.jpeg" alt="coding background" className="wid100 height100p"/>
+        <div className="flex row space-between absolute glass wid100 top">
+            <div className="wid10">
+                <img src="images/my-pic.jpeg" className="logo"/>
+            </div>
             <div className="wid60 flex col align-center">
                 <span className="size38">Devendra Prasad</span>
                 <span>Senior Staff Software Engineer</span>

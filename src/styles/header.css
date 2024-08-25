@@ -3,3 +3,9 @@
     flex: 1;
     background-color: var(--app-bg-header);
 }
+
+.logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
