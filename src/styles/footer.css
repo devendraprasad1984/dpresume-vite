@@ -1,7 +1,5 @@
 .main-footer{
-    background: url("images/footer-wallpaper.jpeg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(0, 212, 255));
 }
 .footer {
     background-color: var(--app-bg-footer);

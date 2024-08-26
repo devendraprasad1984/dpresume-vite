@@ -3,6 +3,14 @@
     border: 1px solid var(--border-color);
 }
 
+.border-right {
+    border-right: 1px solid var(--border-color);
+}
+
+.border-left {
+    border-right: 1px solid var(--border-color);
+}
+
 .fixed {
     position: fixed;
 }
