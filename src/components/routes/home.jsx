@@ -4,7 +4,7 @@ import Title from "../body/component/title.jsx";
 const fillHome=()=>{
     let arr=[];
     for(let i=0; i<1000; i++){
-        arr.push(<div>Hello World {i}</div>)
+        arr.push(<li className="roman">Hello World</li>)
     }
     return arr;
 }
@@ -12,7 +12,7 @@ const Home = () => {
     return <React.Fragment>
         <div>
             <Title title="Home"/>
-            {fillHome()}
+            <ul className="double-list">{fillHome()}</ul>
         </div>
     </React.Fragment>
 };

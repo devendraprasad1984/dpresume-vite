@@ -1,0 +1,31 @@
+.double-list {
+  counter-reset: count;
+}
+
+.double-list li {
+  counter-increment: count+1;
+}
+
+.double-list li::before {
+  content: counter(count, decimal) ') ';
+}
+
+.roman::before {
+  content: "[" counter(count, lower-roman) "]";
+}
+
+.rotate35 {
+  transform: rotate3d(1, 1, 1, 35deg);
+}
+
+.rotate-35 {
+  transform: rotate3d(1, 1, 1, -35deg);
+}
+
+.rotate20 {
+  transform: rotate3d(1, 1, 1, 20deg);
+}
+
+.rotate-20 {
+  transform: rotate3d(1, 1, 1, -20deg);
+}

@@ -10,4 +10,7 @@
     --footer-text-color: #484242;
     --acitve-link-bg-color: #e96f6b;
     --acitve-link-text-color: white;
+    --color-red: lch(42.758% 73.588 34.159);
+    --color-yellow: #f2d258;
+    --color-green: #5ac72b;
 }

@@ -1,8 +1,17 @@
-html {
-    margin: 10px;
-}
 
-body {
+html, body {
+    margin: 5px;
     box-sizing: border-box;
     color: var(--app-font-color);
+    font-family: "Poppins", sans-serif;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

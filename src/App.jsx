@@ -1,4 +1,5 @@
 import "./styles/root.css";
+import "./styles/gimic.css";
 import "./styles/routes.css";
 import "./styles/main.css";
 import "./styles/center.css";
@@ -7,6 +8,7 @@ import "./styles/header.css";
 import "./styles/body.css";
 import "./styles/footer.css";
 import "./styles/mobile.css";
+import "./styles/counter.css";
 
 import Footer from "./components/footer/footer.jsx";
 import Header from "./components/header/header.jsx";
