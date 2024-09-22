@@ -1,7 +1,22 @@
-.main-footer{
-    background-image: linear-gradient(to right bottom, rgba(245, 184, 248, 0), rgb(169, 90, 245), rgb(107, 48, 162));
+.main-footer {
+  background-image: linear-gradient(to right bottom, rgba(245, 184, 248, 0), rgb(169, 90, 245), rgb(107, 48, 162));
 }
+
 .footer {
-    background-color: var(--app-bg-footer);
-    color: var(--footer-text-color);
+  background-color: var(--app-bg-footer);
+  color: var(--footer-text-color);
+}
+
+.phone {
+}
+
+.phone::before {
+  content: '☏ '
+}
+
+.email {
+}
+
+.email::before {
+  content: '⚡'
 }

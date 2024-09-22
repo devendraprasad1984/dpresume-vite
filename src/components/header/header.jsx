@@ -12,8 +12,8 @@ const Header = () => {
                     <span>Senior Staff Software Engineer</span>
                 </div>
                 <div className="wid30 flex col right mwid100p pad10">
-                    <span>+91 958 279 7772</span>
-                    <span>devendraprasad1984@gmail.com</span>
+                    <span className="email">devendraprasad1984@gmail.com</span>
+                    <span className="phone">+91 958 279 7772</span>
                 </div>
             </div>
         </div>

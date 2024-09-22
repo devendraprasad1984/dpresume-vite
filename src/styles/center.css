@@ -1,4 +1,7 @@
 .center-route-container {
-  height: 850px;
-  max-height: 850px;
+  height: auto;
+  max-height: 750px;
+}
+
+.skill-label {
 }

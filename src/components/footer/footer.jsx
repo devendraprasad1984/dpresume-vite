@@ -30,8 +30,8 @@ const Footer = () => {
         </div>
         <div className="flex col gap1 glass pad10">
             <h2>Contact me</h2>
-            <div>Reach me @: devendraprasad1984@gmail.com</div>
-            <div>(M): +91 958 279 7772</div>
+            <div className="wt600 email">devendraprasad1984@gmail.com</div>
+            <div className="wt600 size14 phone">+91 958 279 7772</div>
         </div>
     </div>
 }

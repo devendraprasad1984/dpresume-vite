@@ -3,7 +3,7 @@ import Title from "../body/component/title.jsx";
 
 const fillHome = () => {
   let arr = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 100; i++) {
     arr.push(<li className="roman">Hello World</li>)
   }
   return arr;
