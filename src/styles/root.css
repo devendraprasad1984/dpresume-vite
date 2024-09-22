@@ -1,10 +1,13 @@
 :root {
     --border-color: gray;
+    --app-text-color: #484242;
     --app-bg-left-color: white;
     --app-bg-center-color: white;
-    --app-bg-right-color: rgba(227, 251, 249, 0.79);
-    --app-bg-header: rgba(227, 251, 249, 0.79);
-    --app-bg-footer: rgba(35, 17, 128, 0.79);
+    --app-bg-right-color: white;
+    --app-bg-header: rgba(208, 174, 247, 0.79);
+    --app-bg-footer: white;
     --app-font-color: #363535;
-    --footer-text-color: white;
+    --footer-text-color: #484242;
+    --acitve-link-bg-color: #e96f6b;
+    --acitve-link-text-color: white;
 }

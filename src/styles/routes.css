@@ -11,11 +11,11 @@ ul li a {
     text-decoration: none;
 }
 
-
-ul li a:hover {
-    color: #00a8ff;
+.nav-link {
+    padding: 5px;
 }
 
-ul li a.active {
-    color: #00a8ff;
+.active-link {
+    background-color: var(--acitve-link-bg-color);
+    color: var(--acitve-link-text-color);
 }

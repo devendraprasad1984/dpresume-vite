@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from "../common/title.jsx";
+import Title from "../body/component/title.jsx";
 
 const Home = () => {
     return <React.Fragment>

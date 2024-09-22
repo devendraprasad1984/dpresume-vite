@@ -13,7 +13,7 @@ import Body from "./components/body/body.jsx";
 
 function App() {
     return <div className="flex col space-between main-outer">
-        <header className="header"><Header/></header>
+        <header className="header pad5"><Header/></header>
         <section className="body flex row mcol gap1 basis space-between wid100">
             <Body/>
         </section>
