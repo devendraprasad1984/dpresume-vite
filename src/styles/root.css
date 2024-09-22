@@ -1,4 +1,5 @@
 :root {
+    --container-height: 750px;
     --border-color: gray;
     --app-text-color: #484242;
     --app-bg-left-color: white;

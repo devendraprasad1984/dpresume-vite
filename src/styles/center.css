@@ -1,6 +1,6 @@
 .center-route-container {
   height: auto;
-  max-height: 750px;
+  max-height: var(--container-height);
 }
 
 .skill-label {

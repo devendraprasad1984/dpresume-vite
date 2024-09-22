@@ -6,16 +6,21 @@
 
 .main-left {
   background-color: var(--app-bg-left-color);
+  height: auto;
+  max-height: var(--container-height);
 }
 
 .main-center {
   background-color: var(--app-bg-center-color);
   flex: 0 1 100%;
   height: auto;
+  max-height: var(--container-height);
 }
 
 .main-right {
   background-color: var(--app-bg-right-color);
+  height: auto;
+  max-height: var(--container-height);
 }
 
 h1, h2, h3 {
