@@ -4,7 +4,7 @@ import Home from "../../routes/home.jsx";
 import About from "../../routes/about.jsx";
 
 const Center = () => {
-    return <div>
+    return <div className="">
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>

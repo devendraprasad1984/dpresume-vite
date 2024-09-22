@@ -5,7 +5,7 @@ import Skills from "./skills.jsx";
 const Right = () => {
   return <div className="gap10 col">
     <div className="col glass">
-      <h2>Skills</h2>
+      <div className="size24">Skills</div>
       <Skills/>
     </div>
   </div>

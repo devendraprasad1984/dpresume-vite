@@ -34,6 +34,7 @@
 .space-fill-100 {
   flex: 1 1 100%;
 }
+
 .space-fill-50 {
   flex: 1 1 50%;
 }
@@ -295,6 +296,18 @@
 
 .size48 {
   font-size: 48px;
+}
+
+.wt500 {
+  font-weight: 500;
+}
+
+.wt600 {
+  font-weight: 600;
+}
+
+.wt700 {
+  font-weight: 700;
 }
 
 .glass {
