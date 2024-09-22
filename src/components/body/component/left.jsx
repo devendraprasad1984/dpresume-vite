@@ -11,7 +11,7 @@ const Left = () => {
     return <div className="overflow">
         <ul className="counter-list">
             <li className="size20">
-                <NavLink className={`nav-link ${seeIfActive()}`} to="/public">Home</NavLink>
+                <NavLink className={`nav-link ${seeIfActive()}`} to="/">Home</NavLink>
             </li>
             <li className="size20">
                 <NavLink className={`nav-link ${seeIfActive()}`} to="/about">About
