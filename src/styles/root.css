@@ -1,12 +1,12 @@
 :root {
     --app-bg-color: #3e3d3d;
-    --container-height: 30rem;
+    --container-height: 80rem;
     --border-color: gray;
-    --app-text-color: #271a15;
+    --app-text-color: #474545;
     --app-bg-left-color: #acaaaa;
     --app-bg-center-color: white;
     --app-bg-right-color: #acaaaa;
-    --center-body-bg-color: aliceblue;
+    --center-body-bg-color: white;
     --app-bg-header: #6d6a6a;
     --app-bg-footer: #acaaaa;
     --app-font-color: #363535;

@@ -12,7 +12,7 @@
 
 .main-center {
     flex: 0 1 100%;
-    height: var(--container-height);
+    height: auto;
     max-height: var(--container-height);
 }
 

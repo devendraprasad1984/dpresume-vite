@@ -6,13 +6,11 @@ import ProjectList from "./routes/projectList.jsx";
 import AppsList from "./routes/appsList.jsx";
 
 const AppRoutes = () => {
-  return <div className="">
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/about" element={<About/>}/>
-      <Route path="/projects" element={<ProjectList/>}/>
-      <Route path="/apps" element={<AppsList/>}/>
-    </Routes>
-  </div>;
+  return <Routes>
+    <Route path="/" element={<Home/>}/>
+    <Route path="/about" element={<About/>}/>
+    <Route path="/projects" element={<ProjectList/>}/>
+    <Route path="/apps" element={<AppsList/>}/>
+  </Routes>;
 };
 export default AppRoutes;

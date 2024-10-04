@@ -27,6 +27,8 @@ p {
 div {
     text-overflow: ellipsis;
     text-wrap: wrap;
+    white-space: wrap;
+    word-wrap: break-word;
 }
 
 li {
