@@ -1,7 +1,8 @@
 .center-route-container {
-  height: auto;
-  max-height: var(--container-height);
+    height: auto;
+    max-height: var(--container-height);
 }
 
 .skill-label {
+    color: var(--color-sea-green);
 }

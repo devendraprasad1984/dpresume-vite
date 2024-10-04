@@ -16,8 +16,11 @@ const Footer = () => {
         <FooterLinks linksArray={links.footer.section2}/>
       </div>
       <div className={colClass}>
+        <FooterLinks linksArray={links.footer.section3}/>
       </div>
       <div className={colClass}>
+        <h2>Project Demo Videos</h2>
+        <FooterLinks linksArray={links.footer.section4}/>
       </div>
       <div className={colClass}>
         <h2>Contact me</h2>

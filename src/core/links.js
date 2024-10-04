@@ -1,18 +1,80 @@
 const links = {
-    linkedIn: "https://www.linkedin.com/in/devendraprasad/overlay/contact-info/",
-    cv: "https://dpresume.com/docs/dpresume.pdf#view=FitH",
-    footer: {
-        section1: [
-            {title: "a", url: "a"},
-            {title: "b", url: "a"},
-            {title: "c", url: "a"},
-            {title: "d", url: "a"},
-        ],
-        section2: [
-            {title: "a", url: "a"},
-            {title: "d", url: "a"},
-        ]
-    }
+  linkedIn: "https://www.linkedin.com/in/devendraprasad/overlay/contact-info/",
+  cv: "https://dpresume.com/docs/dpresume.pdf#view=FitH",
+  footer: {
+    section1: [
+      {
+        title: "BMI",
+        url: "https://dpresume.com/bmi/"
+      },
+      {
+        title: "DragD3",
+        url: "https://dpresume.com/dragd3/"
+      },
+      {
+        title: "React Vanilla JS",
+        url: "https://dpresume.com/react-vanila-js/#/"
+      },
+      {
+        title: "Geek Admin",
+        url: "https://dpresume.com/geek_admin/"
+      },
+    ],
+    section2: [
+      {
+        title: "KANBAN",
+        url: "https://dpresume.com/kanban/"
+      },
+      {
+        title: "kathi.com",
+        url: "https://dpresume.com/kaathi.com/"
+      },
+      {
+        title: "Lazy search",
+        url: "https://dpresume.com/debounceExampleLazySearch/"
+      },
+      {
+        title: "Lazy search",
+        url: "https://dpresume.com/debounceExampleLazySearch/"
+      },
+      {
+        title: "Comment & Reply",
+        url: "https://dpresume.com/ciim/"
+      },
+    ],
+    section3: [
+      {
+        title: "MOCHA",
+        url: "https://dpresume.com/mocha/mocha.html"
+      },
+      {
+        title: "voice banking",
+        url: "https://dpresume.com/dpvoicebanking/"
+      },
+      {
+        title: "type ORM",
+        url: "https://github.com/devendraprasad1984/nodejs/tree/master/ts-node-postgres-orm-api"
+      },
+      {
+        title: "Web components",
+        url: "https://dpresume.com/customTagging/jsReadHTMLAttributes.html"
+      },
+      {
+        title: "NODE.JS Practice app",
+        url: "https://github.com/devendraprasad1984/nodejs"
+      },
+    ],
+    section4: [
+      {
+        title: "MOCHA",
+        url: "https://dpresume.com/mocha/mocha.html"
+      },
+      {
+        title: "voice banking",
+        url: "https://dpresume.com/dpvoicebanking/"
+      }
+    ]
+  }
 };
 
 export default links;

@@ -4,11 +4,24 @@
 }
 
 .border-right {
-    border-right: 2px solid var(--border-color);
+    border-right: 2px solid var(--color-slate-lighter-blue);
+}
+
+.border-bottom {
+    border-bottom: 2px solid var(--color-slate-lighter-blue);
+}
+
+.border-top {
+    border-top: 2px solid var(--color-slate-lighter-blue);
 }
 
 .border-left {
-    border-left: 2px solid var(--border-color);
+    border-left: 2px solid var(--color-slate-lighter-blue);
+}
+
+p {
+    letter-spacing: 1.2px;
+    font-size: 14px;
 }
 
 div {
@@ -320,29 +333,34 @@ li {
 }
 
 .glass {
-    background: var(--color-glass);
+    background: var(--color-slate-blue);
     height: inherit;
-    width: 100%;
 }
 
 .hyperlink {
-    color: var(--hyperlink-color);
     text-decoration: none;
+    color: var(--hyperlink-color);
+}
+
+.hyperlink:hover {
+    text-decoration: none;
+    background-color: var(--color-slate-lighter-blue);
 }
 
 .hyperlink:hover {
     text-decoration: underline;
+    color: var(--app-text-color);
 }
 
 .link-button {
     padding: var(--5px);
     width: 100%;
-    background-color: var(--link-button-bg-color);
+    background-color: var(--color-slate-lighter-blue);
 }
 
 .link-button:hover {
-    background-color: var(--link-hover-bg-color);
-    color: var(--link-hover-color);
+    background-color: var(--color-slate-blue);
+    color: var(--color-slate-lighter-blue);
 }
 
 .min-col-wid200 {
@@ -351,8 +369,8 @@ li {
 
 .badge {
     padding: 0 var(--5px) 0 var(--5px);
-    background-color: #f2dacd;
+    background-color: var(--color-slate-lighter-blue);
     margin: var(--2px);
-    color: var(--app-text-color);
+    color: var(--color-slate-blue);
     border-radius: var(--10px);
 }

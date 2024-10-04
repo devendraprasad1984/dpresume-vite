@@ -5,7 +5,7 @@ const Badges = ({
                   array = []
                 }) => {
   return array.map((title, index) => {
-    return <span className="badge">{title}</span>;
+    return <span className="badge" key={"badges-" + index}>{title}</span>;
   });
 };
 export default Badges;

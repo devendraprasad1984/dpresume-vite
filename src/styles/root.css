@@ -17,10 +17,13 @@
     --color-yellow: #f2d258;
     --color-green: #5ac72b;
     --color-violet: #5838be;
+    --color-sea-green: #008577;
     --hover-bg-color: #403e3e;
     --hover-color: #d3d1d1;
     --color-white: white;
     --color-glass: rgba(241, 241, 241, 0.75);
+    --color-slate-blue: #f7fafc;
+    --color-slate-lighter-blue: #a9bdd7;
     --size-14: 14px;
     --size-16: 16px;
     --size-18: 18px;
@@ -28,7 +31,7 @@
     --size-24: 24px;
     --size-28: 28px;
     --size-32: 32px;
-    --hyperlink-color: #39a5e0;
+    --hyperlink-color: #005ae0;
     --link-button-bg-color: #e1e1e1;
     --link-hover-bg-color: #252424;
     --link-hover-color: #ffffff;
