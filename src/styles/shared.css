@@ -24,7 +24,7 @@ p {
     font-size: 14px;
 }
 
-.wrap {
+.wrap, div, span {
     text-overflow: ellipsis;
     text-wrap: wrap;
     white-space: wrap;
