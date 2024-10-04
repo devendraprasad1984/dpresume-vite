@@ -66,13 +66,9 @@ const links = {
     ],
     section4: [
       {
-        title: "MOCHA",
-        url: "https://dpresume.com/mocha/mocha.html"
+        title: "WIP",
+        url: ""
       },
-      {
-        title: "voice banking",
-        url: "https://dpresume.com/dpvoicebanking/"
-      }
     ]
   }
 };
