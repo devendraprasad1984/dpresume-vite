@@ -1,5 +1,4 @@
 .body {
-    flex: 1 1 100%;
     min-height: 50vh;
     background-color: var(--center-body-bg-color);
     padding: var(--10px);
@@ -11,9 +10,9 @@
 }
 
 .main-center {
-    flex: 0 1 100%;
     height: auto;
     max-height: var(--container-height);
+    min-height: var(--container-min-height);
 }
 
 .main-right {

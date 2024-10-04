@@ -1,6 +1,7 @@
 :root {
     --app-bg-color: #3e3d3d;
     --container-height: 80rem;
+    --container-min-height: 50rem;
     --border-color: gray;
     --app-text-color: #474545;
     --app-bg-left-color: #acaaaa;

@@ -1,5 +1,6 @@
 const flatList = {
   role: [
+    "have solid experience and hands-on exposure to micro frontend component based development",
     "have successfully dealt many enterprise apps while working in small/big organizations.",
     "practice TDD based frontend development mainly AEM, React, HTML, CSS, JS, JWT.",
     "practice CI/CD and github action workflows to code scans and deployments.",
