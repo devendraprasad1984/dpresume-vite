@@ -348,3 +348,11 @@ li {
 .min-col-wid200 {
     min-width: var(--min-col-width200);
 }
+
+.badge {
+    padding: 0 var(--5px) 0 var(--5px);
+    background-color: #f2dacd;
+    margin: var(--2px);
+    color: var(--app-text-color);
+    border-radius: var(--10px);
+}

@@ -3,8 +3,9 @@ import {NavLink} from "react-router-dom";
 import colors from "../../../core/colors.js";
 
 const activeClassStyle = {
-  color: colors.light.blue,
-  textDecoration: "underline"
+  color: colors.light.white,
+  textDecoration: "underline",
+  backgroundColor: colors.dark.black
 };
 
 function seeIfActive() {

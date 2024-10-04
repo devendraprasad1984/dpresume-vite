@@ -1,6 +1,8 @@
 import React from "react";
 import FooterLinks from "./footerLinks.jsx";
 import links from "../../core/links.js";
+import Badges from "../contextual/badges.jsx";
+import badges from "../../core/badges.js";
 
 const colClass = "col gap1 pad10 space-fill-100 min-col-wid200";
 const Footer = () => {
@@ -23,14 +25,14 @@ const Footer = () => {
         <div className="wt600 size14 phone">+91 958 279 7772</div>
       </div>
     </div>
-    <div className="">
+    <div className="col gap1">
       <div className="row">
-        <p><strong>Learning: </strong> devops, graphql, UI design system, Web3, FE architecture and system design, node
+        <p><strong>Learning: </strong> <Badges array={badges.learning}/>
         </p>
       </div>
-      <div className="row"><p><strong>Agile</strong>: Agile Planning | Estimation | Sprint | Retro | Review | Speedback
+      <div className="row"><p><strong>Agile: </strong> <Badges array={badges.agile}/>
       </p></div>
-      <div><p><strong>Hobbies</strong>: upskilling | music | movies</p></div>
+      <div><p><strong>Hobbies: </strong> <Badges array={badges.hobbies}/></p></div>
     </div>
   </div>;
 };

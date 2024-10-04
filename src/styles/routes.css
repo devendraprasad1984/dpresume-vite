@@ -12,7 +12,9 @@ ul li a {
 }
 
 .nav-link {
-    padding: 5px;
+    display: flex;
+    width: 100%;
+    padding: var(--5px);
     font-size: var(--size-18);
 }
 
