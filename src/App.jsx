@@ -15,7 +15,7 @@ import Header from "./components/header/header.jsx";
 import Body from "./components/body/body.jsx";
 
 function App() {
-    return <div className="col space-between main-outer gap1">
+    return <div className="col space-between main-outer gap1 glass pad10">
         <header className="header pad5"><Header/></header>
         <section className="body flex row mcol gap1 basis space-between wid100">
             <Body/>

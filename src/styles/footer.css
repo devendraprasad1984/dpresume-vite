@@ -3,7 +3,6 @@
 }
 
 .footer {
-  background-color: var(--app-bg-footer);
   color: var(--footer-text-color);
 }
 

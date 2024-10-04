@@ -4,8 +4,7 @@ import Title from "../body/component/title.jsx";
 const Home = () => {
   return <React.Fragment>
     <div>
-      <Title title="Home"/>
-      <h2>In the role of <u>Senior Staff Frontend</u>, I</h2>
+      <Title><h2>In the role of <u>Senior Staff Frontend</u>, I</h2></Title>
       <ul className="star-list">
         <li>have successfully dealt many enterprise apps while working in small/big organizations.</li>
         <li>practice TDD based frontend development mainly AEM, React, HTML, CSS, JS, JWT.</li>

@@ -311,7 +311,7 @@
 }
 
 .glass {
-  background: rgba(241, 241, 241, 0.65);
+  background: var(--color-glass);
   height: inherit;
   width: 100%;
 }

@@ -1,83 +1,83 @@
 .double-list {
-  counter-reset: count;
+    counter-reset: count;
 }
 
 .double-list li {
-  counter-increment: count+1;
+    counter-increment: count+1;
 }
 
 .double-list li::before {
-  content: counter(count, decimal) ') ';
+    content: counter(count, decimal) ') ';
 }
 
 .star-list-counter {
-  counter-reset: count;
+    counter-reset: count;
 }
 
 .star-list-counter li {
-  counter-increment: count+1;
+    counter-increment: count+1;
 }
 
 .star-list-counter li::before {
-  content: '☆' counter(count, decimal);
-  color: rgba(var(--color-red), 1);
-  font-size: 1.5rem;
-  text-shadow: 2vmin 1vmin 2vmin var(--color-yellow);
-  letter-spacing: 1.2vmin;
+    content: '☆' counter(count, decimal);
+    color: rgba(var(--color-red), 1);
+    font-size: 1.5rem;
+    text-shadow: 2vmin 1vmin 2vmin var(--color-yellow);
+    letter-spacing: 1.2vmin;
 }
 
 .star-list li::before {
-  content: '☆ ';
-  font-size: 1rem;
+    content: '☆ ';
+    font-size: 1rem;
 }
 
 li:hover {
-  * {
-    color: var(--color-white);
-  }
+    background-color: var(--hover-bg-color);
+    color: var(--hover-color);
 
-  background-color: var(--color-violet);
-  color: var(--color-white);
+    * {
+        color: var(--hover-color);
+    }
 }
 
 .flix {
-  counter-reset: count;
+    counter-reset: count;
 }
 
 .flix li {
-  display: flex;
-  align-items: center;
-  counter-increment: count+1;
+    display: flex;
+    align-items: center;
+    counter-increment: count+1;
 }
 
 .flix li::before {
-  content: counter(count);
-  color: rgba(var(--color-violet), 1);
-  font-size: 3rem;
-  text-shadow: 2vmin 1vmin 2vmin var(--color-violet);
-  letter-spacing: 1.2vmin;
+    content: counter(count);
+    color: rgba(var(--color-violet), 1);
+    font-size: 3rem;
+    text-shadow: 2vmin 1vmin 2vmin var(--color-violet);
+    letter-spacing: 1.2vmin;
 }
 
 .stroke {
-  -webkit-text-stroke: 0.3vmin var(--color-white);
+    -webkit-text-stroke: 0.3vmin var(--color-white);
 }
 
 .roman::before {
-  content: "[" counter(count, lower-roman) "]";
+    content: "[" counter(count, lower-roman) "]";
 }
 
 .rotate35 {
-  transform: rotate3d(1, 1, 1, 35deg);
+    transform: rotate3d(1, 1, 1, 35deg);
 }
 
 .rotate-35 {
-  transform: rotate3d(1, 1, 1, -35deg);
+    transform: rotate3d(1, 1, 1, -35deg);
 }
 
 .rotate20 {
-  transform: rotate3d(1, 1, 1, 20deg);
+    transform: rotate3d(1, 1, 1, 20deg);
 }
 
 .rotate-20 {
-  transform: rotate3d(1, 1, 1, -20deg);
+    transform: rotate3d(1, 1, 1, -20deg);
 }

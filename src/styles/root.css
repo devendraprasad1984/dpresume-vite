@@ -1,12 +1,13 @@
 :root {
+    --app-bg-color: #3e3d3d;
     --container-height: 80rem;
     --border-color: gray;
-    --app-text-color: #484242;
-    --app-bg-left-color: white;
+    --app-text-color: #271a15;
+    --app-bg-left-color: #acaaaa;
     --app-bg-center-color: white;
-    --app-bg-right-color: white;
-    --app-bg-header: #9fd1f8;
-    --app-bg-footer: aliceblue;
+    --app-bg-right-color: #acaaaa;
+    --app-bg-header:  #6d6a6a;
+    --app-bg-footer: #acaaaa;
     --app-font-color: #363535;
     --footer-text-color: #484242;
     --acitve-link-bg-color: #e96f6b;
@@ -15,7 +16,10 @@
     --color-yellow: #f2d258;
     --color-green: #5ac72b;
     --color-violet: #5838be;
+    --hover-bg-color: #403e3e;
+    --hover-color: #d3d1d1;
     --color-white: white;
+    --color-glass: rgba(241, 241, 241, 0.75);
     --size-14: 14px;
     --size-16: 16px;
     --size-18: 18px;
