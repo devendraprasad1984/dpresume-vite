@@ -6,7 +6,8 @@
     --app-bg-left-color: #acaaaa;
     --app-bg-center-color: white;
     --app-bg-right-color: #acaaaa;
-    --app-bg-header:  #6d6a6a;
+    --center-body-bg-color: aliceblue;
+    --app-bg-header: #6d6a6a;
     --app-bg-footer: #acaaaa;
     --app-font-color: #363535;
     --footer-text-color: #484242;
@@ -27,4 +28,19 @@
     --size-24: 24px;
     --size-28: 28px;
     --size-32: 32px;
+    --hyperlink-color: #39a5e0;
+    --link-button-bg-color: #e1e1e1;
+    --link-hover-bg-color: #252424;
+    --link-hover-color: #ffffff;
+    --2px: 2px;
+    --5px: 5px;
+    --10px: 10px;
+    --15px: 15px;
+    --20px: 20px;
+    --25px: 25px;
+    --30px: 30px;
+    --min-col-width100: 100px;
+    --min-col-width200: 200px;
+    --min-col-width300: 300px;
+    --min-col-width400: 400px;
 }
