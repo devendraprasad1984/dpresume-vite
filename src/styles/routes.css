@@ -13,6 +13,7 @@ ul li a {
 
 .nav-link {
     padding: 5px;
+    font-size: var(--size-18);
 }
 
 .active-link {

@@ -10,20 +10,25 @@
   content: counter(count, decimal) ') ';
 }
 
-.star-list {
+.star-list-counter {
   counter-reset: count;
 }
 
-.star-list li {
+.star-list-counter li {
   counter-increment: count+1;
 }
 
-.star-list li::before {
+.star-list-counter li::before {
   content: '☆' counter(count, decimal);
   color: rgba(var(--color-red), 1);
   font-size: 1.5rem;
   text-shadow: 2vmin 1vmin 2vmin var(--color-yellow);
   letter-spacing: 1.2vmin;
+}
+
+.star-list li::before {
+  content: '☆ ';
+  font-size: 1rem;
 }
 
 li:hover {
