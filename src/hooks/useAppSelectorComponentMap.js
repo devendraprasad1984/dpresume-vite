@@ -1,13 +1,16 @@
+import React from "react";
 import appEnum from "../enums/appEnum.js";
 import core from "../core/core.js";
-import Netflix from "../apps/netflix/netflix.jsx";
-import SimpleForm from "../apps/simpleForm/simpleForm.jsx";
-import AdminVideo from "../apps/geek/admin-video.jsx";
+
+const LazySimpleForm = React.lazy(() => import("../apps/simpleForm/simpleForm.jsx"));
+const LazyNetFlix = React.lazy(() => import("../apps/netflix/netflix.jsx"));
+const LazyGeekAdmin = React.lazy(() => import("../apps/geek/admin-video.jsx"));
+
 
 export const appMap = {
-  [appEnum.simpleForm]: SimpleForm,
-  [appEnum.netflix]: Netflix,
-  [appEnum.geekAdminVideo]: AdminVideo,
+  [appEnum.simpleForm]: LazySimpleForm,
+  [appEnum.netflix]: LazyNetFlix,
+  [appEnum.geekAdminVideo]: LazyGeekAdmin,
 };
 
 const useAppSelectorComponentMap = ({currentApp}) => {

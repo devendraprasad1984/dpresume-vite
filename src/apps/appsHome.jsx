@@ -20,7 +20,7 @@ const AppsHome = () => {
     setCurrentApp(curVal);
   };
   return <div className="col gap2">
-    <h2>All my practice apps</h2>
+    <h2>some of my practice apps</h2>
     <div className="row border-bottom pad5 gap1 wid100">
       <AppList
         showVanilla={true}
@@ -34,7 +34,9 @@ const AppsHome = () => {
     </div>
     <div className="size38 msize24 wt600 base-gimic green-gimic-text">{currentApp}</div>
     {core.isPresent(currentApp) && <div className="wid100 mwid100 col gap10">
-      <ThisApp/>
+      <React.Suspense fallback={<div>Please wait...</div>}>
+        <ThisApp/>
+      </React.Suspense>
     </div>}
   </div>;
 };
