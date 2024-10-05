@@ -4,6 +4,11 @@ const links = {
   video: {
     geekAdmin: "https://dpresume.com/video/admin-ui-geek.webm"
   },
+  iframe: {
+    geekAdminUI: "https://dpresume.com/geek_admin/",
+    vanillaJsHome: "https://dpresume.com/vanila-js/",
+    vanillaReduxCounter: "https://dpresume.com/vanila-js-redux/",
+  },
   footer: {
     section1: [{
       title: "BMI",

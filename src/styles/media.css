@@ -6,3 +6,13 @@
 .base-audio {
 
 }
+
+iframe {
+    aspect-ratio: 1;
+    width: 100%;
+    min-height: 400px;
+}
+
+.iframe-base {
+
+}
