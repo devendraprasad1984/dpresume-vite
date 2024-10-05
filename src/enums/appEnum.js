@@ -1,5 +1,8 @@
 const appEnum = {
   customWebComponent: "customWebComponent",
-  netFlix: "netFlix"
+  netflix: "Netflix",
+  simpleForm: "Simple form",
+  complexForm: "Complex form",
+  multiForm: "Multi form"
 };
 export default appEnum;
