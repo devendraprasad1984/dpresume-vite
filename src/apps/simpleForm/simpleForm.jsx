@@ -3,6 +3,7 @@ import {Controller, useForm} from "react-hook-form";
 import MyButton from "../../components/contextual/button.jsx";
 import DOMEnum from "../../enums/DOMEnum.js";
 import {Select, Input, FormControl, InputLabel, MenuItem} from "@mui/material";
+import FieldSetWrapper from "../../components/contextual/fieldSetWrapper.jsx";
 
 const SimpleForm = () => {
   const [formData, setFormData] = useState(null);
@@ -41,8 +42,7 @@ const SimpleForm = () => {
   };
 
   return <React.Fragment>
-    <fieldset>
-      <legend><h1>Via HTML Form</h1></legend>
+    <FieldSetWrapper title="Via HTML Form">
       <div className="col gap1">
         <form onSubmit={handleSubmit1(handleOnSubmit1)} className="col gap1">
           <input type="text" defaultValue="Devendra_1" {...register1(DOMEnum.firstName + "_1", {
@@ -64,10 +64,9 @@ const SimpleForm = () => {
         <div>Watch firstname: {watch(DOMEnum.firstName + "_1")}</div>
       </div>
       <hr className="border-bottom"/>
-    </fieldset>
+    </FieldSetWrapper>
 
-    <fieldset>
-      <legend><h1>Via Vanilla custom Form</h1></legend>
+    <FieldSetWrapper title="Via Vanilla custom Form">
       <div className="col gap1">
         <input type="text" defaultValue="Devendra_3" {...register2(DOMEnum.firstName + "_3", {required: true})}/>
         <input type="text" defaultValue="Prasad_4" {...register2(DOMEnum.lastName + "_4", {required: true})}/>
@@ -75,10 +74,9 @@ const SimpleForm = () => {
         <div>Data: {JSON.stringify(formData2)}</div>
       </div>
       <hr className="border-bottom"/>
-    </fieldset>
+    </FieldSetWrapper>
 
-    <fieldset>
-      <legend><h1>Material UI form</h1></legend>
+    <FieldSetWrapper title="Material UI form">
       <form onSubmit={handleSubmit3(handleOnSubmit3)} className="col gap1">
         <Controller
           name={DOMEnum.firstName + "_5"}
@@ -107,7 +105,7 @@ const SimpleForm = () => {
         <input type="submit" value="Click to submit form"/>
         <div>Data: {JSON.stringify(formData3)}</div>
       </form>
-    </fieldset>
+    </FieldSetWrapper>
   </React.Fragment>;
 };
 export default SimpleForm;
