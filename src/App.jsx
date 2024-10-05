@@ -9,11 +9,13 @@ import "./styles/body.css";
 import "./styles/footer.css";
 import "./styles/mobile.css";
 import "./styles/counter.css";
+import "./styles/button.css";
+import "./styles/select.css";
 
 import Footer from "./components/footer/footer.jsx";
 import Header from "./components/header/header.jsx";
 import BodyDesktop from "./components/body/bodyDesktop.jsx";
-import useMobile from "./components/hooks/useMobile.js";
+import useMobile from "./hooks/useMobile.js";
 import bodyMobile from "./components/body/bodyMobile.jsx";
 
 function App() {
