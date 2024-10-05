@@ -3,6 +3,7 @@ const DOMEnum = {
   appSelectList2: "dom-app-select-list2",
   firstName: "firstName",
   lastName: "lastName",
-  age: "age"
+  age: "age",
+  selectAge: "selectAge"
 };
 export default DOMEnum;

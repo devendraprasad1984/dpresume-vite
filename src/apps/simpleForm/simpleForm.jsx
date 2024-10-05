@@ -2,22 +2,32 @@ import React, {useState} from "react";
 import {Controller, useForm} from "react-hook-form";
 import MyButton from "../../components/contextual/button.jsx";
 import DOMEnum from "../../enums/DOMEnum.js";
-import {Select, Input} from "@mui/material";
+import {Select, Input, FormControl, InputLabel, MenuItem} from "@mui/material";
 
 const SimpleForm = () => {
   const [formData, setFormData] = useState(null);
   const [formData2, setFormData2] = useState(null);
+  const [formData3, setFormData3] = useState(null);
+
   const {
     register: register1,
     watch,
     handleSubmit: handleSubmit1,
-    control,
     formState: {errors}
   } = useForm();
   const {
     register: register2,
     handleSubmit: handleSubmit2,
   } = useForm();
+  const {
+    control,
+    handleSubmit: handleSubmit3,
+  } = useForm({
+    defaultValues: {
+      [DOMEnum.firstName + "_5"]: "",
+      [DOMEnum.selectAge]: ""
+    },
+  });
 
 
   const handleOnSubmit1 = (data) => {
@@ -25,6 +35,9 @@ const SimpleForm = () => {
   };
   const handleOnSubmit2 = (data) => {
     setFormData2(data);
+  };
+  const handleOnSubmit3 = (data) => {
+    setFormData3(data);
   };
 
   return <React.Fragment>
@@ -59,36 +72,33 @@ const SimpleForm = () => {
     </div>
     <hr className="border-bottom"/>
     <h1>Material UI form</h1>
-    <form onSubmit={handleSubmit2(handleOnSubmit1)}>
+    <form onSubmit={handleSubmit3(handleOnSubmit3)} className="col gap1 wid50 mwid100">
       <Controller
-        name="firstName"
+        name={DOMEnum.firstName + "_5"}
         control={control}
-        render={({field}) => <Input {...field} />}
+        render={({field}) => <Input {...field} placeholder="enter name"/>}
       />
       <Controller
-        name="select"
+        name={DOMEnum.selectAge}
         control={control}
-        render={({field}) => (
+        render={({field}) => (<FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Enter age</InputLabel>
           <Select
             {...field}
-            options={[
-              {
-                value: "chocolate",
-                label: "Chocolate"
-              },
-              {
-                value: "strawberry",
-                label: "Strawberry"
-              },
-              {
-                value: "vanilla",
-                label: "Vanilla"
-              },
-            ]}
-          />
-        )}
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            label="Age"
+            placeholder="enter age"
+          >
+            <MenuItem value="">{""}</MenuItem>
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+        </FormControl>)}
       />
-      <input type="submit"/>
+      <input type="submit" value="Click to submit form"/>
+      <div>Data: {JSON.stringify(formData3)}</div>
     </form>
   </React.Fragment>;
 };
