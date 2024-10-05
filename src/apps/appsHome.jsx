@@ -21,8 +21,13 @@ const AppsHome = () => {
   };
   return <div className="col gap2">
     <h2>All my practice apps</h2>
-    <div className="row border-bottom pad5">
-      <AppList ref={list2Ref} defaultValue={currentApp} setCurrentApp={setCurrentApp}/>
+    <div className="row border-bottom pad5 gap1 wid100">
+      <AppList
+        showVanilla={false}
+        ref={list2Ref}
+        defaultValue={currentApp}
+        setCurrentApp={setCurrentApp}
+      />
       <MyButton
         onClick={handleAppSelectorButton}
       >Show</MyButton>

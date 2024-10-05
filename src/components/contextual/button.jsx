@@ -8,7 +8,7 @@ const MyButton = ({
                   }) => {
   return <button
     style={baseButtonStyles}
-    className="baseButton"
+    className="base-button"
     onClick={onClick}
     {...resProps}
   >{children}</button>;

@@ -6,6 +6,7 @@ import core from "../core/core.js";
 
 const AppList = React.forwardRef(({
                                     defaultValue,
+                                    showVanilla,
                                     classes,
                                     setCurrentApp,
                                     ...restProps
@@ -17,29 +18,29 @@ const AppList = React.forwardRef(({
     setCurrentApp(curVal);
     setValue(curVal);
   };
-  return <div className="row gap1">
-    <Select native
-            defaultValue={value}
-            className={`base-select app-select-menu ${classes}`}
-            label="Choose an app"
-            id={DOMEnum.appSelectList1}
+  return <div className="row gap1 wid100">
+    {showVanilla && <Select native
+                            defaultValue={value}
+                            className={`base-select app-select-menu wid100 ${classes}`}
+                            label="Choose an app"
+                            id={DOMEnum.appSelectList1}
     >
       <option value={appEnum.simpleForm}>{appEnum.simpleForm}</option>
       <option value={appEnum.netflix}>{appEnum.netflix}</option>
-    </Select>
+    </Select>}
 
-    <Select
+    {!showVanilla && <Select
       ref={ref}
       onChange={(e, value) => handleOnChange(e, value)}
       value={value}
       data-value={value}
-      className={`base-select app-select-menu ${classes}`}
+      className={`base-select app-select-menu  wid100 ${classes}`}
       label="Choose an app"
       id={DOMEnum.appSelectList2}
     >
       <MenuItem value={appEnum.netflix}>{appEnum.netflix}</MenuItem>
       <MenuItem value={appEnum.simpleForm}>{appEnum.simpleForm}</MenuItem>
-    </Select>
+    </Select>}
   </div>;
 });
 export default AppList;

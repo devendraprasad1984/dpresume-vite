@@ -1,18 +1,17 @@
-.baseButton {
+.base-button {
     cursor: pointer;
-    background-color: purple;
+    background-color: var(--primary-button-color);
     border-radius: 5px;
     font-weight: bold;
     font-size: var(--size-18);
     font-family: monospace;
-    color: white;
     padding: var(--10px);
-    margin-left: var(--10px);
     text-align: center;
     min-width: 100px;
     box-shadow: 0 2px 1px rgba(var(--app-bg-color), 0.2)
 }
 
-.baseButton:hover {
-    background-color: red;
+.base-button:hover {
+    background-color: var(--primary-button-color-hover);
+    color: var(--app-text-color);
 }

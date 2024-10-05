@@ -47,4 +47,6 @@
     --min-col-width200: 200px;
     --min-col-width300: 300px;
     --min-col-width400: 400px;
+    --primary-button-color: #a9bdd7;
+    --primary-button-color-hover: #f7fafc;
 }

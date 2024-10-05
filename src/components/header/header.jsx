@@ -8,11 +8,11 @@ const Header = () => {
         <img src="images/my-pic.jpeg" className="logo"/>
       </div>
       <div className="mcol flex row space-between wid100 space-fill-100">
-        <div className="wid100p mwid100p flex col flex-start space-fill-100">
+        <div className="wid100p mwid100 flex col flex-start space-fill-100">
           <span className="size38 msize30">Devendra Prasad</span>
           <span>Senior Staff Software Engineer</span>
         </div>
-        <div className="wid30 flex col right mleft mwid100p">
+        <div className="wid30 flex col right mleft mwid100">
           <span className="email">devendraprasad1984@gmail.com</span>
           <span className="phone">+91 958 279 7772</span>
           <div className="row gap2">

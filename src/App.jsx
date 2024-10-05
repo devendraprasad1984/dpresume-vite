@@ -9,6 +9,7 @@ import "./styles/body.css";
 import "./styles/footer.css";
 import "./styles/mobile.css";
 import "./styles/counter.css";
+import "./styles/input.css";
 import "./styles/button.css";
 import "./styles/select.css";
 
