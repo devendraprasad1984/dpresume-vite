@@ -12,6 +12,7 @@ import "./styles/counter.css";
 import "./styles/input.css";
 import "./styles/button.css";
 import "./styles/select.css";
+import "./styles/media.css";
 
 import Footer from "./components/footer/footer.jsx";
 import Header from "./components/header/header.jsx";

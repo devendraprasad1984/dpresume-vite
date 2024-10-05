@@ -5,7 +5,12 @@ const VideoWrapper = ({
                         src
                       }) => {
   return <FieldSetWrapper>
-    <video src={src} className="base-video"/>
+    <video
+      className="base-video"
+      preload="auto" controls autoplay
+    >
+      <source src={src}/>
+    </video>
   </FieldSetWrapper>;
 };
 export default VideoWrapper;
