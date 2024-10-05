@@ -31,6 +31,10 @@ p {
     word-wrap: break-word;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 li {
     padding: var(--2px);
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import constEnums from "../../core/constEnums.js";
 
 const Badges = ({
                   array = []

@@ -29,13 +29,9 @@ const Footer = () => {
       </div>
     </div>
     <div className="col gap1">
-      <div className="row">
-        <p><strong>Learning: </strong> <Badges array={badges.learning}/>
-        </p>
-      </div>
-      <div className="row"><p><strong>Agile: </strong> <Badges array={badges.agile}/>
-      </p></div>
-      <div><p><strong>Hobbies: </strong> <Badges array={badges.hobbies}/></p></div>
+      <div><strong>Learning: </strong> <Badges array={badges.learning}/></div>
+      <div><strong>Agile: </strong> <Badges array={badges.agile}/></div>
+      <div><strong>Hobbies: </strong> <Badges array={badges.hobbies}/></div>
     </div>
   </div>;
 };

@@ -15,8 +15,8 @@ function seeIfActive() {
 }
 
 const LeftMobile = () => {
-  return <div className="main-left-container col gap5">
-    <ul className="">
+  return <div className="main-left-container col gap5 border-bottom">
+    <ul className="row gap1 size14">
       <li className="size20">
         <NavLink className={`nav-link`}
                  style={seeIfActive()}

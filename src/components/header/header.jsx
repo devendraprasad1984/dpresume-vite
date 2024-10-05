@@ -12,7 +12,7 @@ const Header = () => {
           <span className="size38 msize30">Devendra Prasad</span>
           <span>Senior Staff Software Engineer</span>
         </div>
-        <div className="wid30 flex col right mwid100p">
+        <div className="wid30 flex col right mleft mwid100p">
           <span className="email">devendraprasad1984@gmail.com</span>
           <span className="phone">+91 958 279 7772</span>
           <div className="row gap2">

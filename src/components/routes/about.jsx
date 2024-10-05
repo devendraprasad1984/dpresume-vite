@@ -5,7 +5,7 @@ const About = () => {
   return <React.Fragment>
     <div>
       <Title title="About me"/>
-      <p>
+      <div>
         Passionate frontend software engineer. A <b>React/Javascript</b> enthusiast, I have variety of frontend
         development
         experience.
@@ -17,7 +17,7 @@ const About = () => {
           <li>Royal Bank of Scotland (RBS) - 10yrs</li>
           <li>Syntel Inc - 1.3yrs</li>
         </ul>
-      </p>
+      </div>
     </div>
   </React.Fragment>;
 };

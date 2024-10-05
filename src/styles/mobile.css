@@ -88,8 +88,36 @@
         font-size: 38px;
     }
 
-    .size48 {
+    .msize48 {
         font-size: 48px;
     }
+
+    .mflex-center {
+        justify-content: center;
+    }
+
+    .mflex-start {
+        justify-content: flex-start;
+    }
+
+    .mflex-end {
+        justify-content: flex-end;
+    }
+
+    .malign-center {
+        align-items: center;
+        text-align: center;
+    }
+
+    .mleft {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .mright {
+        text-align: right;
+        align-items: flex-end;
+    }
+
 
 }
