@@ -32,8 +32,10 @@ const AppsHome = () => {
         onClick={handleAppSelectorButton}
       >Show</MyButton>
     </div>
-    <div className="size20 wt600">{currentApp}</div>
-    {core.isPresent(currentApp) && <ThisApp/>}
+    <div className="size38 msize24 wt600 base-gimic green-gimic-text">{currentApp}</div>
+    {core.isPresent(currentApp) && <div className="wid100 mwid100 col gap10">
+      <ThisApp/>
+    </div>}
   </div>;
 };
 export default AppsHome;
