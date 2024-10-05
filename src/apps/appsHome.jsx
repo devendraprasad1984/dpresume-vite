@@ -4,17 +4,17 @@ import AppList from "./appList.jsx";
 import DomHelper from "../core/domHelper.js";
 import DOMEnum from "../enums/DOMEnum.js";
 import core from "../core/core.js";
-import useAppSelectorComponentMap from "../hooks/useAppSelectorComponentMap.js";
-import appEnum from "../enums/appEnum.js";
+import useAppSelectorComponentMap, {appMap} from "../hooks/useAppSelectorComponentMap.js";
 
 const AppsHome = () => {
-  const [currentApp, setCurrentApp] = useState(appEnum.netflix);
+  const appKeys = Object.keys(appMap);
+  const [currentApp, setCurrentApp] = useState(appKeys[0]);
   const list2Ref = useRef();
 
   const ThisApp = useAppSelectorComponentMap({currentApp});
 
   const handleAppSelectorButton = (e) => {
-    e.preventDefault();
+    e?.preventDefault();
     const select1 = DomHelper.getByDOMId(DOMEnum.appSelectList1);
     const curVal = core.coalesce(select1.value, list2Ref?.current?.dataset?.value);
     setCurrentApp(curVal);
@@ -23,7 +23,7 @@ const AppsHome = () => {
     <h2>All my practice apps</h2>
     <div className="row border-bottom pad5 gap1 wid100">
       <AppList
-        showVanilla={false}
+        showVanilla={true}
         ref={list2Ref}
         defaultValue={currentApp}
         setCurrentApp={setCurrentApp}

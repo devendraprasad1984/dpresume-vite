@@ -1,8 +1,21 @@
 import React, {useState} from "react";
-import appEnum from "../enums/appEnum.js";
 import DOMEnum from "../enums/DOMEnum.js";
 import {MenuItem, Select} from "@mui/material";
 import core from "../core/core.js";
+import {appMap} from "../hooks/useAppSelectorComponentMap.js";
+
+const SimpleAppOptions = () => {
+  const keys = Object.keys(appMap);
+  return keys.map((key, index) => {
+    return <option key={"app-option-" + index} value={key}>{key}</option>;
+  });
+};
+const AppMenu = () => {
+  const keys = Object.keys(appMap);
+  return keys.map((key, index) => {
+    return <MenuItem key={"app-menu-" + index} value={key}>{key}</MenuItem>;
+  });
+};
 
 const AppList = React.forwardRef(({
                                     defaultValue,
@@ -21,12 +34,12 @@ const AppList = React.forwardRef(({
   return <div className="row gap1 wid100">
     {showVanilla && <Select native
                             defaultValue={value}
+                            onChange={(e) => handleOnChange(e)}
                             className={`base-select app-select-menu wid100 ${classes}`}
                             label="Choose an app"
                             id={DOMEnum.appSelectList1}
     >
-      <option value={appEnum.simpleForm}>{appEnum.simpleForm}</option>
-      <option value={appEnum.netflix}>{appEnum.netflix}</option>
+      <SimpleAppOptions/>
     </Select>}
 
     {!showVanilla && <Select
@@ -38,8 +51,7 @@ const AppList = React.forwardRef(({
       label="Choose an app"
       id={DOMEnum.appSelectList2}
     >
-      <MenuItem value={appEnum.netflix}>{appEnum.netflix}</MenuItem>
-      <MenuItem value={appEnum.simpleForm}>{appEnum.simpleForm}</MenuItem>
+      <AppMenu/>
     </Select>}
   </div>;
 });
