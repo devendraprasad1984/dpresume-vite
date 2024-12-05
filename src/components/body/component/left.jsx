@@ -4,7 +4,8 @@ import colors from "../../../core/colors.js";
 
 const activeClassStyle = {
   textDecoration: "underline",
-  backgroundColor: colors.light.colorkhaki
+  backgroundColor: colors.light.colorkhaki,
+  color: "white !important"
 };
 
 function seeIfActive() {
@@ -52,7 +53,6 @@ const Left = () => {
         </li>
       </ul>
     </div>
-
   </div>;
 };
 export default Left;

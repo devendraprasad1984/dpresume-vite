@@ -17,13 +17,10 @@ const closeIcon = (height = "20",
     <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
   </svg>`;
 
-const spinnerIcon = (width = "40px", height = "40px", message = "") => {
-  return `<div class="row align-center gap5">
-    <svg class="spinnerDark" width=${width} height=${height} viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+const spinnerIcon = (width = "40px", height = "40px") => {
+  return `<svg class="spinnerDark" width=${width} height=${height} viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
     <circle class="spinnerPathDark" fill="none" stroke-width="7" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-  </svg>
-  ${message}
-  </div>`;
+  </svg>`;
 };
 
 const ohhSnap = (width = "40px", height = "40px",

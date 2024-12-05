@@ -12,3 +12,7 @@
     width: 100px;
     border-radius: 50%;
 }
+
+.bg-header{
+    background-color: var(--bg-color-sand);
+}

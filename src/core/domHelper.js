@@ -17,7 +17,7 @@ const getByDOMId = (domId) => {
 const attachLoader = () => {
   const loaderNode = getByDOMId(domEnum.loaderNode);
   if (core.isPresent(loaderNode)) {
-    loaderNode.innerHTML = `<div class="pad10 row gap1 align-center size16 bg-candy">
+    loaderNode.innerHTML = `<div class="pad10 row gap1 align-center size16 bg-candy flex-center">
         <span>${vanillaSVGs.spinnerIcon("20px", "20px")}</span>
         <div class="bold text-danger">${pleaseWait}</div>
         </div>`;

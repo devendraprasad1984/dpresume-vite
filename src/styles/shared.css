@@ -344,7 +344,7 @@ ul {
 }
 
 .glass {
-  background: var(--color-slate-blue) !important;
+  background: var(--color-slate-blue);
   height: inherit;
 }
 

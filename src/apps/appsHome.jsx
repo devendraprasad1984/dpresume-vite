@@ -33,7 +33,7 @@ const AppsHome = () => {
         classes="button-18"
       >Show</MyButton>
     </div>
-    <div className="size38 msize24 wt600 base-gimic green-gimic-text">{currentApp}</div>
+    <div className="size38 msize24 wt600">{currentApp}</div>
     {core.isPresent(currentApp) && <div className="wid100 mwid100 col gap2">
       <React.Suspense fallback={<div className="text-danger size20">Please wait...</div>}>
         <ThisApp/>

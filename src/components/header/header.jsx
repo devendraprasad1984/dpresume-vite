@@ -2,7 +2,7 @@ import React from "react";
 import links from "../../core/links.js";
 
 const Header = () => {
-  return <div className="relative wid100 height100p glass">
+  return <div className="relative wid100 height100p glass bg-header">
     <div className="flex row space-between wid100 top">
       <div className="wid10 pad10 mwid20">
         <img src="images/my-pic.jpeg" className="logo"/>
