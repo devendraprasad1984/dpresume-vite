@@ -21,7 +21,7 @@ const AppsHome = () => {
   };
   return <div className="col gap2">
     <h2>some of my practice apps</h2>
-    <div className="row border-bottom pad5 gap1 wid100">
+    <div className="row border-bottom pad5 gap1 wid100 align-center">
       <AppList
         showVanilla={true}
         ref={list2Ref}
@@ -30,6 +30,7 @@ const AppsHome = () => {
       />
       <MyButton
         onClick={handleAppSelectorButton}
+        classes="button-18"
       >Show</MyButton>
     </div>
     <div className="size38 msize24 wt600 base-gimic green-gimic-text">{currentApp}</div>

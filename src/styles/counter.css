@@ -31,15 +31,6 @@
     font-size: 1rem;
 }
 
-li:hover {
-    background-color: var(--hover-bg-color);
-    color: var(--hover-color);
-
-    * {
-        color: var(--hover-color);
-    }
-}
-
 .flix {
     counter-reset: count;
 }

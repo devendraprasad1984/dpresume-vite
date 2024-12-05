@@ -17,7 +17,7 @@ function seeIfActive() {
 const Left = () => {
   return <div className="main-left-container col gap5">
     <div>
-      <h2>Personal Info</h2>
+      <h2 className="bold">Personal Info</h2>
       <ul className="">
         <li className="size20">
           <NavLink className={`nav-link`}
@@ -33,7 +33,7 @@ const Left = () => {
     </div>
 
     <div>
-      <h2 className="margin--y-10">Professional Projects</h2>
+      <h2 className="margin--y-10 bold">Professional Projects</h2>
       <ul className="">
         <li className="size20">
           <NavLink className={`nav-link`}
@@ -44,7 +44,7 @@ const Left = () => {
     </div>
 
     <div>
-      <h2 className="margin--y-10">Out of interest</h2>
+      <h2 className="margin--y-10 bold">Out of interest</h2>
       <ul className="">
         <li className="size20">
           <NavLink className={`nav-link`}

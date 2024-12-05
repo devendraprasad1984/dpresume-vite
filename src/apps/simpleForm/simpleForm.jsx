@@ -30,7 +30,6 @@ const SimpleForm = () => {
     },
   });
 
-
   const handleOnSubmit1 = (data) => {
     setFormData(data);
   };
@@ -45,21 +44,26 @@ const SimpleForm = () => {
     <FieldSetWrapper title="Via HTML Form">
       <div className="col gap1">
         <form onSubmit={handleSubmit1(handleOnSubmit1)} className="col gap1">
-          <input type="text" defaultValue="Devendra_1" {...register1(DOMEnum.firstName + "_1", {
-            required: true,
-            maxLength: 20
-          })}/>
-          <input type="text" defaultValue="Prasad" {...register1(DOMEnum.lastName + "_2", {
-            required: true,
-            pattern: /^[A-Za-z0-9]+$/i
-          })}/>
+          <input type="text" defaultValue="Devendra_1" {...register1(
+            DOMEnum.firstName + "_1", {
+              required: true,
+              maxLength: 20
+            })}/>
+          <input type="text" defaultValue="Prasad" {...register1(
+            DOMEnum.lastName + "_2", {
+              required: true,
+              pattern: /^[A-Za-z0-9]+$/i
+            })}/>
           <input type="number" className="wid30" {...register1(DOMEnum.age, {
             min: 18,
             max: 99
           })} />
-          <input type="submit" value="Submit form" className="base-button"/>
+          <div className="row gap1">
+            <MyButton type="submit" className="button-75">Submit form</MyButton>
+            <MyButton onClick={handleSubmit1(handleOnSubmit1)}>Submit
+              Vanilla</MyButton>
+          </div>
         </form>
-        <MyButton onClick={handleSubmit1(handleOnSubmit1)}>Submit Vanilla</MyButton>
         <div>Data: {JSON.stringify(formData)}</div>
         <div>Watch firstname: {watch(DOMEnum.firstName + "_1")}</div>
       </div>
@@ -68,9 +72,12 @@ const SimpleForm = () => {
 
     <FieldSetWrapper title="Via Vanilla custom Form">
       <div className="col gap1">
-        <input type="text" defaultValue="Devendra_3" {...register2(DOMEnum.firstName + "_3", {required: true})}/>
-        <input type="text" defaultValue="Prasad_4" {...register2(DOMEnum.lastName + "_4", {required: true})}/>
-        <MyButton onClick={handleSubmit2(handleOnSubmit2)}>Submit Vanilla</MyButton>
+        <input type="text" defaultValue="Devendra_3" {...register2(
+          DOMEnum.firstName + "_3", {required: true})}/>
+        <input type="text" defaultValue="Prasad_4" {...register2(
+          DOMEnum.lastName + "_4", {required: true})}/>
+        <MyButton onClick={handleSubmit2(handleOnSubmit2)}>Submit
+          Vanilla</MyButton>
         <div>Data: {JSON.stringify(formData2)}</div>
       </div>
       <hr className="border-bottom"/>
@@ -102,7 +109,8 @@ const SimpleForm = () => {
             </Select>
           </FormControl>)}
         />
-        <input type="submit" value="Click to submit form"/>
+        <input type="submit" className="base-button button-18 pad10"
+               value="Click to submit form"/>
         <div>Data: {JSON.stringify(formData3)}</div>
       </form>
     </FieldSetWrapper>
