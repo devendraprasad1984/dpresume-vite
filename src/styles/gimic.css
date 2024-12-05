@@ -1,7 +1,6 @@
 .base-gimic {
   -webkit-text-stroke: 1px var(--app-text-color);
   text-shadow: 3px 3px var(--app-text-color);
-  text-transform: uppercase;
   word-spacing: .1em;
   width: fit-content;
   margin-bottom: 0;
