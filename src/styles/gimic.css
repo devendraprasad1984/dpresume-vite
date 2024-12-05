@@ -1,6 +1,6 @@
 .base-gimic {
-  -webkit-text-stroke: 1px var(--app-text-color);
-  text-shadow: 3px 3px var(--app-text-color);
+  -webkit-text-stroke: 1px var(--app-text-color) !important;
+  text-shadow: 3px 3px var(--app-text-color) !important;
   word-spacing: .1em;
   width: fit-content;
   margin-bottom: 0;
@@ -8,14 +8,14 @@
 }
 
 .red-gimic-text {
-  color: lch(56.82% 63.37 26.6);
+  color: var(--text-color-red) !important;
 
 }
 
 .yellow-gimic-text {
-  color: lch(85.75% 54.35 89.02);
+  color: var(--text-color-yellow) !important;
 }
 
 .green-gimic-text {
-  color: lch(78.08% 73.55 115.47);
+  color: var(--text-color-green) !important;
 }

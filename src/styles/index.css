@@ -4,8 +4,7 @@ html, body {
     font-family: "Poppins", sans-serif;
     margin: 0 auto;
     max-width: 1440px;
-    /*background-color: var(--app-bg-color);*/
-    color: var(--app-text-color);
+    color: var(--app-text-color) !important;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -18,5 +17,5 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--app-text-color);
+    color: var(--app-text-color) !important;
 }

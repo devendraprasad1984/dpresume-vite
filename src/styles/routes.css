@@ -19,6 +19,11 @@ ul li a {
 }
 
 .active-link {
-    background-color: var(--acitve-link-bg-color);
-    color: var(--acitve-link-text-color);
+    background-color: var(--acitve-link-bg-color) !important;
+    color: var(--acitve-link-text-color) !important;
+}
+
+.active-nav {
+    background-color: var(--acitve-link-bg-color) !important;
+    color: var(--acitve-link-text-color) !important;
 }
