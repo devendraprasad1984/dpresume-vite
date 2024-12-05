@@ -25,7 +25,8 @@ const lightColors = {
   colorlightgrey: "#f1f1f1",
   colorpalegreen: "#ddffdd",
   colorpaleyellow: "#ffffcc",
-  colorpaleblue: "#ddffff"
+  colorpaleblue: "#ddffff",
+  candy: "#ffeef3"
 };
 const darkColors = {
   black: "#464444",

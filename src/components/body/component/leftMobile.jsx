@@ -4,7 +4,7 @@ import colors from "../../../core/colors.js";
 
 const activeClassStyle = {
   textDecoration: "underline",
-  backgroundColor: colors.light.colorlime,
+  backgroundColor: colors.light.candy,
   color: "white !important"
 };
 

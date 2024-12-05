@@ -55,6 +55,10 @@ li {
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .basis {
   flex-basis: auto;
 }

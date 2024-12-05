@@ -29,9 +29,9 @@ const Footer = () => {
       </div>
     </div>
     <div className="col gap1">
-      <div className="row gap2"><strong>Learning: </strong> <Badges array={badges.learning}/></div>
-      <div className="row gap2"><strong>Agile: </strong> <Badges array={badges.agile}/></div>
-      <div className="row gap2"><strong>Hobbies: </strong> <Badges array={badges.hobbies}/></div>
+      <div className="row gap2 flex-wrap m-footer-badge"><strong>Learning: </strong> <Badges array={badges.learning}/></div>
+      <div className="row gap2 flex-wrap m-footer-badge"><strong>Agile: </strong> <Badges array={badges.agile}/></div>
+      <div className="row gap2 flex-wrap m-footer-badge"><strong>Hobbies: </strong> <Badges array={badges.hobbies}/></div>
     </div>
   </div>;
 };
