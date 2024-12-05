@@ -344,13 +344,13 @@ ul {
 }
 
 .glass {
-  background: var(--color-slate-blue);
+  background: var(--color-slate-blue) !important;
   height: inherit;
 }
 
 .hyperlink {
   text-decoration: none;
-  color: var(--hyperlink-color);
+  color: var(--hyperlink-color) !important;
 }
 
 .hyperlink:hover {
@@ -360,7 +360,7 @@ ul {
 
 .hyperlink:hover {
   text-decoration: underline;
-  color: var(--app-text-color);
+  color: var(--app-text-color) !important;
 }
 
 .link-button {
@@ -371,7 +371,7 @@ ul {
 
 .link-button:hover {
   background-color: var(--color-slate-blue);
-  color: var(--color-slate-lighter-blue);
+  color: var(--color-slate-lighter-blue) !important;
 }
 
 .min-col-wid200 {
@@ -382,7 +382,7 @@ ul {
   padding: 0 var(--5px) 0 var(--5px);
   background-color: var(--color-red);
   margin: var(--2px);
-  color: var(--color-slate-blue);
+  color: var(--color-slate-blue) !important;
   border-radius: var(--10px);
 }
 
@@ -392,7 +392,7 @@ fieldset {
 }
 
 legend * {
-  color: var(--color-sea-green)
+  color: var(--color-sea-green) !important;
 }
 
 .bold {

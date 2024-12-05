@@ -10,17 +10,8 @@
   height: 44px;
 }
 
-input[type=submit]{
-  background-color: var(--bg-color-red);
-}
-
 .base-button:hover {
-  color: var(--app-text-color);
-}
-
-input {
-  margin: unset !important;
-  padding: unset !important;
+  color: var(--app-text-color) !important;
 }
 
 /* CSS */

@@ -1,6 +1,8 @@
 import React from "react";
 
+import "./styles/control.css";
 import "./styles/root.css";
+import "./styles/colors.css";
 import "./styles/gimic.css";
 import "./styles/routes.css";
 import "./styles/main.css";
