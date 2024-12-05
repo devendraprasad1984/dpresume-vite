@@ -53,8 +53,10 @@ li:hover {
 .flix li::before {
     content: counter(count);
     color: rgba(var(--color-violet), 0.7);
-    font-size: 2.5rem;
-    letter-spacing: 1.2vmin;
+    color: var(--color-peach) !important;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 2px #3b1a6e;
 }
 
 .stroke {
