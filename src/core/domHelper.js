@@ -1,4 +1,5 @@
 import core from "./core.js";
+import vanillaSVGs from "./vanillaSVGs.js";
 
 const pleaseWait = "Please wait...";
 const domEnum = {
@@ -16,7 +17,10 @@ const getByDOMId = (domId) => {
 const attachLoader = () => {
   const loaderNode = getByDOMId(domEnum.loaderNode);
   if (core.isPresent(loaderNode)) {
-    loaderNode.innerHTML = `<div class="bold text-danger bg-candy pad10">${pleaseWait}</div>`
+    loaderNode.innerHTML = `<div class="pad10 row gap1 align-center size16 bg-candy">
+        <span>${vanillaSVGs.spinnerIcon("20px", "20px")}</span>
+        <div class="bold text-danger">${pleaseWait}</div>
+        </div>`;
     loaderNode.classList.remove("zero");
   }
 }

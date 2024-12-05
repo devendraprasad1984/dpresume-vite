@@ -18,6 +18,7 @@ import "./styles/button.css";
 import "./styles/select.css";
 import "./styles/media.css";
 import "./styles/override.css";
+import "./styles/_spinner.css";
 
 function Styles() {
   return null;
