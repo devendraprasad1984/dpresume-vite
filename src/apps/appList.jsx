@@ -17,13 +17,14 @@ const AppMenu = () => {
   });
 };
 
+// eslint-disable-next-line react/display-name
 const AppList = React.forwardRef(({
-                                    defaultValue,
-                                    showVanilla,
-                                    classes,
-                                    setCurrentApp,
-                                    ...restProps
-                                  }, ref) => {
+  defaultValue,
+  showVanilla,
+  classes,
+  setCurrentApp,
+  ...restProps
+}, ref) => {
   const [value, setValue] = useState(defaultValue);
 
   const handleOnChange = (e, thisProps) => {

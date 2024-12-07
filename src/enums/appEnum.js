@@ -6,6 +6,6 @@ const appEnum = {
   multiForm: "Multi form",
   geekAdminVideo: "Geektrust admin UI",
   vanillJSHome: "Vanilla JS Home app",
-  vanillJSRedux: "Vanilla JS Redux counter App"
+  vanillJSRedux: "Vanilla JS Redux counter App",
 };
 export default appEnum;

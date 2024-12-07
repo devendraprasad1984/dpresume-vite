@@ -55,7 +55,10 @@ const links = {
     section4: [{
       title: "WIP",
       url: ""
-    },]
+    },{
+      title: "PracticingJS",
+      url: "https://dpresume.com/docs/packOf30InterviewPrep.pdf#view=FitH"
+    }]
   }
 };
 

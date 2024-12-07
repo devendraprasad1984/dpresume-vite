@@ -8,7 +8,6 @@ const LazyGeekAdmin = React.lazy(() => import("../apps/geek/admin-video.jsx"));
 const LazyVanillaJSHome = React.lazy(() => import("../apps/vanila-js/vanila-js-home.jsx"));
 const LazyVanillaJSRedux = React.lazy(() => import("../apps/vanila-js-redux/vanila-js-redux.jsx"));
 
-
 export const appMap = {
   [appEnum.simpleForm]: LazySimpleForm,
   [appEnum.netflix]: LazyNetFlix,

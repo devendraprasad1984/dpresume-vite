@@ -358,8 +358,7 @@ ul {
 }
 
 .hyperlink:hover {
-  text-decoration: none;
-  background-color: var(--color-slate-lighter-blue);
+  background-color: var(--color-white) !important;
 }
 
 .hyperlink:hover {
