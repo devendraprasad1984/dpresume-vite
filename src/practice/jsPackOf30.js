@@ -31,6 +31,7 @@
  */
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout
+//delaying the execution of a function until a certain amount of time has passed since the last time it was called
 const debounce = (mainFn, delay = 1000) => {
   let timerId;
   return function (...args) {
@@ -38,7 +39,24 @@ const debounce = (mainFn, delay = 1000) => {
     timerId = setTimeout(() => mainFn(...args), delay)
   }
 }
+
+//Throttling is suitable for scenarios where you want to limit how often a function can be called, but you don’t want to miss any calls
+//It is useful for improving the performance and responsiveness of web pages that have event listeners that trigger heavy or expensive operations, such as animations, scrolling, resizing, mousemove, fetching data, etc.
+const throttling = (mainFn, delay = 1000) => {
+  let timerId = null;
+  return function (...args) {
+    if (timerId !== null) {
+      return;
+    }
+    mainFn(...args)
+    timerId = setTimeout(() => {
+      timerId = null;
+    }, delay)
+  }
+}
+
 const jsPackOf30 = {
-  debounce
+  debounce,
+  throttling
 };
 export default jsPackOf30;
