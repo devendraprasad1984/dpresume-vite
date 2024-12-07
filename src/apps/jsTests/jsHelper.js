@@ -13,15 +13,17 @@ const debounce = (ref) => {
 
 const throttle = (ref) => {
   debounceCounter++;
+  let prev = Date.now();
   pleaseWait(ref);
   JsPackOf30.throttling(() => {
     ref.innerHTML = debounceCounter
-      + " - Throttling is suitable for scenarios where you want to limit how often a function can be called, but you don’t want to miss any calls. It is useful for improving the performance and responsiveness of web pages that have event listeners that trigger heavy or expensive operations, such as animations, scrolling, resizing, mousemove, fetching data, etc."
+      + " - Throttling is suitable for scenarios where you want to limit how often a function can be called, don’t miss any execution. improving the performance, responsiveness of web pages that have event listeners that trigger heavy or expensive operations, eg animations, scrolling, resizing, mousemove, fetching data | "
+      + (Date.now() - prev).toString()
+    prev = Date.now()
   }, oneSecond)()
 }
 
 const jsHelper = {
-  debounce,
-  throttle
+  debounce, throttle
 };
 export default jsHelper;

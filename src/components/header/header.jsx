@@ -3,14 +3,16 @@ import links from "../../core/links.js";
 
 const Header = () => {
   return <div className="relative wid100 height100p glass bg-header">
-    <div className="flex row space-between wid100 top">
-      <div className="wid10 pad10 mwid20">
+    <div className="flex row flex-center wid100 mflex-start">
+      <div className="wid10 mwid20 align-center">
         <img src="images/my-pic.jpeg" className="logo"/>
       </div>
-      <div className="mcol flex row space-between wid100 space-fill-100">
-        <div className="wid100p mwid100 flex col flex-start space-fill-100">
-          <span className="size38 msize30 bold">Devendra Prasad (DP)</span>
-          <span className="size14">Senior Staff Software Engineer</span>
+      <div className="mcol flex row align-center wid100 space-fill-100">
+        <div className="wid100p mwid100 flex col space-fill-100 space-between">
+          <div className="row space-between align-center mcol mleft">
+            <span className="size30 msize24 bold">Devendra Prasad</span>
+            <span className="size14 bold">Senior Staff Software Engineer</span>
+          </div>
         </div>
         <div className="wid30 flex col right mleft mwid100">
           <span className="email">devendraprasad1984@gmail.com</span>

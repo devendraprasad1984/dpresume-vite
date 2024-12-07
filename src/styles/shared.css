@@ -207,6 +207,11 @@ li {
   margin: var(--20px) 0 var(--20px) 0;
 }
 
+
+.wid5 {
+  width: 5%;
+}
+
 .wid10 {
   width: 10%;
 }
@@ -286,6 +291,11 @@ ul {
 
 .flex-end {
   justify-content: flex-end;
+}
+
+.align-start {
+  align-items: start;
+  text-align: start;
 }
 
 .align-center {
