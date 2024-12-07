@@ -7,12 +7,16 @@ const getDOM = () => domHelper.getByDOMId(outputContainer)
 const JsTests = () => {
   const handleDebounce = () => jsHelper.debounce(getDOM());
   const handleThrottle = () => jsHelper.throttle(getDOM());
+  const handleAddCurry = () => jsHelper.addCurry(getDOM());
+  const handleAnnonymousCurry = () => jsHelper.annonymousCurry(getDOM());
 
   return <div className="col flex-wrap gap1">
     <div id="outputContainer" className="outputDiv border pad10 overflow"></div>
     <div className="row gap1 flex-wrap">
       <button onClick={handleDebounce}>Debounce</button>
       <button onClick={handleThrottle}>Throttle</button>
+      <button onClick={handleAddCurry}>Add Curry 3 args</button>
+      <button onClick={handleAnnonymousCurry}>Annonymous curry</button>
     </div>
   </div>
 };

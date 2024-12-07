@@ -391,6 +391,10 @@ ul {
   min-width: var(--min-col-width200);
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .badge {
   padding: 0 var(--5px) 0 var(--5px);
   background-color: var(--color-red);

@@ -36,9 +36,9 @@ const debounce = (mainFn, delay = 1000) => {
   let timerId;
   return function (...args) {
     clearTimeout(timerId);
-    timerId = setTimeout(() => mainFn(...args), delay)
-  }
-}
+    timerId = setTimeout(() => mainFn(...args), delay);
+  };
+};
 
 //Throttling is suitable for scenarios where you want to limit how often a function can be called, but you don’t want to miss any calls
 //It is useful for improving the performance and responsiveness of web pages that have event listeners that trigger heavy or expensive operations, such as animations, scrolling, resizing, mousemove, fetching data, etc.
@@ -48,15 +48,37 @@ const throttling = (mainFn, delay = 1000) => {
     if (timerId !== null) {
       return;
     }
-    mainFn(...args)
+    mainFn(...args);
     timerId = setTimeout(() => {
       timerId = null;
-    }, delay)
-  }
-}
+    }, delay);
+  };
+};
+
+//Currying doesn’t call a function. It just transforms it.
+//it is a technique which transforms a callable function from f(a, b, c) into sequences of callable functions like f(a)(b)(c) or f(a,b)(c) or f(a)(b,c)
+//helpful in situation eg logging, generating reusable, modern code
+const simpleAddCurry = (a) => (b) => (c) => a + b + c;
+const annonymousCurry = (mainFunction) => {
+  return function curried(...args) {
+    if (args.length >= mainFunction.length) {
+      return mainFunction(...args);
+    } else {
+      return curried.bind(null, ...args);
+    }
+  };
+};
+
+const logger = () => {
+  let count = 0;
+  return (value) => console.log(`output is ${count++}`, value);
+};
 
 const jsPackOfConcepts = {
   debounce,
-  throttling
+  throttling,
+  simpleAddCurry,
+  annonymousCurry,
+  logger
 };
 export default jsPackOfConcepts;
