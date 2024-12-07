@@ -11,37 +11,26 @@ const links = {
   },
   footer: {
     section1: [{
-      title: "BMI",
-      url: "https://dpresume.com/bmi/"
+      title: "BMI", url: "https://dpresume.com/bmi/"
     }, {
-      title: "DragD3",
-      url: "https://dpresume.com/dragd3/"
+      title: "DragD3", url: "https://dpresume.com/dragd3/"
     }, {
-      title: "React Vanilla JS",
-      url: "https://dpresume.com/react-vanila-js/#/"
+      title: "React Vanilla JS", url: "https://dpresume.com/react-vanila-js/#/"
     }, {
-      title: "Geek Admin",
-      url: "https://dpresume.com/geek_admin/"
-    },],
-    section2: [{
-      title: "KANBAN",
-      url: "https://dpresume.com/kanban/"
+      title: "Geek Admin", url: "https://dpresume.com/geek_admin/"
+    },], section2: [{
+      title: "KANBAN", url: "https://dpresume.com/kanban/"
     }, {
-      title: "kathi.com",
-      url: "https://dpresume.com/kaathi.com/"
+      title: "kathi.com", url: "https://dpresume.com/kaathi.com/"
     }, {
       title: "Lazy search",
       url: "https://dpresume.com/debounceExampleLazySearch/"
     }, {
-      title: "Comment & Reply",
-      url: "https://dpresume.com/ciim/"
-    },],
-    section3: [{
-      title: "MOCHA",
-      url: "https://dpresume.com/mocha/mocha.html"
+      title: "Comment & Reply", url: "https://dpresume.com/ciim/"
+    },], section3: [{
+      title: "MOCHA", url: "https://dpresume.com/mocha/mocha.html"
     }, {
-      title: "voice banking",
-      url: "https://dpresume.com/dpvoicebanking/"
+      title: "voice banking", url: "https://dpresume.com/dpvoicebanking/"
     }, {
       title: "type ORM",
       url: "https://github.com/devendraprasad1984/nodejs/tree/master/ts-node-postgres-orm-api"
@@ -51,11 +40,9 @@ const links = {
     }, {
       title: "NODE.JS Practice app",
       url: "https://github.com/devendraprasad1984/nodejs"
-    },],
-    section4: [{
-      title: "WIP",
-      url: ""
-    },{
+    },], section4: [{
+      title: "WIP", url: ""
+    }, {
       title: "PracticingJS",
       url: "https://dpresume.com/docs/packOf30InterviewPrep.pdf#view=FitH"
     }]
