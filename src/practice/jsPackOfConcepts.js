@@ -55,8 +55,8 @@ const throttling = (mainFn, delay = 1000) => {
   }
 }
 
-const jsPackOf30 = {
+const jsPackOfConcepts = {
   debounce,
   throttling
 };
-export default jsPackOf30;
+export default jsPackOfConcepts;
