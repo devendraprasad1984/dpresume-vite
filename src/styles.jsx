@@ -19,6 +19,7 @@ import "./styles/select.css";
 import "./styles/media.css";
 import "./styles/override.css";
 import "./styles/_spinner.css";
+import "./styles/jsTest.css";
 
 function Styles() {
   return null;

@@ -29,3 +29,16 @@
  * =>implement throttle method that comes with cancel method which can cancel delayed invocation
  * =>implement custom pollyfill for typeof operation
  */
+
+//https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout
+const debounce = (mainFn, delay = 1000) => {
+  let timerId;
+  return function (...args) {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => mainFn(...args), delay)
+  }
+}
+const jsPackOf30 = {
+  debounce
+};
+export default jsPackOf30;
