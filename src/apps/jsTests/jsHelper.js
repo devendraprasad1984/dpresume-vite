@@ -71,10 +71,40 @@ const annonymousCurry = (ref) => {
 const flattenArrayTest = (ref) => {
   const arr1 = [1, [2], [3, [4]]];
   const arr2 = [1, 2, [3, 4, [5, 6]]];
-  ref.innerHTML = printTitle("flattenArrayTest")+"arr1=[1, [2], [3, [4]]], arr2=[1, 2, [3, 4, [5, 6]]]";
-  ref.innerHTML += printLine() + jsPackOfConcepts.deepFlatten(arr1, 1);
-  ref.innerHTML += printLine() + jsPackOfConcepts.deepFlatten(arr1, 2);
-  ref.innerHTML += printLine() + jsPackOfConcepts.deepFlatten(arr2, 2);
+  ref.innerHTML = printTitle("flattenArrayTest") + "arr1=[1, [2], [3, [4]]], arr2=[1, 2, [3, 4, [5, 6]]]";
+  ref.innerHTML += printLine() + jsPackOfConcepts.deepFlattenArray(arr1, 1);
+  ref.innerHTML += printLine() + jsPackOfConcepts.deepFlattenArray(arr1, 2);
+  ref.innerHTML += printLine() + jsPackOfConcepts.deepFlattenArray(arr2, 2);
+};
+
+const flattenObjectTest = (ref) => {
+  const obj1 = {
+    a: 1,
+    b: 2,
+    c: {
+      d: 3,
+      e: 4
+    }
+  };
+  const obj2 = {
+    a: 1,
+    b: 2,
+    c: {
+      d: {
+        a1: "1",
+        a2: "2",
+        a3: null
+      },
+      e: {
+        f: "2",
+        g: "4"
+      }
+    }
+  };
+  ref.innerHTML = printTitle("flattenObjectTest") + `obj1=${JSON.stringify(obj1)}`;
+  ref.innerHTML += printLine() + JSON.stringify(jsPackOfConcepts.deepFlattenObject(obj1));
+  ref.innerHTML += printLine() + `obj1=${JSON.stringify(obj2)}`;
+  ref.innerHTML += printLine() + JSON.stringify(jsPackOfConcepts.deepFlattenObject(obj2));
 };
 
 const jsHelper = {
@@ -82,6 +112,7 @@ const jsHelper = {
   throttle,
   addCurry,
   annonymousCurry,
-  flattenArrayTest
+  flattenArrayTest,
+  flattenObjectTest
 };
 export default jsHelper;

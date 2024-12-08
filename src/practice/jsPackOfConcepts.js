@@ -29,6 +29,7 @@
  * =>implement throttle method that comes with cancel method which can cancel delayed invocation
  * =>implement custom pollyfill for typeof operation
  */
+import core from "../core/core.js";
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout
 //delaying the execution of a function until a certain amount of time has passed since the last time it was called
@@ -92,7 +93,7 @@ const logger = () => {
 };
 
 //its a pollyfill for Array.prototype.flat with a depth given, default to 1
-const deepFlatten = (arr, depth) => {
+const deepFlattenArray = (arr, depth) => {
   const result = [];
   const stack = [];
   const newArr = arr.map(ar => [ar, depth]);
@@ -114,6 +115,18 @@ const deepFlatten = (arr, depth) => {
   return result.reverse();
 };
 
+const deepFlattenObject = (inputObject) => {
+  let result = {};
+  for (let key in inputObject) {
+    if (core.isObject(inputObject[key])) {
+      result = {...result, ...deepFlattenObject(inputObject[key])};
+    } else {
+      result[key] = inputObject[key];
+    }
+  }
+  return result;
+};
+
 const jsPackOfConcepts = {
   debounce,
   throttling,
@@ -121,6 +134,7 @@ const jsPackOfConcepts = {
   annonymousCurry,
   logger,
   curryWithPlaceholder,
-  deepFlatten
+  deepFlattenArray,
+  deepFlattenObject
 };
 export default jsPackOfConcepts;
