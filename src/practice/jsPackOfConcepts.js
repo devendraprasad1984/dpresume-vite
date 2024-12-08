@@ -105,7 +105,7 @@ const deepFlattenArray = (arr, depth) => {
       result.push(ar);
       continue;
     }
-    if (!Array.isArray(ar)) {
+    if (!core.isArray(ar)) {
       result.push(ar);
     } else {
       const newArr = ar.map(el => [el, depth - 1]);
@@ -118,10 +118,14 @@ const deepFlattenArray = (arr, depth) => {
 const deepFlattenObject = (inputObject) => {
   let result = {};
   for (let key in inputObject) {
-    if (core.isObject(inputObject[key])) {
-      result = {...result, ...deepFlattenObject(inputObject[key])};
+    const elem = inputObject[key];
+    if (core.isArray(elem)) {
+      result[key] = deepFlattenArray(elem);
+    } else if (core.isObject(inputObject[key])) {
+      const recResult = deepFlattenObject(elem);
+      result = {...result, ...recResult};
     } else {
-      result[key] = inputObject[key];
+      result[key] = elem;
     }
   }
   return result;

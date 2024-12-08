@@ -97,14 +97,17 @@ const flattenObjectTest = (ref) => {
       },
       e: {
         f: "2",
-        g: "4"
+        g: {
+          x: "hello",
+          y: [1, 2, 4, 3]
+        }
       }
     }
   };
-  ref.innerHTML = printTitle("flattenObjectTest") + `obj1=${JSON.stringify(obj1)}`;
-  ref.innerHTML += printLine() + JSON.stringify(jsPackOfConcepts.deepFlattenObject(obj1));
-  ref.innerHTML += printLine() + `obj1=${JSON.stringify(obj2)}`;
-  ref.innerHTML += printLine() + JSON.stringify(jsPackOfConcepts.deepFlattenObject(obj2));
+  ref.innerHTML = printTitle("flattenObjectTest") + `obj1=${JSON.stringify(obj1)}` + printLine();
+  ref.innerHTML += JSON.stringify(jsPackOfConcepts.deepFlattenObject(obj1)) + printLine();
+  ref.innerHTML += `obj2=${JSON.stringify(obj2)}` + printLine();
+  ref.innerHTML += JSON.stringify(jsPackOfConcepts.deepFlattenObject(obj2));
 };
 
 const jsHelper = {
