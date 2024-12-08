@@ -5,6 +5,9 @@ let debounceCounter = 0;
 const printTitle = (title) => {
   return `<b class="size20 underline text-primary">${title}</b><br/>`;
 };
+const printLine = () => {
+  return "<br/> ==============================";
+};
 const pleaseWait = (ref) => ref.innerHTML = "Please wait..." + debounceCounter;
 const debounce = (ref) => {
   debounceCounter++;
@@ -43,16 +46,25 @@ const annonymousCurry = (ref) => {
   const sumof3 = jsPackOfConcepts.annonymousCurry((a, b, c) => a + b + c);
   const mulOf4 = jsPackOfConcepts.annonymousCurry((a, b, c, d) => a * b * c * d);
   const curryLog = jsPackOfConcepts.annonymousCurry(logme);
+  const placeholder = "_";
+  const concat3Strings = jsPackOfConcepts.curryWithPlaceholder((a, b, c) => `${a} ${b} ${c}`, placeholder);
+  const concatHello = concat3Strings("Hello", placeholder, "Greeting");
+  const concatWonder = concat3Strings("Wondering", placeholder, "Land");
   const severe = curryLog("SEVERE");
   const warn = curryLog("WARN");
   ref.innerHTML = printTitle("Annonymous curry") + "sum of 3 (10)(20)(30) is: " + sumof3(10)(20)(30);
   ref.innerHTML += "<br/>sum of (10)(20,30) is: " + sumof3(10)(20, 30);
   ref.innerHTML += "<br/>multiply of (10,40)(20,30) is: " + mulOf4(10, 40)(20, 30);
   ref.innerHTML += "<br/> CURRIED LOGGING ";
+  ref.innerHTML += printLine();
   ref.innerHTML += "<br/> Severe1 " + severe("MAYDAY MAYDAY MAYDAY");
   ref.innerHTML += "<br/> Server2 " + severe("HELP HELP");
   ref.innerHTML += "<br/> Warn1 " + warn("Warning1");
   ref.innerHTML += "<br/> Warn2 " + warn("Alarm1");
+  ref.innerHTML += printLine();
+  ref.innerHTML += "<br/> Currying with placeholder as " + placeholder;
+  ref.innerHTML += `<br/> ${concatHello("world!")}`;
+  ref.innerHTML += `<br/> ${concatWonder("Lala")}`;
   log("ok");
 };
 

@@ -69,6 +69,23 @@ const annonymousCurry = (mainFunction) => {
   };
 };
 
+//Placeholders act as markers that reserve positions for arguments, enabling partial application and more flexible function composition
+//It enhances code readability and promotes composability by enabling functions to be composed dynamically with missing arguments
+const curryWithPlaceholder = (fn, placeholder = "") => {
+  return function curried(...args) {
+    const hasPlaceholder = args.indexOf(placeholder) !== -1;
+    if (args.length >= fn.length && !hasPlaceholder) {
+      return fn.apply(this, args);
+    } else {
+      //return curried with placeholder support
+      return function (...nextArgs) {
+        const combinedArgs = args.map(arg => arg === placeholder && nextArgs.length ? nextArgs.shift() : arg).concat(nextArgs);
+        return curried(...combinedArgs);
+      };
+    }
+  };
+};
+
 const logger = () => {
   let count = 0;
   return (value) => console.log(`output is ${count++}`, value);
@@ -79,6 +96,7 @@ const jsPackOfConcepts = {
   throttling,
   simpleAddCurry,
   annonymousCurry,
-  logger
+  logger,
+  curryWithPlaceholder
 };
 export default jsPackOfConcepts;
