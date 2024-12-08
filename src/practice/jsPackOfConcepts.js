@@ -71,7 +71,7 @@ const annonymousCurry = (mainFunction) => {
 
 //Placeholders act as markers that reserve positions for arguments, enabling partial application and more flexible function composition
 //It enhances code readability and promotes composability by enabling functions to be composed dynamically with missing arguments
-const curryWithPlaceholder = (fn, placeholder = "") => {
+const curryWithPlaceholder = (fn, placeholder = "_") => {
   return function curried(...args) {
     const hasPlaceholder = args.indexOf(placeholder) !== -1;
     if (args.length >= fn.length && !hasPlaceholder) {
@@ -91,12 +91,36 @@ const logger = () => {
   return (value) => console.log(`output is ${count++}`, value);
 };
 
+//its a pollyfill for Array.prototype.flat with a depth given, default to 1
+const deepFlatten = (arr, depth) => {
+  const result = [];
+  const stack = [];
+  const newArr = arr.map(ar => [ar, depth]);
+  stack.push(...newArr);
+  while (stack.length > 0) {
+    const pop = stack.pop();
+    const [ar, depth] = pop;
+    if (depth === 0) {
+      result.push(ar);
+      continue;
+    }
+    if (!Array.isArray(ar)) {
+      result.push(ar);
+    } else {
+      const newArr = ar.map(el => [el, depth - 1]);
+      stack.push(...newArr);
+    }
+  }
+  return result.reverse();
+};
+
 const jsPackOfConcepts = {
   debounce,
   throttling,
   simpleAddCurry,
   annonymousCurry,
   logger,
-  curryWithPlaceholder
+  curryWithPlaceholder,
+  deepFlatten
 };
 export default jsPackOfConcepts;

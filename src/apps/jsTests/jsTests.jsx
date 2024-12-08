@@ -3,12 +3,13 @@ import jsHelper from "./jsHelper.js";
 import domHelper from "../../core/domHelper.js";
 
 const outputContainer = "outputContainer";
-const getDOM = () => domHelper.getByDOMId(outputContainer)
+const getDOM = () => domHelper.getByDOMId(outputContainer);
 const JsTests = () => {
   const handleDebounce = () => jsHelper.debounce(getDOM());
   const handleThrottle = () => jsHelper.throttle(getDOM());
   const handleAddCurry = () => jsHelper.addCurry(getDOM());
   const handleAnnonymousCurry = () => jsHelper.annonymousCurry(getDOM());
+  const handleDeepFlatten = () => jsHelper.flattenArrayTest(getDOM());
 
   return <div className="col flex-wrap gap1">
     <div id="outputContainer" className="outputDiv border pad10 overflow"></div>
@@ -17,7 +18,8 @@ const JsTests = () => {
       <button onClick={handleThrottle}>Throttle</button>
       <button onClick={handleAddCurry}>Add Curry 3 args</button>
       <button onClick={handleAnnonymousCurry}>Annonymous curry</button>
+      <button onClick={handleDeepFlatten}>Deep flatten pollyfill</button>
     </div>
-  </div>
+  </div>;
 };
 export default JsTests;

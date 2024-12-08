@@ -6,7 +6,7 @@ const printTitle = (title) => {
   return `<b class="size20 underline text-primary">${title}</b><br/>`;
 };
 const printLine = () => {
-  return "<br/> ==============================";
+  return "<br/> ==============================<br/>";
 };
 const pleaseWait = (ref) => ref.innerHTML = "Please wait..." + debounceCounter;
 const debounce = (ref) => {
@@ -47,7 +47,7 @@ const annonymousCurry = (ref) => {
   const mulOf4 = jsPackOfConcepts.annonymousCurry((a, b, c, d) => a * b * c * d);
   const curryLog = jsPackOfConcepts.annonymousCurry(logme);
   const placeholder = "_";
-  const concat3Strings = jsPackOfConcepts.curryWithPlaceholder((a, b, c) => `${a} ${b} ${c}`, placeholder);
+  const concat3Strings = jsPackOfConcepts.curryWithPlaceholder((a, b, c) => `${a}$ ${b}$ ${c}`, placeholder);
   const concatHello = concat3Strings("Hello", placeholder, "Greeting");
   const concatWonder = concat3Strings("Wondering", placeholder, "Land");
   const severe = curryLog("SEVERE");
@@ -62,16 +62,26 @@ const annonymousCurry = (ref) => {
   ref.innerHTML += "<br/> Warn1 " + warn("Warning1");
   ref.innerHTML += "<br/> Warn2 " + warn("Alarm1");
   ref.innerHTML += printLine();
-  ref.innerHTML += "<br/> Currying with placeholder as " + placeholder;
+  ref.innerHTML += "<br/> Currying with placeholder argument";
   ref.innerHTML += `<br/> ${concatHello("world!")}`;
-  ref.innerHTML += `<br/> ${concatWonder("Lala")}`;
+  ref.innerHTML += `<br/> ${concatWonder("how to")}`;
   log("ok");
+};
+
+const flattenArrayTest = (ref) => {
+  const arr1 = [1, [2], [3, [4]]];
+  const arr2 = [1, 2, [3, 4, [5, 6]]];
+  ref.innerHTML = printTitle("flattenArrayTest")+"arr1=[1, [2], [3, [4]]], arr2=[1, 2, [3, 4, [5, 6]]]";
+  ref.innerHTML += printLine() + jsPackOfConcepts.deepFlatten(arr1, 1);
+  ref.innerHTML += printLine() + jsPackOfConcepts.deepFlatten(arr1, 2);
+  ref.innerHTML += printLine() + jsPackOfConcepts.deepFlatten(arr2, 2);
 };
 
 const jsHelper = {
   debounce,
   throttle,
   addCurry,
-  annonymousCurry
+  annonymousCurry,
+  flattenArrayTest
 };
 export default jsHelper;
