@@ -118,8 +118,6 @@ const handleProxyObject = (ref) => {
     age: 40
   };
   const proxy = new Proxy(obj1, {
-    //get is called a trap, other traps are: get, set, getPrototypeOf, setPrototypeOf, isExtensible, preventExtensions, getOwnPropertyDescriptor, defineProperty
-    //has, deleteProperty, ownKeys, apply, construct
     get(target, prop) {
       if (prop === "password") {
         return "sensitive data";
@@ -135,11 +133,39 @@ const handleProxyObject = (ref) => {
       }
     };
   };
-  const arr = jsPackOfConcepts.proxyArray([1, 2, 3, 4, 5]);
+  const origArr = [1, 2, 3, 4, 5];
+  const arr = jsPackOfConcepts.proxyArray(origArr);
   ref.innerHTML = printTitle("handleProxyObject") + `normal read: obj1=${core.stringify(obj1)}` + printLine();
   ref.innerHTML += `proxy read: username: ${proxy.userName}, password: ${proxy.password}, age: ${proxy.age}` + printLine();
   ref.innerHTML += `via person class read: username: ${person.userName}, password: ${person.password}, age: ${person.age}, speek: ${person.speak("Ram")}` + printLine();
   ref.innerHTML += `proxy array reverse read: ${core.values(arr)}, -1: ${arr[-1]}` + printLine();
+  console.log("arr", origArr, "proxy", arr);
+};
+
+const handlePipes = async (ref) => {
+  const getName = (input) => input.name;
+  const getUppercaseName = (input) => input.toUpperCase();
+  const getUppercaseNameAsync = (input) => {
+    return new Promise(resolve => setTimeout(() =>
+      resolve(input.toUpperCase()), 3000));
+  };
+  const getFirstName = (input) => input.split(" ")[0];
+  const getReversedName = (input) => input.split("").reverse().join("");
+  const pipeSyncFor = jsPackOfConcepts.pipeViaForLoop(getName, getUppercaseName, getFirstName, getReversedName);
+  const pipeSyncReduce = jsPackOfConcepts.pipeViaReduce(getName, getUppercaseName, getFirstName, getReversedName);
+  const pipeAsyncReduce = jsPackOfConcepts.pipeViaReduce(getName, getUppercaseNameAsync, getFirstName, getReversedName);
+
+  const name1 = "Devendra Prasad";
+  const name2 = "Dhanajay Jha";
+  const name3 = "Aayush Saxena";
+  const outputFromForPipe = await pipeSyncFor({name: name1});
+  ref.innerHTML = printTitle("handlePipes") + `sync read: ${name1} -  ${outputFromForPipe}` + printLine();
+
+  const outputFromReducePipe = await pipeSyncReduce({name: name2});
+  ref.innerHTML += `sync read: ${name2} -${outputFromReducePipe}` + printLine();
+
+  const outputFromReducePipeAsync = await pipeAsyncReduce({name: name3});
+  ref.innerHTML += `Async read: ${name3} -${outputFromReducePipeAsync}` + printLine();
 };
 
 const jsHelper = {
@@ -149,6 +175,7 @@ const jsHelper = {
   annonymousCurry,
   flattenArrayTest,
   flattenObjectTest,
-  handleProxyObject
+  handleProxyObject,
+  handlePipes
 };
 export default jsHelper;

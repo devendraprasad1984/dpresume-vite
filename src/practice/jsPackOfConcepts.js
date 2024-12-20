@@ -132,10 +132,12 @@ const deepFlattenObject = (inputObject) => {
 };
 
 const proxyArray = (arr) => {
+  //get/set is called a trap, other traps are: get, set, getPrototypeOf, setPrototypeOf, isExtensible, preventExtensions, getOwnPropertyDescriptor, defineProperty
+  //has, deleteProperty, ownKeys, apply, construct
   return new Proxy(arr, {
     get(target, property) {
       const index = Number(property);
-      return index < 0 ? arr[arr.length + index] : arr[index];
+      return index < 0 ? target[target.length + index] : target[index];
     },
     set(target, property, value) {
       let index = Number(property);
@@ -145,13 +147,31 @@ const proxyArray = (arr) => {
           throw new Error("cannot set to negative index");
         }
         target[index] = value;
-        return true;
+        return true; //as pattern, this signals proxy to have successful write operation done
       }
       target[index] = value;
       return true;
     }
   });
 };
+
+const pipeViaForLoop = (...listOfFunctions) => {
+  return function (initArg) {
+    let result = initArg;
+    for (let fn of listOfFunctions) {
+      result = fn(result);
+    }
+    return Promise.resolve(result);
+  };
+};
+
+function pipeViaReduce(...listOfFunctions) {
+  return function (initArg) {
+    return listOfFunctions.reduce((chain, fn) => {
+      return chain.then(result => fn(result));
+    }, Promise.resolve(initArg));
+  };
+}
 
 const jsPackOfConcepts = {
   debounce,
@@ -162,6 +182,8 @@ const jsPackOfConcepts = {
   curryWithPlaceholder,
   deepFlattenArray,
   deepFlattenObject,
-  proxyArray
+  proxyArray,
+  pipeViaForLoop,
+  pipeViaReduce
 };
 export default jsPackOfConcepts;

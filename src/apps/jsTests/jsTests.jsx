@@ -12,6 +12,7 @@ const JsTests = () => {
   const handleDeepArrayFlatten = () => jsHelper.flattenArrayTest(getDOM());
   const handleDeepObjectFlatten = () => jsHelper.flattenObjectTest(getDOM());
   const handleProxyObject = () => jsHelper.handleProxyObject(getDOM());
+  const handlePipes = () => jsHelper.handlePipes(getDOM()).then(r => r).catch(r => r);
 
   return <div className="col flex-wrap gap1">
     <div id="outputContainer" className="outputDiv border pad10 overflow"></div>
@@ -23,6 +24,7 @@ const JsTests = () => {
       <button onClick={handleDeepArrayFlatten}>Deep flatten Array pollyfill</button>
       <button onClick={handleDeepObjectFlatten}>Deep flatten Object pollyfill</button>
       <button onClick={handleProxyObject}>Proxy Object</button>
+      <button onClick={handlePipes}>Pipe operation</button>
     </div>
   </div>;
 };
