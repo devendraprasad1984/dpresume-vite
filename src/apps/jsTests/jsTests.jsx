@@ -11,6 +11,7 @@ const JsTests = () => {
   const handleAnnonymousCurry = () => jsHelper.annonymousCurry(getDOM());
   const handleDeepArrayFlatten = () => jsHelper.flattenArrayTest(getDOM());
   const handleDeepObjectFlatten = () => jsHelper.flattenObjectTest(getDOM());
+  const handleProxyObject = () => jsHelper.handleProxyObject(getDOM());
 
   return <div className="col flex-wrap gap1">
     <div id="outputContainer" className="outputDiv border pad10 overflow"></div>
@@ -21,6 +22,7 @@ const JsTests = () => {
       <button onClick={handleAnnonymousCurry}>Annonymous curry</button>
       <button onClick={handleDeepArrayFlatten}>Deep flatten Array pollyfill</button>
       <button onClick={handleDeepObjectFlatten}>Deep flatten Object pollyfill</button>
+      <button onClick={handleProxyObject}>Proxy Object</button>
     </div>
   </div>;
 };

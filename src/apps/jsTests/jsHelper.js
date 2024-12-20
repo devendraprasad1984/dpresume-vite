@@ -1,4 +1,5 @@
 import jsPackOfConcepts from "../../practice/jsPackOfConcepts.js";
+import core from "../../core/core.js";
 
 const oneSecond = 1000;
 let debounceCounter = 0;
@@ -47,7 +48,7 @@ const annonymousCurry = (ref) => {
   const mulOf4 = jsPackOfConcepts.annonymousCurry((a, b, c, d) => a * b * c * d);
   const curryLog = jsPackOfConcepts.annonymousCurry(logme);
   const placeholder = "_";
-  const concat3Strings = jsPackOfConcepts.curryWithPlaceholder((a, b, c) => `${a}$ ${b}$ ${c}`, placeholder);
+  const concat3Strings = jsPackOfConcepts.curryWithPlaceholder((a, b, c) => `${a} ${b} ${c}`, placeholder);
   const concatHello = concat3Strings("Hello", placeholder, "Greeting");
   const concatWonder = concat3Strings("Wondering", placeholder, "Land");
   const severe = curryLog("SEVERE");
@@ -104,10 +105,32 @@ const flattenObjectTest = (ref) => {
       }
     }
   };
-  ref.innerHTML = printTitle("flattenObjectTest") + `obj1=${JSON.stringify(obj1)}` + printLine();
-  ref.innerHTML += JSON.stringify(jsPackOfConcepts.deepFlattenObject(obj1)) + printLine();
-  ref.innerHTML += `obj2=${JSON.stringify(obj2)}` + printLine();
-  ref.innerHTML += JSON.stringify(jsPackOfConcepts.deepFlattenObject(obj2));
+  ref.innerHTML = printTitle("flattenObjectTest") + `obj1=${core.stringify(obj1)}` + printLine();
+  ref.innerHTML += core.stringify(jsPackOfConcepts.deepFlattenObject(obj1)) + printLine();
+  ref.innerHTML += `obj2=${core.stringify(obj2)}` + printLine();
+  ref.innerHTML += core.stringify(jsPackOfConcepts.deepFlattenObject(obj2));
+};
+
+const handleProxyObject = (ref) => {
+  const obj1 = {
+    userName: "DP",
+    password: "dpdpdp",
+    age: 40
+  };
+  const proxy = new Proxy(obj1, {
+    get(target, prop) {
+      if (prop === "password") {
+        return "sensitive data";
+      }
+      return target[prop];
+    }
+  });
+  const person = new function () {
+    return obj1;
+  };
+  ref.innerHTML = printTitle("handleProxyObject") + `normal read: obj1=${core.stringify(obj1)}` + printLine();
+  ref.innerHTML += `proxy read: username: ${proxy.userName}, password: ${proxy.password}, age: ${proxy.age}` + printLine();
+  ref.innerHTML += `via person class read: username: ${person.userName}, password: ${person.password}, age: ${person.age}` + printLine();
 };
 
 const jsHelper = {
@@ -116,6 +139,7 @@ const jsHelper = {
   addCurry,
   annonymousCurry,
   flattenArrayTest,
-  flattenObjectTest
+  flattenObjectTest,
+  handleProxyObject
 };
 export default jsHelper;
