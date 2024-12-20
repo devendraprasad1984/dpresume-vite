@@ -323,7 +323,12 @@ const removeDuplicates = (arr, toKey) => {
   }, new Map());
   return Array.from(map.values());
 };
+
+const isNull = (val) => val === null;
+const notNull = (val) => !isNull(val);
 const core = {
+  isNull,
+  notNull,
   isPresent: (obj) => obj !== "" && obj !== undefined && obj !== null,
   coalesce: (a, b) => a ? a : b,
   isObject: (val) => !isArray(val) && typeof val === "object" && val !== null,
@@ -391,7 +396,9 @@ const core = {
   getFirstElement,
   mergeClasses,
   removeDuplicates,
-  stringifyReplacer
+  stringifyReplacer,
+  values: (arr) => notNull(arr) && Object.values(arr),
+  keys: (arr) => notNull(arr) && Object.keys(arr)
 
 };
 export default core;

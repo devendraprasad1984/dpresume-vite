@@ -131,6 +131,28 @@ const deepFlattenObject = (inputObject) => {
   return result;
 };
 
+const proxyArray = (arr) => {
+  return new Proxy(arr, {
+    get(target, property) {
+      const index = Number(property);
+      return index < 0 ? arr[arr.length + index] : arr[index];
+    },
+    set(target, property, value) {
+      let index = Number(property);
+      if (index < 0) {
+        index += target.length;
+        if (index < 0) {
+          throw new Error("cannot set to negative index");
+        }
+        target[index] = value;
+        return true;
+      }
+      target[index] = value;
+      return true;
+    }
+  });
+};
+
 const jsPackOfConcepts = {
   debounce,
   throttling,
@@ -139,6 +161,7 @@ const jsPackOfConcepts = {
   logger,
   curryWithPlaceholder,
   deepFlattenArray,
-  deepFlattenObject
+  deepFlattenObject,
+  proxyArray
 };
 export default jsPackOfConcepts;

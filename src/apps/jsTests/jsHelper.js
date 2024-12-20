@@ -118,6 +118,8 @@ const handleProxyObject = (ref) => {
     age: 40
   };
   const proxy = new Proxy(obj1, {
+    //get is called a trap, other traps are: get, set, getPrototypeOf, setPrototypeOf, isExtensible, preventExtensions, getOwnPropertyDescriptor, defineProperty
+    //has, deleteProperty, ownKeys, apply, construct
     get(target, prop) {
       if (prop === "password") {
         return "sensitive data";
@@ -126,11 +128,18 @@ const handleProxyObject = (ref) => {
     }
   });
   const person = new function () {
-    return obj1;
+    return {
+      ...obj1,
+      speak: (name) => {
+        return `${name} is speaking`;
+      }
+    };
   };
+  const arr = jsPackOfConcepts.proxyArray([1, 2, 3, 4, 5]);
   ref.innerHTML = printTitle("handleProxyObject") + `normal read: obj1=${core.stringify(obj1)}` + printLine();
   ref.innerHTML += `proxy read: username: ${proxy.userName}, password: ${proxy.password}, age: ${proxy.age}` + printLine();
-  ref.innerHTML += `via person class read: username: ${person.userName}, password: ${person.password}, age: ${person.age}` + printLine();
+  ref.innerHTML += `via person class read: username: ${person.userName}, password: ${person.password}, age: ${person.age}, speek: ${person.speak("Ram")}` + printLine();
+  ref.innerHTML += `proxy array reverse read: ${core.values(arr)}, -1: ${arr[-1]}` + printLine();
 };
 
 const jsHelper = {
