@@ -199,6 +199,25 @@ const fetchAutoRetry = (fetchFn, retryLimit = 3) => {
   });
 };
 
+//pollyfill for Promise.all
+const promiseAll = (input) => {
+  const result = [];
+  let resolvedCount = 0;
+  return new Promise((resolve, reject) => {
+    //loop over each param and wrap in resolve
+    for (let index in input) {
+      const elem = input[index];
+      Promise.resolve(elem).then(value => {
+        result[index] = value;
+        resolvedCount += 1;
+        if (resolvedCount === input.length) {
+          resolve(result);
+        }
+      }).catch(err => reject(err));
+    }
+  });
+};
+
 const jsPackOfConcepts = {
   debounce,
   throttling,
@@ -212,6 +231,7 @@ const jsPackOfConcepts = {
   pipeViaForLoop,
   pipeViaReduce,
   fetchApi,
-  fetchAutoRetry
+  fetchAutoRetry,
+  promiseAll
 };
 export default jsPackOfConcepts;

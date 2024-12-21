@@ -14,12 +14,13 @@ const JsTests = () => {
   const handleProxyObject = () => jsHelper.handleProxyObject(getDOM());
   const handlePipes = () => jsHelper.handlePipes(getDOM()).then(r => r).catch(r => r);
   const handleFetchAutoRetry = () => jsHelper.handleFetchAutoRetry(getDOM()).then(r => r).catch(r => r);
+  const handlePromisePollyfill = () => jsHelper.handlePromisePollyfill(getDOM()).then(r => r).catch(r => r);
 
   return <div className="col flex-wrap gap1">
     <div id="outputContainer" className="outputDiv border pad10 overflow"></div>
-    <div className="row gap1 flex-wrap">
-      <button onClick={handleDebounce}>Debounce</button>
-      <button onClick={handleThrottle}>Throttle</button>
+    <div className="row gap1 flex-wrap button-push-container">
+      <button className="btn-red-light" onClick={handleDebounce}>Debounce</button>
+      <button className="btn-green-light" onClick={handleThrottle}>Throttle</button>
       <button onClick={handleAddCurry}>Add Curry 3 args</button>
       <button onClick={handleAnnonymousCurry}>Annonymous curry</button>
       <button onClick={handleDeepArrayFlatten}>Deep flatten Array pollyfill</button>
@@ -27,6 +28,7 @@ const JsTests = () => {
       <button onClick={handleProxyObject}>Proxy Object</button>
       <button onClick={handlePipes}>Pipe operation</button>
       <button onClick={handleFetchAutoRetry}>Fetch auto retry</button>
+      <button onClick={handlePromisePollyfill}>promise.all pollyfill</button>
     </div>
   </div>;
 };

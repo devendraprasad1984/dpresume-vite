@@ -178,6 +178,18 @@ const handleFetchAutoRetry = async (ref) => {
   ref.innerHTML = printTitle("handleFetchAutoRetry") + `todos data: ${url} => ${core.stringify(response.slice(0, 10))}` + printLine();
 };
 
+const handlePromisePollyfill = async (ref) => {
+  ref.innerHTML = pleaseWait(ref);
+  const promise1 = jsPackOfConcepts.promiseAll([
+    Promise.resolve(1),
+    new Promise((resolve) => setTimeout(() => resolve(2), 2000)),
+    4,
+    Promise.resolve(3),
+  ]);
+  let result1 = await promise1;
+  ref.innerHTML = printTitle("handlePromisePollyfill") + `promise.all: ${result1}` + printLine();
+};
+
 const jsHelper = {
   debounce,
   throttle,
@@ -187,6 +199,7 @@ const jsHelper = {
   flattenObjectTest,
   handleProxyObject,
   handlePipes,
-  handleFetchAutoRetry
+  handleFetchAutoRetry,
+  handlePromisePollyfill
 };
 export default jsHelper;
