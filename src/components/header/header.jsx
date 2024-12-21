@@ -1,7 +1,10 @@
 import React from "react";
 import links from "../../core/links.js";
+import useScreen from "../../hooks/useScreen.js";
 
 const Header = () => {
+  const {handleScreenToggle} = useScreen();
+  
   return <div className="relative wid100 height100p glass bg-header">
     <div className="flex row flex-center wid100 mflex-start">
       <div className="wid10 mwid20 align-center">
@@ -25,6 +28,9 @@ const Header = () => {
           </div>
         </div>
       </div>
+    </div>
+    <div className="flex row flex-end">
+      <button onClick={handleScreenToggle} className="rectangle-button button3">Toggle</button>
     </div>
   </div>;
 };
