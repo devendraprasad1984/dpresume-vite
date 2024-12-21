@@ -1,17 +1,30 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import MyButton from "../components/contextual/button.jsx";
 import AppList from "./appList.jsx";
 import DomHelper from "../core/domHelper.js";
 import DOMEnum from "../enums/DOMEnum.js";
 import core from "../core/core.js";
 import useAppSelectorComponentMap, {appMap} from "../hooks/useAppSelectorComponentMap.js";
+import {useParams} from "react-router-dom";
+import appEnum from "../enums/appEnum.js";
 
 const AppsHome = () => {
+  const params = useParams();
   const appKeys = Object.keys(appMap);
-  const [currentApp, setCurrentApp] = useState(appKeys[0]);
+  const id = appEnum[params?.id] || appKeys[0];
+  const [currentApp, setCurrentApp] = useState(id);
   const list2Ref = useRef();
 
+  useEffect(() => {
+    if (id !== currentApp) {
+      setCurrentApp(id);
+    }
+  }, [id]);
+
   const ThisApp = useAppSelectorComponentMap({currentApp});
+  if (core.isNull(ThisApp)) {
+    return "Please try later";
+  }
 
   const handleAppSelectorButton = (e) => {
     e?.preventDefault();

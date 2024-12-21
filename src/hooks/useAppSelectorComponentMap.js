@@ -14,12 +14,12 @@ const JSSampleFunctionOutput = React.lazy(
   () => import("../apps/jsTests/jsTests.jsx"));
 
 export const appMap = {
-  [appEnum.netflix]: LazyNetFlix,
-  [appEnum.simpleForm]: LazySimpleForm,
-  [appEnum.geekAdminVideo]: LazyGeekAdmin,
-  [appEnum.vanillJSHome]: LazyVanillaJSHome,
-  [appEnum.vanillJSRedux]: LazyVanillaJSRedux,
-  [appEnum.JSApps]: JSSampleFunctionOutput,
+  [appEnum[appEnum.appKeys.netflix]]: LazyNetFlix,
+  [appEnum[appEnum.appKeys.simpleForm]]: LazySimpleForm,
+  [appEnum[appEnum.appKeys.geekAdminVideo]]: LazyGeekAdmin,
+  [appEnum[appEnum.appKeys.vanillJSHome]]: LazyVanillaJSHome,
+  [appEnum[appEnum.appKeys.vanillJSRedux]]: LazyVanillaJSRedux,
+  [appEnum[appEnum.appKeys.JSApps]]: JSSampleFunctionOutput,
 };
 
 const useAppSelectorComponentMap = ({currentApp}) => {

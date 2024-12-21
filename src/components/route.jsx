@@ -10,7 +10,7 @@ const AppRoutes = () => {
     <Route path="/" element={<Home/>}/>
     <Route path="/about" element={<About/>}/>
     <Route path="/projects" element={<ProjectList/>}/>
-    <Route path="/apps" element={<AppsHome/>}/>
+    <Route path="/apps/:id" element={<AppsHome/>}/>
   </Routes>;
 };
 export default AppRoutes;

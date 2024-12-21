@@ -324,7 +324,7 @@ const removeDuplicates = (arr, toKey) => {
   return Array.from(map.values());
 };
 
-const isNull = (val) => val === null;
+const isNull = (val) => val === null || val === undefined;
 const notNull = (val) => !isNull(val);
 const core = {
   isNull,
