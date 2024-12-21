@@ -168,6 +168,16 @@ const handlePipes = async (ref) => {
   ref.innerHTML += `Async read: ${name3} -${outputFromReducePipeAsync}` + printLine();
 };
 
+const handleFetchAutoRetry = async (ref) => {
+  const url = "https://jsonplaceholder.typicode.com/todos";
+  const fetchIt = () => jsPackOfConcepts.fetchApi(url);
+  ref.innerHTML = pleaseWait(ref);
+  const response = await jsPackOfConcepts.fetchAutoRetry(fetchIt);
+  // response.then(data => console.log("data", data)).catch(e => console.log(e));
+  // const data = await response;
+  ref.innerHTML = printTitle("handleFetchAutoRetry") + `todos data: ${url} => ${core.stringify(response.slice(0, 10))}` + printLine();
+};
+
 const jsHelper = {
   debounce,
   throttle,
@@ -176,6 +186,7 @@ const jsHelper = {
   flattenArrayTest,
   flattenObjectTest,
   handleProxyObject,
-  handlePipes
+  handlePipes,
+  handleFetchAutoRetry
 };
 export default jsHelper;

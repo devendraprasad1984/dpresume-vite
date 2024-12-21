@@ -173,6 +173,32 @@ function pipeViaReduce(...listOfFunctions) {
   };
 }
 
+const fetchApi = async (url, options) => {
+  try {
+    const response = await fetch(url, options);
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    return err;
+  }
+};
+const fetchAutoRetry = (fetchFn, retryLimit = 3) => {
+  return new Promise(function (resolve, reject) {
+    //iife call
+    (function retry() {
+      fetchFn().then((data) => {
+        resolve(data);
+      }).catch((err) => {
+        if (retryLimit-- > 0) {
+          retry();
+        } else {
+          reject(err);
+        }
+      });
+    })();
+  });
+};
+
 const jsPackOfConcepts = {
   debounce,
   throttling,
@@ -184,6 +210,8 @@ const jsPackOfConcepts = {
   deepFlattenObject,
   proxyArray,
   pipeViaForLoop,
-  pipeViaReduce
+  pipeViaReduce,
+  fetchApi,
+  fetchAutoRetry
 };
 export default jsPackOfConcepts;
