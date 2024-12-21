@@ -18,17 +18,18 @@ const JsTests = () => {
 
   return <div className="col flex-wrap gap1">
     <div id="outputContainer" className="outputDiv border pad10 overflow"></div>
+    <div><span className="bold underline">Button variations</span></div>
     <div className="row gap1 flex-wrap button-push-container">
       <button className="btn-red-light" onClick={handleDebounce}>Debounce</button>
       <button className="btn-green-light" onClick={handleThrottle}>Throttle</button>
-      <button onClick={handleAddCurry}>Add Curry 3 args</button>
-      <button onClick={handleAnnonymousCurry}>Annonymous curry</button>
-      <button onClick={handleDeepArrayFlatten}>Deep flatten Array pollyfill</button>
-      <button onClick={handleDeepObjectFlatten}>Deep flatten Object pollyfill</button>
-      <button onClick={handleProxyObject}>Proxy Object</button>
-      <button onClick={handlePipes}>Pipe operation</button>
-      <button onClick={handleFetchAutoRetry}>Fetch auto retry</button>
-      <button onClick={handlePromisePollyfill}>promise.all pollyfill</button>
+      <button className="shadow__btn" onClick={handleAddCurry}>Add Curry 3 args</button>
+      <button className="btn-animate" onClick={handleAnnonymousCurry}><span>Annonymous curry</span></button>
+      <button className="rectangle-button button2" onClick={handleDeepArrayFlatten}>Deep flatten Array pollyfill</button>
+      <button className="rectangle-button button3" onClick={handleDeepObjectFlatten}>Deep flatten Object pollyfill</button>
+      <button className="button-hover-red" onClick={handleProxyObject}>Proxy Object</button>
+      <button className="button-hover-red" onClick={handlePipes}>Pipe operation</button>
+      <button className="button-hover-red" onClick={handleFetchAutoRetry}>Fetch auto retry</button>
+      <button className="button-hover-red" onClick={handlePromisePollyfill}>promise.all pollyfill</button>
     </div>
   </div>;
 };
