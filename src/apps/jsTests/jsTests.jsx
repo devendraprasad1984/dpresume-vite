@@ -29,7 +29,10 @@ const JsTests = () => {
       <button className="button-hover-red" onClick={handleProxyObject}>Proxy Object</button>
       <button className="button-hover-red" onClick={handlePipes}>Pipe operation</button>
       <button className="button-hover-red" onClick={handleFetchAutoRetry}>Fetch auto retry</button>
-      <button className="button-hover-red" onClick={handlePromisePollyfill}>promise.all pollyfill</button>
+      <button className="button-hover-red btn-animated-line" onClick={handlePromisePollyfill}>
+        <span></span><span></span><span></span><span></span>
+        promise.all pollyfill
+      </button>
     </div>
   </div>;
 };

@@ -1,5 +1,4 @@
 import rootNames from "../core/rootNames.js";
-import core from "../core/core.js";
 
 const useScreen = () => {
 
