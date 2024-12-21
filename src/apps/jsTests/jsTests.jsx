@@ -19,11 +19,11 @@ const JsTests = () => {
   return <div className="col flex-wrap gap1">
     <div id="outputContainer" className="outputDiv border pad10 overflow"></div>
     <div><span className="bold underline">Button variations</span></div>
-    <div className="row gap1 flex-wrap button-push-container">
+    <div className="row gap1 flex-wrap button-push-container mgrid mgrid2x2">
       <button className="btn-red-light" onClick={handleDebounce}>Debounce</button>
       <button className="btn-green-light" onClick={handleThrottle}>Throttle</button>
       <button className="shadow__btn" onClick={handleAddCurry}>Add Curry 3 args</button>
-      <button className="btn-animate" onClick={handleAnnonymousCurry}><span>Annonymous curry</span></button>
+      <button className="" onClick={handleAnnonymousCurry}><span>Annonymous curry</span></button>
       <button className="rectangle-button button2" onClick={handleDeepArrayFlatten}>Deep flatten Array pollyfill</button>
       <button className="rectangle-button button3" onClick={handleDeepObjectFlatten}>Deep flatten Object pollyfill</button>
       <button className="button-hover-red" onClick={handleProxyObject}>Proxy Object</button>

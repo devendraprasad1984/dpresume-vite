@@ -1,4 +1,9 @@
-@media (max-width: 520px) {
+@media (max-width: 720px) {
+
+  .desktop-only {
+    display: none !important;
+  }
+
   div {
     width: 100%;
   }
@@ -126,4 +131,25 @@
   .m-footer-badge {
     gap: 1px;
   }
+
+  .mgrid {
+    display: grid;
+  }
+
+  .mgrid2x2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mgrid3x3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .mgrid4x4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .mgrid-auto {
+    grid-template-columns: repeat(auto-fit, 1fr);
+  }
+
 }
