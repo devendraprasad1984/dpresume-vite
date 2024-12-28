@@ -1,0 +1,12 @@
+{
+  "name": "@dp/oneliners",
+  "version": "1.0.0",
+  "description": "core js utility oneliners helper functions",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DP (Devendra Prasad)",
+  "license": "ISC"
+}
