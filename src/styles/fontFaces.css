@@ -1,0 +1,24 @@
+@font-face {
+  font-family: PermanentMarker;
+  src: url("/fonts/PermanentMarker.ttf");
+}
+
+@font-face {
+  font-family: Budmo;
+  src: url("/fonts/budmo.otf");
+}
+
+@font-face {
+  font-family: Guts;
+  src: url("/fonts/guts.ttf");
+}
+
+@font-face {
+  font-family: Peechy;
+  src: url("/fonts/peechy.otf");
+}
+
+@font-face {
+  font-family: Thunky;
+  src: url("/fonts/thunky.otf");
+}

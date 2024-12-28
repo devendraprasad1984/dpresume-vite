@@ -1,5 +1,6 @@
 import React from "react";
 
+import "./styles/fontFaces.css";
 import "./styles/root.css";
 import "./styles/control.css";
 import "./styles/colors.css";

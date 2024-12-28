@@ -1,4 +1,3 @@
-
 html {
   scrollbar-width: thin !important;
   scroll-behavior: smooth;
@@ -24,4 +23,44 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   color: var(--app-text-color) !important;
+}
+
+.permanentMarkerFamily {
+  font-family: "PermanentMarker", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+}
+
+.gutsFamily {
+  font-family: "Guts", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+}
+
+.budmoFamily {
+  font-family: "Budmo", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+}
+
+.thunkFamily {
+  font-family: "Thunky", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+}
+
+.peechyFamily {
+  font-family: "Peechy", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+}
+
+.permanentMarkerFamilyBefore::before {
+  font-family: "PermanentMarker", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+}
+
+.gutsFamilyBefore::before {
+  font-family: "Guts", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+}
+
+.budmoFamilyBefore::before {
+  font-family: "Budmo", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+}
+
+.thunkFamilyBefore::before {
+  font-family: "Thunky", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+}
+
+.peechyFamilyBefore::before {
+  font-family: "Peechy", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
