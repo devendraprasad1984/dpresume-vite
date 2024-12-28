@@ -2,7 +2,7 @@ import React from "react";
 import PrintList from "./printList.jsx";
 
 const oneliners = <div className="col">
-  <span className="skill-label wt500 size80">Onliners</span>
+  <span className="skill-label wt500 size80">Oneliners</span>
   <span className="size12">core javascript utility helper methods</span>
   <span className="size12 bold">npm i oneliners <a className="size12">read me</a></span>
 </div>;
