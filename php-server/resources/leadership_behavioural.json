@@ -1,0 +1,44 @@
+[
+  {
+    "what": "",
+    "proj_name_1": "Kroger (total: 15, devs(web+android+ios): 9)",
+    "proj_name_2": "Fab (total: 5, devs: 3)",
+    "proj_name_3": "CeX (total: 4, devs: 2)"
+  },
+  {
+    "what": "Challenges",
+    "proj_name_1": "Upstream Services",
+    "proj_name_2": "ms dynamics 360 was unknown platform, integration approaches may be different or not supported in few instances",
+    "proj_name_3": "time to deliver was very less as some initial hiccup had gone into exploring plotly dash as UI platform. D3 draggable data points and requirements for dependency management was bit of challenging too."
+  },
+  {
+    "what": "Failures",
+    "proj_name_1": "Time delay to release and few bugs due to upstream, eg one was timeout, we increased at our end",
+    "proj_name_2": "project didnt materialise not because of tech poc challenge, but because of management of TW, some external factors and of costing.",
+    "proj_name_3": "time of resolution of queries from Moodys sometimes took longer which cause smoe pressue on us"
+  },
+  {
+    "what": "Enjoyed",
+    "proj_name_1": "flash sale work <br/> feature toggles, Amp<br/>Tech huddles and review pair calls",
+    "proj_name_2": "integration of react small apps like widgets into MS Dynamics and work within tech boundation was one of kind of experience",
+    "proj_name_3": "SSO work end to end on  python+dajngo and UI on react"
+  },
+  {
+    "what": "Leadership",
+    "proj_name_1": "Engg Metrics, RTB calls, SecChamp, working group calls",
+    "proj_name_2": "coordinate with BAs and Principal developers for weekly updates",
+    "proj_name_3": "regular connect with senior delivery directors and POs for updates, connects with Moody folks for tech queries"
+  },
+  {
+    "what": "Conflict",
+    "proj_name_1": "Mostly none but review pairing over a call was pushed back but when backed by majority and onshore leads, it was well accepted and helped reduced onsite review comments",
+    "proj_name_2": "None, only 3 devs (2 UI, 1 backend) in team, 1 BA and 1 Pricipal Developer",
+    "proj_name_3": "Initial conflict was there when choice of tech from plotly dash (data scientist folks) to react was put forward, but it was good debate and clearly due to architecting and SOLID principal approach, react and decoupling was clear winner"
+  },
+  {
+    "what": "What was done differently",
+    "proj_name_1": "Tech Huddle platform wide<br/>review pairing like a huddle over a call<br/>speedbacks really helped",
+    "proj_name_2": "It was just PoC, even though we thought to take micro front end and monorepo approach for react widgets and them to work in MS Dynammics apps",
+    "proj_name_3": "Draggable D3 work <br/> team coordination and managing their time with ours"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "BackEnd:": [
+    "python: 3.6.7~5",
+    "Tornado: 5.1.1~4",
+    "django: 3.1.6~4",
+    "flask: 1.1.2~4",
+    "Tableau: 2019.1.3~3",
+    "sqlAlchemy~3",
+    "autosys~5",
+    "mongoDB~2",
+    "Git~5"
+  ],
+  "FrontEnd": [
+    "HTML5 . ES6~5",
+    "react: 16.8.0~4",
+    "svelte: 3.0.0~4",
+    "recoil: latest~4",
+    "node: latest~4",
+    "typeOrm: latest~4",
+    "redux: 4.0.1~3",
+    "D3Js~4"
+  ],
+  "Databases": ["Oracle 11g~4", "postgres~4", "sql.plsql.joins~5"],
+  "Servers": ["apache: 2.4.0~5", "http-server, browserify, watchify, uglify~5"]
+}

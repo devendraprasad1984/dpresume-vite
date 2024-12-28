@@ -1,0 +1,47 @@
+{
+  "Some urls": [
+    "<a target='_blank' href='https://dpresume.com/docs/pdf/aws-dev-associate-notes.pdf'>aws-dev-associate-notes</a>",
+    "<a target='_blank' href='https://dpresume.com/docs/pdf/aws-symbi-project.pdf'>aws-symbi-project</a>",
+    "<a target='_blank' href='https://dpresume.com/docs/pdf/VBAEyeOpner.pdf'>VBAEyeOpner</a>",
+    "<a target='_blank' href='https://dpresume.com/docs/pdf/pythonTrainingKIT.pdf'>pythonTrainingKIT</a>"
+  ],
+  "Thoughtworks via Geektrust": [
+    {
+      "name": "Kroger Customers Tech - Checkout – Flash Sale and Analytics, Jan2022 – current",
+      "desc": "This project is about the flash sale items alongside checkout while shopping.\nWe present flash sales to users on discounts, and they can order it. The nodebased rest apis are same serving iOS, Android, Web (react based) platforms."
+    },
+    {
+      "name": "FAB (First Abu Dhabi Bank, Colleague Experience Portal), Oct2021 – Jan2022",
+      "desc": "The client FAB has various distributed systems in various legacy tech stack\nand has a need to have a single collaborative colleagues’ platform to access\nall such systems under one roof for better management of clients, accounts,\nand their banking interactions. They are using MS Dynamics and PowerApp\nplatform to achieve the system output at segregated level. We have used the\nstack with a mix of vanilla web + react components to make a single\ncollaborative platform to simplify workflows."
+    }
+  ],
+  "Natwest Group (former Royal Bank of Scotland)": [
+    {
+      "name": "CeX / RfX, Natwest Group, Mar2021 - Sep2021",
+      "desc": "These projects are regression projects for Risk Based Markets Economic factors and\n    produce risk weights on scenario variables. To achieve this, we hook univar and moody’s\n    analytics APIs and get data snapshots and do regression & analytics over it. We used\n    internal SSO, python3, django, django-rest, postgres and React.Js to achieve the output"
+    },
+    {
+      "name": "Smart Disability Initiatives, Natwest Group, Aug2020 - Jan2021",
+      "desc": "I have opted to be in the disability initiative and contributed by making one social network\nplatform for disabled carers and NGOs and CII-IBDN indian government body and native\napp for the BDF(Business Disability Forum) group in the UK"
+    },
+    {
+      "name": "Arria NLG Budgets and Forecasts Narratives, Jul2019 - Nov2020",
+      "desc": "This project was intended for automatic commentary / notes / narratives generation from\nbank statement reports using Arria.com NLG platform and using Tableau UI /\ndashboarding capabilities."
+    },
+    {
+      "name": "Finance Portal, Apr2016 - Jul2018",
+      "desc": "Across the Bank, for statutory / regulatory needs, the project uses standard and\nconfigurable reports approach to building disclosures using MVC, Python3 & Tornado, Javascript, React/Html5 and Sql & PlSql in Oracle 11g."
+    },
+    {
+      "name": "CNMS - Cash Nostro Management System, Oct2011 - Jan2015",
+      "desc": "Soap implemented, python proxy server, acts as middleware, the aim was to have a single instance accessing\nRBS cash balances server and can give relevant data to authorized clients identified by\nIPs."
+    }
+  ],
+  "Syntel": [],
+  "Nine-Dimensions": [],
+  "DAVIM": [],
+  "Miscellaneous": "L3 support, non technology / reporting / migration projects",
+  "Agile-Ceremonies": "planning, estimation, sprint, retrospective, review",
+  "SDLC": "requirements gathering, analysis, design, coding, testing, deployment and support",
+  "Others": "Library Management, PRVit, MDO, iPub, few automation tools in excel"
+}

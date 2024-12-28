@@ -1,0 +1,79 @@
+{
+  "TWKS": {
+    "role": "Lead Appplication Developer @ Thoughtworks via Geektrust",
+    "time": "Sep21-current",
+    "projects": [
+      "Colleague Experience @ FAB (First Abu Dhabi Bank)"
+    ],
+    "speek": true,
+    "summary": [
+      "working on powerapps, MS dynamics 360, vanilla HTML+css+javascript, webapis, react.js",
+      "I practice TDD based frontend mainly React.js, html and vanila Js and backend mainly python, django, postgres and devops CI/CD",
+      "I maintain code quality using sonarqube, git hooks and constant review cycle",
+      "I do Code . Collaborate . Build . Change . Incident . Release . Triage",
+      "I help in recruiting, grow team and work on enabling team",
+      "I am a code reviewer,mentor and face to dev team",
+      "I use JIRA | Leankit | Trello for agility, bug tracking and backlog grooming",
+      "I know SDLC, Incident | Change | Release management life cycles"
+    ]
+  },
+  "RBS": {
+    "role": "Tech Lead @ Royal Bank Of Scotland",
+    "time": "Oct11-Sep21",
+    "projects": [
+      "Arria NLG (Natural Language Generation)",
+      "DRA - Disclosure Reporting Automation",
+      "Oracle Analytical Cloud Service",
+      "Cash Nostro Management Systems"
+    ],
+    "speek": true,
+    "summary": [
+      "I work as lead analytics developer over Arria NLG & tableau platform.",
+      "I work(ed) as fullstack developer over high ledger data volume in Oracle 11.",
+      "I am involved in Arria NLG platform wide improvements and stability concerns.",
+      "I work(ed) on DB design, Microservice REST API Design, data loader strategy.",
+      "I can work smoothly on UI development using ReactJs.",
+      "I use(d) pylint, jshint, coverage.py, unittest.py for code quality & TDD.",
+      "I do code review and provide technical guidance to development team.",
+      "I work(ed) with Architects finalising strategies around our solution.",
+      "I use(d) Argon APIs for cross platform message (SOAP/JSON/files) deliveries interanally.",
+      "I use JIRA & Leankit for agile, bug tracking and backlog grooming.",
+      "I help defining project outcomes, recruit & grow team, handle end-user queries.",
+      "I train(ed) some of new joiners and graduate developers & peers.",
+      "I follow MBDL( More Better Different Less ) practices for retrospectives."
+    ]
+  },
+  "syntel": {
+    "role": "Programmer @ Syntel",
+    "time": "Apr11-Sep11",
+    "projects": [
+      "Information Publisher macros",
+      "Markdown Optimisation template for requisition management system"
+    ],
+    "speek": true,
+    "summary": [
+      "As an agile sprint developer i handled development of above projects and also dealt in other SDLC phases and to end to end support of the projects"
+    ]
+  },
+  "9dim": {
+    "role": "Programmer @ 9 Dimensions",
+    "time": "Nov09-Mar11",
+    "projects": ["PRVit (Performance Risk Valuation Investment Technique)"],
+    "speek": true,
+    "summary": [
+      "i handled all development and support related work in the project"
+    ]
+  },
+  "DAVIM": {
+    "role": "Programmer @ DAVIM",
+    "time": "Sep07-Sep08",
+    "projects": [
+      "Software development training to MCA students",
+      "Library Management"
+    ],
+    "speek": true,
+    "summary": [
+      "i handled all development and support related work in the project and also trained MCA students on VB6 application development platform"
+    ]
+  }
+}

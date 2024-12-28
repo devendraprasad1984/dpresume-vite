@@ -1,0 +1,119 @@
+{
+  "links": [
+    {
+      "href": "https://dpresume.herokuapp.com/",
+      "name": "dpresume.com SSR"
+    },
+    {
+      "href": "https://dpresume.com/bmi",
+      "name": "BMI Calculator NodeJs App"
+    },
+    {
+      "href": "https://dpresume.com/react-vanila-js/#/",
+      "name": "React-Vanila-JS"
+    },
+    {
+      "href": "https://dpresume.com/bmi/coverage/lcov-report/index.html",
+      "name": "BMI-JEST"
+    },
+    {
+      "href": "https://dpresume.com/dragd3",
+      "name": "Draggable D3"
+    },
+    {
+      "href": "https://dpresume.com/bets",
+      "name": "Bets Easy Demo"
+    },
+    {
+      "href": "https://dpresume.com/react-js-python/#/",
+      "name": "React JS Library Based - without Node"
+    },
+    {
+      "href": "https://dpresume.com/geek_admin/",
+      "name": "Geek Trust Admin UI Challenge"
+    },
+    {
+      "href": "https://dpresume.com/kanban/",
+      "name": "sample draggable kanban board"
+    },
+    {
+      "href": "https://dpresume.com/kaathi.com/",
+      "name": "dummy ecommerce cart"
+    },
+    {
+      "href": "https://dpresume.com/svelte/firstapp",
+      "name": "first basic svelte library/transpiled app"
+    },
+    {
+      "href": "https://dpresume.com/debounceExampleLazySearch/",
+      "name": "Lazy Search Debounce Example"
+    },
+    {
+      "href": "https://dpresume.com/ciim/",
+      "name": "Post & Reply system"
+    },
+    {
+      "href": "https://dpresume.com/mocha/mocha.html",
+      "name": "Mocha Unit Tests"
+    },
+    {
+      "href": "https://dpresume.com/dpvoicebanking",
+      "name": "Open Banking Hackathon"
+    },
+    {
+      "href": "https://github.com/devendraprasad1984/nodejs/tree/master/ts-node-postgres-orm-api",
+      "name": "nodejs typeorm sample"
+    },
+    {
+      "href": "https://dpresume.com/swagger",
+      "name": "swagger"
+    },
+    {
+      "href": "https://test-loan-ledger-dp.herokuapp.com/",
+      "name": "Loan Ledger Python Django API App"
+    }
+  ],
+  "videos": [
+    {
+      "src": "https://dpresume.com/bmi/demo.webm",
+      "type": "video/webm",
+      "name": "NodeJs BMI App"
+    },
+    {
+      "src": "https://dpresume.com/docs/bdfdemojan21.webm",
+      "type": "video/webm",
+      "name": "BDF React-Native App"
+    },
+    {
+      "src": "https://dpresume.com/docs/supply-chain.webm",
+      "type": "video/webm",
+      "name": "Supply Chain React-Native App"
+    }
+  ],
+  "youtube": [
+    {
+      "src": "https://www.youtube.com/embed/6-v_vIxyB4g",
+      "name": "Loan Ledger API Demo"
+    },
+    {
+      "src": "https://www.youtube.com/embed/tnOzTKFzky4",
+      "name": "NodeJs BMI App"
+    },
+    {
+      "src": "https://www.youtube.com/embed/Rixb_zZoG-g",
+      "name": "TypeORM Node Js Test App"
+    },
+    {
+      "src": "https://www.youtube.com/embed/G5Q2BBpx02s",
+      "name": "BDF React-Native App"
+    },
+    {
+      "src": "https://www.youtube.com/embed/4t_oHrZKwgw",
+      "name": "Post and Messaging"
+    },
+    {
+      "src": "https://www.youtube.com/embed/V1GI28fOYvQ",
+      "name": "Supply Chain React-Native App"
+    }
+  ]
+}

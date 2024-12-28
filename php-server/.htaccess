@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^api/resources/([a-zA-Z0-9-]*)?$ api/get-resource-handler.php?name=$1
+#RewriteRule ^api/users/([0-9]+)?$ api/users_handler.php?id=$1

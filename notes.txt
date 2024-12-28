@@ -1,0 +1,25 @@
+file->menu->go connect to server: ftp://dpresume.com->dlrgvkes->rbs1984#
+sudo mount -o remount,rw '/Volumes/httpdocs'
+sudo chown -R $(whoami) $(brew --prefix)/*
+you may fix this in restart mac in safe mode
+    csrutil status, csrutil disable, csrutil enable
+    restart->changed permissions in folder->get info->change or add users and restart again
+
+JEST and Enzyme
+https://www.toptal.com/react/tdd-react-unit-testing-enzyme-jest
+https://www.youtube.com/watch?v=XNzVMP7Mnxg
+
+The first step is to create a failing test which will try to render a React.js Component using the enzyme’s shallow function.
+// MyComponent.test.js
+import React from 'react';
+import { shallow } from 'enzyme';
+import MyComponent from './MyComponent';
+describe("MyComponent", () => {
+  it("should render my component", () => {
+    const wrapper = shallow(<MyComponent />);
+  });
+});
+
+
+
+php -S localhost:6201, serve files in server folder

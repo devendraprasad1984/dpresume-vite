@@ -1,0 +1,31 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": ["import"],
+  "extends": [
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "import/no-unresolved": "error",
+    "import/named": "warn",
+    "import/namespace": "warn",
+    "import/no-named-as-default": "error",
+    "import/export": "warn",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "parent", "sibling", "index"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}
