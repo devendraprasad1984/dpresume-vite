@@ -39,6 +39,7 @@
     display: flex;
     align-items: center;
     counter-increment: count+1;
+    font-family: "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
 
 .counter-color-success::before {
