@@ -1,0 +1,95 @@
+:root {
+  --purple-color: #7fb4c2;
+  --gray-color: #c2bebe;
+  --default-text-color: #4f4e4e;
+  --black-color: #222;
+  --white: white;
+  --grad-color1: #f8decc;
+  --grad-color2: #d4f8d4;
+  --grad-color3: white;
+  --link-active-color1: #8a1fc0;
+  --link-active-color2: #4d72c0;
+  --gradient-image-color: linear-gradient(
+          115deg,
+          var(--link-active-color1) 20%,
+          var(--link-active-color2) 60%
+  );
+  --left-panel-width: 20%;
+  --right-panel-width: 100%;
+  --body-linear-grad-color: linear-gradient(
+          115deg,
+          var(--grad-color1) 0%,
+          var(--grad-color3) 40%,
+          var(--grad-color2) 100%
+  );
+  --medium-violet: #b71d7d;
+  --size10px: 10px;
+}
+
+html, body{
+  width: 90%;
+  padding: 2%;
+  /*overflow-x: hidden;*/
+}
+.handwritting {
+  box-sizing: border-box;
+  font-family: "Ephesis", cursive;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", monospace;
+  color: var(--default-text-color);
+  word-break: break-all !important;
+  word-wrap: break-word !important;
+  text-wrap: normal;
+}
+
+div {
+  margin-top: 2px;
+}
+
+::selection {
+  background-color: var(--purple-color);
+  color: white;
+}
+
+select{
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+input,select {
+  width: 100%;
+  border: 2px solid var(--black-color);
+  padding: 5px;
+  margin-top: 4px;
+}
+
+::placeholder {
+  color: var(--black-color);
+  opacity: 0.8;
+}
+
+select {
+  margin: 2px;
+  padding: 2px;
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  width: var(--size10px);
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--black-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e9e8ec;
+}

@@ -1,0 +1,39 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat__date-separator {
+  position: sticky;
+  top: 0;
+  display: grid;
+  justify-content: center;
+  padding: toRem(8) 0;
+  align-items: center;
+  border-top: toRem(1) solid var(--colorMischka);
+  border-bottom: toRem(1) solid var(--colorMischka);
+
+  &-date {
+    @extend %smallBodyMedium;
+    color: var(--colorDolphin);
+  }
+
+  &-line {
+    display: none;
+    flex: 1;
+    background-color: var(--colorMischka);
+    height: 1px;
+    border: none;
+  }
+
+  > * {
+    &:not(:last-child) {
+      margin-right: toRem(16);
+    }
+  }
+}
+
+.commerce.str-chat {
+  .str-chat__date-separator {
+    padding: toRem(40) 0;
+  }
+}

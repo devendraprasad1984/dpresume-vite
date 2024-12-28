@@ -1,0 +1,17 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  display: grid;
+  grid-gap: toRem(20);
+  border-bottom: toRem(1) solid var(--colorMischka);
+  padding-bottom: toRem(36);
+  margin-bottom: toRem(16);
+
+  &:last-of-type {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}

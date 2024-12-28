@@ -1,0 +1,26 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.outerContainer {
+  width: toRem(28);
+  height: toRem(28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: toRem(6);
+}
+
+.innerContainer {
+  display: flex;
+  align-items: flex-end;
+}
+
+.network {
+  width: toRem(2);
+  margin-right: toRem(1);
+  &:not(:last-child) {
+    border-right: none;
+  }
+}

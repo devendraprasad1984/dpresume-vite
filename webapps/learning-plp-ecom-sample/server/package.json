@@ -1,0 +1,15 @@
+{
+  "name": "nu-frontend-challenge-react-plp",
+  "version": "1.0.0",
+  "description": "NU Technology inc Frontend Coding Challenge (React PLP Development)",
+  "main": "index.js",
+  "repository": "git@github.com:frontend-nutechnology/React-PLP-Challenge.git",
+  "author": "NU Technology Recruiting Team",
+  "license": "MIT",
+  "scripts": {
+    "server": "json-server db.json"
+  },
+  "dependencies": {
+    "json-server": "^0.14.2"
+  }
+}

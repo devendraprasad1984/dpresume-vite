@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+}
+
+.img-avatar{
+  height: 100px;
+  width: 100px;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.wid-100{
+  width: 100%;
+}
+.wid-80{
+  width: 80%;
+}
+.wid-60{
+  width: 60%;
+}
+.wid-40{
+  width: 40%;
+}
+.wid-20{
+  width: 20%;
+}
+.wid-10{
+  width: 10%;
+}
+
+.left{
+  text-align: left;
+}
+
+input{
+  padding: 10px;
+  margin: 3px;
+}

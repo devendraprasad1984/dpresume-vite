@@ -1,0 +1,25 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.containedLayout {
+  max-width: toRem($contentWidth);
+  padding: 0 toRem(40) toRem(120);
+}
+
+.fullLayout {
+  padding: 0 toRem(40) toRem(120);
+  height: calc(100vh - toRem($headerHeight));
+}
+
+.form {
+  display: grid;
+  grid-gap: toRem(40);
+}
+
+.subHeader {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-gap: toRem(20);
+  align-items: center;
+}

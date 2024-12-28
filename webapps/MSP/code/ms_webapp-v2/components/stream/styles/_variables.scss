@@ -1,0 +1,12 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+/* miscellaneous */
+$assetsPath: "../assets";
+
+%messageInner {
+  @extend %bodyMedium;
+  border-radius: toRem(34);
+  padding: toRem(18) toRem(22);
+}

@@ -1,0 +1,96 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat__message-attachment-card {
+  position: relative;
+  background: var(--colorWhite);
+  border-radius: toRem(34);
+  overflow: hidden;
+
+  border: toRem(10) solid var(--colorMischka);
+  margin: toRem(32) 0 0 0;
+
+  &--header {
+    width: 100%;
+    height: toRem(175);
+
+    img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+
+  &--title {
+    @extend %buttonText;
+    flex: 1;
+  }
+
+  &--flex {
+    min-width: 0;
+
+    &,
+    > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &--content {
+    padding: toRem(4) toRem(16);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    > * {
+      margin: 0 0 toRem(4) 0;
+    }
+  }
+
+  &--url {
+    @extend %smallBody;
+    text-decoration: none;
+    display: block;
+    color: var(--colorWaterloo);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &--giphy &--header {
+    height: unset;
+  }
+}
+
+.str-chat.commerce {
+  .str-chat__message-attachment-card {
+    max-width: 375px;
+    width: 100%;
+  }
+}
+
+.str-chat__message--me {
+  .str-chat__message-attachment-card {
+    background: var(--overlay);
+    border: 1px solid transparent;
+    border-radius: toRem(34);
+  }
+}
+
+.str-chat__message-attachment-card.str-chat__message-attachment-card--giphy {
+  .str-chat__message-attachment-card--content {
+    background-image: url("#{$assetsPath}/Poweredby_100px-White_VertText.png");
+    background-position: right toRem(16) bottom toRem(24);
+    background-repeat: no-repeat;
+    /* that was the original sizing of the img in React */
+    background-size: toRem(48);
+  }
+}

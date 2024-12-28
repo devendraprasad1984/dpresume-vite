@@ -1,0 +1,34 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.button {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color var(--colorTransitionDuration) ease;
+  path {
+    fill: var(--colorMandy);
+  }
+
+  &:hover {
+    background-color: var(--colorVanillaIce);
+  }
+}
+
+.subtleButton {
+  path {
+    fill: var(--colorWaterloo);
+  }
+}
+
+.sm {
+  width: toRem(24);
+  height: toRem(24);
+}
+
+.md {
+  width: toRem(40);
+  height: toRem(40);
+}

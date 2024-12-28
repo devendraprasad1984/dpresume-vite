@@ -1,0 +1,71 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  display: block;
+  position: relative;
+  z-index: 0;
+  background-color: var(--colorWhite);
+  padding: toRem(16);
+  border-radius: toRem(24);
+  min-height: toRem(300);
+  transition: background var(--colorTransitionDuration) ease;
+
+  &:hover {
+    background: var(--colorWildSand);
+  }
+}
+
+.avatarGroup {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  margin-bottom: toRem(10);
+}
+
+.userName {
+  @extend %headerText;
+  @extend %truncate;
+}
+
+.namePronoun {
+  display: grid;
+  justify-content: start;
+  grid-auto-flow: column;
+  align-items: end;
+  grid-gap: toRem(8);
+  margin-bottom: toRem(4);
+}
+
+.pronouns {
+  @extend %smallBody;
+  margin-left: toRem(8);
+  color: var(--colorWaterloo);
+}
+
+.metadata {
+  padding: toRem(8);
+}
+
+.headline {
+  @extend %smallBodyMedium;
+  @extend %truncate;
+  min-height: toRem(18);
+  margin-bottom: toRem(4);
+  color: var(--colorDolphin);
+}
+
+.actions {
+  display: grid;
+  grid-gap: toRem(8);
+  justify-content: start;
+  justify-items: start;
+}
+
+.org {
+  @extend %smallBodyMedium;
+  @extend %truncate;
+  min-height: toRem(18);
+}

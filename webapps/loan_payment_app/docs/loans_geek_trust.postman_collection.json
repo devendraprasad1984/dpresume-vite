@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "d5cf17bc-179f-4984-89f7-b3ec9c1def8e",
+		"name": "loans_geek_trust",
+		"description": "geektrust loan ledger coding challenge.\n2 types of subscriber, manager/borrower.\n-manager has rights to query / issue loans\n-borrower can check balances and make payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "6. get_balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "geek-signer",
+						"value": "eyJrZXkiOiJwMU9yc0hnSEdGNVpqWEcySSIsImFwcF9jb2RlIjoiZzNlS190N1JfIzI3OF9zX19fVCJ9:iYX_WrsTH3yT9lhlihzs0gNDOkzg0w14FWD30Z3Iex4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bank_name\":\"SBI\",\n    \"email\":\"devendraprasad1984@gmail.com\",\n    \"emi_number\":10,\n    \"loan_ref\":\"lnmEF-iupYSuaMAPXwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6202/loans/balance",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"loans",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. issue_loan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "geek-signer",
+						"value": "eyJrZXkiOiJSbzJzM3pXaVFpN2pEaERQRyIsImFwcF9jb2RlIjoiZzNlS190N1JfIzI3OF9zX19fVCJ9:P24MZxaTbl5-MV53ZgrE12KH67QfA-cwdaAgaiY7Jmg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bank_name\":\"SBI\",\n    \"email\":\"devendraprasad1984_1@gmail.com\",\n    \"loan_amount\": 120000,\n    \"rate\": 10.5,\n    \"year\": 22\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6202/loans/loan",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"loans",
+						"loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. make_payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "geek-signer",
+						"value": "eyJrZXkiOiJwMU9yc0hnSEdGNVpqWEcySSIsImFwcF9jb2RlIjoiZzNlS190N1JfIzI3OF9zX19fVCJ9:iYX_WrsTH3yT9lhlihzs0gNDOkzg0w14FWD30Z3Iex4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"loan_ref\":\"lnmEF-iupYSuaMAPXwU\",\n    \"emi_number\":1,\n    \"payment\": 7500\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6202/loans/payment",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"loans",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1. addbank",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"TEST\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6202/banks/addbank",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"banks",
+						"addbank"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. addcustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "geek-signer",
+						"value": "eyJrZXkiOiJ1dUpmWUh1MFNtUkdLRWdmMCIsImFwcF9jb2RlIjoiZzNlS190N1JfIzI3OF9zX19fVCJ9:dINuh-4eoSytD3CyxmtyTRcnt3pCYn20lrU-7pvVb3U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"akshat\",\n    \"age\": 28,\n    \"email\":\"devendraprasad1984_6@gmail.com\",\n    \"loan_limit\":20000000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6202/customers/addcustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"customers",
+						"addcustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.1 banks_list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "geek-signer",
+						"value": "eyJrZXkiOiJ1dUpmWUh1MFNtUkdLRWdmMCIsImFwcF9jb2RlIjoiZzNlS190N1JfIzI3OF9zX19fVCJ9:dINuh-4eoSytD3CyxmtyTRcnt3pCYn20lrU-7pvVb3U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6202/banks/list",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"banks",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.1 customers_loan_list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "geek-signer",
+						"value": "eyJrZXkiOiJ1dUpmWUh1MFNtUkdLRWdmMCIsImFwcF9jb2RlIjoiZzNlS190N1JfIzI3OF9zX19fVCJ9:dINuh-4eoSytD3CyxmtyTRcnt3pCYn20lrU-7pvVb3U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6202/customers/list/2",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"customers",
+						"list",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newtoken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:6202/onboard/newtoken",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"onboard",
+						"newtoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1 subscribe_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:6202/onboard/subscription_list",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"onboard",
+						"subscription_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. subscribe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"devendra prasad\",\n    \"email\":\"devendraprasad1984_1@gmail.com\",\n    \"allow_external_access\":false,\n    \"allow_crud_internal\":false,\n    \"type\":\"borrower\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6202/onboard/subscribe",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"onboard",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apisigner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"signer\":\"eyJrZXkiOiJMdHA2VkRVVEZ4bnNMelhhSSIsImFwcF9jb2RlIjoiZzNlS190N1JfIzI3OF9zX19fVCJ9:9hE02-yVmqe7_drCfTsYPqy5kUO_mGG2BHHy_WsgC9g\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6202/onboard/apisigner",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"onboard",
+						"apisigner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getjwt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":\"xdp\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6202/onboard/getjwt",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"onboard",
+						"getjwt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.2 loan_ref",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "geek-signer",
+						"value": "eyJrZXkiOiJSbzJzM3pXaVFpN2pEaERQRyIsImFwcF9jb2RlIjoiZzNlS190N1JfIzI3OF9zX19fVCJ9:P24MZxaTbl5-MV53ZgrE12KH67QfA-cwdaAgaiY7Jmg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6202/customers/list/loan/ref/lnmEF-iupYSuaMAPXwU",
+					"host": [
+						"localhost"
+					],
+					"port": "6202",
+					"path": [
+						"customers",
+						"list",
+						"loan",
+						"ref",
+						"lnmEF-iupYSuaMAPXwU"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

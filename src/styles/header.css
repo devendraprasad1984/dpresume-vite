@@ -1,0 +1,17 @@
+.main-header{
+
+}
+
+.header {
+    flex: 1;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.bg-header{
+    background-color: transparent;
+}

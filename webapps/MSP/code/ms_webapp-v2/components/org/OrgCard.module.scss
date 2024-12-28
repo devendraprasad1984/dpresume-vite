@@ -1,0 +1,64 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  display: block;
+  position: relative;
+  z-index: 0;
+  background-color: var(--colorWhite);
+  padding: toRem(24);
+  border-radius: toRem(24);
+  min-height: toRem(306);
+  transition: background var(--colorTransitionDuration) ease;
+
+  &:hover {
+    background: var(--colorWildSand);
+  }
+}
+
+.avatarGroup {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  margin-bottom: toRem(10);
+}
+
+.metadata {
+  display: grid;
+  grid-gap: toRem(4);
+}
+
+.orgName {
+  @extend %headerText;
+  @extend %truncate;
+  min-height: toRem(19.5);
+}
+
+.location {
+  @extend %smallBodyMedium;
+  @extend %truncate;
+  min-height: toRem(18);
+  color: var(--colorDolphin);
+}
+
+.category {
+  @extend %smallBodyMedium;
+  @extend %truncate;
+  min-height: toRem(18);
+}
+
+.numConnections {
+  @extend %smallLabel;
+  display: grid;
+  justify-self: start;
+  background: var(--colorWildSand);
+  padding: toRem(8) toRem(12);
+  border-radius: toRem(20);
+  min-height: toRem(30);
+}
+
+.actions {
+  margin-top: toRem(16);
+}

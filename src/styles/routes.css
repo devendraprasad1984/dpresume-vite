@@ -1,0 +1,29 @@
+ul {
+    padding: 0 0 0 5px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    color: var(--bg-color-blue-grey) !important;
+    text-decoration: none;
+}
+
+.nav-link {
+    display: flex;
+    width: 100%;
+    padding: var(--5px);
+    font-size: var(--size-18);
+}
+
+.active-link {
+    background-color: var(--acitve-link-bg-color) !important;
+    color: var(--acitve-link-text-color) !important;
+}
+
+.active-nav {
+    background-color: var(--acitve-link-bg-color) !important;
+    color: var(--acitve-link-text-color) !important;
+}

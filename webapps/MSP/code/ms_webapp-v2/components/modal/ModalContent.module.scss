@@ -1,0 +1,12 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  overflow: auto;
+  max-height: calc(85vh - #{toRem(160)});
+
+  p {
+    margin-bottom: 1rem;
+  }
+}

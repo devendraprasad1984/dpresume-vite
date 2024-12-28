@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot changes of components <app> snapshot check snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <App />
+</Provider>
+`;
+
+exports[`snapshot changes of components <bets> snapshot check snapshot 1`] = `
+<BetSlip
+  handleBetWindow={[MockFunction]}
+  visible={false}
+/>
+`;
+
+exports[`snapshot changes of components <betsSlipItems> snapshot check snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BetSlipItem
+    betItem={
+      Object {
+        "id": "sel_1",
+        "name": "test",
+        "price": 0,
+      }
+    }
+  />
+</Provider>
+`;
+
+exports[`snapshot changes of components <drawer> snapshot check snapshot 1`] = `
+<DrawerWrapper
+  closable={false}
+  key="right"
+  onClose={[MockFunction]}
+  placement="right"
+  visible={false}
+/>
+`;
+
+exports[`snapshot changes of components <event-list> snapshot check snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <EventList />
+</Provider>
+`;
+
+exports[`snapshot changes of components <events> snapshot check snapshot 1`] = `
+<ForwardRef
+  bordered={true}
+  title={<h2 />}
+/>
+`;
+
+exports[`snapshot changes of components <main> snapshot check snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Main />
+</Provider>
+`;
+
+exports[`snapshot changes of components <market> snapshot check snapshot 1`] = `
+<ForwardRef
+  size="small"
+  title={
+    <span
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    />
+  }
+  type="inner"
+>
+  <div
+    className="row"
+  />
+</ForwardRef>
+`;
+
+exports[`snapshot changes of components <nodata> snapshot check snapshot 1`] = `
+<div>
+  <h3>
+    page/data not found
+  </h3>
+</div>
+`;
+
+exports[`snapshot changes of components <selection> snapshot check snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Selection
+    data={
+      Object {
+        "id": "sel_1",
+        "name": "test",
+        "price": 0,
+      }
+    }
+    marketName="test"
+  />
+</Provider>
+`;

@@ -1,0 +1,98 @@
+@import "functions";
+@import "variables";
+@import "typography";
+
+.datePickerInput {
+  position: relative;
+
+  * {
+    font-family: inherit;
+  }
+
+  .calendarIcon {
+    position: absolute;
+    z-index: 1;
+    top: toRem(30);
+    right: toRem(24);
+  }
+
+  .react-datepicker {
+    border: none;
+    box-shadow: 0 toRem(8) toRem(16) 0 #211f301f, 0 toRem(4) toRem(4) 0 #211f3014;
+    border-radius: toRem(16);
+  }
+
+  .react-datepicker__header {
+    background: var(--colorWhite);
+    border: none;
+    padding: 0;
+    margin-top: toRem(24);
+  }
+
+  .react-datepicker-popper[data-placement^=bottom] {
+    padding-top: toRem(8);
+  }
+
+  .react-datepicker-popper[data-placement^=top] {
+    padding-bottom: toRem(8);
+  }
+
+  .react-datepicker__current-month, .react-datepicker-year-header {
+    @extend %body;
+    margin-bottom: toRem(12);
+  }
+
+  .react-datepicker__navigation {
+    margin: toRem(18) toRem(8) 0;
+    border-radius: toRem(16);
+    width: toRem(40);
+    height: toRem(40);
+
+    &:hover {
+      background-color: var(--colorWildSand);
+    }
+  }
+
+  .react-datepicker__navigation-icon--previous::before {
+    border-color: var(--colorMandy);
+    right: toRem(-2);
+  }
+
+  .react-datepicker__navigation-icon--next::before {
+    border-color: var(--colorMandy);
+    left: toRem(-2);
+  }
+
+  .react-datepicker__navigation-icon::before {
+    top: toRem(7);
+    height: toRem(6);
+    width: toRem(6);
+    border-width: toRem(1.5) toRem(1.5) 0 0;
+  }
+
+  .react-datepicker__day, .react-datepicker__day-name {
+    width: toRem(40);
+    height: toRem(40);
+    border-radius: toRem(16);
+    line-height: toRem(34);
+  }
+
+  .react-datepicker__day {
+    background-color: var(--colorWhite);
+    color: var(--colorSteelGrey);
+    border: 2px solid transparent;
+
+    &:hover {
+      background-color: var(--colorWildSand);
+      border-radius: toRem(16);
+    }
+    
+    &--selected {
+      border: 2px solid var(--colorJava);
+    }
+
+    &--outside-month {
+      color: var(--colorDisabled);
+    }
+  }
+}

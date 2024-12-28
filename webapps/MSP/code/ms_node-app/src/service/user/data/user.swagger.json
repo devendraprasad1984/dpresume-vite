@@ -1,0 +1,275 @@
+{
+    "tags": [
+        {
+            "name": "System",
+            "description": "To check the status of the Services"
+        }
+    ],
+    "paths": {
+        "/user/ping": {
+            "get": {
+                "tags": [
+                    "System"
+                ],
+                "summary": "Check the communication with the user service",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user/filter": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Users filters",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "description": "filter object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilterUser"
+                        },
+                        "example": {
+                            "filter": "connectedWithMe"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "$ref": "#/definitions/UserSearchArray"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user/{Id}": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Filter the user by Id",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "Id",
+                        "description": "User ID that will be updated",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseUser"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update user information",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "Id",
+                        "description": "User ID that will be updated",
+                        "required": "true",
+                        "type": "number"
+                    },
+                    {
+                        "name": "User",
+                        "description": "Update User object",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseUser"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Delete a specific user from DB",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "ID of User that will be deleted",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ApiResponseUserSearch": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/UserSearchArray"
+                }
+            }
+        },
+        "UserSearchArray": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/UserSearch"
+            }
+        },
+        "ApiResponseUser": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/User"
+                }
+            }
+        },
+        "DataFilterUser": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "connectedWithMe",
+                        "notConnectedWithMe",
+                        "pendingConnections"
+                    ],
+                    "required": "true"
+                }
+            }
+        },
+        "UserSearch": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "ref": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "company": {
+                    "type": "string"
+                },
+                "notesCount": {
+                    "type": "number"
+                },
+                "lastLogin": {
+                    "type": "string"
+                },
+                "audit": {
+                    "type": "object",
+                    "properties": {
+                        "createdBy": {
+                            "type": "string"
+                        },
+                        "createdOn": {
+                            "type": "string"
+                        },
+                        "modifiedBy": {
+                            "type": "string"
+                        },
+                        "modifiedOn": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "User": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "ref": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

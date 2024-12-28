@@ -1,0 +1,83 @@
+{
+    "type": "object",
+    "properties": {
+        "accountsCreatedTotal": {
+            "type": "object",
+            "properties": {
+                "countByHour": {
+                    "type": "array",
+                    "items": "number",
+                    "minItems": 1,
+                    "maxItems": 24
+                },
+                "countByDay": {
+                    "type": "array",
+                    "items": "number",
+                    "minItems": 1,
+                    "maxItems": 31
+                },
+                "countByWeek": {
+                    "type": "array",
+                    "items": "number",
+                    "minItems": 1,
+                    "maxItems": 52
+                },
+                "countByMonth": {
+                    "type": "object",
+                    "properties": {
+                        "jan": "number",
+                        "feb": "number",
+                        "mar": "number",
+                        "may": "number",
+                        "jun": "number",
+                        "jul": "number",
+                        "aug": "number",
+                        "sep": "number",
+                        "oct": "number",
+                        "nov": "number",
+                        "dec": "number"
+                    }
+                }
+            }
+        },
+        "activeMemberCounts": {
+            "type": "object",
+            "properties": {
+                "countByHour": {
+                    "type": "array",
+                    "items": "number",
+                    "minItems": 1,
+                    "maxItems": 24
+                },
+                "countByDay": {
+                    "type": "array",
+                    "items": "number",
+                    "minItems": 1,
+                    "maxItems": 31
+                },
+                "countByWeek": {
+                    "type": "array",
+                    "items": "number",
+                    "minItems": 1,
+                    "maxItems": 52
+                },
+                "countByMonth": {
+                    "type": "object",
+                    "properties": {
+                        "jan": "number",
+                        "feb": "number",
+                        "mar": "number",
+                        "may": "number",
+                        "jun": "number",
+                        "jul": "number",
+                        "aug": "number",
+                        "sep": "number",
+                        "oct": "number",
+                        "nov": "number",
+                        "dec": "number"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  display: grid;
+  grid-gap: toRem(20);
+  background-color: var(--colorWhisperGray);
+  padding: toRem(36) toRem(40);
+  border-radius: toRem(34);
+
+  button {
+    justify-self: start;
+  }
+}

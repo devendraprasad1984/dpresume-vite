@@ -1,0 +1,9 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.orgs {
+  display: grid;
+  grid-gap: toRem(32);
+  grid-template-columns: repeat(auto-fill, toRem(292));
+}

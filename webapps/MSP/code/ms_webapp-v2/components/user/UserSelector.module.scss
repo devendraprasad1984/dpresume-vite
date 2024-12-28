@@ -1,0 +1,56 @@
+@import "../../styles/functions";
+@import "../../styles/variables";
+@import "../../styles/typography";
+
+.searchSection {
+  margin-bottom: toRem(28);
+}
+
+.title {
+  @extend %smallLabel;
+  color: var(--colorDolphin);
+}
+
+.userList {
+  display: grid;
+  grid-gap: toRem(12);
+}
+
+.userListItem {
+  padding: toRem(4);
+  transition: background-color var(--colorTransitionDuration) ease;
+  border-radius: toRem(16);
+
+  &:hover {
+    background: var(--colorAthensGrey);
+  }
+}
+
+.disabledItem {
+  opacity: var(--opacityDisabled);
+  cursor: not-allowed;
+}
+
+.userItem {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  align-items: center;
+  justify-content: start;
+  grid-gap: toRem(20);
+}
+
+.userMeta {
+  display: grid;
+  grid-gap: toRem(4);
+}
+
+.headlines {
+  @extend %smallBodyMedium;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-gap: toRem(10);
+  color: var(--colorWaterloo);
+}

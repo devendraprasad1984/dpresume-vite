@@ -1,0 +1,134 @@
+{
+    "tags": [
+        {
+            "name": "Chat",
+            "description": "To check related user chat actions"
+        }
+    ],
+    "paths": {        
+        "/user/invite/filter":{
+            "post": {
+                "tags": [
+                    "Pending invites"
+                ],
+                "summary": "Get all the User pending invites records",
+                "parameters": [
+                    {
+                        "name": "request filter",
+                        "description": "filter object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilterMemberRequest"
+                        },
+                        "example": {
+                            "filter": "getByUser",
+                            "data": {
+                                "userRef": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseMemberRequest"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ApiResponseMemberRequest": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/MemberRequestArray"
+                }
+            }
+        },
+        "MemberRequestArray": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/MemberRequest"
+            }
+        },
+        "DataFilterMemberRequest": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getByUser"
+                    ],
+                    "required": "true",
+                    "example": "getByUser"
+                },
+                "data": {
+                    "type": "object",
+                    "required": "true",
+                    "example": {"userRef": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"}
+                }
+            }
+        },
+        "MemberRequest": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example": 0
+                },
+                "userRef": {
+                    "type": "string",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                },
+                "channelRef": {
+                    "type": "string",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2t7"
+                },
+                "approvedByRef": {
+                    "type": "string",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2t7"
+                },
+                "topicRef": {
+                    "type": "string",
+                    "example": "5y8de3be-a832-6cb6-acde-f0c47f23d2t7"
+                },
+                "sessionRef": {
+                    "type": "string",
+                    "example": "k98de3be-a832-6cb6-acde-f0c47f23d2l4"
+                },
+                "status": {
+                    "type": "string",
+                    "example": "active"
+                },
+                "type": {
+                    "type": "string",
+                    "example": "Channel"
+                },
+                "email": {
+                    "type": "string",
+                    "example": "test@gmail.com"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "Hi user!"
+                },
+                "invitedBy": {
+                    "type": "string",
+                    "example": "Jhon Doe"
+                },
+                "eventName": {
+                    "type": "string",
+                    "example": "Awesome group"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,473 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot changes of components achievement snapshot 1`] = `
+<div>
+  <OneLinerHeader
+    title="Achievement"
+  />
+  <BasicDisplay
+    list={Array []}
+  />
+</div>
+`;
+
+exports[`snapshot changes of components app snapshot 1`] = `<Main />`;
+
+exports[`snapshot changes of components articles test component array prop and types check snapshot 1`] = `""`;
+
+exports[`snapshot changes of components basic display snapshot 1`] = `
+<div>
+  <div
+    className="bl xprimary"
+  />
+</div>
+`;
+
+exports[`snapshot changes of components bottom bar snapshot 1`] = `
+<div
+  className="bottom right margin-ud"
+/>
+`;
+
+exports[`snapshot changes of components certificate snapshot 1`] = `
+<div>
+  <OneLinerHeader
+    title="Certifications"
+  />
+  <BasicDisplay
+    list={Array []}
+  />
+</div>
+`;
+
+exports[`snapshot changes of components education snapshot 1`] = `
+<div>
+  <OneLinerHeader
+    title="Education Summary"
+  />
+  <BasicDisplay
+    list={Array []}
+  />
+</div>
+`;
+
+exports[`snapshot changes of components experience snapshot 1`] = `
+<div
+  className="margin-ud"
+>
+  <OneLinerHeader
+    title="Overall Experience"
+  />
+</div>
+`;
+
+exports[`snapshot changes of components header snapshot 1`] = `
+<div
+  className=""
+>
+  <div
+    className="row"
+  >
+    <h1
+      className="size30 handwritting"
+    >
+      Devendra Prasad 
+      <a
+        className="bl size30 xred"
+        href="https://dpresume.com/docs/pdf/dpresume.pdf#view=FitH"
+        target="_blank"
+      >
+        ↓
+      </a>
+    </h1>
+    <h2
+      className="size30 handwritting"
+    >
+      Lead Application Developer
+    </h2>
+  </div>
+  <div
+    className="row xviolet"
+  >
+    <p
+      className="size10"
+    >
+      technophile . dynamic . motivated . inquisitive
+    </p>
+    <p
+      className="size10"
+    >
+      devendraprasad1984@gmail.com, ☏ +91-958 279 7772
+    </p>
+  </div>
+  <AppGlobalActions />
+</div>
+`;
+
+exports[`snapshot changes of components home snapshot 1`] = `
+<div>
+  <OneLinerHeader
+    title="Summarising myself"
+  />
+  <BasicDisplay
+    list={Array []}
+  />
+  <HomeDemo />
+</div>
+`;
+
+exports[`snapshot changes of components html component snapshot 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "➤ dummy title",
+    }
+  }
+/>
+`;
+
+exports[`snapshot changes of components input box snapshot 1`] = `
+<div
+  className="input-wrapper"
+>
+  <input
+    className="form-control undefined"
+    label="dummy"
+    placeholder=""
+    type="text"
+  />
+  <label
+    className="control-label"
+    htmlFor="input"
+  >
+    dummy
+  </label>
+</div>
+`;
+
+exports[`snapshot changes of components navigation snapshot 1`] = `
+<div>
+  <HashRouter>
+    <div
+      className="right"
+    >
+      <a
+        className="right bl size35 padding-rl"
+        onClick={[Function]}
+      >
+        ✖
+      </a>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="flex1"
+      >
+        <div>
+          <img
+            alt="dp"
+            className="imgPic img-animate"
+            src="dp.png"
+          />
+        </div>
+        <nav
+          className="content-left"
+        >
+          <div
+            className="col"
+          >
+            <span
+              className="link size15 margin-ud"
+              key="menu-item-0"
+            >
+              <NavLink
+                activeClassName="active"
+                exact={true}
+                onClick={[Function]}
+                to="/home"
+              >
+                Home
+              </NavLink>
+            </span>
+            <span
+              className="link size15 margin-ud"
+              key="menu-item-1"
+            >
+              <NavLink
+                activeClassName="active"
+                exact={true}
+                onClick={[Function]}
+                to="/education"
+              >
+                Education
+              </NavLink>
+            </span>
+            <span
+              className="link size15 margin-ud"
+              key="menu-item-2"
+            >
+              <NavLink
+                activeClassName="active"
+                exact={true}
+                onClick={[Function]}
+                to="/achievement"
+              >
+                Achievement
+              </NavLink>
+            </span>
+            <span
+              className="link size15 margin-ud"
+              key="menu-item-3"
+            >
+              <NavLink
+                activeClassName="active"
+                exact={true}
+                onClick={[Function]}
+                to="/certification"
+              >
+                Certification
+              </NavLink>
+            </span>
+            <span
+              className="link size15 margin-ud"
+              key="menu-item-4"
+            >
+              <NavLink
+                activeClassName="active"
+                exact={true}
+                onClick={[Function]}
+                to="/experience"
+              >
+                Experience
+              </NavLink>
+            </span>
+            <span
+              className="link size15 margin-ud"
+              key="menu-item-5"
+            >
+              <NavLink
+                activeClassName="active"
+                exact={true}
+                onClick={[Function]}
+                to="/projects"
+              >
+                Projects
+              </NavLink>
+            </span>
+            <span
+              className="link size15 margin-ud"
+              key="menu-item-6"
+            >
+              <NavLink
+                activeClassName="active"
+                exact={true}
+                onClick={[Function]}
+                to="/skills"
+              >
+                Skills
+              </NavLink>
+            </span>
+            <span
+              className="link size15 margin-ud"
+              key="menu-item-7"
+            >
+              <NavLink
+                activeClassName="active"
+                exact={true}
+                onClick={[Function]}
+                to="/somejs"
+              >
+                SomeJs
+              </NavLink>
+            </span>
+            <span
+              className="link size15 margin-ud"
+              key="menu-item-8"
+            >
+              <NavLink
+                activeClassName="active"
+                exact={true}
+                onClick={[Function]}
+                to="/notes"
+              >
+                Notes
+              </NavLink>
+            </span>
+            <span
+              className="link size15 margin-ud"
+              key="menu-item-9"
+            >
+              <NavLink
+                activeClassName="active"
+                exact={true}
+                onClick={[Function]}
+                to="/blogs"
+              >
+                Blogs
+              </NavLink>
+            </span>
+          </div>
+        </nav>
+      </div>
+      <div
+        className="content-right box"
+      >
+        <Switch>
+          <Route
+            exact={true}
+            path="/"
+          >
+            <Home
+              title="Summarising myself"
+            />
+          </Route>
+          <Route
+            key="route-item-0"
+            path="/home"
+          >
+            <Home
+              title="Summarising myself"
+            />
+          </Route>
+          <Route
+            key="route-item-1"
+            path="/education"
+          >
+            <Education
+              title="Education Summary"
+            />
+          </Route>
+          <Route
+            key="route-item-2"
+            path="/achievement"
+          >
+            <Achievement
+              title="Achievement"
+            />
+          </Route>
+          <Route
+            key="route-item-3"
+            path="/certification"
+          >
+            <Certificate
+              title="Certifications"
+            />
+          </Route>
+          <Route
+            key="route-item-4"
+            path="/experience"
+          >
+            <Experience
+              title="Overall Experience"
+            />
+          </Route>
+          <Route
+            key="route-item-5"
+            path="/projects"
+          >
+            <Projects
+              title="few Project details "
+            />
+          </Route>
+          <Route
+            key="route-item-6"
+            path="/skills"
+          >
+            <Skills
+              title="Skills I know or can do"
+            />
+          </Route>
+          <Route
+            key="route-item-7"
+            path="/somejs"
+          >
+            <NoData
+              type="404"
+            />
+          </Route>
+          <Route
+            key="route-item-8"
+            path="/notes"
+          >
+            <Notes
+              title="my self learning and notes"
+            />
+          </Route>
+          <Route
+            key="route-item-9"
+            path="/blogs"
+          >
+            <NoData
+              type="404"
+            />
+          </Route>
+        </Switch>
+      </div>
+    </div>
+  </HashRouter>
+</div>
+`;
+
+exports[`snapshot changes of components noData 404 snapshot 1`] = `
+<div>
+  <div
+    className="xred notfound center"
+  >
+    <h2
+      className="xblue size35"
+    >
+      4
+      <span
+        className="xgray"
+      >
+        0
+      </span>
+      4
+    </h2>
+    <br />
+    <span>
+      Page Not Found
+    </span>
+  </div>
+</div>
+`;
+
+exports[`snapshot changes of components noData ok text snapshot 1`] = `
+<div>
+  <h3>
+    dummy title
+     
+  </h3>
+</div>
+`;
+
+exports[`snapshot changes of components oneliner snapshot 1`] = `
+<h1>
+  dummy title
+</h1>
+`;
+
+exports[`snapshot changes of components oneliner_1 snapshot 1`] = `
+<h1>
+  Education Summary
+</h1>
+`;
+
+exports[`snapshot changes of components projects snapshot 1`] = `
+<div
+  className="margin-ud"
+>
+  <OneLinerHeader
+    title="few Project details "
+  />
+</div>
+`;
+
+exports[`snapshot changes of components skills snapshot 1`] = `
+<div>
+  <OneLinerHeader
+    title="Skills I know or can do"
+  />
+</div>
+`;

@@ -1,0 +1,229 @@
+{
+    "tags": [
+        {
+            "name": "Note",
+            "description": "All the methods for the Note Service"
+        }
+    ],
+    "paths": {
+        "/admin/note/filter": {
+            "post": {
+                "tags": [
+                    "Note"
+                ],
+                "summary": "Get a note by id in note service",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "description": "filter object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilter"
+                        },
+                        "example": {
+                            "filter": "getByUserId",
+                            "data": {
+                                "noteId": 1
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/admin/note": {
+            "post": {
+                "tags": [
+                    "Note"
+                ],
+                "summary": "Create a new note",
+                "parameters": [
+                    {
+                        "name": "Note",
+                        "description": "New Note object",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/Note"
+                        },
+                        "example": {
+                            "id": 0,
+                            "userId": 1,
+                            "status": "active",
+                            "text": "Note body text"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success created",
+                        "schema": {
+                            "$ref": "#/definitions/Note"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Note"
+                ],
+                "summary": "Get all the active notes",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Note"
+                        }
+                    }
+                }
+            }
+        },
+        "/admin/note/{Id}": {
+            "get": {
+                "tags": [
+                    "Note"
+                ],
+                "summary": "Get a note by id in note service",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "Id",
+                        "description": "Note ID",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Note"
+                ],
+                "summary": "Update specific note",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "Id",
+                        "description": "Note ID that will be updated",
+                        "required": "true",
+                        "type": "number"
+                    },
+                    {
+                        "name": "Note",
+                        "description": "Update Note object",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/Note"
+                        },
+                        "example": {
+                            "id": 0,
+                            "userId": 1,
+                            "status": "active",
+                            "text": "Note body text"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success updated",
+                        "schema": {
+                            "$ref": "#/definitions/Note"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Note"
+                ],
+                "summary": "Delete specific note from DB",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "Id",
+                        "description": "Note ID that will be deleted",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted"
+                    }
+                }
+            }
+        }
+        
+    },
+    "definitions": {
+        "Note": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "required": "true"
+                },
+                "userId": {
+                    "type": "number",
+                    "required": "true"
+                },
+                "status": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "text": {
+                    "type": "string"
+                }
+            }
+        },
+        "DataFilter": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getByNoteId",
+                        "getByUserId"
+                    ],
+                    "required": "true"
+                },
+                "data": {
+                    "type": "object",
+                    "required": "true"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.searchWrap {
+  position: relative;
+}
+
+.searchWrap svg > path {
+  fill: var(--colorMandy);
+}
+
+.searchWrap > div {
+  width: 100vw;
+  max-width: toRem(460);
+}
+
+.searchWrap input {
+  border-radius: toRem(25);
+  min-width: toRem(285);
+  width: 100%;
+  z-index: 101;
+  position: relative;
+}
+
+.resultsBox {
+  position: absolute;
+  border-radius: toRem(25);
+  background-color: #FFF;
+  padding: toRem(12) toRem(12);
+  left: toRem(-9);
+  right: 0;
+  top: 50%;
+  box-shadow: 0px 4px 4px rgba(33, 31, 48, 0.08), 0px 8px 16px rgba(33, 31, 48, 0.12);
+  z-index: 99;
+  opacity: 0;
+  transition: opacity var(--defaultTransitionDuration), transform var(--defaultTransitionDuration);
+  transform: scaleY(0.5);
+  transform-origin: top center;
+}
+
+.resultsBox[class~="open"] {
+    transform: scaleY(1);
+    top: calc(100% + 8px);
+    opacity: 1;
+    z-index: 99;
+}
+
+.resultsHeader {
+  font-size: toRem(12);
+  margin: toRem(12) auto toRem(12) toRem(12);
+  letter-spacing: toRem(0.5);
+  text-transform: uppercase;
+  color: var(--colorWaterloo);
+}
+
+.item {
+  font-size: toRem(16);
+  line-height: toRem(24);
+  margin: toRem(10) 0;
+  padding: toRem(5) toRem(12);
+  border-radius: toRem(12);
+  background-color: #FFF;
+  transition: all 0.3s;
+  opacity: 1;
+
+  &:focus, &:hover {
+    background-color: var(--colorWhisperGray);
+  }
+
+  &.noitem {
+    &:focus, &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  gap: toRem(16);
+  align-items: center;
+}
+
+.icon {
+  height: toRem(18);
+  width: toRem(20);
+  & > path {
+    fill: var(--colorWaterloo) !important;
+  }
+}
+
+.label {
+  width: 100%;
+}
+
+.close {
+  height: toRem(18);
+  width: toRem(20);
+  & > path {
+    fill: var(--colorWaterloo) !important;
+  }
+}

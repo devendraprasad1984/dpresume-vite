@@ -1,0 +1,291 @@
+body {
+    opacity: 0.90;
+    /*font-size: 70%;*/
+    font-family: "Courier 10 Pitch";
+}
+
+.user {
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+.welcomeMsg span, .welcomeMsg .btn {
+    font-weight: bolder;
+    font-size: 12pt;
+    /*opacity: 0.70;*/
+    margin: 5px;
+}
+
+.topHeading {
+    background-image: linear-gradient(to right, #c729b8, #5829c7, #e570d9);
+    color: white;
+    padding: 5px;
+    top: 0;
+    left: 0;
+    margin-top: 2px;
+    font-weight: bolder;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    font-size: 100%;
+}
+
+.time {
+    /*color: white;*/
+    float: right;
+}
+
+.time-reply {
+    float: right;
+    color: gray;
+    font-weight: bolder;
+}
+
+.userComment {
+    margin-left: 5px;
+    color: purple;
+}
+
+.userComment-reply {
+    margin-left: 5px;
+    color: #e566a6;
+}
+
+.userCommentTitle {
+    padding: 3px;
+    margin-top: 20px;
+    font-weight: bolder;
+    /*color: gray;*/
+    background-color: #d9d4ee;
+    /*background-image: linear-gradient(to right, #369a51, #81c7e3, #e570d9);*/
+}
+
+.userReplyTitle {
+    color: gray;
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.comment-replies {
+    margin-left: 10px;
+}
+
+#registerModal input, #loginModal input {
+    margin-top: 10px;
+}
+
+
+.red {
+    color: #ec5d5d;
+}
+
+.orange {
+    color: #f1960e;
+}
+
+.green {
+    color: #3bc713;
+}
+
+.blue {
+    color: #4cb0f6;
+}
+
+.purple {
+    color: #935ff3;
+}
+
+
+.bgorange {
+    background-color: #f1960e;
+    color: white;
+}
+
+.bgpurple {
+    background-color: #935ff3;
+    color: white;
+}
+
+.bgprimary {
+    background-color: #4a3a9e;
+    color: white;
+}
+
+.bgred {
+    background-color: #e87373;
+    color: white;
+}
+
+.customInput {
+    width: 100%;
+    padding: 2px 2px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+a.click {
+    cursor: pointer;
+}
+
+a.click:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    display: none;
+    /*transition: 0.5s;*/
+}
+
+.overlay-content {
+    position: relative;
+    /*top: 1%;*/
+    width: calc(100% - 150px);
+    padding: 30px;
+    margin-top: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.click {
+    cursor: pointer;
+    /*background-color: white;*/
+}
+
+.overlay .closebtn {
+    position: fixed;
+    right: 45px;
+    float: right;
+    margin-right: 50px;
+}
+
+
+.bggreen {
+    background-color: #45ac25;
+    color: white;
+}
+
+.bgblue {
+    background-color: #4cb0f6;
+    color: white;
+}
+
+.left div, .left span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: bolder;
+}
+
+.sidenav div {
+    color: #a981ef;
+    font-weight: bold;
+}
+
+#rightContents {
+    font-size: 12px;
+}
+
+.adminDashboard {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.adminDashboard div.card-header, .adminDashboard div.card-body {
+    font-weight: bolder;
+    font-size: 20pt;
+}
+
+.sidenav {
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    /*top: 150px;*/
+    left: 0;
+    background-color: #44423f;
+    color: white;
+    overflow-x: hidden;
+    padding: 5px;
+}
+
+.sidenav a:hover {
+    background-image: linear-gradient(to right, #8350c6, #e471f8);
+    color: white;
+    font-weight: bolder;
+}
+
+a {
+    padding: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    text-underline: none;
+}
+
+.sidenav a {
+    padding: 0 0 0 10px;
+    color: #c778ef;
+    text-decoration: none;
+    display: block;
+    font-weight: bolder;
+    font-size: 14pt;
+}
+
+.right {
+    margin-left: 20%; /* Same as the width of the sidenav */
+    padding: 0px 5px;
+}
+
+
+.line span.btn {
+    font-size: 11px;
+    cursor: pointer;
+    width: 70px;
+    font-weight: bolder;
+    opacity: 0.70;
+    margin: 2px;
+    line-height: 7px;
+}
+
+.line {
+    overflow-x: hidden;
+    width: 100%;
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.line-header {
+    font-weight: bolder;
+    font-size: 14px;
+    background-color: #f7f7f7;
+}
+
+.line span {
+    display: inline-block;
+    width: 150px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+

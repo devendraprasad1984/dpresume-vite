@@ -1,0 +1,264 @@
+html {
+    margin: 10px;
+}
+
+body {
+    margin: 10px;
+    color: #a006ef;
+    opacity: 0.9;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+div > * {
+    margin: 2px;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    padding: 3px;
+    font-weight: bolder;
+    opacity: 0.8;
+    color: black;
+}
+
+.label {
+    font-weight: bolder;
+    font-size: 8px;
+}
+
+.wid30 {
+    width: 30%;
+}
+
+.wid50 {
+    width: 50%;
+}
+
+.wid70 {
+    width: 70%;
+}
+
+
+.activeLink {
+    color: white;
+    background-color: #a006ef;
+}
+
+.h1 {
+    font-size: 25pt;
+    font-weight: bolder;
+}
+
+h1, h2, h3, .h1 {
+    background: -webkit-linear-gradient(#db1755, #a563c3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+a {
+    /*background: -webkit-linear-gradient(#db1755, #a563c3);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: #61dafb;*/
+    color: #7816ac;
+    font-weight: bolder;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 3px;
+    margin: 5px;
+}
+
+.cols {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.rows {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.inrow {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mainLeftDiv {
+    opacity: 0.75;
+    width: 20%;
+    background-color: #535151;
+    min-height: calc(100vh - 100px);
+}
+
+.mainLeftDiv a {
+    color: white;
+}
+
+.mainRightDiv {
+    width: 80%;
+}
+
+
+.badge {
+    border: none;
+    border-radius: 3px;
+    font-weight: bolder;
+    padding: 2px 2px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px;
+    color: white;
+    background-color: #515454;
+    outline: none;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    background-color: #515454;
+    outline: none;
+}
+
+.green {
+    background-color: #4CAF50;
+}
+
+.blue {
+    background-color: #008CBA;
+}
+
+.red {
+    background-color: #f44336;
+}
+
+.white {
+    color: white;
+}
+
+.gray {
+    background-color: #e7e7e7;
+}
+
+.black {
+    background-color: #555555;
+}
+
+.table {
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.header {
+    font-weight: bolder;
+    font-size: 14px;
+    color: black;
+    opacity: 0.7;
+    background-color: #e7e6e6;
+}
+
+.line span {
+    font-size: 12px;
+    display: table-cell;
+    text-align: left;
+    justify-content: left;
+    min-width: 150px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+    font-weight: bolder;
+    opacity: 0.7;
+}
+
+.icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.icons.md-18 {
+    font-size: 18px;
+}
+
+.icons.md-24 {
+    font-size: 24px;
+}
+
+.icons.md-36 {
+    font-size: 36px;
+}
+
+.icons.md-48 {
+    font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+.icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+.right {
+    float: right;
+    text-align: right;
+}
+
+.bold {
+    font-weight: bolder;
+    font-size: 14px;
+}

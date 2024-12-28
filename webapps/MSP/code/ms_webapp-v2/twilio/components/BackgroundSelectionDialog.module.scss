@@ -1,0 +1,22 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  display: none;
+  background: var(--colorWhite);
+  border-radius: toRem(12);
+  margin: toRem(6) toRem(12);
+}
+
+.openContainer {
+  display: block;
+}
+
+.thumbnailContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: toRem(6);
+  overflow-y: auto;
+  height: calc(100% - #{toRem(72)});
+}

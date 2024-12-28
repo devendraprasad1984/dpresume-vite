@@ -1,0 +1,91 @@
+@import "styles/functions";
+@import "styles/variables";
+
+%largeHeader {
+  font-size: toRem(32);
+  font-weight: $fontWeightBold;
+  line-height: (96 / 32);
+}
+
+%header {
+  font-size: toRem(24);
+  font-weight: $fontWeightBold;
+  line-height: (32 / 24);
+}
+
+%smallHeader {
+  font-size: toRem(18);
+  font-weight: $fontWeightBold;
+  line-height: (23 / 18);
+}
+
+%buttonText {
+  font-size: toRem(16);
+  font-weight: $fontWeightBold;
+  line-height: (23 / 18);
+}
+
+%bodyMedium {
+  font-size: toRem(16);
+  font-weight: $fontWeightMedium;
+  line-height: (24 / 16);
+}
+
+%body {
+  font-size: toRem(16);
+  font-weight: $fontWeightRegular;
+  line-height: (24 / 16);
+}
+
+%headerText {
+  font-size: toRem(15);
+  font-weight: $fontWeightBold;
+  line-height: (20 / 15);
+}
+
+%smallBodyMedium {
+  font-size: toRem(14);
+  font-weight: $fontWeightMedium;
+  line-height: (18 / 14);
+}
+
+%smallBody {
+  font-size: toRem(14);
+  font-weight: $fontWeightRegular;
+  line-height: (18 / 14);
+}
+
+%tagBold {
+  font-size: toRem(12);
+  font-weight: $fontWeightBold;
+  line-height: (12 / 12);
+  text-transform: uppercase;
+}
+
+%label {
+  font-size: toRem(11);
+  font-weight: $fontWeightBold;
+  line-height: (13 / 12);
+  text-transform: uppercase;
+}
+
+%smallLabel {
+  font-size: toRem(12);
+  font-weight: $fontWeightMedium;
+  line-height: (14 / 12);
+}
+
+%truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%visuallyHidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

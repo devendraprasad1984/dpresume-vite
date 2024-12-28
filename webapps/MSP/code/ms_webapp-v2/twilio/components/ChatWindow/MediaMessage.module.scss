@@ -1,0 +1,39 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.messageContainer {
+  display: flex;
+  padding: 0.9em 1.5em;
+  margin: 0.6em 0;
+  border: toRem(2) solid #e4e7e9;
+  border-radius: toRem(12);
+  cursor: pointer;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+}
+
+.mediaInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.5em;
+  min-width: 0;
+  p {
+    margin: 0;
+    font-size: toRem(12);
+  }
+}
+
+.filename {
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.size {
+  font-weight: $fontWeightRegular;
+}

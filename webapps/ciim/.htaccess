@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteRule ^api/users/?$ api/users_handler.php
+RewriteRule ^api/users/([0-9]+)?$ api/users_handler.php?id=$1
+
+RewriteRule ^api/approve/?$ api/approve_handler.php
+RewriteRule ^api/approve/([a-zA-Z0-9-]*)?$ api/approve_handler.php?id=$1
+
+RewriteRule ^api/revoke/([0-9]+)?$ api/revoke_handler.php?id=$1
+RewriteRule ^api/revoke/([a-z]+)?$ api/revoke_handler.php?org=$1
+
+RewriteRule ^api/contactus/([a-zA-Z0-9-]*)?$ api/contact_handler.php?member=$1

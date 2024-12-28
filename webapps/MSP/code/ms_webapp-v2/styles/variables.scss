@@ -1,0 +1,14 @@
+@import "functions";
+
+$baseFontFamily: "DM Sans", -apple-system, system-ui, "Segoe UI", Roboto,
+  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightBold: 700;
+$fontWeightBlack: 800;
+$headerHeight: 108;
+$sidebarWidth: 112;
+$flyoutWidth: 480;
+$contentWidth: 906;
+$widthDesktop: toRem(1270);
+$dataTablePaginationHeight: 88;

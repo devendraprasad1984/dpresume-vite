@@ -1,0 +1,101 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat__audio {
+  &__wrapper {
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+    border-radius: toRem(34);
+    margin: 0;
+    display: flex;
+    background: var(--colorMischka);
+  }
+
+  &__image {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    z-index: 20;
+
+    &--overlay {
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: var(--overlay-dark);
+      z-index: 30;
+      font-size: 3em;
+      color: var(--colorWildSand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+
+    &--button {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+
+      svg {
+        fill: var(--colorWildSand);
+      }
+    }
+
+    img {
+      z-index: 20;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: toRem(4) toRem(16);
+    margin-left: toRem(16);
+    width: 100%;
+
+    &--title {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+
+    &--subtitle {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+
+      opacity: 0.49;
+    }
+
+    &--progress {
+      height: 6px;
+      width: 100%;
+      border-radius: toRem(34);
+      background: var(--overlay);
+      padding: 1px;
+      margin: toRem(2) 0; //TODO-CSS
+
+      > div {
+        height: 4px;
+        border-radius: toRem(34);
+        width: 0;
+        background: var(--colorMandy);
+        transition: width 0.5s linear;
+      }
+    }
+  }
+}

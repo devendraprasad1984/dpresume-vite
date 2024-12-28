@@ -1,0 +1,101 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.radioLabel {
+  display: block;
+  margin: toRem(30) 0;
+  cursor: pointer;
+  text-align: left;
+  height: toRem(40);
+
+  .pseudoInput {
+    display: inline-block;
+    width: toRem(40);
+    height: toRem(40);
+  }
+
+  .pseudoInput::before,
+  .pseudoInput::after {
+    transition: all var(--colorTransitionDuration) ease;
+  }
+  .pseudoInput::before {
+    background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='9.5' fill='white' stroke='%23BAB8C5'/%3E%3C/svg%3E") 0 center no-repeat;
+  }
+  .pseudoInput::after {
+    background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='9.5' fill='white' stroke='%2332BCC1'/%3E%3Ccircle cx='10' cy='10' r='6' fill='%2332BCC1'/%3E%3C/svg%3E") 0 center no-repeat;
+  }
+}
+
+.inputWrapper {
+  display: grid;
+  grid-template-columns: toRem(40) auto;
+  grid-gap: 0.5rem;
+  align-items: center;
+}
+
+.labelText {
+  margin-bottom: toRem(2);
+
+  &.truncate {
+    @extend %truncate;
+  }
+}
+
+.secondaryLabelText {
+  @extend %smallBody;
+  color: var(--colorDolphin);
+}
+
+.radio {
+  appearance: none;
+  position: absolute;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+  max-width: fit-content;
+
+  &:checked + .pseudoInput::after {
+    opacity: 1;
+  }
+  + .pseudoInput {
+    position: relative;
+    cursor: pointer;
+  }
+  + .pseudoInput::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: toRem(40);
+    height: toRem(40);
+    transform: translate(0, -50%);
+    opacity: 1;
+  }
+  + .pseudoInput::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: toRem(40);
+    height: toRem(40);
+    line-height: toRem(40);
+    transform: translate(0, -50%);
+    text-align: center;
+    opacity: 0;
+  }
+  &:disabled + .pseudoInput {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+
+  &:hover + .pseudoInput::before,
+  &:focus + .pseudoInput::before {
+    background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='9.5' fill='white' stroke='%232ca5a9'/%3E%3C/svg%3E") 0 center no-repeat;  
+  }
+  &:hover + .pseudoInput::after,
+  &:focus + .pseudoInput::after {
+    background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='9.5' fill='white' stroke='%232ca5a9'/%3E%3Ccircle cx='10' cy='10' r='6' fill='%232ca5a9'/%3E%3C/svg%3E") 0 center no-repeat;
+  }
+}

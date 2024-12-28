@@ -1,0 +1,83 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat__avatar {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  margin-right: toRem(4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--colorWhite);
+  text-transform: uppercase;
+  overflow: hidden;
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &--rounded {
+    border-radius: toRem(34);
+  }
+
+  &--square {
+    border-radius: 0;
+  }
+
+  &-image,
+  &-fallback {
+    display: block;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    text-align: center;
+  }
+
+  &-image--loaded {
+    background-color: none;
+  }
+
+  &-fallback {
+    background-color: var(--colorMandy);
+  }
+}
+
+.str-chat__message {
+  &--me {
+    %order {
+      order: 1;
+    }
+
+    %margin {
+      margin: 0;
+      margin-left: toRem(4);
+    }
+
+    > .str-chat__avatar {
+      @extend %order;
+      @extend %margin;
+    }
+
+    > .str-chat-angular__avatar-host {
+      @extend %order;
+
+      .str-chat__avatar {
+        @extend %margin;
+      }
+    }
+  }
+}
+
+.str-chat__li {
+  &--top,
+  &--middle {
+    .str-chat__message {
+      > .str-chat__avatar,
+      > .str-chat-angular__avatar-host {
+        visibility: hidden;
+      }
+    }
+  }
+}

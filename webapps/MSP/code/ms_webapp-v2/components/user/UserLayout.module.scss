@@ -1,0 +1,134 @@
+@import "styles/functions";
+@import "styles/variables";
+
+.header {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: toRem($headerHeight);
+  background-color: var(--colorSteelGrey);
+  background-image: url("/static/user-top-nav-graphics.svg");
+  background-repeat: no-repeat;
+  background-position: 95% 0;
+  background-size: contain;
+}
+
+.headerContent {
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 toRem(32);
+}
+
+.headerActions {
+  display: grid;
+  grid-gap: toRem(50);
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  align-items: center;
+}
+
+.logo {
+  width: toRem(287);
+  height: toRem(37);
+
+  path {
+    fill: var(--colorWhite);
+  }
+}
+
+.sideBarAndContent {
+  position: relative;
+  padding: toRem($headerHeight) 0 0 toRem($sidebarWidth);
+  background: var(--colorSteelGrey);
+}
+
+.contentCorner {
+  z-index: 0;
+  content: "";
+  position: fixed;
+  top: toRem($headerHeight);
+  left: toRem($sidebarWidth);
+  width: toRem(44);
+  height: toRem(44);
+
+  path {
+    fill: var(--colorSteelGrey);
+  }
+}
+
+.sideBar {
+  overflow: auto;
+  position: fixed;
+  top: toRem($headerHeight);
+  left: 0;
+  height: calc(100vh - #{toRem($headerHeight)});
+  display: grid;
+  grid-gap: toRem(20);
+  align-content: start;
+  width: toRem($sidebarWidth);
+  padding: toRem(37) toRem(22);
+  background-color: var(--colorSteelGrey);
+  background-image: url("/static/user-side-nav-graphics.svg");
+  background-repeat: no-repeat;
+  background-position: 0 toRem(600);
+  background-size: contain;
+}
+
+.sidebarNavButton {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: toRem(68);
+  height: toRem(58);
+  border-radius: toRem(21);
+  background-color: var(--colorSteelGrey);
+
+  &:hover {
+    background-color: var(--colorGrape);
+    path,
+    rect {
+      fill: var(--colorMandy);
+    }
+  }
+}
+
+.activeSidebarNavButton {
+  background-color: var(--colorParadiso);
+
+  path {
+    fill: var(--colorSteelGrey);
+  }
+
+  &:hover {
+    background-color: var(--colorParadiso);
+    path {
+      fill: var(--colorSteelGrey);
+    }
+  }
+}
+
+.sidebarNavIcon {
+  path {
+    fill: var(--colorWhite);
+    transition: fill var(--colorTransitionDuration) ease;
+  }
+}
+
+.activeSidebarNavIcon {
+  path,
+  rect {
+    fill: var(--colorSteelGrey);
+    transition: fill var(--colorTransitionDuration) ease;
+  }
+}
+
+.main {
+  background-color: var(--colorAthensGrey);
+  min-height: calc(100vh - #{toRem($headerHeight)});
+}

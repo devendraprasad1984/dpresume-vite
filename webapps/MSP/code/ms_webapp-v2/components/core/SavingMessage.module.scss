@@ -1,0 +1,22 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.base {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-gap: toRem(4);
+}
+
+.icon {
+  path {
+    fill: var(--colorWaterloo);
+  }
+}
+
+.text {
+  @extend %tagBold;
+  color: var(--colorWaterloo);
+}

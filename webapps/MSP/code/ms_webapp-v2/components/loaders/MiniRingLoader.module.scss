@@ -1,0 +1,36 @@
+@keyframes spin {
+  from {
+    stroke-dashoffset: 56;
+  }
+  to {
+    stroke-dashoffset: 10;
+  }
+}
+@keyframes spin2 {
+  from {
+    transform: rotate(120deg);
+  }
+  to {
+    transform: rotate(840deg);
+  }
+}
+
+.track {
+  stroke: #211f30;
+  stroke-width: 2;
+  stroke-dasharray: 30;
+  stroke-linecap: round;
+  animation-name: spin2;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.6, 0.15, 0.4, 0.85);
+  animation-delay: 0.3s;
+}
+.dot {
+  stroke: #211f30;
+  stroke-width: 5;
+  stroke-dasharray: 1, 45;
+  stroke-linecap: round;
+  animation: spin 1.2s cubic-bezier(0.6, 0.15, 0.4, 0.85);
+  animation-iteration-count: infinite;
+}

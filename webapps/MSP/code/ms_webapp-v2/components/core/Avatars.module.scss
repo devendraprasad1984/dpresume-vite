@@ -1,0 +1,66 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  z-index: 0;
+  position: relative;
+}
+
+.firstAvatar {
+  position: absolute;
+}
+
+.firstAvatarSmall {
+  top: toRem(0);
+  left: toRem(18);
+}
+
+.firstAvatarLarge {
+  top: toRem(0);
+  left: toRem(35);
+}
+
+.secondAvatar {
+  z-index: 1;
+  position: absolute;
+}
+
+.secondAvatarSmall {
+  top: toRem(18);
+  left: toRem(0);
+}
+
+.secondAvatarLarge {
+  top: toRem(35);
+  left: toRem(0);
+}
+
+.totalCount {
+  z-index: 2;
+  position: absolute;
+  border-radius: 50%;
+  background: var(--colorDolphin);
+  color: var(--colorWhite);
+}
+
+.totalCountSmall {
+  top: toRem(29);
+  left: toRem(32);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: toRem(21);
+  height: toRem(21);
+  font-size: toRem(11);
+}
+
+.totalCountLarge {
+  top: toRem(55);
+  left: toRem(58);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: toRem(42);
+  height: toRem(42);
+}

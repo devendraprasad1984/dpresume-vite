@@ -1,0 +1,1040 @@
+{
+    "tags": [
+        {
+            "name": "Topic",
+            "description": "Topic endpoints"
+        }
+    ],
+    "paths": {
+        "/message/topic/{Ref}": {
+            "get": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Get topic view information",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "Ref",
+                        "description": "Ref of the topic",
+                        "required": "true",
+                        "type": "string",
+                        "example": "92c032dc-0f18-dfbd-c3d7-f12a50f0c5ab"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseTopicView"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Update topic information",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "ref",
+                        "description": "Ref that will be updated",
+                        "required": "true",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Topic",
+                        "description": "Update topic object",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/Topic"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseTopic"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Delete Topic",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "Ref",
+                        "description": "Ref that will be deleted",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseBoolean"
+                        }
+                    }
+                }
+            }
+        },
+        "/message/topic": {
+            "post": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Create a topic",
+                "parameters": [
+                    {
+                        "name": "Topic information",
+                        "description": "Information that will be saved for the topic",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/TopicCreate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseTopic"
+                        }
+                    }
+                }
+            }
+        },
+        "/message/topic/filter": {
+            "post": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Topics filters",
+                "parameters": [
+                    {
+                        "name": "perPage",
+                        "description": "How many items per pagination are request",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "false",
+                        "example": 10
+                    },
+                    {
+                        "name": "page",
+                        "description": "Requested page",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "false",
+                        "example": 1
+                    },
+                    {
+                        "name": "filter",
+                        "description": "filter object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilterTopic"
+                        },
+                        "example": {
+                            "filter": "explore",
+                            "data": {
+                                "company": [
+                                    "Apple"
+                                ],
+                                "industry": [
+                                    "Retail"
+                                ],
+                                "lastActive": "Less than 24 hours ago"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref":"#/definitions/PaginationResponseTopic"
+                        }
+                    }
+                }
+            }
+        },
+        "/message/topic/member": {
+            "post": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Add user to topic",
+                "parameters": [
+                    {
+                        "name": "User information",
+                        "description": "Users that will be added to the topic",
+                        "in": "body",
+                        "required": "true",
+                        "type": "object",
+                        "properties": {
+                            "topicRef": {
+                                "type": "string",
+                                "example": "62188fdf-cefa-3f19-a082-41e856911ce8"
+                            },
+                            "members": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "example": "e3488fdf-cefa-3f19-a082-41e856911ctr"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseBoolean"
+                        }
+                    }
+                }
+            }
+        },
+        "/message/topic/member/filter":{
+            "post": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Get all the filtered records",
+                "parameters": [
+                    {
+                        "name": "perPage",
+                        "description": "How many items per pagination are request",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "true",
+                        "example": 5
+                    },
+                    {
+                        "name": "page",
+                        "description": "Requested page",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "false",
+                        "example": 2
+                    },
+                    {
+                        "name": "Request filter",
+                        "description": "object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilterMember"
+                        },
+                        "example": {    
+                            "filter": "getByTopic",
+                            "data": {
+                                "topicRef": "61388fdf-cefa-3f19-a082-41e856911cec"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/PaginationResponseMember"
+                        }
+                    }
+                }
+            }
+        },
+        "/message/topic/member/leave":{
+            "post": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Remove users from topic",
+                "parameters": [
+                    {
+                        "name": "User information",
+                        "description": "Users that will leave the topic",
+                        "in": "body",
+                        "required": "true",
+                        "type": "object",
+                        "properties": {
+                            "topicRef": {
+                                "type": "string",
+                                "example": "62188fdf-cefa-3f19-a082-41e856911ce8"
+                            },
+                            "members": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "example": "e3488fdf-cefa-3f19-a082-41e856911ctr"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseBoolean"
+                        }
+                    }
+                }
+            }
+        },
+        "/message/topic/moderator": {
+            "post": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Add moderator to topic",
+                "parameters": [
+                    {
+                        "name": "Moderator information",
+                        "description": "Moderators that will be added to the topic",
+                        "in": "body",
+                        "required": "true",
+                        "type": "object",
+                        "properties": {
+                            "topicRef": {
+                                "type": "string",
+                                "example": "62188fdf-cefa-3f19-a082-41e856911ce8"
+                            },
+                            "members": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "example": "e3488fdf-cefa-3f19-a082-41e856911ctr"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseBoolean"
+                        }
+                    }
+                }
+            }
+        },
+        "/message/topic/moderator/demote": {
+            "post": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Demote moderator in topic",
+                "parameters": [
+                    {
+                        "name": "Moderator information",
+                        "description": "Moderators that will be demoted in the topic",
+                        "in": "body",
+                        "required": "true",
+                        "type": "object",
+                        "properties": {
+                            "topicRef": {
+                                "type": "string",
+                                "example": "62188fdf-cefa-3f19-a082-41e856911ce8"
+                            },
+                            "members": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "example": "e3488fdf-cefa-3f19-a082-41e856911ctr"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseBoolean"
+                        }
+                    }
+                }
+            }
+        },
+        "/message/topic/invite/filter": {
+            "post": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Get all the Topic connection request records",
+                "parameters": [
+                    {
+                        "name": "request filter",
+                        "description": "filter object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilterMemberRequestTopic"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseMemberRequestArray"
+                        }
+                    }
+                }
+            }
+        },
+        "/message/topic/invite/{Id}": {
+            "patch": {
+                "tags": [
+                    "Topic"
+                ],
+                "summary": "Update topic member request information",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "Id",
+                        "description": "ID that will be updated",
+                        "required": "true",
+                        "type": "number"
+                    },
+                    {
+                        "name": "Connection",
+                        "description": "Update topic request object",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/MemberRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseMemberRequest"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ApiResponseMemberRequestArray": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/MemberRequestArray"
+                }
+            }
+        },
+        "MemberRequestArray": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/MemberRequest"
+            }
+        },
+        "ApiResponseMemberRequest": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/MemberRequest"
+                }
+            }
+        },
+        "ApiResponseTopicView": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/TopicView"
+                }
+            }
+        },
+        "ApiResponseTopic": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/Topic"
+                }
+            }
+        },
+        "ApiResponseBoolean": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "type": "boolean",
+                    "example": true
+                }
+            }
+        },
+        "PaginationResponseMember":{
+            "type": "object",
+            "properties": {
+                "currentPage": {
+                    "type": "number",
+                    "example":1
+                },
+                "lastPage": {
+                    "type": "number",
+                    "example": 2
+                },
+                "totalCount": {
+                    "type": "number",
+                    "example": 16
+                },
+                "data":{
+                    "type": "array",
+                    "items":{
+                        "$ref": "#/definitions/TopicMember"
+                    }
+                }
+            }
+        },
+        "DataFilterMember": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getByTopic",
+                        "getByChannel"                  
+                    ],
+                    "required": "true",
+                    "example": "getByTopic"
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "topicRef": {
+                            "type": "string",
+                            "example": "61388fdf-cefa-3f19-a082-41e856911cec"
+                        }
+                    }
+                }
+            }
+        },
+        "DataFilterMemberRequestTopic": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getByUser",
+                        "getByCompany",
+                        "getByTopic"
+                    ],
+                    "required": "true",
+                    "example": "getByTopic"
+                },
+                "data": {
+                    "type": "object",
+                    "required": "true",
+                    "example": {
+                        "topicRef": "251225d2-4652-9367-79b8-5bf2b382fr56"
+                    }
+                }
+            }
+        },
+        "DataFilterTopic": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "explore"
+                    ],
+                    "required": "true"
+                },
+                "data": {
+                    "type": "object",
+                    "required": "true"
+                }
+            }
+        },
+        "TopicSearchArray": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/TopicSearch"
+            }
+        },
+        "TopicSearch":{
+            "type": "object",
+            "properties": {                
+                "id": {
+                    "type": "number",
+                    "example": "9"
+                },
+                "ref": {
+                    "type": "string",
+                    "example": "92c032dc-0f18-dfbd-c3d7-f12a50f0c5ab"
+                },
+                "access": {
+                    "type": "string",
+                    "example": "public"
+                },
+                "title": {
+                    "type": "string",
+                    "example": "Topic title"
+                },
+                "endedOn": {
+                    "type": "string",
+                    "example": "2022-05-03T21:55:32.000Z"
+                },
+                "picture": {
+                    "type": "string",
+                    "example": "https://pictureurl"
+                },
+                "totalMembers": {
+                    "type": "number",
+                    "example": "4"
+                },
+                "connectStatus": {
+                    "type": "string",
+                    "example": "connected"
+                }
+            }
+        },
+        "MemberRequest": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example": 0
+                },
+                "userRef": {
+                    "type": "string",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                },
+                "channelRef": {
+                    "type": "string",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2t7"
+                },
+                "companyRef": {
+                    "type": "string",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2t7"
+                },
+                "approvedByRef": {
+                    "type": "string",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2t7"
+                },
+                "topicRef": {
+                    "type": "string",
+                    "example": "5y8de3be-a832-6cb6-acde-f0c47f23d2t7"
+                },
+                "sessionRef": {
+                    "type": "string",
+                    "example": "k98de3be-a832-6cb6-acde-f0c47f23d2l4"
+                },
+                "status": {
+                    "type": "string",
+                    "example": "active"
+                },
+                "type": {
+                    "type": "string",
+                    "example": "Channel"
+                },
+                "email": {
+                    "type": "string",
+                    "example": "test@gmail.com"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "Hi user!"
+                },
+                "invitedBy": {
+                    "type": "string",
+                    "example": "Jhon Doe"
+                },
+                "eventName": {
+                    "type": "string",
+                    "example": "Awesome group"
+                }
+            }
+        },
+        "TopicCreate": {
+            "type": "object",
+            "properties": {
+                "topic": {
+                    "$ref": "#/definitions/Topic"
+                },
+                "members": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "example": "e3488fdf-cefa-3f19-a082-41e856911ctr"                        
+                    }
+                },
+                "message": {
+                    "type": "string",
+                    "example": "Hi!!!"
+                }
+            }
+        },
+        "Topic": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example": "1"
+                },
+                "ref": {
+                    "type": "string",
+                    "example": "61388fdf-cefa-3f19-a082-41e856911cec"
+                },
+                "channelRef": {
+                    "type": "string",
+                    "example": "34588fdf-cefa-3f19-a082-41e856911ce5"
+                },
+                "companyRef": {
+                    "type": "string",
+                    "example": "62188fdf-cefa-3f19-a082-41e856911ce8"
+                },
+                "moderators": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "example": "e3488fdf-cefa-3f19-a082-41e856911ctr"
+                    }
+                },
+                "status": {
+                    "type": "string",
+                    "example": "active"
+                },
+                "access": {
+                    "$ref": "#/definitions/TopicAccess"
+                },
+                "title": {
+                    "type": "string",
+                    "example": "The Best Topic!!!!"
+                },
+                "description": {
+                    "type": "string",
+                    "example": "Interesting topic"
+                },
+                "endedOn": {
+                    "type": "date",
+                    "example": "2022-01-01T00:00:00Z"
+                },
+                "picture": {
+                    "type": "string",
+                    "example": "http://www.picture.com"
+                },
+                "isHidden": {
+                    "type": "boolean",
+                    "example": false
+                },
+                "audit": {
+                    "$ref": "#/definitions/Audit"
+                }
+            }
+        },
+        "TopicView": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example": "1"
+                },
+                "ref": {
+                    "type": "string",
+                    "example": "61388fdf-cefa-3f19-a082-41e856911cec"
+                },
+                "channelRef": {
+                    "type": "string",
+                    "example": "Jhon"
+                },
+                "status": {
+                    "type": "string",
+                    "example": "Doe"
+                },
+                "access": {
+                    "$ref": "#/definitions/TopicAccess"
+                },
+                "title": {
+                    "type": "string",
+                    "example": "The Best Topic!!"
+                },
+                "description": {
+                    "type": "string",
+                    "example": "Interesting topic"
+                },
+                "endedOn": {
+                    "type": "date",
+                    "example": "2022-01-01T00:00:00Z"
+                },
+                "picture": {
+                    "type": "string",
+                    "example": "http://www.picture.com"
+                },
+                "isHidden": {
+                    "type": "boolean",
+                    "example": false
+                },
+                "audit": {
+                    "$ref": "#/definitions/Audit"
+                },
+                "moderators": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TopicMember"
+                    }
+                },
+                "company": {
+                    "$ref": "#/definitions/TopicCompany"
+                },
+                "memberRequest": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TopicMemberRequest"
+                    }
+                },
+                "members": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TopicMember"
+                    }
+                },
+                "meetings": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TopicEvent"
+                    }
+                },
+                "totalMembers": {
+                    "type": "number",
+                    "example": "150"
+                },
+                "totalMemberRequest": {
+                    "type": "number",
+                    "example": "100"
+                },
+                "totalMeetings": {
+                    "type": "number",
+                    "example": "50"
+                },
+                "connectStatus": {
+                    "$ref": "#/definitions/PeopleConnectedStatus"
+                }
+            }
+        },
+        "TopicMember": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example": "1"
+                },
+                "ref": {
+                    "type": "string",
+                    "example": "61388fdf-cefa-3f19-a082-41e856911cec"
+                },
+                "firstName": {
+                    "type": "string",
+                    "example": "Jhon"
+                },
+                "lastName": {
+                    "type": "string",
+                    "example": "Doe"
+                },
+                "headline": {
+                    "type": "string",
+                    "example": "Engineer"
+                },
+                "companyHeadline": {
+                    "type": "string",
+                    "example": "Amazon"
+                },
+                "pronouns": {
+                    "type": "string",
+                    "example": "he/him"
+                },
+                "picture": {
+                    "type": "string",
+                    "example": "www.picture.com"
+                },
+                "status": {
+                    "type": "string",
+                    "example": "active"
+                },
+                "connectStatus": {
+                    "$ref": "#/definitions/PeopleConnectedStatus"
+                }
+            }
+        },
+        "TopicCompany": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example": "1"
+                },
+                "ref": {
+                    "type": "string",
+                    "example": "61388fdf-cefa-3f19-a082-41e856911cec"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Amazon"
+                }
+            }
+        },
+        "TopicMemberRequest": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example": "1"
+                },
+                "status": {
+                    "type": "string",
+                    "example": "active"
+                },
+                "user": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "number",
+                            "example": "1"
+                        },
+                        "ref": {
+                            "type": "string",
+                            "example": "61388fdf-cefa-3f19-a082-41e856911cec"
+                        },
+                        "firstName": {
+                            "type": "string",
+                            "example": "Jhon"
+                        },
+                        "lastName": {
+                            "type": "string",
+                            "example": "Doe"
+                        },
+                        "headline": {
+                            "type": "string",
+                            "example": "Engineer"
+                        },
+                        "companyHeadline": {
+                            "type": "string",
+                            "example": "Amazon"
+                        },
+                        "pronouns": {
+                            "type": "string",
+                            "example": "he/him"
+                        },
+                        "picture": {
+                            "type": "string",
+                            "example": "www.picture.com"
+                        }
+                    }
+                }
+            }
+        },
+        "TopicEvent": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example": "1"
+                },
+                "title": {
+                    "type": "string",
+                    "example": "Calls tutorial"
+                },
+                "organizer": {
+                    "type": "string",
+                    "example": "John Doe"
+                },
+                "date": {
+                    "type": "date",
+                    "example": "2022-01-01T13:00:00Z"
+                },
+                "time": {
+                    "type": "string",
+                    "example": "13:00:00"
+                },
+                "startedOn": {
+                    "type": "date",
+                    "example": "2022-01-01T13:00:00Z"
+                },
+                "endedOn": {
+                    "type": "date",
+                    "example": "2022-01-01T14:00:00Z"
+                }
+            }
+        },
+        "PeopleConnectedStatus": {
+            "type": "string",
+            "enum": [
+                "connected",
+                "notConnected",
+                "pending"
+            ]
+        },
+        "TopicAccess": {
+            "type": "string",
+            "enum": [
+                "public",
+                "private"
+            ]
+        },
+        "PaginationResponseTopic":{
+            "type": "object",
+            "properties": {
+                "currentPage": {
+                    "type": "number",
+                    "example":1
+                },
+                "lastPage": {
+                    "type": "number",
+                    "example": 2
+                },
+                "totalCount": {
+                    "type": "number",
+                    "example": 16
+                },
+                "data":{
+                    "$ref": "#/definitions/TopicSearchArray"
+                }
+            }
+        }
+    }
+}

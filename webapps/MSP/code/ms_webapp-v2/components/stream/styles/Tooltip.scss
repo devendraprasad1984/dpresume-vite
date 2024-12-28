@@ -1,0 +1,41 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat__tooltip {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 10px);
+  display: flex;
+  background: var(--colorBlack);
+  border-radius: toRem(34);
+  padding: toRem(4) toRem(4);
+  color: var(--colorWhite);
+
+  max-width: 300px;
+
+  button {
+    outline: none;
+    outline: 0;
+    background: none;
+    color: var(--colorMandy);
+
+    border: none;
+  }
+
+  a {
+    color: var(--colorMandy);
+    text-decoration: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 5px;
+    width: 5px;
+    height: 5px;
+    background: var(--colorBlack);
+    transform: rotate(45deg);
+  }
+}

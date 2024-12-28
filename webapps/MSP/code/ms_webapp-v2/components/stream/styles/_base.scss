@@ -1,0 +1,161 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat {
+  position: relative;
+  box-sizing: border-box;
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+.messenger-chat {
+  &.str-chat {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    flex: 1 0 100%;
+
+    .str-chat {
+      &__container {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      &__main-panel {
+        width: 100%;
+        min-width: 250px;
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.str-chat {
+  height: 100vh;
+
+  &.messaging,
+  &.commerce {
+    background-color: var(--colorWhite);
+  }
+}
+
+/* declare a font faces for our Emoji Replacement font, based on the default font used by Stream Chat React */
+
+$emoji-flag-unicode-range: U+1F1E6-1F1FF;
+
+/* png based woff for most browsers */
+@font-face {
+  font-family: ReplaceFlagEmojiPNG;
+  src: url("#{$assetsPath}/NotoColorEmoji-flags.woff2") format("woff2");
+  /* using the unicode-range attribute to limit the reach of the Flag Emoji web font to only flags */
+  unicode-range: $emoji-flag-unicode-range;
+}
+
+/* svg based for firefox */
+@font-face {
+  font-family: ReplaceFlagEmojiSVG;
+  src: url("#{$assetsPath}/EmojiOneColor.woff2") format("woff2");
+  unicode-range: $emoji-flag-unicode-range;
+}
+
+.str-chat--windows-flags {
+  .str-chat__textarea__textarea,
+  .str-chat__message-text-inner *,
+  .str-chat__emoji-item--entity,
+  .emoji-mart-emoji-native * {
+    font-family: ReplaceFlagEmojiPNG, var(--second-font), sans-serif;
+    font-display: swap;
+  }
+}
+
+@-moz-document url-prefix('') {
+  .str-chat--windows-flags {
+    .str-chat__textarea__textarea,
+    .str-chat__message-text-inner *,
+    .str-chat__emoji-item--entity,
+    .emoji-mart-emoji-native * {
+      font-family: ReplaceFlagEmojiSVG, var(--second-font), sans-serif;
+      font-display: swap;
+    }
+  }
+}
+
+.str-chat-channel-list {
+  float: left;
+}
+
+.str-chat-channel {
+  max-height: 100vh;
+
+  .str-chat__container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    .str-chat__main-panel,
+    .str-chat-angular__main-panel-inner {
+      height: 100%;
+      width: 100%;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      &--hideOnThread {
+        display: none;
+      }
+    }
+
+    .rfu-dropzone {
+      width: 100%;
+    }
+  }
+
+  &.messaging {
+    .str-chat__main-panel {
+      padding: toRem(16) toRem(4) 0 0;
+    }
+
+    @media screen and (max-width: 960px) {
+      .str-chat__main-panel {
+        padding: toRem(4) toRem(4) 0;
+      }
+    }
+  }
+
+  &.team {
+    .str-chat {
+      &__container {
+        display: flex;
+      }
+    }
+  }
+
+  &.commerce {
+    .str-chat {
+      &__main-panel {
+        width: 100%;
+      }
+
+      &__container {
+        background: var(--colorWhite);
+      }
+    }
+  }
+}

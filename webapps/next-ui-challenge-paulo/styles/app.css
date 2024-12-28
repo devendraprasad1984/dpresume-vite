@@ -1,0 +1,262 @@
+:root {
+    --colorBrickRed: #c03950;
+    --colorMandy: #e14963;
+    --colorNavy: #0f0d52;
+    --colorJellyBean: #2ca5a9;
+    --colorParadiso: #32bcc1;
+    --colorJava: #55d6da;
+    --colorPolar: #f4fdfd;
+    --colorConfetti: #f6992c;
+    --colorCitrine: #fcf5e8;
+    --colorPink: #ffc9d2;
+    --colorVanillaIce: #faf1f3;
+    --colorAquaHaze: #e0edef;
+    --colorFrenchGrey: #d3d2d6;
+    --colorMischka: #e5e4e9;
+    --colorGrey: #e9e8ec;
+    --colorAthensGrey: #f1f0f2;
+    --colorWildSand: #f7f7fd;
+    --colorWhisperGray: #f8f8fa;
+    --colorWhite: #ffffff;
+    --colorDisabled: #bab8c5;
+    --colorStormGray: #60656d;
+    --colorBlack: #000000;
+    --colorSteelGrey: #211f30;
+    --colorDolphin: #656374;
+    --colorWaterloo: #7e7c90;
+    --colorColdPurple: #989eda;
+    --colorBlueViolet: #5d52b1;
+    --colorPlum: #484782;
+    --colorGrape: #2a283e;
+    --colorSuccess: #24a192;
+    --defaultTransitionDuration: 0.2s;
+    --colorTransitionDuration: 0.2s;
+    --dropdownTransitionDuration: 0.2s;
+    --widthDesktop: 60rem;
+    --opacityDisabled: 0.5;
+    --main-color: #5d52b1;
+    --app-color1: #DECBA4;
+    --app-color2: #3E5151;
+    --marginPanelLR: 40%;
+}
+
+@font-face {
+    font-family: "Gotham Rounded";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/static/fonts/GothamRounded-Medium.woff2) format("woff2");
+}
+
+*, *:before, *:after  {
+    box-sizing: border-box;
+    /*font-family: "Gotham Rounded";*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overscroll-behavior-y: none;
+    background-color: #21a471;
+    color: var(--colorSteelGrey);
+    /*background-image: linear-gradient(to right, var(--app-color1), var(--app-color2));*/
+    /*opacity: 0.95;*/
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+[tabindex="-1"]:focus {
+    outline: none !important;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    border: 0;
+    border-bottom: 1px solid var(--colorMischka);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    line-height: 1;
+}
+
+p {
+    margin: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-weight: bolder;
+}
+
+ol,
+ul,
+dl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+select {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+button {
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    line-height: 1;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    text-decoration: none;
+    user-select: none;
+    font-weight: bold;
+    outline: none;
+}
+
+:active {
+    outline: none;
+    box-shadow: none;
+}
+
+:disabled {
+    cursor: not-allowed;
+}
+
+pre {
+    white-space: pre-wrap; /* css-3 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.wordWrap {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.hiddenText {
+    display: block;
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.responsiveIframeContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsiveIframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sectionSeparator {
+    width: 100%;
+    margin: 40px 0;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5d52b1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5d52b1;
+}
+
+
+.navBtn,.btn, button {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--colorWhite);
+    margin: 3px;
+    text-align: left;
+    border: 1px solid var(--colorWhite);
+    transition: border .2s ease-in-out, box-shadow .2s ease-in-out;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.active, .navBtn:hover {
+    background-color: #f8a39b;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+    color: #222;
+    font-weight: bolder;
+}
+
+.bl{
+    font-weight: bolder;
+}
+
+input, select{
+    border-style: solid;
+    border-color: 1px solid var(--colorWhisperGray);
+    border-radius: 5px;
+    padding: 5px;
+    margin:10px 0; /*top and bottom*/
+    /*box-shadow:0 0 15px 4px rgba(0,0,0,0.06);*/
+}
+textarea {
+    min-height: 10rem;
+}
+
+

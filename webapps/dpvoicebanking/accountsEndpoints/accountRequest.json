@@ -1,0 +1,22 @@
+{
+  "Data": {
+    "ConsentId": "2ac6a509-8e31-46b7-bef2-75216942b2eb",
+    "CreationDateTime": "2020-07-17T12:05:43.097Z",
+    "Status": "AwaitingAuthorisation",
+    "StatusUpdateDateTime": "2020-07-17T12:05:43.102Z",
+    "Permissions": [
+      "ReadAccountsDetail",
+      "ReadBalances",
+      "ReadTransactionsCredits",
+      "ReadTransactionsDebits",
+      "ReadTransactionsDetail"
+    ]
+  },
+  "Risk": {},
+  "Links": {
+    "Self": "https://ob.rbs.useinfinite.io/open-banking/v3.1/aisp/account-access-consents/2ac6a509-8e31-46b7-bef2-75216942b2eb"
+  },
+  "Meta": {
+    "TotalPages": 1
+  }
+}

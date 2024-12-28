@@ -1,0 +1,59 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.toggleLabel {
+  cursor: pointer;
+}
+
+.pseudoInput {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  width: toRem(44);
+  height: toRem(24);
+  margin: 0;
+  padding: 0;
+  border-radius: toRem(12);
+  background: var(--colorWaterloo);
+  transition: background-color var(--colorTransitionDuration) ease;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+
+  // Thumb
+  &::before {
+    top: 50%;
+    left: toRem(2);
+    transform: translate(0, -50%);
+    width: toRem(20);
+    height: toRem(20);
+    background-color: var(--colorWhite);
+    border-radius: toRem(10);
+    transition: all var(--defaultTransitionDuration) ease;
+  }
+}
+
+.toggle {
+  width: toRem(0.1);
+  height: toRem(0.1);
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+
+  &:checked + .pseudoInput {
+    background: var(--colorParadiso);
+    &::before {
+      left: toRem(22);
+    }
+  }
+  &:disabled + .pseudoInput {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+}

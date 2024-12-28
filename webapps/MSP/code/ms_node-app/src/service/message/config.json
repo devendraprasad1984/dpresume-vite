@@ -1,0 +1,23 @@
+{
+    "docs": {
+        "version": "0.0.0",
+        "title": "Message Chat API Service",
+        "description": "Documentation for the message API Service",
+        "routes": "./src/service/message/routes.ts",
+        "url": "/message/api-docs",
+        "models":{
+            "tags": [],
+            "paths": {},
+            "definitions":{}
+        }
+    },
+    "port": 5004,
+    "prefix": "/message",
+    "route": {
+        "ping": "ping",
+        "message": "",
+        "channel": "channel",
+        "user": "user",
+        "topic": "topic"
+    }
+}

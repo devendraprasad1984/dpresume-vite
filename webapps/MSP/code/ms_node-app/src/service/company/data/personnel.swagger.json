@@ -1,0 +1,277 @@
+{
+    "tags": [
+        {
+            "name": "Company Personnel",
+            "description": "Methods for Company Personnel"
+        }
+    ],
+    "paths": {        
+        "/company/personnel":{
+            "post": {
+                "tags": ["Personnel"],
+                "summary": "Create a new personnel",
+                "parameters": [
+                    {
+                        "name": "New Personnel",
+                        "description": "Personnel object with the data to create a new record",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Personnel"
+                            }
+                        },
+                        "example": [{
+                            "userId": 18,
+                            "companyId": 19,
+                            "role": "Member"
+                        }]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/Personnel"
+                        }
+                    }
+                }
+            }
+        },
+        "/company/personnel/{Id}":{
+            "patch":{
+                "tags": ["Personnel"],
+                "summary": "Update personnel information",
+                "parameters": [{
+                    "in": "path",
+                    "name": "Id",
+                    "description": "ID that will be updated",
+                    "required": "true",
+                    "type": "number"
+                },
+                {
+                    "name": "Personnel",
+                    "description": "Update Personnel object",
+                    "in": "body",
+                    "required": "true",
+                    "schema": {
+                        "$ref": "#/definitions/Personnel"
+                    },
+                    "example": {
+                        "role": "Member"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content":"application/json",
+                        "schema":{
+                            "$ref": "#/definitions/ApiResponsePersonnel"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["Personnel"],
+                "summary": "Delete a specific personnel from DB",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "ID of Company personnel that will be deleted",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/company/personnel/filter":{
+            "post": {
+                "tags": [
+                    "Personnel"
+                ],
+                "summary": "Get all the filtered records",
+                "parameters": [
+                    {
+                        "name": "Request filter",
+                        "description": "object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilterPersonnel"
+                        },
+                        "example": {
+                            "filter": "getAllConnections",
+                            "data": {
+                                "companyId": 1
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponsePersonnelArray"
+                        }
+                    }
+                }
+            }
+        }            
+    },
+    "definitions": {
+        "Personnel": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "required": false,
+                    "example": 1
+                },
+                "userId": {
+                    "type": "number",
+                    "required": true,
+                    "example": 1
+                },
+                "companyId": {
+                    "type": "number",
+                    "required": true,
+                    "example": 1
+                },
+                "status": {
+                    "type": "string",
+                    "required": false,
+                    "example": "active"
+                },
+                "role": {
+                    "type": "string",
+                    "example": "Member"
+                }
+            }
+        },
+        "ApiResponsePersonnelArray": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/PersonnelArray"
+                }
+            }
+        },
+        "PersonnelArray": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/PersonnelSearch"
+            }
+        },
+        "ApiResponsePersonnel": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/Personnel"
+                }
+            }
+        },
+        "DataFilterPersonnel": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getAllConnections",
+                        "getEmployeeConnections",
+                        "getUserConnections"                      
+                    ],
+                    "required": "true",
+                    "example": "getAllConnections"
+                },
+                "data": {
+                    "type": "object",
+                    "required": "true",
+                    "example": {"companyId": 1}
+                }
+            }
+        },
+        "PersonnelSearch":{
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example":1
+                },
+                "role": {
+                    "type": "string",
+                    "example": "User"
+                },
+                "status": {
+                    "type": "string",
+                    "example": "active"
+                },
+                "user":{
+                    "$ref": "#/definitions/UserSearch"
+                }
+            }
+        },
+        "UserSearch": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example":1
+                },
+                "ref": {
+                    "type": "string",
+                    "example": "9d396045-4da2-b449-047a-5de92116fe21"
+                },
+                "status": {
+                    "type": "string",
+                    "example": "active"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Kylie Banks"
+                },
+                "email": {
+                    "type": "string",
+                    "example": "test@test.com"
+                },
+                "title": {
+                    "type": "string",
+                    "example": "Project Manager"
+                },
+                "company": {
+                    "type": "string",
+                    "example": "MS"
+                },
+                "notesCount": {
+                    "type": "number",
+                    "example": 0
+                }             
+            }
+        }
+    }
+}

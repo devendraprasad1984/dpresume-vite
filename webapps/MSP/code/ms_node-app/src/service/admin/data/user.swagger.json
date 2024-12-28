@@ -1,0 +1,93 @@
+{
+    "tags": [
+        {
+            "name": "User",
+            "description": "Management of the user information"
+        }
+    ],
+    "paths": {
+        "/admin/user": {
+            "get": {
+                "tags": ["User"],
+                "summary": "Get all the users",
+                "parameters": [
+                    {
+                        "name": "perPage",
+                        "description": "How many items per pagination are request",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "true",
+                        "example": 5
+                    },
+                    {
+                        "name": "page",
+                        "description": "Page of the pagination",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "false",
+                        "example": 2
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content":"application/json",
+                        "schema":{
+                            "$ref": "#/definitions/ApiResponseUserSearch"
+                        }
+                    }
+                }
+            }
+        }        
+    },
+    "definitions":{
+        "ApiResponseUserSearch":{
+            "type": "object",
+            "properties":{
+                "status" : {
+                    "type": "number"
+                },
+                "result":{"$ref":"#/definitions/UserSearchArray"}
+            }
+        },
+        "ApiResponseUser":{
+            "type": "object",
+            "properties":{
+                "status" : {
+                    "type": "number"
+                },
+                "result":{"$ref":"#/definitions/User"}
+            }
+        },
+        "UserSearchArray":{
+            "type": "array",
+            "items": { 
+                "$ref": "#/definitions/UserSearch"                
+            }
+        },
+        "UserSearch":{
+            "type": "object",
+            "properties": { 
+                "id": {"type":"number"},
+                "ref": {"type":"string"},
+                "role": {"type":"string"},
+                "status": {"type":"string"},
+                "name": {"type":"string"},
+                "email": {"type":"string"},
+                "title": {"type":"string"},
+                "company": {"type":"string"},
+                "notesCount": {"type":"number"}                
+            }
+        },
+        "User":{
+            "type": "object",
+            "properties": { 
+                "id": {"type":"number"},
+                "ref": {"type":"string"},
+                "role": {"type":"string"},
+                "status": {"type":"string"}                                
+            }
+        }
+    }
+
+}

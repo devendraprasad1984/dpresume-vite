@@ -1,0 +1,43 @@
+
+.chessboard {
+    /*width: 100%;*/
+    /*display: flex;*/
+    text-align: center;
+}
+
+.line {
+    /*border-bottom: 2px solid #838080;*/
+    /*padding: 5px;*/
+}
+
+.cell {
+    min-width: 50px;
+    min-height: 50px;
+    padding: 10px;
+    display: inline-grid;
+    font-weight: bolder;
+    border: 1px solid black;
+}
+
+.center {
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+}
+
+/*.cell:nth-child(odd) .cell:nth-child(odd) {*/
+/*    background: #111111;*/
+/*    color: white;*/
+/*}*/
+
+/*.cell:nth-child(even) .cell:nth-child(even) {*/
+/*    background: white;*/
+/*    color: black;*/
+/*}*/
+.black{
+    background-color: #222;
+    color: white;
+}
+.white{
+    color: #222;
+}

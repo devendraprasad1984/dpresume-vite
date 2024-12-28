@@ -1,0 +1,8 @@
+{
+  "info": {
+    "basePath": "/staging"
+  },
+  "auth": {
+    "domain": "https://MSP-2-staging.us.auth0.com"
+  }
+}

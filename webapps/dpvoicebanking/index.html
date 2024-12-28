@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="xxx" sizes="64x64" type="image/png">
+    <title>VB-VoiceBanking</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body class="notranslate">
+<div class="overlay" id="idOverlay">
+    <div class="overlay-content">
+        <div class="btn bgprimary tricolor" style="font-size: 20px" onclick="initialise()">
+            <span style="text-decoration: underline; font-size: 30pt;">VB-VoiceBanking</span><br/>
+            Alexa/Siri/Allo, play my account story<br/>
+            dial 6200 from your registered device<br/>
+            <span style="font-size: 10pt;">prototype by Devendra Prasad, +91 9582797772, devendraprasad1984@gmail.com</span><br/>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="sidenav">
+        <img class="wcImage" src="resources/wordCloud.png" alt="">
+        <div style="font-weight: bolder; font-size: 15px;">Customer & Accounts</div>
+        <div id="idCustomerNumbers" style="font-size: 17px">12345678012</div>
+        <div id="accountsList"></div>
+    </div>
+
+    <div class="right">
+        <div>
+            <span class="headingTop purple">VB-VoiceBanking</span>
+        </div>
+        <div class="info">
+            <span>
+                listen your story from your bank ANYTIME....ANYWHERE.... using your registered devices<br/>
+                <span class="red">Activate your VB-VoiceBanking...</span><br/>
+                Alexa/Siri: play my <span class="orange">SBI/AXIS/HSBC</span> account story ending with .....<br/>
+                dial 6200<br/>
+            </span>
+        </div>
+
+        <div id="idActions" style="float: right">
+            <span class='btn' onclick="getSummary(this)">Summary</span>
+            <span class='btn' onclick="getMoratorium(this)">Moratorium</span>
+            <span class='btn' onclick="getTop5(this)">Top 5</span>
+            <span class='btn' onclick="getOffers(this)">Offers</span>
+            <span class='btn bgprimary' onclick="changeLanguage('HI-EN')">Hindi</span>
+        </div>
+        <!--        <div id='google_translate_element'></div>-->
+        <div id='contentHeader' class="contentheader"></div>
+        <div id='contentData' class="contentData">listen what your account says to you</div>
+        <div id='contentLength' style="float: left"></div>
+
+        <div style="float: right">
+            <span class='bgprimary btn' onclick="speakOut()">Alexa/Siri/AI Speak</span>
+            <span class='bgred btn' onclick="stopPlay()">Stop</span>
+        </div>
+        
+        
+        <div>
+            <img class="archImage" src="resources/simpleArchitecture.jpg" alt="">
+        </div>
+    </div>
+
+</div>
+<div class="bottomSign">developed by Devendra Prasad, 9582797772, devendraprasad1984@gmail.com</div>
+
+<script src="./custom.js"></script>
+</body>
+</html>

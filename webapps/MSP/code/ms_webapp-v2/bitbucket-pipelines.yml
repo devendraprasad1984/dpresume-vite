@@ -1,0 +1,81 @@
+image: node:16.14.2
+pipelines: # More info here: https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html
+  pull-requests:
+    "**":
+      - step:
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+  branches:
+    dev:
+      - step: &install_dependencies
+          name: Install
+          caches:
+            - node
+          script:
+            - npm install
+      - step: &run_tests
+          name: Test
+          caches:
+            - node
+          script:
+            - npm run build
+      - step: &render_static_site
+          deployment: dev
+          name: Render Static Site & Deploy to S3
+          caches:
+            - node
+          script:
+            - npm run render
+            - pipe: atlassian/aws-s3-deploy:0.2.4
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                S3_BUCKET: $AWS_S3_BUCKET
+                LOCAL_PATH: "out"
+            - pipe: atlassian/aws-cloudfront-invalidate:0.1.1
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                DISTRIBUTION_ID: $AWS_CLOUDFRONT_DISTRIBUTION_ID
+          artifacts:
+            - out/**
+    staging:
+      - step: &install_dependencies
+          name: Install
+          caches:
+            - node
+          script:
+            - npm install
+      - step: &run_tests
+          name: Test
+          caches:
+            - node
+          script:
+            - npm run build
+      - step: &render_static_site
+          deployment: staging
+          name: Render Static Site & Deploy to S3
+          caches:
+            - node
+          script:
+            - npm run render
+            - pipe: atlassian/aws-s3-deploy:0.2.4
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                S3_BUCKET: $AWS_S3_BUCKET
+                LOCAL_PATH: "out"
+            - pipe: atlassian/aws-cloudfront-invalidate:0.1.1
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                DISTRIBUTION_ID: $AWS_CLOUDFRONT_DISTRIBUTION_ID
+          artifacts:
+            - out/**

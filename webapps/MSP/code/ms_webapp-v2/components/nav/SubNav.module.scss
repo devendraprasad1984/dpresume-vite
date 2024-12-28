@@ -1,0 +1,64 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  display: grid;
+  align-items: center;
+  border-top-left-radius: toRem(44);
+  z-index: 1;
+  background-color: var(--colorWhite);
+  position: sticky;
+  top: toRem(108);
+  height: toRem(92);
+  padding: 0 toRem(40);
+  margin: -(toRem(40)) 0 0;
+}
+
+.containerInner {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  max-width: toRem($contentWidth);
+}
+
+.nav {
+  display: grid;
+  align-items: center;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+}
+
+.linkNav {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-gap: toRem(32);
+}
+
+.link {
+  @extend %buttonText;
+  display: grid;
+  align-content: center;
+  transition: border-bottom-color var(--colorTransitionDuration) ease;
+  border-bottom: toRem(4) solid transparent;
+  height: toRem(40);
+  color: hsla(240, 3%, 13%, 0.54);
+
+  &:hover {
+    border-bottom-color: var(--colorAthensGrey);
+  }
+}
+
+.activeLink {
+  @extend %buttonText;
+  color: var(--colorAshtonGrey);
+  border-bottom-color: var(--colorJava);
+
+  &:hover {
+    border-bottom-color: var(--colorJava);
+  }
+}

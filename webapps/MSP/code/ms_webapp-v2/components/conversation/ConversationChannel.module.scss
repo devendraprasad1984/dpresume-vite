@@ -1,0 +1,61 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.primarySection {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.channelConversationSection {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  max-height: calc(100vh - toRem($headerHeight + 106));
+}
+
+.pendingSentInviteNotice {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: toRem(48);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  background: var(--colorWaterloo);
+  color: var(--colorWhite);
+
+  svg path {
+    fill: var(--colorWhite);
+  }
+}
+
+.receivedInviteNotice {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: toRem(104);
+  padding: 0 toRem(28);
+  display: grid;
+  grid-gap: toRem(12);
+  justify-content: start;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  background: var(--colorWildSand);
+}
+
+.receivedInviteTitle {
+  @extend %smallHeader;
+}
+.receivedInviteSubTitle {
+  @extend %smallBody;
+  color: var(--colorDolphin);
+}
+.receivedInviteNoticeActions {
+  display: grid;
+  grid-gap: toRem(12);
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+}

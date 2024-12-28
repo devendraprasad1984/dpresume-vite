@@ -1,0 +1,3 @@
+INSERT INTO sanskar_med_easy.product_images (id, productid, uri, type) VALUES (1, 1, 'https://cdn.iconscout.com/icon/free/png-128/medicine-1671471-1422447.png', 'image');
+INSERT INTO sanskar_med_easy.product_images (id, productid, uri, type) VALUES (2, 2, 'https://cdn.iconscout.com/icon/premium/png-128-thumb/medicine-1673048-1419805.png', 'image');
+INSERT INTO sanskar_med_easy.product_images (id, productid, uri, type) VALUES (3, 4, 'https://cdn.iconscout.com/icon/premium/png-128-thumb/medicine-2270567-1890898.png', 'image');

@@ -1,0 +1,59 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.chatInputContainer {
+  border-top: toRem(1) solid #e4e7e9;
+  border-bottom: toRem(1) solid #e4e7e9;
+  padding: 1em 1.2em 1em;
+}
+
+.textArea {
+  width: 100%;
+  border: 0;
+  resize: none;
+  font-size: toRem(14);
+  outline: none;
+}
+
+.button {
+  padding: 0.56em;
+  min-width: auto;
+  &:disabled {
+    cursor: not-allowed;
+    background: none;
+    & path {
+      fill: #d8d8d8;
+    }
+  }
+}
+
+.buttonContainer {
+  margin: 1em 0 0 1em;
+  display: flex;
+}
+
+.fileButtonContainer {
+  position: relative;
+  margin-right: 1em;
+}
+
+.fileButtonLoadingSpinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -#{toRem(12)};
+  margin-left: -#{toRem(12)};
+}
+
+.textAreaContainer {
+  display: flex;
+  margin-top: 0.4em;
+  padding: 0.48em 0.7em;
+  border: toRem(2) solid transparent;
+}
+
+.isTextareaFocused {
+  border-color: var(--colorJava);
+  border-radius: toRem(4);
+}

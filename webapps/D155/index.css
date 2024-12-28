@@ -1,0 +1,283 @@
+
+* {
+    color: #4f0ea0;
+}
+
+
+.container div {
+    margin: 5px;
+}
+
+.input-inline {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.input-right {
+    text-align: right;
+}
+
+.purple {
+    background-color: #8743e5;
+}
+
+.input-inline * {
+    margin: 5px;
+}
+
+.btn {
+    border: 1px solid transparent;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .275rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: 0.95;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.btn:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    align-content: space-around;
+    vertical-align: top;
+    width: 100%;
+}
+
+.myIcons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.myIcons img {
+    margin: 5px;
+    padding: 5px;
+}
+
+.imgdrop {
+    height: 50px;
+    width: 50px;
+}
+
+.imgdropx {
+    height: 70px;
+    width: 70px;
+}
+
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+}
+
+.right {
+    text-align: right;
+    padding-right: 5px;
+}
+
+.red {
+    color: orangered;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.column {
+    flex: 15%;
+    padding: 20px;
+}
+
+
+.card span {
+    padding: 5px;
+}
+
+/*.card .btn {*/
+/*    font-size: 80%;*/
+/*}*/
+
+.summarycard {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    box-sizing: border-box;
+    display: none;
+}
+
+.time {
+    color: gray;
+    /*font-size: 12px;*/
+}
+
+.flexbox {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: grid;
+}
+
+.flexgrid {
+    display: grid;
+}
+
+.flexbox span, .flexgrid span {
+    font-size: 20px;
+}
+
+.box > * {
+    flex: 1 1 150px;
+}
+
+.card {
+    border-top: 3px solid #0c5460;
+    /*box-shadow: 0 4px 4px 0;*/
+    /*max-width: 200px;*/
+    /*height: 100px;*/
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: fit-content;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.amt {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.divx {
+    height: auto;
+    width: 100%;
+    /*overflow-y: auto;*/
+    /*overflow-x: hidden;*/
+    /*position: relative;*/
+    /*font-size: 80%;*/
+}
+
+.green {
+    background-color: #82c389;
+}
+
+.blue {
+    background-color: #6fb5e5;
+}
+
+.swal-title {
+    margin: 0px;
+    font-size: 16px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+    margin-bottom: 28px;
+}
+
+.textwhite {
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+
+.xrow {
+    overflow-x: hidden;
+    width: 100%;
+    border-bottom: 1px solid #8a8a8a;
+    align-items: center;
+}
+
+.xhead {
+    font-weight: bolder;
+    font-size: 14px;
+    background-color: #f7f7f7;
+}
+
+.xcell {
+    margin-right: 5px;
+    display: inline-block;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
+    overflow-x: hidden;
+    justify-content: center;
+}
+
+.xcell .btn {
+    margin-right: 3px;
+    font-size: 10px;
+}
+
+
+.searchText {
+    width: 70%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+
+/*@media (min-width:300px) and (max-width:750px) {*/
+/*    .flexbox {*/
+/*        display: grid;*/
+/*        grid-template-columns: none;*/
+/*    }*/
+/*}*/
+
+.carddiv {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    overflow: auto;
+    position: relative;
+}
+.carddiv > span {
+    padding: 5px;
+    font-size: 35px;
+}
+.carddiv > span > img {
+    height: 200px;
+    width: 200px;
+}
+
+.swal-modal {
+    height: 80%;
+    width: 80%;
+}

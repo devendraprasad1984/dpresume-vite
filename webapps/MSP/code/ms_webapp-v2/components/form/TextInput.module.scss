@@ -1,0 +1,11 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.charLimitIndicator {
+  @extend %smallLabel;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: toRem(4);
+  color: var(--colorDolphin);
+}

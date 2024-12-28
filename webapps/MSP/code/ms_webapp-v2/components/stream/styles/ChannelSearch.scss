@@ -1,0 +1,101 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat__channel-search {
+  padding: toRem(24) toRem(24) 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: var(--colorFrenchGrey);
+
+  input {
+    flex: 1;
+    background: var(--colorMischka);
+    border: 1px solid transparent;
+    outline: none;
+    height: 30px;
+    border-radius: toRem(34);
+
+    padding: toRem(16);
+
+    &:focus {
+      background: var(--colorWhite);
+      border: 1px solid var(--colorMandy);
+      box-shadow: 0 0 0 2px var(--colorPink);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &-container {
+    position: absolute;
+    width: 300px;
+    z-index: 2;
+    padding: 8px;
+
+    &-searching {
+      padding-left: 8px;
+    }
+
+    &-empty {
+      padding-left: 8px;
+    }
+
+    .str-chat__channel-search-result {
+      display: flex;
+      align-items: center;
+      border-radius: toRem(34);
+      height: 40px;
+      cursor: pointer;
+      padding-left: 8px;
+      width: 100%;
+      border: none;
+      background: transparent;
+
+      &:hover {
+        font-weight: $fontWeightBold;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  &-result.focused {
+    font-weight: $fontWeightBold;
+  }
+
+  &-container.popup {
+    border-radius: toRem(34);
+    background: var(--colorWildSand);
+    left: 300px;
+    top: 20px;
+    box-shadow: 0 7px 9px 0 var(--colorMischka), 0 1px 0 0 var(--colorMischka);
+    border: 1px solid var(--colorMischka);
+
+    .str-chat__channel-search-result {
+      &:hover {
+        background: var(--colorGrey);
+      }
+    }
+
+    .str-chat__channel-search-result.focused {
+      background: var(--colorGrey);
+    }
+  }
+
+  &-container.inline {
+    top: 64px;
+    right: 0;
+    background: var(--colorFrenchGrey);
+    height: calc(100vh - 60px);
+
+    .str-chat__channel-search-result {
+      &:hover {
+        background: var(--colorWhite);
+      }
+    }
+
+    .str-chat__channel-search-result.focused {
+      background: var(--colorWhite);
+    }
+  }
+}

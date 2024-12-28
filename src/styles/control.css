@@ -1,0 +1,22 @@
+.screen-center-fixed {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 100001;
+  background-color: rgba(var(--bg-color-black), 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.zero {
+  display: none;
+  opacity: 0;
+  z-index: -1000;
+  top: -1000px
+}

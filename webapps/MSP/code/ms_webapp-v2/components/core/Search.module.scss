@@ -1,0 +1,42 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+@import "styles/form";
+
+.container {
+  position: relative;
+  max-width: toRem(750);
+}
+
+.leftOffset {
+  margin-left: -(toRem(9));
+}
+
+.searchInput {
+  @extend %textInput;
+  border-radius: toRem(44);
+  padding: toRem(13) toRem(17.5) toRem(13) toRem(40);
+}
+
+.magnifier {
+  position: absolute;
+  top: toRem(16);
+  left: toRem(16);
+  z-index: 250;
+  path {
+    fill: var(--colorWaterloo);
+  }
+}
+
+.clearButton {
+  position: absolute;
+  top: toRem(13);
+  right: toRem(17);
+  z-index: 250;
+}
+
+.x {
+  path {
+    fill: var(--colorWaterloo);
+  }
+}

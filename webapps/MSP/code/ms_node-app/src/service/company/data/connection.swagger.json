@@ -1,0 +1,181 @@
+{
+    "tags": [
+        {
+            "name": "Connection",
+            "description": "To check related user connection actions"
+        }
+    ],
+    "paths": {        
+        "/company/connection/filter":{
+            "post": {
+                "tags": [
+                    "Connection"
+                ],
+                "summary": "Get all the Company connection request records",
+                "parameters": [
+                    {
+                        "name": "request filter",
+                        "description": "filter object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilterMemberRequest"
+                        },
+                        "example": {
+                            "filter": "getByCompany",
+                            "data": {
+                                "companyRef": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseMemberRequestArray"
+                        }
+                    }
+                }
+            }
+        },
+        "/company/connection/{Id}":{
+            "patch":{
+                "tags": ["Connection"],
+                "summary": "Update connection information",
+                "parameters": [{
+                    "in": "path",
+                    "name": "Id",
+                    "description": "ID that will be updated",
+                    "required": "true",
+                    "type": "number"
+                },
+                {
+                    "name": "Connection",
+                    "description": "Update connection object",
+                    "in": "body",
+                    "required": "true",
+                    "schema": {
+                        "$ref": "#/definitions/MemberRequest"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content":"application/json",
+                        "schema":{
+                            "$ref": "#/definitions/ApiResponseMemberRequest"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ApiResponseMemberRequestArray": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/MemberRequestArray"
+                }
+            }
+        },
+        "MemberRequestArray": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/MemberRequest"
+            }
+        },
+        "ApiResponseMemberRequest": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/MemberRequest"
+                }
+            }
+        },
+        "DataFilterMemberRequest": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getByUser",
+                        "getByCompany"
+                    ],
+                    "required": "true",
+                    "example": "getByCompany"
+                },
+                "data": {
+                    "type": "object",
+                    "required": "true",
+                    "example": {"companyRef": "251225d2-4652-9367-79b8-5bf2b382fr56"}
+                }
+            }
+        },
+        "MemberRequest": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example": 0
+                },
+                "userRef": {
+                    "type": "string",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                },
+                "channelRef": {
+                    "type": "string",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2t7"
+                },
+                "companyRef": {
+                    "type": "string",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2t7"
+                },
+                "approvedByRef": {
+                    "type": "string",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2t7"
+                },
+                "topicRef": {
+                    "type": "string",
+                    "example": "5y8de3be-a832-6cb6-acde-f0c47f23d2t7"
+                },
+                "sessionRef": {
+                    "type": "string",
+                    "example": "k98de3be-a832-6cb6-acde-f0c47f23d2l4"
+                },
+                "status": {
+                    "type": "string",
+                    "example": "active"
+                },
+                "type": {
+                    "type": "string",
+                    "example": "Channel"
+                },
+                "email": {
+                    "type": "string",
+                    "example": "test@gmail.com"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "Hi user!"
+                },
+                "invitedBy": {
+                    "type": "string",
+                    "example": "Jhon Doe"
+                },
+                "eventName": {
+                    "type": "string",
+                    "example": "Awesome group"
+                }
+            }
+        }
+    }
+}

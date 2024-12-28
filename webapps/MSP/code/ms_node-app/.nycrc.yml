@@ -1,0 +1,15 @@
+## .nycrc.yml
+extends: "@istanbuljs/nyc-config-typescript"
+check-coverage: false
+include: 
+  - 'src/service/**/*.controller.ts'
+exclude:
+  - 'src/service/**/enum.ts'
+  - 'src/service/**/handler.ts'
+  - 'src/service/**/index.ts'
+  - 'src/service/**/routes.ts'
+  - 'src/service/**/validator.ts'
+reporter:
+  - html
+  - text
+  - text-summary

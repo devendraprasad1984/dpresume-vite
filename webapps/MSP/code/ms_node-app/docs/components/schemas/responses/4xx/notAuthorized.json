@@ -1,0 +1,10 @@
+{
+    "description": "The client must authenticate itself to get the requested response.",
+    "content": {
+        "text/plain": {
+          "schema": {
+            "type": "string"
+          }
+        }
+    }
+}

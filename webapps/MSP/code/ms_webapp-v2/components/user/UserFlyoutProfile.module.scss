@@ -1,0 +1,63 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.profileBanner {
+  position: relative;
+  height: toRem(190);
+}
+
+.profileBannerImage {
+  height: toRem(135);
+  background-color: var(--colorGrape);
+  background-image: url("/static/flyout-background.svg");
+}
+
+.profileBannerAvatar {
+  position: absolute;
+  bottom: 0;
+  left: toRem(32);
+}
+
+.profileContent {
+  padding: toRem(20) toRem(32) toRem(120);
+}
+
+.profileName {
+  margin-bottom: toRem(12);
+}
+
+.MSPshipGoals {
+  margin-top: toRem(16);
+}
+
+.viewUserLink {
+  display: grid;
+  margin-top: toRem(48);
+}
+
+.section {
+  margin-top: toRem(48);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: toRem(34);
+}
+
+.sectionTitle {
+  @extend %header;
+}
+
+.seeAll {
+  @extend %smallHeader;
+  color: var(--colorMandy);
+}
+
+.sectionSeparator {
+  width: 100%;
+  margin: toRem(40) 0;
+  color: var(--colorGrey);
+}

@@ -1,0 +1,10 @@
+{
+    "description": "The client does not have access rights to the content.",
+    "content": {
+        "text/plain": {
+          "schema": {
+            "type": "string"
+          }
+        }
+    }
+}

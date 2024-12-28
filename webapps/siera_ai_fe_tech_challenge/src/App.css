@@ -1,0 +1,40 @@
+.App {
+    text-align: center;
+}
+
+.color-green{
+    background-color: #4edb4e;
+}
+
+.ant-card-bordered {
+    margin: 1rem !important;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-direction: row;
+}
+
+.row * {
+    margin: 2px;
+}
+
+.flex1 {
+    flex: 1;
+    flex-basis: auto;
+}
+
+.col {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-direction: column;
+}
+.ant-btn {
+    height: auto !important;
+}
+.right-flex{
+    text-align: right;
+    margin-right: 1rem;
+}

@@ -1,0 +1,35 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.connectionsContainer {
+  margin-top: toRem(30);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr auto;
+  align-items: center;
+}
+
+.headerTitle {
+  @extend %smallBodyMedium;
+  color: var(--colorDolphin);
+}
+
+.avatarStack {
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+}
+
+.avatarStackItem {
+  position: relative;
+}
+
+.avatar {
+  height: toRem(68);
+  width: toRem(68);
+  border-radius: 50%;
+  border: solid toRem(4) white;
+}

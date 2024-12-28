@@ -1,0 +1,134 @@
+:root {
+  --purple-color: #7f279e;
+  --gray-color: #888484;
+  --light-gray-color: #eceaea;
+  --default-text-color: #4d4a4a;
+  --black-color: #222;
+  --white: white;
+  --grad-color1: #f8decc;
+  --grad-color2: #d4f8d4;
+  --grad-color3: white;
+  --link-active-color1: #8a1fc0;
+  --link-active-color2: #4d72c0;
+  --gradient-image-color: linear-gradient(
+          115deg,
+          var(--link-active-color1) 20%,
+          var(--link-active-color2) 60%
+  );
+  --left-panel-width: 20%;
+  --right-panel-width: 80%;
+  --body-linear-grad-color: linear-gradient(
+          115deg,
+          var(--grad-color1) 0%,
+          var(--grad-color3) 40%,
+          var(--grad-color2) 100%
+  );
+  --medium-violet: #b71d7d;
+  --size10px: 10px;
+}
+
+
+body{
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./css/gstaticFont.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham Rounded";
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url(./css/GothamRounded-Medium.woff2) format("woff2");
+}
+
+/*@font-face {*/
+/*  font-family: "Ephesis";*/
+/*  font-style: normal;*/
+/*  font-weight: 550;*/
+/*  font-display: swap;*/
+/*  !*src: url(https://fonts.gstatic.com/s/ephesis/v1/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format('woff2');*!*/
+/*  src: url(./css/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format("woff2");*/
+/*}*/
+
+* {
+  box-sizing: border-box;
+  font-family: "Gotham Rounded", monospace;
+  color: var(--default-text-color);
+}
+
+
+.topbar {
+  z-index: 1002;
+}
+
+.fixed {
+  position: fixed;
+  margin: 0 auto;
+}
+
+footer{
+  margin-top: 20px;
+  bottom: 0;
+}
+
+.mainabs {
+  position: absolute;
+  width: 98vw;
+}
+
+.blur {
+  backdrop-filter: blur(12px);
+}
+
+::selection {
+  background-color: var(--grad-color2);
+  color: var(--gray-color);
+}
+
+::placeholder {
+  color: var(--black-color);
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar {
+  width: var(--size10px);
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e9e8ec;
+}
+
+
+.margin-ud {
+  margin-top: var(--size10px);
+  margin-bottom: var(--size10px);
+}
+
+.margin-rl {
+  margin-left: var(--size10px);
+  margin-right: var(--size10px);
+}
+
+.padding-ud {
+  padding-top: var(--size10px);
+  padding-bottom: var(--size10px);
+}
+
+.padding-rl {
+  padding-left: var(--size10px);
+  padding-right: var(--size10px);
+}

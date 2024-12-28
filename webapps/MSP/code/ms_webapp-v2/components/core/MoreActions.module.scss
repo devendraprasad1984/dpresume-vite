@@ -1,0 +1,31 @@
+@import "../../styles/functions";
+@import "../../styles/variables";
+@import "../../styles/typography";
+
+.itemGroup {
+  @extend %body;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  grid-gap: toRem(18);
+  justify-content: start;
+  align-items: center;
+  padding: toRem(6) toRem(12);
+
+  &:hover path {
+    fill: var(--colorSteelGrey);
+  }
+}
+
+.destructiveItemGroup {
+  &:hover {
+    background-color: var(--colorVanillaIce);
+    border-radius: toRem(12);
+  }
+  path {
+    fill: var(--colorMandy);
+  }
+  &:hover path {
+    fill: var(--colorMandy);
+  }
+}

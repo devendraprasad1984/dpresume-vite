@@ -1,0 +1,13 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: end;
+  align-items: center;
+  grid-gap: toRem(16);
+  margin-top: toRem(28);
+}

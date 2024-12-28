@@ -1,0 +1,23 @@
+.bg-title{
+    background-color: var(--light-gray-color);
+}
+
+.pad10{
+    padding: 10px;
+}
+.margin10{
+    margin: 10px;
+}
+
+.size200{
+    max-width: 200px;
+    min-width: 200px;
+}
+.size300{
+    max-width: 300px;
+    min-width: 300px;
+}
+.size400{
+    max-width: 400px;
+    min-width: 400px;
+}

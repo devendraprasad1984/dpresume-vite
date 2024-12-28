@@ -1,0 +1,12 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat__channel-list-messenger {
+  min-width: toRem(300);
+  background: var(--colorWhite);
+}
+
+.str-chat-channel-list .str-chat__channel-list-messenger__main {
+  padding-bottom: 0;
+}

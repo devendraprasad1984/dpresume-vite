@@ -1,0 +1,41 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.messageActionGroup {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.myMessage {
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.avatarMessageGroup {
+  display: flex;
+  grid-gap: toRem(20);
+}
+
+.senderInfo {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: end;
+  grid-gap: toRem(12);
+  margin-bottom: toRem(8);
+}
+
+.senderName {
+  @extend %smallHeader;
+  color: var(--colorDolphin);
+}
+
+.messageTimestamp {
+  @extend %smallBodyMedium;
+  color: var(--colorDolphin);
+}

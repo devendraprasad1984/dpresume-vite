@@ -1,0 +1,92 @@
+@media screen and (max-width: 600px) {
+
+    .container{
+        margin-right: auto;
+        margin-left:  auto;
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        /*overflow-x: hidden;*/
+    }
+
+    .row{
+        display: inline-grid;
+    }
+
+    .fixed {
+        position: relative;
+    }
+
+    .grid-container {
+        display: grid;
+        /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
+        grid-template-columns: auto auto;
+        grid-area: auto;
+    }
+
+    .leftPanel {
+        position: fixed;
+        z-index: 11000;
+        opacity: 0.98;
+        height: 100%;
+        width: 70vw;
+        top: 0;
+        left: 0;
+        background-color: white !important;
+    }
+    .rightPanel {
+        width: inherit;
+    }
+
+    .gapSwitchMobile {
+        margin-top: 0;
+    }
+
+    #imgPic,
+    .imgPic {
+        /*display: inline-block;*/
+        margin-top: 5rem;
+        position: fixed;
+        z-index: 100001;
+        left: 2rem;
+    }
+
+    .topbar {
+        display: inline;
+    }
+
+    .topbar > .name > span,
+    .topbar .name > i,
+    div a > i {
+        font-size: 20px;
+    }
+
+    .overlay .closebtn {
+        font-size: var(--size10px);
+        top: 5px;
+        right: -40px;
+    }
+
+    .togglePanel {
+        font-size: 12px;
+    }
+
+    .pright {
+        margin-bottom: 20px;
+    }
+
+    #idLinks a {
+        font-size: 8px;
+    }
+
+    .btn {
+        padding: 0.275rem 0.225rem;
+        line-height: 1;
+    }
+
+    .row {
+        display: inline;
+        clear: both;
+        padding: unset;
+    }
+}

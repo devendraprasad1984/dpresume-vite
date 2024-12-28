@@ -1,0 +1,112 @@
+{
+	"Rules": {
+		"User": {
+			"MSA": "C+R+U+D+S",
+			"MSC": "R",
+			"MSM": "R",
+			"MSS": "R",
+			"Admin": "C+R+U+D+S",
+			"Recruiter": "R",
+			"User": "R"
+		},
+		"Profile": {
+			"MSA": "R+U+S",
+			"MSC": "R",
+			"MSM": "R",
+			"MSS": "R",
+			"Admin": "R",
+			"Recruiter": "R",
+			"User": "C+R+U+D"
+		},
+		"Company": {
+			"MSA": "C+R+U+D+S",
+			"MSC": "R",
+			"MSM": "R",
+			"MSS": "R",
+			"Admin": "R+U",
+			"Recruiter": "R",			
+			"User": "R"
+		},
+		"Personnel": {
+			"MSA": "R",
+			"MSC": "R",
+			"MSM": "R",
+			"MSS": "R",
+			"Admin": "C+R+U+D+S",
+			"Recruiter": "R",
+			"User": ""
+		},
+		"Job": {
+			"MSA": "R",
+			"MSC": "R",
+			"MSM": "R",
+			"MSS": "R",
+			"Admin": "C+R+U+D+S",
+			"Recruiter": "C+R+U+D+S",
+			"User": ""
+		},
+		"Session": {
+			"MSA": "C+R+U+D+S",
+			"MSC": "C+R+U+D+S",
+			"MSM": "C+R+U+D+S",
+			"MSS": "R",
+			"Admin": "C+R+U+D+S",
+			"Recruiter": "C+R+U",
+			"User": "C+R+U"
+		},
+		"Topic": {
+			"MSA": "C+R+U+D+S",
+			"MSC": "C+R+U+D+S",
+			"MSM": "C+R+U+D+S",
+			"MSS": "R",
+			"Admin": "C+R+U+D+S",
+			"Recruiter": "C+R+U",
+			"User": "C+R+U"
+		},
+		"Meet": {
+			"MSA": "C+R+U+D+S",
+			"MSC": "C+R+U+D+S",
+			"MSM": "C+R+U+D+S",
+			"MSS": "R",
+			"Admin": "C+R+U+D+S",
+			"Recruiter": "C+R+U",
+			"User": "C+R+U"
+		},
+		"Message": {
+			"MSA": "C+R+U+D+S",
+			"MSC": "C+R+U+D+S",
+			"MSM": "C+R+U+D+S",
+			"MSS": "C+R+U",
+			"Admin": "C+R+U+D+S",
+			"Recruiter": "C+R+U",
+			"User": "C+R+U"
+		},
+		"Note": {
+			"MSA": "C+R+U+D+S",
+			"MSC": "C+R+U+D+S",
+			"MSM": "C+R+U+D+S",
+			"MSS": "R",
+			"Admin": "",
+			"Recruiter": "",
+			"User": ""
+		},
+		"Flag": {
+			"MSA": "C+R+U+D",
+			"MSC": "C+R+U",
+			"MSM": "C+R+U",
+			"MSS": "C+R+U",
+			"Admin": "C+R+U",
+			"Recruiter": "C+R+U",
+			"User": "C+R+U"
+		},
+		"Match": {
+			"MSA": "C+R+U+D+S",
+			"MSC": "C+R+U+D+S",
+			"MSM": "C+R+U+D+S",
+			"MSS": "R",
+			"Admin": "R",
+			"Recruiter": "R",
+			"User": "R"
+		}
+	}
+}

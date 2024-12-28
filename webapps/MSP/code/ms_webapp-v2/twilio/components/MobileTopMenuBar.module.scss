@@ -1,0 +1,38 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  display: grid;
+  background-color: var(--colorBlack);
+  height: toRem(52);
+
+  @media (min-width: $widthDesktop) {
+    display: none;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 toRem(12);
+}
+
+.actionLayout {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: center;
+  grid-gap: toRem(12);
+  height: 100%;
+}
+
+.roomName {
+  @extend %smallLabel;
+  @extend %truncate;
+  color: var(--colorWhite);
+}

@@ -1,0 +1,8 @@
+---
+users:
+- customerNumber: "231490383323"
+  cardNumber: "8858580702718222"
+  type: "private"
+- customerNumber: "994260370680"
+  cardNumber: "1859764174742864"
+  type: "private"

@@ -1,0 +1,26 @@
+{
+  "components": {
+    "combine": {},
+    "displaylist": {},
+    "input": {},
+    "chart2": {},
+    "clientApp": {},
+    "feature": {},
+    "header": {},
+    "signin": {},
+    "signout": {},
+    "signup": {},
+    "welcome": {},
+    "CommentApp": {},
+    "CommentBox": {},
+    "CommentList": {},
+    "version": {},
+    "closureCounterCheck": {},
+    "inputTag": {},
+    "quickForm": {},
+    "selectBox": {},
+    "slider": {},
+    "treeExample1": {},
+    "treeExample2": {}
+  }
+}

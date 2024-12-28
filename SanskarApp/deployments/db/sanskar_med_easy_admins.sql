@@ -1,0 +1,2 @@
+INSERT INTO sanskar_med_easy.admins (id, name, icon, password, email) VALUES (1, 'devendra', 'https://cdn.iconscout.com/icon/premium/png-128-thumb/windy-weather-1865250-1581463.png', 'admin', 'devendraprasad1984@gmail.com');
+INSERT INTO sanskar_med_easy.admins (id, name, icon, password, email) VALUES (2, 'akhilesh', 'https://cdn.iconscout.com/icon/premium/png-128-thumb/cool-3056046-2542452.png', 'jacobadmin', 'devendraprasad1984@gmail.com');

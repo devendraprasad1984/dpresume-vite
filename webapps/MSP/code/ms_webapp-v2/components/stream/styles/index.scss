@@ -1,0 +1,59 @@
+@import "variables";
+@import "base";
+
+// External dependencies (copied from libraries to rectify built file path discrepancies)
+@import "vendor/emoji-mart"; // copy from '../../node_modules/emoji-mart/css/emoji-mart.css'
+@import "vendor/mml-react"; // copy from '../../node_modules/mml-react/dist/styles/index.css'
+@import "vendor/react-file-utils"; // copy from '../../node_modules/react-file-utils/dist/index.css'
+@import "vendor/react-image-gallery"; // copy from '../../node_modules/react-image-gallery/styles/css/image-gallery.css'
+
+// Components
+@import "ActionsBox";
+@import "AttachmentActions";
+@import "Attachment";
+@import "Avatar";
+@import "Audio";
+@import "Card";
+@import "ChannelHeader";
+@import "ChannelList";
+@import "ChannelListMessenger";
+@import "ChannelPreview";
+@import "ChannelSearch";
+@import "ChatDown";
+@import "EventComponent";
+@import "DateSeparator";
+@import "EditMessageForm";
+@import "Gallery";
+@import "LoadingChannels";
+@import "LoadingIndicator";
+@import "LoadMoreButton";
+@import "Message";
+@import "MessageActions";
+//@import "MessageCommerce";
+@import "MessageInput";
+//@import "MessageInputFlat";
+@import "MessageNotification";
+@import "MessageList";
+//@import "MessageTeam";
+//@import "MessageLivestream";
+@import "MessageRepliesCountButton";
+@import "Modal";
+@import "ReactionList";
+@import "ReactionSelector";
+@import "SendButton";
+@import "SimpleReactionsList";
+@import "SmallMessageInput";
+@import "Thread";
+@import "TypingIndicator";
+@import "Tooltip";
+@import "VirtualMessage";
+
+:root {
+  /* miscellaneous */
+  --assetsPath: "../assets";
+
+  --overlay: #00000033; // 33 = 20% opacity
+  --overlay-dark: #00000099; // 99 = 60% opacity
+  --shadow-icon: #00000040; // 40 = 25% opacity; x=0, y=0, radius=4
+  --modal-overlay-color: rgba(0, 0, 0, 0.89);
+}

@@ -1,0 +1,10 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  display: grid;
+  grid-gap: toRem(20);
+  grid-auto-flow: column;
+  grid-auto-columns: toRem(185);
+}

@@ -1,0 +1,83 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat__edit-message-form {
+  width: 100%;
+
+  form {
+    position: relative;
+    width: 100%;
+  }
+
+  textarea {
+    padding: 8px;
+    background: var(--colorWhite);
+    box-shadow: inset 0 0 0 1px var(--colorMandy);
+    border: 1px solid transparent;
+    resize: none;
+    border-radius: toRem(34);
+    width: 100%;
+
+    line-height: 22px;
+
+    &:focus {
+      box-shadow: inset 0 0 0 1px var(--colorMandy), 0 0 0 2px var(--colorPink);
+      outline: 0;
+    }
+  }
+
+  .str-chat__message-team-form-footer {
+    button {
+      background: none;
+      border: none;
+      font-weight: $fontWeightBold;
+      color: var(--colorGrey);
+
+      &[type="submit"] {
+        color: var(--colorMandy);
+      }
+    }
+  }
+
+  .rfu-dropzone {
+    width: 100%;
+  }
+
+  .rfu-file-upload-button,
+  .str-chat__input-emojiselect,
+  .str-chat__input-fileupload {
+    display: flex;
+    position: unset;
+    top: unset;
+    right: unset;
+    left: unset;
+
+    svg {
+      width: toRem(14);
+      height: toRem(14);
+      fill: var(--colorMandy);
+    }
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.str-chat__edit-message-form-options {
+  display: flex;
+  align-items: baseline;
+}
+
+.str-chat__edit-message-form-options
+  .str-chat__fileupload-wrapper:hover
+  .str-chat__tooltip {
+  display: none;
+}
+
+.str-chat__edit-message-form {
+  position: relative;
+}

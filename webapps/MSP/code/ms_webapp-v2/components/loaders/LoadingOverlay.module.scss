@@ -1,0 +1,26 @@
+@import "styles/functions";
+
+.container {
+  z-index: 999;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+
+.backdrop {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loaderWrapper {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 1000;
+  width: toRem(200);
+}

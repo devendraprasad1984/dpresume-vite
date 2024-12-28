@@ -1,0 +1,52 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.iconBase {
+  button {
+    @extend %label;
+    display: flex;
+    width: 100%;
+
+    svg {
+      width: toRem(6);
+      height: toRem(10);
+      margin-left: toRem(4);
+    }
+  }
+}
+
+.inactive {
+  @extend .container;
+  @extend .iconBase;
+
+  & path {
+    fill: var(--colorStormGray);
+  }
+}
+
+.active {
+  @extend .container;
+  @extend .iconBase;
+
+  path {
+    fill: var(--colorJava);
+  }
+}
+
+.activeTitle {
+  color: var(--colorSteelGrey);
+}
+
+.inactiveTitle {
+  color: var(--colorDolphin);
+}

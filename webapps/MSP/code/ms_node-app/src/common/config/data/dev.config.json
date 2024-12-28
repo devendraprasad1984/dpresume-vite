@@ -1,0 +1,8 @@
+{
+  "info": {
+    "basePath": "/dev"
+  },
+  "auth": {
+    "domain": "https://MSP-2-dev.us.auth0.com"
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "docs": {
+        "version": "0.0.0",
+        "title": "Company API Service",
+        "description": "Documentation for the Company API Service",
+        "routes": "./src/service/company/routes.ts",
+        "url": "/company/api-docs",
+        "models":{
+            "tags": [],
+            "paths": {},
+            "definitions":{}
+        }
+    },
+    "port": 5002,
+    "prefix": "/company",
+    "route": {
+        "ping": "ping",
+        "company": "",
+        "info": "info",
+        "personnel": "personnel",
+        "job": "job",
+        "connection": "connection",
+        "location": "location"
+    }
+}

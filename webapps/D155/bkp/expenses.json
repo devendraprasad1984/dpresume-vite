@@ -1,0 +1,219 @@
+[
+  {
+    "id": "2",
+    "name": "dp",
+    "date": "Aug 2020",
+    "amount": "-1800",
+    "remarks": "tank playment",
+    "iploc": "ip & location",
+    "when": "2020-09-09 14:33:50"
+  },
+  {
+    "id": "3",
+    "name": "anish",
+    "date": "Aug 2020",
+    "amount": "-1700",
+    "remarks": "tank+electrician payment",
+    "iploc": "ip & location",
+    "when": "2020-09-09 14:34:13"
+  },
+  {
+    "id": "5",
+    "name": "ajay",
+    "date": "Sep 2020",
+    "amount": "1000",
+    "remarks": "regular maintenance",
+    "iploc": "ip & location",
+    "when": "2020-09-14 09:31:40"
+  },
+  {
+    "id": "6",
+    "name": "dp",
+    "date": "Sep 2020",
+    "amount": "1000",
+    "remarks": "regular maintenance",
+    "iploc": "ip & location",
+    "when": "2020-09-14 09:31:56"
+  },
+  {
+    "id": "7",
+    "name": "dp",
+    "date": "Sep 2020",
+    "amount": "-910",
+    "remarks": "rajan hw machine pay",
+    "iploc": "ip & location",
+    "when": "2020-09-14 09:32:32"
+  },
+  {
+    "id": "8",
+    "name": "dev",
+    "date": "Aug 2020",
+    "amount": "430",
+    "remarks": "bses bill pay",
+    "iploc": "ip & location",
+    "when": "2020-09-14 09:42:42"
+  },
+  {
+    "id": "9",
+    "name": "dp",
+    "date": "Sep 2020",
+    "amount": "-180",
+    "remarks": "rajan hw",
+    "iploc": "ip & location",
+    "when": "2020-09-14 10:13:21"
+  },
+  {
+    "id": "10",
+    "name": "ajay",
+    "date": "Sep 2020",
+    "amount": "-500",
+    "remarks": "wiring short fix + lock",
+    "iploc": "ip & location",
+    "when": "2020-09-14 10:41:17"
+  },
+  {
+    "id": "11",
+    "name": "dp",
+    "date": "Aug 2020",
+    "amount": "1800",
+    "remarks": "plumbing+velding",
+    "iploc": "ip & location",
+    "when": "2020-09-14 12:16:39"
+  },
+  {
+    "id": "12",
+    "name": "anish",
+    "date": "Aug 2020",
+    "amount": "1700",
+    "remarks": "plumbing+velding",
+    "iploc": "ip & location",
+    "when": "2020-09-14 12:16:47"
+  },
+  {
+    "id": "13",
+    "name": "anish",
+    "date": "Aug 2020",
+    "amount": "70",
+    "remarks": "bses advance to devendra ji",
+    "iploc": "ip & location",
+    "when": "2020-09-14 12:51:05"
+  },
+  {
+    "id": "14",
+    "name": "ajay",
+    "date": "Sep 2020",
+    "amount": "500",
+    "remarks": "been adjusted in payments by 1 2 3",
+    "iploc": "ip & location",
+    "when": "2020-09-16 22:09:37"
+  },
+  {
+    "id": "15",
+    "name": "anish",
+    "date": "Sep 2020",
+    "amount": "230",
+    "remarks": "portion of 1000 contri for sep, makes total of 300 so far",
+    "iploc": "ip & location",
+    "when": "2020-09-17 15:26:26"
+  },
+  {
+    "id": "16",
+    "name": "anish",
+    "date": "Oct 2020",
+    "amount": "1000",
+    "remarks": "regular maintenance",
+    "iploc": "ip & location",
+    "when": "2020-09-26 17:28:05"
+  },
+  {
+    "id": "17",
+    "name": "dp",
+    "date": "Oct 2020",
+    "amount": "1000",
+    "remarks": "regular maintenance",
+    "iploc": "ip & location",
+    "when": "2020-09-27 11:32:51"
+  },
+  {
+    "id": "18",
+    "name": "ajay",
+    "date": "Sep 2020",
+    "amount": "700",
+    "remarks": "1st floor share of sep to make 1000",
+    "iploc": "ip & location",
+    "when": "2020-10-01 14:53:18"
+  },
+  {
+    "id": "19",
+    "name": "ajay",
+    "date": "Sep 2020",
+    "amount": "50",
+    "remarks": "2nd share of 800 from sep plumbing balance",
+    "iploc": "ip & location",
+    "when": "2020-10-01 14:53:54"
+  },
+  {
+    "id": "21",
+    "name": "dp",
+    "date": "Oct 2020",
+    "amount": "-50",
+    "remarks": "50 of 750 goes into my pocket to make portion of 800 balances settlement from plumbing work",
+    "iploc": "ip & location",
+    "when": "2020-10-01 15:00:15"
+  },
+  {
+    "id": "22",
+    "name": "dev",
+    "date": "Sep 2020",
+    "amount": "750",
+    "remarks": "clear due for 2nd floor for plumbing+velding work",
+    "iploc": "ip & location",
+    "when": "2020-10-01 22:05:48"
+  },
+  {
+    "id": "23",
+    "name": "dp",
+    "date": "Oct 2020",
+    "amount": "-750",
+    "remarks": "reversal, to make due clea for 1800 which i paid for plumbing and velding, tx datt ji",
+    "iploc": "ip & location",
+    "when": "2020-10-01 22:06:52"
+  },
+  {
+    "id": "25",
+    "name": "ajay",
+    "date": "Oct 2020",
+    "amount": "1000",
+    "remarks": "regular maintenance",
+    "iploc": "ip & location",
+    "when": "2020-10-03 18:36:44"
+  },
+  {
+    "id": "26",
+    "name": "dp",
+    "date": "Oct 2020",
+    "amount": "-3190",
+    "remarks": "bses bill payment 152895259",
+    "iploc": "ip & location",
+    "when": "2020-10-03 18:38:54"
+  },
+  {
+    "id": "27",
+    "name": "dev",
+    "date": "Oct 2020",
+    "amount": "1000",
+    "remarks": "regular maintenance",
+    "iploc": "ip & location",
+    "when": "2020-10-03 18:43:43"
+  },
+  {
+    "id": "28",
+    "name": "dev",
+    "date": "Sep 2020",
+    "amount": "575",
+    "remarks": "regular maintenance",
+    "iploc": "ip & location",
+    "when": "2020-10-03 18:44:10"
+  }
+]
+

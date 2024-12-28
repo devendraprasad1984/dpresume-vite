@@ -1,0 +1,44 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  display: block;
+  position: relative;
+  z-index: 0;
+  background-color: var(--colorWhite);
+  padding: toRem(24);
+  border-radius: toRem(24);
+  min-height: toRem(210);
+  transition: background var(--colorTransitionDuration) ease;
+
+  &:hover {
+    background: var(--colorWildSand);
+  }
+}
+
+.avatarGroup {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: center;
+  margin-bottom: toRem(10);
+}
+
+.metadata {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-gap: toRem(4);
+}
+
+.orgName {
+  @extend %headerText;
+  @extend %truncate;
+}
+
+.category {
+  @extend %smallBodyMedium;
+  @extend %truncate;
+  color: var(--colorDolphin);
+}

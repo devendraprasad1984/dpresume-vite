@@ -1,0 +1,31 @@
+import React from "react";
+import appEnum from "../enums/appEnum.js";
+import core from "../core/core.js";
+
+const LazySimpleForm = React.lazy(
+  () => import("../apps/simpleForm/simpleForm.jsx"));
+const LazyNetFlix = React.lazy(() => import("../apps/netflix/netflix.jsx"));
+const LazyGeekAdmin = React.lazy(() => import("../apps/geek/admin-video.jsx"));
+const LazyVanillaJSHome = React.lazy(
+  () => import("../apps/vanila-js/vanila-js-home.jsx"));
+const LazyVanillaJSRedux = React.lazy(
+  () => import("../apps/vanila-js-redux/vanila-js-redux.jsx"));
+const JSSampleFunctionOutput = React.lazy(
+  () => import("../apps/jsTests/jsTests.jsx"));
+
+export const appMap = {
+  [appEnum[appEnum.appKeys.netflix]]: LazyNetFlix,
+  [appEnum[appEnum.appKeys.simpleForm]]: LazySimpleForm,
+  [appEnum[appEnum.appKeys.geekAdminVideo]]: LazyGeekAdmin,
+  [appEnum[appEnum.appKeys.vanillJSHome]]: LazyVanillaJSHome,
+  [appEnum[appEnum.appKeys.vanillJSRedux]]: LazyVanillaJSRedux,
+  [appEnum[appEnum.appKeys.JSApps]]: JSSampleFunctionOutput,
+};
+
+const useAppSelectorComponentMap = ({currentApp}) => {
+  if (!core.isPresent(currentApp)) {
+    return;
+  }
+  return appMap[currentApp];
+};
+export default useAppSelectorComponentMap;

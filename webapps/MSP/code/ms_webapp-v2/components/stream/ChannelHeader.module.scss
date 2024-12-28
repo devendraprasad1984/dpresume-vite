@@ -1,0 +1,56 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  display: grid;
+  align-content: center;
+  background-color: var(--colorAthensGrey);
+  padding: 0 toRem(28);
+  border-bottom: toRem(1) solid var(--colorMischka);
+  height: toRem(106);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: center;
+  align-items: center;
+  grid-gap: toRem(16);
+  height: toRem(106);
+}
+
+.channelTitle {
+  @extend %header;
+}
+
+.avatarGroup {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+  grid-gap: toRem(16);
+}
+
+.headlines {
+  @extend %bodyMedium;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  grid-gap: toRem(6);
+  justify-content: start;
+  color: var(--colorWaterloo);
+}
+
+.groupHeader {
+  display: flex;
+  grid-gap: toRem(18);
+  align-items: center;
+}
+
+.groupHeadline {
+  display: flex;
+  grid-gap: toRem(6);
+  align-items: center;
+}

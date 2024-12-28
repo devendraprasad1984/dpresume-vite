@@ -1,0 +1,21 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.headerGroup {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: space-between;
+  align-items: end;
+  grid-gap: toRem(24);
+}
+
+.profileImage {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: start;
+  align-items: center;
+  grid-gap: toRem(24);
+}

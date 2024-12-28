@@ -1,0 +1,55 @@
+@import "styles/functions";
+@import "styles/variables";
+
+.button {
+  display: inline-block;
+  border: toRem(2) solid var(--colorMandy);
+  border-radius: toRem(44);
+  background-color: var(--colorWhite);
+  font-weight: $fontWeightBold;
+  color: var(--colorMandy);
+  transition: background-color var(--colorTransitionDuration) ease;
+
+  &:hover,
+  &:active {
+    color: var(--colorBrickRed);
+    background-color: var(--colorVanillaIce);
+  }
+
+  &:disabled {
+    background-color: transparent;
+    border-color: var(--colorPink);
+    color: var(--colorPink);
+    cursor: not-allowed;
+  }
+}
+
+.iconContainer {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  grid-gap: toRem(6);
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+  line-height: 1.15; // Center with icon
+}
+
+.icon {
+  path {
+    fill: var(--colorMandy);
+  }
+}
+
+.sizeM {
+  padding: toRem(10) toRem(26);
+  height: toRem(44);
+  font-size: toRem(16);
+}
+
+.sizeS {
+  padding: toRem(8) toRem(16);
+  height: toRem(32);
+  font-size: toRem(12);
+}

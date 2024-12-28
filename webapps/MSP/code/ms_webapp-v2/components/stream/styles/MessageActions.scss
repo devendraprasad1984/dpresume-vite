@@ -1,0 +1,123 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat__message-actions-box {
+  position: absolute;
+  display: none;
+  bottom: 20px;
+  left: 40px;
+  width: 120px;
+  border-radius: toRem(34);
+  background: var(--colorWhite);
+  background-image: linear-gradient(
+    -180deg,
+    var(--colorWhisperGray),
+    var(--colorWildSand)
+  );
+  box-shadow: 0 0 2px 0 var(--colorMischka), 0 1px 0 0 var(--colorMischka),
+    0 1px 8px 0 var(--colorMischka);
+  z-index: 999;
+}
+
+.str-chat__message-actions-box--open {
+  display: block;
+}
+
+.str-chat__message-actions-list {
+  height: 100%;
+  margin: 0;
+  padding: toRem(12);
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.str-chat__message-actions-list-item {
+  padding: toRem(4) toRem(4);
+  width: 100%;
+  margin: 0;
+}
+
+.str-chat__message-actions-list button {
+  background: none;
+  text-align: left;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+
+  text-decoration: none;
+
+  &:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}
+
+.str-chat__message-actions-list button:hover {
+  color: var(--colorMandy);
+}
+
+.str-chat__message-actions-list button:not(:last-of-type) {
+  border-bottom: 1px solid var(--colorGrey);
+}
+
+.str-chat__message-actions {
+  position: relative;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: toRem(4) toRem(4);
+  cursor: pointer;
+}
+
+.str-chat__message-actions {
+  order: 2;
+}
+
+.str-chat__message--me .str-chat__message-actions {
+  order: -1;
+}
+
+.str-chat__message-actions-reactions,
+.str-chat__message-actions-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+}
+
+.str-chat__message-actions-reactions,
+.str-chat__message-actions-options svg {
+  fill: var(--colorGrey);
+  position: relative;
+}
+
+.str-chat__message-actions-reactions:hover,
+.str-chat__message-actions-options:hover svg {
+  fill: var(--colorMandy);
+}
+
+.str-chat__message-simple:focus-within
+  .str-chat__message-simple__actions__action--thread {
+  display: flex;
+}
+
+.str-chat__message-simple:focus-within
+  .str-chat__message-simple__actions__action--reactions {
+  display: flex;
+}
+
+.str-chat__message-simple:focus-within
+  .str-chat__message-simple__actions__action--options {
+  display: flex;
+
+  button {
+    display: flex;
+    align-items: center;
+  }
+}

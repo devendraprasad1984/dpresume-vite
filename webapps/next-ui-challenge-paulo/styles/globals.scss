@@ -1,0 +1,342 @@
+@import "functions";
+@import "variables";
+//@import "typography";
+@import "form";
+
+/* dm-sans-regular - latin */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+}
+:root {
+  // UI
+  --colorBrickRed: #c03950;
+  --colorMandy: #e14963;
+  --colorJellyBean: #2ca5a9;
+  --colorParadiso: #32bcc1;
+  --colorJava: #55d6da;
+  --colorPolar: #f4fdfd;
+  --colorConfetti: #f6992c;
+  --colorCitrine: #fcf5e8;
+  --colorPink: #ffc9d2;
+  --colorVanillaIce: #faf1f3;
+  --colorAquaHaze: #e0edef;
+  --colorFrenchGrey: #d3d2d6;
+  --colorMischka: #e5e4e9;
+  --colorGrey: #e9e8ec;
+  --colorAthensGrey: #f1f0f2;
+  --colorWildSand: #f7f7fd;
+  --colorWhisperGray: #f8f8fa;
+  --colorWhite: #ffffff;
+  --colorDisabled: #bab8c5;
+  --colorStormGray: #60656d;
+  --colorBlack: #000000;
+
+  // Text
+  --colorSteelGrey: #211f30;
+  --colorDolphin: #656374;
+  --colorWaterloo: #7e7c90;
+  --colorColdPurple: #989eda;
+
+  // Supplemental
+  --colorBlueViolet: #5d52b1;
+  --colorPlum: #484782;
+  --colorGrape: #2a283e;
+  --colorSuccess: #24a192;
+
+  // Transitions
+  --defaultTransitionDuration: 0.2s;
+  --colorTransitionDuration: 0.2s;
+  --dropdownTransitionDuration: 0.2s;
+
+  // Size
+  --widthDesktop: 60rem;
+
+  // ETC
+  --opacityDisabled: 0.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  min-height: 100vh;
+  overscroll-behavior-y: none;
+  background-color: #c5eede;
+  color: var(--colorSteelGrey);
+}
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: 0;
+  border-bottom: toRem(1) solid var(--colorMischka);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+p {
+  margin: 0;
+}
+
+strong {
+  font-weight: $fontWeightMedium;
+}
+
+em {
+  font-weight: $fontWeightMedium;
+}
+
+ol,
+ul,
+dl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+a {
+  color: var(--colorLink);
+  text-decoration: none;
+  font-weight: $fontWeightRegular;
+
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+select {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: 0;
+}
+
+//textarea,
+//input {
+//  appearance: none;
+//  -webkit-appearance: none;
+//}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+//input {
+//  @extend %textInput;
+//}
+//
+//textarea {
+//  @extend %textArea;
+//}
+
+table {
+  border-collapse: collapse;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  background: transparent;
+  line-height: 1;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  text-decoration: none;
+  user-select: none;
+  font-weight: var(--fontWeightRegular);
+  outline: none;
+
+  :active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  :disabled {
+    cursor: not-allowed;
+  }
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+mark {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 70%,
+    var(--colorHighlight) 70%
+  );
+}
+
+pre {
+  white-space: pre-wrap; /* css-3 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+#__next {
+  min-height: 100vh;
+}
+
+//.header {
+//  @extend %header;
+//}
+
+.smallHeader {
+  @extend %smallHeader;
+}
+
+.buttonText {
+  @extend %buttonText;
+}
+
+.bodyMedium {
+  @extend %bodyMedium;
+}
+
+.body {
+  @extend %body;
+}
+
+//.headerText {
+//  @extend %headerText;
+//}
+
+.smallBodyMedium {
+  @extend %smallBodyMedium;
+}
+
+.smallBody {
+  @extend %smallBody;
+}
+
+.tagBold {
+  @extend %tagBold;
+}
+
+.label {
+  @extend %label;
+}
+
+.smallLabel {
+  @extend %smallLabel;
+}
+
+.truncate {
+  @extend %truncate;
+}
+
+.wordWrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.visuallyHidden {
+  @extend %visuallyHidden;
+}
+
+.truncate {
+  @extend %truncate;
+}
+
+.hiddenText {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.responsiveIframeContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsiveIframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sectionSeparator {
+  width: 100%;
+  margin: toRem(40) 0;
+}
+
+.js-focus-visible button:focus:not(.focus-visible),
+.js-focus-visible select:focus:not(.focus-visible),
+.js-focus-visible a:focus:not(.focus-visible),
+.js-focus-visible [role="button"]:focus:not(.focus-visible) {
+  outline: none;
+}
+
+// React Modal
+.ReactModalPortal {
+  z-index: 13;
+  position: relative;
+}
+
+.ReactModal__Body--open,
+.body-has-overlay {
+  overflow: hidden;
+}
+
+.ReactModal__Content {
+  opacity: 0;
+  transition: opacity var(--defaultTransitionDuration) ease;
+}
+
+.ReactModal__Content--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Content--before-close {
+  opacity: 0;
+}

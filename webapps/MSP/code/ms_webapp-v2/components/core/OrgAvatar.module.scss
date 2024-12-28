@@ -1,0 +1,27 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: toRem(1) solid var(--colorAthensGrey);
+  border-radius: toRem(12);
+  background-color: var(--colorWhite);
+}
+
+.initialsContainer {
+  font-weight: $fontWeightBold;
+  color: var(--colorSteelGrey);
+}
+
+.avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

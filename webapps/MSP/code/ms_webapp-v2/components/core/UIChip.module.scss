@@ -1,0 +1,29 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.defaultChip {
+  @extend %tagBold;
+  display: inline-block;
+  border-radius: toRem(44);
+  height: toRem(28);
+  padding: toRem(8) toRem(12);
+}
+
+.purpleChip {
+  background-color: var(--colorBlueViolet);
+  color: var(--colorWhite);
+}
+
+.lightGrayChip {
+  background-color: var(--colorGrey);
+}
+
+.grayChip {
+  background-color: var(--colorWaterloo);
+  color: var(--colorWhite);
+}
+
+.orangeChip {
+  background-color: var(--colorConfetti);
+}

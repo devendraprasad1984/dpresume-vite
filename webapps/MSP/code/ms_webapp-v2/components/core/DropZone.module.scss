@@ -1,0 +1,67 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.wrapperStyle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  border: toRem(2) dashed var(--colorFrenchGrey);
+  border-radius: toRem(16);
+  cursor: pointer;
+  background-color: var(--colorWhisperGray);
+  background-image: url("/static/upload-rectangle-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: border-color var(--colorTransitionDuration) ease,
+    background-color var(--colorTransitionDuration) ease;
+}
+
+.activeStyle {
+  border-color: var(--colorMandy);
+  background-color: var(--colorVanillaIce);
+}
+
+.title {
+  @extend %buttonText;
+  color: var(--colorMandy);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.fileHint {
+  @extend %body;
+}
+
+.files {
+  text-transform: uppercase;
+}
+
+.recommendationSection {
+  margin-top: toRem(28);
+  background: var(--colorWhisperGray);
+  padding: toRem(8) toRem(8) toRem(16);
+  border-radius: toRem(16);
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-gap: toRem(10);
+}
+
+.recommendationHint {
+  @extend %smallLabel;
+  margin: toRem(4) 0 toRem(8);
+}
+
+.recommendationSpec {
+  @extend %smallLabel;
+  margin-bottom: 0;
+  color: var(--colorDolphin);
+}

@@ -1,0 +1,22 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+@import "components/stream/styles/_variables";
+
+.container {
+  @extend %messageInner;
+  display: grid;
+  grid-gap: toRem(8);
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  border: toRem(1) solid var(--colorMischka);
+  color: var(--colorWaterloo);
+}
+
+.icon {
+  path {
+    fill: var(--colorWaterloo);
+  }
+}

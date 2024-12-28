@@ -1,0 +1,49 @@
+.slides .buttons{
+    padding: 10px;
+}
+.slides .buttons *{
+    margin: 5px;
+}
+
+.slides .container{
+    min-height: 500px;
+    /*max-height: 500px;*/
+    /*height: 500px;*/
+    background-color: #C9C9C9;
+}
+
+.button, button{
+    background-color: #6eadaf;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button:hover, button:hover{
+    opacity: 0.8;
+    background-color: #2b3e40;
+}
+
+.img{
+    height: 200px;
+    width: 200px;
+}
+
+.slideText{
+    height: 200px;
+    overflow: auto;
+    position: relative;
+}
+
+.overflow{
+    position: relative;
+    overflow: auto;
+}

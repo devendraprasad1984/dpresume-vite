@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bain and co test assesssment - devendra prasad</title>
+
+    <style>
+        * {
+            font-family: monospace
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: white !important;;
+        }
+
+        a:hover {
+            color: #3145e5 !important;
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 0.75;
+        }
+
+        .content {
+            position: fixed;
+            bottom: 0;
+            color: white !important;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 70%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #myBtn:hover {
+            background: #ddd;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+    <source src="./bg.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+    <h1>BMI Calculator - Assessment - Devendra Prasad</h1>
+    <h4>devendraprasad1984@gmail.com, +91 9582797772</h4>
+    <ul style="list-style: none">
+        <li><a href="./ques.pdf" target="_blank">Problem Statement</a></li>
+        <li><a href="https://github.com/devendraprasad1984/baincotest" target="_blank">Solution: github Code</a></li>
+        <li><a href="./coverage/lcov-report" target="_blank">TEST Coverage Report</a></li>
+        <li><a href="./report.pdf" target="_blank">Document Report</a></li>
+        <li><a href="./demo.webm" target="_blank">Video Demo</a></li>
+    </ul>
+    <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+
+<script>
+    var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn");
+
+    function myFunction() {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "Play";
+        }
+    }
+</script>
+</body>
+</html>

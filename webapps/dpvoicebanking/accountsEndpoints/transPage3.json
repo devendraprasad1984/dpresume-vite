@@ -1,0 +1,3350 @@
+{
+  "Data": {
+    "Transaction": [
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "f7601c90-15a5-4684-acb7-7587684126dd",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-16T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3837.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "852d36c1-8b9d-4ca4-a242-79d23a03fbc6",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-16T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3811.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "d97c12e7-57a9-4904-9d7d-86293a494bcd",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-17T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3784.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "cc1829b4-287c-4570-bc7f-11b317d0f4cc",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-17T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3758.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "c6412d8d-c2c0-46da-b243-eb3802b498d9",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-18T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3731.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "4cab02ad-622c-4f51-bbda-d713815d8943",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-19T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3705.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "33eac57c-fca2-4a8f-b657-25f3db1c31eb",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-20T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3678.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "1c465414-495c-49d8-877f-7e58e0affb7c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-20T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3652.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "c45ad036-105f-4b6e-ba36-9821cc85ea0a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-21T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3625.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "6b6c6f7e-5124-48d1-a545-e310af3a297a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-21T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3599.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "079cc36c-bf35-4b70-861b-ee4dc4fce54c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-22T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3572.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "b9626c9e-c73f-4638-9dc1-128eb05a7ae0",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-22T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3546.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "3170fa3f-bd0e-4136-89d1-fe96ff2e189a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-23T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3519.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "37e8c5a4-4267-4d1c-8a0a-92c4acbb47a3",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-23T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3493.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "372d3779-09d6-4134-b194-e478a8059190",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-24T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3466.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "0ff4292d-2d9b-4802-9072-57f529d59ebd",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-24T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3440.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "6a1ca0fa-d9ce-462a-a7f7-7d20fa797e30",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-25T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3414.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "ad709df4-7c74-4955-8f96-201262fe84f3",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-26T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3387.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "c0693904-71ee-4980-bac6-eec88cec94f2",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-27T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3361.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "2411a887-fdc9-42a3-978d-d77ab99863ba",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-27T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3334.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "3c666641-e929-4a50-a60d-0bf2a17959b3",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-28T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3308.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "6882f5fa-4d7c-4925-817e-a4c122abda88",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-28T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3281.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "222113e8-d8f8-4224-b481-0bacd17a2e9c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-29T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3255.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "73266449-1144-4577-95ff-4719f58f2013",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-29T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3228.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "a4042b3d-5f72-45bd-81f3-0a37bd93900a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-30T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3202.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "d1b075fc-ff09-46a9-91f2-737e9014f884",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-30T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3175.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "37e31e10-5454-4bd3-9cd8-b63e023238af",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-31T00:05:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3149.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "eb5c2524-bd58-4a77-8ccf-79c42f39073b",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-01-31T00:05:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3122.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "a159fb44-b0bf-4b1c-bfd9-fa8fb0d1190c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-01T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3096.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "d59be4a7-7189-41ea-ba90-8ac296638c6a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-02T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3069.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "5ca27e2a-20e4-464d-9aa6-4c728ee837b6",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-03T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3043.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "ef2608de-e4b6-4d14-accf-1218de6987cc",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-03T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "3016.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "db94fcae-a153-4c94-80b7-f80b481af460",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-04T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2990.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "00c5b5f4-3b27-4778-b008-fc39a329caf5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-05T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2963.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "9b7dabf5-6842-436e-a64e-5960930cc450",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-06T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2937.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "b7866275-8416-4a7b-ab11-5e5aa485c52e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-07T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2910.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "4986090f-8a84-469c-a0e6-1aca1990bf14",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-08T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2884.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "be9899cb-bf6f-41b4-9619-8bbcbb7972a8",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-09T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2857.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "0bff9dc3-6d72-4710-9d4a-958db160cdd2",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-10T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2831.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "81fb1748-5288-4956-8298-dcf7268d8bf9",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-11T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2804.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "84cb292c-5486-4da8-b5d1-5caee69b5c97",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-12T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2778.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "31c7398a-9137-4efb-a113-79136d253e4e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-13T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2752.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "6b558030-faa3-4fdb-8a71-b4500779b442",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-14T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2725.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "de61d1d2-a6d2-4c1f-b3e9-d2bbfa3f4645",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-15T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2699.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "1d212bf9-42ef-46e1-944b-e1aa8e426b47",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-16T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2672.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "bb90a717-56e0-477a-bae5-afba725888d0",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-17T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2646.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "45a443d6-3de2-4912-95f0-3ed27ef7fd6c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-18T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2619.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "a7d19622-d262-4dc2-a048-420f466d573e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-19T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2593.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "ccce0760-a2d9-4f77-b67b-ab29e935394b",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-20T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2566.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "8b71c476-abd0-47d1-9236-f71735daecb2",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-21T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2540.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "4ddd6a03-be9b-4ef6-997c-db688ab640d5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-22T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2513.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "c8b3616d-2b0b-4464-b824-f65e483df5a8",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-23T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2487.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "1377b0de-da5a-4d74-a510-be3027ae28a9",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-24T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2460.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "ebc777c4-c5fc-4211-9a48-6fd561021a19",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-25T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2434.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "afce1bc4-0811-4c14-8b65-ece374bfeb6a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-26T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2407.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "9f612a57-3876-4c1b-a432-0b5c8ae86d3e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-27T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2381.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "23883e4b-34fa-48fc-a35f-ef88c2e3a806",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-28T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2354.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "809fee15-6847-4d4b-8de7-7c078bffbc98",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-02-29T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2328.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "ab9818c8-70f0-490f-bb0a-3b8f902ca256",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-01T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2301.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "5addaf78-04e0-42e0-8fe2-ae187a38dae1",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-02T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2275.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "35e1c432-6a5e-4a5f-b336-e574f6e03b68",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-03T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2248.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "a2d6b9b9-c1d1-4338-9751-8b18c99db26f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-04T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2222.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "af8d2471-1718-47c2-8ee1-c6e62111e9db",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-05T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2195.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "cef43a7a-ea8c-4c05-afae-dd2b168dc776",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-06T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2169.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "73dd25ce-b35c-456d-a638-f38b48969a3d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-07T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2142.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "df97d4ad-2eb4-4f53-ab0e-88e3712645f0",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-08T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2116.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "5ea58be0-a444-4122-a18b-e5bc5e2b970a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-09T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2090.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "cea64e45-31d8-49d2-888c-086d93c44526",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-10T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2063.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "1e7b15ea-b9de-41c1-b3a6-3117f4b86e46",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-11T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2037.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "91cac873-fb60-4e7f-b66d-805a46e7e26a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-12T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "2010.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "b8d15832-b9b1-4e6f-9240-ec3ec2d27efb",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-13T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1984.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "9225fed8-a75c-45da-8c9b-737909e89a9f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-14T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1957.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "879be4cc-792b-410f-84e6-527fef0db8dd",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-15T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1931.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "249d0a18-04b1-4f09-ba0c-1343b1c26d08",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-16T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1904.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "5320af6d-ae15-4bc6-b24d-37c7342f834d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-17T00:05:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1878.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "f09583a9-1d69-442c-8f4f-19b436130c32",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-18T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1851.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "ebbfe39e-028b-45b8-aa74-b481595907f5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-19T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1825.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "1f602ebd-5ca0-45d6-880b-60faeb48931e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-20T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1798.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "404a527a-08a3-438c-aabe-4b899a0268d5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-21T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1772.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "62042fed-5c6c-4c2d-9a1d-6874ab123263",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-22T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1745.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "9405ac65-6bf4-43b6-bc32-4797d5ae6c1f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-23T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1719.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "4b6d8a91-0f59-4d3c-8347-6182d9bd7513",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-24T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1692.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "8054fab8-7e34-436a-968b-356d3c4e402a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-25T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1666.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "fa1d1818-9f30-4715-bd95-df7496df3e2d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-26T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1639.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "2523eb60-c2c6-4f3b-8c7d-f719c343b7bf",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-27T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1613.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "e90c6f24-df37-4ea8-b762-252894a13002",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-28T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1586.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "a03ff2bb-dd5d-44ec-b683-bc67b29fe1f5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-29T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1560.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "126e7aba-a785-4e69-822e-ba21b55886ed",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-30T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1533.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "b0f854a6-1309-413a-b876-c1e3a83b08e4",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-03-31T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1507.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "0cb6b835-6978-4235-99fe-e9dcb1770f66",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-01T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1480.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "247515c0-32b0-4079-8e20-436b914b8c8a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-02T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1454.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "22237d95-36a4-4f4c-b943-63c58934d832",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-03T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1428.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "430f1168-8922-4baf-95b3-e785c37acca3",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-04T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1401.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "533419a4-c8b0-4846-a763-3ec2fa4d2f5a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-05T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1375.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "a4dd3971-4113-4059-9ba0-eba17804610e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-06T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1348.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "b8844d45-9808-4c49-bafe-784d971af819",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-07T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1322.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "47b8c7e1-1acd-407e-9425-8a07b69aa310",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-08T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1295.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "4435513d-5c2e-4a7e-b49a-cff57e05fc58",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-09T00:05:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1269.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "a24e2e72-d264-4d0d-8f89-11a627ba3cfa",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-10T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1242.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "914fbb80-f482-49c0-be22-02244715ecda",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-11T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1216.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "9b520dd3-9052-4069-a7d7-bfca14f24db8",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-12T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1189.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "1370fd74-456a-426d-a673-0a4cbb926d60",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-13T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1163.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "ceccc858-56d9-482c-84b6-f84fc3f2fcee",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-14T00:05:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1136.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "a649e6d4-74fc-4665-a0c4-ddff9ce675f0",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-15T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1110.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "8716da61-f358-40ea-b3e3-93ca5e5698af",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-16T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1083.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "28cbd1a6-b729-4c72-a286-d78c5de01e30",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-17T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1057.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "02400572-e550-4e09-878a-b53338c64e65",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-18T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1030.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "2555888a-4e15-479a-b233-de349af5285b",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-19T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "1004.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "cf06a214-dd2f-469e-b822-46843746b1e7",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-20T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "977.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "5254e9de-9baf-4dc8-b5b6-24ccb993d881",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-21T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "951.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "83f710cf-31c0-4013-9dc8-692dcb4cc3bf",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-22T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "924.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "b0e0ec6e-0325-4196-9c36-d2d9c2c61ff0",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-23T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "898.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "9bbe7f6f-8503-49e3-990d-949aba5ece60",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-24T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "871.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "750fa7fa-7c8d-48f2-b6df-54c44c4dfa48",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-25T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "845.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "25b82412-5688-4ca0-9a64-d81f92478e58",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-26T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "818.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "0d1754cc-f6cb-4fa9-b928-31f3d6b43665",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-27T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "792.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "6b163e99-4bad-4be9-a8d7-ec12134a4978",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-28T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "766.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "625eeaf7-9713-4cbb-890a-0124aa11e6dd",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-29T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "739.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "7e0b162b-8ddc-47ce-bde1-99388c6622e3",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-04-30T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "713.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "ae2c61af-8aa5-4ef4-83ee-e5af46021ff5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-01T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "686.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "c742c893-f2ef-4b4d-90c4-7261cb089938",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-02T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "660.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "cc519b77-08ec-48bb-bb64-bf664965583f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-03T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "633.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "495d9983-2573-42d5-959d-00ca76f50d5d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-04T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "607.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "3b4c653d-0c68-4bda-9655-62e6777c6939",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-05T00:05:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "580.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "a1b02b0e-96a6-40bb-bb1a-3cc4702dc335",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-06T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "554.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "2388e9f7-83c0-449f-9829-9380e325f00d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-07T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "527.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "48e3ff70-14e2-42a2-8cdc-812899487965",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-08T00:05:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "501.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "f2dd7aa1-8c68-498d-95e6-afbd34a7e2ed",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-09T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "474.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "46237899-edf5-45ac-a451-e8e17e56040a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-10T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "448.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "2e54c089-c53f-42be-b996-77f971820881",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-11T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "421.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "ddea7c79-a269-4608-997f-49fe466c532a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-12T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "395.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "21ab3650-12b3-425d-9656-8acf0b12a34a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-13T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "368.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "3d30b8ab-a06c-4fb2-b325-7168cf0de295",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-14T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "342.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "4acbb7de-1bbd-4e5e-962c-97715f1a5666",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-15T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "315.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "64f1fce6-c53f-42a8-a14e-0935e6344f65",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-16T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "289.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "2e68c5dc-e5db-4a56-a462-5fb61aade437",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-17T00:05:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "262.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "ecdfc18b-744b-47c4-a467-d15970492392",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-18T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "236.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "e06ceaa1-22a8-4cd9-8bd6-de84d4a25350",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-19T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "209.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "4487eb2b-4a72-48a7-afb6-95cb920fe921",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-20T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "183.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "59fda5d8-5665-4da8-89f6-1f7fdc2ad59e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-21T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "156.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "f5c38497-081d-4484-ad62-f201ae1052f8",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-22T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "130.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "d66e38b5-9117-4693-80c7-381d617c623e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-23T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "104.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "64299414-ceca-4a53-9ce2-46bfa4dec083",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-24T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "77.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "01fb4d5b-edce-4e0f-9983-27912ba2a589",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-25T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "51.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "TransactionId": "4702e6aa-f847-4b8d-aedc-ba4efd224891",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2020-05-26T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "24.57",
+            "Currency": "GBP"
+          }
+        }
+      }
+    ]
+  },
+  "Links": {
+    "Self": "https://ob.rbs.useinfinite.io/open-banking/v3.1/aisp/accounts/7ae8ec7e-b0be-4a3e-ab76-02d254027ad3/transactions?page=3",
+    "First": "https://ob.rbs.useinfinite.io/open-banking/v3.1/aisp/accounts/7ae8ec7e-b0be-4a3e-ab76-02d254027ad3/transactions?page=0",
+    "Prev": "https://ob.rbs.useinfinite.io/open-banking/v3.1/aisp/accounts/7ae8ec7e-b0be-4a3e-ab76-02d254027ad3/transactions?page=2",
+    "Last": "https://ob.rbs.useinfinite.io/open-banking/v3.1/aisp/accounts/7ae8ec7e-b0be-4a3e-ab76-02d254027ad3/transactions?page=3"
+  },
+  "Meta": {
+    "TotalPages": 4
+  }
+}

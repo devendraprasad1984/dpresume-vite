@@ -1,0 +1,15 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  @extend %smallLabel;
+  display: inline-grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-gap: toRem(4);
+  background: var(--colorCitrine);
+  padding: toRem(8) toRem(12);
+  border-radius: toRem(18);
+}

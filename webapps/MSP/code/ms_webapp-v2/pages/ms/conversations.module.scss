@@ -1,0 +1,59 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.searchSection {
+  padding: toRem(28);
+}
+
+.pageTitleHeader {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: toRem(28);
+}
+
+.sidebar {
+  background-color: var(--colorWhite);
+  height: calc(100vh - #{toRem($headerHeight)});
+}
+
+.conversationContainer {
+  display: grid;
+  grid-template-columns: toRem(320) 1fr;
+  width: 100%;
+
+  @media (min-width: $widthDesktop) {
+    grid-template-columns: toRem(427) 1fr;
+  }
+
+  :global {
+    .str-chat.str-chat-channel-list {
+      $height: $headerHeight + 198;
+      overscroll-behavior: contain;
+      height: calc(100vh - toRem($height));
+      overflow: auto;
+      float: none;
+    }
+
+    .str-chat {
+      $height: $headerHeight;
+      overscroll-behavior: contain;
+      overflow: auto;
+      max-height: calc(100vh - toRem($height));
+    }
+
+    .str-chat__container {
+      grid-template-columns: 1fr auto;
+    }
+  }
+}
+
+.messagesAndFlyout {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+  overflow-x: hidden;
+}

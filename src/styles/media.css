@@ -1,0 +1,18 @@
+.base-video {
+    width: 100%;
+    height: 300px;
+}
+
+.base-audio {
+
+}
+
+iframe {
+    aspect-ratio: 1;
+    width: 100%;
+    min-height: 400px;
+}
+
+.iframe-base {
+
+}

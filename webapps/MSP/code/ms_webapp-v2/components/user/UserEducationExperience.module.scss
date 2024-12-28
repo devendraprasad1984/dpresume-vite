@@ -1,0 +1,70 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.objective {
+  margin-top: toRem(42);
+}
+
+.objectiveTitleGroup {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: start;
+  align-items: center;
+  gap: toRem(12);
+  margin-bottom: toRem(14);
+}
+
+.objectiveList {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: toRem(36);
+}
+
+.objectiveItem {
+  @extend %smallBody;
+  color: var(--colorDolphin);
+
+  &:after {
+    margin: 0 toRem(6);
+    content: "\2022";
+  }
+  &:last-of-type:after {
+    margin: 0;
+    content: "";
+  }
+}
+
+.experience {
+  margin-top: toRem(42);
+}
+
+.experienceList {
+  display: grid;
+  grid-gap: toRem(50);
+}
+
+.experienceItem {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-gap: toRem(12);
+}
+
+.experienceTitle {
+  @extend %buttonText;
+  margin-top: toRem(2);
+  margin-bottom: toRem(14);
+}
+
+.experienceCompany {
+  @extend %smallBodyMedium;
+  margin-bottom: toRem(8);
+}
+
+.experienceDate {
+  @extend %smallBody;
+  color: var(--colorDolphin);
+}

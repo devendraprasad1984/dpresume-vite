@@ -1,0 +1,43 @@
+{
+  "name": "dpresume-next",
+  "version": "0.1.0",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "dev": "NODE_ENV=development next dev",
+    "build": "next build",
+    "start": "NODE_ENV=production next start",
+    "prepare": "husky install",
+    "lint": "next lint --fix"
+  },
+  "lint-staged": {
+    "*.ts*": "eslint --fix",
+    "*.js": "eslint --fix",
+    "*.scss": "prettier --write",
+    "*.css": "prettier --write"
+  },
+  "dependencies": {
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "sass": "^1.50.1"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.2.1",
+    "@types/node": "^17.0.36",
+    "@types/react": "^18.0.9",
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "typescript": "^4.7.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
+    "prettier": "^2.6.2"
+  },
+  "engines": {
+    "node": "14.18.0"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "Data": {
+    "Account": [
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "Currency": "GBP",
+        "AccountType": "Personal",
+        "AccountSubType": "CurrentAccount",
+        "Description": "Personal",
+        "Nickname": "Debit Account - RBS - Sydney",
+        "Account": [
+          {
+            "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+            "Identification": "50000012345601",
+            "Name": "Debit Account - RBS - Sydney"
+          }
+        ]
+      },
+      {
+        "AccountId": "7ae8ec7e-b0be-4a3e-ab76-02d254027ad3",
+        "Currency": "GBP",
+        "AccountType": "Personal",
+        "AccountSubType": "CurrentAccount",
+        "Description": "Personal",
+        "Nickname": "Savings Account - RBS - Sydney",
+        "Account": [
+          {
+            "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+            "Identification": "50000012345602",
+            "Name": "Savings Account - RBS - Sydney"
+          }
+        ]
+      }
+    ]
+  },
+  "Links": {
+    "Self": "https://ob.rbs.useinfinite.io/open-banking/v3.1/aisp/accounts"
+  },
+  "Meta": {
+    "TotalPages": 1
+  }
+}

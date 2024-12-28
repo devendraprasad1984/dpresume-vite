@@ -1,0 +1,286 @@
+{
+    "tags": [
+        {
+            "name": "System",
+            "description": "To check the status of the Services"
+        },
+        {
+            "name": "Room",
+            "description": "All the methods for the Room Service"
+        },
+        {
+            "name": "User",
+            "description": "All the methods for the User Service"
+        }
+    ],
+    "paths": {
+        "/meet/ping": {
+            "get": {
+                "tags": [
+                    "System"
+                ],
+                "summary": "Check the communication with the meet service",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/meet/room/{ref}": {
+            "get": {
+                "tags": [
+                    "Room"
+                ],
+                "summary": "Get room info",
+                "parameters": [
+                    {
+                        "name": "ref",
+                        "in": "path",
+                        "description": "Twilio Ref for retrieve information",
+                        "required": "true",
+                        "type": "string",
+                        "example": {
+                            "ref": "RM9ee0eb65bb8304840d5ddb4f919c3e76"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Room"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Room"
+                ],
+                "summary": "Create a new room in Twilio",
+                "parameters": [
+                    {
+                        "name": "channelRef",
+                        "in": "path",
+                        "description": "Channel Ref to create a room for",
+                        "required": "true",
+                        "type": "string",
+                        "example": {
+                            "channelRef": "b8f048bd-1dee-ff86-59f6-7a6935fe0c42"
+                        }
+                    },
+                    {
+                        "name": "message",
+                        "in": "body",
+                        "description": "specific message that UI wants to send through Stream.",
+                        "required": "false",
+                        "type": "string",
+                        "example": {
+                            "message": "Darryl Young started a new video call"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/meet/room/schedule": {
+            "post": {
+                "tags": ["Room"],
+                "summary": "Create a schedule room in Twilio",
+                "parameters":[
+                {
+                    "name": "schedule",
+                    "description": "Schedule data",
+                    "in": "body",
+                    "required": "true",
+                    "schema": {
+                        "$ref": "#/definitions/MeetSchedule"
+                    },
+                    "example": {
+                        "channelRef": "b8f048bd-1dee-ff86-59f6-7a6935fe0c42",
+                        "isRecurring": false,
+                        "event": [
+                            {
+                                "title": "Schedule Call",
+                                "startedOn": "2022-04-05T20:00:00Z",
+                                "endedOn": "2022-04-05T21:00:00Z",
+                                "invitees": [
+                                    "4b8de3be-a832-6cb6-acde-f0c47f23d2a6",
+                                    "0a473312-b7fe-e9f3-461a-a436d548711d"
+                                ]
+                            }
+                        ]
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/meet/user/token/{sid}": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Gets a new Twilio token for a specific channel room and user",
+                "parameters": [
+                    {
+                        "name": "sid",
+                        "in": "path",
+                        "description": "Room id for the token request",
+                        "required": "true",
+                        "type": "string",
+                        "example": {
+                            "ref": "asdflkj32rloiu8asdfasdlfkj"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Room": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "required": "true"
+                },
+                "ref": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "channelRef": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "status": {
+                    "type": "string",
+                    "required": "true"
+                }
+            }
+        },
+        "MeetSchedule": {
+            "type": "object",
+            "properties": {
+                "channelRef": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "b8f048bd-1dee-ff86-59f6-7a6935fe0c42"
+                },
+                "isRecurring": {
+                    "type": "boolean",
+                    "required": "true",
+                    "example": true
+                },
+                "event": {
+                    "type": "array",
+                    "required": "true",
+                    "items": {
+                        "$ref": "#/definitions/EventMeetSchedule"
+                    },
+                    "example": [
+                        {
+                            "title": "Schedule Call",
+                            "startedOn": "2022-04-05T20:00:00Z",
+                            "endedOn": "2022-04-05T21:00:00Z",
+                            "invitees": [
+                                "4b8de3be-a832-6cb6-acde-f0c47f23d2a6",
+                                "0a473312-b7fe-e9f3-461a-a436d548711d"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "EventMeetSchedule": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "Schedule Call"
+                },
+                "startedOn": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "2022-04-05T20:00:00Z"
+                },
+                "endedOn": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "2022-04-05T21:00:00Z"
+                },
+                "invitees": {
+                    "type": "array",
+                    "required": "true",
+                    "items": {
+                        "type": "string",
+                        "required": "true",
+                        "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                    },
+                    "example": [
+                        "4b8de3be-a832-6cb6-acde-f0c47f23d2a6",
+                        "0a473312-b7fe-e9f3-461a-a436d548711d"
+                    ]
+                }
+            }
+        }
+    }
+}

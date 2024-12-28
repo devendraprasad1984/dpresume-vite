@@ -1,0 +1,7 @@
+
+.dockerignore
+.vs
+node_modules
+.scannerwork
+.idea
+

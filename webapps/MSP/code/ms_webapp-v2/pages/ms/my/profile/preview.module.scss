@@ -1,0 +1,71 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  padding: toRem(20) toRem(32) toRem(120);
+}
+
+.previewHeader {
+  margin-bottom: toRem(12);
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.previewWrapper {
+  display: grid;
+  grid-template-columns: 57% 43%;
+  grid-gap: toRem(32);
+  max-width: $widthDesktop;
+  width: 100%;
+}
+
+.card {
+  background: var(--colorWhite);
+  border-radius: toRem(44);
+}
+
+.cardContent {
+  padding: toRem(40);
+}
+
+.section {
+  margin-top: toRem(48);
+}
+
+.sectionTitle {
+  @extend %header;
+}
+
+.profileBanner {
+  position: relative;
+  height: toRem(232);
+}
+
+.profileBannerImage {
+  height: toRem(208);
+  background-color: var(--colorGrape);
+  background-image: url("/static/flyout-background.svg");
+  border-top-left-radius: toRem(44);
+  border-top-right-radius: toRem(44);
+}
+
+.profileBannerAvatar {
+  position: absolute;
+  bottom: 0;
+  left: toRem(32);
+}
+
+.intro {
+  margin-bottom: toRem(16);
+}
+
+.pronouns {
+  @extend %smallBodyMedium;
+  color: var(--colorWaterloo);
+  margin-bottom: toRem(4);
+  margin-left: toRem(12);
+}

@@ -1,0 +1,102 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+$iconContainerSize: 64;
+
+// base style for toast
+.toastBase {
+  border-radius: toRem(34);
+  border: toRem(1.5) var(--colorGrey) solid;
+  background-color: var(--colorWhite);
+  box-shadow: 0 toRem(4) toRem(4) rgba(33, 31, 48, 0.08),
+    0 toRem(8) toRem(16) rgba(33, 31, 48, 0.12);
+  position: relative;
+  right: toRem(220);
+}
+
+.large {
+  @extend .toastBase;
+  height: toRem(96);
+  width: toRem(540);
+}
+
+.small {
+  @extend .toastBase;
+  height: toRem(86);
+  width: toRem(298);
+}
+
+// content
+.toastContent {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: toRem($iconContainerSize + 16) 55% 45%;
+  justify-content: space-between;
+}
+
+.title {
+  @extend %smallHeader;
+  color: var(--colorSteelGrey);
+}
+
+.message {
+  @extend %smallBodyMedium;
+  margin-top: toRem(8);
+  color: var(--colorDolphin);
+  text-overflow: ellipsis;
+}
+
+.noIconContent {
+  position: relative;
+  left: -(toRem($iconContainerSize));
+}
+
+// base style for icon container
+.iconContainerBase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: toRem($iconContainerSize);
+  width: toRem($iconContainerSize);
+  border-radius: 50%;
+
+  svg {
+    width: toRem(29.33);
+    height: toRem(29.33);
+  }
+}
+
+.iconContainerSuccess {
+  @extend .iconContainerBase;
+  background-color: var(--colorAquaHaze);
+}
+
+.iconContainerWarning {
+  @extend .iconContainerBase;
+  background-color: var(--colorCitrine);
+}
+
+.iconContainerInfo {
+  @extend .iconContainerBase;
+  background-color: var(--colorAthensGrey);
+}
+
+.iconContainerError {
+  @extend .iconContainerBase;
+  background-color: var(--colorVanillaIce);
+}
+
+.closeButtonContainer {
+  position: absolute;
+  right: toRem(25);
+  top: 50%;
+  transform: translateY(-50%);
+
+  svg {
+    color: var(--colorDolphin);
+    width: toRem(22);
+    height: toRem(22);
+  }
+}

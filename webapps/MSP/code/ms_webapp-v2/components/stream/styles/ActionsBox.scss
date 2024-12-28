@@ -1,0 +1,48 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat__actions-box {
+  background: var(--colorWhite);
+  background-image: linear-gradient(
+    -180deg,
+    var(--colorWhisperGray),
+    var(--colorWildSand)
+  );
+  box-shadow: 0 1px 0 0 var(--colorMischka);
+  border-radius: toRem(34);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  position: absolute;
+  min-width: 150px;
+
+  &--right {
+    right: 0;
+    top: calc(100% + 2px);
+  }
+
+  &--left {
+    left: 0;
+    top: calc(100% + 2px);
+  }
+
+  > button {
+    text-align: left;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: toRem(4);
+
+    background: none;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      box-shadow: 0 1px 0 0 var(--colorMischka);
+    }
+
+    &:hover {
+      color: var(--colorMandy);
+    }
+  }
+}

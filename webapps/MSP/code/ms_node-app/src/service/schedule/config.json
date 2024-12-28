@@ -1,0 +1,21 @@
+{
+    "docs": {
+        "version": "0.0.0",
+        "title": "Schedule API Service",
+        "description": "Documentation for the Schedule API Service",
+        "routes": "./src/service/schedule/routes.ts",
+        "url": "/schedule/api-docs",
+        "models":{
+            "tags": [],
+            "paths": {},
+            "definitions":{}
+        }
+    },
+    "port": 5005,
+    "prefix": "/schedule",
+    "route": {
+        "schedule": "",
+        "ping": "ping",
+        "event": "event"
+    }
+}

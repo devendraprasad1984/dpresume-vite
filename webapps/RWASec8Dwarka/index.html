@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>RWA - D Block Expense Register</title>
+    <link href="images/icon.jpeg" rel="icon" type="image/png">
+    <link href="./index.css" rel="stylesheet">
+    <link href="./media.css" rel="stylesheet">
+
+    <meta content="D Block, RWA, Sector 8, Dwarka, Delhi 110077 devendra prasad (+919582797772) dpresume.com"
+          name="title"/>
+    <meta content="D Block, RWA, Sector 8, Dwarka, Delhi 110077 devendra prasad (+919582797772) dpresume.com"
+          name="description"/>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css"
+          integrity="sha512-6S2HWzVFxruDlZxI3sXOZZ4/eJ8AcxkQH1+JjSe/ONCEqR9L4Ysq5JdT5ipqtzU7WHalNwzwBv+iE51gNHJNqQ=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.1/xlsx.full.min.js" type="text/javascript"></script>
+    <!--    <script src="https://unpkg.com/lodash@4.17.20"></script>-->
+    <script src="./libs/jquery.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+    <script src="./libs/sweetalert.min.js" defer></script>
+    <script src="./utils.js" async></script>
+    <script src="./index.js" defer></script>
+</head>
+<body class="" cz-shortcut-listen="true">
+
+<div class="row rainbow">
+    <img class="logo" loading="lazy" src="images/icon.jpeg">
+    <div class="bl left column margin10l">
+        <div class="size30">RWA</div>
+        <div class="size14">Registration Number:</div>
+    </div>
+    <div class="right">
+        <button class="btn red" id="logoutBtn" onclick="handleLogout()">Logout</button>
+        <button class="btn green" id="updatePasswordBtn" onclick="handleChangePassword()">Update Password</button>
+    </div>
+</div>
+<div class="row marginud">
+    <div class="column">
+        <div class="size14 bl">D Block, Sector 8, Dwarka, Delhi</div>
+        <div class="size12 bl">RWA Ledger Anytime Anywhere!</div>
+    </div>
+    <div class="row right">
+        <img alt="whatsapp" class="icon2" src="./images/wa.png"/>
+        <img alt="key_contacts" class="icon2" onclick="handleGetContacts()" src="./images/contacts.png"/>
+    </div>
+</div>
+</div>
+
+<span onclick="handleHamburger()" class="size35 click">&#8801;</span>
+
+<div class="container hide" id="container">
+    <div class="row" id="search1">
+        <input class="searchText" id="idSearchBox" onkeypress="searchByKeyword(event)" placeholder="search by name"
+               type="text"/>
+        <button class="btn" id="idSearchBtn" onclick="handleRefresh()">Search</button>
+    </div>
+
+    <div class="row flex">
+        <div class="wid30 hide" id="adminSection">
+            <div class="row">
+                <span class="btn marginud" onClick="handleShowReminders()">Show Reminders</span>
+            </div>
+            <div class="column formInputs" id="expenseform">
+                <div class="size30 green pad20">Add Expenses <span class="btn purple"
+                                                                   onclick="handleFormsToggle({show:'membersform', hide:'expenseform'})">Add Member</span>
+                </div>
+                <label for="amountexpense">Amount</label>
+                <input id="amountexpense" name="amountexpense" placeholder="enter amount" type="number">
+                <label for="reason">Where it was spent on?</label>
+                <input id="reason" name="reason" placeholder="Reason: where this money is spent on" type="text"
+                       width="150px">
+                <div class="right">
+                    <button class="btn" id="btnSaveExpense" onclick="handleSubmitExpense(this.id)">Save Expenses
+                    </button>
+                </div>
+            </div>
+            <div class="column formInputs hide" id="membersform">
+                <div class="size30 green pad20">Add New Member <span class="btn purple"
+                                                                     onclick="handleFormsToggle({show:'expenseform', hide:'membersform'})">Expense Form</span>
+                </div>
+                <label>Name</label>
+                <input id="name" placeholder="Enter NAME" required title="NAME" type="text"/>
+                <label>Mobile Phone Number(without spaces)</label>
+                <input type="text" id="memberid" placeholder="Enter MOBILE Number 999 999 9999"
+                       required title="enter valid phone number, no spaces, this is unique. Once set, cant be altered" width="150px"/>
+                <label>Address</label>
+                <input id="address" placeholder="Enter ADDRESS" title="ADDRESS" type="text"/>
+                <label>address number (sort)</label>
+                <input id="addresssort" placeholder="Number Address" title="address number only for sorting"
+                       type="number"/>
+                <label>Member Type</label>
+                <select id="membertype"></select>
+
+                <div class="right">
+                    <button class="btn" id="btnSaveMember" onclick="handleSubmitMember(this.id)">Save</button>
+                    <button class="btn red" id="btnResetMemberForm" onclick="resetMemberForm()">Reset</button>
+                </div>
+            </div>
+            <fieldset>
+                <legend>Backup</legend>
+                <div class="row margin10l pad10">
+                    <button class="btn" id="btnBackupJOSN" onclick="handleBackup('json')">JSON</button>
+                    <button class="btn" id="btnBackupCSV" onclick="handleBackup('csv')">CSV</button>
+                    <button class="btn" id="btnBackupXls" onclick="handleBackup('xls')">EXCEL</button>
+                </div>
+            </fieldset>
+        </div>
+        <div class="height650" id="report1"></div>
+    </div>
+</div>
+
+<div class="modal wid30 logincard" id="loginModal">
+    <div class="modal-content rwacard">
+        <div class="modal-header textwhite bl size25">RWA Login</div>
+        <div class="modal-header textwhite bl">Enter Login Details...</div>
+        <div class="column" id="adminform">
+            <input id="adminId" placeholder="admin name" type="text"/>
+            <input id="adminPwd" placeholder="admin password" type="password"/>
+        </div>
+        <div class="column">
+            <button class="btn red" id="idAdminLogin" onclick="handleAdminCheck()">Admin Login</button>
+            <button class="btn purple" id="idLoginMember" onclick="handleMemberLogin()">Member Login</button>
+        </div>
+    </div>
+
+</div>
+<div>
+    <button id="scrollToTopBtn">Top</button>
+</div>
+
+<footer class="white rwacard pad20 bottomFixed" id="footer">
+    <div class="right">
+        <div class="bl">created by Devendra Prasad, Tech Lead Software Engineer</div>
+        <div class="bl">(M)+91 9582797772 / devendraprasad1984@gmail.com</div>
+        <div class="size14">(Residence) D155 2nd floor, D Block, Sector 8, Dwarka, Delhi 110077</div>
+    </div>
+</footer>
+
+</body>
+</html>

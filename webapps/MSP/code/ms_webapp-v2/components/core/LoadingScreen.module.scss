@@ -1,0 +1,13 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--colorSteelGrey);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}

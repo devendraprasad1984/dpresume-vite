@@ -1,0 +1,21 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.flyout {
+  overscroll-behavior: contain;
+  overflow: auto;
+  z-index: 1;
+  position: fixed;
+  top: toRem($headerHeight);
+  right: -100%;
+  background-color: var(--colorWhite);
+  width: toRem($flyoutWidth);
+  height: calc(100vh - toRem($headerHeight));
+  border-left: toRem(1) solid var(--colorMischka);
+  transition: right var(--colorTransitionDuration) ease;
+}
+
+.openFlyout {
+  right: 0;
+}

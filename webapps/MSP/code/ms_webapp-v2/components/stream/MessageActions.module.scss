@@ -1,0 +1,45 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.actionsWrapper {
+  display: flex;
+  flex-direction: row;
+  grid-gap: toRem(5);
+  margin: toRem(15) toRem(4);
+}
+
+.actionButton {
+  margin: 0 toRem(2.5);
+  width: toRem(24);
+  height: toRem(24);
+}
+
+.actionsWrapperReverse {
+  @extend .actionsWrapper;
+  flex-direction: row-reverse;
+}
+
+.actionIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: toRem(5);
+
+  svg {
+    path {
+      fill: var(--colorWaterloo);
+    }
+  }
+
+  &:hover {
+    background-color: var(--colorMischka);
+    & svg {
+      z-index: 5;
+      & path {
+        fill: var(--colorSteelGrey);
+      }
+    }
+  }
+}

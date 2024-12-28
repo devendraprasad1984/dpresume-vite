@@ -1,0 +1,15 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.labelText {
+  @extend %smallLabel;
+  display: block;
+  margin-bottom: toRem(4);
+  color: var(--colorDolphin);
+  text-transform: inherit;
+}
+
+.shiftLabel {
+  padding: 0 0 0 toRem(4);
+}

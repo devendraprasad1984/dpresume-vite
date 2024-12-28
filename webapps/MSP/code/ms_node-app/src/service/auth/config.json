@@ -1,0 +1,21 @@
+{
+    "docs": {
+        "version": "0.0.0",
+        "title": "Auth API Service",
+        "description": "Documentation for the Auth API Service",
+        "routes": "./src/service/auth/routes.ts",
+        "url": "/auth/api-docs",
+        "models":{
+            "tags": [],
+            "paths": {},
+            "definitions":{}
+        }
+    },
+    "port": 5000,
+    "prefix": "/auth",
+    "route": {
+        "ping": "ping",
+        "validate": "validate",
+        "connect": "connect"
+    }
+}

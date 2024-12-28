@@ -1,0 +1,30 @@
+{
+    "docs": {
+        "version": "0.0.0",
+        "title": "User API Service",
+        "description": "Documentation for the User API Service",
+        "routes": "./src/service/user/routes.ts",
+        "url": "/user/api-docs",
+        "models": {
+            "tags": [],
+            "paths": {},
+            "definitions": {}
+        }
+    },
+    "port": 5006,
+    "prefix": "/user",
+    "route": {
+        "ping": "ping",
+        "user": "",
+        "profile": {
+            "root": "profile",
+            "workhistory": "workhistory"
+        },
+        "bucket": "bucket",
+        "match": "match",
+        "flag": "flag",
+        "tag": "tag",
+        "invite": "invite",
+        "location":"location"
+    }
+}

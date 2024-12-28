@@ -1,0 +1,69 @@
+@media screen and (max-width: 600px) {
+    .wid30, .wid70 {
+        width: 100%;
+    }
+
+    .pad20 {
+        padding: 5px;
+        margin: 0;
+    }
+
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    /*.row > span {*/
+    /*    width: auto;*/
+    /*}*/
+
+    .size25 {
+        font-size: 17px;
+    }
+
+
+    .size30 {
+        font-size: 20px;
+    }
+
+    .size20 {
+        font-size: 15px;
+    }
+
+    .size14 {
+        font-size: 10px;
+    }
+
+    .size35 {
+        font-size: 25px;
+    }
+
+    .searchText {
+        width: 100%;
+    }
+
+    .bottomFixed{
+        position: relative;
+    }
+
+
+    .card {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+}

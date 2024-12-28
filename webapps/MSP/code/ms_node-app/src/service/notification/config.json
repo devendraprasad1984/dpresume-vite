@@ -1,0 +1,20 @@
+{
+    "docs": {
+        "version": "0.0.0",
+        "title": "Notification API Service",
+        "description": "Documentation for the Notification API Service",
+        "routes": "./src/service/notification/routes.ts",
+        "url": "/notification/api-docs",
+        "models": {
+            "tags": [],
+            "paths": {},
+            "definitions": {}
+        }
+    },
+    "port": 5007,
+    "prefix": "/notification",
+    "route": {
+        "ping": "ping",
+        "events": "events"
+    }
+}

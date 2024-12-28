@@ -1,0 +1,121 @@
+{
+  "name": "bwi-MSP-node-app",
+  "version": "0.0.0",
+  "description": "msp WebAPI",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/FCP/bwi-MSP-node-app.git"
+  },
+  "author": {
+    "name": "Fresh Consulting",
+    "url": "http://www.FCP.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/FCP/bwi-MSP-node-app/issues"
+  },
+  "homepage": "https://bitbucket.org/FCP/bwi-MSP-node-app#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx|ts|tsx)": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "prisma": {
+    "seed": "ts-node src/test/data/seed.ts"
+  },
+  "scripts": {
+    "tag-delete": "sh tag-delete.sh",
+    "fnpm": "npm uninstall fnpm && npm install fnpm",
+    "ms-npm": "npm uninstall ms-npm && npm install ms-npm",
+    "npm:compress": "node-prune && modclean -n default:safe,default:caution -r",
+    "prisma-mysql:local": "dotenv -e .env.local -- npx prisma db pull --schema src/common/db/prisma/schema_mysql.prisma && npx prisma format --schema src/common/db/prisma/schema_mysql.prisma && dotenv -e .env.local -- npx prisma generate --schema src/common/db/prisma/schema_mysql.prisma && dotenv -e .env.local -- npx prisma db execute --preview-feature --file src/sql/dbLogic.sql --schema src/common/db/prisma/schema_mysql.prisma",
+    "prisma-mysql": "npx prisma db pull --schema ./common/db/prisma/schema_mysql.prisma && npx prisma format --schema ./common/db/prisma/schema_mysql.prisma && npx prisma generate --schema ./common/db/prisma/schema_mysql.prisma && npx prisma db execute --preview-feature --file ./sql/dbLogic.sql --schema ./common/db/prisma/schema_mysql.prisma",
+    "prisma-mongodb:local": "npx prisma generate --schema src/common/db/prisma/schema_mongodb.prisma",
+    "prisma-mongodb": "npx prisma generate --schema ./common/db/prisma/schema_mongodb.prisma",
+    "setup": "npm install && npm run prisma-mysql:local",
+    "connect": "sh ssh-server.sh .env.local",
+    "start": "dotenv -e .env.local -- nodemon --watch \"./src/**/*.ts\" --exec ts-node -r tsconfig-paths/register \"./src/local-server.ts\"",
+    "clean": "rimraf dist",
+    "lint": "eslint \"./src/**/*\" --fix --max-warnings 0 --ext .ts",
+    "compile": "tsc --build",
+    "build": "npm-run-all clean lint compile",
+    "build:npm": "shx cp \"package.json\" \"dist\" && shx cp \"package-lock.json\" \"dist\" && cd dist && npm install --only=prod",
+    "copy:prisma": "shx cp -R \"src/common/db/prisma\" \"dist/common/db\" && shx cp -R \"src/sql/\" \"dist/sql\"",
+    "copy:env": "shx cp \".env.local\" \"dist/.env\"",
+    "build:db": "npm run copy:prisma && npm run copy:env && cd dist && npm run prisma-mysql",
+    "postbuild": "npm-run-all build:npm build:db",
+    "prisma:setup-test": "dotenv -e .env.test -- npx prisma db push --force-reset --skip-generate --schema ./src/common/db/prisma/schema_mysql.prisma && dotenv -e .env.test -- npx prisma db seed",
+    "test:integration": "npm run prisma:setup-test && cross-env TS_NODE_PROJECT=\"tsconfig.testing.json\" dotenv -e .env.test -- mocha -r ts-node/register ./src/test/**/*.spec.ts --exit",
+    "test": "nyc npm run test:integration",
+    "deploy": "sh serverless.deploy.sh"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/bluebird": "^3.5.36",
+    "@types/chai": "^4.3.0",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/express-jwt": "^6.0.4",
+    "@types/lodash": "^4.14.178",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^17.0.8",
+    "@types/object-mapper": "^6.2.0",
+    "@types/supertest": "^2.0.11",
+    "@types/swagger-jsdoc": "^6.0.1",
+    "@types/swagger-ui-express": "^4.1.3",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "chai": "^4.3.6",
+    "concurrently": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "dotenv-cli": "^5.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsdoc": "^37.6.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "husky": "^7.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "lint-staged": "^12.1.4",
+    "mocha": "^9.2.2",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "nyc": "^15.1.0",
+    "prettier": "^2.5.1",
+    "prisma": "3.9.2",
+    "rimraf": "^3.0.2",
+    "shx": "^0.3.4",
+    "stream-chat": "^6.5.1",
+    "supertest": "^6.2.2",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.14.1",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@prisma/client": "3.9.2",
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "fnpm": "0.0.131",
+    "kill-port": "^2.0.0",
+    "lodash": "^4.17.21",
+    "modclean": "^3.0.0-beta.1",
+    "ms-npm": "0.0.116",
+    "node-prune": "^1.0.2",
+    "object-mapper": "^6.2.0",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.6.0"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}

@@ -1,0 +1,22 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.sectionHeader {
+  display: grid;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  margin: toRem(32) 0 toRem(20);
+}
+
+.people {
+  display: grid;
+  grid-gap: toRem(32);
+  grid-template-columns: repeat(auto-fill, toRem(292));
+}
+
+.link {
+  @extend %bodyMedium;
+  color: var(--colorMandy);
+}

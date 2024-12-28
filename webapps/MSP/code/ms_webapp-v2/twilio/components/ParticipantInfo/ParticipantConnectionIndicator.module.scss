@@ -1,0 +1,16 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.indicator {
+  width: toRem(10);
+  height: toRem(10);
+  border-radius: 100%;
+  background: #0c0;
+  display: inline-block;
+  margin-right: toRem(3);
+}
+
+.isReconnecting {
+  background: #ffb100;
+}

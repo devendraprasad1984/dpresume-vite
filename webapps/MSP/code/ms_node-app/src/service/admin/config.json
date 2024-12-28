@@ -1,0 +1,24 @@
+{
+    "docs": {
+        "version": "0.0.0",
+        "title": "Admin API Service",
+        "description": "Documentation for the Admin API Service",
+        "routes": "./src/service/admin/routes.ts",
+        "url": "/admin/api-docs",
+        "models":{
+            "tags": [],
+            "paths": {},
+            "definitions":{}
+        }
+    },
+    "port": 5001,
+    "prefix": "/admin",
+    "route": {
+        "ping": "ping",
+        "admin": "",
+        "note" : "note",
+        "flag": "flag",
+        "match": "match",
+        "user": "user"
+    }
+}

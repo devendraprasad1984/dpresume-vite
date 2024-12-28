@@ -1,0 +1,59 @@
+{
+    "info": {
+        "swaggerVersion": "2.0.0",
+        "contact": {
+            "name": "",
+            "url": ""
+        },
+        "basePath": ""
+    },
+    "auth": {
+        "domain": ""
+    },    
+    "chat": {
+        "key": "",
+        "secret": "",
+        "options": {
+            "token": {
+                "expiration": 1
+            },
+            "message": {
+                "format": {}
+            },
+            "media": {
+                "allowedExt": [
+                    ".jpg",
+                    ".png",
+                    ".jpeg"
+                ]
+            }
+        }
+    },
+    "meet": {   
+        "account": {
+            "main": {
+                "sid": "",
+                "api": {
+                    "key": "",
+                    "secret": ""
+                }
+            },
+            "sub": {
+                "sid": "",
+                "api": {
+                    "secret": ""
+                }
+            }
+        },
+        "options": {
+            "room": {
+                "expiration": 60
+            }
+        }
+    },
+    "notification":{
+        "actionMinutes": 5,
+        "reminderMinutes": 2880
+
+    }
+}

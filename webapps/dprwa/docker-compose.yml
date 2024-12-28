@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  dpresume:
+    container_name: dpresume_prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '6201:6201'
+    volumes:
+      - .:/app
+      - dpresume_node_modules:/node_modules
+
+volumes:
+  "dpresume_node_modules": { }

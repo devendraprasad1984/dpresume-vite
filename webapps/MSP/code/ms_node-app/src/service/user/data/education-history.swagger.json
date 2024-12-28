@@ -1,0 +1,245 @@
+{
+    "tags": [
+        {
+            "name": "EducationHistory",
+            "description": "All the methods for the EducationHistory Service"
+        }
+    ],
+    "paths": {
+        "/user/profile/educationhistory/filter": {
+            "post": {
+                "tags": [
+                    "EducationHistory"
+                ],
+                "summary": "Get all the EducationHistory records by profile id",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "description": "filter object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilter"
+                        },
+                        "example": {
+                            "filter": "getEducationHistoryByProfileId",
+                            "data": {
+                                "profileId": 7
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user/profile/educationhistory": {
+            "post": {
+                "tags": [
+                    "EducationHistory"
+                ],
+                "summary": "Create a new EducationHistory",
+                "parameters": [
+                    {
+                        "name": "EducationHistory",
+                        "description": "New EducationHistory object",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/EducationHistory"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success created",
+                        "schema": {
+                            "$ref": "#/definitions/EducationHistory"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/profile/educationhistory/{id}": {
+            "get": {
+                "tags": [
+                    "EducationHistory"
+                ],
+                "summary": "Get specific EducationHistory by id",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "EducationHistory ID that will be retrieved",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/EducationHistory"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "EducationHistory"
+                ],
+                "summary": "Update specific EducationHistory by id",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "EducationHistory ID that will be updated",
+                        "required": "true",
+                        "type": "number"
+                    },
+                    {
+                        "name": "EducationHistory",
+                        "description": "Update EducationHistory object",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/EducationHistory"
+                        },
+                        "example": {
+                            "id": "0",
+                            "userId": "1",
+                            "status": "active",
+                            "text": "EducationHistory body text"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success updated",
+                        "schema": {
+                            "$ref": "#/definitions/EducationHistory"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "EducationHistory"
+                ],
+                "summary": "Delete specific EducationHistory by id (hard delete)",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "EducationHistory ID that will be deleted",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "EducationHistory": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "required": "true",
+                    "example" : 2
+                },
+                "ref": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "XXXXXXXX-YYYY-WWWW-00000001"
+                },
+                "profileId": {
+                    "type": "number",
+                    "required": "true",
+                    "example": 7
+                },
+                "status": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "active"
+                },
+                "school": {
+                    "type": "string",
+                    "required":"true",
+                    "example": "MIT"
+                },
+                "degree": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "Computer Science Bachelor"
+                },
+                "description": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "a developers career"
+                },
+                "field": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "Software"
+                },
+                "startedOn": {
+                    "type": "string",
+                    "required": "true",
+                    "format": "date-time",
+                    "description": "date started",
+                    "example": "2020-01-01T00:00:00Z"
+                },
+                "endedOn": {
+                    "type": "string",
+                    "required": "false",
+                    "format": "date-time",
+                    "description": "date ended",
+                    "example": "2022-01-01T00:00:00Z"
+                },
+                "IsCurrent": {
+                    "type": "boolean",
+                    "required": "false",
+                    "example" : true
+                }
+            }
+        },
+        "DataFilter": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getEducationHistoryByProfileId"
+                    ],
+                    "required": "true",
+                    "example" : "getEducationHistoryByProfileId"
+                },
+                "data": {
+                    "type": "object",
+                    "required": "true",
+                    "example" : { "profileId": 7 }
+                }
+            }
+        }
+    }
+}

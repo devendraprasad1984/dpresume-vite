@@ -1,0 +1,221 @@
+
+.spinnerDark {
+  -webkit-animation: rotator 1.4s linear infinite;
+  animation: rotator 1.4s linear infinite;
+}
+
+.spinnerLight {
+  -webkit-animation: rotator 1.4s linear infinite;
+  animation: rotator 1.4s linear infinite;
+}
+
+
+@-webkit-keyframes colorsDark {
+  0% {
+    stroke: var(--color-violet);
+  }
+
+  14.285714286% {
+    stroke: var(--color-red);
+  }
+
+  28.571428572% {
+    stroke: var(--bg-color-light-blue);
+  }
+
+  42.857142858% {
+    stroke: var(--color-green);
+  }
+
+  57.142857144% {
+    stroke: var(--color-candy);
+  }
+
+  71.42857143% {
+    stroke: var(--bg-color-pale-red);
+  }
+
+  100% {
+    stroke: var(--bg-color-pale-green);
+  }
+}
+
+@keyframes colorsDark {
+  0% {
+    stroke: var(--color-violet);
+  }
+
+  14.285714286% {
+    stroke: var(--color-red);
+  }
+
+  28.571428572% {
+    stroke: var(--bg-color-light-blue);
+  }
+
+  42.857142858% {
+    stroke: var(--color-green);
+  }
+
+  57.142857144% {
+    stroke: var(--color-candy);
+  }
+
+  71.42857143% {
+    stroke: var(--bg-color-pale-red);
+  }
+
+  100% {
+    stroke: var(--bg-color-pale-green);
+  }
+}
+
+
+@-webkit-keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+}
+
+.spinnerPathDark {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colorsDark 5.6s ease-in-out infinite;
+  animation: dash 1.4s ease-in-out infinite, colorsDark 5.6s ease-in-out infinite;
+}
+
+.spinnerPathLight {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colorsLight 5.6s ease-in-out infinite;
+  animation: dash 1.4s ease-in-out infinite, colorsLight 5.6s ease-in-out infinite;
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+  }
+}
+
+.ball-loader {
+  animation: ballRotate 1s infinite;
+  height: 50px;
+  width: 50px;
+}
+
+.ball-loader:before,
+.ball-loader:after {
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+
+.ball-loader:before {
+  animation: ball1 1s infinite;
+  background-color: var(--color-violet);
+  box-shadow: 30px 0 0 var(--bg-color-light-blue);
+  margin-bottom: 10px;
+}
+
+.ball-loader:after {
+  animation: ball2 1s infinite;
+  background-color: var(--color-green);
+  box-shadow: 30px 0 0 var(--bg-color-light-blue);
+}
+
+@keyframes ballRotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.8);
+    -moz-transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    -webkit-transform: rotate(360deg) scale(1.2);
+    -moz-transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(720deg) scale(0.8);
+    -moz-transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 var(--bg-color-light-blue);
+  }
+  50% {
+    box-shadow: 0 0 0 var(--bg-color-pale-yellow);
+    margin-bottom: 0;
+    -webkit-transform: translate(15px, 15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 var(--bg-color-light-blue);
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 var(--color-candy);
+  }
+  50% {
+    box-shadow: 0 0 0 var(--bg-color-blue-grey);
+    margin-top: -20px;
+    -webkit-transform: translate(15px, 15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 var(--color-sea-green);
+    margin-top: 0;
+  }
+}

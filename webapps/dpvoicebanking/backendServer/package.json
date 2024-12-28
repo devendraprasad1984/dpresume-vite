@@ -1,0 +1,23 @@
+{
+  "name": "sandbox-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start:automatic",
+    "start:manual": "node index.js manual",
+    "start:automatic": "node index.js",
+    "startx": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clipboardy": "^1.2.3",
+    "colors": "^1.3.3",
+    "cors": "^2.8.5",
+    "cpy-cli": "^2.0.0",
+    "express": "^4.17.1",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  }
+}

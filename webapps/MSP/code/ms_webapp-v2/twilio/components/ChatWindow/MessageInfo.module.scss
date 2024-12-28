@@ -1,0 +1,12 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.messageInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.425em 0 0.083em;
+  font-size: toRem(12);
+  color: #606b85;
+}

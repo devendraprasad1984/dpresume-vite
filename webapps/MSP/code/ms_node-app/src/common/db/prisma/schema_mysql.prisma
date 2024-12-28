@@ -1,0 +1,544 @@
+generator client {
+  provider      = "prisma-client-js"
+  output        = "../client-mysql"
+  binaryTargets = ["native"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_MYSQL")
+}
+
+model Attendance {
+  Id          Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  UserId      Int
+  SessionId   Int
+  Status      String    @db.VarChar(45)
+  SessionRole String    @db.VarChar(45)
+  InvitedOn   DateTime? @db.DateTime(0)
+  RespondedOn DateTime? @db.DateTime(0)
+  CreatedOn   DateTime  @db.DateTime(0)
+  CreatedBy   String    @db.Char(36)
+  ModifiedOn  DateTime  @db.DateTime(0)
+  ModifiedBy  String    @db.Char(36)
+  Session     Session   @relation(fields: [SessionId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKSessionAttendance")
+  User        User      @relation(fields: [UserId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKUserAttendance")
+
+  @@index([SessionId], map: "FKSessionAttendance_idx")
+  @@index([UserId], map: "FKUserAttendance_idx")
+}
+
+model Bucket {
+  Id        Int      @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  UserId    Int
+  ItemId    Int
+  MessageId Int?
+  Status    String   @db.VarChar(45)
+  Item      Item     @relation(fields: [ItemId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKBucketItem")
+  Message   Message? @relation(fields: [MessageId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKBucketMessage")
+  User      User     @relation(fields: [UserId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKBucketUser")
+
+  @@index([ItemId], map: "FKBucketItem_idx")
+  @@index([MessageId], map: "FKBucketMessage_idx")
+  @@index([UserId], map: "FKBucketUser_idx")
+}
+
+model Channel {
+  Id           Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref          String    @unique(map: "Ref_UNIQUE") @db.Char(36)
+  ModeratorRef Json
+  CompanyRef   String?   @db.Char(36)
+  StreamRef    String    @unique(map: "StreamRef_UNIQUE") @db.VarChar(45)
+  Status       String    @db.VarChar(45)
+  IsMSChannel  Boolean?  @db.Bit(1)
+  Type         String?   @db.VarChar(45)
+  GroupName    String?   @db.VarChar(100)
+  CreatedOn    DateTime  @db.DateTime(0)
+  CreatedBy    String    @db.Char(36)
+  ModifiedOn   DateTime? @db.DateTime(0)
+  ModifiedBy   String?   @db.Char(36)
+  Event        Event[]
+  Flag         Flag[]
+  Media        Media[]
+  Meet         Meet[]
+  Member       Member[]
+  Message      Message[]
+  Topic        Topic[]
+}
+
+model Company {
+  Id          Int           @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref         String        @unique(map: "Ref_UNIQUE") @db.Char(36)
+  Status      String        @db.VarChar(45)
+  CreatedOn   DateTime      @db.DateTime(0)
+  CreatedBy   String        @db.Char(36)
+  ModifiedOn  DateTime?     @db.DateTime(0)
+  ModifiedBy  String?       @db.Char(36)
+  GroupMember GroupMember[]
+  Info        Info[]
+  Job         Job[]
+  Personnel   Personnel[]
+  Topic       Topic[]
+}
+
+model EducationHistory {
+  Id          Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref         String    @unique(map: "Ref_UNIQUE") @db.Char(36)
+  ProfileId   Int
+  Status      String    @db.VarChar(45)
+  School      String    @db.VarChar(100)
+  Degree      String    @db.VarChar(100)
+  Field       String?   @db.VarChar(100)
+  Description String?   @db.VarChar(500)
+  StartedOn   DateTime? @db.Date
+  EndedOn     DateTime? @db.Date
+  IsCurrent   Boolean?  @db.Bit(1)
+  CreatedOn   DateTime  @db.DateTime(0)
+  CreatedBy   String    @db.Char(36)
+  ModifiedOn  DateTime? @db.DateTime(0)
+  ModifiedBy  String?   @db.Char(36)
+  Profile     Profile   @relation(fields: [ProfileId], references: [Id], onUpdate: Restrict, map: "FKProfileEducationHistory")
+
+  @@index([ProfileId], map: "FKProfileEducationHistory")
+}
+
+model Event {
+  Id         Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref        String    @unique(map: "Ref_UNIQUE") @db.Char(36)
+  ScheduleId Int
+  ChannelRef String    @db.Char(36)
+  Status     String    @db.VarChar(45)
+  Invitees   Json
+  Title      String?   @db.VarChar(100)
+  Date       DateTime  @db.Date
+  Time       DateTime  @db.Time(0)
+  StartedOn  DateTime? @db.DateTime(0)
+  EndedOn    DateTime? @db.DateTime(0)
+  CreatedOn  DateTime  @db.DateTime(0)
+  CreatedBy  String    @db.Char(36)
+  ModifiedOn DateTime? @db.DateTime(0)
+  ModifiedBy String?   @db.Char(36)
+  Channel    Channel   @relation(fields: [ChannelRef], references: [Ref], onUpdate: Restrict, map: "FKChannelEvent")
+  Schedule   Schedule  @relation(fields: [ScheduleId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKScheduleEvent")
+
+  @@index([ChannelRef], map: "FKChannelEvent")
+  @@index([ScheduleId], map: "FKScheduleEvent_idx")
+}
+
+model Flag {
+  Id                    Int      @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  UserId                Int?
+  ChannelId             Int?
+  MessageId             Int?
+  ItemId                Int?
+  Status                String   @db.VarChar(45)
+  Comment               String?  @db.Text
+  IsDeleteActionApplied Boolean? @db.Bit(1)
+  CreatedOn             DateTime @db.DateTime(0)
+  CreatedBy             String   @db.Char(36)
+  ModifiedOn            DateTime @db.DateTime(0)
+  ModifiedBy            String   @db.Char(36)
+  Channel               Channel? @relation(fields: [ChannelId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKChannelFlag")
+  Item                  Item?    @relation(fields: [ItemId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKItemFlag")
+  Message               Message? @relation(fields: [MessageId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKMessageFlag")
+  User                  User?    @relation(fields: [UserId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKUserFlag")
+
+  @@index([ChannelId], map: "FKChannelFlag_idx")
+  @@index([ItemId], map: "FKItemFlag_idx")
+  @@index([MessageId], map: "FKMessageFlag_idx")
+  @@index([UserId], map: "FKUserFlag_idx")
+}
+
+model GroupMember {
+  Id         Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref        String    @unique(map: "Ref_UNIQUE") @db.Char(36)
+  CompanyRef String?   @db.Char(36)
+  Status     String    @db.VarChar(45)
+  Role       Json
+  Name       String    @db.VarChar(100)
+  IsDefault  Boolean?  @db.Bit(1)
+  CreatedBy  String?   @db.Char(36)
+  CreatedOn  DateTime? @db.DateTime(0)
+  ModifiedBy String?   @db.Char(36)
+  ModifiedOn DateTime? @db.DateTime(0)
+  Company    Company?  @relation(fields: [CompanyRef], references: [Ref], onDelete: Restrict, onUpdate: Restrict, map: "fk_GroupMember_Company")
+
+  @@index([CompanyRef], map: "fk_GroupMember_Company")
+}
+
+model Info {
+  Id          Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  CompanyId   Int
+  Category    String?   @db.VarChar(45)
+  Status      String    @db.VarChar(45)
+  Name        String    @db.VarChar(100)
+  Established Int?      @db.Year
+  Photo       String?   @db.VarChar(250)
+  Bio         String?   @db.Text
+  City        String?   @db.VarChar(60)
+  State       String?   @db.VarChar(60)
+  Video       String?   @db.VarChar(250)
+  Website     String?   @db.VarChar(150)
+  LinkedIn    String?   @db.VarChar(100)
+  Facebook    String?   @db.VarChar(100)
+  Instagram   String?   @db.VarChar(100)
+  Twitter     String?   @db.VarChar(100)
+  CreatedOn   DateTime  @db.DateTime(0)
+  CreatedBy   String    @db.Char(36)
+  ModifiedOn  DateTime? @db.DateTime(0)
+  ModifiedBy  String?   @db.Char(36)
+  Company     Company   @relation(fields: [CompanyId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKCompanyInfo")
+
+  @@index([CompanyId], map: "FKCompanyInfo_idx")
+}
+
+model Item {
+  Id        Int      @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref       String   @unique(map: "Ref_UNIQUE") @db.Char(36)
+  StreamRef String   @db.VarChar(45)
+  Status    String   @db.VarChar(45)
+  Type      String   @db.VarChar(45)
+  CreatedOn DateTime @db.DateTime(0)
+  Bucket    Bucket[]
+  Flag      Flag[]
+  Media     Media[]
+}
+
+model Job {
+  Id          Int      @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  CompanyId   Int
+  Status      String   @db.VarChar(45)
+  Category    String   @db.VarChar(45)
+  Title       String   @db.VarChar(50)
+  Location    String   @db.VarChar(45)
+  Url         String   @db.VarChar(150)
+  Description String   @db.Text
+  ViewCount   Int
+  ApplyCount  Int
+  CreatedOn   DateTime @db.DateTime(0)
+  CreatedBy   String   @db.Char(36)
+  ModifiedOn  DateTime @db.DateTime(0)
+  ModifiedBy  String   @db.Char(36)
+  Company     Company  @relation(fields: [CompanyId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKCompanyJob")
+
+  @@index([CompanyId], map: "FKCompanyJob_idx")
+}
+
+model Match {
+  Id         Int      @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  UserId     Int
+  UserRef    String   @db.Char(36)
+  Status     String   @db.VarChar(45)
+  CreatedOn  DateTime @db.DateTime(0)
+  CreatedBy  String   @db.Char(36)
+  ModifiedOn DateTime @db.DateTime(0)
+  ModifiedBy String   @db.Char(36)
+  User       User     @relation(fields: [UserId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKUserMatch")
+
+  @@index([UserId], map: "FKUserMatch_idx")
+}
+
+model Media {
+  Id        Int     @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  ChannelId Int
+  ItemId    Int
+  Status    String  @db.VarChar(45)
+  Channel   Channel @relation(fields: [ChannelId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKMediaChannel")
+  Item      Item    @relation(fields: [ItemId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKMediaItem")
+
+  @@index([ChannelId], map: "FKMediaChannel_idx")
+  @@index([ItemId], map: "FKMediaItem_idx")
+}
+
+model Meet {
+  Id         Int        @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref        String     @unique(map: "Ref_UNIQUE") @db.Char(36)
+  ChannelId  Int
+  TwilioRef  String?    @unique(map: "TwilioRef_UNIQUE") @db.VarChar(45)
+  Status     String     @db.VarChar(45)
+  CreatedOn  DateTime   @db.DateTime(0)
+  CreatedBy  String     @db.Char(36)
+  ModifiedOn DateTime?  @db.DateTime(0)
+  ModifiedBy String?    @db.Char(36)
+  Channel    Channel    @relation(fields: [ChannelId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKChannelMeet")
+  Schedule   Schedule[]
+
+  @@index([ChannelId], map: "FKChannelMeet_idx")
+}
+
+model Member {
+  Id             Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  UserId         Int
+  ChannelId      Int
+  GroupMemberRef String?   @db.Char(36)
+  Status         String    @db.VarChar(45)
+  CreatedOn      DateTime  @db.DateTime(0)
+  CreatedBy      String    @db.Char(36)
+  ModifiedOn     DateTime? @db.DateTime(0)
+  ModifiedBy     String?   @db.Char(36)
+  Channel        Channel   @relation(fields: [ChannelId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKChannelMember")
+  User           User      @relation(fields: [UserId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKUserMember")
+
+  @@index([ChannelId], map: "FKMemberChannel_idx")
+  @@index([UserId], map: "FKMemberUser_idx")
+}
+
+model MemberRequest {
+  Id            Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  UserRef       String    @db.Char(36)
+  ApprovedByRef String?   @db.Char(36)
+  TopicRef      String?   @db.Char(36)
+  SessionRef    String?   @db.Char(36)
+  ChannelRef    String?   @db.Char(36)
+  CompanyRef    String?   @db.Char(36)
+  Status        String    @db.VarChar(45)
+  Type          String    @db.VarChar(45)
+  Message       String?   @db.VarChar(500)
+  CreatedOn     DateTime  @db.DateTime(0)
+  CreatedBy     String    @db.Char(36)
+  ModifiedOn    DateTime? @db.DateTime(0)
+  ModifiedBy    String?   @db.Char(36)
+  Topic         Topic?    @relation(fields: [TopicRef], references: [Ref], onDelete: Restrict, onUpdate: Restrict, map: "fk_MemberRequest_Topic")
+  User          User      @relation(fields: [UserRef], references: [Ref], onUpdate: Restrict, map: "fk_MemberRequest_User")
+
+  @@index([TopicRef], map: "fk_MemberRequest_Topic")
+  @@index([UserRef], map: "fk_MemberRequest_User")
+}
+
+model Message {
+  Id         Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref        String    @unique(map: "Ref_UNIQUE") @db.Char(36)
+  ChannelId  Int
+  StreamRef  String    @db.VarChar(45)
+  Status     String    @db.VarChar(45)
+  CreatedOn  DateTime  @db.DateTime(0)
+  CreatedBy  String    @db.Char(36)
+  ModifiedOn DateTime? @db.DateTime(0)
+  ModifiedBy String?   @db.Char(36)
+  Channel    Channel   @relation(fields: [ChannelId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKChannelMessage")
+  Bucket     Bucket[]
+  Flag       Flag[]
+
+  @@index([ChannelId], map: "FKChannelMessage_idx")
+}
+
+model Note {
+  Id         Int       @id @default(autoincrement())
+  UserId     Int
+  Status     String    @db.VarChar(45)
+  Text       String    @db.Text
+  CreatedOn  DateTime  @db.DateTime(0)
+  CreatedBy  String    @db.Char(36)
+  ModifiedOn DateTime? @db.DateTime(0)
+  ModifiedBy String?   @db.Char(36)
+  User       User      @relation(fields: [UserId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_UserNote")
+
+  @@index([UserId], map: "FK_UserNote_idx")
+}
+
+model Personnel {
+  Id         Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  UserId     Int
+  CompanyId  Int
+  Status     String    @db.VarChar(45)
+  Role       String    @db.VarChar(45)
+  CreatedOn  DateTime  @db.DateTime(0)
+  CreatedBy  String    @db.Char(36)
+  ModifiedOn DateTime? @db.DateTime(0)
+  ModifiedBy String?   @db.Char(36)
+  Company    Company   @relation(fields: [CompanyId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKCompanyPersonnel")
+  User       User      @relation(fields: [UserId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKUserPersonnel")
+
+  @@index([CompanyId], map: "FKCompanyPersonnel_idx")
+  @@index([UserId], map: "FKUserPersonnel_idx")
+}
+
+model Profile {
+  Id                        Int                @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref                       String             @unique(map: "Ref_UNIQUE") @db.Char(36)
+  UserId                    Int
+  ClaimCode                 String?            @db.VarChar(100)
+  Status                    String             @db.VarChar(45)
+  Ethnicity                 String             @db.VarChar(45)
+  LookingFor                String             @db.VarChar(45)
+  YearsExperience           String             @db.VarChar(45)
+  FirstName                 String             @db.VarChar(60)
+  LastName                  String             @db.VarChar(60)
+  Pronouns                  String?            @db.VarChar(25)
+  Headline                  String?            @db.VarChar(60)
+  CompanyHeadline           String?            @db.VarChar(60)
+  Picture                   String?            @db.VarChar(500)
+  City                      String?            @db.VarChar(60)
+  State                     String?            @db.VarChar(60)
+  Website                   String?            @db.VarChar(150)
+  Linkedin                  String?            @db.VarChar(150)
+  Facebook                  String?            @db.VarChar(150)
+  Instagram                 String?            @db.VarChar(150)
+  Twitter                   String?            @db.VarChar(150)
+  Bio                       Json?
+  CapabilitiesProvided      Json?
+  MSPshipGoals           Json?
+  IndustryExperience        Json?
+  Skills                    Json?
+  IndustryInterest          Json?
+  Email                     String             @db.VarChar(320)
+  PhoneNumber               String             @db.VarChar(15)
+  LastActive                DateTime?          @db.DateTime(0)
+  IsAppMessagingAllowed     Boolean            @db.Bit(1)
+  IsPushNotificationAllowed Boolean            @db.Bit(1)
+  GroupMember               String?            @db.VarChar(100)
+  Video                     String?            @db.VarChar(250)
+  CreatedOn                 DateTime           @db.DateTime(0)
+  CreatedBy                 String             @db.Char(36)
+  ModifiedOn                DateTime?          @db.DateTime(0)
+  ModifiedBy                String?            @db.Char(36)
+  User                      User               @relation(fields: [UserId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FKUserProfile")
+  EducationHistory          EducationHistory[]
+  WorkHistory               WorkHistory[]
+
+  @@index([UserId], map: "FKUserProfile_idx")
+}
+
+model ProgEventResponse {
+  Id                 Int              @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref                String           @unique(map: "Ref_UNIQUE") @db.Char(36)
+  ProgEventTriggerId Int
+  Response           String           @db.VarChar(45)
+  Message            String           @db.VarChar(500)
+  Specs              Json?
+  CreatedOn          DateTime         @db.DateTime(0)
+  CreatedBy          String           @db.Char(36)
+  ModifiedOn         DateTime?        @db.DateTime(0)
+  ModifiedBy         String?          @db.Char(36)
+  ProgEventTrigger   ProgEventTrigger @relation(fields: [ProgEventTriggerId], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_ProgEventResponse_ProgEventTrigger")
+
+  @@index([ProgEventTriggerId], map: "FK_ProgEventResponse_ProgEventTrigger_idx")
+}
+
+model ProgEventTrigger {
+  Id                Int                 @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref               String              @db.Char(36)
+  Status            String              @db.VarChar(45)
+  Type              String              @db.VarChar(45)
+  Category          String              @db.VarChar(45)
+  CreatedOn         DateTime            @db.DateTime(0)
+  CreatedBy         String              @db.Char(36)
+  ModifiedOn        DateTime?           @db.DateTime(0)
+  ModifiedBy        String?             @db.Char(36)
+  ProgEventResponse ProgEventResponse[]
+}
+
+model Schedule {
+  Id          Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  SessionRef  String?   @db.Char(36)
+  MeetRef     String?   @db.Char(36)
+  Status      String    @db.VarChar(45)
+  IsRecurring Boolean   @db.Bit(1)
+  Config      Json?
+  CreatedOn   DateTime  @db.DateTime(0)
+  CreatedBy   String    @db.Char(36)
+  ModifiedOn  DateTime? @db.DateTime(0)
+  ModifiedBy  String?   @db.Char(36)
+  Meet        Meet?     @relation(fields: [MeetRef], references: [Ref], onDelete: Restrict, onUpdate: Restrict, map: "FKMeetSchedule")
+  Event       Event[]
+
+  @@index([MeetRef], map: "FKMeetSchedule")
+}
+
+model Session {
+  Id           Int          @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref          String       @unique(map: "Ref_UNIQUE") @db.Char(36)
+  ModeratorRef String       @db.Char(36)
+  CompanyRef   String?      @db.Char(36)
+  TopicRef     String?      @db.Char(36)
+  Status       String       @db.VarChar(45)
+  Type         String       @db.VarChar(45)
+  Access       String       @db.VarChar(45)
+  Title        String       @db.VarChar(100)
+  Description  String?      @db.Text
+  CreatedOn    DateTime     @db.DateTime(0)
+  CreatedBy    String       @db.Char(36)
+  ModifiedOn   DateTime     @db.DateTime(0)
+  ModifiedBy   String       @db.Char(36)
+  Attendance   Attendance[]
+}
+
+model Tag {
+  Id         Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref        String    @db.Char(36)
+  Status     String    @db.VarChar(45)
+  Type       String    @db.VarChar(45)
+  Category   String    @db.VarChar(45)
+  Text       String    @db.VarChar(45)
+  CreatedOn  DateTime  @db.DateTime(0)
+  CreatedBy  String    @db.Char(36)
+  ModifiedOn DateTime? @db.DateTime(0)
+  ModifiedBy String?   @db.Char(36)
+}
+
+model Topic {
+  Id            Int             @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref           String          @unique(map: "Ref_UNIQUE") @db.Char(36)
+  ChannelRef    String?         @db.Char(36)
+  CompanyRef    String?         @db.Char(36)
+  Moderator     Json
+  Status        String          @db.VarChar(45)
+  Access        String          @db.VarChar(45)
+  Title         String          @db.VarChar(45)
+  Description   String          @db.Text
+  EndedOn       DateTime?       @db.DateTime(0)
+  Picture       String?         @db.VarChar(250)
+  IsHidden      Boolean?        @db.Bit(1)
+  CreatedOn     DateTime        @db.DateTime(0)
+  CreatedBy     String          @db.Char(36)
+  ModifiedOn    DateTime?       @db.DateTime(0)
+  ModifiedBy    String?         @db.Char(36)
+  Channel       Channel?        @relation(fields: [ChannelRef], references: [Ref], onDelete: Restrict, onUpdate: Restrict, map: "fk_Topic_Channel")
+  Company       Company?        @relation(fields: [CompanyRef], references: [Ref], onDelete: Restrict, onUpdate: Restrict, map: "fk_Topic_Company")
+  MemberRequest MemberRequest[]
+
+  @@index([ChannelRef], map: "fk_Topic_Channel")
+  @@index([CompanyRef], map: "fk_Topic_Company")
+}
+
+model User {
+  Id            Int             @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref           String          @unique(map: "Ref_UNIQUE") @db.Char(36)
+  Status        String          @db.VarChar(45)
+  Role          String          @db.VarChar(45)
+  Sub           String          @unique(map: "Sub_UNIQUE") @db.VarChar(250)
+  LastLogin     DateTime        @db.DateTime(0)
+  CreatedOn     DateTime        @db.DateTime(0)
+  CreatedBy     String          @db.Char(36)
+  ModifiedOn    DateTime?       @db.DateTime(0)
+  ModifiedBy    String?         @db.Char(36)
+  Attendance    Attendance[]
+  Bucket        Bucket[]
+  Flag          Flag[]
+  Match         Match[]
+  Member        Member[]
+  MemberRequest MemberRequest[]
+  Note          Note[]
+  Personnel     Personnel[]
+  Profile       Profile[]
+}
+
+model WorkHistory {
+  Id          Int       @id @unique(map: "Id_UNIQUE") @default(autoincrement())
+  Ref         String    @unique(map: "Ref_UNIQUE") @db.Char(36)
+  ProfileId   Int
+  Status      String    @db.VarChar(45)
+  Company     String    @db.VarChar(100)
+  Title       String    @db.VarChar(80)
+  Description String    @db.Text
+  StartedOn   DateTime  @db.Date
+  EndedOn     DateTime? @db.Date
+  IsCurrent   Boolean?  @db.Bit(1)
+  CreatedOn   DateTime  @db.DateTime(0)
+  CreatedBy   String    @db.Char(36)
+  ModifiedOn  DateTime? @db.DateTime(0)
+  ModifiedBy  String?   @db.Char(36)
+  Profile     Profile   @relation(fields: [ProfileId], references: [Id], onUpdate: Restrict, map: "FKProfileWorkHistory")
+
+  @@index([ProfileId], map: "FKProfileWorkHistory")
+}

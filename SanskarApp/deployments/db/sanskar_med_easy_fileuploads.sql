@@ -1,0 +1,7 @@
+INSERT INTO sanskar_med_easy.fileuploads (id, file, size, type, loc, absloc, tags) VALUES (1, 'sample', null, 'image/png', 'https://cdn.iconscout.com/icon/premium/png-128-thumb/cool-2886038-2392465.png', null, 'sample');
+INSERT INTO sanskar_med_easy.fileuploads (id, file, size, type, loc, absloc, tags) VALUES (2, 'sample', null, 'image/png', 'https://cdn.iconscout.com/icon/premium/png-128-thumb/cool-2635861-2207307.png', null, 'sample');
+INSERT INTO sanskar_med_easy.fileuploads (id, file, size, type, loc, absloc, tags) VALUES (3, 'sample', null, 'image/png', 'https://cdn.iconscout.com/icon/premium/png-128-thumb/cool-3056046-2542452.png', null, 'sample');
+INSERT INTO sanskar_med_easy.fileuploads (id, file, size, type, loc, absloc, tags) VALUES (4, 'sample', null, 'image/png', 'https://cdn.iconscout.com/icon/premium/png-128-thumb/cool-4-92528.png', null, 'sample');
+INSERT INTO sanskar_med_easy.fileuploads (id, file, size, type, loc, absloc, tags) VALUES (5, 'sample', null, 'image/png', 'https://cdn.iconscout.com/icon/premium/png-128-thumb/beverage-26-136275.png', null, 'sample');
+INSERT INTO sanskar_med_easy.fileuploads (id, file, size, type, loc, absloc, tags) VALUES (6, 'sample', null, 'image/png', 'https://cdn.iconscout.com/icon/premium/png-128-thumb/products-3133123-2606683.png', null, 'sample');
+INSERT INTO sanskar_med_easy.fileuploads (id, file, size, type, loc, absloc, tags) VALUES (7, 'sample', null, 'image/png', 'https://cdn.iconscout.com/icon/premium/png-128-thumb/order-2007308-1694622.png', null, 'sample');

@@ -1,0 +1,179 @@
+{
+  "tags": [
+    {
+      "name": "System",
+      "description": "To check the status of the Services"
+    }
+  ],
+  "paths": {
+    "/user/tag/{Id}": {
+      "delete": {
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Delete a specific tag from DB",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "ID of tag that will be deleted",
+            "required": "true",
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "number"
+                },
+                "result": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/tag": {
+      "get": {
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Get all the tags",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": "application/json",
+            "schema": {
+              "$ref": "#/definitions/ApiResponseTagArray"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ApiResponseTagArray": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "number"
+        },
+        "result": {
+          "$ref": "#/definitions/TagArray"
+        }
+      }
+    },
+    "Tag": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "ref": {
+          "type": "string",
+          "example": "XXXXXXXX-1212-2323-88888888"
+        },
+        "status": {
+          "type": "string",
+          "example": "active"
+        },
+        "type": {
+          "type": "string",
+          "example": "User"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "CapabilitiesProvided",
+            "MSPshipGoals",
+            "IndustryExperience",
+            "Skills",
+            "IndustryInterest"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "example": "Test tag"
+        }
+      }
+    },
+    "TagArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Tag"
+      }
+    },
+    "DataFilter": {
+      "type": "object",
+      "properties": {
+        "filter": {
+          "type": "string",
+          "enum": [
+            "getById",
+            "getByUserId"
+          ],
+          "required": "true"
+        },
+        "data": {
+          "type": "object",
+          "required": "true"
+        }
+      }
+    },
+    "UserSearch": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "ref": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "notesCount": {
+          "type": "number"
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "ref": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

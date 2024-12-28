@@ -1,0 +1,5 @@
+INSERT INTO sanskar_med_easy.products (id, name, type, price, tax, createOn, discount, description) VALUES (1, 'prod1', 1, 100, 18, '2021-01-09 00:32:04', 0, 'hello desc1');
+INSERT INTO sanskar_med_easy.products (id, name, type, price, tax, createOn, discount, description) VALUES (2, 'prod2', 1, 110, 18, '2021-01-09 00:32:10', 0, 'hello2');
+INSERT INTO sanskar_med_easy.products (id, name, type, price, tax, createOn, discount, description) VALUES (3, 'prod3', 1, 120, 18, '2021-01-09 00:32:12', 0, 'text2');
+INSERT INTO sanskar_med_easy.products (id, name, type, price, tax, createOn, discount, description) VALUES (4, 'prod4', 2, 130, 18, '2021-01-09 00:32:13', 0, 'title tirle 1');
+INSERT INTO sanskar_med_easy.products (id, name, type, price, tax, createOn, discount, description) VALUES (5, 'prod5', 3, 140, 18, '2021-01-09 00:32:13', 0, 'nicer bits3');

@@ -1,0 +1,20 @@
+@media screen and (max-width: 600px) {
+    .pageNav {
+        width: 80%;
+    }
+    .rightPanel {
+        margin: 0;
+    }
+    .size30{
+        font-size: 20px;
+    }
+    .size20{
+        font-size: 15px;
+    }
+    .size12, .para{
+        font-size: 10px;
+    }
+    .bottomLine{
+        font-size: 55%;
+    }
+}

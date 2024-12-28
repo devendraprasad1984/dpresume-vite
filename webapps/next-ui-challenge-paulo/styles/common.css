@@ -1,0 +1,342 @@
+/*@import "styles/functions";*/
+
+/*become local/scoped to the components they are imported in*/
+.pageHeader {
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 10px;
+    background-color: var(--colorAthensGrey);
+}
+
+.leftPanel {
+    background-color: var(--colorNavy);
+    padding: 10px;
+    color: white;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.bottomLine {
+    border-bottom: 2px solid var(--app-color2);
+    padding: 8px;
+    font-size: 80%;
+}
+
+.rowGrid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+}
+
+.pad10{
+    padding: 10px;
+}
+.pad20{
+    padding: 20px;
+}
+.padL10{
+    padding-left: 10px;
+}
+.padR10{
+    padding-right: 10px;
+}
+.margin10{
+    margin: 10px;
+}
+.margin20{
+    margin: 20px;
+}
+.marginL10{
+    margin-left: 10px;
+}
+.marginR10{
+    margin-right: 10px;
+}
+.marginU10{
+    margin-top: 10px;
+}
+.marginD10{
+    margin-bottom: 10px;
+}
+
+.marginL20{
+    margin-left: 20px;
+}
+.marginR20{
+    margin-right: 20px;
+}
+.marginU20{
+    margin-top: 20px;
+}
+.marginD20{
+    margin-bottom: 20px;
+}
+.marginU30{
+    margin-top: 30px;
+}
+.marginU40{
+    margin-top: 40px;
+}
+
+
+.wid5{
+    width: 5%;
+}
+.wid10{
+    width: 10%;
+}
+.wid15{
+    width: 15%;
+}
+.wid20{
+    width: 20%;
+}
+.wid25{
+    width: 25%;
+}
+.wid30{
+    width: 30%;
+}
+.wid35{
+    width: 35%;
+}
+.wid40{
+    width: 40%;
+}
+.wid45{
+    width: 45%;
+}
+.wid50{
+    width: 50%;
+}
+.wid55{
+    width: 55%;
+}
+.wid60{
+    width: 60%;
+}
+.wid65{
+    width: 65%;
+}
+.wid70{
+    width: 70%;
+}
+.wid75{
+    width: 75%;
+}
+.wid80{
+    width: 80%;
+}
+.wid85{
+    width: 85%;
+}
+.wid90{
+    width: 90%;
+}
+.wid95{
+    width: 95%;
+}
+.wid100{
+    width: 100%;
+}
+
+.wrap {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.gridContentAtCorners {
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.pad40 {
+    padding: 40px 40px 0;
+}
+
+.marginUD {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.colGrid {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: auto;
+}
+
+.navBtn {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 18px;
+    background-color: white;
+    margin: 3px;
+    text-align: left;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.space *{
+    margin: 2px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column *{
+    margin-top: 8px;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    background-color: var(--colorAquaHaze);
+}
+
+.mainAppContainer {
+    min-height: 500px;
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.size10 {
+    font-size: 10px;
+}
+
+.size12 {
+    font-size: 12px;
+}
+
+.size15 {
+    font-size: 15px;
+}
+
+.size20 {
+    font-size: 20px;
+}
+
+.size25 {
+    font-size: 25px;
+}
+
+.size30 {
+    font-size: 30px;
+}
+
+.size35 {
+    font-size: 35px;
+}
+
+.ul {
+    list-style: none;
+    font-size: 20px;
+    line-height: 1.3;
+    padding: 0;
+    margin: 0;
+    color: var(--main-color);
+}
+
+.textColor {
+    color: var(--main-color);
+}
+
+.badge {
+    border-radius: 10px;
+    border: 1px solid;
+    font-size: 12px;
+    padding: 3px;
+    margin: 3px;
+}
+
+.bgred {
+    background-color: #de6336;
+}
+
+
+.bgwhite {
+    background-color: white;
+}
+
+.bggreen {
+    background-color: #b2f6d9;
+}
+
+.bgpurple {
+    background-color: #7936de;
+}
+
+.bgnavy {
+    background-color: var(--colorNavy);
+}
+
+.red {
+    color: #de6336;
+}
+
+.green {
+    color: #4cde36;
+}
+
+.purple {
+    color: #7936de;
+}
+
+.navy {
+    color: #3679de;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.border{
+    border: 1px solid var(--colorAthensGrey);
+    border-radius: 10px;
+}
+
+.radioButtonControl {
+    position: relative;
+    display: block;
+    text-align:center;
+}
+.radioButtonControl label {
+    display: block;
+    background:none;
+    color: var(--colorBlueViolet);
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 1px solid var(--colorNavy);
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.radioButtonControl input[type="radio"] {
+    display: none;
+    position: absolute;
+    width: 100%;
+    appearance: none;
+}
+.radioButtonControl input[type="radio"]:checked + label {
+    background: var(--colorNavy);
+    color: var(--colorMischka);
+}
+

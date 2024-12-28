@@ -1,0 +1,75 @@
+.double-list {
+    counter-reset: count;
+}
+
+.double-list li {
+    counter-increment: count+1;
+}
+
+.double-list li::before {
+    content: counter(count, decimal) ') ';
+}
+
+.star-list-counter {
+    counter-reset: count;
+}
+
+.star-list-counter li {
+    counter-increment: count+1;
+}
+
+.star-list-counter li::before {
+    content: '☆' counter(count, decimal);
+    color: rgba(var(--color-red), 1);
+    font-size: 1.5rem;
+    text-shadow: 2vmin 1vmin 2vmin var(--color-yellow);
+    letter-spacing: 1.2vmin;
+}
+
+.star-list li::before {
+    content: '☆ ';
+    font-size: 1rem;
+}
+
+.flix {
+    counter-reset: count;
+}
+
+.flix li {
+    display: flex;
+    align-items: center;
+    counter-increment: count+1;
+}
+
+.flix li::before {
+    content: counter(count);
+    color: rgba(var(--color-violet), 0.7);
+    color: var(--color-peach) !important;
+    font-size: 3.3rem;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 2px #3b1a6e;
+}
+
+.stroke {
+    -webkit-text-stroke: 0.3vmin var(--color-white);
+}
+
+.roman::before {
+    content: "[" counter(count, lower-roman) "]";
+}
+
+.rotate35 {
+    transform: rotate3d(1, 1, 1, 35deg);
+}
+
+.rotate-35 {
+    transform: rotate3d(1, 1, 1, -35deg);
+}
+
+.rotate20 {
+    transform: rotate3d(1, 1, 1, 20deg);
+}
+
+.rotate-20 {
+    transform: rotate3d(1, 1, 1, -20deg);
+}

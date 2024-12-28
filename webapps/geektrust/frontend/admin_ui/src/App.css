@@ -1,0 +1,392 @@
+/*@font-face {*/
+/*    font-family: 'Material Icons';*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    src: url(%PUBLIC_URL%/assets/materialfont.woff2) format('woff2');*/
+/*}*/
+
+* {
+    font-family: 'lato';
+    color: #222;
+
+}
+
+.center {
+    text-align: center;
+}
+
+.app-container {
+    height: 100vh;
+    width: 95vw;
+    overflow: auto;
+    position: relative;
+}
+
+.xymargin {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.hwmargin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.atcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wid100p {
+    width: 100%;
+}
+.wid90p {
+    width: 90%;
+}
+
+.wid80p {
+    width: 80%;
+}
+.wid10p {
+    width: 10%;
+}
+.wid20p {
+    width: 20%;
+}
+
+
+.label {
+    font-size: 14px;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.space-around {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.labelx {
+    font-size: 16px;
+    text-align: left;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+input[type=text], input[type=date], input[type=password] {
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+}
+
+.txtpad {
+    padding: 10px;
+}
+
+.input-border {
+    border-bottom: 1px solid black;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+/*@media (prefers-reduced-motion: no-preference) {*/
+/*  .App-logo {*/
+/*    animation: App-logo-spin infinite 20s linear;*/
+/*  }*/
+/*}*/
+
+/*.App-header {*/
+/*  background-color: #282c34;*/
+/*  min-height: 100vh;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  font-size: calc(10px + 2vmin);*/
+/*  color: white;*/
+/*}*/
+
+.a {
+    color: #61dafb;
+}
+
+/*@keyframes App-logo-spin {*/
+/*  from {*/
+/*    transform: rotate(0deg);*/
+/*  }*/
+/*  to {*/
+/*    transform: rotate(360deg);*/
+/*  }*/
+/*}*/
+
+
+.flexbox-2-row {
+    text-align: center;
+    justify-content: center;
+    /*grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));*/
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+}
+
+.cards > span, .cards > a {
+    padding: 5px;
+    margin: 3px;
+    height: 100px;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0.7;
+}
+
+
+input[type=checkbox] {
+    padding: 8px;
+}
+
+.checkbox {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    /*border-radius: 50%;*/
+    vertical-align: middle;
+    border: 2px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox:checked {
+    background-color: #3B286D;
+}
+
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background-color: #3B286D;
+}
+
+.btn:hover {
+    opacity: 0.6;
+}
+
+.btn {
+    font-weight: bold;
+    background-color: #3B286D;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 10px 10px 10px 10px;
+    line-height: 1;
+    border-radius: .25rem;
+    /*transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;*/
+}
+
+.margin10 {
+    margin-top: 10px;
+}
+
+.margin15 {
+    margin-top: 15px;
+}
+
+.margin20 {
+    margin-top: 20px;
+}
+
+.margin25 {
+    margin-top: 2rem;
+}
+
+.margin30 {
+    margin-top: 5rem;
+}
+
+.xred {
+    color: #ba5b28 !important;
+}
+
+.xgreen {
+    color: #68ba31 !important;
+}
+
+.xwhite {
+    color: white !important;
+}
+
+.pad, .pad > button, .pad span {
+    padding: 5px;
+    margin: 2px;
+}
+
+.green {
+    background-color: #4db878 !important;
+}
+
+.red {
+    background-color: #f18265 !important;
+}
+
+.gray {
+    background-color: #e7e5e5 !important;
+}
+.purple {
+    background-color: #f2e7fa !important;
+}
+
+.table {
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.header {
+    font-weight: bolder;
+    font-size: 18px;
+    color: black;
+}
+
+.line span {
+    /*font-size: 13px;*/
+    display: table-cell;
+    text-align: left;
+    justify-content: left;
+    min-width: 150px;
+    padding: 5px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: normal;
+    color: #222;
+    font-weight: bolder;
+}
+
+.icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+.height450 {
+    height: 450px;
+}
+
+.height400 {
+    height: 400px;
+}
+
+
+::placeholder {
+    color: #908d8d;
+}
+
+.right {
+    text-align: right;
+}
+
+.atright {
+    float: right;
+}
+
+.size10 {
+    font-size: 10px;
+}
+
+.size12 {
+    font-size: 12px;
+}
+
+.size15 {
+    font-size: 15px;
+}
+
+.size25 {
+    font-size: 25px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+.bl {
+    font-weight: bolder;
+}
+
+.v-space {
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5c34aa;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ea1086;
+}
+

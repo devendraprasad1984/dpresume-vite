@@ -1,0 +1,78 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: toRem(56);
+  position: fixed;
+  z-index: 10;
+  background-color: var(--colorBlack);
+
+  @media (min-width: $widthDesktop) {
+    height: toRem(72);
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  padding: 0 toRem(0);
+  height: 100%;
+
+  @media (min-width: $widthDesktop) {
+    padding: 0 toRem(24);
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+.actionLayout {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  grid-gap: toRem(12);
+  height: 100%;
+
+  @media (min-width: $widthDesktop) {
+    justify-content: center;
+  }
+}
+
+.secondaryActionLayout {
+  display: none;
+
+  @media (min-width: $widthDesktop) {
+    display: block;
+  }
+}
+
+.screenShareBanner {
+  position: fixed;
+  z-index: 8;
+  bottom: toRem(72);
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: center;
+  align-items: center;
+  grid-gap: toRem(24);
+  padding: toRem(12);
+  color: var(--colorWhite);
+}
+
+.roomName {
+  @extend %smallLabel;
+  @extend %truncate;
+  color: var(--colorWhite);
+  display: none;
+
+  @media (min-width: $widthDesktop) {
+    display: block;
+  }
+}

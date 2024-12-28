@@ -1,0 +1,39 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.outerContainer {
+  min-height: 0;
+  flex: 1;
+  position: relative;
+}
+
+.innerScrollContainer {
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 1.2em 0;
+}
+
+.messageListContainer {
+  overflow-y: auto;
+  flex: 1;
+  padding-bottom: 1em;
+}
+
+.button {
+  position: absolute;
+  bottom: toRem(14);
+  right: 2em;
+  z-index: 100;
+  padding: 0.5em 0.9em;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0 toRem(4) toRem(16) rgba(18, 28, 45, 0.2);
+  transition: all 0.5s ease;
+}
+
+.showButton {
+  visibility: visible;
+  opacity: 1;
+  bottom: toRem(24);
+}

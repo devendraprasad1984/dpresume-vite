@@ -1,0 +1,46 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+
+
+.channel-search__result-user {
+  display: flex;
+  align-items: center;
+  margin-left: toRem(12);
+}
+
+.result-hashtag {
+  margin: toRem(12);
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.channel-search__result-text {
+  width: 100%;
+  font-weight: 500;
+  font-size: toRem(14);
+  line-height: 120%;
+}
+
+.user-online {
+  color: red;
+  font-size: toRem(10);
+  padding-top: toRem(2);
+  padding-left: toRem(5);
+}
+
+.channel-search-header {
+  font-weight: 700;
+  font-size: toRem(16);
+}
+
+//TODO: we dont know how to style as yet
+//there is permission error so not able to see output
+.search-result{
+  background-color: var(--colorWaterloo);
+}
+.search-result-focused{
+  background-color: var(--colorSteelGrey);
+}

@@ -1,0 +1,45 @@
+@import "styles/functions";
+@import "styles/variables";
+
+.header {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: toRem($headerHeight);
+  background-repeat: no-repeat;
+  background-position: 95% 0;
+  background-size: contain;
+}
+
+.headerContent {
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 toRem(32);
+}
+
+.headerActions {
+  display: grid;
+  grid-gap: toRem(50);
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  align-items: center;
+}
+
+.logo {
+  width: toRem(287);
+  height: toRem(37);
+
+  path {
+    fill: var(--colorBlueViolet);
+  }
+}
+
+.main {
+  background-color: var(--colorWhite);
+}

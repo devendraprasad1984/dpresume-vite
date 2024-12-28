@@ -1,0 +1,32 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.headerGroup {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: space-between;
+  align-items: end;
+  grid-gap: toRem(24);
+}
+
+.monthYearGroup {
+  display: grid;
+  grid-gap: toRem(20);
+  grid-auto-flow: column;
+  grid-auto-columns: toRem(185);
+}
+
+.actionGroup {
+  display: grid;
+  grid-gap: toRem(20);
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: space-between;
+}
+
+.removeButton {
+  @extend %buttonText;
+  color: var(--colorMandy);
+}

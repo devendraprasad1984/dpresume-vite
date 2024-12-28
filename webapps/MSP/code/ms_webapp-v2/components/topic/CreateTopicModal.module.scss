@@ -1,0 +1,15 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.createTopicModal {
+  hr {
+    margin: toRem(28) 0;
+  }
+
+  .modalHelpText {
+    @extend %smallBodyMedium;
+    color: var(--colorDolphin);
+    margin-bottom: toRem(28);
+  }
+}

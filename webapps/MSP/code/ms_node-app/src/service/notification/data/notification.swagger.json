@@ -1,0 +1,32 @@
+{
+    "tags": [
+        {
+            "name": "System",
+            "description": "To check the status of the Services"
+        }
+    ],
+    "paths": {
+        "/notification/ping": {
+            "get": {
+                "tags": ["System"],
+                "summary": "Check the communication with the notification service",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties":{
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

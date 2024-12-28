@@ -1,0 +1,49 @@
+.badge {
+    border: none;
+    border-radius: 3px;
+    font-weight: bolder;
+    padding: 2px 2px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px;
+    color: white;
+    background-color: #515454;
+    outline: none;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    background-color: #515454;
+    outline: none;
+}
+
+.green {
+    background-color: #53af2e !important;
+}
+
+.blue {
+    background-color: #008CBA !important;
+}
+
+.red {
+    background-color: #d93a32 !important;
+}
+
+.white {
+    color: white !important;
+}
+
+.gray {
+    background-color: #e7e7e7 !important;
+}
+
+.black {
+    background-color: #3b3a3a !important;
+}

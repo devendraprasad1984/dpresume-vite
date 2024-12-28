@@ -1,0 +1,30 @@
+database used is postgres
+1. create a new DB on postgres instance and update that in the settings.py file, into below variables
+    ENGINE = 'django.db.backends.postgresql'
+    DBNAME = 'geek_trust_loans'
+    UNAME = 'dpadmin'
+    HOST = 'localhost'
+    PORT = 5432
+    PWD = 'admin'
+2. pip install requirements.txt file in the root folder
+3. make sure you are on root folder and run
+    1. python3 manage.py makemigrations
+    2. python3 manage.py migrate
+4. python3 manage.py runserver localhost:6202
+5. go to http://localhost:6202/ and interact with swagger interface for api test. one postman sample is also @ postman public collection: https://documenter.getpostman.com/view/5894674/TzzEmtoD
+you may also use postman collection present in the docs folder
+look at demo video for steps here: youtube link: https://youtu.be/6-v_vIxyB4g
+
+
+
+heroku login
+heroku create
+git remote -v
+heroku git:remote -a test-loan-ledger-dp
+heroku config:set DISABLE_COLLECTSTATIC=1
+git push heroku main
+renaming: git remote rename heroku heroku-staging
+heroku ps:scale web=1 --app test-loan-ledger-dp
+heroku open --app test-loan-ledger-dp
+
+

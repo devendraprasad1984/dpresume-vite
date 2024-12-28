@@ -1,0 +1,10 @@
+{
+    "description": "The server is not ready to handle the request.",
+    "content": {
+        "text/plain": {
+          "schema": {
+            "type": "string"
+          }
+        }
+    }
+}

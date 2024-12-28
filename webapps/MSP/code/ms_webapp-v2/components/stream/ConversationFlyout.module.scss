@@ -1,0 +1,186 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  background-color: var(--colorWhite);
+  width: toRem(420);
+  max-height: calc(100vh - toRem($headerHeight));
+  overflow: auto;
+}
+
+.headerSection {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 0 toRem(28);
+  border-bottom: toRem(1) solid var(--colorGrey);
+  height: toRem(106);
+}
+
+.headerActions {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+}
+
+.singUserDisplaySection {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-gap: toRem(24);
+  padding: toRem(32);
+}
+
+.groupUserDisplaySection {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-gap: toRem(24);
+  padding: toRem(32);
+  border-bottom: toRem(1) solid var(--colorGrey);
+}
+
+.groupName {
+  @extend %header;
+  @extend %truncate;
+}
+
+.actionLinksSection {
+  padding: toRem(32);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: center;
+  align-content: center;
+  grid-gap: toRem(36);
+  border-bottom: toRem(1) solid var(--colorGrey);
+}
+
+.iconGroup {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-gap: toRem(8);
+}
+
+.iconWrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: var(--colorMandy);
+  width: toRem(50);
+  height: toRem(50);
+  border-radius: 50%;
+
+  path {
+    fill: var(--colorWhite);
+  }
+}
+
+.iconLabel {
+  @extend %buttonText;
+  color: var(--colorMandy);
+}
+
+.actionAccordionSection {
+  margin-bottom: toRem(44);
+}
+
+.accordionItem {
+  text-align: initial;
+  width: 100%;
+  display: grid;
+  grid-gap: toRem(16);
+  height: toRem(44);
+  padding: 0 toRem(24);
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  align-content: center;
+  border-bottom: toRem(1) solid var(--colorGrey);
+  transition: background-color var(--colorTransitionDuration) ease;
+
+  &:hover {
+    background: var(--colorWildSand);
+  }
+}
+
+.accordionItemTitle {
+  @extend %bodyMedium;
+  @extend %truncate;
+}
+
+.accordionItemIcon {
+  path {
+    fill: var(--colorWaterloo);
+  }
+}
+
+.groupListSection {
+  padding: toRem(24) toRem(28);
+  border-bottom: toRem(1) solid var(--colorGrey);
+}
+
+.groupHeader {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: toRem(32);
+}
+
+.groupList {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: toRem(80);
+  justify-content: start;
+  grid-gap: toRem(14);
+}
+
+.groupListItem {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-gap: toRem(8);
+}
+
+.memberName {
+  @extend %headerText;
+  @extend %truncate;
+  width: toRem(80);
+  text-align: center;
+}
+
+.bottomActionSection {
+  border-top: toRem(1) solid var(--colorGrey);
+  margin-top: toRem(44);
+}
+
+.bottomActionItem {
+  text-align: initial;
+  width: 100%;
+  display: grid;
+  grid-gap: toRem(16);
+  height: toRem(44);
+  padding: 0 toRem(24);
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  align-content: center;
+  border-bottom: toRem(1) solid var(--colorGrey);
+  transition: background-color var(--colorTransitionDuration) ease;
+
+  &:hover {
+    background: var(--colorWildSand);
+  }
+}
+
+.bottomActionItemIcon {
+  path {
+    fill: var(--colorMandy);
+  }
+}

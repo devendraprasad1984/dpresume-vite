@@ -1,0 +1,162 @@
+{
+    "tags": [
+        {
+            "name": "Company",
+            "description": "All methods for the company service"
+        }
+    ],
+    "paths": {
+        "/admin/company": {
+            "post": {
+                "tags": [
+                    "Company"
+                ],
+                "summary": "Create a new company",
+                "parameters": [
+                    {
+                        "name": "Company",
+                        "description": "New company object",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/Company"
+                        },
+                        "example": {
+                            "id": 0,
+                            "companyId": 0,
+                            "admin": {
+                                "userId": 0
+                            },
+                            "name": "Fresh Consulting",
+                            "category": "Retail",
+                            "established": 2021,
+                            "city": "Seattle",
+                            "state": "WA",
+                            "status": "active",
+                            "photo": "https://lh3.googleusercontent.com/a-/AOh14GhZEO7kMO94SmVUY60IMfzaBuKyNdw1TD840DmgmfY=s96-c",
+                            "bio": "Company Bio",
+                            "video": "https://www.video.com",
+                            "website": "https://www.website.com",
+                            "linkedIn": "https://www.linkedin.com",
+                            "facebook": "https://www.facebook.com",
+                            "instagram": "https://www.instagram.com",
+                            "twitter": "https://www.twitter.com"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success created",
+                        "schema": {
+                            "$ref": "#/definitions/Company"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Company"
+                ],
+                "summary": "Get all companies",
+                "parameters": [
+                    {
+                        "name": "perPage",
+                        "description": "How many items per pagination are request",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "true",
+                        "example": 5
+                    },
+                    {
+                        "name": "page",
+                        "description": "Page of the pagination",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "false",
+                        "example": 2
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Company"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Company": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "required": "true"
+                },
+                "companyId": {
+                    "type": "number",
+                    "required": "true"
+                },
+                "admin": {
+                    "type": "object",
+                    "required": "true",
+                    "properties": {
+                        "userId": {
+                            "type": "number",
+                            "required": "true"
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "category": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "established": {
+                    "type": "number",
+                    "required": "true"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "photo": {
+                    "type": "string"
+                },
+                "bio": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "video": {
+                    "type": "string"
+                },
+                "website": {
+                    "type": "string"
+                },
+                "linkedIn": {
+                    "type": "string"
+                },
+                "facebook": {
+                    "type": "string"
+                },
+                "instagram": {
+                    "type": "string"
+                },
+                "twitter": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

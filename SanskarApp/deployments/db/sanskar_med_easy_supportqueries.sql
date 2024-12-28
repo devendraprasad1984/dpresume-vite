@@ -1,0 +1,2 @@
+INSERT INTO sanskar_med_easy.supportqueries (id, name, mobile, email, query, isreplied, agentid, createdon) VALUES (1, 'devendra', 12123123123, 'devendraprasad1984@gmail.com', 'facing problem placing order, plz help and call and fix', 1, 1, '2021-01-01 12:46:16');
+INSERT INTO sanskar_med_easy.supportqueries (id, name, mobile, email, query, isreplied, agentid, createdon) VALUES (2, 'devendra', 123123123, 'deven@gmail.com', 'nice updates, call back', 0, 1, '2021-02-01 12:46:16');

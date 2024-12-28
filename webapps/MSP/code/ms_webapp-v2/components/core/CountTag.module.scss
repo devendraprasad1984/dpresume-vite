@@ -1,0 +1,10 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.tag {
+  @extend %tagBold;
+  background-color: var(--colorGrey);
+  padding: toRem(5) toRem(10);
+  border-radius: toRem(12);
+}

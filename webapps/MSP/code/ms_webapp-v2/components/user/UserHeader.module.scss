@@ -1,0 +1,14 @@
+@import "../nav/SubNav.module.scss";
+@import "../core/PageLayout.module.scss";
+
+.navInfoGroup {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  grid-gap: toRem(8);
+  align-items: center;
+}
+
+.status {
+  text-transform: uppercase;
+}

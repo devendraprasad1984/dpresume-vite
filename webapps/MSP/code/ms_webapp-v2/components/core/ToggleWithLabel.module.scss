@@ -1,0 +1,35 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.toggleWithLabel {
+  display: flex;
+  margin: toRem(16) 0;
+  align-items: center;
+  cursor: pointer;
+
+  &.hasSecondaryText {
+    align-items: flex-start;
+  }
+
+  .toggle {
+    pointer-events: none; // prevent click handler on parent element from firing twice
+  }
+
+  .labels {
+    display: flex;
+    flex-direction: column;
+    margin-left: toRem(16);
+
+    &Primary {
+      @extend %buttonText;
+      margin-bottom: toRem(2);
+      color: var(--colorSteelGray);
+    }
+
+    &Secondary {
+      @extend %body;
+      color: var(--colorDolphin);
+    }
+  }
+}

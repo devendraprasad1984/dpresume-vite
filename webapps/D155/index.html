@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D155 Expenses</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="container">
+
+<div class="header">
+    <img src="images/icon.png" class="logo">
+    <h1>D155 Expenses Manager</h1>
+<!--    <div class="myIcons">-->
+<!--        <img src="images/anish.png" class="icon" alt=""/>-->
+<!--        <img src="images/dp.png" class="icon" alt=""/>-->
+<!--        <img src="images/dev.png" class="icon" alt=""/>-->
+<!--        <img src="images/ajay.png" class="icon" alt=""/>-->
+<!--    </div>-->
+</div>
+
+<div>
+    <button id="btnUnlock" class="btn blue textwhite" onclick="handleUnlock(this.id)">Unlock</button>
+    <button id="btnGrid" class="btn purple textwhite" onclick="changeView('grid')">Grid</button>
+    <button id="btnCard" class="btn purple textwhite" onclick="changeView('card')">Card</button>
+    <button id="btnSummary" class="btn green textwhite" onclick="cardClick('summaryCard')">SUMMARY</button>
+</div>
+
+<div id="formInputs" class="input-inline purple hide">
+    <select id="names">
+        <option value="anish" selected>Anish Ji</option>
+        <option value="dp">Devendra Ji</option>
+        <option value="dev">Devdatt Ji</option>
+        <option value="ajay">Ajay Ji</option>
+    </select>
+    <select id="time">
+        <option value="Oct2020">Oct2020</option>
+    </select>
+    <input id="amount" type="text" value="1000" class="input-right"
+           placeholder="enter your amount, if expenses place negative number" width="50px">
+    <input id="remarks" type="text" placeholder="eg regular maintenance" width="150px">
+    <button id="btnSubmit" class="btn red" onclick="handleSubmit(this.id)">Submit</button>
+</div>
+
+
+<div>
+    <div id="search1">
+        <input id="idSearchBox" class="searchText" type="text" onkeypress="searchByKeyword(event)" placeholder="enter search keyword by name,remarks,amount(>0|<0),month/years etc">
+        <button id="idSearchBtn" class="btn green textwhite" onclick="handleRefresh()">Search</button>
+        <button id="idwhatsapp" class="btn purple textwhite" onclick="sendMsg()">Send WhatsApp</button>
+    </div>
+    <div id="report1" class="divx"></div>
+</div>
+
+
+<script src="./libs/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js" integrity="sha512-C2RveGuPIWqkaLAluvoxyiaN1XYNe5ss11urhZWZYBUA9Ydgj+hfGKPcxCzTwut1/fmjEZR7Ac35f2aycT8Ogw==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css"
+      integrity="sha512-f8gN/IhfI+0E9Fc/LKtjVq4ywfhYAVeMGKsECzDUHcFJ5teVwvKTqizm+5a84FINhfrgdvjX8hEJbem2io1iTA=="
+      crossorigin="anonymous"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+        crossorigin="anonymous"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

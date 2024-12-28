@@ -1,0 +1,635 @@
+{
+    "tags": [
+        {
+            "name": "System",
+            "description": "To check the status of the Services"
+        },
+        {
+            "name": "Channel",
+            "description": "All the methods for the Channel Service"
+        },
+        {
+            "name": "Message",
+            "description": "All the methods for the Message Service"
+        },
+        {
+            "name": "User",
+            "description": "All the methods for the User Service"
+        }
+    ],
+    "paths": {
+        "/message/filter/": {
+            "post": {
+                "tags": [
+                    "Message"
+                ],
+                "summary": "Filter messages by keyword",
+                "parameters": [
+                    {
+                        "name": "keyword",
+                        "description": "filter object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "example": {
+                            "keyword": "word"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/message/ping": {
+            "get": {
+                "tags": [
+                    "System"
+                ],
+                "summary": "Check the communication with the conversation service",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/message/channel/filter": {
+            "post": {
+                "tags": [
+                    "Channel"
+                ],
+                "summary": "Filter a channel with specific type of filter and parameters",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "description": "filter object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilter"
+                        },
+                        "example": {
+                            "filter": "getByMembers",
+                            "data": {
+                                "members": [
+                                    "4b8de3be-a832-6cb6-acde-f0c47f23d2a6",
+                                    "0a473312-b7fe-e9f3-461a-a436d548711d"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/message/channel": {
+            "post": {
+                "tags": [
+                    "Channel"
+                ],
+                "summary": "Creates a new channel",
+                "parameters": [
+                    {
+                        "name": "channel",
+                        "description": "New Channel object",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/Channel"
+                        },
+                        "example": {
+                            "name": "Channel Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully created"
+                    }
+                }
+            }
+        },
+        "/message/channel/invite": {
+            "post": {
+                "tags": [
+                    "Channel"
+                ],
+                "summary": "Invite members to a specific channel",
+                "parameters": [
+                    {
+                        "name": "inviteMember",
+                        "description": "Invite new members request",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/InviteMember"
+                        },
+                        "example": {
+                            "channelRef": "2f4bdba3-58a5-45d8-3714-ebbc4cc45e58",
+                            "members": [
+                                "4b8de3be-a832-6cb6-acde-f0c47f23d2a6",
+                                "0a473312-b7fe-e9f3-461a-a436d548711d"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully invited"
+                    }
+                }
+            }
+        },
+        "/message/channel/invite/{id}": {
+            "patch": {
+                "tags": [
+                    "Channel"
+                ],
+                "summary": "Update member invite to a specific channel, if the status is active, that means the user accepts, if is archived the user rejects",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Member Request will be updated",
+                        "required": "true",
+                        "type": "number",
+                        "example": 30
+                    },
+                    {
+                        "name": "updateMemberInvite",
+                        "description": "Update invite member request",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/UpdateInvite"
+                        },
+                        "example": {
+                            "channelRef": "2f4bdba3-58a5-45d8-3714-ebbc4cc45e58",
+                            "userRef": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6",
+                            "status": "active"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully invited"
+                    }
+                }
+            }
+        },
+        "/message/channel/leave": {
+            "post": {
+                "tags": [
+                    "Channel"
+                ],
+                "summary": "Kick members off or leave from a specific channel",
+                "parameters": [
+                    {
+                        "name": "leaveChannel",
+                        "description": "Leave channel request",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/LeaveChannel"
+                        },
+                        "example": {
+                            "channelRef": "2f4bdba3-58a5-45d8-3714-ebbc4cc45e58",
+                            "members": [
+                                "4b8de3be-a832-6cb6-acde-f0c47f23d2a6",
+                                "0a473312-b7fe-e9f3-461a-a436d548711d"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully removed"
+                    }
+                }
+            }
+        },
+        "/message/channel/member/filter": {
+            "post": {
+                "tags": [
+                    "Channel"
+                ],
+                "summary": "Get all the filtered records",
+                "parameters": [
+                    {
+                        "name": "perPage",
+                        "description": "How many items per pagination are request",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "true",
+                        "example": 5
+                    },
+                    {
+                        "name": "page",
+                        "description": "Requested page",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "false",
+                        "example": 2
+                    },
+                    {
+                        "name": "Request filter",
+                        "description": "object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilterChannelMember"
+                        },
+                        "example": {
+                            "filter": "getByChannel",
+                            "data": {
+                                "channelRef": "61388fdf-cefa-3f19-a082-41e856911cec"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/PaginationResponseChannelMember"
+                        }
+                    }
+                }
+            }
+        },
+        "/message/channel/archive/{ref}": {
+            "post": {
+                "tags": [
+                    "Channel"
+                ],
+                "summary": "Archive a specific channel",
+                "parameters": [
+                    {
+                        "name": "ref",
+                        "in": "path",
+                        "description": "ref of channel that will be archived",
+                        "required": "true",
+                        "type": "string",
+                        "example": {
+                            "ref": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully archived"
+                    }
+                }
+            }
+        },
+        "/message/channel/{ref}": {
+            "delete": {
+                "tags": [
+                    "Channel"
+                ],
+                "summary": "Delete a specific channel",
+                "parameters": [
+                    {
+                        "name": "ref",
+                        "in": "path",
+                        "description": "ref of channel that will be deleted",
+                        "required": "true",
+                        "type": "string",
+                        "example": {
+                            "ref": "2f4bdba3-58a5-45d8-3714-ebbc4cc45e58"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Channel"
+                ],
+                "summary": "Update channel name",
+                "parameters": [
+                    {
+                        "name": "ref",
+                        "in": "path",
+                        "description": "ref of channel that will be updated",
+                        "required": "true",
+                        "type": "string",
+                        "example": {
+                            "ref": "2f4bdba3-58a5-45d8-3714-ebbc4cc45e58"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "body",
+                        "description": "New name of channel",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/ChannelData"
+                        },
+                        "example": {
+                            "name": "New name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully updated"
+                    }
+                }
+            }
+        },
+        "/message/send": {
+            "post": {
+                "tags": [
+                    "Message"
+                ],
+                "summary": "Send a message through a specific channel",
+                "parameters": [
+                    {
+                        "name": "sendMessage",
+                        "description": "New send message request",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/SendMessage"
+                        },
+                        "example": {
+                            "channelRef": "2f4bdba3-58a5-45d8-3714-ebbc4cc45e58",
+                            "message": "@Josh I told them I was pesca-pescatarian. Which is one who eats solely fish who eat other fish.",
+                            "userRef": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully invited"
+                    }
+                }
+            }
+        },
+        "/message/archive/{ref}": {
+            "post": {
+                "tags": [
+                    "Message"
+                ],
+                "summary": "Archive a specific message",
+                "parameters": [
+                    {
+                        "name": "ref",
+                        "in": "path",
+                        "description": "Stream ID of message that will be archived",
+                        "required": "true",
+                        "type": "string",
+                        "example": {
+                            "ref": "859e0847-6c65-4e0b-8838-269ebd86f6d6"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully archived"
+                    }
+                }
+            }
+        },
+        "/message/user/token": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get a token from Stream for User Id in the token",
+                "responses": {
+                    "200": {
+                        "description": "Successfully retrieved"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Channel": {
+            "type": "object",
+            "properties": {
+                "members": {
+                    "type": "array",
+                    "required": true,
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "4b8de3be-a832-6cb6-acde-f0c47f23d2a6",
+                        "0a473312-b7fe-e9f3-461a-a436d548711d"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "required": false,
+                    "example": "Test1"
+                }
+            }
+        },
+        "ChannelData":{
+            "type": "object",
+            "properties":{
+                "name": {
+                    "type": "string",
+                    "required": true,
+                    "example": "New name"
+                }
+            }
+        },
+        "DataFilter": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getByMembers"
+                    ],
+                    "required": "true",
+                    "example": "getByMembers"
+                },
+                "data": {
+                    "type": "object",
+                    "required": "true",
+                    "example": {
+                        "members": [
+                            "4b8de3be-a832-6cb6-acde-f0c47f23d2a6",
+                            "0a473312-b7fe-e9f3-461a-a436d548711d"
+                        ]
+                    }
+                }
+            }
+        },
+        "InviteMember": {
+            "type": "object",
+            "properties": {
+                "channelRef": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "2f4bdba3-58a5-45d8-3714-ebbc4cc45e58"
+                },
+                "members": {
+                    "type": "array",
+                    "required": "true",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                    ]
+                }
+            }
+        },
+        "LeaveChannel": {
+            "type": "object",
+            "properties": {
+                "channelRef": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "2f4bdba3-58a5-45d8-3714-ebbc4cc45e58"
+                },
+                "members": {
+                    "type": "array",
+                    "required": "true",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                    ]
+                }
+            }
+        },
+        "UpdateInvite": {
+            "type": "object",
+            "properties": {
+                "channelRef": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "2f4bdba3-58a5-45d8-3714-ebbc4cc45e58"
+                },
+                "userRef": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                },
+                "status": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "active"
+                }
+            }
+        },
+        "SendMessage": {
+            "type": "object",
+            "properties": {
+                "channelRef": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "2f4bdba3-58a5-45d8-3714-ebbc4cc45e58"
+                },
+                "messageText": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "@Josh I told them I was pesca-pescatarian. Which is one who eats solely fish who eat other fish."
+                },
+                "userRef": {
+                    "type": "string",
+                    "required": "false",
+                    "example": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                }
+            }
+        },
+        "PaginationResponseChannelMember": {
+            "type": "object",
+            "properties": {
+                "currentPage": {
+                    "type": "number",
+                    "example": 1
+                },
+                "lastPage": {
+                    "type": "number",
+                    "example": 2
+                },
+                "totalCount": {
+                    "type": "number",
+                    "example": 16
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TopicMember"
+                    }
+                }
+            }
+        },
+        "DataFilterChannelMember": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getByTopic",
+                        "getByChannel"
+                    ],
+                    "required": "true",
+                    "example": "getByChannel"
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "channelRef": {
+                            "type": "string",
+                            "example": "61388fdf-cefa-3f19-a082-41e856911cec"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

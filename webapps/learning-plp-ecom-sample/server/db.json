@@ -1,0 +1,136 @@
+{
+  "facets": [
+    {
+      "facetId": "price_f",
+      "name": "Price",
+      "position": 2,
+      "values": {
+            "counts": [
+              "0",
+              4,
+              "300",
+              4,
+              "400",
+              2
+            ],
+            "gap": 100,
+            "start": 0,
+            "end": 2000
+          }
+    },
+    {
+      "facetId": "color_f",
+      "name": "Color",
+      "position": 3,
+      "values": ["Black", "Blue", "Pink", "Green", "Red"]
+    },
+    {
+      "facetId": "gender_f",
+      "name": "Gender",
+      "position": 1,
+      "values": ["men", "women"]
+    }
+  ],
+  "catalog": [
+    {
+      "id": 1,
+      "imageURL": "http://placehold.it/150/1b21a0/ffffff",
+      "name": "product A",
+      "type": "",
+      "price": 250,
+      "currency": "$",
+      "color": "Black",
+      "gender": "men"
+    },
+    {
+      "id": 2,
+      "imageURL": "http://placehold.it/150/bc4125/ffffff",
+      "name": "product B",
+      "type": "",
+      "price": 350,
+      "currency": "$",
+      "color": "Blue",
+      "gender": "women"
+    },
+    {
+      "id": 3,
+      "imageURL": "http://placehold.it/150/5abc25/ffffff",
+      "name": "product C",
+      "type": "",
+      "price": 150,
+      "currency": "$",
+      "color": "Pink",
+      "gender": "men"
+    },
+    {
+      "id": 4,
+      "imageURL": "http://placehold.it/150/ebf742/ffffff",
+      "name": "product D",
+      "type": "",
+      "price": 500,
+      "currency": "$",
+      "color": "Black",
+      "gender": "men"
+    },
+    {
+      "id": 5,
+      "imageURL": "http://placehold.it/150/d121c8/ffffff",
+      "name": "product E",
+      "type": "",
+      "price": 280,
+      "currency": "$",
+      "color": "Green",
+      "gender": "women"
+    },
+    {
+      "id": 6,
+      "imageURL": "http://placehold.it/150/d121c8/ffffff",
+      "name": "product F",
+      "type": "",
+      "price": 300,
+      "currency": "$",
+      "color": "Green",
+      "gender": "men"
+    },
+    {
+      "id": 7,
+      "imageURL": "http://placehold.it/150/5abc25/ffffff",
+      "name": "product G",
+      "type": "",
+      "price": 250,
+      "currency": "$",
+      "color": "Blue",
+      "gender": "men"
+    },
+    {
+      "id": 8,
+      "imageURL": "http://placehold.it/150/d121c8/ffffff",
+      "name": "product H",
+      "type": "",
+      "price": 500,
+      "currency": "$",
+      "color": "Black",
+      "gender": "women"
+    },
+    {
+      "id": 9,
+      "imageURL": "http://placehold.it/150/1b21a0/ffffff",
+      "name": "product I",
+      "type": "",
+      "price": 300,
+      "currency": "$",
+      "color": "Blue",
+      "gender": "men"
+    },
+    {
+      "id": 10,
+      "imageURL": "http://placehold.it/150/d121c8/ffffff",
+      "name": "product J",
+      "type": "",
+      "price": 300,
+      "currency": "$",
+      "color": "Red",
+      "gender": "men"
+    }
+  ]
+}

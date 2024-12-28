@@ -1,0 +1,106 @@
+{
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jsdoc/recommended",
+        "plugin:prettier/recommended" // must be last in the list
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 13,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "prettier", 
+        "jsdoc",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "prettier/prettier": "error",
+        "object-curly-spacing": ["error", "always"],
+        "object-curly-newline": [
+            "error", 
+            {
+                "ObjectExpression": {"multiline": true},
+                "ObjectPattern": {"multiline": true},
+                "ImportDeclaration": {"multiline": true},
+                "ExportDeclaration": {"multiline": true}
+            }
+        ],
+        "@typescript-eslint/array-type": ["error", {"default": "array"}],
+        "@typescript-eslint/consistent-type-definitions": ["error", "interface"],        
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {"selector": "class", "format": ["PascalCase"]},
+            {"selector": "interface", "format": ["PascalCase"], "custom": {"regex": "^I[A-Z]", "match": true}},
+            {"selector": "typeAlias", "format": ["PascalCase"]},
+            {"selector": "typeParameter", "format": ["PascalCase"], "prefix": ["T"]},
+            {"selector": "property", "format": ["strictCamelCase"], "modifiers": ["public", "protected", "static"]},
+            {"selector": "property", "format": ["strictCamelCase"], "modifiers": ["private"], "leadingUnderscore": "require"},
+            {"selector": "method", "format": ["strictCamelCase"]},
+            {"selector": "function", "format": ["strictCamelCase"]},
+            {"selector": "parameter", "format": ["strictCamelCase"]}            
+        ],     
+        "@typescript-eslint/no-inferrable-types": "off",   
+        "@typescript-eslint/typedef": [
+            "error",
+            {
+                "arrayDestructuring": true,
+                "objectDestructuring": true,
+                "arrowParameter": true,
+                "memberVariableDeclaration": true,
+                "parameter": true,
+                "propertyDeclaration": true                
+            }
+        ],
+        "jsdoc/no-types": 0,
+        "jsdoc/no-undefined-types": 0,
+        "jsdoc/require-param-type": 2,
+        "jsdoc/require-property-type": 2,
+        "jsdoc/require-returns-type": 2,
+        "jsdoc/require-description": [
+            "error",
+            {
+                "contexts": [
+                    "ClassDeclaration",
+                    "InterfaceDeclaration",
+                    "ClassMethod",
+                    "MethodDefinition",
+                    "TSEnumDeclaration",
+                    "TSInterfaceDeclaration",
+                    "TSTypeAliasDeclaration",
+                    "TSDeclareFunction",
+                    "TSMethodSignature"
+                ]
+            }
+        ],
+        "jsdoc/require-jsdoc": [
+            "error",
+            {
+                "contexts": [
+                    "ClassDeclaration",
+                    "InterfaceDeclaration",
+                    "ClassMethod",
+                    "MethodDefinition",
+                    "TSEnumDeclaration",
+                    "TSInterfaceDeclaration",
+                    "TSTypeAliasDeclaration",
+                    "TSDeclareFunction",
+                    "TSMethodSignature"                    
+                ]
+            }
+        ]        
+    },
+    "settings": {
+        "jsdoc": {
+            "mode": "typescript",
+            "tagNamePreferences": {
+                "class": false,
+                "function": false,
+                "method": false,
+                "interface": false,
+                "enum": false,
+                "type": false
+            }
+        }
+    }
+}

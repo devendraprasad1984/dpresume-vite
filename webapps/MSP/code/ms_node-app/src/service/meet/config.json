@@ -1,0 +1,22 @@
+{
+    "docs": {
+        "version": "0.0.0",
+        "title": "Meet API Service",
+        "description": "Documentation for the Meet API Service",
+        "routes": "./src/service/meet/routes.ts",
+        "url": "/meet/api-docs",
+        "models":{
+            "tags": [],
+            "paths": {},
+            "definitions":{}
+        }
+    },
+    "port": 5003,
+    "prefix": "/meet",
+    "route": {
+        "meet": "",
+        "ping": "ping",
+        "room": "room",
+        "user": "user"
+    }
+}

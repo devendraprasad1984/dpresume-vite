@@ -1,0 +1,19 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.messageContainer {
+  border-radius: toRem(12);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5em 0.8em 0.6em;
+  margin: 0.3em 0 0;
+  word-break: break-word;
+  background-color: #e1e3ea;
+  hyphens: auto;
+  white-space: pre-wrap;
+}
+
+.isLocalParticipant {
+  background-color: #cce4ff;
+}

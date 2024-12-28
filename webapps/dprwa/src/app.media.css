@@ -1,0 +1,190 @@
+@media screen and (max-width: 600px) {
+    .wid30, .wid70 {
+        width: 100%;
+    }
+
+    .pad20 {
+        padding: 5px;
+        margin: 0;
+    }
+
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    /*.row > span {*/
+    /*    width: auto;*/
+    /*}*/
+
+    .size25 {
+        font-size: 17px;
+    }
+
+
+    .size30 {
+        font-size: 15px;
+    }
+
+    .size20 {
+        font-size: 15px;
+    }
+
+    .size14 {
+        font-size: 10px;
+    }
+
+    .size35 {
+        font-size: 25px;
+    }
+
+    .searchText {
+        width: 100%;
+    }
+
+    .bottomFixed{
+        position: relative;
+    }
+
+
+    .card {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+
+    .flexbox {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        display: grid;
+    }
+
+    .menuicon {
+        font-size: 20px;
+    }
+
+    /*.fixed {*/
+    /*    position: fixed;*/
+    /*}*/
+
+    .content-left {
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: fixed;
+        z-index: 120;
+        opacity: 0.93;
+        height: 100%;
+        width: 70vw;
+        top: 0;
+        left: 0;
+        background-color: var(--white);
+    }
+
+    .cell{
+        min-width: 50px;
+    }
+
+
+    .sidePicLeft{
+        width: 100%;
+    }
+
+
+    .main-container {
+        width: 100%;
+        opacity: 0.92;
+    }
+
+    .topbar{
+        width: 95%;
+    }
+
+
+    .bg{
+        background-size: auto;
+    }
+
+    .content-right {
+        width: 100%;
+    }
+
+    /*.gapSwitchMobile {*/
+    /*    margin-top: 12em;*/
+    /*}*/
+
+    #imgPic, .imgPic {
+        bottom: 0;
+        margin-bottom: 10%;
+        position: fixed;
+        z-index: 100001;
+        /*left: 2rem;*/
+        /*object-fit: cover;*/
+        /*object-fit: fill;*/
+    }
+
+    .topbar {
+        display: inline;
+        font-size: 15px !important;
+    }
+
+    .topbar > .name > span,
+    .topbar .name > i,
+    div a > i {
+        font-size: 15px;
+    }
+    .cell{
+        min-width: 50px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .gridRow {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+    }
+
+    .overlay .closebtn {
+        font-size: var(--size10px);
+        top: 5px;
+        right: -40px;
+    }
+
+    /*.togglePanel {*/
+    /*    font-size: 12px;*/
+    /*}*/
+    label{
+        font-size: 10px;
+    }
+    ::placeholder{
+        font-size: 10px;
+    }
+
+    .pright {
+        margin-bottom: 20px;
+    }
+
+
+    a {
+        font-size: 8px;
+    }
+
+    .btn {
+        padding: 0.275rem 0.225rem;
+        line-height: 1;
+    }
+
+
+}

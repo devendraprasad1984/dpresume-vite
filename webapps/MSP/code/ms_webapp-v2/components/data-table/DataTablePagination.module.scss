@@ -1,0 +1,88 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  position: fixed;
+  bottom: 0;
+  left: toRem($sidebarWidth);
+  background: var(--colorWhite);
+  display: grid;
+  width: calc(100% - toRem($sidebarWidth));
+  height: toRem($dataTablePaginationHeight);
+  border-top: toRem(1) solid var(--colorMischka);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 toRem(40);
+}
+
+.perPageSelector {
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  grid-gap: toRem(8);
+}
+
+.itemsPerPage,
+.ofPage {
+  @extend %smallBody;
+  color: var(--colorWaterloo);
+}
+
+.pagingButtons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  align-items: center;
+  grid-gap: toRem(8);
+}
+
+%paginationButton {
+  @extend %smallBody;
+  color: var(--colorMandy);
+  background-color: var(--colorAthensGrey);
+  border-radius: toRem(12);
+  padding: toRem(8) toRem(12);
+  height: toRem(34);
+
+  path {
+    fill: var(--colorMandy);
+  }
+
+  &:disabled {
+    color: var(--colorDisabled);
+    cursor: not-allowed;
+
+    path {
+      fill: var(--colorDisabled);
+    }
+  }
+}
+
+.firstButton {
+  @extend %paginationButton;
+}
+
+.previousButton {
+  @extend %paginationButton;
+}
+
+.paginationInput input {
+  padding: toRem(7) toRem(22);
+}
+
+.nextButton {
+  @extend %paginationButton;
+}
+
+.lastButton {
+  @extend %paginationButton;
+}

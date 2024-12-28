@@ -1,0 +1,4616 @@
+{
+  "Data": {
+    "Transaction": [
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "4fab4529-dc06-4abf-a10a-0789e9f97071",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T21:44:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14429.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "4cddb663-9717-4f11-a86e-e6969860d817",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T21:44:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14403.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "983b214d-d0ff-46cf-a2aa-923a5897030f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T21:49:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14376.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "00732ce1-e9a4-4e2c-9aa2-e3662ef6ab92",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T21:49:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14350.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "9aed4543-1b57-4182-bf37-7a56283d46eb",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T21:54:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14323.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "3c86f2fa-3dcf-402a-8994-0ba2407cc3a6",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T21:54:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14297.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "3511e237-5f89-4ffd-92ab-64bfb4de08e5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T21:59:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14270.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "af0adabc-f68d-40f6-a0b2-649b6d832ab7",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T21:59:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14244.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "5a5d1f8f-f8f4-4854-9541-440e5b1cf131",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14217.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "ce76c3d6-ebd2-48e3-92fe-c04261fdc945",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14191.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "6931db51-4667-4927-8329-011d9f5b7ab1",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:09:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14164.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "81ed8c3d-775f-488d-96fa-7680acefbc0b",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:14:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14138.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "64a1ebab-3507-41fc-908a-c34b7c58ec34",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:19:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14111.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "d8f94a75-2d40-40cc-9b44-1c25bc03005a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:24:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14085.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "81691ea6-a5c9-44e2-91ed-3841ea17a693",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:29:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14058.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "00524059-eb81-491d-8bef-31d68b2979da",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:34:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14032.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "4fd3fcca-b0b8-4117-9e9a-405cce7ead5c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:39:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "14006.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "6d735b05-d5a8-41fa-b432-f5304a61a608",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:44:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13979.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "47aed733-a1e1-4b6c-b8ad-69891f4e3e6c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:49:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13953.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "00ddfb32-75fd-4454-8e8b-8bda6c4f1c80",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:54:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13926.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "72ae1086-1f77-4dbc-9d13-0b14d44e152c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T22:59:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13900.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "b3265633-5b5d-44eb-a82e-b0a32155e936",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13873.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "8828b970-5ecd-47a2-9d5a-79335ffad909",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:09:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13847.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "1daeddb6-0cd9-4934-9a7c-27d6ed3a5ac4",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:14:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13820.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "cbdeeaa7-22bb-4aa5-a7a5-fe94661d8b36",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:19:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13794.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "fb9b0df0-97cc-4edb-8bc0-c3afaa58f071",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:24:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13767.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "0462b066-dc27-4a7d-8f3c-d4662be23587",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:29:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13741.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "270ee9a5-6437-4767-89a2-8d4a4ac6ce3e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:34:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13714.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "904d1ecb-93b1-4901-ac03-24bf9dafb63d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:39:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13688.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "31a7f2e9-e870-4463-913a-6821eefc7e18",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:44:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13661.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "8c925e1e-a38a-4df2-835b-e9bcb2f9d2b9",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:49:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13635.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "816b3ca6-4502-4c64-b06e-ae5bf284e469",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:54:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13608.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "e09df32e-3e7f-4340-be34-55ed673cbd7a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-26T23:59:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13582.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "645146b8-0b37-41ed-b852-46100ccb36fe",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13555.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "45aae9a1-cc95-4806-8bfe-e9565fcc86dc",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13529.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "4f73484f-7f79-43a1-9dae-2982a8f02a3d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:10:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13502.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "e6d12fdb-1ea0-41b6-809d-310378f512b7",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:15:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13476.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "0a61ee64-d7d5-4b4f-b25e-f0f1ab0d4d96",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:20:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13449.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "85584301-1962-4166-b248-d279d0c12cb0",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:25:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13423.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "4e87b1e5-9748-4f0d-9620-ebcbc261616e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:30:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13396.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "f95211a2-ff32-4481-8c8a-e981ac7ed087",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:35:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13370.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "12a77a5b-21bf-4715-a609-b5e971f2dccf",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:40:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13344.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "0d35b13f-e118-438a-932c-f02e47950102",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:45:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13317.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "57ef1128-22c8-4897-84cd-3af68c2090e7",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:50:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13291.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "67b5924d-736f-44cd-b26d-1452b782cf8c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T00:55:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13264.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "cc5157b4-ad77-4b2b-8256-5a7bbd5ff517",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T01:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13238.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "43b1f2fb-fa74-4e5d-badb-30483bcc1e90",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T01:05:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13211.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "0ce37ee2-a8f8-4348-9b00-c8d3b8c753b6",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T01:10:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13185.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "087a5e07-edbb-42dd-af02-ee03f96f05ae",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T01:15:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13158.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "52089042-b781-4875-aa60-fafd8b4d9c99",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T01:20:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13132.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "4b60ff0b-859e-4641-814f-274e742d4b1d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T01:25:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13105.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "144a9aec-fa7c-423d-aeb2-b42db18f8aea",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T01:30:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13079.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "292e6085-1e27-42f6-ba35-776ed0237eb3",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T01:35:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13052.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "22421542-3ae1-436e-95c3-f90eae6d6801",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-27T01:40:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "13026.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "505326cb-b4f6-4d18-a5d5-3267a91d1d6c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-28T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12999.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "e4aef03e-42b3-4f8c-a867-b694a11e6e17",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-28T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12973.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "c2041f75-2d33-4f09-9960-5f4a4440a3e2",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-29T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12946.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "5cb3cb87-1a4c-4f69-be79-d35a487d42c4",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-06-30T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12920.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "d62e6a60-b8b9-4645-a2ea-7b33f63c2503",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-01T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12893.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "42aebc9f-88af-4cfe-951f-6c1cd88766db",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-01T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12867.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "b940c874-89dc-4990-8a9e-6f93378da11d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-02T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12840.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "7cbfe933-a7fa-4c95-bf89-3bb0cf631ec4",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-02T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12814.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "963c4592-f788-41d8-9f61-868be2bf2215",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-03T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12787.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "b559793b-3422-4c13-9d19-6b2b5919da43",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-03T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12761.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "377eaba9-0dad-4b30-b30a-db045917987e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-04T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12734.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "bf7938b8-0a9a-43bc-b963-0b7699b700ec",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-04T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12708.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "a55721e5-12e2-442d-895b-285c13d6d8ed",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-05T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12682.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "b6d49b71-cecb-4276-b4e1-0cf561ac4817",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-05T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12655.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "e59389cd-cb53-4b82-95cd-21396ef5eac4",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-06T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12629.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "cfcbba6f-65dc-414a-9d83-800fe75d5755",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-07T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12602.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "46451192-78b4-4241-9077-1f3e379f1539",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-08T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12576.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "d8dd5642-ec06-47a8-b78a-64e2ea1af7cf",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-08T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12549.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "9f72b6ae-66a3-43f6-b3fe-f36433bca6a0",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-09T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12523.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "7466b35c-63af-47bd-a179-0280e15f07cf",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-09T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12496.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "0eb738e3-24f2-4c7b-ad3d-347bb12afbf5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-10T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12470.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "33b7d204-811d-4038-b2a5-89deec736b3a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-10T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12443.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "38f9b0b0-0c1f-4bc1-ab0a-1bde919e3a7d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-11T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12417.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "cea0830b-0b02-472f-a2d2-33107f95848e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-11T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Tesco",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12390.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "73dde85f-50bb-41f4-aff3-f2fdce9b6fc1",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-12T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12364.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "f5a468e5-2da9-4dbb-82c2-72bb425433e7",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-12T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12337.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "a2c1092b-783f-46ba-a052-aaee04b16b8c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-13T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12311.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "2c55ae07-63ac-49fe-a359-04f7d8b6f76a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-14T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12284.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "fe721efc-12ea-4820-800c-526614cd685b",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-15T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12258.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "bc512a24-e8c2-4a00-9e85-a613934ea34f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-15T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12231.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "a953a2ed-6964-43b7-9971-5d2e03dec5df",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-16T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12205.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "090f7c02-d46e-45c1-926d-ff988512d8ad",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-16T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12178.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "87b6db0e-886b-4333-b768-e9faddba70ab",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-17T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12152.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "f22e2c71-12ad-417a-beed-daa49f7391aa",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-17T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12125.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "be59f644-be98-4528-b157-b8e11be1e02b",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-18T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12099.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "f4b0ffd6-0579-4eb1-9d10-b63e5ab6a430",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-18T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12072.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "8b1d6dfe-4bea-4e2d-b017-b411cf838977",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-19T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12046.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "578406a1-f41a-4f6b-8794-46c3e4f3359d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-19T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "12020.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "036cb222-327c-4e9e-bbee-20ac327cd119",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-20T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11993.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "36dc9506-d618-4949-af81-d9cca07783c6",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-21T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11967.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "24d6ba31-12d7-42dc-b214-43747280be70",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-22T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11940.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "85dd59c4-9ad3-4483-951d-8ce983b27085",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-22T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11914.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "4e800ac5-7a5d-45a8-ba01-21a4fc1d3ca6",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-23T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11887.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "6d831963-aaca-4b64-b9ee-2689a64bfb37",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-23T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11861.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "9ef43110-acca-4ce9-b973-c438e830f851",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-24T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11834.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "c09b74f5-86e0-416a-8902-163f3c7da1da",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-24T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11808.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "053bf273-8b6c-479b-9603-bc5c5cbf1715",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-25T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11781.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "66f1fc20-142c-45c7-a2b5-29b1f4c22e2c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-25T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11755.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "12170dae-7a6c-408a-b0a7-9bd745dee1b6",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-26T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11728.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "974e4d27-0b9b-4c99-b7e2-96c54f3366ce",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-26T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11702.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "d5d8fa41-f9dc-4024-a122-cd5bfb662d17",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-27T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11675.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "1e71db29-d407-470a-990c-c0cd3644f9e1",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-28T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11649.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "e4632604-095a-4a36-98d1-be92cb73c73d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-29T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11622.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "d30b24b8-e085-496a-a96c-69b2f5d14a0f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-29T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11596.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "a32926ec-f0ff-4c7a-8176-626322f5db83",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-30T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11569.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "95e334ab-2bfe-4188-b8cd-b028a4697f71",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-30T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11543.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "8f702938-5733-483f-9714-496d66834fad",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-31T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11516.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "3db97f0f-c28e-46c6-84a8-7f5eced7b0a5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-07-31T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11490.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "469bad0d-8d92-4b2b-9961-385a429abe91",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-01T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11463.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "ef7b0dab-779c-47af-a3d1-8893037b841b",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-01T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11437.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "af35bbb7-f639-4370-9d2e-306a1e6497b9",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-02T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11410.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "b7ccf539-35a2-401a-9faf-109e2c94b9de",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-02T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11384.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "0edc6ba8-641e-4a15-9f6f-c955150f0673",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-03T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11358.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "1dc3c05c-9cf7-4c51-84b1-21b3f5d479a1",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-04T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11331.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "7d59423e-cbd5-478e-b510-d29841fbe0d5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-05T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11305.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "28f9f9ac-f6d1-4da2-9798-4d51cd3745cf",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-05T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11278.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "da0e7835-8a49-4339-b14d-ffdf2da47f16",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-06T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11252.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "3d7e4053-7679-454d-862d-b79a7f590e50",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-06T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11225.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "1c39b38f-f729-4bc7-a4cb-153d201f3ab0",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-07T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11199.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "f5c9f4bc-4d18-4c98-8d0d-743b75fd8773",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-07T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11172.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "87d48eab-3c53-4284-aee7-c98d1463a2c6",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-08T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11146.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "6f2e9bea-9be1-480f-9802-3c592e459f44",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-08T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11119.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "31081fee-9377-45d7-8960-b28a5bf90217",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-09T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11093.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "e53f4e24-1571-447d-9eac-58ae687c12d5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-09T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11066.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "79251668-1483-4e9d-a0e1-6907ac7ea56f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-10T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11040.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "d20cfcba-363e-41a9-a6f5-fa6ed37bc561",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-11T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "11013.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "2c8a96ee-9a37-431f-8199-56b86afca5f4",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-12T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10987.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "2e9921b1-7d05-463a-846d-76d51703e20f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-12T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10960.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "6f435c0d-862e-42e3-a409-9a1f9a8445a0",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-13T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10934.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "3119e7df-fc3b-4bdd-87e4-796e7dbe23d5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-13T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10907.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "64052920-61cf-433d-be4a-832991a62fd9",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-14T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10881.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "b1a8b6a7-426f-450d-ac3d-30767dc73751",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-14T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10854.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "4c77e82d-4308-434f-8a1f-a2ac9c5b3b7f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-15T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10828.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "37a411f0-ffa3-4462-b684-8587beeee3e5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-15T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10801.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "7c7002ce-a2db-4d27-8248-7894eaef8859",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-16T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10775.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "efb5e503-7e8c-4373-981a-0509da15b536",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-16T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10748.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "fb687ade-cab5-46f4-825c-dc72f68dbd2a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-17T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10722.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "f1ed4a02-579c-4764-9ae8-885ca1a59c8f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-18T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10696.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "74bedef5-2f25-43ba-91e4-f51eb67ebfbc",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-19T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10669.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "7ea6c121-03cf-4302-a85d-891214177fa1",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-19T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10643.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "605f4b0c-450a-4f12-a560-979f8c1b85e4",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-20T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10616.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "eb584d1b-7abc-4d75-8b04-1a43243cef0c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-20T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10590.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "b19c08bb-4a3f-4103-9494-970a393efd1e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-21T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10563.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "9c292778-08ff-4b28-823f-cb3969826218",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-21T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10537.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "d4b0a967-d106-4174-a0c3-30b2520299dc",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-22T00:05:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10510.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "3129076b-c94c-4867-ae45-45deade6f76e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-22T00:05:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10484.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "eeb8dc63-1f4e-46c9-b933-2f1be035bb56",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-23T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10457.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "aae8477a-9c9f-4535-a66a-7b77b67f3c4b",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-23T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10431.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "21ea52ca-0eb5-446e-be13-f9acf1e0a8ab",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-24T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10404.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "70809e49-0664-4aa8-a324-1ed17d7f196a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-25T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10378.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "3f2fde75-9e06-4119-9863-e20813dc77b5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-26T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10351.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "5787693d-db60-4549-a04e-bf9d82432706",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-26T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10325.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "183399e1-6410-4606-b6ec-a1251ec2dd89",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-27T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10298.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "6af5f5db-9073-4d20-95ad-dd185dc7c35b",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-27T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10272.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "37000d0f-7c39-441e-9a22-e5ffea1747f4",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-28T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10245.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "bf165af9-1145-47bd-8b45-61152de390fb",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-28T00:02:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10219.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "84c12e56-995b-41cd-9cfd-8182a443c0bc",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-29T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10192.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "3531ca39-3002-4e68-aeaa-ceeff645fbb8",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-29T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10166.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "fb7fa70b-a14a-480b-b14e-f5db373a063c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-30T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10139.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "db6b1689-ce1e-4294-af17-b58b7a600ea5",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-30T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10113.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "99a41a8b-ddb4-4abf-9f58-6ccdff30d87a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-08-31T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10086.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "29e8c4ff-6ed3-48b9-85b4-34522c6513ac",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-01T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10060.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "aa504ff2-4500-4b17-b808-e46b1c8ddf51",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-02T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10034.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "5d049de0-4342-4f32-ba66-1c14c1c29617",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-02T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "10007.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "d04b19e3-7bfc-4161-8f92-6bad3294e3e4",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-03T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9981.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "9a7e7417-72c1-44d5-ae80-813eff1efac4",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-03T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9954.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "7a976ff9-b250-427a-bd4d-d145bc7e80d9",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-04T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9928.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "cb966b42-ad67-4030-a8cd-e7559b575dfd",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-04T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9901.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "3b7a0ef4-b05e-4546-bb38-1b8ccbbd8973",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-05T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9875.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "594fc665-ebe0-44e3-8712-9da0fc4200cc",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-05T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9848.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "2e111791-30ac-4f72-9507-c2140da0b5b6",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-06T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9822.17",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "05dfdb75-f070-4179-8d54-78917efa59bf",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-06T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9795.69",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "23d456dc-e70a-4a8e-9e8d-305ec8311284",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-07T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9769.21",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "fda79b85-004f-4a3a-83c0-607eb6a28e43",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-08T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9742.73",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "d42f51d4-5c71-4c02-beae-aa22f016fc65",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-09T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9716.25",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "a476adc8-fdd7-413c-8e5b-7340c2d81ca4",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-09T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9689.77",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "509b5953-7f95-4524-85b3-89a7f814a000",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-10T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9663.29",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "53e8ec49-b7e1-4eeb-ab4c-0d1d9c93760c",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-10T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9636.81",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "fb33406e-a74c-4734-91e3-628ea923d304",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-11T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9610.33",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "6151bc8e-11c1-4497-b408-a616e4cb9f16",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-11T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9583.85",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "f24a8289-2e82-4028-b47f-66fa8b391dd2",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-12T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9557.37",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "91b9bb53-a967-4a41-97a8-835b826e386d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-12T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9530.89",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "c141c8ec-3b30-4d8a-b1f1-31bb93337e46",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-13T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9504.41",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "1f7f14e4-a726-4154-a4e3-966e28c5f847",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-13T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9477.93",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "49b179c5-7713-4905-b2b0-33149e73e23d",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-14T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9451.45",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "3f7f85b2-9c52-43c4-b13f-8cc22527bb3f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-15T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9424.97",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "933485f5-87e2-48d2-aaa8-1f0aff97a5f9",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-16T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9398.49",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "e2af4eca-bbfa-4456-b892-176cb9ba6576",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-16T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9372.01",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "d85f87de-f780-4470-952c-194d5779c0be",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-17T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9345.53",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "891c9e80-e399-49d6-980d-3ebba4c0265e",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-17T00:00:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9319.05",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "a20bf672-b548-4c71-8839-fffb10ecd256",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-18T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9292.57",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "bccadd45-c88e-47c7-9182-01c88314a31a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-18T00:03:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9266.09",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "62f79328-16f5-4e45-a11e-412b6664587f",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-19T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9239.61",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "453eb896-d0c4-4d66-8f01-063af6dea301",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-19T00:04:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9213.13",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "c7b66cbc-a981-4bd2-b79e-bf6918beb04a",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-20T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Ref2",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9186.65",
+            "Currency": "GBP"
+          }
+        }
+      },
+      {
+        "AccountId": "3d781807-fe4e-4832-9b79-5fea330c1d04",
+        "TransactionId": "9ed69406-2a81-4108-aa34-76ebea95e2fe",
+        "CreditDebitIndicator": "Debit",
+        "Status": "Booked",
+        "BookingDateTime": "2019-09-20T00:01:00.000Z",
+        "Amount": {
+          "Amount": "26.48",
+          "Currency": "GBP"
+        },
+        "ProprietaryBankTransactionCode": {
+          "Code": "TFR"
+        },
+        "TransactionInformation": "Standing order to RBOS80540122222222",
+        "Balance": {
+          "CreditDebitIndicator": "Credit",
+          "Type": "Information",
+          "Amount": {
+            "Amount": "9160.17",
+            "Currency": "GBP"
+          }
+        }
+      }
+    ]
+  },
+  "Links": {
+    "Self": "https://ob.rbs.useinfinite.io/open-banking/v3.1/aisp/accounts/3d781807-fe4e-4832-9b79-5fea330c1d04/transactions?page=1",
+    "First": "https://ob.rbs.useinfinite.io/open-banking/v3.1/aisp/accounts/3d781807-fe4e-4832-9b79-5fea330c1d04/transactions?page=0",
+    "Prev": "https://ob.rbs.useinfinite.io/open-banking/v3.1/aisp/accounts/3d781807-fe4e-4832-9b79-5fea330c1d04/transactions?page=0",
+    "Next": "https://ob.rbs.useinfinite.io/open-banking/v3.1/aisp/accounts/3d781807-fe4e-4832-9b79-5fea330c1d04/transactions?page=2",
+    "Last": "https://ob.rbs.useinfinite.io/open-banking/v3.1/aisp/accounts/3d781807-fe4e-4832-9b79-5fea330c1d04/transactions?page=3"
+  },
+  "Meta": {
+    "TotalPages": 4
+  }
+}

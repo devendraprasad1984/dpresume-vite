@@ -1,0 +1,40 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.str-chat__message-notification {
+  display: block;
+  position: absolute;
+  align-self: center;
+  background: var(--colorMandy);
+  border: none;
+  color: var(--colorWhite);
+  padding: toRem(4) toRem(4);
+
+  bottom: 10px;
+  z-index: 101;
+
+  &-right {
+    align-self: flex-end;
+  }
+
+  &-scroll-to-latest {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--colorWhite);
+    color: var(--colorMandy);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+    &-unread-count {
+      font-size: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+    }
+  }
+}

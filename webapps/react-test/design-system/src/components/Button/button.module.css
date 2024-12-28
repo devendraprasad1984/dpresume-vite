@@ -1,0 +1,10 @@
+/*css module transformer will include some random name that guarantees the uniqueness of the css for this component */
+/*check the final html generated and see how this css is being injected by webpack*/
+.button{
+    background-color: #2b3e40;
+    padding: 8px 8px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}

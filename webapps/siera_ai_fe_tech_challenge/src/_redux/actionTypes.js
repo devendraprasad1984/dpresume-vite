@@ -1,0 +1,9 @@
+const ActionTypes = {
+    GET_MOCK: 'GET_MOCK_DATA',
+    SET_API_ERROR: 'API_ERROR',
+    BET_SLIP_ADD: 'BET_SLIP_ADD',
+    BET_SLIP_REMOVE: 'BET_SLIP_REMOVE',
+    BET_SLIP_LIST: 'BET_SLIP_LIST',
+    GET_SET_TEAM2WIN_COUNT: 'GET_SET_TEAM2WIN_COUNT'
+}
+export default ActionTypes

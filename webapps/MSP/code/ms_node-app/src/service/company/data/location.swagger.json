@@ -1,0 +1,167 @@
+{
+    "tags": [
+        {
+            "name": "Location",
+            "description": "Get Cities/States Arrays"
+        }
+    ],
+    "paths": {
+        "/company/location": {
+            "get": {
+                "tags": ["Location"],
+                "summary": "Get all the locations",                
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content":"application/json",
+                        "schema":{
+                            "$ref": "#/definitions/ApiResponseLocationSearchArray"
+                        }
+                    }
+                }
+            }
+        }  ,
+        "/company/location/filter":{
+            "post": {
+                "tags": [
+                    "Location"
+                ],
+                "summary": "Get all the filtered records",
+                "parameters": [
+                    {
+                        "name": "perPage",
+                        "description": "How many items per pagination are request",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "true",
+                        "example": 5
+                    },
+                    {
+                        "name": "page",
+                        "description": "Requested page",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "false",
+                        "example": 2
+                    },
+                    {
+                        "name": "Request filter",
+                        "description": "object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilterLocation"
+                        },
+                        "example": {    
+                            "filter": "getByKeyword",
+                            "data": {
+                                "keywordCity": "Seattle",
+                                "keywordState": "Washington"                                
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/PaginationResponseLocation"
+                        }
+                    }
+                }
+            }
+        } 
+    },
+    "definitions": {
+        "ApiResponseLocationSearchArray": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/LocationSearchArray"
+                }
+            }
+        },
+        "StringArray": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "LocationSearchArray": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/LocationSearch"
+            }
+        },        
+        "DataFilterLocation": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getByKeyword"                  
+                    ],
+                    "required": "true",
+                    "example": "getByKeyword"
+                },
+                "data": {
+                    "$ref": "#/definitions/LocationQuery"
+                }
+            }
+        },
+        "LocationSearch":{
+            "type": "object",
+            "properties": {                
+                "city": {
+                    "type": "string",
+                    "example": "Akron"
+                },
+                "stateShort": {
+                    "type": "string",
+                    "example": "AL"
+                },
+                "state": {
+                    "type": "string",
+                    "example": "Alabama"
+                }                
+            }
+        },
+        "LocationQuery":{
+            "type": "object",
+            "properties": {
+                "keywordState": {
+                    "type": "string",
+                    "example": "Alabama"
+                },
+                "keywordCity": {
+                    "type": "string",
+                    "example": "Arley"
+                }                                
+            }
+        },
+        "PaginationResponseLocation":{
+            "type": "object",
+            "properties": {
+                "currentPage": {
+                    "type": "number",
+                    "example":1
+                },
+                "lastPage": {
+                    "type": "number",
+                    "example": 2
+                },
+                "totalCount": {
+                    "type": "number",
+                    "example": 16
+                },
+                "data":{
+                    "$ref": "#/definitions/LocationSearchArray"
+                }
+            }
+        }
+    }
+}

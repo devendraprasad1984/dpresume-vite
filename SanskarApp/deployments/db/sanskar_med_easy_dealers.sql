@@ -1,0 +1,2 @@
+INSERT INTO sanskar_med_easy.dealers (id, agentid, name, address, pincode, city, country, guid, email, type, mobile) VALUES (1, 'dp12', 'devendra', 'lucknow', '129298', 'LKO', 'india', 'admin', 'devendraprasad1984@gmaill.com', '1', '910000000000');
+INSERT INTO sanskar_med_easy.dealers (id, agentid, name, address, pincode, city, country, guid, email, type, mobile) VALUES (2, 'xy1', 'shukla', 'delhi', '123233', 'LKO', 'india', 'abc', 'devendraprasad1984@gmaill.com', '2', '910000000000');

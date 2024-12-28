@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>basic kanban vanilla html+js+css view</title>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js" type="text/javascript"></script>
+    <script src="utils.js" defer type="text/javascript"></script>
+    <script src="index.js" defer type="text/javascript"></script>
+</head>
+<body>
+
+<header>
+    <h1>Basic Kanban board</h1>
+</header>
+
+<div class="add-task-container">
+    <input type="text" maxlength="20" id="taskText" placeholder="add new task" onkeydown="if (event.keyCode == 13) addTask()">
+    <button id="add" class="button add-button" onclick="addTask()">Add</button>
+</div>
+
+<div class="main-container">
+    <ul class="columns">
+
+        <li class="column to-do-column">
+            <div class="column-header">
+                <h4>Backlog</h4>
+            </div>
+            <ul class="task-list" id="to-do">
+                <li class="task">
+                    <p>task1</p>
+                </li>
+                <li class="task">
+                    <p>task1</p>
+                </li>
+                <li class="task">
+                    <p>task1</p>
+                </li>
+                <li class="task">
+                    <p>task1</p>
+                </li>
+            </ul>
+        </li>
+
+        <li class="column doing-column">
+            <div class="column-header">
+                <h4>In Progress</h4>
+            </div>
+            <ul class="task-list" id="doing">
+                <li class="task">
+                    <p>task1</p>
+                </li>
+                <li class="task">
+                    <p>task1</p>
+                </li>
+                <li class="task">
+                    <p>task1</p>
+                </li>
+            </ul>
+        </li>
+
+        <li class="column done-column">
+            <div class="column-header">
+                <h4>Completed</h4>
+            </div>
+            <ul class="task-list" id="done">
+                <li class="task">
+                    <p>task1</p>
+                </li>
+                <li class="task">
+                    <p>task1</p>
+                </li>
+            </ul>
+        </li>
+
+        <li class="column trash-column">
+            <div class="column-header">
+                <h4>Bin</h4>
+            </div>
+            <ul class="task-list" id="trash">
+                <li class="task">
+                    <p>task1</p>
+                </li>
+                <li class="task">
+                    <p>task2</p>
+                </li>
+
+            </ul>
+            <div class="column-button">
+                <button class="button delete-button" onclick="emptyTrash()">Delete</button>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+</body>
+</html>

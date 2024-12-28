@@ -1,0 +1,50 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.swiper {
+  --swiper-navigation-size: 14px;
+  --swiper-navigation-color: var(--colorWaterloo);
+  --swiper-theme-color: var(--colorWaterloo);
+  --swiper-pagination-bullet-horizontal-gap: 0;
+
+  .containerEnd {
+    margin-top: toRem(36);
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    align-items: center;
+    grid-gap: toRem(32);
+  }
+
+  :global {
+    .swiper-pagination {
+      position: relative;
+      display: grid;
+      grid-auto-columns: auto;
+      grid-auto-flow: column;
+      grid-gap: toRem(16);
+      align-items: center;
+      width: auto;
+      top: initial;
+      bottom: initial;
+      left: initial;
+      right: initial;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: relative;
+      margin-top: initial;
+      top: initial;
+      bottom: initial;
+      left: initial;
+      right: initial;
+    }
+    .swiper-pagination-bullet-active {
+      background: var(--colorJava);
+      width: toRem(12);
+      height: toRem(12);
+    }
+  }
+}

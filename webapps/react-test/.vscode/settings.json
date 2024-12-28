@@ -1,0 +1,16 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 1000,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "local_dpresume",
+            "database": "dpresume",
+            "username": "postgres",
+            "password": ""
+        }
+    ],
+    "markdown.preview.fontSize": 15,
+    "markdown.preview.lineHeight": 1.7
+}

@@ -1,0 +1,121 @@
+@import "styles/functions";
+@import "styles/variables";
+
+.header {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: toRem($headerHeight);
+  background-color: var(--colorAthensGrey);
+}
+
+.headerContent {
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 toRem(32);
+}
+
+.headerActions {
+  display: grid;
+  grid-gap: toRem(50);
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  align-items: center;
+}
+
+.logo {
+  width: toRem(287);
+  height: toRem(37);
+
+  path {
+    fill: var(--colorBlueViolet);
+  }
+}
+
+.sideBarAndContent {
+  position: relative;
+  padding: toRem($headerHeight) 0 0 toRem($sidebarWidth);
+  background: var(--colorAthensGrey);
+}
+
+.contentCorner {
+  z-index: 0;
+  content: "";
+  position: fixed;
+  top: toRem($headerHeight);
+  left: toRem($sidebarWidth);
+  width: toRem(44);
+  height: toRem(44);
+
+  path {
+    fill: var(--colorAthensGrey);
+  }
+}
+
+.sideBar {
+  overflow: auto;
+  position: fixed;
+  top: toRem($headerHeight);
+  left: 0;
+  display: grid;
+  grid-gap: toRem(20);
+  align-content: start;
+  width: toRem($sidebarWidth);
+  height: calc(100vh - toRem($headerHeight));
+  padding: toRem(37) toRem(22);
+  background-color: var(--colorAthensGrey);
+}
+
+.sidebarNavButton {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: toRem(68);
+  height: toRem(58);
+  border-radius: toRem(21);
+  background-color: var(--colorMischka);
+
+  &:hover {
+    path {
+      fill: var(--colorMandy);
+    }
+  }
+}
+
+.activeSidebarNavButton {
+  background: var(--colorBlueViolet);
+
+  path {
+    fill: var(--colorWhite);
+  }
+
+  &:hover {
+    path {
+      fill: var(--colorWhite);
+    }
+  }
+}
+
+.sidebarNavIcon {
+  path {
+    fill: var(--colorDolphin);
+    transition: fill var(--colorTransitionDuration) ease;
+  }
+}
+
+.activeSidebarNavIcon {
+  path {
+    fill: var(--colorWhite);
+    transition: fill var(--colorTransitionDuration) ease;
+  }
+}
+
+.main {
+  background-color: var(--colorWhite);
+}

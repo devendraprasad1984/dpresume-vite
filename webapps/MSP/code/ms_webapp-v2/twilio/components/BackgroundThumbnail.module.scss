@@ -1,0 +1,89 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.thumbContainer {
+  margin: toRem(5);
+  width: calc(50% - #{toRem(10)});
+  display: flex;
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    padding-bottom: 55.5%;
+  }
+}
+
+.thumbIconContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: toRem(10);
+  border: toRem(3) solid var(--colorMischka);
+}
+
+.selectedThumbIconContainer {
+  border: toRem(3) solid var(--colorMandy);
+  & svg {
+    color: var(--colorMandy);
+  }
+}
+
+.thumbIcon {
+  height: toRem(50);
+  width: toRem(50);
+  color: var(--colorMischka);
+}
+
+.selectedThumbIcon {
+  color: var(--colorMandy);
+}
+
+.thumbImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  border-radius: toRem(10);
+  border: toRem(0) solid var(--colorMischka);
+  &:hover {
+    cursor: pointer;
+    & svg {
+      color: var(--colorMandy);
+    }
+    & .thumbOverlay {
+      visibility: visible;
+    }
+  }
+}
+
+.selectedImage {
+  border: toRem(3) solid var(--colorMandy);
+  & svg {
+    color: var(--colorMandy);
+  }
+}
+
+.thumbOverlay {
+  position: absolute;
+  color: transparent;
+  padding: toRem(20);
+  font-size: toRem(14);
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  border-radius: toRem(10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background: rgba(95, 93, 128, 0.6);
+    color: white;
+  }
+}

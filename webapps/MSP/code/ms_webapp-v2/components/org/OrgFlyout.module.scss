@@ -1,0 +1,49 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.header {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  background-color: var(--colorGrey);
+  min-height: toRem(106);
+  padding: 0 toRem(28);
+  border-bottom: toRem(1) solid var(--colorFrenchGrey);
+}
+
+.headerContent {
+  display: grid;
+  grid-gap: toRem(16);
+  justify-content: start;
+  align-items: center;
+  grid-auto-flow: column;
+}
+
+.headerTitle {
+  @extend %header;
+}
+
+.headerSubNav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: column;
+  background-color: var(--colorGrey);
+}
+
+.subNavButton {
+  @extend %buttonText;
+  display: inline-block;
+  width: 100%;
+  height: toRem(48);
+  color: var(--colorWaterloo);
+  border-bottom: toRem(4) solid transparent;
+  transition: border-color var(--defaultTransitionDuration) ease;
+}
+
+.activeSubNavButton {
+  color: var(--colorSteelGrey);
+  border-color: var(--colorJava);
+}

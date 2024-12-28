@@ -1,0 +1,10 @@
+{
+    "description": "Request timeout.",
+    "content": {
+        "text/plain": {
+          "schema": {
+            "type": "string"
+          }
+        }
+    }
+}

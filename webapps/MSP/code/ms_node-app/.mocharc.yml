@@ -1,0 +1,4 @@
+# .mocharc.yml
+ui: 'bdd'
+timeout: 30000
+parallel: false

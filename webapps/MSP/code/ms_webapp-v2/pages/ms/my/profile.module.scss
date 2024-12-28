@@ -1,0 +1,65 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  padding: toRem(32) toRem(32) 0 toRem(32);
+}
+
+.profileBanner {
+  position: relative;
+  height: toRem(190);
+}
+
+.profileBannerImage {
+  border-top-left-radius: toRem(16);
+  border-top-right-radius: toRem(16);
+  height: toRem(135);
+  background-color: var(--colorGrape);
+  background-image: url("/static/flyout-background.svg");
+}
+
+.profileBannerAvatar {
+  position: absolute;
+  bottom: toRem(36);
+  left: toRem(32);
+}
+
+.intro {
+  @extend %header;
+}
+
+.title {
+  @extend %bodyMedium;
+  margin-top: toRem(16);
+}
+
+.company {
+  @extend %smallLabel;
+}
+
+.section {
+  margin-top: toRem(48);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: toRem(34);
+}
+
+.sectionTitle {
+  @extend %header;
+}
+
+.seeAll {
+  @extend %smallHeader;
+  color: var(--colorMandy);
+}
+
+.sectionSeparator {
+  width: 100%;
+  margin: toRem(40) 0;
+  color: var(--colorGrey);
+}

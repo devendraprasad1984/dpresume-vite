@@ -1,0 +1,251 @@
+{
+    "tags": [
+        {
+            "name": "WorkHistory",
+            "description": "All the methods for the WorkHistory Service"
+        }
+    ],
+    "paths": {
+        "/user/profile/workhistory/filter": {
+            "post": {
+                "tags": [
+                    "WorkHistory"
+                ],
+                "summary": "Get a WorkHistory by profile id",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "description": "filter object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilter"
+                        },
+                        "example": {
+                            "filter": "getWorkHistoryProfileId",
+                            "data": {
+                                "profileId": 7
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user/profile/workhistory": {
+            "post": {
+                "tags": [
+                    "WorkHistory"
+                ],
+                "summary": "Create a new WorkHistory",
+                "parameters": [
+                    {
+                        "name": "WorkHistory",
+                        "description": "New WorkHistory object",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/WorkHistory"
+                        },
+                        "example": {
+                            "id": 0,
+                            "ref": "5e299b2b-c308-426d-fbd8-bda2524e4967",
+                            "profileId": 1,
+                            "status": "active",
+                            "company": "Fresh",
+                            "title": "Fresh Consulting",
+                            "description": "Software Developer",
+                            "startedOn": "2018-03-02T17:12:15.119Z",
+                            "endedOn": "2022-03-02T22:35:39.119Z",
+                            "isCurrent": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success created",
+                        "schema": {
+                            "$ref": "#/definitions/WorkHistory"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/profile/workhistory/{id}": {
+            "get": {
+                "tags": [
+                    "WorkHistory"
+                ],
+                "summary": "Get specific WorkHistory by id",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "WorkHistory ID that will be retrieved",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "WorkHistory"
+                ],
+                "summary": "Update specific WorkHistory by id",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "WorkHistory ID that will be updated",
+                        "required": "true",
+                        "type": "number"
+                    },
+                    {
+                        "name": "WorkHistory",
+                        "description": "Update WorkHistory object",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/WorkHistory"
+                        },
+                        "example": {
+                            "id": 0,
+                            "ref": "5e299b2b-c308-426d-fbd8-bda2524e4967",
+                            "profileId": 7,
+                            "status": "active",
+                            "company": "Fresh Update",
+                            "title": "Fresh Consulting Update",
+                            "description": "Software Developer Update",
+                            "startedOn": "2018-03-02T17:12:15.119Z",
+                            "endedOn": "2022-03-02T22:35:39.119Z",
+                            "isCurrent": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success updated",
+                        "schema": {
+                            "$ref": "#/definitions/WorkHistory"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "WorkHistory"
+                ],
+                "summary": "Delete specific WorkHistory by id",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "WorkHistory ID that will be deleted",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "WorkHistory": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "required": "true",
+                    "example" : 2
+                },
+                "ref": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "XXXXXXXX-YYYY-WWWW-00000001"
+                },
+                "profileId": {
+                    "type": "number",
+                    "required": "true",
+                    "example": 7
+                },
+                "status": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "active"
+                },
+                "company": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "Amazon"
+                },
+                "title": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "Senior Software Engineer"
+                },
+                "description": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "Lead development teams"
+                },
+                "startedOn": {
+                    "type": "string",
+                    "required": "true",
+                    "example": "2020-01-01T00:00:00Z"
+                },
+                "endedOn": {
+                    "type": "string",
+                    "required": "false",
+                    "example": "2022-01-01T00:00:00Z"
+                },
+                "IsCurrent": {
+                    "type": "boolean",
+                    "required": "false",
+                    "example" : true
+                }
+            }
+        },
+        "DataFilter": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getWorkHistoryByProfileId"
+                    ],
+                    "required": "true",
+                    "example": "getWorkHistoryByProfileId"
+                },
+                "data": {
+                    "type": "object",
+                    "required": "true",
+                    "example" : { "profileId": 7 }
+                }
+            }
+        }
+    }
+}

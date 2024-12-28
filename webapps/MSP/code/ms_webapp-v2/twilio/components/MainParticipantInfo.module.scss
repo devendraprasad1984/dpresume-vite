@@ -1,0 +1,99 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullWidth {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.infoContainer {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-gap: toRem(12);
+  padding: toRem(12);
+}
+
+.identity {
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  align-items: center;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  grid-gap: toRem(6);
+  border-radius: toRem(6);
+  height: toRem(28);
+  padding: 0 toRem(12) 0 toRem(4);
+  color: white;
+}
+
+.recordingIndicator {
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-gap: toRem(12);
+  align-items: center;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  height: toRem(28);
+  padding: 0 toRem(12);
+  border-radius: toRem(6);
+  color: white;
+}
+
+.circle {
+  height: toRem(12);
+  width: toRem(12);
+  background: var(--colorMandy);
+  border-radius: 100%;
+  animation: 1.25s pulsate ease-out infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    background: var(--colorMandy);
+  }
+  50% {
+    background: var(--colorBrickRed);
+  }
+  100% {
+    background: var(--colorMandy);
+  }
+}
+
+.reconnectingContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(40, 42, 43, 0.75);
+  z-index: 1;
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}

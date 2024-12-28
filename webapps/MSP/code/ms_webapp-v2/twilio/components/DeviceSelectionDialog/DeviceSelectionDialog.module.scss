@@ -1,0 +1,13 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.sectionTitle {
+  @extend %smallHeader;
+  margin-bottom: toRem(24);
+}
+
+.formGroup {
+  display: grid;
+  grid-gap: toRem(24);
+}

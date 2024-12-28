@@ -1,0 +1,101 @@
+{
+    "tags": [
+        {
+            "name": "Auth",
+            "description": "All methods for the Auth Service"
+        }
+    ],
+    "paths": {
+        "/auth/ping": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Check the communication with the auth service",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/auth/validate": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "User authenticate for MS",
+                "parameters": [
+                    {
+                        "name": "Access Token",
+                        "description": "authenticate data information",
+                        "in": "header",
+                        "required": "true",                        
+                        "example": {
+                            "Access Token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVmTExWZ0EwS3ZkZTdubG1Vay02RyJ9.eyJpc3MiOiJodHRwczovL21lbnRvci1zcGFjZXMtMi1kZXYudXMuYXV0aDAuY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTE4Mzc1MDk2MTE2MDEzODY3NTI2IiwiYXVkIjpbImh0dHBzOi8vbWVudG9yLXNwYWNlcy0yLWRldi51cy5hdXRoMC5jb20vYXBpL3YyLyIsImh0dHBzOi8vbWVudG9yLXNwYWNlcy0yLWRldi51cy5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNjQ4NzQ5OTYzLCJleHAiOjE2NDg4MzYzNjMsImF6cCI6IkVQdDdkSWxGQzR3Yk15NzFsRnRoMGN5VnZHbm1ZNk85Iiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCByZWFkOmN1cnJlbnRfdXNlciB1cGRhdGU6Y3VycmVudF91c2VyX21ldGFkYXRhIn0.YXzKd61KEIYUNWTg-kPTaISGPbrlyKoeyAOd-BahogDpOCUwa1RrT5N0iyD-FFUMpNu8MeFgWBi-SDK4or-4FMJIFNU965o9jeR3na5b_Dwi8lz-AV5k5XcqkSAaY9OMgYW6EsUYvyXpM1EQ9obUGnQuPLfjaRYoYMFh3VVAsWOwABg6Dt71L66VfluTUBZkOPf6rzYvcOP_G_s2LH1ttawYICKw8QseZ8E6wz9ttzq7MCoF8uO0WDoSfwvGdq5RJO9p6xL3qneOKxcrCM4OQnA92VGqYgEyVJ5s6ZSNALg1N7q_bbKNWUmJLqkUabrDU7MlTcImhbHp7GT9rixRRw"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/AuthResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/auth/connect/{ref}": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Connect user to MS Channel",
+                "parameters": [
+                    {
+                        "name": "ref",
+                        "in": "path",
+                        "description": "ref of user that will be connected",
+                        "required": "true",
+                        "type": "string",
+                        "example": {
+                            "ref": "4b8de3be-a832-6cb6-acde-f0c47f23d2a6"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/AuthResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "AuthResponse": {
+            "type": "object",
+            "properties": {
+                "metadata": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

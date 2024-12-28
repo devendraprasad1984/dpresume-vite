@@ -1,0 +1,102 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.profileBanner {
+  position: relative;
+  height: toRem(190);
+}
+
+.profileBannerImage {
+  height: toRem(135);
+  background-color: var(--colorMischka);
+  background-image: url("/static/flyout-light-background.svg");
+}
+
+.profileBannerAvatar {
+  position: absolute;
+  bottom: 0;
+  left: toRem(32);
+}
+
+.headerGraphic {
+  height: toRem(135);
+  width: 100%;
+  background-color: green;
+}
+
+.infoWrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 toRem(32);
+}
+
+.profileContent {
+  padding: toRem(20) toRem(32) toRem(120);
+}
+
+.industry {
+  color: var(--colorSteelGray);
+}
+
+.since {
+  @extend %bodyMedium;
+  color: var(--colorWaterloo);
+}
+
+.buttonContainer {
+  width: 100%;
+  margin-top: toRem(30);
+
+  a {
+    display: block;
+    width: 100%;
+  }
+}
+
+.bioContainer {
+  width: 100%;
+  background-color: var(--colorWildSand);
+  border-radius: toRem(34);
+  margin-top: toRem(30);
+  padding: toRem(23) toRem(32);
+}
+
+.bioTitle {
+  @extend %smallBodyMedium;
+  color: var(--colorDolphin);
+}
+
+.bio {
+  @extend %bodyMedium;
+  margin-top: toRem(14);
+}
+
+.sectionSeparator {
+  width: 100%;
+  margin: toRem(40) 0;
+}
+
+.iframe {
+  margin-top: toRem(14);
+}
+
+.section {
+  margin-top: toRem(48);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: toRem(34);
+}
+
+.sectionTitle {
+  @extend %header;
+}
+
+.seeAll {
+  @extend %smallHeader;
+  color: var(--colorMandy);
+}

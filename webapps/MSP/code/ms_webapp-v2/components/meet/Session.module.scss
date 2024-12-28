@@ -1,0 +1,9 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  background: var(--colorBlack);
+  height: 100vh;
+  padding-bottom: toRem(108);
+}

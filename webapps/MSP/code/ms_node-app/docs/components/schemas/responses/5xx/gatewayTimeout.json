@@ -1,0 +1,10 @@
+{
+    "description": "The server is acting as a gateway and cannot get a response in time.",
+    "content": {
+        "text/plain": {
+          "schema": {
+            "type": "string"
+          }
+        }
+    }
+}

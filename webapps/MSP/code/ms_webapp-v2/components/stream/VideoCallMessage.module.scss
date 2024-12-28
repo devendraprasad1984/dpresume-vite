@@ -1,0 +1,28 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+@import "components/stream/styles/_variables";
+
+.container {
+  @extend %messageInner;
+  display: grid;
+  grid-gap: toRem(4);
+  justify-content: start;
+  align-content: center;
+  background: var(--colorBlueViolet);
+}
+
+.subTitle {
+  @extend %smallLabel;
+  text-transform: uppercase;
+  color: var(--colorWhite);
+}
+
+.title {
+  @extend %header;
+  color: var(--colorWhite);
+}
+
+.joinButton {
+  margin-top: toRem(24);
+}

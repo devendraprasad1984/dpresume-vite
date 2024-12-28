@@ -1,0 +1,80 @@
+@import "styles/functions";
+@import "styles/variables";
+
+.wrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 100px;
+  margin-bottom: toRem(24);
+}
+
+.filterButton {
+  vertical-align: center;
+  display: flex;
+  align-items: center;
+  color: var(--colorMandy);
+  font-size: toRem(16);
+  font-weight: 700;
+  justify-self: right;
+  margin-right: toRem(6);
+}
+.filterIcon {
+  height: 18px;
+  margin-right: toRem(6);
+}
+
+.filterSlider {
+  position: fixed;
+  right: toRem(-481);
+  top: toRem(108);
+  bottom: 0;
+  max-width: toRem(480);
+  width: 100%;
+  background-color: #fff;
+  border-left: 1px solid var(--colorGrey);
+  z-index: 1000;
+  transition: right var(--colorTransitionDuration) ease-in-out;
+  &[class~="open"] {
+    right: 0;
+  }
+
+  @media (max-width: $widthDesktop * 0.51) {
+    // Decided to cut this down since it starts pretty wide, it's just over slightly half smaller so it wont click the top left curve
+    max-width: 100%;
+    right: -100%;
+  }
+}
+
+.filterWrap {
+  padding: toRem(28);
+  > label {
+    display: block;
+    margin-bottom: toRem(24);
+  }
+}
+
+.filterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: toRem(105);
+  border-bottom: 1px solid var(--colorGrey);
+  padding: 0 toRem(28);
+}
+.closeIcon {
+  padding: toRem(12);
+  height: toRem(48);
+  width: toRem(48);
+  cursor: pointer;
+
+  & path {
+    fill: var(--colorWaterloo);
+  }
+}
+
+.filterButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: toRem(28);
+  padding: 0 toRem(28) toRem(14) toRem(28);
+}

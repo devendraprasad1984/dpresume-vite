@@ -1,0 +1,85 @@
+.App {
+    text-align: left;
+    width: 60%;
+    margin-left: 10%;
+}
+
+*{
+    padding: 2px;
+    margin: 2px;
+    box-sizing: border-box;
+}
+
+.row > *, .gap10 > *{
+    margin: 2px;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.wid100{
+    width: 100%;
+}
+.wid50{
+    width: 50%;
+}
+
+.right{
+    text-align: right;
+}
+
+.marginTop10{
+    margin-top: 10px;
+}
+
+input{
+    min-width: 50%;
+    padding: 10px;
+}
+.padding10{
+    padding: 10px;
+}
+
+button{
+    pointer-events: auto;
+    cursor: pointer;
+    background: #727572;
+    color: whitesmoke;
+    border: none;
+    padding: 10px 20px;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+button::before,
+button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.danger{
+    background-color: #ec6e5b;
+}
+.txt-danger{
+    color: #ec6e5b;
+}

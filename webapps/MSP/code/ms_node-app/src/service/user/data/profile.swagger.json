@@ -1,0 +1,472 @@
+{
+  "tags": [
+    {
+      "name": "Profile",
+      "description": "All the methods for the Profile Service"
+    }
+  ],
+  "paths": {
+    "/user/profile/filter": {
+      "post": {
+        "tags": [
+          "Profile"
+        ],
+        "summary": "Filter the profiles by specific data",
+        "parameters": [
+          {
+            "name": "filter",
+            "description": "filter object with the type of filter and parameters",
+            "in": "body",
+            "required": "true",
+            "schema": {
+              "$ref": "#/definitions/DataFilter"
+            },
+            "example": {
+              "filter": "getByUserId",
+              "data": {
+                "profileId": 1
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "number"
+                },
+                "result": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/profile": {
+      "post": {
+        "tags": [
+          "Profile"
+        ],
+        "summary": "Creates a new Profile",
+        "parameters": [
+          {
+            "name": "Profile",
+            "description": "New Profile object",
+            "in": "body",
+            "required": "true",
+            "schema": {
+              "$ref": "#/definitions/Profile"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully created"
+          }
+        }
+      }
+    },
+    "/user/profile": {
+      "get": {
+        "tags": [
+          "Profile"
+        ],
+        "summary": "Get profile with user ID from metadata header",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Profile"
+            }
+          }
+        }
+      }
+    },
+    "/user/profile/{Id}": {
+      "get": {
+        "tags": [
+          "Profile"
+        ],
+        "summary": "Get profile with specified ID",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Profile ID",
+            "required": "true",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Profile"
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Profile"
+        ],
+        "summary": "Update a specific Profile",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "ID of Profile that will be updated",
+            "required": "true",
+            "type": "string"
+          },
+          {
+            "name": "Profile",
+            "description": "Update Profile object",
+            "in": "body",
+            "required": "true",
+            "schema": {
+              "$ref": "#/definitions/Profile"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully updated"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Profile"
+        ],
+        "summary": "Delete a specific Profile",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "ID of Profile that will be deleted",
+            "required": "true",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully deleted"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Profile": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "ref": {
+          "type": "string",
+          "required": "true"
+        },
+        "userId": {
+          "type": "number",
+          "required": "true"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "pending"
+          ],
+          "required": "true"
+        },
+        "basicInfo": {
+          "$ref": "#/definitions/BasicInfo",
+          "required": "false"
+        },
+        "bio": {
+          "$ref": "#/definitions/Bio",
+          "required": "false"
+        },
+        "workHistory": {
+          "$ref": "#/definitions/WorkHistory",
+          "required": "false"
+        },
+        "educationHistory": {
+          "$ref": "#/definitions/EducationHistory",
+          "required": "false"
+        },
+        "publicContactInfo": {
+          "$ref": "#/definitions/PublicContactInfo",
+          "required": "false"
+        },
+        "privateContactInfo": {
+          "$ref": "#/definitions/PrivateContactInfo",
+          "required": "false"
+        },
+        "personalData": {
+          "$ref": "#/definitions/PersonalData",
+          "required": "false"
+        },
+        "MSPshipObjectives": {
+          "$ref": "#/definitions/MSPshipObjectives",
+          "required": "false"
+        },
+        "notifications": {
+          "$ref": "#/definitions/Notifications",
+          "required": "false"
+        }
+      }
+    },
+    "DataFilter": {
+      "type": "object",
+      "properties": {
+        "filter": {
+          "type": "string",
+          "enum": [
+            "getById",
+            "getByUserId"
+          ],
+          "required": "true"
+        },
+        "data": {
+          "type": "object",
+          "required": "true"
+        }
+      }
+    },
+    "BasicInfo": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "required": "true",
+          "example": "Jhon"
+        },
+        "lastName": {
+          "type": "string",
+          "required": "true",
+          "example": "Doe"
+        },
+        "pronouns": {
+          "type": "string",
+          "example": "(he/him)"
+        },
+        "headline": {
+          "type": "string",
+          "example": "Software Engineer"
+        },
+        "companyHeadline": {
+          "type": "string",
+          "example": "Google"
+        },
+        "picture": {
+          "type": "string",
+          "example": "http://www.google.com"
+        },
+        "city": {
+          "type": "string",
+          "example": "Seattle"
+        },
+        "state": {
+          "type": "string",
+          "example": "WA"
+        }
+      }
+    },
+    "Bio": {
+      "type": "object",
+      "properties": {
+        "intro": {
+          "type": "string",
+          "required": "true"
+        },
+        "text": {
+          "type": "string",
+          "required": "true"
+        }
+      }
+    },
+    "WorkHistory": {
+      "type": "array",
+      "items": {
+        "id": "number",
+        "ref": "string",
+        "profileId": "number",
+        "status": "string",
+        "company": "string",
+        "title": "string",
+        "description": "string",
+        "startedOn": "date",
+        "endedOn": "date",
+        "IsCurrent": "boolean"
+      }
+    },
+    "EducationHistory": {
+      "type": "array",
+      "items": {
+        "id": "number",
+        "ref": "string",
+        "profileId": "number",
+        "status": "string",
+        "school": "string",
+        "degree": "string",
+        "field": "string",
+        "description": "string",
+        "startedOn": "date",
+        "endedOn": "date",
+        "IsCurrent": "boolean"
+      }
+    },
+    "PublicContactInfo": {
+      "type": "object",
+      "properties": {
+        "website": {
+          "type": "string",
+          "required": "false"
+        },
+        "linkedin": {
+          "type": "string",
+          "required": "false"
+        },
+        "facebook": {
+          "type": "string",
+          "required": "false"
+        },
+        "instagram": {
+          "type": "string",
+          "required": "false"
+        },
+        "twitter": {
+          "type": "string",
+          "required": "false"
+        }
+      }
+    },
+    "PrivateContactInfo": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "required": "false"
+        },
+        "phone": {
+          "type": "string",
+          "required": "false"
+        }
+      }
+    },
+    "PersonalData": {
+      "type": "object",
+      "properties": {
+        "memberGroup": {
+          "type": "string",
+          "required": "false"
+        },
+        "ethnicity": {
+          "type": "string",
+          "required": "false"
+        }
+      }
+    },
+    "Tag": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "ref": {
+          "type": "string",
+          "example": "XXXXXXXX-1212-2323-88888888"
+        },
+        "status": {
+          "type": "string",
+          "example": "active"
+        },
+        "type": {
+          "type": "string",
+          "example": "User"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "CapabilitiesProvided",
+            "MSPshipGoals",
+            "IndustryExperience",
+            "Skills",
+            "IndustryInterest"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "example": "Test tag"
+        }
+      }
+    },
+    "TagArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Tag"
+      }
+    },
+    "TagList": {
+      "type": "object",
+      "properties": {
+        "tags": {
+          "$ref": "#/definitions/TagArray"
+        }
+      }
+    },
+    "MSPshipObjectives": {
+      "type": "object",
+      "properties": {
+        "lookingFor": {
+          "type": "string",
+          "required": "true"
+        },
+        "capabilitiesProvided": {
+          "$ref": "#/definitions/TagList"
+        },
+        "MSPshipGoals": {
+          "$ref": "#/definitions/TagList"
+        },
+        "industryExperience": {
+          "$ref": "#/definitions/TagList"
+        },
+        "yearsExperience": {
+          "type": "string",
+          "required": "true",
+          "items": {
+            "type": "string"
+          }
+        },
+        "skills": {
+          "$ref": "#/definitions/TagList"
+        },
+        "industryInterest": {
+          "$ref": "#/definitions/TagList"
+        }
+      }
+    },
+    "Notifications": {
+      "type": "object",
+      "properties": {
+        "isAppMessagingAllowed": {
+          "type": "boolean",
+          "required": "false",
+          "default": "false"
+        },
+        "isPushNotificationAllowed": {
+          "type": "boolean",
+          "required": "false",
+          "default": "false"
+        }
+      }
+    }
+  }
+}

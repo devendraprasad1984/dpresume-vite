@@ -1,0 +1,11 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.conversationContainer {
+  .str-chat {
+    overscroll-behavior: contain;
+    overflow: auto;
+    height: calc(100vh - 261.5px);
+  }
+}

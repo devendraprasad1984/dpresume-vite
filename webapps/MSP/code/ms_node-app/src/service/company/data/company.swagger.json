@@ -1,0 +1,203 @@
+{
+    "tags": [
+        {
+            "name": "System",
+            "description": "To check the status of the Services"
+        }
+    ],
+    "paths": {
+        "/company/ping": {
+            "get": {
+                "tags": ["System"],
+                "summary": "Check the communication with the company service",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties":{
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/company/filter":{
+            "post": {
+                "tags": [
+                    "Company"
+                ],
+                "summary": "Get all the filtered records",
+                "parameters": [
+                    {
+                        "name": "perPage",
+                        "description": "How many items per pagination are request",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "true",
+                        "example": 10
+                    },
+                    {
+                        "name": "page",
+                        "description": "Current pagination page",
+                        "type": "integer",
+                        "in": "query",
+                        "required": "false",
+                        "example": 1
+                    },
+                    {
+                        "name": "Request filter",
+                        "description": "object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilterCompany"
+                        },
+                        "example": {    
+                            "filter": "explore",
+                            "data": {
+                                "keyword": "Fre",
+                                "location": ["Washington - Seattle","Washington - Bellvue"],
+                                "industry": ["Retail"],    
+                                "hasOpenJobs": false
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseCompanySearchArray"
+                        }
+                    }
+                }
+            }
+        } 
+    },
+    "definitions": {
+        "ApiResponseCompanySearchArray": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "type": "object",
+                    "properties":{
+                        "currentPage": {
+                            "type": "number",
+                            "example": 1
+                        },
+                        "lastPage": {
+                            "type": "number",
+                            "example": 5
+                        },
+                        "totalCount": {
+                            "type": "number",
+                            "example": 50
+                        },
+                        "data":{
+                            "$ref": "#/definitions/CompanySearchArray"
+                        }
+                    }
+                }
+            }
+        },
+        "StringArray": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "CompanySearchArray": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/CompanySearch"
+            }
+        },        
+        "DataFilterCompany": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "explore"                      
+                    ],
+                    "required": "true",
+                    "example": "explore"
+                },
+                "data": {
+                    "$ref": "#/definitions/CompanyQuery"
+                }
+            }
+        },
+        "CompanySearch":{
+            "type": "object",
+            "properties": {
+                "companyId": {
+                    "type": "number",
+                    "example":1
+                },
+                "companyRef": {
+                    "type": "string",
+                    "example": "cbc7780c-971f-aa39-5534-73e52c119bbc"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Fresh Consulting"
+                },
+                "category": {
+                    "type": "string",
+                    "example": "Retail"
+                },
+                "state": {
+                    "type": "string",
+                    "example": "WA"
+                },
+                "city": {
+                    "type": "string",
+                    "example": "Bellvue"
+                },
+                "connectionNumber": {
+                    "type": "number",
+                    "example": 5
+                },
+                "picture": {
+                    "type": "string",
+                    "example": "https://lh3.googleusercontent.com/a-/AOh14GhZEO7kMO94SmVUY60IMfzaBuKyNdw1TD840DmgmfY=s96-c"
+                },
+                "isUserConnected": {
+                    "type": "boolean",
+                    "example": true
+                }
+            }
+        },
+        "CompanyQuery":{
+            "type": "object",
+            "properties": {
+                "keyword": {
+                    "type": "string",
+                    "example": "Fresh"
+                },
+                "location": {
+                    "$ref": "#/definitions/StringArray"
+                },
+                "industry": {
+                    "$ref": "#/definitions/StringArray"
+                },
+                "hasOpenJobs": {
+                    "type": "boolean",
+                    "example": true
+                }
+            }
+        }
+    }
+}

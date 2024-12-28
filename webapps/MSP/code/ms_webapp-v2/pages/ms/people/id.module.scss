@@ -1,0 +1,83 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  padding: toRem(20) toRem(32) toRem(120);
+}
+
+.header {
+  margin-bottom: toRem(12);
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 57% 43%;
+  grid-gap: toRem(32);
+  max-width: $widthDesktop;
+  width: 100%;
+}
+
+.card {
+  background: var(--colorWhite);
+  border-radius: toRem(44);
+}
+
+.cardContent {
+  padding: toRem(40);
+}
+
+.section {
+  margin-bottom: toRem(48);
+}
+
+.sectionTitle {
+  @extend %header;
+}
+
+.profileBanner {
+  position: relative;
+  height: toRem(232);
+}
+
+.profileBannerImage {
+  height: toRem(208);
+  background-color: var(--colorGrape);
+  background-image: url("/static/flyout-background.svg");
+  border-top-left-radius: toRem(44);
+  border-top-right-radius: toRem(44);
+}
+
+.profileBannerAvatar {
+  position: absolute;
+  bottom: 0;
+  left: toRem(32);
+}
+
+.intro {
+  margin-bottom: toRem(16);
+}
+
+.socialLinksSection {
+  margin-top: toRem(12);
+}
+
+.bioContainer {
+  margin-top: toRem(30);
+}
+
+.pronouns {
+  @extend %smallBodyMedium;
+  color: var(--colorWaterloo);
+  margin-bottom: toRem(4);
+  margin-left: toRem(12);
+}
+
+.MSPshipGoals {
+  margin-top: toRem(16);
+}

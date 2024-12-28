@@ -1,0 +1,98 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+$sidebarWidth: 430;
+
+.container {
+}
+
+.sidebar {
+  position: fixed;
+  background-color: var(--colorWhite);
+  width: toRem($sidebarWidth);
+  height: calc(100vh - toRem($headerHeight));
+  overflow-y: auto;
+  padding: 0 0 toRem(24);
+}
+
+.pageTitleHeader {
+  padding: toRem(28);
+}
+
+.userName {
+  @extend %header;
+}
+
+.avatar {
+  margin-bottom: toRem(20);
+}
+
+.namePronoun {
+  display: grid;
+  justify-content: start;
+  grid-auto-flow: column;
+  align-items: end;
+  grid-gap: toRem(8);
+  margin-bottom: toRem(16);
+}
+
+.pronouns {
+  @extend %smallBody;
+  margin-left: toRem(12);
+  color: var(--colorWaterloo);
+}
+
+.contentArea {
+  padding: 0 0 0 toRem($sidebarWidth);
+}
+
+.nav {
+  display: grid;
+  align-items: center;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+}
+
+.link {
+  @extend %bodyMedium;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: start;
+  grid-gap: toRem(16);
+  transition: border-right-color var(--colorTransitionDuration) ease;
+  border-right: toRem(4) solid transparent;
+  height: toRem(56);
+  padding: 0 0 0 toRem(48);
+  line-height: 1;
+  color: var(--colorSteelGrey);
+
+  path {
+    fill: var(--colorWaterloo);
+  }
+
+  &:hover {
+    background-color: var(--colorWildSand);
+  }
+}
+
+.activeLink {
+  color: var(--colorAshtonGrey);
+  border-right-color: var(--colorJava);
+  background-color: var(--colorAthensGrey);
+
+  path {
+    fill: var(--colorSteelGrey);
+  }
+}
+
+.destructiveLink {
+  color: var(--colorMandy);
+
+  path {
+    fill: var(--colorMandy);
+  }
+}

@@ -1,0 +1,27 @@
+
+html {
+  scrollbar-width: thin !important;
+  scroll-behavior: smooth;
+  --website-text-size-adjust: none;
+  margin: var(--html-margin);
+  max-width: var(--html-desktop-max-width);
+}
+
+html, body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: var(--app-text-color) !important;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--app-text-color) !important;
+}

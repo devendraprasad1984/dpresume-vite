@@ -1,0 +1,53 @@
+@keyframes spin {
+  from {
+    stroke-dashoffset: 480;
+  }
+  to {
+    stroke-dashoffset: 1005;
+  }
+}
+@keyframes color_morph1 {
+  0% {
+    stroke: #f6992c;
+  }
+  33% {
+    stroke: #5d52b1;
+  }
+  66% {
+    stroke: #32bcc1;
+  }
+  100% {
+    stroke: #f6992c;
+  }
+}
+@keyframes color_morph2 {
+  0% {
+    stroke: #5d52b1;
+  }
+  33% {
+    stroke: #e14963;
+  }
+  66% {
+    stroke: #f6992c;
+  }
+  100% {
+    stroke: #5d52b1;
+  }
+}
+.track {
+  stroke: #5d52b1;
+  stroke-width: 4;
+  animation-name: color_morph1;
+  animation-duration: 4.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+.dot {
+  stroke: #e14963;
+  stroke-width: 32;
+  stroke-dasharray: 1, 525;
+  stroke-linecap: round;
+  animation: spin 1.4s cubic-bezier(0.8, 0.4, 0.2, 0.6),
+    color_morph2 4.2s cubic-bezier(1, 0, 0, 1);
+  animation-iteration-count: infinite;
+}

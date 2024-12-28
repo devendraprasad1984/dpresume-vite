@@ -1,0 +1,120 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  background-color: var(--colorWhite);
+  width: 100%;
+  //max-width: toRem(420);
+  max-height: calc(100vh - toRem($headerHeight));
+  overflow: auto;
+}
+
+.headerSection {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 0 toRem(28);
+  border-bottom: toRem(1) solid var(--colorGrey);
+  height: toRem(106);
+}
+
+.headerName {
+  @extend %header;
+  @extend %truncate;
+}
+
+.memberCountAndInvite {
+  padding: 0 toRem(20) 0 toRem(28);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.memberLineSection {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: toRem(40);
+  grid-template-columns: repeat(auto-fill, toRem(292));
+  justify-content: space-between;
+  padding: toRem(26) toRem(28);
+  border-bottom: toRem(1) solid var(--colorMischka);
+}
+
+.memberLine {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: flex-start;
+  grid-gap: toRem(10);
+}
+
+.memberDetails {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: row;
+}
+
+.groupModeratorName {
+  font-size: 12px;
+  color: var(--colorWaterloo);
+}
+
+.headline {
+  font-size: 14px;
+  color: var(--colorDolphin);
+}
+
+.companyHeadline {
+  font-size: 14px;
+  color: var(--colorSteelGrey);
+}
+
+.searchChatEmpty {
+  @extend %headerText;
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 50%;
+  margin-left: toRem(60);
+  text-align: center;
+  color: var(--colorDolphin);
+  font-size: toRem(24);
+}
+
+.searchChatRow {
+  padding: toRem(22);
+  width: 100%;
+  text-align: left;
+  border-top: toRem(1) solid var(--colorMischka);
+}
+
+.searchChatRow:hover {
+  background-color: var(--colorWildSand);
+}
+
+.searchMessageTime {
+  @extend %smallBodyMedium;
+  margin-bottom: toRem(4);
+  color: var(--colorDolphin);
+}
+
+.searchMessageName {
+  @extend %buttonText;
+  margin-bottom: toRem(12);
+}
+
+.searchMessage {
+  @extend %bodyMedium;
+}
+
+.searchSection {
+  padding: toRem(16) toRem(26);
+}

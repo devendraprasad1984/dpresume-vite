@@ -1,0 +1,95 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+$tableOffset: toRem(16);
+
+.table {
+  margin-left: -$tableOffset;
+  padding-bottom: toRem($dataTablePaginationHeight + 24);
+}
+
+.tableHeaderRow {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: start;
+  grid-gap: toRem(40);
+  height: toRem(60);
+  border-bottom: toRem(1) solid var(--colorMischka);
+}
+
+.tableHeaderCell {
+  @extend %label;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  color: var(--colorDolphin);
+
+  &:first-of-type {
+    padding-left: $tableOffset;
+  }
+}
+
+.tableRow {
+  z-index: 0;
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: start;
+  grid-gap: toRem(40);
+  height: toRem(60);
+  border-bottom: toRem(1) solid var(--colorMischka);
+
+  &:before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: -(toRem(1));
+    left: 0;
+    width: 100%;
+    height: calc(100% + 0.125rem);
+    opacity: 0;
+    transition: opacity var(--colorTransitionDuration) ease;
+    background-color: var(--colorWhite);
+  }
+
+  &:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: -(toRem(1));
+    left: 0;
+    width: 100%;
+    height: calc(100% + 0.125rem);
+    opacity: 0;
+    transition: opacity var(--colorTransitionDuration) ease;
+    background-color: var(--colorWhisperGray);
+    border-radius: toRem(12);
+  }
+
+  &:hover:after,
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+.tableCell {
+  @extend %smallBodyMedium;
+  @extend %truncate;
+  width: 100%;
+
+  &:first-of-type {
+    padding-left: $tableOffset;
+  }
+
+  &:last-of-type {
+    padding-right: $tableOffset;
+  }
+}

@@ -1,0 +1,6 @@
+**/*.yml
+**/*.json
+**/*.prisma
+src/common/db/client-mongodb/**
+src/common/db/client-mysql/**
+src/sql/**

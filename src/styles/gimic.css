@@ -1,0 +1,21 @@
+.base-gimic {
+  -webkit-text-stroke: 1px var(--app-text-color) !important;
+  text-shadow: 3px 3px var(--app-text-color) !important;
+  word-spacing: .1em;
+  width: fit-content;
+  margin-bottom: 0;
+  font-size: 2.5em;
+}
+
+.red-gimic-text {
+  color: var(--text-color-red) !important;
+
+}
+
+.yellow-gimic-text {
+  color: var(--text-color-yellow) !important;
+}
+
+.green-gimic-text {
+  color: var(--text-color-green) !important;
+}

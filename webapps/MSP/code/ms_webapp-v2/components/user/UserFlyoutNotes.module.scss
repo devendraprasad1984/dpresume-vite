@@ -1,0 +1,48 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.header {
+  display: grid;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  align-items: center;
+  padding: toRem(16) toRem(32) toRem(16) toRem(36);
+  border-bottom: toRem(1) solid var(--colorGrey);
+}
+
+.noteTitle {
+  @extend %smallLabel;
+  color: var(--colorDolphin);
+  text-transform: uppercase;
+}
+
+.noteCard {
+  padding: toRem(24) toRem(32) toRem(24) 0;
+  margin-left: toRem(36);
+  border-bottom: toRem(1) solid var(--colorGrey);
+}
+
+.noteHeader {
+  display: grid;
+  justify-content: space-between;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  margin-bottom: toRem(16);
+}
+
+.userName {
+  @extend %smallBody;
+  margin-bottom: toRem(6);
+  color: var(--colorDolphin);
+}
+
+.noteDate {
+  @extend %smallLabel;
+  color: var(--colorWaterloo);
+}
+
+.noteText {
+  @extend %bodyMedium;
+}

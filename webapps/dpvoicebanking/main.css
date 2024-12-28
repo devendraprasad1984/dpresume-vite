@@ -1,0 +1,337 @@
+html {
+    zoom: 95%;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+* {
+    /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+    font-family: 'Courier New';
+    font-size: 14px;
+    box-sizing: border-box;
+    /*color: #6f42c1;*/
+    /*padding: 2px;*/
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+
+.wcImage{
+    margin-top: 1em;
+    width: 100%;
+    height: 200px;
+}
+
+.archImage {
+    margin-top: 2em;
+    width: 100%;
+    height: 500px;
+}
+
+a:hover {
+    background-color: #4e5ca9;
+}
+
+a.active {
+    background-color: #4e5ca9;
+}
+
+.info {
+    margin-top: 1em;
+}
+
+.info span {
+    font-weight: bold;
+}
+
+span {
+    opacity: 0.8;
+}
+
+span.red, span.green {
+    /*font-size: 14pt;*/
+    /*background-color: white;*/
+    font-weight: bolder;
+}
+
+.red {
+    color: #ec5d5d;
+}
+
+.orange {
+    color: #f1960e;
+}
+
+.green {
+    color: #3bc713;
+}
+
+.blue {
+    color: #4cb0f6;
+}
+
+.purple {
+    color: #935ff3;
+}
+
+.italic {
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.bgred {
+    background-color: #ec5d5d;
+    color: white;
+}
+
+.bgorange {
+    background-color: #f1960e;
+    color: white;
+}
+
+.bgpurple {
+    background-color: #935ff3;
+    color: white;
+}
+
+.bgprimary {
+    background-color: #4a3a9e;
+    color: white;
+}
+
+.bggreen {
+    background-color: #45ac25;
+    color: white;
+}
+
+.bgblue {
+    background-color: #4cb0f6;
+    color: white;
+}
+
+.badge {
+    border: 1px solid gray;
+    border-radius: 1%;
+}
+
+
+.left div, .left span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.bottomSign {
+    bottom: 0;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #2d3c8a;
+    right: 0;
+    padding: 10px;
+    position: absolute;
+}
+
+.sidenav div {
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2d3c8a;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+}
+
+.right {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    position: relative;
+}
+
+.headingLogo {
+    top: 0;
+    left: 0;
+    padding: 2px 0px 0px 2px;
+}
+
+.headingLogo img {
+    width: 8%;
+    height: 8%;
+}
+
+.headingTop {
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: #112999;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(90deg, rgb(226, 104, 19) 0%, rgb(255, 255, 255) 50%, rgb(47, 184, 17) 100%);
+}
+
+.tricolor {
+    color: #112999;
+    background: linear-gradient(90deg, rgb(226, 104, 19) 0%, rgb(255, 255, 255) 50%, rgb(47, 184, 17) 100%);
+}
+
+.headingTopL1 {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    /*float: right;*/
+    text-align: right;
+    vertical-align: bottom;
+}
+
+span.btn, div.btn {
+    margin-top: 1rem;
+    /*background-color: #cdbaf3 !important;*/
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .275rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    opacity: 0.80;
+}
+
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0.97;
+    overflow-x: visible;
+    color: #935ff3;
+    position: fixed;
+    /*display: none;*/
+    /*transition: 0.5s;*/
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.overlay-content {
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+    left: 20%;
+    top: 20%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: inline-block;
+}
+
+.iconImg {
+    height: 50px;
+    width: 50px;
+}
+
+.wordCloudIcon {
+    margin-top: 1em;
+    height: 50%;
+    width: 50%;
+    left: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.wordCloudIcon2 {
+    /*margin-top: 5em;*/
+    height: 15%;
+    width: 15%;
+    float: right;
+    display: inline-block;
+}
+
+span.btn:hover {
+    color: #8b8e8e;
+    background-color: black;
+}
+
+.accountHeadLine {
+    font-size: 14px;
+    font-weight: bold
+}
+
+.accountTitleLine {
+    font-size: 12px;
+    color: #e21798;
+}
+
+.contentheader {
+    margin-top: 2rem;
+}
+
+.contentData {
+    /*height: 250px;*/
+    width: 100%;
+    overflow-y: auto;
+    position: relative;
+    background-color: #f5f1f1;
+    color: #3a068f;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+p {
+    color: white;
+    font-size: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}

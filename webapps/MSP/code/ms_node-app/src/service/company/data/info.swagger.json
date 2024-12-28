@@ -1,0 +1,241 @@
+{
+    "tags": [
+        {
+            "name": "Company Info",
+            "description": "Methods for Company Info"
+        }
+    ],
+    "paths": {        
+        "/company/info/{Id}":{
+            "get": {
+                "tags": [
+                    "Info"
+                ],
+                "summary": "Filter the info by Id",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "Id",
+                        "description": "Id of the require record",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseInfo"
+                        }
+                    }
+                }
+            },
+            "patch":{
+                "tags": ["Info"],
+                "summary": "Update company information",
+                "parameters": [{
+                    "in": "path",
+                    "name": "Id",
+                    "description": "ID that will be updated",
+                    "required": "true",
+                    "type": "number"
+                },
+                {
+                    "name": "Info",
+                    "description": "Update Info object",
+                    "in": "body",
+                    "required": "true",
+                    "schema": {
+                        "$ref": "#/definitions/Info"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content":"application/json",
+                        "schema":{
+                            "$ref": "#/definitions/ApiResponseInfo"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Info"
+                ],
+                "summary": "Delete a specific info from DB",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "ID of Company Info that will be deleted",
+                        "required": "true",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "number"
+                                },
+                                "result": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/company/info/filter":{
+            "post": {
+                "tags": [
+                    "Info"
+                ],
+                "summary": "Get all the filtered records",
+                "parameters": [
+                    {
+                        "name": "request filter",
+                        "description": "object with the type of filter and parameters",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/DataFilter"
+                        },
+                        "example": {
+                            "filter": "getByCompanyId",
+                            "data": {
+                                "companyId": 1
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": "application/json",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseInfoArray"
+                        }
+                    }
+                }
+            }
+        }            
+    },
+    "definitions": {
+        "ApiResponseInfoArray": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/InfoArray"
+                }
+            }
+        },
+        "InfoArray": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Info"
+            }
+        },
+        "ApiResponseInfo": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number"
+                },
+                "result": {
+                    "$ref": "#/definitions/Info"
+                }
+            }
+        },
+        "DataFilter": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string",
+                    "enum": [
+                        "getByCompanyId"                        
+                    ],
+                    "required": "true"
+                },
+                "data": {
+                    "type": "object",
+                    "required": "true"
+                }
+            }
+        },
+        "Info": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "example": 1
+                },
+                "companyId": {
+                    "type": "number",
+                    "example": 1
+                },
+                "category": {
+                    "type": "string",
+                    "example":"Retail"
+                },
+                "status": {
+                    "type": "string",
+                    "example":"active"
+                },
+                "name": {
+                    "type": "string",
+                    "example":"Best Company"
+                },
+                "established": {
+                    "type": "number",
+                    "example":2000
+                },
+                "location": {
+                    "type": "string",
+                    "example":"Bellvue"
+                },
+                "photo": {
+                    "type": "string",
+                    "example":"http://www.photo.com"
+                },
+                "bio": {
+                    "type": "string",
+                    "example":"The best company ever"
+                },
+                "video": {
+                    "type": "string",
+                    "example":"http://www.video.com"
+                },
+                "website": {
+                    "type": "string",
+                    "example":"http://www.website.com"
+                },
+                "linkedin": {
+                    "type": "string",
+                    "example":"http://www.linkedin.com"
+                },
+                "facebook": {
+                    "type": "string",
+                    "example":"http://www.facebook.com"
+                },
+                "instagram": {
+                    "type": "string",
+                    "example":"http://www.instagram.com"
+                },
+                "twitter": {
+                    "type": "string",
+                    "example":"http://www.twitter.com"
+                }                
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.container {
+  padding: toRem(10);
+}
+
+.selectListItems {
+  display: grid;
+  grid-gap: toRem(8);
+}
+
+.selectListItem {
+  padding: toRem(4);
+  transition: background-color var(--colorTransitionDuration) ease;
+  border-radius: toRem(16);
+
+  &:hover {
+    background: var(--colorAthensGrey);
+  }
+}
+
+.selectListItemMember {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  align-items: center;
+  justify-content: start;
+  grid-gap: toRem(20);
+}
+
+.memberLineSection {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-content: space-between;
+  transition: background-color var(--colorTransitionDuration) ease;
+  border-radius: toRem(16);
+
+  &:hover {
+    background: var(--colorAthensGrey);
+  }
+}
+
+.memberLine {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  align-items: center;
+  justify-content: start;
+  grid-gap: toRem(20);
+  padding: toRem(4) toRem(10);
+}
+
+.headlines {
+  @extend %smallBodyMedium;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-gap: toRem(10);
+  color: var(--colorWaterloo);
+}
+
+.headerCounterText {
+  @extend %smallLabel;
+  margin: toRem(24) 0 toRem(14);
+  color: var(--colorDolphin);
+}
+
+.checkbox {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+}

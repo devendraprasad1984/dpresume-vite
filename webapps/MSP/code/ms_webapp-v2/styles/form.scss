@@ -1,0 +1,42 @@
+@import "functions";
+@import "variables";
+@import "typography";
+
+%baseInput {
+  font-family: inherit;
+  width: 100%;
+  display: block;
+  outline: none;
+  line-height: 1;
+  border: toRem(1) solid var(--colorMischka);
+  border-radius: toRem(12);
+  color: var(--colorSteelGrey);
+  text-overflow: ellipsis;
+  font-size: toRem(14);
+
+  &[aria-invalid="true"] {
+    border-color: var(--colorBrickRed);
+  }
+
+  &:focus,
+  &:active {
+    border-color: var(--colorJava);
+  }
+
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--colorWaterloo);
+    opacity: 1; /* Firefox */
+  }
+}
+
+%textInput {
+  @extend %baseInput;
+  padding: toRem(15) toRem(22);
+}
+
+%textArea {
+  @extend %baseInput;
+  padding: toRem(22) toRem(22);
+  line-height: (18/14);
+}

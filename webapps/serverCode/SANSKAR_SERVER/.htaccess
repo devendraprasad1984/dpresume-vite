@@ -1,0 +1,11 @@
+RewriteEngine On
+
+php_value memory_limit 150M
+php_value post_max_size 100M
+php_value upload_max_filesize 100M
+
+RewriteRule ^api/ads/?$ ads/adrotator.php
+#RewriteRule ^api/users/([0-9]+)?$ api/users_handler.php?id=$1
+
+#RewriteRule ^api/approve/?$ api/approve_handler.php
+#RewriteRule ^api/approve/([a-zA-Z0-9-]*)?$ api/approve_handler.php?id=$1

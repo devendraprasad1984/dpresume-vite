@@ -1,0 +1,10 @@
+{
+    "description": "The request method is not supported by the server and cannot be handled. ",
+    "content": {
+        "text/plain": {
+          "schema": {
+            "type": "string"
+          }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+.input-wrapper{
+    display: inline-flex;
+    width: 100%;
+    padding: 2px;
+    align-items: center;
+}

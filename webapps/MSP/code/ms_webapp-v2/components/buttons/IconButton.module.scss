@@ -1,0 +1,63 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.button {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color var(--colorTransitionDuration) ease;
+}
+
+.primaryButton {
+  path {
+    fill: var(--colorMandy);
+  }
+
+  &:hover {
+    background: var(--colorVanillaIce);
+  }
+
+  &:disabled {
+    path {
+      fill: var(--colorVanillaIce);
+    }
+  }
+}
+
+.secondaryButton {
+  path {
+    fill: var(--colorSteelGrey);
+  }
+
+  &:hover {
+    background: var(--colorMischka);
+  }
+
+  &:disabled {
+    path {
+      fill: var(--colorDisabled);
+    }
+  }
+}
+
+.filledButton {
+  background: var(--colorMandy);
+
+  path {
+    fill: var(--colorWhite);
+  }
+
+  &:hover {
+    background: var(--colorBrickRed);
+  }
+
+  &:disabled {
+    background: var(--colorVanillaIce);
+
+    path {
+      fill: var(--colorVanillaIce);
+    }
+  }
+}

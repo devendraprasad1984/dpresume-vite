@@ -1,0 +1,279 @@
+
+clone:
+  depth: full              # SonarCloud scanner needs the full history to assign issues properly
+
+definitions:  
+  docker:
+    memory: 3072/7128
+  caches:
+    sonar: ~/.sonar/cache  # Caching SonarCloud artifacts will speed up your build
+  steps:
+    - step: &build-test-sonarcloud
+        name: Build, test and analyze on SonarCloud
+        caches:
+          - node
+          - sonar
+        script:
+          - npm install --quiet
+          - pipe: sonarsource/sonarcloud-scan:1.2.1
+            variables:
+              EXTRA_ARGS: '-Dsonar.exclusions="src/ext/db/client-mysql/**,src/ext/db/client-mongo/**"'
+    - step: &check-quality-gate-sonarcloud
+        name: Check the Quality Gate on SonarCloud
+        script:
+          - pipe: sonarsource/sonarcloud-quality-gate:0.1.4
+    - step: &check_service_tag
+        name: "Check Service Tag"
+        script:
+          - if [ -n $BITBUCKET_TAG ]; then echo "$BITBUCKET_TAG"; export SERVICE=$(cut -d'-' -f1 <<<"$BITBUCKET_TAG"); echo "$SERVICE";  fi; 
+          - printenv > ENV.txt
+        artifacts:
+          - ENV.txt
+    - step: &check_layer_tag
+        name: "Check Layer Tag"
+        script:
+          - if [ -n $BITBUCKET_TAG ]; then echo "$BITBUCKET_TAG"; export LAYER=$(cut -d'-' -f1 <<<"$BITBUCKET_TAG"); echo "$LAYER"; fi; 
+          - printenv > ENV.txt
+        artifacts:
+          - ENV.txt        
+    - step: &build
+        name: "Build"
+        script:
+          #- echo $SSH_FWD_PORT:$DB_HOST:$DB_PORT $SSH_USER@$SSH_HOST
+          #- echo $DB_USER $DB_PORT $DB_SOURCE $DB_TARGET
+          - npm install 
+          - apt-get update && apt-get install -y lsof                     
+          - ssh -fN -L $DB_PORT:$DB_HOST:$DB_PORT $SSH_USER@$SSH_HOST 
+          - export DATABASE_MYSQL="mysql://$DB_USER:$DB_PSW@localhost:$DB_PORT/$DB_NAME?sslaccept=accept_invalid_certs"
+          - npx prisma db pull --schema src/common/db/prisma/schema_mysql.prisma
+          - npx prisma generate --schema src/common/db/prisma/schema_mysql.prisma
+          - npx prisma db execute --preview-feature --file src/sql/dbLogic.sql --schema src/common/db/prisma/schema_mysql.prisma
+          - kill $(lsof -t -i:$DB_PORT)          
+          - npm run clean
+          - npm run lint
+          - npm run compile
+          - npm run build:npm
+          - npm run copy:prisma 
+        artifacts:
+          - ENV.txt
+          - dist/**
+    - step: &migrate_db_schema
+        name: "Migrate Database Schema"
+        script:
+          - apt-get update && apt-get install -y lsof
+          - cd dist
+          - sed -i "s/native/$BINARY_TARGET/" common/db/prisma/schema_mysql.prisma 
+          - ssh -fN -L $DB_PORT:$DB_HOST:$DB_PORT $SSH_USER@$SSH_HOST     
+          - npm install @prisma/client@3.9.2 
+          - export DATABASE_MYSQL="mysql://$DB_USER:$DB_PSW@localhost:$DB_PORT/$DB_NAME?sslaccept=accept_invalid_certs"     
+          - npx prisma db push --force-reset --schema ./common/db/prisma/schema_mysql.prisma
+          - npx prisma db execute --preview-feature --file ./sql/dbLogic.sql --schema ./common/db/prisma/schema_mysql.prisma
+          - kill $(lsof -t -i:$DB_PORT)
+        artifacts:
+          - ENV.txt
+          - dist/**
+    - step: &create_service_artifact
+        name: "Create Service Artifact"
+        script: 
+          - if [ -f ENV.txt ]; then export $(cat ENV.txt | xargs); fi;
+          #- echo $SERVICE
+          #- echo $DATABASE_MYSQL
+          - apt-get update
+          - apt-get install -y zip  
+          - rm -rf artifact
+          - mkdir artifact
+          - chmod +x ./serverless.service-artifact.sh
+          - /bin/bash ./serverless.service-artifact.sh $SERVICE
+        artifacts:
+          - ENV.txt
+          - artifact/**
+    - step: &create_layer_artifact
+        name: "Create Layer Artifact"
+        script: 
+          - if [ -f ENV.txt ]; then export $(cat ENV.txt | xargs); fi;
+          #- echo $LAYER
+          - apt-get update
+          - apt-get install -y zip  
+          - rm -rf artifact
+          - mkdir artifact
+          - chmod +x ./serverless.layer-artifact.sh
+          - /bin/bash ./serverless.layer-artifact.sh $LAYER
+        artifacts:
+          - ENV.txt
+          - artifact/**
+    - step: &create_all_artifacts
+        name: "Create all Artifacts"
+        script:
+          - apt-get update
+          - apt-get install -y zip  
+          - rm -rf artifact
+          - mkdir artifact               
+          - chmod +x ./serverless.service-artifact.sh
+          - /bin/bash ./serverless.service-artifact.sh "admin" "auth" "company" "meet" "message" "notification" "schedule" "user"
+          - chmod +x ./serverless.layer-artifact.sh          
+          - /bin/bash ./serverless.layer-artifact.sh "npm" "config" "auth" "db"
+        artifacts:
+          - artifact/**
+    - step: &deploy_service
+        name: "Deploy Service"
+        script:
+          - if [ -f ENV.txt ]; then export $(cat ENV.txt | xargs); fi;         
+          #- echo $ENV $S3_BUCKET $SERVICE
+          - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          - unzip awscliv2.zip
+          - ./aws/install
+          - aws --version   
+          - aws lambda update-function-configuration --function-name $SERVICE --handler ./service/$SERVICE/handler.service --environment "Variables={NODE_ENV=$ENV,DATABASE_MYSQL=$DB_MYSQL,STREAM_API_KEY=$STREAM_API_KEY,STREAM_API_SECRET=$STREAM_API_SECRET,MEET_ACCOUNT_MAIN_SID=$MEET_ACCOUNT_MAIN_SID,MEET_ACCOUNT_MAIN_API_KEY=$MEET_ACCOUNT_MAIN_API_KEY,MEET_ACCOUNT_MAIN_API_SECRET=$MEET_ACCOUNT_MAIN_API_SECRET,MEET_ACCOUNT_SUB_SID=$MEET_ACCOUNT_SUB_SID,MEET_ACCOUNT_SUB_API_SECRET=$MEET_ACCOUNT_SUB_API_SECRET}"
+          - aws s3 cp artifact/service_$SERVICE.zip s3://$S3_BUCKET/service_$SERVICE.zip
+          - aws lambda update-function-code --function-name $SERVICE --s3-bucket $S3_BUCKET --s3-key service_$SERVICE.zip 
+          - NPM_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "npm" --query "LayerVersions[0].LayerVersionArn" --output text)          
+          - CONFIG_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "config" --query "LayerVersions[0].LayerVersionArn" --output text)
+          - AUTH_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "auth" --query "LayerVersions[0].LayerVersionArn" --output text)
+          - DB_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "db" --query "LayerVersions[0].LayerVersionArn" --output text) 
+          - aws lambda update-function-configuration --function-name "$SERVICE" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN       
+    - step: &deploy_layer
+        name: "Deploy Layer"
+        script:
+          - if [ -f ENV.txt ]; then export $(cat ENV.txt | xargs); fi;
+          #- echo $ENV $S3_BUCKET $LAYER $LAMBDA_RUNTIME
+          - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          - unzip awscliv2.zip
+          - ./aws/install
+          - aws --version
+          - aws s3 cp artifact/layer_$LAYER.zip s3://$S3_BUCKET/layer_$LAYER.zip
+          - aws lambda publish-layer-version --layer-name $LAYER --description $LAYER --compatible-runtimes $LAMBDA_RUNTIME --content S3Bucket=$S3_BUCKET,S3Key=layer_$LAYER.zip 
+          - NPM_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "npm" --query "LayerVersions[0].LayerVersionArn" --output text)          
+          - CONFIG_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "config" --query "LayerVersions[0].LayerVersionArn" --output text)
+          - AUTH_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "auth" --query "LayerVersions[0].LayerVersionArn" --output text)
+          - DB_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "db" --query "LayerVersions[0].LayerVersionArn" --output text)
+          - aws lambda update-function-configuration --function-name "admin" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "auth" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "company" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "meet" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "message" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "notification" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "schedule" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "user" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN           
+    - step: &deploy_all_artifacts
+        name: "Deploy all Artifacts"
+        script:
+          - echo $ENV $S3_BUCKET $LAYER $LAMBDA_RUNTIME
+          - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          - unzip awscliv2.zip
+          - ./aws/install
+          - aws --version 
+          - export SERVICE="admin"
+          - aws lambda update-function-configuration --function-name $SERVICE --handler ./service/$SERVICE/handler.service --environment "Variables={NODE_ENV=$ENV,DATABASE_MYSQL=$DB_MYSQL,STREAM_API_KEY=$STREAM_API_KEY,STREAM_API_SECRET=$STREAM_API_SECRET,MEET_ACCOUNT_MAIN_SID=$MEET_ACCOUNT_MAIN_SID,MEET_ACCOUNT_MAIN_API_KEY=$MEET_ACCOUNT_MAIN_API_KEY,MEET_ACCOUNT_MAIN_API_SECRET=$MEET_ACCOUNT_MAIN_API_SECRET,MEET_ACCOUNT_SUB_SID=$MEET_ACCOUNT_SUB_SID,MEET_ACCOUNT_SUB_API_SECRET=$MEET_ACCOUNT_SUB_API_SECRET}"
+          - aws s3 cp artifact/service_$SERVICE.zip s3://$S3_BUCKET/service_$SERVICE.zip
+          - aws lambda update-function-code --function-name $SERVICE --s3-bucket $S3_BUCKET --s3-key service_$SERVICE.zip 
+          - export SERVICE="auth"
+          - aws lambda update-function-configuration --function-name $SERVICE --handler ./service/$SERVICE/handler.service --environment "Variables={NODE_ENV=$ENV,DATABASE_MYSQL=$DB_MYSQL,STREAM_API_KEY=$STREAM_API_KEY,STREAM_API_SECRET=$STREAM_API_SECRET,MEET_ACCOUNT_MAIN_SID=$MEET_ACCOUNT_MAIN_SID,MEET_ACCOUNT_MAIN_API_KEY=$MEET_ACCOUNT_MAIN_API_KEY,MEET_ACCOUNT_MAIN_API_SECRET=$MEET_ACCOUNT_MAIN_API_SECRET,MEET_ACCOUNT_SUB_SID=$MEET_ACCOUNT_SUB_SID,MEET_ACCOUNT_SUB_API_SECRET=$MEET_ACCOUNT_SUB_API_SECRET}"
+          - aws s3 cp artifact/service_$SERVICE.zip s3://$S3_BUCKET/service_$SERVICE.zip
+          - aws lambda update-function-code --function-name $SERVICE --s3-bucket $S3_BUCKET --s3-key service_$SERVICE.zip
+          - export SERVICE="company"
+          - aws lambda update-function-configuration --function-name $SERVICE --handler ./service/$SERVICE/handler.service --environment "Variables={NODE_ENV=$ENV,DATABASE_MYSQL=$DB_MYSQL,STREAM_API_KEY=$STREAM_API_KEY,STREAM_API_SECRET=$STREAM_API_SECRET,MEET_ACCOUNT_MAIN_SID=$MEET_ACCOUNT_MAIN_SID,MEET_ACCOUNT_MAIN_API_KEY=$MEET_ACCOUNT_MAIN_API_KEY,MEET_ACCOUNT_MAIN_API_SECRET=$MEET_ACCOUNT_MAIN_API_SECRET,MEET_ACCOUNT_SUB_SID=$MEET_ACCOUNT_SUB_SID,MEET_ACCOUNT_SUB_API_SECRET=$MEET_ACCOUNT_SUB_API_SECRET}"
+          - aws s3 cp artifact/service_$SERVICE.zip s3://$S3_BUCKET/service_$SERVICE.zip
+          - aws lambda update-function-code --function-name $SERVICE --s3-bucket $S3_BUCKET --s3-key service_$SERVICE.zip
+          - export SERVICE="meet"
+          - aws lambda update-function-configuration --function-name $SERVICE --handler ./service/$SERVICE/handler.service --environment "Variables={NODE_ENV=$ENV,DATABASE_MYSQL=$DB_MYSQL,STREAM_API_KEY=$STREAM_API_KEY,STREAM_API_SECRET=$STREAM_API_SECRET,MEET_ACCOUNT_MAIN_SID=$MEET_ACCOUNT_MAIN_SID,MEET_ACCOUNT_MAIN_API_KEY=$MEET_ACCOUNT_MAIN_API_KEY,MEET_ACCOUNT_MAIN_API_SECRET=$MEET_ACCOUNT_MAIN_API_SECRET,MEET_ACCOUNT_SUB_SID=$MEET_ACCOUNT_SUB_SID,MEET_ACCOUNT_SUB_API_SECRET=$MEET_ACCOUNT_SUB_API_SECRET}"
+          - aws s3 cp artifact/service_$SERVICE.zip s3://$S3_BUCKET/service_$SERVICE.zip
+          - aws lambda update-function-code --function-name $SERVICE --s3-bucket $S3_BUCKET --s3-key service_$SERVICE.zip
+          - export SERVICE="message"
+          - aws lambda update-function-configuration --function-name $SERVICE --handler ./service/$SERVICE/handler.service --environment "Variables={NODE_ENV=$ENV,DATABASE_MYSQL=$DB_MYSQL,STREAM_API_KEY=$STREAM_API_KEY,STREAM_API_SECRET=$STREAM_API_SECRET,MEET_ACCOUNT_MAIN_SID=$MEET_ACCOUNT_MAIN_SID,MEET_ACCOUNT_MAIN_API_KEY=$MEET_ACCOUNT_MAIN_API_KEY,MEET_ACCOUNT_MAIN_API_SECRET=$MEET_ACCOUNT_MAIN_API_SECRET,MEET_ACCOUNT_SUB_SID=$MEET_ACCOUNT_SUB_SID,MEET_ACCOUNT_SUB_API_SECRET=$MEET_ACCOUNT_SUB_API_SECRET}"
+          - aws s3 cp artifact/service_$SERVICE.zip s3://$S3_BUCKET/service_$SERVICE.zip
+          - aws lambda update-function-code --function-name $SERVICE --s3-bucket $S3_BUCKET --s3-key service_$SERVICE.zip
+          - export SERVICE="notification"
+          - aws lambda update-function-configuration --function-name $SERVICE --handler ./service/$SERVICE/handler.service --environment "Variables={NODE_ENV=$ENV,DATABASE_MYSQL=$DB_MYSQL,STREAM_API_KEY=$STREAM_API_KEY,STREAM_API_SECRET=$STREAM_API_SECRET,MEET_ACCOUNT_MAIN_SID=$MEET_ACCOUNT_MAIN_SID,MEET_ACCOUNT_MAIN_API_KEY=$MEET_ACCOUNT_MAIN_API_KEY,MEET_ACCOUNT_MAIN_API_SECRET=$MEET_ACCOUNT_MAIN_API_SECRET,MEET_ACCOUNT_SUB_SID=$MEET_ACCOUNT_SUB_SID,MEET_ACCOUNT_SUB_API_SECRET=$MEET_ACCOUNT_SUB_API_SECRET}"
+          - aws s3 cp artifact/service_$SERVICE.zip s3://$S3_BUCKET/service_$SERVICE.zip
+          - aws lambda update-function-code --function-name $SERVICE --s3-bucket $S3_BUCKET --s3-key service_$SERVICE.zip
+          - export SERVICE="schedule"
+          - aws lambda update-function-configuration --function-name $SERVICE --handler ./service/$SERVICE/handler.service --environment "Variables={NODE_ENV=$ENV,DATABASE_MYSQL=$DB_MYSQL,STREAM_API_KEY=$STREAM_API_KEY,STREAM_API_SECRET=$STREAM_API_SECRET,MEET_ACCOUNT_MAIN_SID=$MEET_ACCOUNT_MAIN_SID,MEET_ACCOUNT_MAIN_API_KEY=$MEET_ACCOUNT_MAIN_API_KEY,MEET_ACCOUNT_MAIN_API_SECRET=$MEET_ACCOUNT_MAIN_API_SECRET,MEET_ACCOUNT_SUB_SID=$MEET_ACCOUNT_SUB_SID,MEET_ACCOUNT_SUB_API_SECRET=$MEET_ACCOUNT_SUB_API_SECRET}"
+          - aws s3 cp artifact/service_$SERVICE.zip s3://$S3_BUCKET/service_$SERVICE.zip
+          - aws lambda update-function-code --function-name $SERVICE --s3-bucket $S3_BUCKET --s3-key service_$SERVICE.zip
+          - export SERVICE="user"
+          - aws lambda update-function-configuration --function-name $SERVICE --handler ./service/$SERVICE/handler.service --environment "Variables={NODE_ENV=$ENV,DATABASE_MYSQL=$DB_MYSQL,STREAM_API_KEY=$STREAM_API_KEY,STREAM_API_SECRET=$STREAM_API_SECRET,MEET_ACCOUNT_MAIN_SID=$MEET_ACCOUNT_MAIN_SID,MEET_ACCOUNT_MAIN_API_KEY=$MEET_ACCOUNT_MAIN_API_KEY,MEET_ACCOUNT_MAIN_API_SECRET=$MEET_ACCOUNT_MAIN_API_SECRET,MEET_ACCOUNT_SUB_SID=$MEET_ACCOUNT_SUB_SID,MEET_ACCOUNT_SUB_API_SECRET=$MEET_ACCOUNT_SUB_API_SECRET}"
+          - aws s3 cp artifact/service_$SERVICE.zip s3://$S3_BUCKET/service_$SERVICE.zip
+          - aws lambda update-function-code --function-name $SERVICE --s3-bucket $S3_BUCKET --s3-key service_$SERVICE.zip
+          - export LAYER="npm"
+          - aws s3 cp artifact/layer_$LAYER.zip s3://$S3_BUCKET/layer_$LAYER.zip
+          - aws lambda publish-layer-version --layer-name $LAYER --description "$LAYER" --compatible-runtimes $LAMBDA_RUNTIME --content S3Bucket=$S3_BUCKET,S3Key=layer_$LAYER.zip 
+          - export LAYER="config"
+          - aws s3 cp artifact/layer_$LAYER.zip s3://$S3_BUCKET/layer_$LAYER.zip
+          - aws lambda publish-layer-version --layer-name $LAYER --description "$LAYER" --compatible-runtimes $LAMBDA_RUNTIME --content S3Bucket=$S3_BUCKET,S3Key=layer_$LAYER.zip  
+          - export LAYER="auth"
+          - aws s3 cp artifact/layer_$LAYER.zip s3://$S3_BUCKET/layer_$LAYER.zip
+          - aws lambda publish-layer-version --layer-name $LAYER --description "$LAYER" --compatible-runtimes $LAMBDA_RUNTIME --content S3Bucket=$S3_BUCKET,S3Key=layer_$LAYER.zip 
+          - export LAYER="db"
+          - aws s3 cp artifact/layer_$LAYER.zip s3://$S3_BUCKET/layer_$LAYER.zip
+          - aws lambda publish-layer-version --layer-name $LAYER --description "$LAYER" --compatible-runtimes $LAMBDA_RUNTIME --content S3Bucket=$S3_BUCKET,S3Key=layer_$LAYER.zip
+          - NPM_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "npm" --query "LayerVersions[0].LayerVersionArn" --output text)          
+          - CONFIG_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "config" --query "LayerVersions[0].LayerVersionArn" --output text)
+          - AUTH_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "auth" --query "LayerVersions[0].LayerVersionArn" --output text)
+          - DB_LAYER_ARN=$(aws lambda list-layer-versions --layer-name "db" --query "LayerVersions[0].LayerVersionArn" --output text)
+          - aws lambda update-function-configuration --function-name "admin" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "auth" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "company" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "meet" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "message" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "notification" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "schedule" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+          - aws lambda update-function-configuration --function-name "user" --layers $NPM_LAYER_ARN $CONFIG_LAYER_ARN $AUTH_LAYER_ARN $DB_LAYER_ARN
+image: node:14
+# More info here: https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html
+
+pipelines: 
+  tags:
+    '*-layer-*':
+      - step: *check_layer_tag
+      - step: 
+          <<: *build
+          deployment: local-db
+      - step:
+          <<: *migrate_db_schema
+          deployment: dev-db
+      - step: *create_layer_artifact
+      - step: 
+          <<: *deploy_layer
+          deployment: dev
+    '*-*.*.*':
+      - step: *check_service_tag  
+      - step: 
+          <<: *build
+          deployment: local-db
+      - step:
+          <<: *migrate_db_schema
+          deployment: dev-db
+      - step: *create_service_artifact
+      - step: 
+          <<: *deploy_service
+          deployment: dev
+  branches:
+    dev: 
+      - step: 
+          <<: *build
+          deployment: local-db
+      - step:
+          <<: *migrate_db_schema
+          deployment: dev-db
+      - step: *create_all_artifacts
+      - step: 
+          <<: *deploy_all_artifacts
+          deployment: dev
+    staging:
+      - step: 
+          <<: *build
+          deployment: dev-db
+      - step:
+          <<: *migrate_db_schema
+          deployment: staging-db
+      - step: *create_all_artifacts
+      - step: 
+          <<: *deploy_all_artifacts
+          deployment: staging
+    #'**':
+      #- step: *build-test-sonarcloud
+      #- step: *check-quality-gate-sonarcloud
+  
+  
+  
+

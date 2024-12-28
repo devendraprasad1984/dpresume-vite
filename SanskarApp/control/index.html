@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BDFApp Admin Console</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/css/colpick.css"/>
+    <link rel="stylesheet" href="assets/css/index.css"/>
+
+<!--    <link rel="stylesheet" type="text/css" href="//s3.amazonaws.com/mikemai/assets/css/typesettings-1.0-min.css">-->
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./libs/sweetalert.min.js"></script>
+    <script src="./libs/colpick.js"></script>
+</head>
+<body>
+
+
+<div class="overlay" id="idOverlay"></div>
+<div class="header">
+    <span class="btn purple" onclick="handleLeftNavBar();">...</span>
+    <span class="grcolor2" style="font-size: 25px; cursor: pointer;"
+          onclick="location.href='.'">Sanskar App</span>
+    <span class="grcolor1" style="float:right;font-size: 20px; cursor: pointer;">Management Console</span>
+</div>
+
+<div class="flexcol section">
+    <div class="flexrow">
+        <div id="leftMenu" class="leftNav"></div>
+        <div id="rightContainer" class="rightbox flex"></div>
+    </div>
+
+    <div class="bottom right">
+        <div><span class="purpletxt"></span></div>
+        <div><span class="purpletxt">Developed by MediAssist</span></div>
+    </div>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/uploads.js"></script>
+<script src="js/profiles.js"></script>
+<script src="js/routes.js"></script>
+<script src="js/crud.js"></script>
+<!--let load all dependencies first in order after that document ready iife-->
+<script src="js/init.js"></script>
+</body>
+</html>

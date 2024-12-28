@@ -1,0 +1,15 @@
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/typography";
+
+.chatWindowContainer {
+  background: var(--colorWhite);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  border-left: toRem(1) solid var(--colorMischka);
+}
+
+.hide {
+  display: none;
+}
