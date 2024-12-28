@@ -1,6 +1,6 @@
 import React from "react";
 
-const PrintIt = (list = [], classes = "") => {
+export const PrintIt = (list = [], classes = "") => {
   return list.map((li, index) => {
     if (typeof li !== "string") {
       return <li key={"item-" + index} className={`wid100 ${classes}`}>{li}</li>;

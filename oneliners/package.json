@@ -1,6 +1,6 @@
 {
   "name": "oneliners",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "core js utility oneliners helper functions",
   "main": "oneliners.js",
   "type": "module",
