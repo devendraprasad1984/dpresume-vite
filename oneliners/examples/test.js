@@ -1,4 +1,4 @@
-import oneliners from "../index.js";
+import oneliners from "../oneliners.js";
 
 const arrow = "=>";
 console.log(`oneliners.contactUs ${arrow}`, oneliners.contactAuthor());
