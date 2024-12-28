@@ -1,17 +1,16 @@
 import React from "react";
+import PrintList from "./printList.jsx";
+
+const oneliners = <div className="col">
+  <span className="skill-label wt500 size80">Onliners</span>
+  <span className="size12">core javascript utility helper methods</span>
+  <span className="size12 bold">npm i oneliners <a className="size12">read me</a></span>
+</div>;
 
 const Community = () => {
   return <div className="pad10">
     <div className="size24 bold">Community</div>
-    <ul className="margin--y-10 flix">
-      <li className="wid100">
-        <div className="col">
-          <span className="skill-label wt500 size80">Onliners</span>
-          <span className="size15">core javascript utility helper methods</span>
-          <span className="size12">npm i oneliners <a className="size12">read me</a></span>
-        </div>
-      </li>
-    </ul>
+      {PrintList([oneliners], "counter-color-success")}
   </div>;
 };
 export default Community;
