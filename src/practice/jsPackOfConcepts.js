@@ -29,7 +29,9 @@
  * =>implement throttle method that comes with cancel method which can cancel delayed invocation
  * =>implement custom pollyfill for typeof operation
  */
-import core from "../core/core.js";
+import oneliners from "oneliners";
+
+const core = oneliners.core;
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout
 //delaying the execution of a function until a certain amount of time has passed since the last time it was called

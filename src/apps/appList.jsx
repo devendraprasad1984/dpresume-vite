@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import DOMEnum from "../enums/DOMEnum.js";
 import {MenuItem, Select} from "@mui/material";
-import core from "../core/core.js";
 import {appMap} from "../hooks/useAppSelectorComponentMap.js";
+import oneliners from "oneliners";
 
 const SimpleAppOptions = () => {
   const keys = Object.keys(appMap);
@@ -28,7 +28,7 @@ const AppList = React.forwardRef(({
   const [value, setValue] = useState(defaultValue);
 
   const handleOnChange = (e, thisProps) => {
-    const curVal = core.coalesce(thisProps?.props?.value, e?.target?.value);
+    const curVal = oneliners.core.coalesce(thisProps?.props?.value, e?.target?.value);
     setCurrentApp(curVal);
     setValue(curVal);
   };

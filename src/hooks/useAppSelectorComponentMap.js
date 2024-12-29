@@ -1,6 +1,6 @@
 import React from "react";
 import appEnum from "../enums/appEnum.js";
-import core from "../core/core.js";
+import oneliners from "oneliners";
 
 const LazySimpleForm = React.lazy(
   () => import("../apps/simpleForm/simpleForm.jsx"));
@@ -23,7 +23,7 @@ export const appMap = {
 };
 
 const useAppSelectorComponentMap = ({currentApp}) => {
-  if (!core.isPresent(currentApp)) {
+  if (!oneliners.core.isPresent(currentApp)) {
     return;
   }
   return appMap[currentApp];

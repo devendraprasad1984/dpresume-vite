@@ -1,6 +1,7 @@
 import jsPackOfConcepts from "../../practice/jsPackOfConcepts.js";
-import core from "../../core/core.js";
+import oneliners from "oneliners";
 
+const core = oneliners.core;
 const oneSecond = 1000;
 let debounceCounter = 0;
 const printTitle = (title) => {

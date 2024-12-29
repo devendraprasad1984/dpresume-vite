@@ -1,12 +1,11 @@
 import React, {useEffect, useRef, useState} from "react";
 import MyButton from "../components/contextual/button.jsx";
 import AppList from "./appList.jsx";
-import DomHelper from "../core/domHelper.js";
 import DOMEnum from "../enums/DOMEnum.js";
-import core from "../core/core.js";
 import useAppSelectorComponentMap, {appMap} from "../hooks/useAppSelectorComponentMap.js";
 import {useParams} from "react-router-dom";
 import appEnum from "../enums/appEnum.js";
+import oneliners from 'oneliners';
 
 const AppsHome = () => {
   const params = useParams();
@@ -22,14 +21,14 @@ const AppsHome = () => {
   }, [id]);
 
   const ThisApp = useAppSelectorComponentMap({currentApp});
-  if (core.isNull(ThisApp)) {
+  if (oneliners.core.isNull(ThisApp)) {
     return "Please try later";
   }
 
   const handleAppSelectorButton = (e) => {
     e?.preventDefault();
-    const select1 = DomHelper.getByDOMId(DOMEnum.appSelectList1);
-    const curVal = core.coalesce(select1.value, list2Ref?.current?.dataset?.value);
+    const select1 = oneliners.domHelpers.getByDOMId(DOMEnum.appSelectList1);
+    const curVal = oneliners.core.coalesce(select1.value, list2Ref?.current?.dataset?.value);
     setCurrentApp(curVal);
   };
   return <div className="col gap2">
@@ -47,7 +46,7 @@ const AppsHome = () => {
       >Show</MyButton>
     </div>
     <div className="size38 msize24 wt600">{currentApp}</div>
-    {core.isPresent(currentApp) && <div className="wid100 mwid100 col gap2">
+    {oneliners.core.isPresent(currentApp) && <div className="wid100 mwid100 col gap2">
       <React.Suspense fallback={<div className="text-danger size20">Please wait...</div>}>
         <ThisApp/>
       </React.Suspense>

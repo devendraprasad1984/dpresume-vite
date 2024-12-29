@@ -59,6 +59,9 @@ const isString = (val) => typeof val === "string";
 const isFunction = (val) => typeof val === FUNCTION_TYPE;
 const isNumber = (val) => typeof val === "number";
 const isBoolean = (val) => typeof val === "boolean";
+const isNull = val => val === null || val === undefined || val === "null" || typeof val === "undefined";
+const isArray = val => typeof val === "object" && !isNull(val) && val?.length > 0 && Array.isArray(val);
+const isObject = val => typeof val === "object" && !isNull(val) && !isArray(val);
 
 const parseJSON = obj => {
   if (anyTrue(!isObjectPresent(obj), !isPresent(obj))) {
@@ -101,7 +104,7 @@ const allTrue = (...args) => {
   return arr.filter(v => v === true).length === arr.length;
 };
 
-const ifNull = (value) => (value === null || value === undefined);
+const ifNull = (value) => isNull(value);
 const ifNaN = (value) => (ifNull(value) || Number.isNaN(value) || value === "");
 const isObjectPresent = value => (value !== null && value !== undefined);
 const isObjectBlank = value => Object.keys(value || {}).length === 0;
@@ -278,16 +281,16 @@ const mergeClasses = (...rest) => {
   }
 
   return rest
-    .flat()
-    .filter(Boolean)
-    .map(item => {
-      if (typeof item === "object") {
-        return Object.keys(item).filter(key => item[key]);
-      }
-      return item;
-    })
-    .flat()
-    .join(" ");
+  .flat()
+  .filter(Boolean)
+  .map(item => {
+    if (typeof item === "object") {
+      return Object.keys(item).filter(key => item[key]);
+    }
+    return item;
+  })
+  .flat()
+  .join(" ");
 };
 
 const removeDuplicates = (arr, toKey) => {
@@ -324,6 +327,7 @@ const core = {
   stringifyAndParse,
   anyTrue,
   allTrue,
+  isNull,
   ifNull,
   ifNaN,
   ifTrue,
@@ -377,7 +381,9 @@ const core = {
   getFirstElement,
   mergeClasses,
   removeDuplicates,
-  stringifyReplacer
+  stringifyReplacer,
+  isArray,
+  isObject
 };
 
 export default core;

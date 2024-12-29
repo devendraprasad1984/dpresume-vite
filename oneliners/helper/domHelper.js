@@ -1,4 +1,4 @@
-import core from "./core.js";
+import core from "../core.js";
 import vanillaSVGs from "./vanillaSVGs.js";
 
 const pleaseWait = "Please wait...";

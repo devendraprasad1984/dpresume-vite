@@ -1,11 +1,13 @@
 {
   "name": "oneliners",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "core js utility oneliners helper functions",
   "main": "oneliners.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "versonPatch": "npm version patch",
+    "publish": "npm publish"
   },
   "author": "DP (Devendra Prasad)",
   "license": "ISC"
