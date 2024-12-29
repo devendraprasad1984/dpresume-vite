@@ -1,0 +1,1147 @@
+{
+    "products": {
+        "total_count": 1,
+        "page_info": {
+            "current_page": 1,
+            "page_size": 20,
+            "total_pages": 1
+        },
+        "suggestions": [],
+        "items": [
+            {
+                "badges": [],
+                "name": "Grubhub",
+                "base_image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675038175/07675038175_105567_master.png/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+                "brand_name": "GRUBHUB",
+                "featured": true,
+                "popular": false,
+                "brand_image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/category_assets/brand/grubhub-gift-card/grubhub-gift-card.png/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+                "url_key": "grubhub-gift-card",
+                "upc": "P5Y7VFNTZ0RN8ANG73L2J0VBLP",
+                "giftcard_amounts": [],
+                "tenant_id": "VTL7K80DXRPPVFPNHBLCXYCVYM",
+                "catalog_id": "292TB8TD8H1HVS8GPH7G5Y4L78",
+                "default_product_upc": "07675038175",
+                "unique_product_id": "VTL7K80DXRPPVFPNHBLCXYCVYM_292TB8TD8H1HVS8GPH7G5Y4L78_07675038175",
+                "currency": "USD",
+                "product_category": "CLOSELOOP",
+                "short_description": {
+                    "html": "With Grubhub gift cards, friends and family can order food delivery anytime from their favorite restaurants."
+                },
+                "categories": [
+                    {
+                        "url_key": "occasions",
+                        "name": "Occasions",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "gift-card-ideas",
+                        "name": "Gift Card Ideas",
+                        "is_brand": 0,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "recommended",
+                        "name": "Recommended Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "e-gift-cards",
+                        "name": "Shop eGift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "physical-gift-cards",
+                        "name": "Physical Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "recipient",
+                        "name": "Recipient",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "holiday-gift-cards",
+                        "name": "Holiday Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "birthday",
+                        "name": "Birthday Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "wedding",
+                        "name": "Wedding Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "anniversary",
+                        "name": "Anniversary Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "thank-you",
+                        "name": "Thank You Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "congratulations-gift-cards",
+                        "name": "Congratulations Gift Cards ",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "bon-voyage",
+                        "name": "Bon Voyage Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "retirement",
+                        "name": "Retirement Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "get-well-soon",
+                        "name": "Get Well Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "thinking-of-you",
+                        "name": "Thinking of You Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "restaurant-gift-cards",
+                        "name": "Restaurant Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "travel",
+                        "name": "Travel Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "kids",
+                        "name": "Kids Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "food-delivery",
+                        "name": "Food Delivery Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "most-popular",
+                        "name": "Most Popular",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "e-gift-cards",
+                                "category_url_key": "e-gift-cards",
+                                "category_name": "Shop eGift Cards",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "featured",
+                        "name": "Featured",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "physical-gift-cards",
+                                "category_url_key": "physical-gift-cards",
+                                "category_name": "Physical Gift Cards",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "for-mom",
+                        "name": "Gift Cards for Mom",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/recipient",
+                                "category_url_key": "recipient",
+                                "category_name": "Recipient",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "for-grandparents",
+                        "name": "Gift Cards for Grandparents",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/recipient",
+                                "category_url_key": "recipient",
+                                "category_name": "Recipient",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "for-her",
+                        "name": "Gift Cards for Her",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/recipient",
+                                "category_url_key": "recipient",
+                                "category_name": "Recipient",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "for-teachers",
+                        "name": "Gift Cards for Teachers",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/recipient",
+                                "category_url_key": "recipient",
+                                "category_name": "Recipient",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "for-travelers",
+                        "name": "Gift Cards for Travelers",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/recipient",
+                                "category_url_key": "recipient",
+                                "category_name": "Recipient",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "mom-s-day",
+                        "name": "Mother's Day Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/holiday-gift-cards",
+                                "category_url_key": "holiday-gift-cards",
+                                "category_name": "Holiday Gift Cards",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "grandparents-day",
+                        "name": "Grandparent's Day Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/holiday-gift-cards",
+                                "category_url_key": "holiday-gift-cards",
+                                "category_name": "Holiday Gift Cards",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "halloween",
+                        "name": "Halloween Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/holiday-gift-cards",
+                                "category_url_key": "holiday-gift-cards",
+                                "category_name": "Holiday Gift Cards",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "christmas",
+                        "name": "Christmas Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/holiday-gift-cards",
+                                "category_url_key": "holiday-gift-cards",
+                                "category_name": "Holiday Gift Cards",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "hanukkah",
+                        "name": "Hanukkah Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/holiday-gift-cards",
+                                "category_url_key": "holiday-gift-cards",
+                                "category_name": "Holiday Gift Cards",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "brands",
+                        "name": "Brands",
+                        "is_brand": 1,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "grubhub-gift-card",
+                        "name": "GRUBHUB",
+                        "is_brand": 1,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "brands",
+                                "category_url_key": "brands",
+                                "category_name": "Brands",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "employee-sandbox",
+                        "name": "It's GO TIME!",
+                        "is_brand": 0,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "easter",
+                        "name": "Easter",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/holiday-gift-cards",
+                                "category_url_key": "holiday-gift-cards",
+                                "category_name": "Holiday Gift Cards",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "gift-cards-for-the-happy-couple",
+                        "name": "Gift Cards for Happy Couples",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/recipient",
+                                "category_url_key": "recipient",
+                                "category_name": "Recipient",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "gift-cards-for-the-home-chef",
+                        "name": "Gift Cards for Home Chefs",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/recipient",
+                                "category_url_key": "recipient",
+                                "category_name": "Recipient",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "gift-cards-for-employees",
+                        "name": "Gift Cards for Employees",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/recipient",
+                                "category_url_key": "recipient",
+                                "category_name": "Recipient",
+                                "category_level": 3
+                            }
+                        ]
+                    }
+                ],
+                "configurable_options": [
+                    {
+                        "attribute_code": "provisioning_type",
+                        "label": "Provisioning Type",
+                        "values": [
+                            {
+                                "label": "PHYSICAL"
+                            },
+                            {
+                                "label": "DIGITAL"
+                            }
+                        ]
+                    }
+                ],
+                "variants": [
+                    {
+                        "product": {
+                            "url_key": "grubhub-gift-card-physical",
+                            "item_id": "105568",
+                            "upc": "07675038176",
+                            "tenant_id": "VTL7K80DXRPPVFPNHBLCXYCVYM",
+                            "catalog_id": "292TB8TD8H1HVS8GPH7G5Y4L78",
+                            "unique_product_id": "VTL7K80DXRPPVFPNHBLCXYCVYM_292TB8TD8H1HVS8GPH7G5Y4L78_07675038176",
+                            "product_line_id": "P5Y7VFNTZ0RN8ANG73L2J0VBLP",
+                            "brand_name": "GRUBHUB",
+                            "for_member_only": 0,
+                            "apply_location_state_constraint_type": "NA",
+                            "sales_rules": [
+                                {
+                                    "name": "CS $5 off codes",
+                                    "display_name": "$5 off with code",
+                                    "coupon": [],
+                                    "coupon_type": 3,
+                                    "is_active": 1,
+                                    "description": "$5 off with code",
+                                    "discount_amount": 5,
+                                    "simple_action": "cart_fixed",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": true,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                },
+                                {
+                                    "name": "Tango $5 off",
+                                    "display_name": "$5 off $50",
+                                    "coupon": [
+                                        "TANGO5"
+                                    ],
+                                    "coupon_type": 2,
+                                    "is_active": 1,
+                                    "description": "$5 off your first order of $50 or more.",
+                                    "discount_amount": 5,
+                                    "simple_action": "cart_fixed",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": true,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "Promo code TANGO5 provides $5 off your first order of $50 or more (max discount $5) at Giftcards.com for new customers only; existing customers are not eligible. This one-time use code cannot be combined with other offers, and only one promo code per customer per transaction is allowed unless otherwise specified. The promotion is valid from 11/19/2024&nbsp;through 12/31/2024 or while supplies last. We reserve the right to modify or terminate this offer at any time.",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                },
+                                {
+                                    "name": "Subscription Modal codes",
+                                    "display_name": "$5 off with code",
+                                    "coupon": [],
+                                    "coupon_type": 3,
+                                    "is_active": 1,
+                                    "description": "$5 off with code",
+                                    "discount_amount": 5,
+                                    "simple_action": "cart_fixed",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": false,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                },
+                                {
+                                    "name": "CS 5% off code",
+                                    "display_name": "5% off with code",
+                                    "coupon": [],
+                                    "coupon_type": 3,
+                                    "is_active": 1,
+                                    "description": "5% off with code",
+                                    "discount_amount": 5,
+                                    "simple_action": "by_percent",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": false,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                },
+                                {
+                                    "name": "G-MONEY Reward - Default Program",
+                                    "display_name": "G-MONEY",
+                                    "coupon": [],
+                                    "coupon_type": 1,
+                                    "is_active": 1,
+                                    "description": "Earn Giftcards.com Rewards",
+                                    "discount_amount": 0,
+                                    "simple_action": "by_percent",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": true,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "",
+                                    "rule_type": "reward",
+                                    "sort_order": 999,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 100,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "#dee7fd",
+                                    "promo_text_color": "#3b1a6e"
+                                }
+                            ],
+                            "name": "Grubhub Gift Card",
+                            "primary_category": "cards-by-mail",
+                            "categories": [],
+                            "sub_title": "GRUBHUB Gift Card",
+                            "meta_title": "Grubhub Physical Gift Card | Giftcards.com",
+                            "meta_description": "Buy Grubhub Physical Gift Cards starting at $10 instantly from Giftcards.com. Delivered safe & quickly",
+                            "meta_keyword": "GRUBHUB Gift Card",
+                            "product_category": "CLOSELOOP",
+                            "fixed_value": false,
+                            "fulfillment_method": "PHYSICAL",
+                            "redemption_text": "Click \"Add gift card\" under the Review Order screen. Enter the gift card number above and click \"Apply\" or \"Add to my account\"",
+                            "has_inventory": true,
+                            "provisioning_type": 17,
+                            "is_original_content": false,
+                            "is_rewards_applicable": true,
+                            "fee_applicable": false,
+                            "is_cha_applicable": false,
+                            "is_self_serve_applicable": false,
+                            "is_create_card_applicable": false,
+                            "is_design_card_applicable": false,
+                            "is_business_only_card": false,
+                            "is_consumer_only_card": 1,
+                            "registered_icon_required": false,
+                            "trade_mark_icon_required": false,
+                            "is_greeting_card_applicable": false,
+                            "is_egreeting_applicable": true,
+                            "default_amount": 100,
+                            "allow_open_amount": true,
+                            "open_amount_min": 10,
+                            "open_amount_max": 500,
+                            "base_image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675038176/07675038176_105568_master.png/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+                            "thumbnail_image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675038176/07675038176_105568_master.png/_jcr_content/renditions/cq5dam.thumbnail.319.319.png",
+                            "short_description": {
+                                "html": "With Grubhub gift cards, friends and family can order food delivery anytime from their favorite restaurants."
+                            },
+                            "terms_and_conditions": "By using this gift card, you accept the following terms and conditions. This card is redeemable via grubhub.com or the Grubhub app on eligible orders in markets where Grubhub is available within the U.S. only. Must have a Grubhub account and must provide a secondary method of payment accepted by Grubhub to complete a purchase. Gift cards may not be redeemable on certain orders or accounts (including certain campus dining accounts). Gift cards cannot be reloaded, resold, combined with cash, used to purchase other gift cards, transferred for value, or redeemed for cash, except to the extent required by law. Protect this card like cash. Issuer is not responsible for lost or stolen cards, or unauthorized use. This card is issued by Grubhub Holdings Inc. For customer service, balance inquiries, and full terms visit grubhub.com/giftcards or call 877-951-2500.",
+                            "giftcard_amounts": [
+                                {
+                                    "value": 50
+                                },
+                                {
+                                    "value": 100
+                                },
+                                {
+                                    "value": 250
+                                }
+                            ],
+                            "faceplates": [],
+                            "badges": []
+                        },
+                        "attributes": [
+                            {
+                                "label": "PHYSICAL",
+                                "code": "provisioning_type"
+                            }
+                        ]
+                    },
+                    {
+                        "product": {
+                            "url_key": "grubhub-gift-card-virtual",
+                            "item_id": "105567",
+                            "upc": "07675038175",
+                            "tenant_id": "VTL7K80DXRPPVFPNHBLCXYCVYM",
+                            "catalog_id": "292TB8TD8H1HVS8GPH7G5Y4L78",
+                            "unique_product_id": "VTL7K80DXRPPVFPNHBLCXYCVYM_292TB8TD8H1HVS8GPH7G5Y4L78_07675038175",
+                            "product_line_id": "P5Y7VFNTZ0RN8ANG73L2J0VBLP",
+                            "brand_name": "GRUBHUB",
+                            "for_member_only": 0,
+                            "apply_location_state_constraint_type": "NA",
+                            "sales_rules": [
+                                {
+                                    "name": "CS $5 off codes",
+                                    "display_name": "$5 off with code",
+                                    "coupon": [],
+                                    "coupon_type": 3,
+                                    "is_active": 1,
+                                    "description": "$5 off with code",
+                                    "discount_amount": 5,
+                                    "simple_action": "cart_fixed",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": true,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                },
+                                {
+                                    "name": "Tango $5 off",
+                                    "display_name": "$5 off $50",
+                                    "coupon": [
+                                        "TANGO5"
+                                    ],
+                                    "coupon_type": 2,
+                                    "is_active": 1,
+                                    "description": "$5 off your first order of $50 or more.",
+                                    "discount_amount": 5,
+                                    "simple_action": "cart_fixed",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": true,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "Promo code TANGO5 provides $5 off your first order of $50 or more (max discount $5) at Giftcards.com for new customers only; existing customers are not eligible. This one-time use code cannot be combined with other offers, and only one promo code per customer per transaction is allowed unless otherwise specified. The promotion is valid from 11/19/2024&nbsp;through 12/31/2024 or while supplies last. We reserve the right to modify or terminate this offer at any time.",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                },
+                                {
+                                    "name": "Subscription Modal codes",
+                                    "display_name": "$5 off with code",
+                                    "coupon": [],
+                                    "coupon_type": 3,
+                                    "is_active": 1,
+                                    "description": "$5 off with code",
+                                    "discount_amount": 5,
+                                    "simple_action": "cart_fixed",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": false,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                },
+                                {
+                                    "name": "CS 5% off code",
+                                    "display_name": "5% off with code",
+                                    "coupon": [],
+                                    "coupon_type": 3,
+                                    "is_active": 1,
+                                    "description": "5% off with code",
+                                    "discount_amount": 5,
+                                    "simple_action": "by_percent",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": false,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                },
+                                {
+                                    "name": "G-MONEY Reward - Default Program",
+                                    "display_name": "G-MONEY",
+                                    "coupon": [],
+                                    "coupon_type": 1,
+                                    "is_active": 1,
+                                    "description": "Earn Giftcards.com Rewards",
+                                    "discount_amount": 0,
+                                    "simple_action": "by_percent",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": true,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "",
+                                    "rule_type": "reward",
+                                    "sort_order": 999,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 100,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "#dee7fd",
+                                    "promo_text_color": "#3b1a6e"
+                                }
+                            ],
+                            "name": "Grubhub eGift",
+                            "primary_category": "egifts",
+                            "categories": [],
+                            "sub_title": "GRUBHUB eGift",
+                            "meta_title": "Grubhub eGift Card | Giftcards.com",
+                            "meta_description": "Buy Grubhub eGift Cards starting at $10 instantly from Giftcards.com. Delivered via email & SMS",
+                            "meta_keyword": "GRUBHUB eGift",
+                            "product_category": "CLOSELOOP",
+                            "fixed_value": false,
+                            "fulfillment_method": "DIGITAL",
+                            "redemption_text": "Click \"Add gift card\" under the Review Order screen. Enter the gift card number above and click \"Apply\" or \"Add to my account\"",
+                            "has_inventory": true,
+                            "provisioning_type": 18,
+                            "allow_egift_scheduled_delivery": 1,
+                            "is_original_content": false,
+                            "is_rewards_applicable": true,
+                            "fee_applicable": false,
+                            "is_cha_applicable": false,
+                            "is_self_serve_applicable": false,
+                            "is_create_card_applicable": false,
+                            "is_design_card_applicable": false,
+                            "is_complimentary_product": 0,
+                            "is_business_only_card": false,
+                            "is_consumer_only_card": 1,
+                            "registered_icon_required": false,
+                            "trade_mark_icon_required": false,
+                            "is_greeting_card_applicable": false,
+                            "is_egreeting_applicable": true,
+                            "default_amount": 100,
+                            "allow_open_amount": true,
+                            "open_amount_min": 10,
+                            "open_amount_max": 500,
+                            "base_image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675038175/07675038175_105567_master.png/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+                            "thumbnail_image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675038175/07675038175_105567_master.png/_jcr_content/renditions/cq5dam.thumbnail.319.319.png",
+                            "short_description": {
+                                "html": "With Grubhub gift cards, friends and family can order food delivery anytime from their favorite restaurants."
+                            },
+                            "terms_and_conditions": "By using this gift card, you accept the following terms and conditions. This card is redeemable via grubhub.com or the Grubhub app on eligible orders in markets where Grubhub is available within the U.S. only. Must have a Grubhub account and must provide a secondary method of payment accepted by Grubhub to complete a purchase. Gift cards may not be redeemable on certain orders or accounts (including certain campus dining accounts). Gift cards cannot be reloaded, resold, combined with cash, used to purchase other gift cards, transferred for value, or redeemed for cash, except to the extent required by law. Protect this card like cash. Issuer is not responsible for lost or stolen cards, or unauthorized use. This card is issued by Grubhub Holdings Inc. For customer service, balance inquiries, and full terms visit grubhub.com/giftcards or call 877-951-2500.",
+                            "giftcard_amounts": [
+                                {
+                                    "value": 50
+                                },
+                                {
+                                    "value": 100
+                                },
+                                {
+                                    "value": 250
+                                }
+                            ],
+                            "faceplates": [
+                                {
+                                    "configuration_id": "NKP4K5HDDCGA0CYYRXKTF49BCQ",
+                                    "entity_id": "PA92Q3S1D42HQ8J7HB8Q866RV",
+                                    "image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675038175/07675038175_106870_master.png/_jcr_content/renditions/cq5dam.thumbnail.319.319.png",
+                                    "image_id": "ZBS59MWPGGWSQTDY4XH63P19A",
+                                    "image_size": "MASTER_IMAGE",
+                                    "is_default": false,
+                                    "item_id": 106870,
+                                    "status": true,
+                                    "upc_id": "07675038175",
+                                    "version": "24Dec2024-0811"
+                                },
+                                {
+                                    "configuration_id": "MHQK37W5W6R7YHXDDVGDWCS31H",
+                                    "entity_id": "PA92Q3S1D42HQ8J7HB8Q866RV",
+                                    "image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675038175/07675038175_105567_master.png/_jcr_content/renditions/cq5dam.thumbnail.319.319.png",
+                                    "image_id": "T2WZ8ZQXWSS0HCHW9QDVHHJR3",
+                                    "image_size": "MASTER_IMAGE",
+                                    "is_default": true,
+                                    "item_id": 105567,
+                                    "status": true,
+                                    "upc_id": "07675038175",
+                                    "version": "24Dec2024-0811"
+                                },
+                                {
+                                    "configuration_id": "1QTXY9RLVQGKBX4P1B4FQYLZKT",
+                                    "entity_id": "PA92Q3S1D42HQ8J7HB8Q866RV",
+                                    "image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675038175/07675038175_106871_master.png/_jcr_content/renditions/cq5dam.thumbnail.319.319.png",
+                                    "image_id": "NPNGL8PV7WVQFVGVB66AJB1VC",
+                                    "image_size": "MASTER_IMAGE",
+                                    "is_default": false,
+                                    "item_id": 106871,
+                                    "status": true,
+                                    "upc_id": "07675038175",
+                                    "version": "24Dec2024-0811"
+                                },
+                                {
+                                    "configuration_id": "9PPK375DTNQLF2DF5HDDAD067Y",
+                                    "entity_id": "PA92Q3S1D42HQ8J7HB8Q866RV",
+                                    "image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675038175/07675038175_106872_master.png/_jcr_content/renditions/cq5dam.thumbnail.319.319.png",
+                                    "image_id": "9F8BBPJ74B69WXLYH37XV64GL",
+                                    "image_size": "MASTER_IMAGE",
+                                    "is_default": false,
+                                    "item_id": 106872,
+                                    "status": true,
+                                    "upc_id": "07675038175",
+                                    "version": "24Dec2024-0811"
+                                },
+                                {
+                                    "configuration_id": "J6Z1GJRHF6QY56YLJJ61449DBV",
+                                    "entity_id": "PA92Q3S1D42HQ8J7HB8Q866RV",
+                                    "image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675038175/07675038175_106873_master.png/_jcr_content/renditions/cq5dam.thumbnail.319.319.png",
+                                    "image_id": "9GCPRP4WCGBSBFGYH36L8NYQX",
+                                    "image_size": "MASTER_IMAGE",
+                                    "is_default": false,
+                                    "item_id": 106873,
+                                    "status": true,
+                                    "upc_id": "07675038175",
+                                    "version": "24Dec2024-0811"
+                                }
+                            ],
+                            "badges": []
+                        },
+                        "attributes": [
+                            {
+                                "label": "DIGITAL",
+                                "code": "provisioning_type"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
