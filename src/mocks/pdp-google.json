@@ -1,0 +1,578 @@
+{
+    "products": {
+        "total_count": 1,
+        "page_info": {
+            "current_page": 1,
+            "page_size": 20,
+            "total_pages": 1
+        },
+        "suggestions": [],
+        "items": [
+            {
+                "badges": [],
+                "name": "Google Play",
+                "base_image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675020060/07675020060_87966_master.png/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+                "brand_name": "Google Play",
+                "featured": true,
+                "popular": false,
+                "brand_image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/category_assets/brand/google-play-gift-card/google-play-gift-card.png/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+                "url_key": "google-play-gift-card",
+                "upc": "1XAPN7R9ZYVATZCHX9P19TACM0",
+                "giftcard_amounts": [],
+                "tenant_id": "VTL7K80DXRPPVFPNHBLCXYCVYM",
+                "catalog_id": "292TB8TD8H1HVS8GPH7G5Y4L78",
+                "default_product_upc": "07675020060",
+                "unique_product_id": "VTL7K80DXRPPVFPNHBLCXYCVYM_292TB8TD8H1HVS8GPH7G5Y4L78_07675020060",
+                "currency": "USD",
+                "product_category": "CLOSELOOP",
+                "short_description": {
+                    "html": "<p class=\"description\" style=\"padding-left: 4px; padding-right: 4px;\">Google Play gift codes can be used on the Google Play Store, the official app store for Android, to purchase apps, games, and more.</p>"
+                },
+                "categories": [
+                    {
+                        "url_key": "occasions",
+                        "name": "Occasions",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "gift-card-ideas",
+                        "name": "Gift Card Ideas",
+                        "is_brand": 0,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "most-popular-gift-cards",
+                        "name": "Most Popular Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "recommended",
+                        "name": "Recommended Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "e-gift-cards",
+                        "name": "Shop eGift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "recipient",
+                        "name": "Recipient",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "holiday-gift-cards",
+                        "name": "Holiday Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "birthday",
+                        "name": "Birthday Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "wedding",
+                        "name": "Wedding Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "anniversary",
+                        "name": "Anniversary Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "congratulations-gift-cards",
+                        "name": "Congratulations Gift Cards ",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "get-well-soon",
+                        "name": "Get Well Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas/occasions",
+                                "category_url_key": "occasions",
+                                "category_name": "Occasions",
+                                "category_level": 3
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "gaming",
+                        "name": "Gaming Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "kids",
+                        "name": "Kids Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "most-popular",
+                        "name": "Most Popular",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "e-gift-cards",
+                                "category_url_key": "e-gift-cards",
+                                "category_name": "Shop eGift Cards",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "for-gamers",
+                        "name": "Gift Cards for Gamers",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/recipient",
+                                "category_url_key": "recipient",
+                                "category_name": "Recipient",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "for-teachers",
+                        "name": "Gift Cards for Teachers",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/recipient",
+                                "category_url_key": "recipient",
+                                "category_name": "Recipient",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "christmas",
+                        "name": "Christmas Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/holiday-gift-cards",
+                                "category_url_key": "holiday-gift-cards",
+                                "category_name": "Holiday Gift Cards",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "hanukkah",
+                        "name": "Hanukkah Gift Cards",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/holiday-gift-cards",
+                                "category_url_key": "holiday-gift-cards",
+                                "category_name": "Holiday Gift Cards",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "brands",
+                        "name": "Brands",
+                        "is_brand": 1,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "google-play-gift-card",
+                        "name": "Google Play",
+                        "is_brand": 1,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "brands",
+                                "category_url_key": "brands",
+                                "category_name": "Brands",
+                                "category_level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "employee-sandbox",
+                        "name": "It's GO TIME!",
+                        "is_brand": 0,
+                        "is_promotion": 0
+                    },
+                    {
+                        "url_key": "easter",
+                        "name": "Easter",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/holiday-gift-cards",
+                                "category_url_key": "holiday-gift-cards",
+                                "category_name": "Holiday Gift Cards",
+                                "category_level": 3
+                            }
+                        ]
+                    },
+                    {
+                        "url_key": "gift-cards-for-employees",
+                        "name": "Gift Cards for Employees",
+                        "is_brand": 0,
+                        "is_promotion": 0,
+                        "breadcrumbs": [
+                            {
+                                "category_url_path": "gift-card-ideas",
+                                "category_url_key": "gift-card-ideas",
+                                "category_name": "Gift Card Ideas",
+                                "category_level": 2
+                            },
+                            {
+                                "category_url_path": "gift-card-ideas/recipient",
+                                "category_url_key": "recipient",
+                                "category_name": "Recipient",
+                                "category_level": 3
+                            }
+                        ]
+                    }
+                ],
+                "configurable_options": [
+                    {
+                        "attribute_code": "provisioning_type",
+                        "label": "Provisioning Type",
+                        "values": [
+                            {
+                                "label": "DIGITAL"
+                            }
+                        ]
+                    }
+                ],
+                "variants": [
+                    {
+                        "product": {
+                            "url_key": "google-play-gift-card-virtual",
+                            "item_id": "87966",
+                            "upc": "07675020060",
+                            "tenant_id": "VTL7K80DXRPPVFPNHBLCXYCVYM",
+                            "catalog_id": "292TB8TD8H1HVS8GPH7G5Y4L78",
+                            "unique_product_id": "VTL7K80DXRPPVFPNHBLCXYCVYM_292TB8TD8H1HVS8GPH7G5Y4L78_07675020060",
+                            "product_line_id": "1XAPN7R9ZYVATZCHX9P19TACM0",
+                            "brand_name": "Google Play",
+                            "for_member_only": 0,
+                            "apply_location_state_constraint_type": "NA",
+                            "sales_rules": [
+                                {
+                                    "name": "CS $5 off codes",
+                                    "display_name": "$5 off with code",
+                                    "coupon": [],
+                                    "coupon_type": 3,
+                                    "is_active": 1,
+                                    "description": "$5 off with code",
+                                    "discount_amount": 5,
+                                    "simple_action": "cart_fixed",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": true,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                },
+                                {
+                                    "name": "Tango $5 off",
+                                    "display_name": "$5 off $50",
+                                    "coupon": [
+                                        "TANGO5"
+                                    ],
+                                    "coupon_type": 2,
+                                    "is_active": 1,
+                                    "description": "$5 off your first order of $50 or more.",
+                                    "discount_amount": 5,
+                                    "simple_action": "cart_fixed",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": true,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "Promo code TANGO5 provides $5 off your first order of $50 or more (max discount $5) at Giftcards.com for new customers only; existing customers are not eligible. This one-time use code cannot be combined with other offers, and only one promo code per customer per transaction is allowed unless otherwise specified. The promotion is valid from 11/19/2024&nbsp;through 12/31/2024 or while supplies last. We reserve the right to modify or terminate this offer at any time.",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                },
+                                {
+                                    "name": "Subscription Modal codes",
+                                    "display_name": "$5 off with code",
+                                    "coupon": [],
+                                    "coupon_type": 3,
+                                    "is_active": 1,
+                                    "description": "$5 off with code",
+                                    "discount_amount": 5,
+                                    "simple_action": "cart_fixed",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": false,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                },
+                                {
+                                    "name": "CS 5% off code",
+                                    "display_name": "5% off with code",
+                                    "coupon": [],
+                                    "coupon_type": 3,
+                                    "is_active": 1,
+                                    "description": "5% off with code",
+                                    "discount_amount": 5,
+                                    "simple_action": "by_percent",
+                                    "imageUrl": "",
+                                    "customer_group_ids": [
+                                        0,
+                                        1
+                                    ],
+                                    "is_affiliate": false,
+                                    "affiliate_tags": "",
+                                    "terms_and_conditions": "",
+                                    "rule_type": "promotion",
+                                    "sort_order": 0,
+                                    "reward_type": "by_percent",
+                                    "reward_points": 0,
+                                    "card_item_image_url": "",
+                                    "promo_ribbon_color": "",
+                                    "promo_text_color": ""
+                                }
+                            ],
+                            "name": "Google Play Gift Code",
+                            "primary_category": "egifts",
+                            "categories": [],
+                            "sub_title": "Google Play Gift Code",
+                            "meta_title": "Google Play eGift Card | Giftcards.com",
+                            "meta_description": "Buy Google Play eGift Cards starting at $10 instantly from Giftcards.com. Delivered via email & SMS",
+                            "meta_keyword": "Google Play Gift Code",
+                            "product_category": "CLOSELOOP",
+                            "fixed_value": false,
+                            "fulfillment_method": "DIGITAL",
+                            "redemption_text": "To redeem, enter code in the Play Store app or <a href=\"https://play.google.com/store?code\" target=\"blank\">play.google.com/redeem</a>.\n<p><a href=\"https://g.co/play/giftcardissues\" target=\"blank\">Click here</a> to troubleshoot common problems users might have when trying to redeem.</p>",
+                            "has_inventory": true,
+                            "provisioning_type": 18,
+                            "allow_egift_scheduled_delivery": 1,
+                            "is_original_content": false,
+                            "is_rewards_applicable": false,
+                            "fee_applicable": false,
+                            "is_cha_applicable": false,
+                            "is_self_serve_applicable": false,
+                            "is_create_card_applicable": false,
+                            "is_design_card_applicable": false,
+                            "is_complimentary_product": 0,
+                            "is_business_only_card": false,
+                            "is_consumer_only_card": 1,
+                            "registered_icon_required": false,
+                            "trade_mark_icon_required": false,
+                            "is_greeting_card_applicable": false,
+                            "is_egreeting_applicable": true,
+                            "default_amount": 100,
+                            "allow_open_amount": true,
+                            "open_amount_min": 10,
+                            "open_amount_max": 200,
+                            "base_image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675020060/07675020060_87966_master.png/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+                            "thumbnail_image": "https://www.giftcards.com/content/dam/bhn/live/nam/us/en/catalog-assets/product-images/07675020060/07675020060_87966_master.png/_jcr_content/renditions/cq5dam.thumbnail.319.319.png",
+                            "short_description": {
+                                "html": "<p class=\"description\" style=\"padding-left: 4px; padding-right: 4px;\">Google Play gift codes can be used on the Google Play Store, the official app store for Android, to purchase apps, games, and more.</p>"
+                            },
+                            "terms_and_conditions": "See play.google.com/us-card-terms for full terms. Must be 13+ years of age, US resident. Google Play card is issued by Google Arizona LLC (“GAZ”). Requires Google Payments account and internet access to redeem. Redeemed balance is maintained by GAZ’s affiliate, Google Payment Corp. (“GPC”), in your Google Payments account. Usable for purchases of eligible items on Google Play only. Not usable for hardware and certain subscriptions. Other limits may apply. No fees or expiration dates. Except as required by law, card is not redeemable for cash or other cards; not reloadable or refundable; cannot be combined with other non-Google Play balances in your Google Payments account, resold, exchanged or transferred for value. User responsible for loss of card. For assistance or to view your Google Play card balance, visit \n<a href=http://support.google.com/googleplay/go/cardhelp target=\"\"_blank\"\">  support.google.com/googleplay/go/cardhelp</a>.",
+                            "giftcard_amounts": [
+                                {
+                                    "value": 50
+                                },
+                                {
+                                    "value": 100
+                                },
+                                {
+                                    "value": 200
+                                }
+                            ],
+                            "faceplates": [],
+                            "badges": []
+                        },
+                        "attributes": [
+                            {
+                                "label": "DIGITAL",
+                                "code": "provisioning_type"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
