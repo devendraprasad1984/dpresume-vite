@@ -4,7 +4,7 @@ import links from "../../core/links.js";
 import Badges from "../contextual/badges.jsx";
 import badges from "../../core/badges.js";
 
-const colClass = "col pad5 space-fill-100";
+const colClass = "col pad5 space-fill-100 mgrid2x2";
 const Footer = () => {
   return <div className="col gap5  glass pad20">
     <h2 className="bold">Work experience links</h2>

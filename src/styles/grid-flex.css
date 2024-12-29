@@ -3,14 +3,17 @@
 }
 
 .grid2x2 {
+  display: grid !important;
   grid-template-columns: 1fr 1fr !important;
 }
 
 .grid3x3 {
+  display: grid !important;
   grid-template-columns: 1fr 1fr 1fr !important;
 }
 
 .grid4x4 {
+  display: grid !important;
   grid-template-columns: 1fr 1fr 1fr 1fr !important;
 }
 
