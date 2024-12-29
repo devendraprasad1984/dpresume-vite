@@ -1,16 +1,16 @@
 import React, {useLayoutEffect} from "react";
 import FieldSetWrapper from "./fieldSetWrapper.jsx";
-import domHelper from "../../core/domHelper.js";
+import oneliners from "oneliners";
 
 const VideoWrapper = ({
   src
 }) => {
   useLayoutEffect(() => {
-    domHelper.attachLoader();
+    oneliners.domHelpers.attachLoader();
   }, []);
 
   const onLoaded = () => {
-    domHelper.detachLoader();
+    oneliners.domHelpers.detachLoader();
   }
   return <FieldSetWrapper>
     <video

@@ -1,9 +1,9 @@
 import React from "react";
 import jsHelper from "./jsHelper.js";
-import domHelper from "../../core/domHelper.js";
+import oneliners from "oneliners";
 
 const outputContainer = "outputContainer";
-const getDOM = () => domHelper.getByDOMId(outputContainer);
+const getDOM = () => oneliners.domHelpers.getByDOMId(outputContainer);
 const JsTests = () => {
   const handleDebounce = () => jsHelper.debounce(getDOM());
   const handleThrottle = () => jsHelper.throttle(getDOM());
