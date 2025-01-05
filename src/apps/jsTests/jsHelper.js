@@ -139,7 +139,7 @@ const handleProxyObject = (ref) => {
   ref.innerHTML = printTitle("handleProxyObject") + `normal read: obj1=${core.stringify(obj1)}` + printLine();
   ref.innerHTML += `proxy read: username: ${proxy.userName}, password: ${proxy.password}, age: ${proxy.age}` + printLine();
   ref.innerHTML += `via person class read: username: ${person.userName}, password: ${person.password}, age: ${person.age}, speek: ${person.speak("Ram")}` + printLine();
-  ref.innerHTML += `proxy array reverse read: ${core.values(arr)}, -1: ${arr[-1]}` + printLine();
+  ref.innerHTML += `proxy array reverse read: ${core.getValues(arr)}, -1: ${arr[-1]}` + printLine();
   console.log("arr", origArr, "proxy", arr);
 };
 

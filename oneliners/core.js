@@ -281,16 +281,16 @@ const mergeClasses = (...rest) => {
   }
 
   return rest
-  .flat()
-  .filter(Boolean)
-  .map(item => {
-    if (typeof item === "object") {
-      return Object.keys(item).filter(key => item[key]);
-    }
-    return item;
-  })
-  .flat()
-  .join(" ");
+    .flat()
+    .filter(Boolean)
+    .map(item => {
+      if (typeof item === "object") {
+        return Object.keys(item).filter(key => item[key]);
+      }
+      return item;
+    })
+    .flat()
+    .join(" ");
 };
 
 const removeDuplicates = (arr, toKey) => {
@@ -309,6 +309,9 @@ const removeDuplicates = (arr, toKey) => {
   }, new Map());
   return Array.from(map.values());
 };
+
+const getKeys = obj => Object.keys(obj);
+const getValues = obj => Object.values(obj);
 
 const core = {
   chars,
@@ -383,7 +386,9 @@ const core = {
   removeDuplicates,
   stringifyReplacer,
   isArray,
-  isObject
+  isObject,
+  getKeys,
+  getValues
 };
 
 export default core;

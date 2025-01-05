@@ -1,66 +1,81 @@
 html {
-  scrollbar-width: thin !important;
-  scroll-behavior: smooth;
-  --website-text-size-adjust: none;
-  margin: var(--html-margin);
-  max-width: var(--html-desktop-max-width);
+    scrollbar-width: thin !important;
+    scroll-behavior: smooth;
+    --website-text-size-adjust: none;
+    margin: var(--html-margin);
+    max-width: var(--html-desktop-max-width);
 }
 
 html, body {
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  color: var(--app-text-color) !important;
-  overflow-x: hidden;
-  overflow-y: scroll;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: var(--app-text-color) !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.body-bg-image {
+    content: ' ';
+    display: block;
+    /*position: absolute;*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+    background-image: url("/logo-icon.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
 }
 
 *::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: var(--app-text-color) !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--app-text-color) !important;
 }
 
 .permanentMarkerFamily {
-  font-family: "PermanentMarker", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+    font-family: "PermanentMarker", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
 
 .gutsFamily {
-  font-family: "Guts", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+    font-family: "Guts", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
 
 .budmoFamily {
-  font-family: "Budmo", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+    font-family: "Budmo", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
 
 .thunkFamily {
-  font-family: "Thunky", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+    font-family: "Thunky", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
 
 .peechyFamily {
-  font-family: "Peechy", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+    font-family: "Peechy", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
 
 .permanentMarkerFamilyBefore::before {
-  font-family: "PermanentMarker", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+    font-family: "PermanentMarker", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
 
 .gutsFamilyBefore::before {
-  font-family: "Guts", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+    font-family: "Guts", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
 
 .budmoFamilyBefore::before {
-  font-family: "Budmo", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+    font-family: "Budmo", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
 
 .thunkFamilyBefore::before {
-  font-family: "Thunky", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+    font-family: "Thunky", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
 
 .peechyFamilyBefore::before {
-  font-family: "Peechy", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
+    font-family: "Peechy", "Comic Sans MS", "SansSerif", "Tahoma", "monospace" !important;
 }
