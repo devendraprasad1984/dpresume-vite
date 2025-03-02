@@ -1,5 +1,5 @@
 import React from "react";
-import { CopyBlock, arta } from "react-code-blocks";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 const CodeBlockComponent = ({
   text = "Sample component",
@@ -8,7 +8,7 @@ const CodeBlockComponent = ({
   return <div className="demo">
     <CopyBlock
     text={text}
-    theme={arta}
+    theme={dracula}
     language={language}
     showLineNumbers
     codeBlock
