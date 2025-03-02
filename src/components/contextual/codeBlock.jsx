@@ -1,5 +1,5 @@
 import React from "react";
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, paraisoLight } from "react-code-blocks";
 
 const CodeBlockComponent = ({
   text = "Sample component",
@@ -7,13 +7,14 @@ const CodeBlockComponent = ({
 }) => {
   return <div className="demo">
     <CopyBlock
-    text={text}
-    theme={dracula}
-    language={language}
-    showLineNumbers
-    codeBlock
-    wrapLines
-  />
+      text={text}
+      theme={paraisoLight}
+      language={language}
+      showLineNumbers
+      codeBlock
+      wrapLines
+    />
+    <br/>
   </div>;
 };
 export default CodeBlockComponent;
