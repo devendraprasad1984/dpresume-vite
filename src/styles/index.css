@@ -11,6 +11,10 @@ html, body {
   max-width: var(--html-desktop-max-width);
 }
 
+.demo {
+  font-family: "Fira Code", monospace;
+}
+
 .body-bg-image {
   content: ' ';
   display: block;
