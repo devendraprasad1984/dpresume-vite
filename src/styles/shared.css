@@ -325,6 +325,10 @@ ul {
   font-size: 16px;
 }
 
+.size18 {
+  font-size: 18px;
+}
+
 .size20 {
   font-size: 20px;
 }
@@ -446,4 +450,19 @@ legend * {
 
 .radius30px {
   border-radius: 30px;
+}
+
+.wid100px {
+  min-width: 100px;
+  width: 100px;
+}
+
+.wid150px {
+  min-width: 150px;
+  width: 150px;
+}
+
+.wid200px {
+  min-width: 200px;
+  width: 200px;
 }

@@ -51,6 +51,11 @@ const Left = () => {
                    style={seeIfActive()}
                    to="/apps">Apps</NavLink>
         </li>
+        <li className="size20">
+          <NavLink className={`nav-link`}
+                   style={seeIfActive()}
+                   to="/js-concepts">JS Concepts</NavLink>
+        </li>
       </ul>
     </div>
   </div>;

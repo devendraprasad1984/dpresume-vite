@@ -219,3 +219,21 @@
     margin-top: 0;
   }
 }
+
+
+/*loading skeleton*/
+.loading-bg-red {
+  background: #e5f9fe !important;
+}
+
+.is-loading {
+  background: linear-gradient(110deg, #f1eded 8%, #f4f7f7 18%, #f1eded 33%);
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}

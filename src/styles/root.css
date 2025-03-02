@@ -1,6 +1,6 @@
 :root {
     --html-margin: 0 auto;
-    --html-desktop-max-width: 1440px;
+        --html-desktop-max-width: 1440px;
     --app-bg-color: #3e3d3d;
     --container-height: 80rem;
     --container-min-height: 50rem;
