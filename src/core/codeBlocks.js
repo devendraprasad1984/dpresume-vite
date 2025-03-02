@@ -41,14 +41,30 @@ const codeBlocks = {
   },
   ModuleExample: () => {
     return `
-      //Module pattern: Object lilterals
-      const myModule={
-        prop1:"prop1",
-        saySomething(){
-          console.log("say somethis is being called")
+      //Module pattern: Object literals, private vars/functions are namespaced into testModules
+      let counter=0; //private variable;
+      let items=[];
+      const log=val=>console.log(val); //private function
+      const testModule={
+        prop1:"prop1", //this is public variable
+        incrementCounter(){
+        counter++;
+          log("incremented - "+counter);
         },
-        updateConfig:()=>{console.log("config has been updated");}
+        resetCounter:()=>{counter=0;},
+        addItem:(values)=>{
+        items.push(values);
+        },
+        getItemCount:()=>items.length;,
+        getTotal:()=>items.reduce((sum, item)=>sum+item?.price, 0)
       }
+      export default testModule;
+      //usage
+      import testModule from "./testModule.js"; //this can come from https also, just need module exposed
+      testModule.incrementCounter();
+      testModule.addItem({item: "bread", price: 10});
+      testModule.addItem({item: "butter", price: 15});
+      console.log(testModule.getItemCount(), testModule.getTotal())
     `;
   }
 
