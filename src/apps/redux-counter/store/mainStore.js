@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "../reducers/counterReducer.js";
+import counterReducer from "../reducers/counters/counterReducer.js";
 
 const mainStore = configureStore({
   reducer: {
