@@ -21,8 +21,8 @@ const appEnum = {
   [appKeys.vanillJSHome]: "Vanilla JS Home app",
   [appKeys.vanillJSRedux]: "Vanilla JS Redux counter App",
   [appKeys.JSApps]: "sample js functions",
-  [appKeys.ReduxCounterApp]: "Redux State Practice Simple Async Counter",
-  [appKeys.ContextSimpleApp]: "Context State Simple app",
+  [appKeys.ReduxCounterApp]: "Redux Sample",
+  [appKeys.ContextSimpleApp]: "Context Sample",
   [appKeys.SetIntervalCounterApp]: "SetInterval Counter App",
 };
 appEnum.appKeys = appKeys;

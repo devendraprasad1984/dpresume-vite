@@ -1,11 +1,12 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MyButton from "../components/contextual/button.jsx";
 import AppList from "./appList.jsx";
 import DOMEnum from "../enums/DOMEnum.js";
-import useAppSelectorComponentMap, {appMap} from "../hooks/useAppSelectorComponentMap.js";
-import {useParams} from "react-router-dom";
+import useAppSelectorComponentMap, { appMap } from "../hooks/useAppSelectorComponentMap.js";
+import { useParams } from "react-router-dom";
 import appEnum from "../enums/appEnum.js";
-import oneliners from 'oneliners';
+import oneliners from "oneliners";
+import AppsNavs from "./appsNavs.jsx";
 
 const AppsHome = () => {
   const params = useParams();
@@ -45,6 +46,7 @@ const AppsHome = () => {
         classes="button-18"
       >Show</MyButton>
     </div>
+    <AppsNavs/>
     <div className="size38 msize24 wt600">{currentApp}</div>
     {oneliners.core.isPresent(currentApp) && <div className="wid100 mwid100 col gap2">
       <React.Suspense fallback={<div className="text-danger size20">Please wait...</div>}>
