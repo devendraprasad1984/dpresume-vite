@@ -3,6 +3,12 @@ input[type=text], input[type=number], select, input[type=button], input[type=sub
   padding: 4px 5px;
   margin: 4px 0;
   box-sizing: border-box;
+  border: 1px solid black;
+}
+
+input::after, input::before, .MuiInputBase-input::after {
+  border: unset;
+  border-color: unset;
 }
 
 textarea {

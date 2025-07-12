@@ -6,7 +6,10 @@ const appKeys = {
   geekAdminVideo: "geekadmin",
   vanillJSHome: "vanillahome",
   vanillJSRedux: "vanillaredux",
-  JSApps: "jsapps"
+  JSApps: "jsapps",
+  ReduxCounterApp: "ReduxCounterApp",
+  ContextSimpleApp: "ContextSimpleApp",
+  SetIntervalCounterApp: "SetIntervalCounterApp",
 
 };
 const appEnum = {
@@ -17,7 +20,10 @@ const appEnum = {
   [appKeys.geekAdminVideo]: "Geektrust admin UI",
   [appKeys.vanillJSHome]: "Vanilla JS Home app",
   [appKeys.vanillJSRedux]: "Vanilla JS Redux counter App",
-  [appKeys.JSApps]: "sample js functions"
+  [appKeys.JSApps]: "sample js functions",
+  [appKeys.ReduxCounterApp]: "Redux State Practice Simple Async Counter",
+  [appKeys.ContextSimpleApp]: "Context State Simple app",
+  [appKeys.SetIntervalCounterApp]: "SetInterval Counter App",
 };
 appEnum.appKeys = appKeys;
 export default appEnum;
