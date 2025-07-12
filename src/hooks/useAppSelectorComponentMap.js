@@ -8,7 +8,7 @@ const LazyGeekAdmin = React.lazy(() => import("../apps/geek/admin-video.jsx"));
 const LazyVanillaJSHome = React.lazy(() => import("../apps/vanila-js/vanila-js-home.jsx"));
 const LazyVanillaJSRedux = React.lazy(() => import("../apps/vanila-js-redux/vanila-js-redux.jsx"));
 const JSSampleFunctionOutput = React.lazy(() => import("../apps/jsTests/jsTests.jsx"));
-const ReduxCounterApp = React.lazy(() => import("../apps/redux-counter/main.jsx"));
+const ReduxCounterApp = React.lazy(() => import("../apps/redux-app/main.jsx"));
 const ContextSampleApp = React.lazy(() => import("../apps/context-app/main.jsx"));
 
 export const appMap = {
