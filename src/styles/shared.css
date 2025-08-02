@@ -167,6 +167,10 @@ li {
   gap: 40px;
 }
 
+.pad2 {
+  padding: var(--2px);
+}
+
 .pad5 {
   padding: var(--5px);
 }
@@ -279,6 +283,11 @@ li {
 .height300 {
   height: 300px;
 }
+
+.height350 {
+  height: 350px;
+}
+
 
 .height450 {
   height: 450px;

@@ -105,6 +105,10 @@
     justify-content: flex-start;
   }
 
+  .mflex {
+    display: flex !important;
+  }
+
   .mflex-end {
     justify-content: flex-end;
   }

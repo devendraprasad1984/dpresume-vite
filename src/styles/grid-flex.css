@@ -1,50 +1,50 @@
 .grid {
-  display: grid !important;
+  display: grid ;
 }
 
 .grid2x2 {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
+  display: grid ;
+  grid-template-columns: 1fr 1fr ;
 }
 
 .grid3x3 {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr 1fr !important;
+  display: grid ;
+  grid-template-columns: 1fr 1fr 1fr ;
 }
 
 .grid4x4 {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  display: grid ;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
 }
 
 .autofit120 {
-  grid-template-columns: repeat(auto-fit, 120px) !important;
+  grid-template-columns: repeat(auto-fit, 120px) ;
 }
 
 .autofit150 {
-  grid-template-columns: repeat(auto-fit, 150px) !important;
+  grid-template-columns: repeat(auto-fit, 150px) ;
 }
 
 .autofit200 {
-  grid-template-columns: repeat(auto-fit, 200px) !important;
+  grid-template-columns: repeat(auto-fit, 200px) ;
 }
 
 .autofit250 {
-  grid-template-columns: repeat(auto-fit, 250px) !important;
+  grid-template-columns: repeat(auto-fit, 250px) ;
 }
 
 .autofill120 {
-  grid-template-columns: repeat(auto-fill, 120px) !important;
+  grid-template-columns: repeat(auto-fill, 120px) ;
 }
 
 .autofill150 {
-  grid-template-columns: repeat(auto-fill, 150px) !important;
+  grid-template-columns: repeat(auto-fill, 150px) ;
 }
 
 .autofill200 {
-  grid-template-columns: repeat(auto-fill, 200px) !important;
+  grid-template-columns: repeat(auto-fill, 200px) ;
 }
 
 .autofill250 {
-  grid-template-columns: repeat(auto-fill, 250px) !important;
+  grid-template-columns: repeat(auto-fill, 250px) ;
 }
