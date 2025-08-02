@@ -6,6 +6,14 @@
 
 .text-white {
   color: var(--color-white);
+
+  * {
+    color: var(--color-white) !important;
+  }
+}
+
+.active {
+  color: var(--color-white) !important;
 }
 
 .text-dark {

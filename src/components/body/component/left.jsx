@@ -1,32 +1,21 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import colors from "../../../core/colors.js";
-
-const activeClassStyle = {
-  textDecoration: "underline",
-  backgroundColor: colors.light.candy,
-  color: "white !important"
-};
-
-function seeIfActive() {
-  return ({isActive}) => {
-    return isActive ? activeClassStyle : {};
-  };
-}
+import commonHelper from "./commonHelper.jsx";
 
 const Left = () => {
+  const activeCallback = commonHelper().seeIfActive;
   return <div className="main-left-container col gap5">
     <div>
       <h2 className="bold">Personal Info</h2>
       <ul className="">
         <li className="size20">
           <NavLink className={`nav-link`}
-                   style={seeIfActive()}
+                   style={activeCallback()}
                    to="/">Home</NavLink>
         </li>
         <li className="size20">
           <NavLink className={`nav-link`} to="/about"
-                   style={seeIfActive()}
+                   style={activeCallback()}
           >About me</NavLink>
         </li>
       </ul>
@@ -37,7 +26,7 @@ const Left = () => {
       <ul className="">
         <li className="size20">
           <NavLink className={`nav-link`}
-                   style={seeIfActive()}
+                   style={activeCallback()}
                    to="/projects">Projects</NavLink>
         </li>
       </ul>
@@ -48,12 +37,12 @@ const Left = () => {
       <ul className="">
         <li className="size20">
           <NavLink className={`nav-link`}
-                   style={seeIfActive()}
+                   style={activeCallback()}
                    to="/apps">Apps</NavLink>
         </li>
         <li className="size20">
           <NavLink className={`nav-link`}
-                   style={seeIfActive()}
+                   style={activeCallback()}
                    to="/js-concepts">JS Concepts</NavLink>
         </li>
       </ul>

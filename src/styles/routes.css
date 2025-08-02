@@ -7,7 +7,7 @@ ul li {
 }
 
 ul li a {
-    color: var(--bg-color-blue-grey) !important;
+    font-weight: bold;
     text-decoration: none;
 }
 

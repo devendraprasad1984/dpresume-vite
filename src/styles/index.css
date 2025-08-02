@@ -8,7 +8,7 @@ html, body {
   scroll-behavior: smooth;
   --website-text-size-adjust: none;
   margin: var(--html-margin);
-  max-width: var(--html-desktop-max-width);
+  /*max-width: var(--html-desktop-max-width);*/
 }
 
 .demo {
