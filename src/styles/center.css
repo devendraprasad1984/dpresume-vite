@@ -4,5 +4,6 @@
 }
 
 .skill-label {
-    color: var(--text-color-blue-grey) !important;
+    color: var(--text-color-deep-purple);
+    font-size: var(--size-18);
 }

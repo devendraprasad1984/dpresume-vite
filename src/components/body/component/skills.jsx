@@ -9,7 +9,7 @@ const Skills = () => {
   return <div className={`pad10`}>
     <div className="size24 bold">Skills</div>
     <ul className={`margin--y-10 flix ${extendedClass}`}>
-      {PrintIt(["Javascript", "React.JS", "AEM", "Python", "MySql"], "counter-color-yellow permanentMarkerFamilyBefore")}
+      {PrintIt(["Javascript", "React.JS", "AEM", "Python", "MySql"], "counter-color-peach permanentMarkerFamilyBefore")}
     </ul>
   </div>
     ;

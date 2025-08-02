@@ -61,6 +61,10 @@
   color: var(--text-color-yellow) !important;
 }
 
+.counter-color-peach::before {
+  color: var(--text-color-pale-blue) !important;
+}
+
 
 .flix li::before {
   content: counter(count);

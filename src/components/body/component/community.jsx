@@ -10,7 +10,7 @@ const oneliners = <div className="col">
 const Community = () => {
   return <div className="pad10">
     <div className="size24 bold">Community</div>
-      {PrintList([oneliners], "counter-color-success gutsFamilyBefore")}
+      {PrintList([oneliners], "counter-color-peach gutsFamilyBefore")}
   </div>;
 };
 export default Community;

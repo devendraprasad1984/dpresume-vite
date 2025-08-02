@@ -7,28 +7,28 @@ const HeaderNav = () => {
   return <div className="main-left-container col gap5">
     <ul className="row bg-dark text-white">
       <li className="size20">
-        <NavLink className={`nav-link`}
+        <NavLink className={`nav-link bold`}
                  style={activeCallback()}
                  to="/">Home</NavLink>
       </li>
       <li className="size20">
-        <NavLink className={`nav-link`} to="/about"
+        <NavLink className={`nav-link bold`} to="/about"
                  style={activeCallback()}
         >About me</NavLink>
       </li>
       <li className="size20">
-        <NavLink className={`nav-link`}
+        <NavLink className={`nav-link bold`}
                  style={activeCallback()}
                  to="/projects">Projects</NavLink>
       </li>
 
       <li className="size20">
-        <NavLink className={`nav-link`}
+        <NavLink className={`nav-link bold`}
                  style={activeCallback()}
                  to="/apps">Apps</NavLink>
       </li>
       <li className="size20">
-        <NavLink className={`nav-link`}
+        <NavLink className={`nav-link bold`}
                  style={activeCallback()}
                  to="/js-concepts">JS Concepts</NavLink>
       </li>
