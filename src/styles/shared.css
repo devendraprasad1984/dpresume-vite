@@ -191,6 +191,14 @@ li {
   margin: var(--20px);
 }
 
+.margin--x-5 {
+  margin: 0 var(--5px) 0 var(--5px);
+}
+
+.margin--y-5 {
+  margin: var(--5px) 0 var(--5px) 0;
+}
+
 .margin--x-10 {
   margin: 0 var(--10px) 0 var(--10px);
 }

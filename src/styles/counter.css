@@ -21,7 +21,7 @@
 .star-list-counter li::before {
   content: '☆' counter(count, decimal);
   color: rgba(var(--color-red), 1);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-shadow: 2vmin 1vmin 2vmin var(--color-yellow);
   letter-spacing: 1.2vmin;
 }
@@ -64,7 +64,7 @@
 
 .flix li::before {
   content: counter(count);
-  font-size: 3.3rem;
+  font-size: 2rem;
   letter-spacing: 3px;
   -webkit-text-stroke: 2px #3b1a6e;
 }
