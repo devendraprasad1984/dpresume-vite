@@ -10,7 +10,7 @@ export const PrintIt = (list = [], classes = "") => {
 };
 
 const PrintList = (list, classes) => {
-  return <ul className="margin--y-5 flix">{
+  return <ul className="margin--y-5 flix grid2x2">{
     PrintIt(list, classes)
   }</ul>;
 };

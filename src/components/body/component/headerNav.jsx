@@ -14,7 +14,7 @@ const HeaderNav = () => {
       <li className="size20">
         <NavLink className={`nav-link bold`} to="/about"
                  style={activeCallback()}
-        >About me</NavLink>
+        >About</NavLink>
       </li>
       <li className="size20">
         <NavLink className={`nav-link bold`}
@@ -30,7 +30,7 @@ const HeaderNav = () => {
       <li className="size20">
         <NavLink className={`nav-link bold`}
                  style={activeCallback()}
-                 to="/js-concepts">JS Concepts</NavLink>
+                 to="/js-concepts">JS</NavLink>
       </li>
     </ul>
   </div>;

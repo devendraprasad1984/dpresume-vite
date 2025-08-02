@@ -1,5 +1,7 @@
-const flatList = {
+const homeExperiences = {
   role: [
+    "close working pair with <a class='text-primary bold' target='_blank' href='https://www.linkedin.com/in/sachinlala'>Sachin Lala</a>, Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN",
+    "have solid experience in banking and commerce domains",
     "have solid experience and hands-on exposure to micro frontend component based development",
     "have successfully dealt many enterprise apps while working in small/big organizations.",
     "practice TDD based frontend development mainly AEM, React, HTML, CSS, JS, JWT.",
@@ -10,11 +12,11 @@ const flatList = {
     "know JWT auth tokens (refresh + access), RS256 (public-private keys) / HS256 (secret key & certificate), XSS, CSRF, cookies, CORS.",
     "wear multiple hats during various phases of software development and act as a bridge between",
     "junior and senior members in the team.",
-    "use jfrog/nexus repo / artifactory to manage code artifacts.",
+    "use jfrog / nexus repo / artifactory to manage code artifacts.",
     "Code. Collaborate. Build. Change. Incident. Release. Triage.",
     "help in recruiting, grow and enabling team.",
     "am a code reviewer, mentor, and face to dev team.",
     "use JIRA | Rally | Leankit | Trello for agility, bug tracking and backlog grooming",
   ]
 };
-export default flatList;
+export default homeExperiences;

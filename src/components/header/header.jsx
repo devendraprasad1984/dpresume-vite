@@ -1,8 +1,13 @@
 import React from "react";
 import links from "../../core/links.js";
 import useScreen from "../../hooks/useScreen.js";
-import Left from "../body/component/left.jsx";
 import HeaderNav from "../body/component/headerNav.jsx";
+
+const getYearsExperience = () => {
+  const dateYear = (new Date()).getFullYear();
+  let yrs = dateYear - 2007;
+  return yrs;
+};
 
 const Header = () => {
   const {handleScreenToggle} = useScreen();
@@ -17,22 +22,21 @@ const Header = () => {
         <div className="mcol flex row align-start wid100 space-between">
           <div className="mwid100 flex col wid70">
             <div className="col mcol left wid100">
-              <span className="size30 msize24 bold">Devendra Prasad</span>
+              <span className="size30 msize24 bold">Devendra Prasad (DP)</span>
               <span className="size14 bold">Senior Staff Software Engineer</span>
             </div>
           </div>
           <div className="flex col right mleft mwid100 wid30">
-            <span className="email">devendraprasad1984@gmail.com</span>
-            <span className="phone">+91 958 279 7772</span>
+            <span className="year size24 bold counter-color-light-blue">{getYearsExperience()} yrs</span>
+            <div>
+              <span className="email">devendraprasad1984@gmail.com</span>&nbsp;
+              <span className="phone">+91 958 279 7772</span>
+            </div>
             <div className="row gap2">
-              <a className="hyperlink" href={links.cv} target="_blank">download
-                CV</a>
-              <a className="hyperlink" href={links.linkedIn}
-                 target="_blank">Linkedin</a>
-              <a className="hyperlink" href={links.github}
-                 target="_blank">Github</a>
-              <a className="hyperlink" href={links.hackerRankProfile}
-                 target="_blank">Hacker Rank</a>
+              <a className="hyperlink" href={links.cv} target="_blank">CV</a>
+              <a className="hyperlink" href={links.linkedIn} target="_blank">Linkedin</a>
+              <a className="hyperlink" href={links.github} target="_blank">Github</a>
+              <a className="hyperlink" href={links.hackerRankProfile} target="_blank">Algo</a>
             </div>
           </div>
         </div>

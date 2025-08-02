@@ -19,3 +19,7 @@
 .email::before {
   content: '⚡'
 }
+
+.year::before {
+  content: '📅'
+}
