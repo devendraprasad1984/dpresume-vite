@@ -28,3 +28,4 @@ dist/*
 *.sw?
 
 docs/*
+public/docs/*
