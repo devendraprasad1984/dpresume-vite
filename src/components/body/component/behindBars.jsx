@@ -17,8 +17,11 @@ const BehindBars = () => {
         <span className="text-success bold">Khul jaa sim sim</span>
       </button>
     </div>
-    {showHide && <div className="row grid">
-      <a className="text-primary" href="/docs/my_notes.txt" target="_blank">notes</a>
+    {showHide && <div className="col gap2">
+      <div className="row grid">
+        <a className="text-primary" href="/docs/my_notes.txt" target="_blank">notes</a>
+      </div>
+      <img src="/docs/lalaji_gyan.png" alt="gyan"/>
     </div>}
   </div>;
 };
