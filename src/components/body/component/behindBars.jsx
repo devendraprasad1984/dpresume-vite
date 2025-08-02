@@ -21,8 +21,14 @@ const BehindBars = () => {
       <div className="row grid">
         <a className="text-primary" href="/docs/my_notes.txt" target="_blank">notes</a>
       </div>
-      <img src="/docs/lalaji_gyan.png" alt="gyan"/>
-    </div>}
+      <div>
+        <img src="/docs/lalaji_gyan.png" style={{
+          width: "30rem",
+          height: "auto"
+        }} alt="gyan"/>
+      </div>
+    </div>
+    }
   </div>;
 };
 export default BehindBars;
