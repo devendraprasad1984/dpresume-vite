@@ -9,8 +9,8 @@ export const PrintIt = (list = [], classes = "") => {
   });
 };
 
-const PrintList = (list, classes) => {
-  return <ul className="margin--y-5 flix grid2x2">{
+const PrintList = (list, classes, parentClass = "") => {
+  return <ul className={`margin--y-5 flix ${parentClass}`}>{
     PrintIt(list, classes)
   }</ul>;
 };

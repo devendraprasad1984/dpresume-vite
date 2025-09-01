@@ -6,6 +6,7 @@ import MultiForm from "./multiForms.jsx";
 
 const ReduxCounterMain = () => {
   return <Provider store={mainStore}>
+    <h2>Redux counter app</h2>
     <div className="col gap2">
       <CounterComponent/>
       <MultiForm/>

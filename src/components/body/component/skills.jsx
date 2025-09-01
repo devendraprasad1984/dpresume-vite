@@ -1,5 +1,5 @@
 import React from "react";
-import { PrintIt } from "./printList.jsx";
+import PrintList, { PrintIt } from "./printList.jsx";
 import useMobile from "../../../hooks/useMobile.js";
 
 const gridIfMobile = "grid autofit150";
@@ -9,7 +9,7 @@ const Skills = () => {
   return <div className={`pad10`}>
     <div className="size24 bold">Skills</div>
     <ul className={`margin--y-10 flix ${extendedClass}`}>
-      {PrintIt(["Javascript", "React.JS", "AEM", "Python", "MySql"], "counter-color-peach")}
+      {PrintList(["Javascript", "React.JS", "AEM", "Python", "MySql"], "counter-color-peach", "grid2x2")}
     </ul>
   </div>;
 };

@@ -8,10 +8,15 @@ const HomeAppsWrapper = () => {
   return <div className="col gap2">
     <h2 className="underline bold text-primary">Sample Apps</h2>
     <div className="border grid3x3 pad5 gap5 mflex mcol">
-      <div className="border height350 overflow pad5"><ReduxCounterMain/></div>
+      <div className="border height350 overflow pad5">
+        <React.Fragment>
+          <ContextSampleApp/>
+          <ReduxCounterMain/>
+        </React.Fragment>
+      </div>
       <div className="border height350 overflow pad5"><VanilaJsRedux/></div>
-      <div className="border height350 overflow pad5"><ContextSampleApp/></div>
       <div className="border height350 overflow pad5"><SimpleForm/></div>
+      <div className="border height350 overflow pad5"></div>
       <div className="border height350 overflow pad5">app1</div>
       <div className="border height350 overflow pad5">app2</div>
       <div className="border height350 overflow pad5">app3</div>
