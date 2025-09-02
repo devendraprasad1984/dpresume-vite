@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preact-g": "npm install -g preact-cli",
+    "preact-create-app": "preact create default my-preact-app",
     "start": "webpack serve"
   },
   "keywords": [],
