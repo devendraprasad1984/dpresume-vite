@@ -1,3 +1,3 @@
-import "products/ProductIndex";
+import "products/ProductsIndex";
 
 console.log("container!");
