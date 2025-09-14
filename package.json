@@ -25,7 +25,8 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.26.1",
     "redux": "^5.0.1",
-    "styled-components": "^6.1.15"
+    "styled-components": "^6.1.15",
+    "valtio": "^2.1.7"
   },
   "devDependencies": {
     "@preact/signals-react-transform": "^0.6.0",
