@@ -5,6 +5,7 @@ import SimpleForm from "../../../apps/simpleForm/simpleForm.jsx";
 import CounterSignal from "../../../otherStateTests/src/counterSignal.jsx";
 import SignalTodos from "../../../otherStateTests/src/signalTodos.jsx";
 import CounterValtio from "../../../otherStateTests/src/valtioCounter.jsx";
+import ValtioTodos from "../../../otherStateTests/src/valtioTodos.jsx";
 
 const HomeAppsWrapper = () => {
   return <div className="col gap2">
@@ -23,6 +24,7 @@ const HomeAppsWrapper = () => {
       <div className="border height350 overflow pad5">
         <div class="col gap2">
           <SignalTodos/>
+          <ValtioTodos/>
         </div>
       </div>
       <div className="border height350 overflow pad5">app1</div>

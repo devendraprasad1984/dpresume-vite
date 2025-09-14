@@ -1,5 +1,5 @@
-import { computed, signal } from "@preact/signals-react";
 import { useState } from "react";
+import { proxy, useSnapshot } from "valtio";
 
 const getTodos = () => {
   return [{
@@ -8,14 +8,18 @@ const getTodos = () => {
   }];
 };
 
-const todos = signal(getTodos());
-const completedTodo = computed(() => todos.value.filter(t => t.completed));
+//direct update on proxy object
+const todosProxy = proxy({
+  todos: getTodos()
+});
+const completedTodo = () => todosProxy.todos.filter(t => t.completed);
 
-const SignalTodos = () => {
+const ValtioTodos = () => {
   const [todoText, setTodoText] = useState("");
+  const todosState = useSnapshot(todosProxy);
 
   const handleTodoToggle = (index) => {
-    todos.value = todos.value.map((t, i) => {
+    todosProxy.todos = todosProxy.todos.map((t, i) => {
       if (i === index) {
         t.completed = !t.completed;
         return t;
@@ -24,8 +28,8 @@ const SignalTodos = () => {
     });
   };
   const handleSubmit = () => {
-    todos.value = [
-      ...todos.value,
+    todosProxy.todos = [
+      ...todosProxy.todos,
       {
         completed: false,
         value: todoText
@@ -38,13 +42,13 @@ const SignalTodos = () => {
   };
 
   return <div className="col gap2 border">
-    <h2>Signals TODO app - {completedTodo.value.length} of {todos.value.length} completed</h2>
+    <h2>Valtio TODO app - {completedTodo?.length} of {todosState?.todos?.length} completed</h2>
     <div className="row space-between align-center">
       <input type="text" placeholder="Enter todo" className="wid100" value={todoText} onChange={handleSetText}/>
       <button onClick={handleSubmit}>Submit</button>
     </div>
     <div className="wid100 border">
-      {todos.value.map((t, i) => {
+      {todosState.todos.map((t, i) => {
         return <div key={`todo-${i}`} className="row align-center space-between">
           <div className="row">
             <input type="checkbox" onClick={() => handleTodoToggle(i)}/>
@@ -59,4 +63,4 @@ const SignalTodos = () => {
   </div>;
 };
 
-export default SignalTodos;
+export default ValtioTodos;
