@@ -1,6 +1,11 @@
 {
-  "presets":[
+  "presets": [
     "@babel/preset-react",
     "babel-preset-env"
+  ],
+  "plugins": [
+    [
+      "module:@preact/signals-react-transform"
+    ]
   ]
 }

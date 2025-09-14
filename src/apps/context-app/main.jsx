@@ -16,10 +16,9 @@ const ContextSampleApp = () => {
       count: 1
     });
   };
-  return <div>
-    <h2>Context counter app</h2>
+  return <div class="border">
     <div className="row gap2 align-center space-between">
-      <div>Count: {state.count}</div>
+      <div>Context count: {state.count}</div>
       <div className="wid50 row">
         <button onClick={increment}>INCREASE</button>
         <button onClick={decrement}>DECREASE</button>
