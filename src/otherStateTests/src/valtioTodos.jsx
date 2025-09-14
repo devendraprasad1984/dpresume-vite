@@ -42,7 +42,7 @@ const ValtioTodos = () => {
   };
 
   return <div className="col gap2 border">
-    <h2>Valtio TODO app - {completedTodo?.length} of {todosState?.todos?.length} completed</h2>
+    <h2>Valtio TODO app - {completedTodo()?.length} of {todosState?.todos?.length} completed</h2>
     <div className="row space-between align-center">
       <input type="text" placeholder="Enter todo" className="wid100" value={todoText} onChange={handleSetText}/>
       <button onClick={handleSubmit}>Submit</button>
