@@ -9,8 +9,8 @@ import ValtioTodos from "../../../otherStateTests/src/valtioTodos.jsx";
 
 const HomeAppsWrapper = () => {
   return <div className="col gap2">
-    <h2 className="underline bold text-primary">Sample Apps</h2>
-    <div className="border grid3x3 pad5 gap5 mflex mcol">
+    <h2 className="underline bold text-primary">Sample Apps / Micro Frontends</h2>
+    <div className="grid3x3 pad5 gap5 mflex mcol">
       <div className="border height350 overflow pad5">
         <div class="col gap2">
           <ContextSampleApp/>
@@ -27,7 +27,11 @@ const HomeAppsWrapper = () => {
           <ValtioTodos/>
         </div>
       </div>
-      <div className="border height350 overflow pad5">app1</div>
+      <div className="border height350 overflow pad5">
+        <a href="images/microfrontend1.jpeg" target="_blank">
+          <img src="images/microfrontend1.jpeg" className="auto-image"/>
+        </a>
+      </div>
       <div className="border height350 overflow pad5">app2</div>
       <div className="border height350 overflow pad5">app3</div>
       <div className="border height350 overflow pad5">app4</div>

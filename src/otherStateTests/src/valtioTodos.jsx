@@ -47,7 +47,7 @@ const ValtioTodos = () => {
       <input type="text" placeholder="Enter todo" className="wid100" value={todoText} onChange={handleSetText}/>
       <button onClick={handleSubmit}>Submit</button>
     </div>
-    <div className="wid100 border">
+    <div className="wid100">
       {todosState.todos.map((t, i) => {
         return <div key={`todo-${i}`} className="row align-center space-between">
           <div className="row">
