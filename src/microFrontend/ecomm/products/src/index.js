@@ -1,1 +1,1 @@
-import ("./bootstrap");
+import ("./bootstrap"); // for shared module of faker eg and making code load async
