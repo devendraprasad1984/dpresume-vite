@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import { contextReducers } from "../../_redux/reducers/contextReducers.js";
+import Counter from "./counter.jsx";
 
 const ContextSampleApp = () => {
   const [state, dispatch] = useReducer(contextReducers, {count: 0});
@@ -17,6 +18,7 @@ const ContextSampleApp = () => {
     });
   };
   return <div class="border">
+    <Counter/>
     <div className="row gap2 align-center space-between">
       <div>Context count: {state.count}</div>
       <div className="wid50 row">
