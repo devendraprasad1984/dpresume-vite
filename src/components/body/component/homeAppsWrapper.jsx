@@ -10,8 +10,9 @@ import ValtioTodos from "../../../otherStateTests/src/valtioTodos.jsx";
 const HomeAppsWrapper = () => {
   return <div className="col gap2">
     <h2 className="underline bold text-primary">Sample Apps / Micro Frontends</h2>
-    <div className="grid2x2 pad5 gap5 mflex mcol">
-      <div className="border height350 overflow pad5">
+    <div className="col pad5 gap5 mflex mcol">
+      <div className="border overflow pad5">
+        <div className="size20 wt600">Sample App - 1</div>
         <div className="col gap2">
           <ContextSampleApp/>
           <CounterSignal/>
@@ -19,26 +20,18 @@ const HomeAppsWrapper = () => {
           <ReduxCounterMain/>
         </div>
       </div>
-      <div className="border height350 overflow pad5"><VanilaJsRedux/></div>
-      <div className="border height350 overflow pad5"><SimpleForm/></div>
-      <div className="border height350 overflow pad5">
+      <div className="size20 wt600">Sample App - 2</div>
+      <div className="border overflow pad5"><SimpleForm/></div>
+      <div className="border overflow pad5">
+        <div className="size20 wt600">Sample App - 3</div>
         <div className="col gap2">
           <SignalTodos/>
           <ValtioTodos/>
         </div>
       </div>
-      <div className="border height350 overflow pad5">
-        <a href="images/microfrontend1.jpeg" target="_blank">
-          <img src="images/microfrontend1.jpeg" className="auto-image"/>
-        </a>
+      <div className="border overflow pad5">
+        <img src="/images/mf-1.webp" className="auto-image"/>
       </div>
-      <div className="border height350 overflow pad5">app2</div>
-      <div className="border height350 overflow pad5">app3</div>
-      <div className="border height350 overflow pad5">app4</div>
-      <div className="border height350 overflow pad5">app1</div>
-      <div className="border height350 overflow pad5">app2</div>
-      <div className="border height350 overflow pad5">app3</div>
-      <div className="border height350 overflow pad5">app4</div>
     </div>
   </div>;
 };
