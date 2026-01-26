@@ -1,55 +1,55 @@
 const links = {
   linkedIn: "https://www.linkedin.com/in/devendraprasad/overlay/contact-info/",
-  cv: "https://dpresume.com/docs/dpresume.pdf#view=FitH",
+  cv: "/docs/dpresume.pdf#view=FitH",
   github: "https://github.com/devendraprasad1984?tab=repositories",
   hackerRankProfile: "https://www.hackerrank.com/profile/devendraprasad11",
   video: {
-    geekAdmin: "https://dpresume.com/video/admin-ui-geek.webm"
+    geekAdmin: "/video/admin-ui-geek.webm"
   },
   iframe: {
-    geekAdminUI: "https://dpresume.com/geek_admin/",
-    vanillaJsHome: "https://dpresume.com/vanila-js/",
-    vanillaReduxCounter: "https://dpresume.com/vanila-js-redux/",
+    geekAdminUI: "/geek_admin/",
+    vanillaJsHome: "/vanila-js/",
+    vanillaReduxCounter: "/vanila-js-redux/",
   },
   footer: {
     section1: [{
       title: "BMI",
-      url: "https://dpresume.com/bmi/"
+      url: "/bmi/"
     }, {
       title: "DragD3",
-      url: "https://dpresume.com/dragd3/"
+      url: "/dragd3/"
     }, {
       title: "React Vanilla JS",
-      url: "https://dpresume.com/react-vanila-js/#/"
+      url: "/react-vanila-js/#/"
     }, {
       title: "Geek Admin",
-      url: "https://dpresume.com/geek_admin/"
+      url: "/geek_admin/"
     },],
     section2: [{
       title: "KANBAN",
-      url: "https://dpresume.com/kanban/"
+      url: "/kanban/"
     }, {
       title: "kathi.com",
-      url: "https://dpresume.com/kaathi.com/"
+      url: "/kaathi.com/"
     }, {
       title: "Lazy search",
-      url: "https://dpresume.com/debounceExampleLazySearch/"
+      url: "/debounceExampleLazySearch/"
     }, {
       title: "Comment & Reply",
-      url: "https://dpresume.com/ciim/"
+      url: "/ciim/"
     },],
     section3: [{
       title: "MOCHA",
-      url: "https://dpresume.com/mocha/mocha.html"
+      url: "/mocha/mocha.html"
     }, {
       title: "voice banking",
-      url: "https://dpresume.com/dpvoicebanking/"
+      url: "/dpvoicebanking/"
     }, {
       title: "type ORM",
       url: "https://github.com/devendraprasad1984/nodejs/tree/master/ts-node-postgres-orm-api"
     }, {
       title: "Web components",
-      url: "https://dpresume.com/customTagging/jsReadHTMLAttributes.html"
+      url: "/customTagging/jsReadHTMLAttributes.html"
     }, {
       title: "NODE.JS Practice app",
       url: "https://github.com/devendraprasad1984/nodejs"
@@ -67,7 +67,7 @@ const links = {
       url: ""
     }, {
       title: "PracticingJS",
-      url: "https://dpresume.com/docs/packOf30InterviewPrep.pdf#view=FitH"
+      url: "/docs/packOf30InterviewPrep.pdf#view=FitH"
     }]
   }
 };
