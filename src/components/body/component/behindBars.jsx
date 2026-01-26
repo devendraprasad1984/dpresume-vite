@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import domHelper from "oneliners/helper/domHelper.js";
+import {useState} from "react";
 
 const BehindBars = () => {
   const [showHide, setShowHide] = useState(false);
@@ -12,10 +12,7 @@ const BehindBars = () => {
   return <div>
     <div className="row gap5 bg-light pad5">
       <input id="passphrase" type="password" placeholder="enter passphrase" className="wid70"/>
-      <button className="wid30 btn btn-animated-line text-success" onClick={handleShowHide}>
-        <span></span><span></span><span></span><span></span>
-        <span className="text-success bold">Khul jaa sim sim</span>
-      </button>
+      <button className="btn" onClick={handleShowHide}>Open</button>
     </div>
     {showHide && <div className="col gap2">
       <div className="row gap2">

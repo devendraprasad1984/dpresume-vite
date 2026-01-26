@@ -1,10 +1,9 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Home from "./routes/home.jsx";
-import About from "./routes/about.jsx";
-import ProjectList from "./routes/projectList.jsx";
+import {Route, Routes} from "react-router-dom";
 import AppsHome from "../apps/appsHome.jsx";
 import JsConcepts from "../apps/js-concepts/jsConcepts.jsx";
+import About from "./routes/about.jsx";
+import Home from "./routes/home.jsx";
+import ProjectList from "./routes/projectList.jsx";
 
 const AppRoutes = () => {
   return <Routes>

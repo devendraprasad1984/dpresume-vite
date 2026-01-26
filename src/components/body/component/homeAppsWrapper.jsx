@@ -10,9 +10,9 @@ import ValtioTodos from "../../../otherStateTests/src/valtioTodos.jsx";
 const HomeAppsWrapper = () => {
   return <div className="col gap2">
     <h2 className="underline bold text-primary">Sample Apps / Micro Frontends</h2>
-    <div className="grid3x3 pad5 gap5 mflex mcol">
+    <div className="grid2x2 pad5 gap5 mflex mcol">
       <div className="border height350 overflow pad5">
-        <div class="col gap2">
+        <div className="col gap2">
           <ContextSampleApp/>
           <CounterSignal/>
           <CounterValtio/>
@@ -22,7 +22,7 @@ const HomeAppsWrapper = () => {
       <div className="border height350 overflow pad5"><VanilaJsRedux/></div>
       <div className="border height350 overflow pad5"><SimpleForm/></div>
       <div className="border height350 overflow pad5">
-        <div class="col gap2">
+        <div className="col gap2">
           <SignalTodos/>
           <ValtioTodos/>
         </div>

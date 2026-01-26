@@ -1,6 +1,5 @@
-import React from "react";
-import PrintList, { PrintIt } from "./printList.jsx";
 import useMobile from "../../../hooks/useMobile.js";
+import PrintList from "./printList.jsx";
 
 const gridIfMobile = "grid autofit150";
 const Skills = () => {

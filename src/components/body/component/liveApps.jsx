@@ -1,4 +1,3 @@
-import React from "react";
 import PrintList from "./printList.jsx";
 
 const gcDotCom = <a className="skill-label wt600" href="https://giftcards.com/us/en" target="_blank">giftcards.com</a>;

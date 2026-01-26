@@ -1,5 +1,3 @@
-import React from "react";
-
 export const PrintIt = (list = [], classes = "") => {
   return list.map((li, index) => {
     if (typeof li !== "string") {

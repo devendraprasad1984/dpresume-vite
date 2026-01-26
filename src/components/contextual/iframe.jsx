@@ -1,14 +1,9 @@
-import React, {useLayoutEffect} from "react";
-import FieldSetWrapper from "./fieldSetWrapper.jsx";
 import oneliners from "oneliners";
+import FieldSetWrapper from "./fieldSetWrapper.jsx";
 
 const IFrameWrapper = ({
   src
 }) => {
-  useLayoutEffect(() => {
-    oneliners.domHelpers.attachLoader();
-  }, []);
-
   const onLoaded = () => {
     oneliners.domHelpers.detachLoader();
   }

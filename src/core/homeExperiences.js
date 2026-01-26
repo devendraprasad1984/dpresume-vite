@@ -1,6 +1,5 @@
 const homeExperiences = {
   role: [
-    "close working pair with <a class='text-primary bold' target='_blank' href='https://www.linkedin.com/in/sachinlala'>Sachin Lala</a>, Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN",
     "have solid experience in banking and commerce domains",
     "have solid experience and hands-on exposure to micro frontend component based development",
     "have successfully dealt many enterprise apps while working in small/big organizations.",

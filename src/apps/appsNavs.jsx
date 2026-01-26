@@ -1,6 +1,5 @@
-import React from "react";
+import {useNavigate} from "react-router-dom";
 import appEnum from "../enums/appEnum.js";
-import { useNavigate } from "react-router-dom";
 
 const AppsNavs = () => {
   const navigate = useNavigate();

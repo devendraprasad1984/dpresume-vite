@@ -10,7 +10,7 @@ function App() {
   const MainBody = isMobile ? bodyMobile : BodyDesktop;
   return <>
     <Styles/>
-    <div className="col space-between main-outer gap1 glass pad10">
+    <div className="col space-between main-outer gap1 glass pad10 center">
       <header className="header"><Header/></header>
       <section className="body flex row mcol gap1 basis space-between wid100">
         <MainBody/>

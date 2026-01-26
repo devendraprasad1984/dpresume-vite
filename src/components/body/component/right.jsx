@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import Industry from "./industry.jsx";
 import Skills from "./skills.jsx";
 import LiveApps from "./liveApps.jsx";
 import Community from "./community.jsx";
@@ -10,6 +11,7 @@ const Right = () => {
       <LiveApps/>
       <Community/>
       <Skills/>
+      <Industry/>
     </div>
   </div>;
 };
