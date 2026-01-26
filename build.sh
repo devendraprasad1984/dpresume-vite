@@ -3,12 +3,6 @@ echo "cleaning up older build"
 rm -rf dist/
 rm -rf ~/dp/me/devendraprasad1984.github.io/assets/
 echo "building..."
-#npm run build
 pnpm run build
-#echo "deploying to server"
-#cp -R build/ /Volumes/dpresume.com/httpdocs
-#echo "cleaning up"
-#rm -rf build/
-#npx gulp
 cp -r dist/ ~/dp/me/devendraprasad1984.github.io
 echo "success. completed"
