@@ -8,7 +8,7 @@ const Skills = () => {
   return <div className={`pad10`}>
     <div className="size24 bold">Skills</div>
     <ul className={`margin--y-10 flix ${extendedClass}`}>
-      {PrintList(["Javascript", "React.JS", "AEM", "Python", "MySql"], "counter-color-peach", "grid2x2")}
+      {PrintList(["Javascript", "React.JS", "AEM", "Python", "MySql"], "counter-color-light-blue", "grid2x2")}
     </ul>
   </div>;
 };

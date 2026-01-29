@@ -21,9 +21,9 @@
 .star-list-counter li::before {
   content: '☆' counter(count, decimal);
   color: rgba(var(--color-red), 1);
-  font-size: 1.2rem;
-  text-shadow: 2vmin 1vmin 2vmin var(--color-yellow);
-  letter-spacing: 1.2vmin;
+  font-size: 3rem;
+  text-shadow: 1.5vmin 1.5vmin 2vmin var(--color-yellow);
+  letter-spacing: 1.5vmin;
 }
 
 .star-list li::before {
@@ -45,7 +45,7 @@
   color: var(--color-bg-success) !important;
 }
 
-.counter-color-light-blue {
+.counter-color-light-blue::before {
   color: var(--light-blue) !important;
 }
 

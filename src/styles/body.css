@@ -4,6 +4,10 @@
   padding: var(--10px);
 }
 
+body * {
+  color: #454848;
+}
+
 .main-left {
   height: auto;
   max-height: var(--container-height);

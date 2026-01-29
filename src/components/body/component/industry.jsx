@@ -1,10 +1,7 @@
-import useMobile from "../../../hooks/useMobile.js";
-
-const gridIfMobile = "grid autofit150";
 const printName = (props) => {
   return <div className="wt600 col">
-    <span className="size18 counter-color-light-blue">{props.name}</span>
-    <span className="size12">{props.label}</span>
+    <span className="size18">{props.name}</span>
+    <span className="size12 text-muted">{props.label}</span>
   </div>;
 };
 const SachinLala = printName({
@@ -35,11 +32,9 @@ const namesArr = [
   SachinLala, NijSaha, AmitKGupta, ParagJain, YuliaGroza, RenjithPillai
 ];
 const Industry = () => {
-  const isMobile = useMobile();
-  const extendedClass = `${isMobile ? gridIfMobile : " "}`;
   return <div className={`pad10`}>
     <div className="size24 bold">I directly worked with</div>
-    <ul className={`margin--y-10 ${extendedClass}`}>
+    <ul className={`margin--y-10`}>
       {namesArr.map((people, index) => {
         return <li key={`people-${index}}`}>{people}</li>;
       })}

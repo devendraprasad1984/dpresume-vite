@@ -8,7 +8,7 @@ export const PrintIt = (list = [], classes = "") => {
 };
 
 const PrintList = (list, classes, parentClass = "") => {
-  return <ul className={`margin--y-5 flix ${parentClass}`}>{
+  return <ul className={`margin--y-5 ${parentClass}`}>{
     PrintIt(list, classes)
   }</ul>;
 };
