@@ -1,0 +1,10 @@
+{
+  "contacts": [
+    {"name": "Dev", "phone": "9582797772", "userid": 1},
+    {"name": "vikas", "phone": "83783737", "userid": 2}
+  ],
+  "users": [
+    {"id": 1, "profile_color": "red"},
+    {"id": 2, "profile_color": "black"}
+  ]
+}

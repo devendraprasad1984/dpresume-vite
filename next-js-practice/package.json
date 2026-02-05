@@ -6,7 +6,8 @@
     "dev": "next dev -p 6201 --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "serve": "json-server --watch app/_data/contacts.json --port 6202"
   },
   "dependencies": {
     "next": "16.1.5",
@@ -20,6 +21,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.5",
+    "json-server": "1.0.0-beta.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
