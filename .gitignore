@@ -28,4 +28,3 @@ dist/*
 *.sw?
 
 docs/my_notes.txt
-public/docs/*
