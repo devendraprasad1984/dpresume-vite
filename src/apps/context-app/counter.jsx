@@ -24,7 +24,7 @@ const Counter = () => {
 
   useEffect(() => handleTimer(setCount), []);
 
-  return <div class="row gap2 align-center">
+  return <div className="row gap2 align-center">
     <span>Counter: </span>
     <span className="size20 wt600 text-success" style={{minWidth: "50px"}}>{count} {count >= 10 ? "stopped" : ""}</span>
     <button onClick={handleReset}>reset</button>

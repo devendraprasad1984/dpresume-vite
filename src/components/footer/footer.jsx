@@ -1,11 +1,13 @@
-import React from "react";
-import FooterLinks from "./footerLinks.jsx";
+import badges from "../../core/badges.js";
 import links from "../../core/links.js";
 import Badges from "../contextual/badges.jsx";
-import badges from "../../core/badges.js";
+import FooterLinks from "./footerLinks.jsx";
 
 const colClass = "col pad5 space-fill-100 mgrid2x2";
 const Footer = () => {
+  const signNumber = Math.floor(Math.random() * 10);
+  const signImage = `/signs/dp_sign_${signNumber <= 0 ? 1 : signNumber}.png`;
+
   return <div className="col gap5  glass pad20">
     <h2 className="bold">Work experience links</h2>
     <div className="row space-between gap5 mcol">
@@ -31,11 +33,8 @@ const Footer = () => {
       <div className="row flex-wrap m-footer-badge">
         <strong>Hobbies: </strong> <Badges array={badges.hobbies}/></div>
     </div>
-
-    <div className={`${colClass}  size14 nowrap`}>
-      <h2 className="bold">Contact me</h2>
-      <div>devendraprasad1984@gmail.com</div>
-      <div>+91 958 279 7772</div>
+    <div>
+      <img src={signImage} className="sign"/>
     </div>
   </div>;
 };

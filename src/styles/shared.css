@@ -326,6 +326,7 @@ ul {
 }
 
 .right {
+  float: right;
   text-align: right;
   align-items: flex-end;
 }

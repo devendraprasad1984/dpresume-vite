@@ -4,7 +4,6 @@ html, body {
   color: var(--app-text-color) !important;
   overflow-x: hidden;
   overflow-y: scroll;
-  scrollbar-width: thin !important;
   scroll-behavior: smooth;
   --website-text-size-adjust: none;
   margin: var(--html-margin);

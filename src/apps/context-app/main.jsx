@@ -1,5 +1,5 @@
-import React, { useReducer } from "react";
-import { contextReducers } from "../../_redux/reducers/contextReducers.js";
+import {useReducer} from "react";
+import {contextReducers} from "../../_redux/reducers/contextReducers.js";
 import Counter from "./counter.jsx";
 
 const ContextSampleApp = () => {
@@ -17,7 +17,7 @@ const ContextSampleApp = () => {
       count: 1
     });
   };
-  return <div class="border">
+  return <div className="">
     <Counter/>
     <div className="row gap2 align-center space-between">
       <div>Context count: {state.count}</div>

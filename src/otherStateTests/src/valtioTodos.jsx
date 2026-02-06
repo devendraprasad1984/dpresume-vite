@@ -41,7 +41,7 @@ const ValtioTodos = () => {
     setTodoText(e.target.value);
   };
 
-  return <div className="col gap2 border">
+  return <div className="col gap2">
     <h2>Valtio TODO app - {completedTodo()?.length} of {todosState?.todos?.length} completed</h2>
     <div className="row space-between align-center">
       <input type="text" placeholder="Enter todo" className="wid100" value={todoText} onChange={handleSetText}/>
