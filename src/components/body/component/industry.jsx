@@ -4,13 +4,17 @@ const printName = (props) => {
     <span className="size12 text-muted">{props.label}</span>
   </div>;
 };
+const YuliaGroza = printName({
+  name: "Yulia Groza",
+  label: "VP Engineering, Commerce Solutions at Blackhawk Network | Software Development, System Architecture"
+});
+const RenjithPillai = printName({
+  name: "Renjith Chandran Pillai",
+  label: "Senior Director of Engineering at Blackhawk Network"
+});
 const SachinLala = printName({
   name: "Sachin Lala",
   label: "Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN"
-});
-const NijSaha = printName({
-  name: "Nij Saha",
-  label: "Global C-Suite Leadership | Advisor | Angel Investor | FinTech | InsurTech | Property Investor | Entrepreneur"
 });
 const AmitKGupta = printName({
   name: "Amit Kumar Gupta",
@@ -20,16 +24,8 @@ const ParagJain = printName({
   name: "Parag Jain",
   label: "CIO|CTO| Seasoned IT leader| GCC Leadership| BFSI Leader| AI Leader| Wholesale and Investment Banking"
 });
-const YuliaGroza = printName({
-  name: "Yulia Groza",
-  label: "VP Engineering, Commerce Solutions at Blackhawk Network | Software Development, System Architecture"
-});
-const RenjithPillai = printName({
-  name: "Renjith Chandran Pillai",
-  label: "Senior Director of Engineering at Blackhawk Network"
-});
 const namesArr = [
-  SachinLala, NijSaha, AmitKGupta, ParagJain, YuliaGroza, RenjithPillai
+  YuliaGroza, RenjithPillai, SachinLala, ParagJain, AmitKGupta,
 ];
 const Industry = () => {
   return <div className={`pad10`}>

@@ -35,7 +35,7 @@ const Header = () => {
       </div>
       <div className="right">
         <span className="email">devendraprasad1984@gmail.com</span>&nbsp;
-        <span className="phone">+91 958 279 7772</span>
+        <span className="phone">+91-(958)-279-7772</span>
       </div>
 
       {1 === 2 && <div className="flex row flex-end">
