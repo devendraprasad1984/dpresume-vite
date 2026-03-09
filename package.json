@@ -14,10 +14,8 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.2",
-    "@preact/signals-react": "^3.3.0",
     "@reduxjs/toolkit": "^2.8.2",
     "oneliners": "^1.0.6",
-    "preact": "^10.27.2",
     "react": "^19.2.3",
     "react-code-blocks": "^0.1.6",
     "react-dom": "^19.2.3",
@@ -25,11 +23,9 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.26.1",
     "redux": "^5.0.1",
-    "styled-components": "^6.1.15",
-    "valtio": "^2.1.7"
+    "styled-components": "^6.1.15"
   },
   "devDependencies": {
-    "@preact/signals-react-transform": "^0.6.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
