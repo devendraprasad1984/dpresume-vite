@@ -29,7 +29,7 @@ const namesArr = [
 ];
 const Industry = () => {
   return <div className={`pad10`}>
-    <div className="size24 bold">I directly worked with</div>
+    <div className="size24 bold">Leaders I worked with...</div>
     <ul className={`margin--y-10`}>
       {namesArr.map((people, index) => {
         return <li key={`people-${index}}`}>{people}</li>;
