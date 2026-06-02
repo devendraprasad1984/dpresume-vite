@@ -1,15 +1,15 @@
 import type {Metadata} from "next";
-import {Roboto, Roboto_Mono} from "next/font/google";
+import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
-import NavBar from "@/app/_components/navBar";
+import GlobalNav from "@/app/_components/globalNav";
 
-const geistSans = Roboto({
-    variable: "--font-roboto",
+const geistSans = Geist({
+    variable: "--font-geist-sans",
     subsets: ["latin"],
 });
 
-const geistMono = Roboto_Mono({
-    variable: "--font-roboto-mono",
+const geistMono = Geist_Mono({
+    variable: "--font-geist-mono",
     subsets: ["latin"],
 });
 
@@ -24,16 +24,15 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-        <body
-            className={
-                `${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gray-50`
-            }
+        <html
+            lang="en"
+            className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
         >
-        <main>
-            <NavBar/>
+        <body className="min-h-full flex flex-col">
+        <GlobalNav/>
+        <div>
             {children}
-        </main>
+        </div>
         </body>
         </html>
     );
