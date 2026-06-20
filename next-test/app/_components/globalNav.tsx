@@ -8,6 +8,7 @@ const GlobalNav = () => {
             <Link href="/about" className={`${hoverClass}`}>About</Link>
             <Link href="/blog" className={`${hoverClass}`}>Blog</Link>
             <Link href="/checkout" className={`${hoverClass}`}>Checkout</Link>
+            <Link href="/dashboard" className={`${hoverClass}`}>Dashboard</Link>
         </div>
     )
 }
