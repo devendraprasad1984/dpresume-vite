@@ -1,7 +1,13 @@
 import BlogInfoSSR from "@/app/blog/[id]/blogInfoSSR";
 import BlogInfoCSR from "@/app/blog/[id]/blogInfoCSR";
 
-const BlogPageById = async (props: any) => {
+interface ListProps {
+    params: {
+        id?: string
+    };
+}
+
+const BlogPageById = async (props: ListProps) => {
     const _params = await props.params;
     return (
         <div>
