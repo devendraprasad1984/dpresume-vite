@@ -1,3 +1,5 @@
+@import '~@payloadcms/ui/scss';
+
 html {
   &[data-theme=dark] {
     --theme-elevation-0: rgb(24, 20, 48);
@@ -23,6 +25,13 @@ html {
 
     --theme-bg: rgb(24, 20, 48);
   }
+  &[data-theme=light] {
+    --theme-bg: rgb(245 245 248);
+  }
+}
+
+@layer payload-default {
+  // my styles within the Payload specificity
 }
 
 body, h2, h5 {

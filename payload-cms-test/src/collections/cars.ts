@@ -5,6 +5,11 @@ export const Cars: CollectionConfig = {
   access: {
     read: () => true,
   },
+  admin: {
+    components: {
+      Description: './app/components/MyDescComponent#MyDescComponent',
+    },
+  },
   fields: [
     {
       name: 'name',
