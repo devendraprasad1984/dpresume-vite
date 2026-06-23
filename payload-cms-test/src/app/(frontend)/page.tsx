@@ -54,6 +54,7 @@ export default async function HomePage() {
           <code>app/(frontend)/page.tsx</code>
         </a>
       </div>
+      <h2>This is custom base page</h2>
     </div>
   )
 }

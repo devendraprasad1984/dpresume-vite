@@ -1,10 +1,10 @@
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
-import { buildConfig } from 'payload'
+import { buildConfig, GlobalConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
-
+import type { CollectionConfig } from 'payload'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Cars } from '@/collections/cars'
@@ -14,8 +14,16 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 const isDev = process.env.NODE_ENV === 'development'
+const collectionsObject = [Cars, Users, Media]
+const globalsObject = [Header]
 export default buildConfig({
+  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
   admin: {
+    meta: {
+      titleSuffix: '- TRBL Design',
+      favicon: '/assets/favicon.svg',
+      ogImage: '/assets/logo.svg',
+    },
     autoRefresh: isDev,
     autoLogin: isDev
       ? {
@@ -30,12 +38,21 @@ export default buildConfig({
     },
     components: {
       logout: {
-        Button: { path: './app/components/LogoutButton', serverProps: { helloWorld: 'logout admin' } },
+        Button: {
+          path: './app/components/LogoutButton',
+          serverProps: { helloWorld: 'logout admin' },
+        },
       },
     },
+    livePreview: {
+      url: 'http://localhost:3000',
+      collections: [...collectionsObject, ...globalsObject].map((x: CollectionConfig | GlobalConfig) => {
+        return x.slug
+      }),
+    },
   },
-  collections: [Cars, Users, Media],
-  globals: [Header],
+  collections: collectionsObject,
+  globals: globalsObject,
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
