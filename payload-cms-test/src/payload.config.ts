@@ -14,15 +14,15 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 const isDev = process.env.NODE_ENV === 'development'
+
 const collectionsObject = [Cars, Users, Media]
 const globalsObject = [Header]
+
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
   admin: {
     meta: {
       titleSuffix: '- TRBL Design',
-      favicon: '/assets/favicon.svg',
-      ogImage: '/assets/logo.svg',
     },
     autoRefresh: isDev,
     autoLogin: isDev
@@ -46,9 +46,11 @@ export default buildConfig({
     },
     livePreview: {
       url: 'http://localhost:3000',
-      collections: [...collectionsObject, ...globalsObject].map((x: CollectionConfig | GlobalConfig) => {
-        return x.slug
-      }),
+      collections: [...collectionsObject, ...globalsObject].map(
+        (x: CollectionConfig | GlobalConfig) => {
+          return x.slug
+        },
+      ),
     },
   },
   collections: collectionsObject,
