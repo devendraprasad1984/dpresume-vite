@@ -1,5 +1,7 @@
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { pino } from 'pino'
+import pinoPretty from 'pino-pretty'
 import path from 'path'
 import { buildConfig, GlobalConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -9,17 +11,18 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Cars } from '@/collections/cars'
 import { Header } from '@/globals/header'
+import {Pages} from "@/collections/pages";
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
-
 const isDev = process.env.NODE_ENV === 'development'
-
-const collectionsObject = [Cars, Users, Media]
+const logger = pino({ level: 'debug' }, pinoPretty({ colorize: true }))
+const collectionsObject = [Cars, Users, Media, Pages]
 const globalsObject = [Header]
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
+  logger,
   admin: {
     meta: {
       titleSuffix: '- TRBL Design',
@@ -55,7 +58,12 @@ export default buildConfig({
   },
   collections: collectionsObject,
   globals: globalsObject,
-  editor: lexicalEditor(),
+  editor: lexicalEditor({
+    admin: {
+      placeholder: 'Type your content here...',
+      hideGutter: true,
+    },
+  }),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
