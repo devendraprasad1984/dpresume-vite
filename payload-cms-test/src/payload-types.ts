@@ -131,8 +131,18 @@ export interface Car {
   id: string;
   name: string;
   alt: string;
+  /**
+   * this is card build type, including chasis here
+   */
   built: string;
-  year?: number | null;
+  /**
+   * this is model year
+   */
+  Year?: string | null;
+  'alt-2'?: string | null;
+  'message-2'?: string | null;
+  'alt-3'?: string | null;
+  'message-3'?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -275,7 +285,11 @@ export interface CarsSelect<T extends boolean = true> {
   name?: T;
   alt?: T;
   built?: T;
-  year?: T;
+  Year?: T;
+  'alt-2'?: T;
+  'message-2'?: T;
+  'alt-3'?: T;
+  'message-3'?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
