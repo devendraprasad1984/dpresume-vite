@@ -141,6 +141,18 @@ export interface Car {
    * this is model year
    */
   Year?: string | null;
+  /**
+   * this is teaser1
+   */
+  Teasers: {
+    'alt-2'?: string | null;
+    'message-2'?: string | null;
+    'alt-3'?: string | null;
+    'message-3'?: string | null;
+    id?: string | null;
+    blockName?: string | null;
+    blockType: 'content-teaser';
+  }[];
   'alt-2'?: string | null;
   'message-2'?: string | null;
   'alt-3'?: string | null;
@@ -318,6 +330,20 @@ export interface CarsSelect<T extends boolean = true> {
   alt?: T;
   built?: T;
   Year?: T;
+  Teasers?:
+    | T
+    | {
+        'content-teaser'?:
+          | T
+          | {
+              'alt-2'?: T;
+              'message-2'?: T;
+              'alt-3'?: T;
+              'message-3'?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
   'alt-2'?: T;
   'message-2'?: T;
   'alt-3'?: T;

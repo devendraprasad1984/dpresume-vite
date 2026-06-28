@@ -1,6 +1,7 @@
 # Payload Blank Template
-
 This template comes configured with the bare minimum to get started on anything you need.
+from the founder:
+https://www.youtube.com/watch?v=Uyq0W6vc8Ds
 
 ## Quick start
 
