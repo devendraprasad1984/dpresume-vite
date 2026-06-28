@@ -3,22 +3,17 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { pino } from 'pino'
 import pinoPretty from 'pino-pretty'
 import path from 'path'
+import type { CollectionConfig } from 'payload'
 import { buildConfig, GlobalConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
-import type { CollectionConfig } from 'payload'
 import { Users } from './collections/Users'
-import { Media } from './collections/Media'
-import { Cars } from '@/collections/cars'
-import { Header } from '@/globals/header'
-import {Pages} from "@/collections/pages";
+import { globalObjects } from '@/globalObjects'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 const isDev = process.env.NODE_ENV === 'development'
 const logger = pino({ level: 'debug' }, pinoPretty({ colorize: true }))
-const collectionsObject = [Cars, Users, Media, Pages]
-const globalsObject = [Header]
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
@@ -49,15 +44,18 @@ export default buildConfig({
     },
     livePreview: {
       url: 'http://localhost:3000',
-      collections: [...collectionsObject, ...globalsObject].map(
-        (x: CollectionConfig | GlobalConfig) => {
-          return x.slug
-        },
-      ),
+      collections: [
+        ...Object.values(globalObjects.collectionsObject),
+        ...Object.values(globalObjects.globalsObject),
+      ].map((x: CollectionConfig | GlobalConfig) => {
+        return x.slug
+      }),
     },
   },
-  collections: collectionsObject,
-  globals: globalsObject,
+  collections: Object.values(globalObjects.collectionsObject),
+  globals: Object.values(globalObjects.globalsObject),
+  blocks: Object.values(globalObjects.globalsBlocks),
+  plugins: [],
   editor: lexicalEditor({
     admin: {
       placeholder: 'Type your content here...',
@@ -72,5 +70,4 @@ export default buildConfig({
     url: process.env.DATABASE_URL || '',
   }),
   sharp,
-  plugins: [],
 })

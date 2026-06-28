@@ -65,7 +65,9 @@ export interface Config {
   auth: {
     users: UserAuthOperations;
   };
-  blocks: {};
+  blocks: {
+    'content-teaser': ContentTeaser;
+  };
   collections: {
     cars: Car;
     users: User;
@@ -124,6 +126,19 @@ export interface UserAuthOperations {
     email: string;
     password: string;
   };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-teaser".
+ */
+export interface ContentTeaser {
+  'alt-2'?: string | null;
+  'message-2'?: string | null;
+  'alt-3'?: string | null;
+  'message-3'?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'content-teaser';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
