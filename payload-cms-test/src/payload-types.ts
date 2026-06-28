@@ -67,6 +67,7 @@ export interface Config {
   };
   blocks: {
     'content-teaser': ContentTeaser;
+    'content-teaser-V2': ContentTeaserV2;
   };
   collections: {
     cars: Car;
@@ -142,6 +143,17 @@ export interface ContentTeaser {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-teaser-V2".
+ */
+export interface ContentTeaserV2 {
+  title?: string | null;
+  content?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'content-teaser-V2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "cars".
  */
 export interface Car {
@@ -157,17 +169,26 @@ export interface Car {
    */
   Year?: string | null;
   /**
-   * this is teaser1
+   * this is teaser
    */
-  Teasers: {
-    'alt-2'?: string | null;
-    'message-2'?: string | null;
-    'alt-3'?: string | null;
-    'message-3'?: string | null;
-    id?: string | null;
-    blockName?: string | null;
-    blockType: 'content-teaser';
-  }[];
+  Teasers: (
+    | {
+        'alt-2'?: string | null;
+        'message-2'?: string | null;
+        'alt-3'?: string | null;
+        'message-3'?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'content-teaser';
+      }
+    | {
+        title?: string | null;
+        content?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'content-teaser-V2';
+      }
+  )[];
   'alt-2'?: string | null;
   'message-2'?: string | null;
   'alt-3'?: string | null;
@@ -355,6 +376,14 @@ export interface CarsSelect<T extends boolean = true> {
               'message-2'?: T;
               'alt-3'?: T;
               'message-3'?: T;
+              id?: T;
+              blockName?: T;
+            };
+        'content-teaser-V2'?:
+          | T
+          | {
+              title?: T;
+              content?: T;
               id?: T;
               blockName?: T;
             };

@@ -15,6 +15,10 @@ const dirname = path.dirname(filename)
 const isDev = process.env.NODE_ENV === 'development'
 const logger = pino({ level: 'debug' }, pinoPretty({ colorize: true }))
 
+const _this = globalObjects()
+const allCollections = Object.values(_this.collectionsObject)
+const allGlobals = Object.values(_this.globalsObject)
+const allBlocks = Object.values(_this.globalsBlocks)
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
   logger,
@@ -44,17 +48,14 @@ export default buildConfig({
     },
     livePreview: {
       url: 'http://localhost:3000',
-      collections: [
-        ...Object.values(globalObjects.collectionsObject),
-        ...Object.values(globalObjects.globalsObject),
-      ].map((x: CollectionConfig | GlobalConfig) => {
+      collections: [...allCollections, ...allGlobals].map((x: CollectionConfig | GlobalConfig) => {
         return x.slug
       }),
     },
   },
-  collections: Object.values(globalObjects.collectionsObject),
-  globals: Object.values(globalObjects.globalsObject),
-  blocks: Object.values(globalObjects.globalsBlocks),
+  collections: allCollections,
+  globals: allGlobals,
+  blocks: allBlocks ,
   plugins: [],
   editor: lexicalEditor({
     admin: {

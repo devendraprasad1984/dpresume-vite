@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { groups } from '@/globalEnum'
-import {globalObjects} from "@/globalObjects";
+import { ContentTeaser } from '@/blocks/content-teaser'
+import {ContentTeaserV2} from "@/blocks/content-teaser-v2";
 
 export const Cars: CollectionConfig = {
   slug: 'cars',
@@ -52,9 +53,9 @@ export const Cars: CollectionConfig = {
       name: 'Teasers',
       type: 'blocks',
       label: 'Content Teasers',
-      blocks: [globalObjects.globalsBlocks.ContentTeaser],
+      blocks: [ContentTeaser, ContentTeaserV2],
       admin: {
-        description: 'this is teaser1',
+        description: 'this is teaser',
         initCollapsed: true,
       },
       required: true,
