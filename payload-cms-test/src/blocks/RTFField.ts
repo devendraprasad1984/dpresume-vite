@@ -9,6 +9,7 @@ import { Field } from 'payload'
 export const RTFField = (name = 'content'): Field => {
   return {
     name,
+    label: 'Contents',
     type: 'richText',
     editor: lexicalEditor({
       features: ({ rootFeatures }) => {
