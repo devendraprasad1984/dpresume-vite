@@ -1,5 +1,9 @@
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import {
+  lexicalEditor,
+  FixedToolbarFeature,
+  InlineToolbarFeature,
+} from '@payloadcms/richtext-lexical'
 import { pino } from 'pino'
 import pinoPretty from 'pino-pretty'
 import path from 'path'
@@ -55,12 +59,11 @@ export default buildConfig({
   },
   collections: allCollections,
   globals: allGlobals,
-  blocks: allBlocks ,
+  blocks: allBlocks,
   plugins: [],
   editor: lexicalEditor({
-    admin: {
-      placeholder: 'Type your content here...',
-      hideGutter: true,
+    features: ({ rootFeatures }) => {
+      return [...rootFeatures, FixedToolbarFeature(), InlineToolbarFeature()]
     },
   }),
   secret: process.env.PAYLOAD_SECRET || '',

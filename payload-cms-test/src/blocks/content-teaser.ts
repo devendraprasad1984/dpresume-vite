@@ -1,4 +1,5 @@
 import type { Block } from 'payload'
+import { RTFField } from '@/blocks/RTFField'
 
 export const ContentTeaser: Block = {
   slug: 'content-teaser',
@@ -19,6 +20,7 @@ export const ContentTeaser: Block = {
               type: 'textarea',
               required: false,
             },
+            RTFField('content-rtf-1'),
           ],
         },
         {
@@ -34,6 +36,7 @@ export const ContentTeaser: Block = {
               type: 'textarea',
               required: false,
             },
+            RTFField('content-rtf-2'),
           ],
         },
       ],

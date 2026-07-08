@@ -135,8 +135,38 @@ export interface UserAuthOperations {
 export interface ContentTeaser {
   'alt-2'?: string | null;
   'message-2'?: string | null;
+  'content-rtf-1'?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   'alt-3'?: string | null;
   'message-3'?: string | null;
+  'content-rtf-2'?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'content-teaser';
@@ -175,8 +205,38 @@ export interface Car {
     | {
         'alt-2'?: string | null;
         'message-2'?: string | null;
+        'content-rtf-1'?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
         'alt-3'?: string | null;
         'message-3'?: string | null;
+        'content-rtf-2'?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
         id?: string | null;
         blockName?: string | null;
         blockType: 'content-teaser';
@@ -374,8 +434,10 @@ export interface CarsSelect<T extends boolean = true> {
           | {
               'alt-2'?: T;
               'message-2'?: T;
+              'content-rtf-1'?: T;
               'alt-3'?: T;
               'message-3'?: T;
+              'content-rtf-2'?: T;
               id?: T;
               blockName?: T;
             };
