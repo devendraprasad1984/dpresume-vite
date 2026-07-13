@@ -1,7 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { groups } from '@/globalEnum'
 import { RTFField } from '@/blocks/RTFField'
-import { globalObjects } from '@/globalObjects'
+import { globalBlocks } from '@/globalBlocks'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -33,7 +33,7 @@ export const Pages: CollectionConfig = {
       name: 'Layouts',
       type: 'blocks',
       label: 'choose Layout',
-      blocks: globalObjects().allBlocks,
+      blocks: globalBlocks().allBlocks,
       admin: {
         description: 'this is gloabl blocks fields',
         initCollapsed: true,
