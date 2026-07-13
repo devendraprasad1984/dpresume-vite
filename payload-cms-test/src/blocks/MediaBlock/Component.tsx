@@ -16,6 +16,7 @@ type Props = MediaBlockProps & {
   imgClassName?: string
   staticImage?: StaticImageData
   disableInnerContainer?: boolean
+  caption?: string
 }
 
 export const MediaBlock: React.FC<Props> = (props) => {
@@ -30,7 +31,7 @@ export const MediaBlock: React.FC<Props> = (props) => {
   } = props
 
   let caption
-  if (media && typeof media === 'object') caption = media.caption
+  if (media && typeof media === 'object') caption = media['caption-media']
 
   return (
     <div
