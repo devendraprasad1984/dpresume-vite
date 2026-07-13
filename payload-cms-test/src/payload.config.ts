@@ -1,14 +1,13 @@
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import {
-  lexicalEditor,
   FixedToolbarFeature,
   InlineToolbarFeature,
+  lexicalEditor,
 } from '@payloadcms/richtext-lexical'
 import { pino } from 'pino'
 import pinoPretty from 'pino-pretty'
 import path from 'path'
-import type { CollectionConfig } from 'payload'
-import { buildConfig, GlobalConfig } from 'payload'
+import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 import { Users } from './collections/Users'
@@ -20,9 +19,6 @@ const isDev = process.env.NODE_ENV === 'development'
 const logger = pino({ level: 'debug' }, pinoPretty({ colorize: true }))
 
 const _this = globalObjects()
-const allCollections = Object.values(_this.collectionsObject)
-const allGlobals = Object.values(_this.globalsObject)
-const allBlocks = Object.values(_this.globalsBlocks)
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
   logger,
@@ -52,14 +48,12 @@ export default buildConfig({
     },
     livePreview: {
       url: 'http://localhost:3000',
-      collections: [...allCollections, ...allGlobals].map((x: CollectionConfig | GlobalConfig) => {
-        return x.slug
-      }),
+      collections: _this.collectionSlugs,
     },
   },
-  collections: allCollections,
-  globals: allGlobals,
-  blocks: allBlocks,
+  collections: _this.allCollections,
+  globals: _this.allGlobals,
+  blocks: _this.allBlocks,
   plugins: [],
   editor: lexicalEditor({
     features: ({ rootFeatures }) => {

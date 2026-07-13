@@ -68,6 +68,7 @@ export interface Config {
   blocks: {
     'content-teaser': ContentTeaser;
     'content-teaser-V2': ContentTeaserV2;
+    banner: BannerBlock;
   };
   collections: {
     cars: Car;
@@ -181,6 +182,31 @@ export interface ContentTeaserV2 {
   id?: string | null;
   blockName?: string | null;
   blockType: 'content-teaser-V2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BannerBlock".
+ */
+export interface BannerBlock {
+  style: 'info' | 'warning' | 'error' | 'success';
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'banner';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -317,7 +343,7 @@ export interface Page {
   id: string;
   name?: string | null;
   message?: string | null;
-  content?: {
+  'page-main-content'?: {
     root: {
       type: string;
       children: {
@@ -513,7 +539,7 @@ export interface MediaSelect<T extends boolean = true> {
 export interface PagesSelect<T extends boolean = true> {
   name?: T;
   message?: T;
-  content?: T;
+  'page-main-content'?: T;
   updatedAt?: T;
   createdAt?: T;
 }
