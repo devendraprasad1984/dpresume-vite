@@ -12,13 +12,15 @@ import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 import { Users } from './collections/Users'
 import { globalObjects } from '@/globalObjects'
+import { globalBlocks } from '@/globalBlocks'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 const isDev = process.env.NODE_ENV === 'development'
 const logger = pino({ level: 'debug' }, pinoPretty({ colorize: true }))
 
-const _this = globalObjects()
+const _thisCollections = globalObjects()
+const _thisBlocks = globalBlocks()
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
   logger,
@@ -48,12 +50,12 @@ export default buildConfig({
     },
     livePreview: {
       url: 'http://localhost:3000',
-      collections: _this.collectionSlugs,
+      collections: _thisCollections.collectionSlugs,
     },
   },
-  collections: _this.allCollections,
-  globals: _this.allGlobals,
-  blocks: _this.allBlocks,
+  collections: _thisCollections.allCollections,
+  globals: _thisCollections.allGlobals,
+  blocks: _thisBlocks.allBlocks,
   plugins: [],
   editor: lexicalEditor({
     features: ({ rootFeatures }) => {
