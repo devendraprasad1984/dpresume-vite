@@ -3,15 +3,11 @@ import { Users } from '@/collections/Users'
 import { Media } from '@/collections/Media'
 import { Pages } from '@/collections/pages'
 import { Header } from '@/globals/header'
-import { ContentTeaser } from '@/blocks/content-teaser'
-import { ContentTeaserV2 } from './blocks/content-teaser-v2'
-import { Banner } from '@/blocks/Banner/config'
 import type { CollectionConfig, CollectionSlug, GlobalConfig } from 'payload'
-import { MediaBlock } from '@/blocks/MediaBlock/config'
-import { CallToAction } from '@/blocks/CallToAction/config'
-import { Code } from '@/blocks/Code/config'
+import { Posts } from '@/collections/posts'
+import {Categories} from "@/collections/Categories";
 
-const collectionsObject = { Cars, Users, Media, Pages }
+const collectionsObject = { Cars, Users, Media, Pages, Posts, Categories }
 const globalsObject = { Header }
 
 const allCollections = Object.values(collectionsObject)
