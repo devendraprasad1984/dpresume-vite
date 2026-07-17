@@ -28,7 +28,6 @@ export const Pages: CollectionConfig = {
       },
     },
     RTFField('page-main-content'),
-
     {
       name: 'Layouts',
       type: 'blocks',

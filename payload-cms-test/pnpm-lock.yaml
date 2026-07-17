@@ -13,28 +13,28 @@ importers:
         version: 3.85.1(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))
       '@payloadcms/next':
         specifier: 3.85.1
-        version: 3.85.1(@types/react@19.2.14)(graphql@16.14.2)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(typescript@5.7.3)
+        version: 3.85.1(@types/react@19.2.14)(graphql@16.14.2)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)
       '@payloadcms/plugin-seo':
         specifier: ^3.86.0
-        version: 3.86.0(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(typescript@5.7.3)
+        version: 3.86.0(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)
       '@payloadcms/richtext-lexical':
         specifier: latest
-        version: 3.86.0(48bbedcecb8702f93e357f4511677816)
+        version: 3.86.0(@faceless-ui/modal@3.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(@faceless-ui/scroll-info@2.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(@payloadcms/next@3.85.1(@types/react@19.2.14)(graphql@16.14.2)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3))(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)(yjs@13.6.31)
       '@payloadcms/ui':
         specifier: 3.85.1
-        version: 3.85.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(typescript@5.7.3)
+        version: 3.85.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)
       '@radix-ui/react-checkbox':
         specifier: ^1.0.4
-        version: 1.3.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+        version: 1.3.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@radix-ui/react-label':
         specifier: ^2.0.2
-        version: 2.1.11(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+        version: 2.1.11(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@radix-ui/react-select':
         specifier: ^2.0.0
-        version: 2.3.3(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+        version: 2.3.3(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@radix-ui/react-slot':
         specifier: ^1.0.2
-        version: 1.3.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
+        version: 1.3.0(@types/react@19.2.14)(react@19.2.6)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.1
@@ -49,19 +49,19 @@ importers:
         version: 16.4.7
       geist:
         specifier: ^1.3.0
-        version: 1.7.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))
+        version: 1.7.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))
       graphql:
         specifier: ^16.8.1
         version: 16.14.2
       lucide-react:
         specifier: 0.563.0
-        version: 0.563.0(react@@payloadcms+richtext-lexical+react)
+        version: 0.563.0(react@19.2.6)
       next:
         specifier: 16.2.6
-        version: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4)
+        version: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4)
       next-sitemap:
         specifier: ^4.2.3
-        version: 4.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))
+        version: 4.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))
       payload:
         specifier: 3.85.1
         version: 3.85.1(graphql@16.14.2)(typescript@5.7.3)
@@ -73,16 +73,16 @@ importers:
         version: 13.1.3
       prism-react-renderer:
         specifier: ^2.3.1
-        version: 2.4.1(react@@payloadcms+richtext-lexical+react)
+        version: 2.4.1(react@19.2.6)
       react:
-        specifier: link:@payloadcms/richtext-lexical/react
-        version: link:@payloadcms/richtext-lexical/react
+        specifier: 19.2.6
+        version: 19.2.6
       react-dom:
         specifier: 19.2.6
-        version: 19.2.6(react@@payloadcms+richtext-lexical+react)
+        version: 19.2.6(react@19.2.6)
       react-hook-form:
         specifier: 7.71.1
-        version: 7.71.1(react@@payloadcms+richtext-lexical+react)
+        version: 7.71.1(react@19.2.6)
       sharp:
         specifier: 0.34.2
         version: 0.34.2
@@ -95,7 +95,7 @@ importers:
         version: 1.58.2
       '@testing-library/react':
         specifier: 16.3.0
-        version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+        version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@types/node':
         specifier: 22.19.9
         version: 22.19.9
@@ -3819,6 +3819,10 @@ packages:
       react: '>=16.6.0'
       react-dom: '>=16.6.0'
 
+  react@19.2.6:
+    resolution: {integrity: sha512-sfWGGfavi0xr8Pg0sVsyHMAOziVYKgPLNrS7ig+ivMNb3wbCBw3KxtflsGBAwD3gYQlE/AEZsTLgToRrSCjb0Q==}
+    engines: {node: '>=0.10.0'}
+
   readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
@@ -4674,36 +4678,36 @@ snapshots:
 
   '@date-fns/tz@1.2.0': {}
 
-  '@dnd-kit/accessibility@3.1.1(react@@payloadcms+richtext-lexical+react)':
+  '@dnd-kit/accessibility@3.1.1(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
       tslib: 2.8.1
 
-  '@dnd-kit/core@6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@dnd-kit/core@6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@dnd-kit/accessibility': 3.1.1(react@@payloadcms+richtext-lexical+react)
-      '@dnd-kit/utilities': 3.2.2(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      '@dnd-kit/accessibility': 3.1.1(react@19.2.6)
+      '@dnd-kit/utilities': 3.2.2(react@19.2.6)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
       tslib: 2.8.1
 
-  '@dnd-kit/modifiers@9.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@dnd-kit/modifiers@9.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@dnd-kit/core': 6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@dnd-kit/utilities': 3.2.2(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
+      '@dnd-kit/core': 6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@dnd-kit/utilities': 3.2.2(react@19.2.6)
+      react: 19.2.6
       tslib: 2.8.1
 
-  '@dnd-kit/sortable@10.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@dnd-kit/sortable@10.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@dnd-kit/core': 6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@dnd-kit/utilities': 3.2.2(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
+      '@dnd-kit/core': 6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@dnd-kit/utilities': 3.2.2(react@19.2.6)
+      react: 19.2.6
       tslib: 2.8.1
 
-  '@dnd-kit/utilities@3.2.2(react@@payloadcms+richtext-lexical+react)':
+  '@dnd-kit/utilities@3.2.2(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
       tslib: 2.8.1
 
   '@emnapi/core@1.10.0':
@@ -4755,17 +4759,17 @@ snapshots:
 
   '@emotion/memoize@0.9.0': {}
 
-  '@emotion/react@11.14.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@emotion/react@11.14.0(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
       '@babel/runtime': 7.29.7
       '@emotion/babel-plugin': 11.13.5
       '@emotion/cache': 11.14.0
       '@emotion/serialize': 1.3.3
-      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@@payloadcms+richtext-lexical+react)
+      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.6)
       '@emotion/utils': 1.4.2
       '@emotion/weak-memoize': 0.4.0
       hoist-non-react-statics: 3.3.2
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
     transitivePeerDependencies:
@@ -4783,9 +4787,9 @@ snapshots:
 
   '@emotion/unitless@0.10.0': {}
 
-  '@emotion/use-insertion-effect-with-fallbacks@1.2.0(react@@payloadcms+richtext-lexical+react)':
+  '@emotion/use-insertion-effect-with-fallbacks@1.2.0(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
 
   '@emotion/utils@1.4.2': {}
 
@@ -4995,23 +4999,23 @@ snapshots:
 
   '@exodus/bytes@1.15.1': {}
 
-  '@faceless-ui/modal@3.0.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@faceless-ui/modal@3.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       body-scroll-lock: 4.0.0-beta.0
       focus-trap: 7.5.4
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
-      react-transition-group: 4.4.5(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
+      react-transition-group: 4.4.5(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
 
-  '@faceless-ui/scroll-info@2.0.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@faceless-ui/scroll-info@2.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
 
-  '@faceless-ui/window-info@3.0.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@faceless-ui/window-info@3.0.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
 
   '@floating-ui/core@1.8.0':
     dependencies:
@@ -5022,18 +5026,18 @@ snapshots:
       '@floating-ui/core': 1.8.0
       '@floating-ui/utils': 0.2.12
 
-  '@floating-ui/react-dom@2.1.9(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@floating-ui/react-dom@2.1.9(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@floating-ui/dom': 1.8.0
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
 
-  '@floating-ui/react@0.27.20(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@floating-ui/react@0.27.20(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@floating-ui/react-dom': 2.1.9(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      '@floating-ui/react-dom': 2.1.9(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@floating-ui/utils': 0.2.12
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
       tabbable: 6.5.0
 
   '@floating-ui/utils@0.2.12': {}
@@ -5267,7 +5271,7 @@ snapshots:
       lexical: 0.41.0
       prismjs: 1.30.0
 
-  '@lexical/devtools-core@0.41.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@lexical/devtools-core@0.41.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@lexical/html': 0.41.0
       '@lexical/link': 0.41.0
@@ -5275,8 +5279,8 @@ snapshots:
       '@lexical/table': 0.41.0
       '@lexical/utils': 0.41.0
       lexical: 0.41.0
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
 
   '@lexical/dragon@0.41.0':
     dependencies:
@@ -5359,10 +5363,10 @@ snapshots:
       '@lexical/utils': 0.41.0
       lexical: 0.41.0
 
-  '@lexical/react@0.41.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(yjs@13.6.31)':
+  '@lexical/react@0.41.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(yjs@13.6.31)':
     dependencies:
-      '@floating-ui/react': 0.27.20(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@lexical/devtools-core': 0.41.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      '@floating-ui/react': 0.27.20(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@lexical/devtools-core': 0.41.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@lexical/dragon': 0.41.0
       '@lexical/extension': 0.41.0
       '@lexical/hashtag': 0.41.0
@@ -5379,9 +5383,9 @@ snapshots:
       '@lexical/utils': 0.41.0
       '@lexical/yjs': 0.41.0(yjs@13.6.31)
       lexical: 0.41.0
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
-      react-error-boundary: 6.1.2(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
+      react-error-boundary: 6.1.2(react@19.2.6)
     transitivePeerDependencies:
       - yjs
 
@@ -5424,12 +5428,12 @@ snapshots:
     dependencies:
       state-local: 1.0.7
 
-  '@monaco-editor/react@4.7.0(monaco-editor@0.55.1)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@monaco-editor/react@4.7.0(monaco-editor@0.55.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@monaco-editor/loader': 1.7.0
       monaco-editor: 0.55.1
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
 
   '@mongodb-js/saslprep@1.4.12':
     dependencies:
@@ -5518,14 +5522,14 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@payloadcms/next@3.85.1(@types/react@19.2.14)(graphql@16.14.2)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(typescript@5.7.3)':
+  '@payloadcms/next@3.85.1(@types/react@19.2.14)(graphql@16.14.2)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)':
     dependencies:
-      '@dnd-kit/core': 6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@dnd-kit/modifiers': 9.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@dnd-kit/sortable': 10.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      '@dnd-kit/core': 6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@dnd-kit/modifiers': 9.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)
+      '@dnd-kit/sortable': 10.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)
       '@payloadcms/graphql': 3.85.1(graphql@16.14.2)(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(typescript@5.7.3)
       '@payloadcms/translations': 3.85.1
-      '@payloadcms/ui': 3.85.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(typescript@5.7.3)
+      '@payloadcms/ui': 3.85.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)
       busboy: 1.6.0
       dequal: 2.0.3
       file-type: 21.3.4
@@ -5533,7 +5537,7 @@ snapshots:
       graphql-http: 1.22.4(graphql@16.14.2)
       graphql-playground-html: 1.6.30
       http-status: 2.1.0
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4)
+      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4)
       path-to-regexp: 6.3.0
       payload: 3.85.1(graphql@16.14.2)(typescript@5.7.3)
       qs-esm: 8.0.1
@@ -5547,13 +5551,13 @@ snapshots:
       - supports-color
       - typescript
 
-  '@payloadcms/plugin-seo@3.86.0(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(typescript@5.7.3)':
+  '@payloadcms/plugin-seo@3.86.0(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)':
     dependencies:
       '@payloadcms/translations': 3.86.0
-      '@payloadcms/ui': 3.86.0(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(typescript@5.7.3)
+      '@payloadcms/ui': 3.86.0(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)
       payload: 3.85.1(graphql@16.14.2)(typescript@5.7.3)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     transitivePeerDependencies:
       - '@types/react'
       - monaco-editor
@@ -5561,24 +5565,24 @@ snapshots:
       - supports-color
       - typescript
 
-  '@payloadcms/richtext-lexical@3.86.0(48bbedcecb8702f93e357f4511677816)':
+  '@payloadcms/richtext-lexical@3.86.0(@faceless-ui/modal@3.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(@faceless-ui/scroll-info@2.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(@payloadcms/next@3.85.1(@types/react@19.2.14)(graphql@16.14.2)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3))(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)(yjs@13.6.31)':
     dependencies:
-      '@faceless-ui/modal': 3.0.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@faceless-ui/scroll-info': 2.0.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      '@faceless-ui/modal': 3.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@faceless-ui/scroll-info': 2.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@lexical/clipboard': 0.41.0
       '@lexical/headless': 0.41.0
       '@lexical/html': 0.41.0
       '@lexical/link': 0.41.0
       '@lexical/list': 0.41.0
       '@lexical/mark': 0.41.0
-      '@lexical/react': 0.41.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(yjs@13.6.31)
+      '@lexical/react': 0.41.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(yjs@13.6.31)
       '@lexical/rich-text': 0.41.0
       '@lexical/selection': 0.41.0
       '@lexical/table': 0.41.0
       '@lexical/utils': 0.41.0
-      '@payloadcms/next': 3.85.1(@types/react@19.2.14)(graphql@16.14.2)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(typescript@5.7.3)
+      '@payloadcms/next': 3.85.1(@types/react@19.2.14)(graphql@16.14.2)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)
       '@payloadcms/translations': 3.86.0
-      '@payloadcms/ui': 3.86.0(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(typescript@5.7.3)
+      '@payloadcms/ui': 3.86.0(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)
       acorn: 8.16.0
       bson-objectid: 2.0.4
       csstype: 3.1.3
@@ -5591,9 +5595,9 @@ snapshots:
       micromark-extension-mdx-jsx: 3.0.1
       payload: 3.85.1(graphql@16.14.2)(typescript@5.7.3)
       qs-esm: 8.0.1
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
-      react-error-boundary: 4.1.2(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
+      react-error-boundary: 4.1.2(react@19.2.6)
       ts-essentials: 10.0.3(typescript@5.7.3)
       uuid: 13.0.2
     transitivePeerDependencies:
@@ -5614,34 +5618,34 @@ snapshots:
     dependencies:
       date-fns: 4.1.0
 
-  '@payloadcms/ui@3.85.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(typescript@5.7.3)':
+  '@payloadcms/ui@3.85.1(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)':
     dependencies:
       '@date-fns/tz': 1.2.0
-      '@dnd-kit/core': 6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@dnd-kit/sortable': 10.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@dnd-kit/utilities': 3.2.2(react@@payloadcms+richtext-lexical+react)
-      '@faceless-ui/modal': 3.0.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@faceless-ui/scroll-info': 2.0.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@faceless-ui/window-info': 3.0.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@monaco-editor/react': 4.7.0(monaco-editor@0.55.1)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      '@dnd-kit/core': 6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@dnd-kit/sortable': 10.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)
+      '@dnd-kit/utilities': 3.2.2(react@19.2.6)
+      '@faceless-ui/modal': 3.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@faceless-ui/scroll-info': 2.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@faceless-ui/window-info': 3.0.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@monaco-editor/react': 4.7.0(monaco-editor@0.55.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@payloadcms/translations': 3.85.1
       bson-objectid: 2.0.4
       date-fns: 4.1.0
       dequal: 2.0.3
       md5: 2.3.0
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4)
+      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4)
       object-to-formdata: 4.5.1
       payload: 3.85.1(graphql@16.14.2)(typescript@5.7.3)
       qs-esm: 8.0.1
-      react: link:@payloadcms/richtext-lexical/react
-      react-datepicker: 7.6.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
-      react-image-crop: 10.1.8(react@@payloadcms+richtext-lexical+react)
-      react-select: 5.9.0(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-datepicker: 7.6.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      react-dom: 19.2.6(react@19.2.6)
+      react-image-crop: 10.1.8(react@19.2.6)
+      react-select: 5.9.0(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       scheduler: 0.25.0
-      sonner: 1.7.4(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      sonner: 1.7.4(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       ts-essentials: 10.0.3(typescript@5.7.3)
-      use-context-selector: 2.0.0(react@@payloadcms+richtext-lexical+react)(scheduler@0.25.0)
+      use-context-selector: 2.0.0(react@19.2.6)(scheduler@0.25.0)
       uuid: 13.0.2
     transitivePeerDependencies:
       - '@types/react'
@@ -5649,34 +5653,34 @@ snapshots:
       - supports-color
       - typescript
 
-  '@payloadcms/ui@3.86.0(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(typescript@5.7.3)':
+  '@payloadcms/ui@3.86.0(@types/react@19.2.14)(monaco-editor@0.55.1)(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4))(payload@3.85.1(graphql@16.14.2)(typescript@5.7.3))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.7.3)':
     dependencies:
       '@date-fns/tz': 1.2.0
-      '@dnd-kit/core': 6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@dnd-kit/sortable': 10.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@dnd-kit/utilities': 3.2.2(react@@payloadcms+richtext-lexical+react)
-      '@faceless-ui/modal': 3.0.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@faceless-ui/scroll-info': 2.0.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@faceless-ui/window-info': 3.0.1(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@monaco-editor/react': 4.7.0(monaco-editor@0.55.1)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      '@dnd-kit/core': 6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@dnd-kit/sortable': 10.0.0(@dnd-kit/core@6.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)
+      '@dnd-kit/utilities': 3.2.2(react@19.2.6)
+      '@faceless-ui/modal': 3.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@faceless-ui/scroll-info': 2.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@faceless-ui/window-info': 3.0.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@monaco-editor/react': 4.7.0(monaco-editor@0.55.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@payloadcms/translations': 3.86.0
       bson-objectid: 2.0.4
       date-fns: 4.1.0
       dequal: 2.0.3
       md5: 2.3.0
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4)
+      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4)
       object-to-formdata: 4.5.1
       payload: 3.85.1(graphql@16.14.2)(typescript@5.7.3)
       qs-esm: 8.0.1
-      react: link:@payloadcms/richtext-lexical/react
-      react-datepicker: 7.6.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
-      react-image-crop: 10.1.8(react@@payloadcms+richtext-lexical+react)
-      react-select: 5.9.0(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-datepicker: 7.6.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      react-dom: 19.2.6(react@19.2.6)
+      react-image-crop: 10.1.8(react@19.2.6)
+      react-select: 5.9.0(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       scheduler: 0.25.0
-      sonner: 1.7.4(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      sonner: 1.7.4(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       ts-essentials: 10.0.3(typescript@5.7.3)
-      use-context-selector: 2.0.0(react@@payloadcms+richtext-lexical+react)(scheduler@0.25.0)
+      use-context-selector: 2.0.0(react@19.2.6)(scheduler@0.25.0)
       uuid: 13.0.2
     transitivePeerDependencies:
       - '@types/react'
@@ -5696,242 +5700,242 @@ snapshots:
 
   '@radix-ui/primitive@1.1.5': {}
 
-  '@radix-ui/react-arrow@1.1.11(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-arrow@1.1.11(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@radix-ui/react-checkbox@1.3.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-checkbox@1.3.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@radix-ui/primitive': 1.1.5
-      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-context': 1.2.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-presence': 1.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-controllable-state': 1.2.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-previous': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-size': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-context': 1.2.0(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-presence': 1.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-use-controllable-state': 1.2.3(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-use-previous': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-use-size': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@radix-ui/react-collection@1.1.12(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-collection@1.1.12(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-context': 1.2.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-slot': 1.3.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-context': 1.2.0(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-slot': 1.3.0(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@radix-ui/react-compose-refs@1.1.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-compose-refs@1.1.3(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-context@1.2.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-context@1.2.0(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-direction@1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-direction@1.1.2(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-dismissable-layer@1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-dismissable-layer@1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@radix-ui/primitive': 1.1.5
-      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-callback-ref': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-effect-event': 0.0.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-use-callback-ref': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-use-effect-event': 0.0.3(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@radix-ui/react-focus-guards@1.1.4(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-focus-guards@1.1.4(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-focus-scope@1.1.12(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-focus-scope@1.1.12(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-callback-ref': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
-    optionalDependencies:
-      '@types/react': 19.2.14
-      '@types/react-dom': 19.2.3(@types/react@19.2.14)
-
-  '@radix-ui/react-id@1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
-    dependencies:
-      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-    optionalDependencies:
-      '@types/react': 19.2.14
-
-  '@radix-ui/react-label@2.1.11(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
-    dependencies:
-      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-use-callback-ref': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@radix-ui/react-popper@1.3.3(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-id@1.1.2(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      '@floating-ui/react-dom': 2.1.9(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-arrow': 1.1.11(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-context': 1.2.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-callback-ref': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-rect': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-size': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
+      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
+    optionalDependencies:
+      '@types/react': 19.2.14
+
+  '@radix-ui/react-label@2.1.11(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+    dependencies:
+      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
+    optionalDependencies:
+      '@types/react': 19.2.14
+      '@types/react-dom': 19.2.3(@types/react@19.2.14)
+
+  '@radix-ui/react-popper@1.3.3(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+    dependencies:
+      '@floating-ui/react-dom': 2.1.9(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-arrow': 1.1.11(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-context': 1.2.0(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-use-callback-ref': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-use-rect': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-use-size': 1.1.2(@types/react@19.2.14)(react@19.2.6)
       '@radix-ui/rect': 1.1.2
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@radix-ui/react-portal@1.1.13(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-portal@1.1.13(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@radix-ui/react-presence@1.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-presence@1.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@radix-ui/react-primitive@2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-primitive@2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@radix-ui/react-slot': 1.3.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      '@radix-ui/react-slot': 1.3.0(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@radix-ui/react-select@2.3.3(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-select@2.3.3(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@radix-ui/number': 1.1.2
       '@radix-ui/primitive': 1.1.5
-      '@radix-ui/react-collection': 1.1.12(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-context': 1.2.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-direction': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-dismissable-layer': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-focus-guards': 1.1.4(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-focus-scope': 1.1.12(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-id': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-popper': 1.3.3(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-portal': 1.1.13(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-presence': 1.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-slot': 1.3.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-callback-ref': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-controllable-state': 1.2.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-previous': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-visually-hidden': 1.2.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      '@radix-ui/react-collection': 1.1.12(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-context': 1.2.0(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-direction': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-dismissable-layer': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-focus-guards': 1.1.4(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-focus-scope': 1.1.12(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-id': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-popper': 1.3.3(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-portal': 1.1.13(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-presence': 1.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@radix-ui/react-slot': 1.3.0(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-use-callback-ref': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-use-controllable-state': 1.2.3(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-use-previous': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-visually-hidden': 1.2.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       aria-hidden: 1.2.6
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
-      react-remove-scroll: 2.7.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
+      react-remove-scroll: 2.7.2(@types/react@19.2.14)(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@radix-ui/react-slot@1.3.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-slot@1.3.0(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
+      '@radix-ui/react-compose-refs': 1.1.3(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-use-callback-ref@1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-use-callback-ref@1.1.2(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-use-controllable-state@1.2.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-use-controllable-state@1.2.3(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      '@radix-ui/react-use-effect-event': 0.0.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
+      '@radix-ui/react-use-effect-event': 0.0.3(@types/react@19.2.14)(react@19.2.6)
+      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-use-effect-event@0.0.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-use-effect-event@0.0.3(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
+      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-use-layout-effect@1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-use-layout-effect@1.1.2(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-use-previous@1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-use-previous@1.1.2(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-use-rect@1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-use-rect@1.1.2(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
       '@radix-ui/rect': 1.1.2
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-use-size@1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-use-size@1.1.2(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
-      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
+      '@radix-ui/react-use-layout-effect': 1.1.2(@types/react@19.2.14)(react@19.2.6)
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  '@radix-ui/react-visually-hidden@1.2.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@radix-ui/react-visually-hidden@1.2.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      '@radix-ui/react-primitive': 2.1.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
@@ -6034,12 +6038,12 @@ snapshots:
       picocolors: 1.1.1
       pretty-format: 27.5.1
 
-  '@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)':
+  '@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@babel/runtime': 7.29.7
       '@testing-library/dom': 10.4.1
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
@@ -6986,7 +6990,7 @@ snapshots:
       '@next/eslint-plugin-next': 16.2.6
       eslint: 9.39.5
       eslint-import-resolver-node: 0.3.10
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.64.0(eslint@9.39.5)(typescript@5.7.3))(eslint@9.39.5))(eslint@9.39.5)
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@9.39.5)
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.64.0(eslint@9.39.5)(typescript@5.7.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.5)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.39.5)
       eslint-plugin-react: 7.37.5(eslint@9.39.5)
@@ -7009,7 +7013,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.64.0(eslint@9.39.5)(typescript@5.7.3))(eslint@9.39.5))(eslint@9.39.5):
+  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@9.39.5):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.3
@@ -7024,14 +7028,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.14.0(@typescript-eslint/parser@8.64.0(eslint@9.39.5)(typescript@5.7.3))(eslint-import-resolver-node@0.3.10)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.64.0(eslint@9.39.5)(typescript@5.7.3))(eslint@9.39.5))(eslint@9.39.5))(eslint@9.39.5):
+  eslint-module-utils@2.14.0(@typescript-eslint/parser@8.64.0(eslint@9.39.5)(typescript@5.7.3))(eslint-import-resolver-node@0.3.10)(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.5):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.64.0(eslint@9.39.5)(typescript@5.7.3)
       eslint: 9.39.5
       eslint-import-resolver-node: 0.3.10
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.64.0(eslint@9.39.5)(typescript@5.7.3))(eslint@9.39.5))(eslint@9.39.5)
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@9.39.5)
     transitivePeerDependencies:
       - supports-color
 
@@ -7046,7 +7050,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.39.5
       eslint-import-resolver-node: 0.3.10
-      eslint-module-utils: 2.14.0(@typescript-eslint/parser@8.64.0(eslint@9.39.5)(typescript@5.7.3))(eslint-import-resolver-node@0.3.10)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.64.0(eslint@9.39.5)(typescript@5.7.3))(eslint@9.39.5))(eslint@9.39.5))(eslint@9.39.5)
+      eslint-module-utils: 2.14.0(@typescript-eslint/parser@8.64.0(eslint@9.39.5)(typescript@5.7.3))(eslint-import-resolver-node@0.3.10)(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.5)
       hasown: 2.0.4
       is-core-module: 2.16.2
       is-glob: 4.0.3
@@ -7296,9 +7300,9 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
-  geist@1.7.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4)):
+  geist@1.7.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4)):
     dependencies:
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4)
+      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4)
 
   generator-function@2.0.1: {}
 
@@ -7744,9 +7748,9 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react@0.563.0(react@@payloadcms+richtext-lexical+react):
+  lucide-react@0.563.0(react@19.2.6):
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
 
   lz-string@1.5.0: {}
 
@@ -8075,24 +8079,24 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-sitemap@4.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4)):
+  next-sitemap@4.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4)):
     dependencies:
       '@corex/deepmerge': 4.0.43
       '@next/env': 13.5.11
       fast-glob: 3.3.3
       minimist: 1.2.8
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4)
+      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4)
 
-  next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)(sass@1.77.4):
+  next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.58.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.77.4):
     dependencies:
       '@next/env': 16.2.6
       '@swc/helpers': 0.5.15
       baseline-browser-mapping: 2.10.43
       caniuse-lite: 1.0.30001805
       postcss: 8.4.31
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
-      styled-jsx: 5.1.6(@babel/core@7.29.7)(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
+      styled-jsx: 5.1.6(@babel/core@7.29.7)(react@19.2.6)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.2.6
       '@next/swc-darwin-x64': 16.2.6
@@ -8382,11 +8386,11 @@ snapshots:
       ansi-styles: 5.2.0
       react-is: 17.0.2
 
-  prism-react-renderer@2.4.1(react@@payloadcms+richtext-lexical+react):
+  prism-react-renderer@2.4.1(react@19.2.6):
     dependencies:
       '@types/prismjs': 1.26.6
       clsx: 2.1.1
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
 
   prismjs@1.30.0: {}
 
@@ -8418,35 +8422,35 @@ snapshots:
 
   range-parser@1.2.1: {}
 
-  react-datepicker@7.6.0(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react):
+  react-datepicker@7.6.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6):
     dependencies:
-      '@floating-ui/react': 0.27.20(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
+      '@floating-ui/react': 0.27.20(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       clsx: 2.1.1
       date-fns: 3.6.0
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
 
-  react-dom@19.2.6(react@@payloadcms+richtext-lexical+react):
+  react-dom@19.2.6(react@19.2.6):
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
       scheduler: 0.27.0
 
-  react-error-boundary@4.1.2(react@@payloadcms+richtext-lexical+react):
+  react-error-boundary@4.1.2(react@19.2.6):
     dependencies:
       '@babel/runtime': 7.29.7
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
 
-  react-error-boundary@6.1.2(react@@payloadcms+richtext-lexical+react):
+  react-error-boundary@6.1.2(react@19.2.6):
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
 
-  react-hook-form@7.71.1(react@@payloadcms+richtext-lexical+react):
+  react-hook-form@7.71.1(react@19.2.6):
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
 
-  react-image-crop@10.1.8(react@@payloadcms+richtext-lexical+react):
+  react-image-crop@10.1.8(react@19.2.6):
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
 
   react-is@16.13.1: {}
 
@@ -8454,58 +8458,60 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-remove-scroll-bar@2.3.8(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react):
+  react-remove-scroll-bar@2.3.8(@types/react@19.2.14)(react@19.2.6):
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
-      react-style-singleton: 2.2.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-style-singleton: 2.2.3(@types/react@19.2.14)(react@19.2.6)
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 19.2.14
 
-  react-remove-scroll@2.7.2(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react):
+  react-remove-scroll@2.7.2(@types/react@19.2.14)(react@19.2.6):
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
-      react-remove-scroll-bar: 2.3.8(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      react-style-singleton: 2.2.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-remove-scroll-bar: 2.3.8(@types/react@19.2.14)(react@19.2.6)
+      react-style-singleton: 2.2.3(@types/react@19.2.14)(react@19.2.6)
       tslib: 2.8.1
-      use-callback-ref: 1.3.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
-      use-sidecar: 1.1.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
+      use-callback-ref: 1.3.3(@types/react@19.2.14)(react@19.2.6)
+      use-sidecar: 1.1.3(@types/react@19.2.14)(react@19.2.6)
     optionalDependencies:
       '@types/react': 19.2.14
 
-  react-select@5.9.0(@types/react@19.2.14)(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react):
+  react-select@5.9.0(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6):
     dependencies:
       '@babel/runtime': 7.29.7
       '@emotion/cache': 11.14.0
-      '@emotion/react': 11.14.0(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
+      '@emotion/react': 11.14.0(@types/react@19.2.14)(react@19.2.6)
       '@floating-ui/dom': 1.8.0
       '@types/react-transition-group': 4.4.12(@types/react@19.2.14)
       memoize-one: 6.0.0
       prop-types: 15.8.1
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
-      react-transition-group: 4.4.5(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react)
-      use-isomorphic-layout-effect: 1.2.1(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
+      react-transition-group: 4.4.5(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      use-isomorphic-layout-effect: 1.2.1(@types/react@19.2.14)(react@19.2.6)
     transitivePeerDependencies:
       - '@types/react'
       - supports-color
 
-  react-style-singleton@2.2.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react):
+  react-style-singleton@2.2.3(@types/react@19.2.14)(react@19.2.6):
     dependencies:
       get-nonce: 1.0.1
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 19.2.14
 
-  react-transition-group@4.4.5(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react):
+  react-transition-group@4.4.5(react-dom@19.2.6(react@19.2.6))(react@19.2.6):
     dependencies:
       '@babel/runtime': 7.29.7
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
+
+  react@19.2.6: {}
 
   readdirp@3.6.0:
     dependencies:
@@ -8771,10 +8777,10 @@ snapshots:
     dependencies:
       atomic-sleep: 1.0.0
 
-  sonner@1.7.4(react-dom@19.2.6(react@@payloadcms+richtext-lexical+react))(react@@payloadcms+richtext-lexical+react):
+  sonner@1.7.4(react-dom@19.2.6(react@19.2.6))(react@19.2.6):
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
-      react-dom: 19.2.6(react@@payloadcms+richtext-lexical+react)
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
 
   source-map-js@1.2.1: {}
 
@@ -8867,10 +8873,10 @@ snapshots:
     dependencies:
       '@tokenizer/token': 0.3.0
 
-  styled-jsx@5.1.6(@babel/core@7.29.7)(react@@payloadcms+richtext-lexical+react):
+  styled-jsx@5.1.6(@babel/core@7.29.7)(react@19.2.6):
     dependencies:
       client-only: 0.0.1
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
     optionalDependencies:
       '@babel/core': 7.29.7
 
@@ -9098,28 +9104,28 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  use-callback-ref@1.3.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react):
+  use-callback-ref@1.3.3(@types/react@19.2.14)(react@19.2.6):
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 19.2.14
 
-  use-context-selector@2.0.0(react@@payloadcms+richtext-lexical+react)(scheduler@0.25.0):
+  use-context-selector@2.0.0(react@19.2.6)(scheduler@0.25.0):
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
       scheduler: 0.25.0
 
-  use-isomorphic-layout-effect@1.2.1(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react):
+  use-isomorphic-layout-effect@1.2.1(@types/react@19.2.14)(react@19.2.6):
     dependencies:
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
     optionalDependencies:
       '@types/react': 19.2.14
 
-  use-sidecar@1.1.3(@types/react@19.2.14)(react@@payloadcms+richtext-lexical+react):
+  use-sidecar@1.1.3(@types/react@19.2.14)(react@19.2.6):
     dependencies:
       detect-node-es: 1.1.0
-      react: link:@payloadcms/richtext-lexical/react
+      react: 19.2.6
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 19.2.14
