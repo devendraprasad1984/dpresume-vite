@@ -1,9 +1,6 @@
 import React from 'react'
 import type { Payload } from 'payload'
 import Link from 'next/link'
-// import { getTranslation } from '@payloadcms/translations'
-//use client
-// import { useConfig } from '@payloadcms/ui'
 
 interface thisProps {
   payload?: Payload
@@ -16,8 +13,6 @@ interface thisProps {
 function LogoutButton(props: thisProps) {
   const payload = props.payload as Payload
   const helloWorld = props.helloWorld as string
-    // const translatedTitle = getTranslation(myTranslation, props.i18n)
-  // const config = useConfig()
   console.log('ssr logout button', payload?.collections?.users, 'serverProps:', props)
   return (
     <div className="flex col">

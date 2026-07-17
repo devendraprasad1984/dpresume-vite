@@ -330,7 +330,7 @@ export interface Media {
  * via the `definition` "CallToActionBlock".
  */
 export interface CallToActionBlock {
-  richText?: {
+  rtf_1?: {
     root: {
       type: string;
       children: {
@@ -902,7 +902,7 @@ export interface MediaBlockSelect<T extends boolean = true> {
  * via the `definition` "CallToActionBlock_select".
  */
 export interface CallToActionBlockSelect<T extends boolean = true> {
-  richText?: T;
+  rtf_1?: T;
   links?:
     | T
     | {
