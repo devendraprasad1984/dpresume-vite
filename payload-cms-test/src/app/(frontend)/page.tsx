@@ -1,10 +1,9 @@
-import { headers as getHeaders } from 'next/headers.js'
-import Image from 'next/image'
-import { getPayload } from 'payload'
 import React from 'react'
+import { headers as getHeaders } from 'next/headers.js'
+import { getPayload } from 'payload'
 import { fileURLToPath } from 'url'
-
 import config from '@/payload.config'
+import type { Page, Car } from '@/payload-types'
 import './styles.css'
 
 export default async function HomePage() {
@@ -12,49 +11,31 @@ export default async function HomePage() {
   const payloadConfig = await config
   const payload = await getPayload({ config: payloadConfig })
   const { user } = await payload.auth({ headers })
-
   const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
-
+  const carsData = await payload.find({ collection: 'cars' })
+  const pagesData = await payload.find({ collection: 'pages' })
+  const cars: Car[] = carsData?.docs || []
+  const pages: Page[] = pagesData?.docs || []
+  // const car = cars?.[0] as Car
+  // const page = pages?.[0] as Page
   return (
-    <div className="home">
-      <div className="content">
-        <picture>
-          <source srcSet="https://raw.githubusercontent.com/payloadcms/payload/3.x/packages/ui/src/assets/payload-favicon.svg" />
-          <Image
-            alt="Payload Logo"
-            height={65}
-            src="https://raw.githubusercontent.com/payloadcms/payload/3.x/packages/ui/src/assets/payload-favicon.svg"
-            width={65}
-          />
-        </picture>
-        {!user && <h1>Welcome to your new project.</h1>}
-        {user && <h1>Welcome back, {user.email}</h1>}
-        <div className="links">
-          <a
-            className="admin"
-            href={payloadConfig.routes.admin}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Go to admin panel
-          </a>
-          <a
-            className="docs"
-            href="https://payloadcms.com/docs"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Documentation
-          </a>
-        </div>
-      </div>
-      <div className="footer">
-        <p>Update this page by editing</p>
-        <a className="codeLink" href={fileURL}>
-          <code>app/(frontend)/page.tsx</code>
-        </a>
-      </div>
-      <h2>This is custom base page</h2>
+    <div className="col">
+      <h2>CARS</h2>
+      {cars.map((car) => {
+        return (
+          <div key={car.id}>
+            Car: {car?.name} - {car?.alt} - {car?.built} - {car?.Year}
+          </div>
+        )
+      })}
+      <h2>PAGES</h2>
+      {pages.map((page) => {
+        return (
+          <div key={page.id}>
+            page: {page.name} - {page.message} - {page.createdAt}
+          </div>
+        )
+      })}
     </div>
   )
 }
