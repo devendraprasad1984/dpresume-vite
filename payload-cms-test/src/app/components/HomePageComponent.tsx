@@ -1,5 +1,6 @@
 import type { Page } from '@/payload-types'
 import type { Payload } from 'payload'
+import RenderBlocks from '@/app/components/RenderBlocks'
 
 interface Props {
   payload: Payload
@@ -27,7 +28,8 @@ const PagesComponent = async (props: Props) => {
         return (
           <div>
             <h1>Layout: {layout.blockType}</h1>
-            <pre key={layout.id}>{JSON.stringify(layout, null, 2)}</pre>
+            {/*<pre key={layout.id}>{JSON.stringify(layout, null, 2)}</pre>*/}
+            <RenderBlocks blockType={layout.blockType} block={layout} key={layout.id} />
           </div>
         )
       })}
