@@ -1,0 +1,12 @@
+GET http://localhost:3000/api/pages/6a3bc6a2d0874a939c09af06
+###
+GET http://localhost:3000/api/cars/
+###
+GET http://localhost:3000/api/globals/header
+###
+GET http://localhost:3000/api/media
+###
+
+
+
+
