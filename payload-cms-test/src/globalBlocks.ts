@@ -4,8 +4,17 @@ import { Banner } from '@/blocks/Banner/config'
 import { MediaBlock } from '@/blocks/MediaBlock/config'
 import { CallToAction } from '@/blocks/CallToAction/config'
 import { Code } from '@/blocks/Code/config'
+import { HeroBlock } from '@/blocks/HeroBlock/config'
 
-const globalsBlocks = { ContentTeaser, ContentTeaserV2, Banner, MediaBlock, CallToAction, Code }
+const globalsBlocks = {
+  ContentTeaser,
+  ContentTeaserV2,
+  Banner,
+  MediaBlock,
+  CallToAction,
+  Code,
+  HeroBlock,
+}
 
 const allBlocks = Object.values(globalsBlocks)
 

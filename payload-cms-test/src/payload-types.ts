@@ -72,6 +72,7 @@ export interface Config {
     mediaBlock: MediaBlock;
     cta: CallToActionBlock;
     code: CodeBlock;
+    hero: HeroBlock;
   };
   collections: {
     cars: Car;
@@ -397,7 +398,7 @@ export interface Page {
     [k: string]: unknown;
   } | null;
   /**
-   * this is gloabl blocks fields
+   * this is global blocks fields
    */
   Layouts: (
     | {
@@ -450,6 +451,7 @@ export interface Page {
     | MediaBlock
     | CallToActionBlock
     | CodeBlock
+    | HeroBlock
   )[];
   updatedAt: string;
   createdAt: string;
@@ -464,6 +466,37 @@ export interface CodeBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'code';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HeroBlock".
+ */
+export interface HeroBlock {
+  variation?: ('hero_banner_1' | 'hero_banner_2' | 'hero_banner_3') | null;
+  title: string;
+  'subheading-1'?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  image?: (string | null) | Media;
+  cta_button?: {
+    label?: string | null;
+    url?: string | null;
+  };
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'hero';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -535,6 +568,7 @@ export interface Car {
     | MediaBlock
     | CallToActionBlock
     | CodeBlock
+    | HeroBlock
   )[];
   'alt-2'?: string | null;
   'message-2'?: string | null;
@@ -861,6 +895,7 @@ export interface CarsSelect<T extends boolean = true> {
         mediaBlock?: T | MediaBlockSelect<T>;
         cta?: T | CallToActionBlockSelect<T>;
         code?: T | CodeBlockSelect<T>;
+        hero?: T | HeroBlockSelect<T>;
       };
   'alt-2'?: T;
   'message-2'?: T;
@@ -928,6 +963,24 @@ export interface CallToActionBlockSelect<T extends boolean = true> {
 export interface CodeBlockSelect<T extends boolean = true> {
   language?: T;
   code?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HeroBlock_select".
+ */
+export interface HeroBlockSelect<T extends boolean = true> {
+  variation?: T;
+  title?: T;
+  'subheading-1'?: T;
+  image?: T;
+  cta_button?:
+    | T
+    | {
+        label?: T;
+        url?: T;
+      };
   id?: T;
   blockName?: T;
 }
@@ -1082,6 +1135,7 @@ export interface PagesSelect<T extends boolean = true> {
         mediaBlock?: T | MediaBlockSelect<T>;
         cta?: T | CallToActionBlockSelect<T>;
         code?: T | CodeBlockSelect<T>;
+        hero?: T | HeroBlockSelect<T>;
       };
   updatedAt?: T;
   createdAt?: T;

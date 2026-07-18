@@ -34,7 +34,7 @@ export const Pages: CollectionConfig = {
       label: 'choose Layout',
       blocks: globalBlocks().allBlocks,
       admin: {
-        description: 'this is gloabl blocks fields',
+        description: 'this is global blocks fields',
         initCollapsed: true,
       },
       required: true,
