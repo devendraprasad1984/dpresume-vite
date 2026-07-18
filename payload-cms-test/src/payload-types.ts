@@ -380,6 +380,10 @@ export interface CallToActionBlock {
  */
 export interface Page {
   id: string;
+  /**
+   * page identifier
+   */
+  slug?: string | null;
   name?: string | null;
   message?: string | null;
   'page-main-content'?: {
@@ -1105,6 +1109,7 @@ export interface MediaSelect<T extends boolean = true> {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
+  slug?: T;
   name?: T;
   message?: T;
   'page-main-content'?: T;

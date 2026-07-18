@@ -13,6 +13,14 @@ export const Pages: CollectionConfig = {
   },
   fields: [
     {
+      name: 'slug',
+      type: 'text',
+      maxLength: 20,
+      admin: {
+        description: 'page identifier',
+      },
+    },
+    {
       name: 'name',
       type: 'text',
       maxLength: 20,

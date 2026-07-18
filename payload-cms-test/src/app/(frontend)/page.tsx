@@ -3,10 +3,10 @@ import React from 'react'
 import { getPayload } from 'payload'
 // import { fileURLToPath } from 'url'
 import config from '@/payload.config'
-import type { Page } from '@/payload-types'
 import './styles.css'
 import CarComponent from '@/app/components/CarComponent'
 import PagesComponent from '@/app/components/PagesComponent'
+import HomePageComponent from '@/app/components/HomePageComponent'
 
 export default async function HomePage() {
   // const headers = await getHeaders()
@@ -16,6 +16,7 @@ export default async function HomePage() {
   // const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
   return (
     <div className="col">
+      <HomePageComponent payload={payload} />
       <CarComponent payload={payload} />
       <PagesComponent payload={payload} />
     </div>
