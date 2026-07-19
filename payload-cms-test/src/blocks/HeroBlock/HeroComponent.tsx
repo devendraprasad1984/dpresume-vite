@@ -1,12 +1,12 @@
 import React from 'react'
-import type { Page } from '@/payload-types'
+import type { HeroBlock as HeroProps } from '@/payload-types'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-type blockProps = Extract<Page['Layouts'][0], { blockType: 'hero' }>
+// type blockProps = Extract<Page['Layouts'][], { blockType: 'hero' }>
 interface Props {
-  block: blockProps
+  block: HeroProps
 }
 
 const HeroComponent = ({ block }: Props) => {
