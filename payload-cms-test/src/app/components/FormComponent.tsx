@@ -14,7 +14,7 @@ export const FormComponent: React.FC<Props> = ({ block }) => {
   const valueIsObject = typeof formInsideObject === 'object'
   const formFields = (valueIsObject && block.form?.value?.fields) || []
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLElement>) => {
     e.preventDefault()
   }
 
@@ -26,6 +26,10 @@ export const FormComponent: React.FC<Props> = ({ block }) => {
       style={{
         border: '1px solid pink',
         padding: '5px',
+        width: '100%',
+        maxWidth: '400px',
+        display: 'flex',
+        flexDirection: 'column',
       }}
     >
       <h2>
@@ -36,17 +40,25 @@ export const FormComponent: React.FC<Props> = ({ block }) => {
           return (
             <div key={field.id} className="col">
               <label htmlFor={field.name}>{field.label}</label>
-              <input type={field.blockType} name={field.name} />
+              <input
+                type={field.blockType}
+                name={field.name}
+                style={{
+                  padding: '5px',
+                  border: '1px solid gray',
+                  borderRadius: '5px',
+                }}
+              />
             </div>
           )
         })}
         <div>
           <button type="submit" onSubmit={handleSubmit}>
-            {formInsideObject['submitButtonLabel'] || 'Submit'}
+            {(formInsideObject['submitButtonLabel'] as string) || 'Submit'}
           </button>
         </div>
       </form>
-      <pre>{JSON.stringify(block.form, null, 2)}</pre>
+      {/*<pre>{JSON.stringify(block.form, null, 2)}</pre>*/}
     </div>
   )
 }

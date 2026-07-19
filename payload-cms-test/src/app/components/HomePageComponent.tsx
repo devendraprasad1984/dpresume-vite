@@ -32,6 +32,7 @@ const PagesComponent = async (props: Props) => {
           </div>
         )
       })}
+      <hr />
     </div>
   )
 }
