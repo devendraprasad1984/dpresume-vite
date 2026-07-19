@@ -3,7 +3,7 @@ import { globalBlocks } from '@/globalBlocks'
 
 export const LayoutBlockField = (name = 'Layouts'): Field => {
   return {
-    name: 'Layouts',
+    name,
     type: 'blocks',
     label: 'choose layout',
     blocks: globalBlocks().allBlocks,

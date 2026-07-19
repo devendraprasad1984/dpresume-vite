@@ -4,6 +4,7 @@ import {
   InlineToolbarFeature,
   lexicalEditor,
 } from '@payloadcms/richtext-lexical'
+import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
 import { pino } from 'pino'
 import pinoPretty from 'pino-pretty'
 import path from 'path'
@@ -56,7 +57,64 @@ export default buildConfig({
   collections: _thisCollections.allCollections,
   globals: _thisCollections.allGlobals,
   blocks: _thisBlocks.allBlocks,
-  plugins: [],
+  plugins: [
+    formBuilderPlugin({
+      defaultToEmail: 'test@example.com',
+      redirectRelationships: ['pages'],
+      beforeEmail: (emailsToSend, beforeChangeParams) => {
+        // modify the emails in any way before they are sent
+        return emailsToSend.map((email) => ({
+          ...email,
+          html: email.html,
+        }))
+      },
+      fields: {
+        text: true,
+        textarea: true,
+        select: true,
+        radio: true,
+        email: true,
+        state: true,
+        country: true,
+        checkbox: true,
+        number: true,
+        message: true,
+        date: false,
+        payment: false,
+        // upload: {
+        //   uploadCollections: [_thisCollections.collectionsObject.Media.slug],
+        // },
+      },
+      formOverrides: {
+        slug: 'contact-forms',
+        access: {
+          read: ({ req: { user } }) => !!user, // authenticated users only
+          update: () => false,
+        },
+        fields: ({ defaultFields }) => {
+          return [
+            ...defaultFields,
+            {
+              name: 'custom',
+              type: 'text',
+            },
+          ]
+        },
+      },
+      formSubmissionOverrides: {
+        slug: 'forms',
+        fields: ({ defaultFields }) => {
+          return [
+            ...defaultFields,
+            {
+              name: 'custom',
+              type: 'text',
+            },
+          ]
+        },
+      },
+    }),
+  ],
   editor: lexicalEditor({
     features: ({ rootFeatures }) => {
       return [...rootFeatures, FixedToolbarFeature(), InlineToolbarFeature()]
