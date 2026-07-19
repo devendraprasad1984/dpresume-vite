@@ -1,11 +1,12 @@
 import React from 'react'
-import type { HeroBlock } from '@/payload-types'
+import type { Page } from '@/payload-types'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+type blockProps = Extract<Page['Layouts'][0], { blockType: 'hero' }>
 interface Props {
-  block: HeroBlock
+  block: blockProps
 }
 
 const HeroComponent = ({ block }: Props) => {
@@ -20,7 +21,17 @@ const HeroComponent = ({ block }: Props) => {
       <h2 style={{ color: 'red' }}>{block.title}</h2>
       <RichText data={block['subheading-1']} />
       {typeof block.image === 'object' && block.image?.url && (
-        <Image src={block.image?.url} alt={block.image?.alt} fill sizes="100vw" />
+        <Image
+          src={block.image?.url}
+          alt={block.image?.alt || "image-media"}
+          width={100}
+          height={100}
+          style={{
+            position: 'relative',
+            height: '100%',
+            width: '100%',
+          }}
+        />
       )}
       <Link href={block.cta_button?.url as string}>{block.cta_button?.label}</Link>
     </div>

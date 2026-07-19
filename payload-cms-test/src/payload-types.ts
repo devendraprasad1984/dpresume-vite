@@ -508,6 +508,11 @@ export interface HeroBlock {
  */
 export interface Car {
   id: string;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  'x-slug': string;
   name: string;
   alt: string;
   /**
@@ -868,6 +873,8 @@ export interface PayloadMigration {
  * via the `definition` "cars_select".
  */
 export interface CarsSelect<T extends boolean = true> {
+  generateSlug?: T;
+  'x-slug'?: T;
   name?: T;
   alt?: T;
   built?: T;

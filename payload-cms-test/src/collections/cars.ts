@@ -1,3 +1,4 @@
+import { slugField } from 'payload'
 import type { CollectionConfig } from 'payload'
 import { groups } from '@/globalEnum'
 import { globalBlocks } from '@/globalBlocks'
@@ -14,6 +15,11 @@ export const Cars: CollectionConfig = {
     },
   },
   fields: [
+    slugField({
+      name: 'x-slug',
+      position: 'main',
+      useAsSlug: 'name',
+    }),
     {
       name: 'name',
       type: 'text',
