@@ -1,7 +1,7 @@
-import { slugField } from 'payload'
 import type { CollectionConfig } from 'payload'
+import { slugField } from 'payload'
 import { groups } from '@/globalEnum'
-import { globalBlocks } from '@/globalBlocks'
+import { LayoutBlockField } from '@/blocks/LayoutBlockField'
 
 export const Cars: CollectionConfig = {
   slug: 'cars',
@@ -54,17 +54,7 @@ export const Cars: CollectionConfig = {
       },
       required: false,
     },
-    {
-      name: 'Teasers',
-      type: 'blocks',
-      label: 'Content Teasers',
-      blocks: globalBlocks().allBlocks,
-      admin: {
-        description: 'this is teaser',
-        initCollapsed: true,
-      },
-      required: true,
-    },
+    LayoutBlockField('Teasers'),
     {
       type: 'tabs',
       tabs: [

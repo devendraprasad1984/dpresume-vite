@@ -1,31 +1,11 @@
-import type { CollectionConfig, CollectionSlug } from 'payload'
-
-import {
-  BlocksFeature,
-  FixedToolbarFeature,
-  HeadingFeature,
-  HorizontalRuleFeature,
-  InlineToolbarFeature,
-  lexicalEditor,
-} from '@payloadcms/richtext-lexical'
-
-import { authenticated } from '../access/authenticated'
-import { authenticatedOrPublished } from '../access/authenticatedOrPublished'
-import { Banner } from '../blocks/Banner/config'
-import { Code } from '../blocks/Code/config'
-import { MediaBlock } from '../blocks/MediaBlock/config'
-import { generatePreviewPath } from '../utilities/generatePreviewPath'
-import { populateAuthors, revalidateDeletePost, revalidatePost } from '../hooks'
-
-import {
-  MetaDescriptionField,
-  MetaImageField,
-  MetaTitleField,
-  OverviewField,
-  PreviewField,
-} from '@payloadcms/plugin-seo/fields'
+import type { CollectionConfig, CollectionSlug, PayloadRequest } from 'payload'
 import { slugField } from 'payload'
-import type {PayloadRequest} from "payload";
+
+import { authenticated } from '@/access/authenticated'
+import { authenticatedOrPublished } from '@/access/authenticatedOrPublished'
+import { generatePreviewPath } from '@/utilities/generatePreviewPath'
+import { populateAuthors, revalidateDeletePost, revalidatePost } from '@/hooks'
+import { RTFField } from '@/blocks/RTFField'
 
 function getPreviewPath(data: Record<string, any>, req: PayloadRequest) {
   return generatePreviewPath({
@@ -82,24 +62,7 @@ export const Posts: CollectionConfig = {
               type: 'upload',
               relationTo: 'media',
             },
-            {
-              name: 'content',
-              type: 'richText',
-              editor: lexicalEditor({
-                features: ({ rootFeatures }) => {
-                  return [
-                    ...rootFeatures,
-                    HeadingFeature({ enabledHeadingSizes: ['h1', 'h2', 'h3', 'h4'] }),
-                    BlocksFeature({ blocks: [Banner, Code, MediaBlock] }),
-                    FixedToolbarFeature(),
-                    InlineToolbarFeature(),
-                    HorizontalRuleFeature(),
-                  ]
-                },
-              }),
-              label: false,
-              required: true,
-            },
+            RTFField('content'),
           ],
           label: 'Content',
         },
@@ -132,33 +95,6 @@ export const Posts: CollectionConfig = {
             },
           ],
           label: 'Meta',
-        },
-        {
-          name: 'meta',
-          label: 'SEO',
-          fields: [
-            OverviewField({
-              titlePath: 'meta.title',
-              descriptionPath: 'meta.description',
-              imagePath: 'meta.image',
-            }),
-            MetaTitleField({
-              hasGenerateFn: true,
-            }),
-            MetaImageField({
-              relationTo: 'media',
-            }),
-
-            MetaDescriptionField({}),
-            PreviewField({
-              // if the `generateUrl` function is configured
-              hasGenerateFn: true,
-
-              // field paths to match the target field for data
-              titlePath: 'meta.title',
-              descriptionPath: 'meta.description',
-            }),
-          ],
         },
       ],
     },

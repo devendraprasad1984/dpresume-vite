@@ -402,61 +402,63 @@ export interface Page {
     [k: string]: unknown;
   } | null;
   /**
-   * this is global blocks fields
+   * choose blocks
    */
-  Layouts: (
-    | {
-        'alt-2'?: string | null;
-        'message-2'?: string | null;
-        'content-rtf-1'?: {
-          root: {
-            type: string;
-            children: {
-              type: any;
-              version: number;
+  Layouts?:
+    | (
+        | {
+            'alt-2'?: string | null;
+            'message-2'?: string | null;
+            'content-rtf-1'?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
               [k: string]: unknown;
-            }[];
-            direction: ('ltr' | 'rtl') | null;
-            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-            indent: number;
-            version: number;
-          };
-          [k: string]: unknown;
-        } | null;
-        'alt-3'?: string | null;
-        'message-3'?: string | null;
-        'content-rtf-2'?: {
-          root: {
-            type: string;
-            children: {
-              type: any;
-              version: number;
+            } | null;
+            'alt-3'?: string | null;
+            'message-3'?: string | null;
+            'content-rtf-2'?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
               [k: string]: unknown;
-            }[];
-            direction: ('ltr' | 'rtl') | null;
-            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-            indent: number;
-            version: number;
-          };
-          [k: string]: unknown;
-        } | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'content-teaser';
-      }
-    | {
-        title?: string | null;
-        content?: string | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'content-teaser-V2';
-      }
-    | BannerBlock
-    | MediaBlock
-    | CallToActionBlock
-    | CodeBlock
-    | HeroBlock
-  )[];
+            } | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'content-teaser';
+          }
+        | {
+            title?: string | null;
+            content?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'content-teaser-V2';
+          }
+        | BannerBlock
+        | MediaBlock
+        | CallToActionBlock
+        | CodeBlock
+        | HeroBlock
+      )[]
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -524,61 +526,63 @@ export interface Car {
    */
   Year?: string | null;
   /**
-   * this is teaser
+   * choose blocks
    */
-  Teasers: (
-    | {
-        'alt-2'?: string | null;
-        'message-2'?: string | null;
-        'content-rtf-1'?: {
-          root: {
-            type: string;
-            children: {
-              type: any;
-              version: number;
+  Layouts?:
+    | (
+        | {
+            'alt-2'?: string | null;
+            'message-2'?: string | null;
+            'content-rtf-1'?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
               [k: string]: unknown;
-            }[];
-            direction: ('ltr' | 'rtl') | null;
-            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-            indent: number;
-            version: number;
-          };
-          [k: string]: unknown;
-        } | null;
-        'alt-3'?: string | null;
-        'message-3'?: string | null;
-        'content-rtf-2'?: {
-          root: {
-            type: string;
-            children: {
-              type: any;
-              version: number;
+            } | null;
+            'alt-3'?: string | null;
+            'message-3'?: string | null;
+            'content-rtf-2'?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
               [k: string]: unknown;
-            }[];
-            direction: ('ltr' | 'rtl') | null;
-            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-            indent: number;
-            version: number;
-          };
-          [k: string]: unknown;
-        } | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'content-teaser';
-      }
-    | {
-        title?: string | null;
-        content?: string | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'content-teaser-V2';
-      }
-    | BannerBlock
-    | MediaBlock
-    | CallToActionBlock
-    | CodeBlock
-    | HeroBlock
-  )[];
+            } | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'content-teaser';
+          }
+        | {
+            title?: string | null;
+            content?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'content-teaser-V2';
+          }
+        | BannerBlock
+        | MediaBlock
+        | CallToActionBlock
+        | CodeBlock
+        | HeroBlock
+      )[]
+    | null;
   'alt-2'?: string | null;
   'message-2'?: string | null;
   'alt-3'?: string | null;
@@ -629,7 +633,7 @@ export interface Post {
   id: string;
   title: string;
   heroImage?: (string | null) | Media;
-  content: {
+  content?: {
     root: {
       type: string;
       children: {
@@ -643,17 +647,9 @@ export interface Post {
       version: number;
     };
     [k: string]: unknown;
-  };
+  } | null;
   relatedPosts?: (string | Post)[] | null;
   categories?: (string | Category)[] | null;
-  meta?: {
-    title?: string | null;
-    /**
-     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
-     */
-    image?: (string | null) | Media;
-    description?: string | null;
-  };
   publishedAt?: string | null;
   authors?: (string | User)[] | null;
   populatedAuthors?:
@@ -879,7 +875,7 @@ export interface CarsSelect<T extends boolean = true> {
   alt?: T;
   built?: T;
   Year?: T;
-  Teasers?:
+  Layouts?:
     | T
     | {
         'content-teaser'?:
@@ -1162,13 +1158,6 @@ export interface PostsSelect<T extends boolean = true> {
   content?: T;
   relatedPosts?: T;
   categories?: T;
-  meta?:
-    | T
-    | {
-        title?: T;
-        image?: T;
-        description?: T;
-      };
   publishedAt?: T;
   authors?: T;
   populatedAuthors?:
