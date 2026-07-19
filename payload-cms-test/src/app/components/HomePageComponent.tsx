@@ -26,10 +26,9 @@ const PagesComponent = async (props: Props) => {
       </div>
       {layouts.map((layout, index) => {
         return (
-          <div>
+          <div key={layout.id}>
             <h1>Layout: {layout.blockType}</h1>
-            {/*<pre key={layout.id}>{JSON.stringify(layout, null, 2)}</pre>*/}
-            <RenderBlocks blockType={layout.blockType} block={layout} key={layout.id} />
+            <RenderBlocks blockType={layout.blockType} block={layout} />
           </div>
         )
       })}
