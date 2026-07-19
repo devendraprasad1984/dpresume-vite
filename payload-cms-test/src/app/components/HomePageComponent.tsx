@@ -17,7 +17,7 @@ const PagesComponent = async (props: Props) => {
     },
   })
   const homePage: Page = homePageData?.docs?.[0]
-  const layouts = homePage.Layouts
+  const layouts = homePage.Layouts as Page["Layouts"] || []
   return (
     <div>
       <h2>Home</h2>
