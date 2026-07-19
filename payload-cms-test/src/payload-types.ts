@@ -463,12 +463,12 @@ export interface Page {
         | CodeBlock
         | HeroBlock
         | {
+            id?: string | null;
             heading?: string | null;
             form?: {
               relationTo: 'forms';
               value: string | Form;
             } | null;
-            id?: string | null;
             blockName?: string | null;
             blockType: 'forms-block';
           }
@@ -795,12 +795,12 @@ export interface Car {
         | CodeBlock
         | HeroBlock
         | {
+            id?: string | null;
             heading?: string | null;
             form?: {
               relationTo: 'forms';
               value: string | Form;
             } | null;
-            id?: string | null;
             blockName?: string | null;
             blockType: 'forms-block';
           }
@@ -827,12 +827,12 @@ export interface Car {
  * via the `definition` "forms-block".
  */
 export interface FormsBlock {
+  id?: string | null;
   heading?: string | null;
   form?: {
     relationTo: 'forms';
     value: string | Form;
   } | null;
-  id?: string | null;
   blockName?: string | null;
   blockType: 'forms-block';
 }
@@ -1168,9 +1168,9 @@ export interface CarsSelect<T extends boolean = true> {
         'forms-block'?:
           | T
           | {
+              id?: T;
               heading?: T;
               form?: T;
-              id?: T;
               blockName?: T;
             };
       };
@@ -1417,9 +1417,9 @@ export interface PagesSelect<T extends boolean = true> {
         'forms-block'?:
           | T
           | {
+              id?: T;
               heading?: T;
               form?: T;
-              id?: T;
               blockName?: T;
             };
       };
