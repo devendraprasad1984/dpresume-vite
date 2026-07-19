@@ -1,11 +1,12 @@
 import React from 'react'
-import HeroComponent from '@/blocks/HeroBlock/HeroComponent'
-import { BannerBlock } from '@/blocks/Banner/Component'
+import HeroComponent from '@/app/components/HeroComponent'
 import type {
   HeroBlock as HeroProps,
   BannerBlock as BannerProps,
   CallToActionBlock as CTAProps,
 } from '@/payload-types'
+import { BannerBlockComponent } from '@/app/components/BannerBlockComponent'
+import { FormComponent } from '@/app/components/FormComponent'
 
 interface Props {
   blockType: string
@@ -17,7 +18,9 @@ const RenderBlocks = (props: Props): React.ReactNode => {
   if (blockType === 'hero') {
     return <HeroComponent block={block} />
   } else if (blockType === 'banner') {
-    return <BannerBlock block={block} />
+    return <BannerBlockComponent block={block} />
+  } else if (blockType === 'forms') {
+    return <FormComponent block={block} />
   } else {
     return null
   }

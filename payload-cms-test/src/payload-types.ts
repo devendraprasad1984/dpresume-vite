@@ -82,8 +82,8 @@ export interface Config {
     pages: Page;
     posts: Post;
     categories: Category;
-    'contact-forms': ContactForm;
     forms: Form;
+    'form-submissions': FormSubmission;
     'payload-kv': PayloadKv;
     'payload-jobs': PayloadJob;
     'payload-locked-documents': PayloadLockedDocument;
@@ -98,8 +98,8 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
-    'contact-forms': ContactFormsSelect<false> | ContactFormsSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
+    'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-jobs': PayloadJobsSelect<false> | PayloadJobsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -525,24 +525,6 @@ export interface HeroBlock {
  */
 export interface Form {
   id: string;
-  form: string | ContactForm;
-  submissionData?:
-    | {
-        field: string;
-        value: string;
-        id?: string | null;
-      }[]
-    | null;
-  custom?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "contact-forms".
- */
-export interface ContactForm {
-  id: string;
   title: string;
   fields?:
     | (
@@ -667,6 +649,16 @@ export interface ContactForm {
             id?: string | null;
             blockName?: string | null;
             blockType: 'radio';
+          }
+        | {
+            name: string;
+            label?: string | null;
+            width?: number | null;
+            required?: boolean | null;
+            defaultValue?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'date';
           }
       )[]
     | null;
@@ -929,6 +921,24 @@ export interface Category {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "form-submissions".
+ */
+export interface FormSubmission {
+  id: string;
+  form: string | Form;
+  submissionData?:
+    | {
+        field: string;
+        value: string;
+        id?: string | null;
+      }[]
+    | null;
+  custom?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -1068,12 +1078,12 @@ export interface PayloadLockedDocument {
         value: string | Category;
       } | null)
     | ({
-        relationTo: 'contact-forms';
-        value: string | ContactForm;
-      } | null)
-    | ({
         relationTo: 'forms';
         value: string | Form;
+      } | null)
+    | ({
+        relationTo: 'form-submissions';
+        value: string | FormSubmission;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -1454,9 +1464,9 @@ export interface CategoriesSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "contact-forms_select".
+ * via the `definition` "forms_select".
  */
-export interface ContactFormsSelect<T extends boolean = true> {
+export interface FormsSelect<T extends boolean = true> {
   title?: T;
   fields?:
     | T
@@ -1579,6 +1589,17 @@ export interface ContactFormsSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
+        date?:
+          | T
+          | {
+              name?: T;
+              label?: T;
+              width?: T;
+              required?: T;
+              defaultValue?: T;
+              id?: T;
+              blockName?: T;
+            };
       };
   submitButtonLabel?: T;
   confirmationType?: T;
@@ -1608,9 +1629,9 @@ export interface ContactFormsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "forms_select".
+ * via the `definition` "form-submissions_select".
  */
-export interface FormsSelect<T extends boolean = true> {
+export interface FormSubmissionsSelect<T extends boolean = true> {
   form?: T;
   submissionData?:
     | T

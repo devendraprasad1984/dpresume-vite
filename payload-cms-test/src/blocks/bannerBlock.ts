@@ -1,7 +1,7 @@
 import type { Block } from 'payload'
 import { RTFField } from '@/blocks/RTFField'
 
-export const Banner: Block = {
+export const BannerBlock: Block = {
   slug: 'banner',
   fields: [
     {

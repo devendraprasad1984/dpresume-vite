@@ -79,14 +79,14 @@ export default buildConfig({
         checkbox: true,
         number: true,
         message: true,
-        date: false,
+        date: true,
         payment: false,
         // upload: {
         //   uploadCollections: [_thisCollections.collectionsObject.Media.slug],
         // },
       },
       formOverrides: {
-        slug: 'contact-forms',
+        slug: 'forms',
         access: {
           read: ({ req: { user } }) => !!user, // authenticated users only
           update: () => false,
@@ -102,7 +102,6 @@ export default buildConfig({
         },
       },
       formSubmissionOverrides: {
-        slug: 'forms',
         fields: ({ defaultFields }) => {
           return [
             ...defaultFields,
