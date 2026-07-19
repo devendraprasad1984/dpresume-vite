@@ -73,7 +73,7 @@ export interface Config {
     cta: CallToActionBlock;
     code: CodeBlock;
     hero: HeroBlock;
-    'news-letter': NewsLetter;
+    'forms-block': FormsBlock;
   };
   collections: {
     cars: Car;
@@ -470,7 +470,7 @@ export interface Page {
             } | null;
             id?: string | null;
             blockName?: string | null;
-            blockType: 'news-letter';
+            blockType: 'forms-block';
           }
       )[]
     | null;
@@ -802,7 +802,7 @@ export interface Car {
             } | null;
             id?: string | null;
             blockName?: string | null;
-            blockType: 'news-letter';
+            blockType: 'forms-block';
           }
       )[]
     | null;
@@ -824,9 +824,9 @@ export interface Car {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "news-letter".
+ * via the `definition` "forms-block".
  */
-export interface NewsLetter {
+export interface FormsBlock {
   heading?: string | null;
   form?: {
     relationTo: 'forms';
@@ -834,7 +834,7 @@ export interface NewsLetter {
   } | null;
   id?: string | null;
   blockName?: string | null;
-  blockType: 'news-letter';
+  blockType: 'forms-block';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -933,7 +933,6 @@ export interface FormSubmission {
         id?: string | null;
       }[]
     | null;
-  custom?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -1166,7 +1165,7 @@ export interface CarsSelect<T extends boolean = true> {
         cta?: T | CallToActionBlockSelect<T>;
         code?: T | CodeBlockSelect<T>;
         hero?: T | HeroBlockSelect<T>;
-        'news-letter'?:
+        'forms-block'?:
           | T
           | {
               heading?: T;
@@ -1415,7 +1414,7 @@ export interface PagesSelect<T extends boolean = true> {
         cta?: T | CallToActionBlockSelect<T>;
         code?: T | CodeBlockSelect<T>;
         hero?: T | HeroBlockSelect<T>;
-        'news-letter'?:
+        'forms-block'?:
           | T
           | {
               heading?: T;
@@ -1640,7 +1639,6 @@ export interface FormSubmissionsSelect<T extends boolean = true> {
         value?: T;
         id?: T;
       };
-  custom?: T;
   updatedAt?: T;
   createdAt?: T;
 }

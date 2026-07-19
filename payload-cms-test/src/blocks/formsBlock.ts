@@ -1,7 +1,7 @@
 import type { Block } from 'payload'
 
-export const NewsLetterBlock: Block = {
-  slug: 'news-letter',
+export const FormsBlock: Block = {
+  slug: 'forms-block',
   fields: [
     {
       name: 'heading',

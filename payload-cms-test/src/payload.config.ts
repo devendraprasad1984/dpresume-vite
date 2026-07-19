@@ -1,9 +1,5 @@
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
-import {
-  FixedToolbarFeature,
-  InlineToolbarFeature,
-  lexicalEditor,
-} from '@payloadcms/richtext-lexical'
+import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
 import { pino } from 'pino'
 import pinoPretty from 'pino-pretty'
@@ -101,24 +97,20 @@ export default buildConfig({
           ]
         },
       },
-      formSubmissionOverrides: {
-        fields: ({ defaultFields }) => {
-          return [
-            ...defaultFields,
-            {
-              name: 'custom',
-              type: 'text',
-            },
-          ]
-        },
-      },
+      // formSubmissionOverrides: {
+      //   fields: ({ defaultFields }) => {
+      //     return [
+      //       ...defaultFields,
+      //       {
+      //         name: 'custom',
+      //         type: 'text',
+      //       },
+      //     ]
+      //   },
+      // },
     }),
   ],
-  editor: lexicalEditor({
-    features: ({ rootFeatures }) => {
-      return [...rootFeatures, FixedToolbarFeature(), InlineToolbarFeature()]
-    },
-  }),
+  editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),

@@ -13,7 +13,7 @@ export const FormComponent: React.FC<Props> = ({ block }) => {
         padding: '5px',
       }}
     >
-      <pre>{JSON.parse(block, null, 2)}</pre>
+      <pre>{JSON.stringify(block, null, 2)}</pre>
     </div>
   )
 }

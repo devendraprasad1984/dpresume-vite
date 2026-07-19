@@ -19,7 +19,7 @@ const RenderBlocks = (props: Props): React.ReactNode => {
     return <HeroComponent block={block} />
   } else if (blockType === 'banner') {
     return <BannerBlockComponent block={block} />
-  } else if (blockType === 'forms') {
+  } else if (blockType === 'forms-block') {
     return <FormComponent block={block} />
   } else {
     return null

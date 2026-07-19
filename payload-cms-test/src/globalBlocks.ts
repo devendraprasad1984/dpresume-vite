@@ -5,7 +5,7 @@ import { MediaBlock } from '@/blocks/mediaBlock'
 import { CallToAction } from '@/blocks/callToActionBlock'
 import { Code } from '@/blocks/Code/config'
 import { HeroBlock } from '@/blocks/heroBlock'
-import { NewsLetterBlock } from '@/blocks/newsLetterBlock'
+import { FormsBlock } from '@/blocks/formsBlock'
 
 const globalsBlocks = {
   ContentTeaser,
@@ -15,7 +15,7 @@ const globalsBlocks = {
   CallToAction,
   Code,
   HeroBlock,
-  NewsLetterBlock,
+  FormsBlock,
 }
 
 const allBlocks = Object.values(globalsBlocks)
