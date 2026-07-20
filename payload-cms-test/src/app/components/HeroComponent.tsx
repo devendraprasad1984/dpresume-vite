@@ -15,6 +15,7 @@ interface Props {
 
 const HeroComponent = ({ block }: Props) => {
   const subHeadingBlock = block['subheading-1'] as SerializedEditorState<SerializedLexicalNode>
+  console.log(process.env.NEXT_PUBLIC_SERVER_URL, block.image?.url)
   return (
     <div
       style={{
@@ -27,7 +28,7 @@ const HeroComponent = ({ block }: Props) => {
       <RichText data={subHeadingBlock} />
       {typeof block.image === 'object' && block.image?.url && (
         <Image
-          src={block.image?.url}
+          src={`${process.env.NEXT_PUBLIC_SERVER_URL}${block.image?.url}`}
           alt={block.image?.alt || 'image-media'}
           width={100}
           height={100}

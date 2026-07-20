@@ -22,6 +22,7 @@ export const FormComponent: React.FC<Props> = ({ block }) => {
       return
     }
     const newFormData = new FormData(e.target as HTMLFormElement)
+    //newFormData.get("email") as string
     const data = Object.fromEntries(newFormData.entries())
     const formSubmissionEntries = Object.entries(data)?.map(([field, value]) => {
       return {
