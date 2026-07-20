@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import type { FormsBlock as FormProps } from '@/payload-types'
 
 interface Props {
@@ -8,14 +8,46 @@ interface Props {
 }
 
 export const FormComponent: React.FC<Props> = ({ block }) => {
+  const [_form, setForm] = useState({})
   const isSubscribeForm = block.id === 'subscribe_form'
-  const isFormObject = typeof block.form === 'object'
+  const isFormObject = typeof block.form === 'object' && block.form
   const formInsideObject = block.form?.value
   const valueIsObject = typeof formInsideObject === 'object'
   const formFields = (valueIsObject && block.form?.value?.fields) || []
 
-  const handleSubmit = (e: React.FormEvent<HTMLElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (!isFormObject || !formInsideObject.id) {
+      return
+    }
+    const newFormData = new FormData(e.target as HTMLFormElement)
+    const data = Object.fromEntries(newFormData.entries())
+    const formSubmissionEntries = Object.entries(data)?.map(([field, value]) => {
+      return {
+        field,
+        value,
+      }
+    })
+    const formSubmissionData = {
+      form: formInsideObject.id,
+      submissionData: formSubmissionEntries,
+    }
+    console.log(formInsideObject, data, formSubmissionEntries, formSubmissionData)
+    try {
+      const response = await fetch('/api/form-submissions', {
+        method: 'POST',
+        body: JSON.stringify(formSubmissionData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      if (!response.ok) {
+        throw new Error('form submission failed')
+      }
+      console.log('form response', response)
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   if (!isFormObject) {
@@ -58,7 +90,7 @@ export const FormComponent: React.FC<Props> = ({ block }) => {
           </button>
         </div>
       </form>
-      {/*<pre>{JSON.stringify(block.form, null, 2)}</pre>*/}
+      <pre>{JSON.stringify(block, null, 2)}</pre>
     </div>
   )
 }

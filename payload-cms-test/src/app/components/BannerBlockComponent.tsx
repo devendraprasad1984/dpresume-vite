@@ -11,6 +11,7 @@ interface Props {
   block: BannerProps
 }
 
+//const content: Post['richText'] = data;
 export const BannerBlockComponent: React.FC<Props> = ({ block }) => {
   const content = block.content as SerializedEditorState<SerializedLexicalNode>
   return (
