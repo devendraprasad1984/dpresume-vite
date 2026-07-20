@@ -2,13 +2,14 @@
 
 import React, { useState } from 'react'
 import type { FormsBlock as FormProps } from '@/payload-types'
+import { RichText } from '@payloadcms/richtext-lexical/react'
 
 interface Props {
   block: FormProps
 }
 
 export const FormComponent: React.FC<Props> = ({ block }) => {
-  const [_form, setForm] = useState({})
+  const [_form, setForm] = useState({ error: false, success: false, message: '' })
   const isSubscribeForm = block.id === 'subscribe_form'
   const isFormObject = typeof block.form === 'object' && block.form
   const formInsideObject = block.form?.value
@@ -44,9 +45,15 @@ export const FormComponent: React.FC<Props> = ({ block }) => {
       if (!response.ok) {
         throw new Error('form submission failed')
       }
-      console.log('form response', response)
+      //reset
+      e.target.reset()
+      const resData = await response.json()
+      //console
+      console.log('form response', resData)
+      setForm({ ..._form, success: true, error: false, message: resData.message })
     } catch (err) {
       console.error(err)
+      setForm({ ..._form, success: false, error: true })
     }
   }
 
@@ -90,6 +97,10 @@ export const FormComponent: React.FC<Props> = ({ block }) => {
           </button>
         </div>
       </form>
+      {_form.success && (
+        <div>{_form.message || 'form submitted'}</div>
+        // <p><RichText data={block.form.confirmationMessage!} /></p>
+      )}
       <pre>{JSON.stringify(block, null, 2)}</pre>
     </div>
   )
