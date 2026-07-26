@@ -1,13 +1,11 @@
 const homeExperiences = {
   role: [
-    "=================SUMMARY==========================================",
-    "Built scalable frontend platforms by leading teams, improving architecture, performance, accessibility, CI/CD, and automation to deliver better user experiences faster.",
-    "===========================================================",
+    "Built scalable frontend platforms by leading teams, improving architecture, performance, accessibility, CI/CD, and automation to deliver better user experiences faster.<br/><br/>",
     "I’m a frontend architect and engineering leader focused on building scalable, high-performance digital commerce platforms. I specialize in React, Next.js, micro-frontends, monorepos, and CMS-driven architectures, with deep experience leading global multi-tenant frontend systems for high-traffic e-commerce products such as giftcards.com.<br/><br/>" +
     "My work combines architecture, platform modernization, and engineering excellence. I’ve led migration initiatives from AEM to Next.js and Payload CMS, driving major cost savings, improving flexibility, and reducing platform complexity. I also designed reusable micro-frontend patterns and improved CI/CD pipelines, helping teams accelerate development, shorten deployment cycles, and ship more reliably at scale.<br/><br/>" +
     "I care deeply about customer experience and measurable outcomes. From redesigning product detail pages for greater fee transparency to improving checkout journeys, I focus on performance, Core Web Vitals, conversion, and trust. Along the way, I’ve helped increase conversion, reduce support load, and strengthen platform stability.<br/><br/>" +
     "Beyond delivery, I contribute to technical roadmaps, engineering standards, architecture reviews, hiring, mentoring, and cross-team enablement. I’m also passionate about AI-assisted engineering, GitHub Copilot, spec-driven development, and building strong frontend practices around quality, security, and maintainability.",
-    "===========================================================",
+    "<br/><br/><br/>",
     "&#8226; I am a github co-pilot AI practitioner and spec driven development",
     "&#8226; I am the architect and lead the global multi-tenant frontend architecture for high-traffic e-commerce platform (<b>giftcards.com</b>), driving system availability using AEM Cloud, scale, and performance",
     "&#8226; I drive the platform migration efforts which saves lot of cost to department eg.  Get rid of AEM licensing by moving over to <b>NextJS & PayloadCMS<b/> platform which would save $1.5 million per year",

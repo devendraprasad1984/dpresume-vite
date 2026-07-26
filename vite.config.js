@@ -8,7 +8,11 @@ const filesToExclude = [
   path.resolve(__dirname, "sanskarApp"),
   path.resolve(__dirname, "mocks"),
   path.resolve(__dirname, "webapp"),
-  path.resolve(__dirname, "docs")
+  path.resolve(__dirname, "docs"),
+  path.resolve(__dirname, "next-test"),
+  path.resolve(__dirname, "node-server"),
+  path.resolve(__dirname, "payload-cms-test"),
+  path.resolve(__dirname, "npm-express-redis"),
 ];
 
 const createChunks = (id) => {

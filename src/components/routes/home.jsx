@@ -1,15 +1,14 @@
 import React from "react";
-import Title from "../body/component/title.jsx";
 import homeExperiences from "../../core/homeExperiences.js";
 import useMobile from "../../hooks/useMobile.js";
-import Right from "../body/component/right.jsx";
 import HomeAppsWrapper from "../body/component/homeAppsWrapper.jsx";
+import Right from "../body/component/right.jsx";
 
 const Home = () => {
   const isMobile = useMobile();
   return <React.Fragment>
     <div>
-      <Title><h2>In the role of <u>Senior Staff Frontend</u>, I</h2></Title>
+      <div className="size20">In the role of <b>Senior Staff Frontend</b> ==> Principal / Architect frontend, I</div>
       <ul className="">
         {homeExperiences.role.map((role, index) => <li key={`role-${index}`}
                                                        dangerouslySetInnerHTML={{__html: role}}/>)}

@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Title = ({
-                   title = "",
-                   children,
-               }) => {
-    return <React.Fragment>
-        <div className="size30">{title}</div>
-        {children}
-    </React.Fragment>
-}
+  title = "",
+  children,
+}) => {
+  return <div>
+    <div className="size30">{title}</div>
+    {children}
+  </div>;
+};
 export default Title;
