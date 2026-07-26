@@ -8,7 +8,10 @@ const Home = () => {
   const isMobile = useMobile();
   return <React.Fragment>
     <div>
-      <div className="size20">In the role of <b>Senior Staff Frontend</b> ==> Principal / Architect frontend, I</div>
+      <div className="size20">
+        <span>In the role of <b>Senior Staff Frontend</b> {`===>`}</span>
+        <span class="text-muted">Principal / Architect frontend</span>, <span>I</span>
+      </div>
       <ul className="">
         {homeExperiences.role.map((role, index) => <li key={`role-${index}`}
                                                        dangerouslySetInnerHTML={{__html: role}}/>)}
