@@ -10,7 +10,7 @@ const Home = () => {
   return <React.Fragment>
     <div>
       <Title><h2>In the role of <u>Senior Staff Frontend</u>, I</h2></Title>
-      <ul className="star-list">
+      <ul className="">
         {homeExperiences.role.map((role, index) => <li key={`role-${index}`}
                                                        dangerouslySetInnerHTML={{__html: role}}/>)}
       </ul>
