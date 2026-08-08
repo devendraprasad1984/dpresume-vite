@@ -1,0 +1,20 @@
+============python:=============
+#brew update && brew install pyenv
+brew install python3
+brew install python3-pip
+brew install python-yq
+
+unlink /usr/local/bin/python
+sudo ln -s /opt/homebrew/opt/python@3.14/bin/python3 /usr/local/bin/python
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, are installed into
+/opt/homebrew/opt/python@3.14/libexec/bin
+
+`idle3.14` requires tkinter, which is available separately:
+brew install python-tk@3.14
+
+`dbm.gnu` is available separately:
+brew install python-gdbm@3.14
+
+=========================================
