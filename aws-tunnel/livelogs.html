@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LiveLogs</title>
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+<div class="wrap">
+  <h2>&#9608; LiveLogs</h2>
+
+  <fieldset>
+    <legend>1 · Connect</legend>
+    <div class="row">
+      <label>Device key path<input id="devkey" class="wide" placeholder="~/.ssh/ecs"></label>
+      <label>Region<input id="region" value="us-west-2"></label>
+    </div>
+    <div class="row">
+      <label>AWS exports<textarea id="exports" placeholder="export AWS_ACCESS_KEY_ID=...&#10;export AWS_SECRET_ACCESS_KEY=...&#10;export AWS_SESSION_TOKEN=..."></textarea></label>
+      <button id="activate" class="accent">Activate</button>
+      <button id="clearAll">Clear All</button>
+    </div>
+    <div id="connectMsg" class="msg"></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>2 · Target</legend>
+    <div class="row">
+      <button id="listClusters" class="accent">List Clusters</button>
+      <input id="clusterFilter" type="search" placeholder="Filter clusters…" class="hide">
+    </div>
+    <table id="clustersTable" class="hide">
+      <thead><tr><th>Cluster</th><th>Status</th><th>Running</th><th>Services</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <div class="row">
+      <label>Cluster ARN (ECS ARN)<input id="cluster" class="wide" placeholder="arn:aws:ecs:...:cluster/..."></label>
+      <button id="listServices">List Services</button>
+    </div>
+    <input id="serviceFilter" type="search" placeholder="Filter services…" class="hide">
+    <table id="servicesTable" class="hide">
+      <thead><tr><th>Service</th><th>Status</th><th>Desired</th><th>Running</th><th>Launch</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <div class="row">
+      <label>Service ARN<input id="service" class="wide" placeholder="arn:aws:ecs:...:service/..."></label>
+      <button id="listTasks" class="accent">List Tasks</button>
+    </div>
+    <div id="tasksMsg" class="msg"></div>
+    <table id="tasksTable" class="hide">
+      <thead><tr><th>Task</th><th>Status</th><th>Task Def</th><th>Started</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </fieldset>
+
+  <fieldset>
+    <legend>3 · Logs</legend>
+    <div class="row">
+      <span id="streamLabel" class="msg"></span>
+      <div style="flex:1"></div>
+      <button id="record" class="hide">&#9679; Record</button>
+      <button id="stop" class="hide">Stop</button>
+      <button id="clear">Clear Console</button>
+    </div>
+    <div class="row">
+      <input id="filterInput" type="search" placeholder="Add filter term (e.g. debug)…">
+      <button id="addFilter">Add Filter</button>
+      <div id="filterChips" class="chips"></div>
+    </div>
+    <div id="console"></div>
+  </fieldset>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+function escapeHtml(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function escapeAttr(s){return escapeHtml(s).replace(/'/g,"&#39;");}
+function setMsg(el,text,isErr){el.textContent=text||"";el.classList.toggle("err",!!isErr);}
+function clearTable(id){$(id).querySelector("tbody").innerHTML="";$(id).classList.add("hide");}
+function filterRows(tableId, q){
+  const query=q.toLowerCase();
+  $(tableId).querySelectorAll("tbody tr").forEach(tr=>{
+    tr.style.display=tr.textContent.toLowerCase().includes(query)?"":"none";
+  });
+}
+function wireFilter(inputId, tableId){
+  $(inputId).addEventListener("input",e=>filterRows(tableId,e.target.value));
+}
+
+const LS_KEY="livelogs.form";
+const PERSIST=["devkey","region","cluster","service"];
+function saveForm(){
+  const o={}; for(const id of PERSIST) o[id]=$(id).value;
+  try{localStorage.setItem(LS_KEY,JSON.stringify(o));}catch{}
+}
+function loadForm(){
+  try{
+    const o=JSON.parse(localStorage.getItem(LS_KEY)||"{}");
+    for(const id of PERSIST) if(typeof o[id]==="string") $(id).value=o[id];
+  }catch{}
+}
+PERSIST.forEach(id=>$(id).addEventListener("input",saveForm));
+loadForm();
+
+$("clearAll").onclick=()=>{
+  stopStream();
+  ["devkey","exports","region","cluster","service"].forEach(id=>{$(id).value="";});
+  $("region").value="us-west-2";
+  clearTable("clustersTable"); clearTable("servicesTable"); clearTable("tasksTable");
+  $("clusterFilter").classList.add("hide"); $("serviceFilter").classList.add("hide");
+  logBuffer=[]; renderConsole();
+  filterTerms=[]; renderFilterChips();
+  try{localStorage.removeItem(LS_KEY);}catch{}
+  setMsg($("connectMsg"),"Cleared.");
+};
+
+async function api(method, path, body){
+  const opt={method,headers:{}};
+  if(body!==undefined){opt.headers["content-type"]="application/json";opt.body=JSON.stringify(body);}
+  const res=await fetch(path,opt);
+  const data=await res.json().catch(()=>({}));
+  if(!res.ok) throw new Error(data.error||("HTTP "+res.status));
+  return data;
+}
+
+$("activate").onclick=async()=>{
+  setMsg($("connectMsg"),"Activating…");
+  try{
+    const r=await api("POST","/api/livelogs/activate",
+      {exportsText:$("exports").value,region:$("region").value});
+    setMsg($("connectMsg"),"Active · region "+r.region);
+  }catch(e){setMsg($("connectMsg"),e.message,true);}
+};
+
+$("listClusters").onclick=async()=>{
+  setMsg($("connectMsg"),"Loading clusters…");
+  try{
+    const r=await api("GET","/api/livelogs/clusters");
+    const tb=$("clustersTable").querySelector("tbody");
+    tb.innerHTML=r.clusters.map(c=>
+      `<tr data-arn="${escapeAttr(c.arn)}"><td>${escapeHtml(c.name)}</td>`+
+      `<td>${escapeHtml(c.status||"")}</td><td>${escapeHtml(String(c.runningTasks??""))}</td>`+
+      `<td>${escapeHtml(String(c.activeServices??""))}</td></tr>`).join("");
+    $("clustersTable").classList.toggle("hide", !r.clusters.length);
+    $("clusterFilter").classList.toggle("hide", !r.clusters.length);
+    $("clusterFilter").value=""; filterRows("clustersTable","");
+    setMsg($("connectMsg"),r.clusters.length+" cluster(s).");
+  }catch(e){setMsg($("connectMsg"),e.message,true);}
+};
+$("clustersTable").addEventListener("click",e=>{
+  const tr=e.target.closest("tr[data-arn]"); if(!tr) return;
+  $("cluster").value=tr.dataset.arn; saveForm();
+});
+
+$("listServices").onclick=async()=>{
+  const cluster=$("cluster").value.trim();
+  if(!cluster){setMsg($("connectMsg"),"Enter or pick a cluster first.",true);return;}
+  setMsg($("connectMsg"),"Loading services…");
+  try{
+    const r=await api("GET",`/api/livelogs/services?cluster=${encodeURIComponent(cluster)}`);
+    const tb=$("servicesTable").querySelector("tbody");
+    tb.innerHTML=r.services.map(s=>
+      `<tr data-arn="${escapeAttr(s.arn)}"><td>${escapeHtml(s.name)}</td>`+
+      `<td>${escapeHtml(s.status||"")}</td><td>${escapeHtml(String(s.desired??""))}</td>`+
+      `<td>${escapeHtml(String(s.running??""))}</td><td>${escapeHtml(s.launchType||"")}</td></tr>`).join("");
+    $("servicesTable").classList.toggle("hide", !r.services.length);
+    $("serviceFilter").classList.toggle("hide", !r.services.length);
+    $("serviceFilter").value=""; filterRows("servicesTable","");
+    setMsg($("connectMsg"),r.services.length+" service(s).");
+  }catch(e){setMsg($("connectMsg"),e.message,true);}
+};
+$("servicesTable").addEventListener("click",e=>{
+  const tr=e.target.closest("tr[data-arn]"); if(!tr) return;
+  $("service").value=tr.dataset.arn; saveForm();
+});
+wireFilter("clusterFilter","clustersTable");
+wireFilter("serviceFilter","servicesTable");
+
+$("listTasks").onclick=async()=>{
+  setMsg($("tasksMsg"),"Loading tasks…");
+  $("tasksTable").classList.add("hide");
+  try{
+    const cluster=encodeURIComponent($("cluster").value.trim());
+    const service=encodeURIComponent($("service").value.trim());
+    const r=await api("GET",`/api/livelogs/tasks?cluster=${cluster}&service=${service}`);
+    const tb=$("tasksTable").querySelector("tbody");
+    if(!r.tasks.length){setMsg($("tasksMsg"),"No running tasks.");tb.innerHTML="";return;}
+    tb.innerHTML=r.tasks.map(t=>
+      `<tr><td>${escapeHtml(t.id)}</td><td>${escapeHtml(t.lastStatus||"")}</td>`+
+      `<td>${escapeHtml(t.taskDefinition||"")}</td><td>${escapeHtml(t.startedAt||"")}</td>`+
+      `<td><button class="accent" data-task="${escapeAttr(t.taskArn)}" `+
+      `data-containers="${escapeAttr((t.containers||[]).join(","))}">Logs &#9654;</button></td></tr>`
+    ).join("");
+    setMsg($("tasksMsg"),r.tasks.length+" running task(s).");
+    $("tasksTable").classList.remove("hide");
+  }catch(e){setMsg($("tasksMsg"),e.message,true);}
+};
+
+let es=null, streamGen=0, streamId=null, recording=false;
+function setRecordBtn(){
+  const b=$("record");
+  b.classList.toggle("on",recording);
+  b.innerHTML=recording?"&#9632; Recording…":"&#9679; Record";
+}
+$("record").onclick=async()=>{
+  if(!streamId) return;
+  recording=!recording; setRecordBtn();
+  try{ await api("POST","/api/livelogs/record",{streamId,on:recording,terms:filterTerms}); }
+  catch(e){ recording=!recording; setRecordBtn(); setMsg($("streamLabel"),e.message,true); }
+};
+function stopStream(){
+  if(es){es.close();es=null;}
+  streamId=null; recording=false; setRecordBtn();
+  $("stop").classList.add("hide");
+  $("record").classList.add("hide");
+}
+$("stop").onclick=stopStream;
+let logBuffer=[];
+let filterTerms=[];
+const LOG_CAP=5000;
+function lineMatches(line){
+  if(!filterTerms.length) return true;
+  const l=line.toLowerCase();
+  return filterTerms.some(t=>l.includes(t.toLowerCase()));
+}
+function renderConsole(){
+  const c=$("console");
+  c.textContent=logBuffer.filter(lineMatches).join("\n")+(logBuffer.some(lineMatches)?"\n":"");
+  c.scrollTop=c.scrollHeight;
+}
+function appendLine(text){
+  logBuffer.push(text);
+  if(logBuffer.length>LOG_CAP) logBuffer.splice(0,logBuffer.length-LOG_CAP);
+  if(!lineMatches(text)) return;
+  const c=$("console");
+  const atBottom=c.scrollHeight-c.scrollTop-c.clientHeight<40;
+  c.textContent+=text+"\n";
+  if(atBottom) c.scrollTop=c.scrollHeight;
+}
+function renderFilterChips(){
+  $("filterChips").innerHTML=filterTerms.map((t,i)=>
+    `<span class="chip">${escapeHtml(t)}<button data-i="${i}" title="Remove">&times;</button></span>`).join("");
+}
+function pushRecordTerms(){
+  if(!recording||!streamId) return;
+  api("POST","/api/livelogs/record",{streamId,on:true,terms:filterTerms}).catch(()=>{});
+}
+function addFilter(){
+  const v=$("filterInput").value.trim();
+  if(!v||filterTerms.includes(v)) return;
+  filterTerms.push(v); $("filterInput").value="";
+  renderFilterChips(); renderConsole(); pushRecordTerms();
+}
+$("addFilter").onclick=addFilter;
+$("filterInput").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();addFilter();}});
+$("filterChips").addEventListener("click",e=>{
+  const b=e.target.closest("button[data-i]"); if(!b) return;
+  filterTerms.splice(Number(b.dataset.i),1);
+  renderFilterChips(); renderConsole(); pushRecordTerms();
+});
+$("clear").onclick=()=>{logBuffer=[]; renderConsole();};
+
+$("tasksTable").addEventListener("click",async(e)=>{
+  const btn=e.target.closest("button[data-task]");
+  if(!btn) return;
+  const task=btn.dataset.task;
+  const gen=++streamGen;
+  stopStream();
+  setMsg($("streamLabel"),"Preparing…");
+  try{
+    const r=await api("POST","/api/livelogs/prepare",
+      {cluster:$("cluster").value.trim(),task,devkey:$("devkey").value.trim()});
+    if(gen!==streamGen) return;
+    let container=r.containers[0];
+    if(r.containers.length>1){
+      const pick=prompt("Container ("+r.containers.join(", ")+"):",r.containers[0]);
+      if(!pick) {setMsg($("streamLabel"),"Cancelled.");return;}
+      container=pick.trim();
+      if(!r.containers.includes(container)){
+        setMsg($("streamLabel"),"Unknown container: "+container,true);return;
+      }
+    }
+    setMsg($("streamLabel"),`${container} @ ${r.ip}`);
+    es=new EventSource(`/api/livelogs/stream?ticket=${encodeURIComponent(r.ticket)}&container=${encodeURIComponent(container)}`);
+    $("stop").classList.remove("hide");
+    $("record").classList.remove("hide");
+    es.addEventListener("streamid",(ev)=>{streamId=ev.data;});
+    es.onmessage=(ev)=>appendLine(ev.data);
+    es.addEventListener("end",(ev)=>{appendLine("— "+ev.data+" —");stopStream();});
+    es.onerror=()=>{appendLine("— connection closed —");stopStream();};
+  }catch(err){setMsg($("streamLabel"),err.message,true);}
+});
+</script>
+</body>
+</html>

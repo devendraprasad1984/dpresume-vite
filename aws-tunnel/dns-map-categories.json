@@ -1,0 +1,11 @@
+{
+  "default": "public",
+  "categories": {
+    "public": { "label": "Public domain",  "color": "#9ca3af" },
+    "r53":    { "label": "Route 53 / DNS",  "color": "#a78bfa" },
+    "cdn":    { "label": "CDN",             "color": "#34d399" },
+    "lb":     { "label": "Load balancer",   "color": "#f59e0b" },
+    "db":     { "label": "Database",        "color": "#f87171" },
+    "app":    { "label": "App / origin",    "color": "#60a5fa" }
+  }
+}

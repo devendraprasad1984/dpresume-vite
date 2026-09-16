@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Spectrum — Mic Analyzer</title>
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+
+<div class="unit">
+  <div class="brandrow">
+    <div class="brand"><b>SPECTRUM</b> — real-time mic analyzer</div>
+    <div class="status"><span class="dot" id="liveDot"></span><span id="statusText">idle</span></div>
+  </div>
+
+  <div class="readout">
+    <div class="cell"><div class="label">Peak Freq</div><div class="value" id="peakFreq">— Hz</div></div>
+    <div class="cell"><div class="label">Peak Level</div><div class="value" id="peakLevel">— dB</div></div>
+    <div class="cell"><div class="label">FFT Size</div><div class="value" id="fftValue">2048</div></div>
+    <div class="cell"><div class="label">Sample Rate</div><div class="value" id="sampleRate">— Hz</div></div>
+  </div>
+
+  <div class="screen">
+    <canvas id="scope"></canvas>
+  </div>
+  <div class="legend">
+    <span><span class="swatch" style="background:var(--amber)"></span>current level</span>
+    <span><span class="swatch" style="background:var(--teal)"></span>peak hold</span>
+  </div>
+
+  <div class="mode-bar">
+    <div class="mode-label">Mode</div>
+    <input type="radio" name="mode" id="mode-vertical" value="vertical" checked>
+    <label for="mode-vertical">Vertical spectrum</label>
+
+    <input type="radio" name="mode" id="mode-horizontal" value="horizontal">
+    <label for="mode-horizontal">Horizontal spectrum</label>
+
+    <input type="radio" name="mode" id="mode-vu" value="vu">
+    <label for="mode-vu">VU meter</label>
+
+    <input type="radio" name="mode" id="mode-sinewave" value="sinewave">
+    <label for="mode-sinewave">Sinewave</label>
+  </div>
+
+  <div class="controls">
+    <div class="ctrl">
+      <label>Power</label>
+      <button class="primary" id="startBtn">Start mic</button>
+    </div>
+    <div class="ctrl">
+      <label>FFT size</label>
+      <select id="fftSize">
+        <option value="512">512</option>
+        <option value="1024">1024</option>
+        <option value="2048" selected>2048</option>
+        <option value="4096">4096</option>
+        <option value="8192">8192</option>
+      </select>
+    </div>
+    <div class="ctrl">
+      <label>Scale</label>
+      <select id="scaleMode">
+        <option value="log" selected>Log (musical)</option>
+        <option value="linear">Linear</option>
+      </select>
+    </div>
+    <div class="ctrl">
+      <label>Smoothing</label>
+      <select id="smoothing">
+        <option value="0">0.0</option>
+        <option value="0.4">0.4</option>
+        <option value="0.7" selected>0.7</option>
+        <option value="0.9">0.9</option>
+      </select>
+    </div>
+    <div class="ctrl">
+      <label>Peak hold</label>
+      <button class="toggle on" id="peakToggle">On</button>
+    </div>
+    <div class="ctrl">
+      <label>Input device</label>
+      <select id="deviceSelect"><option>default</option></select>
+    </div>
+    <div class="ctrl">
+      <label>Shape</label>
+      <div class="shape-group">
+        <input type="radio" name="shape" id="shape-rect" value="rect" checked>
+        <label for="shape-rect"><i class="shape-icon rect"></i>Rectangle</label>
+
+        <input type="radio" name="shape" id="shape-square" value="square">
+        <label for="shape-square"><i class="shape-icon square"></i>Square</label>
+
+        <input type="radio" name="shape" id="shape-circle" value="circle">
+        <label for="shape-circle"><i class="shape-icon circle"></i>Circle</label>
+      </div>
+    </div>
+    <div class="ctrl">
+      <label>Colors</label>
+      <div class="color-row">
+        <div class="color-cell"><input type="color" id="colorLow"  value="#ffb000"><span>low</span></div>
+        <div class="color-cell"><input type="color" id="colorMid"  value="#ffcf40"><span>mid</span></div>
+        <div class="color-cell"><input type="color" id="colorHigh" value="#ff3b30"><span>high</span></div>
+        <div class="color-cell"><input type="color" id="colorPeak" value="#3ee6c8"><span>peak</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hint" id="hint">
+    Click <b>Start mic</b> and allow microphone access. Bars are segmented like a
+    hardware LED meter; the teal line marks the peak hold per frequency bin.
+    If mic access fails, this page may need to be served over <code>https</code> or
+    <code>localhost</code> rather than opened directly as a <code>file://</code> path —
+    most browsers block microphone access otherwise.
+  </div>
+</div>
+
+<script>
+(() => {
+  const startBtn   = document.getElementById('startBtn');
+  const fftSel     = document.getElementById('fftSize');
+  const scaleSel   = document.getElementById('scaleMode');
+  const smoothSel  = document.getElementById('smoothing');
+  const peakBtn    = document.getElementById('peakToggle');
+  const deviceSel  = document.getElementById('deviceSelect');
+  const liveDot    = document.getElementById('liveDot');
+  const statusText = document.getElementById('statusText');
+  const peakFreqEl = document.getElementById('peakFreq');
+  const peakLvlEl  = document.getElementById('peakLevel');
+  const fftValueEl = document.getElementById('fftValue');
+  const sampleRateEl = document.getElementById('sampleRate');
+  const canvas = document.getElementById('scope');
+  const ctx = canvas.getContext('2d');
+
+  let audioCtx, analyser, source, stream;
+  let dataArray, bufferLength;
+  let peakHoldOn = true;
+  let peakHold = null;
+  let peakDecay = 0.985;
+  let running = false;
+  let scaleMode = 'log';
+  let shapeMode = 'rect'; // rect | square | circle
+  let vizMode = 'vertical'; // vertical | horizontal | vu | sinewave
+  let timeData = null;
+  let vuNeedle = [0, 0]; // smoothed needle positions for L/R meters
+  let colors = { low:'#ffb000', mid:'#ffcf40', high:'#ff3b30', peak:'#3ee6c8' };
+
+  function resizeCanvas(){
+    const rect = canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = rect.width * dpr;
+    canvas.height = 320 * dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  window.addEventListener('resize', resizeCanvas);
+
+  async function listDevices(){
+    try{
+      const devices = await navigator.mediaDevices.enumerateDevices();
+      const mics = devices.filter(d => d.kind === 'audioinput');
+      deviceSel.innerHTML = '';
+      mics.forEach((d,i) => {
+        const opt = document.createElement('option');
+        opt.value = d.deviceId;
+        opt.textContent = d.label || `Microphone ${i+1}`;
+        deviceSel.appendChild(opt);
+      });
+      if(mics.length === 0){
+        deviceSel.innerHTML = '<option>default</option>';
+      }
+    }catch(e){ /* labels unavailable until permission granted; fine */ }
+  }
+  listDevices();
+
+  async function start(){
+    if(running){
+      stop();
+      return;
+    }
+    try{
+      const deviceId = deviceSel.value && deviceSel.value !== 'default' ? { exact: deviceSel.value } : undefined;
+      stream = await navigator.mediaDevices.getUserMedia({
+        audio: { deviceId, echoCancellation:false, noiseSuppression:false, autoGainControl:false }
+      });
+
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      analyser = audioCtx.createAnalyser();
+      analyser.fftSize = parseInt(fftSel.value,10);
+      analyser.smoothingTimeConstant = parseFloat(smoothSel.value);
+
+      source = audioCtx.createMediaStreamSource(stream);
+      source.connect(analyser);
+
+      bufferLength = analyser.frequencyBinCount;
+      dataArray = new Uint8Array(bufferLength);
+      timeData = new Uint8Array(analyser.fftSize);
+      peakHold = new Float32Array(bufferLength);
+
+      sampleRateEl.textContent = audioCtx.sampleRate + ' Hz';
+      fftValueEl.textContent = analyser.fftSize;
+
+      running = true;
+      liveDot.classList.add('live');
+      statusText.textContent = 'live';
+      startBtn.textContent = 'Stop mic';
+      startBtn.classList.add('on');
+
+      await listDevices(); // refresh with labels now that permission is granted
+      draw();
+    }catch(err){
+      statusText.textContent = 'mic error';
+      alert('Could not access the microphone: ' + err.message +
+        '\n\nIf this page was opened directly as a file, try running it from a local server (e.g. http://localhost) — browsers block mic access on plain file:// pages.');
+    }
+  }
+
+  function stop(){
+    running = false;
+    if(source) source.disconnect();
+    if(stream) stream.getTracks().forEach(t => t.stop());
+    if(audioCtx) audioCtx.close();
+    liveDot.classList.remove('live');
+    statusText.textContent = 'idle';
+    startBtn.textContent = 'Start mic';
+    startBtn.classList.remove('on');
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+  }
+
+  function freqForBin(i){
+    return i * (audioCtx.sampleRate / analyser.fftSize);
+  }
+
+  function draw(){
+    if(!running) return;
+    requestAnimationFrame(draw);
+
+    const w = canvas.getBoundingClientRect().width;
+    const h = 320;
+    ctx.clearRect(0,0,w,h);
+
+    if(vizMode === 'sinewave'){
+      analyser.getByteTimeDomainData(timeData);
+      drawSinewave(w, h);
+      return;
+    }
+
+    analyser.getByteFrequencyData(dataArray);
+
+    // shared readout: peak frequency / level
+    let maxVal = 0, maxIdx = 0;
+    for(let i=0;i<bufferLength;i++){
+      if(dataArray[i] > maxVal){ maxVal = dataArray[i]; maxIdx = i; }
+    }
+    peakFreqEl.textContent = Math.round(freqForBin(maxIdx)) + ' Hz';
+    peakLvlEl.textContent = ((maxVal/255)*100 - 100).toFixed(1) + ' dB';
+
+    if(vizMode === 'vertical')   drawVertical(w, h);
+    else if(vizMode === 'horizontal') drawHorizontal(w, h);
+    else if(vizMode === 'vu')    drawVU(w, h);
+  }
+
+  // ---- Helpers ----
+
+  function bandRange(b, barCount, usableBins, nyquist){
+    const minFreq = 20;
+    if(scaleMode === 'log'){
+      const t0 = b/barCount, t1 = (b+1)/barCount;
+      const f0 = minFreq * Math.pow(nyquist/minFreq, t0);
+      const f1 = minFreq * Math.pow(nyquist/minFreq, t1);
+      const start = Math.max(0, Math.floor(f0 / (nyquist/usableBins)));
+      const end   = Math.max(start+1, Math.floor(f1 / (nyquist/usableBins)));
+      return [start, Math.min(end, usableBins)];
+    } else {
+      return [
+        Math.floor(b/barCount * usableBins),
+        Math.min(Math.floor((b+1)/barCount * usableBins), usableBins)
+      ];
+    }
+  }
+
+  function bandLevel(dataArr, start, end){
+    let sum=0, count=0;
+    for(let i=start;i<end;i++){ sum += dataArr[i]; count++; }
+    return count ? (sum/count)/255 : 0;
+  }
+
+  function drawGrid(w, h){
+    ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+    ctx.lineWidth = 1;
+    for(let gy=0; gy<=4; gy++){
+      const y = (h/4)*gy + 0.5;
+      ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(w,y); ctx.stroke();
+    }
+  }
+
+  // ---- 1. Vertical spectrum ----
+  function drawVertical(w, h){
+    drawGrid(w, h);
+    const nyquist = audioCtx.sampleRate/2;
+    const usableBins = bufferLength;
+    const barCount = Math.max(32, Math.min(160, Math.floor(w/8)));
+
+    const barW = w / barCount * 0.72;
+    const gap  = w / barCount * 0.28;
+    const barMaxH = h - 10;
+
+    let elemH, elemGap;
+    if(shapeMode === 'rect'){ elemH = 6; elemGap = 2; }
+    else if(shapeMode === 'square'){ elemH = barW; elemGap = 2; }
+    else { elemH = barW; elemGap = 3; }
+    const totalSegs = Math.max(1, Math.floor(barMaxH / (elemH+elemGap)));
+
+    for(let b=0; b<barCount; b++){
+      const [s0, s1] = bandRange(b, barCount, usableBins, nyquist);
+      const level = bandLevel(dataArray, s0, s1);
+
+      if(peakHold[b] === undefined) peakHold[b] = 0;
+      if(level > peakHold[b]) peakHold[b] = level;
+      else peakHold[b] *= peakDecay;
+
+      const x = b * (barW+gap);
+      const cx = x + barW/2;
+      const litSegs = Math.round(level * totalSegs);
+
+      for(let s=0; s<totalSegs; s++){
+        const yTop = h - 6 - (s+1)*(elemH+elemGap);
+        const frac = s/totalSegs;
+
+        if(s < litSegs){
+          if(frac > 0.85) ctx.fillStyle = colors.high;
+          else if(frac > 0.6) ctx.fillStyle = colors.mid;
+          else ctx.fillStyle = colors.low;
+          ctx.globalAlpha = 1;
+        } else {
+          ctx.fillStyle = '#232827';
+          ctx.globalAlpha = 0.9;
+        }
+
+        if(shapeMode === 'circle'){
+          ctx.beginPath();
+          ctx.arc(cx, yTop + elemH/2, elemH/2, 0, Math.PI*2);
+          ctx.fill();
+        } else {
+          ctx.fillRect(x, yTop, barW, elemH);
+        }
+      }
+      ctx.globalAlpha = 1;
+
+      if(peakHoldOn){
+        const py = h - 6 - peakHold[b]*barMaxH;
+        ctx.fillStyle = colors.peak;
+        if(shapeMode === 'circle'){
+          ctx.beginPath();
+          ctx.arc(cx, py, Math.max(2, barW/2 * 0.6), 0, Math.PI*2);
+          ctx.fill();
+        } else {
+          ctx.fillRect(x, py-2, barW, 2);
+        }
+      }
+    }
+  }
+
+  // ---- 2. Horizontal spectrum (row-per-band LED strips) ----
+  function drawHorizontal(w, h){
+    const nyquist = audioCtx.sampleRate/2;
+    const usableBins = bufferLength;
+    const bands = 14; // rows
+    const rowH = (h-8) / bands;
+    const cellCount = Math.max(20, Math.min(80, Math.floor(w/14)));
+    const cellW = (w-8) / cellCount * 0.86;
+    const cellGap = (w-8) / cellCount * 0.14;
+    const cellH = Math.max(4, rowH * 0.62);
+
+    for(let b=0; b<bands; b++){
+      const [s0, s1] = bandRange(b, bands, usableBins, nyquist);
+      const level = bandLevel(dataArray, s0, s1);
+
+      if(peakHold[b] === undefined) peakHold[b] = 0;
+      if(level > peakHold[b]) peakHold[b] = level;
+      else peakHold[b] *= peakDecay;
+
+      const y = 4 + b*rowH + (rowH - cellH)/2;
+      const litCells = Math.round(level * cellCount);
+      const peakCell = Math.round(peakHold[b] * cellCount);
+
+      for(let c=0; c<cellCount; c++){
+        const x = 4 + c*(cellW+cellGap);
+        const frac = c/cellCount;
+
+        if(c < litCells){
+          if(frac > 0.85) ctx.fillStyle = colors.high;
+          else if(frac > 0.6) ctx.fillStyle = colors.mid;
+          else ctx.fillStyle = colors.low;
+          ctx.globalAlpha = 1;
+        } else if(peakHoldOn && c === peakCell-1 && peakCell > 0){
+          ctx.fillStyle = colors.peak;
+          ctx.globalAlpha = 1;
+        } else {
+          ctx.fillStyle = '#232827';
+          ctx.globalAlpha = 0.9;
+        }
+
+        if(shapeMode === 'circle'){
+          const r = Math.min(cellW, cellH)/2;
+          ctx.beginPath();
+          ctx.arc(x + cellW/2, y + cellH/2, r, 0, Math.PI*2);
+          ctx.fill();
+        } else if(shapeMode === 'square'){
+          const size = Math.min(cellW, cellH);
+          ctx.fillRect(x + (cellW-size)/2, y + (cellH-size)/2, size, size);
+        } else {
+          ctx.fillRect(x, y, cellW, cellH);
+        }
+      }
+      ctx.globalAlpha = 1;
+    }
+  }
+
+  // ---- 3. Analog VU meters ----
+  function drawVU(w, h){
+    // Two meters: LEFT = low-band average, RIGHT = high-band average
+    const nyquist = audioCtx.sampleRate/2;
+    const usableBins = bufferLength;
+    const midBin = Math.floor(usableBins * 0.25); // ~ up to a few kHz on 48k
+    const lowLvl  = bandLevel(dataArray, 0, midBin);
+    const highLvl = bandLevel(dataArray, midBin, usableBins);
+
+    // ballistic smoothing (VU-ish)
+    vuNeedle[0] += (lowLvl  - vuNeedle[0]) * 0.25;
+    vuNeedle[1] += (highLvl - vuNeedle[1]) * 0.25;
+
+    const meterW = (w - 40) / 2;
+    drawMeter(20, 10, meterW, h - 20, vuNeedle[0], 'LOW');
+    drawMeter(20 + meterW + 10, 10, meterW, h - 20, vuNeedle[1], 'HIGH');
+  }
+
+  function drawMeter(x, y, w, h, level, label){
+    const cx = x + w/2;
+    const cy = y + h*0.92;
+    const r  = Math.min(w*0.48, h*0.85);
+
+    // faceplate
+    const grad = ctx.createLinearGradient(x, y, x, y+h);
+    grad.addColorStop(0, '#f6ecc9');
+    grad.addColorStop(1, '#d9c88a');
+    ctx.fillStyle = grad;
+    ctx.fillRect(x, y, w, h);
+    ctx.strokeStyle = '#000';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(x+0.5, y+0.5, w-1, h-1);
+
+    // arc scale
+    const startA = Math.PI * 1.15;
+    const endA   = Math.PI * 1.85;
+    ctx.strokeStyle = '#3a2c14';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, startA, endA);
+    ctx.stroke();
+
+    // red overload arc (top ~25%)
+    const redA = startA + (endA - startA) * 0.75;
+    ctx.strokeStyle = colors.high;
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, redA, endA);
+    ctx.stroke();
+
+    // tick marks
+    ctx.strokeStyle = '#3a2c14';
+    ctx.lineWidth = 1.5;
+    const ticks = ['-20','-10','-5','-3','-1','0','+3'];
+    ticks.forEach((t, i) => {
+      const a = startA + (endA - startA) * (i/(ticks.length-1));
+      const x1 = cx + Math.cos(a) * r;
+      const y1 = cy + Math.sin(a) * r;
+      const x2 = cx + Math.cos(a) * (r-8);
+      const y2 = cy + Math.sin(a) * (r-8);
+      ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();
+
+      ctx.fillStyle = i >= ticks.length-2 ? colors.high : '#3a2c14';
+      ctx.font = '10px monospace';
+      ctx.textAlign = 'center';
+      const tx = cx + Math.cos(a) * (r-18);
+      const ty = cy + Math.sin(a) * (r-18) + 3;
+      ctx.fillText(t, tx, ty);
+    });
+
+    // VU label
+    ctx.fillStyle = '#3a2c14';
+    ctx.font = 'bold 14px serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('VU', cx, cy - r*0.35);
+    ctx.font = '9px monospace';
+    ctx.fillText(label, cx, cy - r*0.20);
+
+    // needle
+    const needleA = startA + (endA - startA) * Math.min(1, level * 1.3);
+    ctx.strokeStyle = '#111';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(cx + Math.cos(needleA) * (r-4), cy + Math.sin(needleA) * (r-4));
+    ctx.stroke();
+
+    // pivot
+    ctx.fillStyle = '#111';
+    ctx.beginPath();
+    ctx.arc(cx, cy, 5, 0, Math.PI*2);
+    ctx.fill();
+  }
+
+  // ---- 4. Sinewave (time-domain oscilloscope with color ribbons) ----
+  function drawSinewave(w, h){
+    drawGrid(w, h);
+    const N = timeData.length;
+    const midY = h/2;
+
+    // Overall waveform amplitude for readout
+    let maxAmp = 0;
+    for(let i=0;i<N;i++){
+      const v = Math.abs(timeData[i] - 128);
+      if(v > maxAmp) maxAmp = v;
+    }
+    peakLvlEl.textContent = (maxAmp/128 * 100).toFixed(0) + '%';
+    peakFreqEl.textContent = '— Hz'; // freq isn't meaningful in time-domain
+
+    ctx.globalCompositeOperation = 'lighter';
+
+    // Three offset ribbons in low/mid/high colors for the layered look
+    const ribbons = [
+      { color: colors.low,  offset:  6, alpha: 0.85 },
+      { color: colors.mid,  offset:  0, alpha: 1.0  },
+      { color: colors.high, offset: -6, alpha: 0.85 }
+    ];
+
+    ribbons.forEach(rb => {
+      ctx.strokeStyle = rb.color;
+      ctx.globalAlpha = rb.alpha;
+      ctx.lineWidth = 2.5;
+      ctx.shadowColor = rb.color;
+      ctx.shadowBlur = 12;
+      ctx.beginPath();
+      for(let i=0;i<N;i++){
+        const x = (i/(N-1)) * w;
+        const y = midY + rb.offset + ((timeData[i]-128)/128) * (h*0.42);
+        if(i===0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    });
+
+    ctx.shadowBlur = 0;
+    ctx.globalAlpha = 1;
+    ctx.globalCompositeOperation = 'source-over';
+  }
+
+  startBtn.addEventListener('click', start);
+  fftSel.addEventListener('change', () => {
+    if(analyser){
+      analyser.fftSize = parseInt(fftSel.value,10);
+      bufferLength = analyser.frequencyBinCount;
+      dataArray = new Uint8Array(bufferLength);
+      timeData = new Uint8Array(analyser.fftSize);
+      peakHold = new Float32Array(bufferLength);
+      fftValueEl.textContent = analyser.fftSize;
+    }
+  });
+  smoothSel.addEventListener('change', () => {
+    if(analyser) analyser.smoothingTimeConstant = parseFloat(smoothSel.value);
+  });
+  scaleSel.addEventListener('change', () => { scaleMode = scaleSel.value; });
+  peakBtn.addEventListener('click', () => {
+    peakHoldOn = !peakHoldOn;
+    peakBtn.textContent = peakHoldOn ? 'On' : 'Off';
+    peakBtn.classList.toggle('on', peakHoldOn);
+  });
+  deviceSel.addEventListener('change', () => {
+    if(running){ stop(); start(); }
+  });
+
+  // shape radios
+  document.querySelectorAll('input[name="shape"]').forEach(r => {
+    r.addEventListener('change', e => { if(e.target.checked) shapeMode = e.target.value; });
+  });
+
+  // mode radios
+  const shapeCtrl = document.querySelector('input[name="shape"]').closest('.ctrl');
+  function updateShapeEnabled(){
+    const applies = (vizMode === 'vertical' || vizMode === 'horizontal');
+    shapeCtrl.classList.toggle('disabled', !applies);
+  }
+  document.querySelectorAll('input[name="mode"]').forEach(r => {
+    r.addEventListener('change', e => {
+      if(e.target.checked){
+        vizMode = e.target.value;
+        // reset peak hold so switching modes doesn't leak stale bars
+        if(peakHold) peakHold.fill(0);
+        updateShapeEnabled();
+      }
+    });
+  });
+  updateShapeEnabled();
+
+  // color pickers
+  const colorMap = { colorLow:'low', colorMid:'mid', colorHigh:'high', colorPeak:'peak' };
+  Object.keys(colorMap).forEach(id => {
+    document.getElementById(id).addEventListener('input', e => {
+      colors[colorMap[id]] = e.target.value;
+    });
+  });
+
+  resizeCanvas();
+})();
+</script>
+</body>
+</html>

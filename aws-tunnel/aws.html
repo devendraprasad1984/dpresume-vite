@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS Tunnel</title>
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+<div class="statusbar">
+  <span class="pill"><span class="dot" id="dot1"></span>Lock&nbsp;#1 (base)</span>
+  <span class="pill"><span class="dot" id="dot2"></span>Lock&nbsp;#2 (active)</span>
+  <span class="pill" id="regionPill">region: —</span>
+  <span class="pill" id="identityPill">identity: —</span>
+</div>
+
+<div class="wrap">
+  <!-- ===================== CONNECT ===================== -->
+  <section>
+    <h2>&#128272; Connect — Assume Role</h2>
+    <div class="lockgrid">
+      <!-- Lock #1 -->
+      <div>
+        <label>Base AWS exports (paste)</label>
+        <textarea id="baseExports" placeholder="export AWS_ACCESS_KEY_ID=...&#10;export AWS_SECRET_ACCESS_KEY=...&#10;export AWS_SESSION_TOKEN=..."></textarea>
+        <label>Role ARN</label>
+        <input id="roleArn" placeholder="arn:aws:iam::123456789012:role/MyRole">
+        <div class="row">
+          <div>
+            <label>Region</label>
+            <input id="region1" placeholder="us-east-1" value="us-east-1">
+          </div>
+          <div>
+            <label>Session name (optional)</label>
+            <input id="sessionName" placeholder="aws-tunnel">
+          </div>
+        </div>
+        <div class="flexbtns">
+          <button class="lock" id="lock1Btn">&#128274; Lock #1 · Assume Role</button>
+          <button class="ghost" id="unlock1Btn" disabled>Unlock #1</button>
+          <button class="ghost" id="saveProfileBtn" title="Save these Connect inputs to a local file">&#128190; Save</button>
+          <button class="ghost" id="clearProfileBtn" title="Delete the saved local file">Clear</button>
+        </div>
+        <p class="hint" id="profileHint">Save persists Base exports, Role ARN, Region &amp; Session name to a local file (git-ignored). Secret key is stored plaintext.</p>
+        <div class="msg" id="msg1"></div>
+      </div>
+      <!-- Lock #2 -->
+      <div>
+        <label>Assumed-role exports (active credentials)</label>
+        <textarea id="activeExports" placeholder="Filled after Lock #1 — or paste your own to use directly"></textarea>
+        <label>Region</label>
+        <input id="region2" placeholder="us-east-1" value="us-east-1">
+        <p class="hint">Lock #2 activates these credentials for all service calls.</p>
+        <div class="flexbtns">
+          <button class="lock" id="lock2Btn">&#128274; Lock #2 · Activate</button>
+          <button class="ghost" id="unlock2Btn" disabled>Unlock #2</button>
+        </div>
+        <div class="msg" id="msg2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section>
+    <h2>Services</h2>
+    <div class="subtabs" id="subtabs">
+      <button class="subtab active" data-svc="secrets">Secrets Manager</button>
+      <button class="subtab" data-svc="kms" disabled title="Coming soon">KMS</button>
+      <button class="subtab" data-svc="s3">S3</button>
+      <button class="subtab" data-svc="ecs">ECS</button>
+      <button class="subtab" data-svc="route53">Route53</button>
+      <button class="subtab" data-svc="acm">ACM</button>
+    </div>
+
+    <!-- Secrets Manager -->
+    <div id="svc-secrets" class="svc-panel">
+      <div class="row">
+        <div style="flex: 3 1 240px;">
+          <label>Search / filter by name</label>
+          <input id="secQuery" placeholder="partial secret name (optional)">
+        </div>
+        <div style="flex: 0 0 auto; align-self: flex-end;">
+          <button id="secListBtn">List Secrets</button>
+        </div>
+      </div>
+      <div class="row">
+        <div style="flex: 3 1 240px;">
+          <label>Get by secret id or ARN</label>
+          <input id="secDirectId" placeholder="arn:aws:secretsmanager:...:secret:name-abcxyz">
+        </div>
+        <div style="flex: 0 0 auto; align-self: flex-end;" class="flexbtns">
+          <button id="secGetDirectBtn" style="margin-top:0;">Get Value</button>
+          <button id="secDescDirectBtn" class="ghost" style="margin-top:0;">Describe</button>
+        </div>
+      </div>
+      <table id="secTable" style="display:none;">
+        <thead><tr><th>Name</th><th>Description</th><th>Last changed</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <div class="msg" id="secMsg"></div>
+
+      <!-- detail / get value -->
+      <div id="secDetail" style="display:none; margin-top:14px;">
+        <h2 style="font-size:12px;" id="secDetailTitle">Secret</h2>
+        <div class="maskrow">
+          <input id="secValue" type="password" readonly placeholder="value">
+          <button class="ghost" id="secReveal" style="margin-top:0;">Reveal</button>
+          <button class="ghost" id="secCopy" style="margin-top:0;">Copy</button>
+        </div>
+        <pre class="out" id="secDescribe" style="display:none;"></pre>
+      </div>
+
+      <!-- put value -->
+      <div style="margin-top:18px; border-top:1px solid var(--border); padding-top:12px;">
+        <h2 style="font-size:12px;">Put Secret Value</h2>
+        <label>Secret id or ARN</label>
+        <input id="putId" placeholder="my/secret/name">
+        <label>New secret string</label>
+        <textarea id="putValue" placeholder='{"key":"value"} or plain text'></textarea>
+        <button id="secPutBtn">Put Value</button>
+        <div class="msg" id="putMsg"></div>
+      </div>
+    </div>
+
+    <!-- ECS -->
+    <div id="svc-ecs" class="svc-panel" style="display:none;">
+      <div class="flexbtns" style="margin-bottom:8px;">
+        <button id="ecsListClustersBtn" style="margin-top:0;">List Clusters</button>
+        <select id="ecsCluster" style="max-width:340px;"><option value="">— select cluster —</option></select>
+      </div>
+      <div class="msg" id="ecsMsg"></div>
+
+      <input id="ecsSvcFilter" type="search" placeholder="Filter services (contains)…" style="display:none; margin-bottom:6px;">
+      <table id="ecsServicesTable" style="display:none;">
+        <thead><tr><th>Service</th><th>Status</th><th>Desired</th><th>Running</th><th>Task def</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <pre class="out" id="ecsDetail" style="display:none; margin-top:12px;"></pre>
+
+      <input id="ecsTaskFilter" type="search" placeholder="Filter tasks (contains)…" style="display:none; margin:12px 0 6px;">
+      <table id="ecsTasksTable" style="display:none; margin-top:0;">
+        <thead><tr><th>Task</th><th>Last</th><th>Desired</th><th>Health</th><th>Task def</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- update service -->
+      <div style="margin-top:18px; border-top:1px solid var(--border); padding-top:12px;">
+        <h2 style="font-size:12px;">Update Service</h2>
+        <div class="row">
+          <div><label>Service name</label><input id="updSvcName" placeholder="my-service"></div>
+          <div><label>Desired count (optional)</label><input id="updSvcDesired" type="number" min="0" placeholder="e.g. 2"></div>
+        </div>
+        <label style="display:flex; align-items:center; gap:8px; text-transform:none; letter-spacing:0;">
+          <input type="checkbox" id="updSvcForce" style="width:auto;"> Force new deployment (restart)
+        </label>
+        <button id="ecsUpdateBtn">Update Service</button>
+        <div class="msg" id="ecsUpdateMsg"></div>
+      </div>
+    </div>
+
+    <!-- ACM -->
+    <div id="svc-acm" class="svc-panel" style="display:none;">
+      <div class="flexbtns" style="margin-bottom:8px;">
+        <button id="acmListBtn" style="margin-top:0;">List Certificates</button>
+      </div>
+      <div class="msg" id="acmMsg"></div>
+
+      <input id="acmFilter" type="search" placeholder="Filter certificates (contains)…" style="display:none; margin-bottom:6px;">
+      <table id="acmTable" style="display:none;">
+        <thead><tr><th>Domain</th><th>Status</th><th>ARN</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <pre class="out" id="acmDetail" style="display:none; margin-top:12px;"></pre>
+
+      <!-- request certificate -->
+      <div style="margin-top:18px; border-top:1px solid var(--border); padding-top:12px;">
+        <h2 style="font-size:12px;">Request Certificate (DNS validation)</h2>
+        <label>Domain name</label>
+        <input id="acmDomain" placeholder="example.com">
+        <label>Subject alternative names (optional, comma/newline separated)</label>
+        <textarea id="acmSans" placeholder="www.example.com&#10;*.example.com"></textarea>
+        <button id="acmRequestBtn">Request Certificate</button>
+        <div class="msg" id="acmRequestMsg"></div>
+      </div>
+    </div>
+
+    <!-- S3 -->
+    <div id="svc-s3" class="svc-panel" style="display:none;">
+      <div class="flexbtns" style="margin-bottom:8px;">
+        <button id="s3ListBucketsBtn" style="margin-top:0;">List Buckets</button>
+        <select id="s3Bucket" style="max-width:340px;"><option value="">— select bucket —</option></select>
+        <button id="s3LocationBtn" class="ghost" style="margin-top:0;">Get Location</button>
+      </div>
+      <div class="row">
+        <div style="flex: 3 1 240px;">
+          <label>Prefix (optional)</label>
+          <input id="s3Prefix" placeholder="path/to/">
+        </div>
+        <div style="flex: 0 0 auto; align-self: flex-end;">
+          <button id="s3ListObjectsBtn" style="margin-top:0;">List Objects</button>
+        </div>
+      </div>
+      <div class="msg" id="s3Msg"></div>
+
+      <input id="s3ObjFilter" type="search" placeholder="Filter objects (contains)…" style="display:none; margin-bottom:6px;">
+      <table id="s3ObjectsTable" style="display:none;">
+        <thead><tr><th>Key</th><th>Size</th><th>Modified</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- object viewer -->
+      <div id="s3Detail" style="display:none; margin-top:14px;">
+        <h2 style="font-size:12px;" id="s3DetailTitle">Object</h2>
+        <div class="maskrow">
+          <button class="ghost" id="s3Copy" style="margin-top:0;">Copy</button>
+          <button class="ghost" id="s3Download" style="margin-top:0;">Download</button>
+        </div>
+        <pre class="out" id="s3Body" style="display:none;"></pre>
+      </div>
+
+      <!-- put object -->
+      <div style="margin-top:18px; border-top:1px solid var(--border); padding-top:12px;">
+        <h2 style="font-size:12px;">Put Object (text)</h2>
+        <div class="row">
+          <div style="flex: 3 1 240px;"><label>Key</label><input id="s3PutKey" placeholder="path/to/file.json"></div>
+          <div style="flex: 2 1 160px;"><label>Content-Type (optional)</label><input id="s3PutType" placeholder="application/json"></div>
+        </div>
+        <label>Body</label>
+        <textarea id="s3PutBody" placeholder='{"key":"value"} or plain text'></textarea>
+        <button id="s3PutBtn">Put Object</button>
+        <div class="msg" id="s3PutMsg"></div>
+      </div>
+    </div>
+
+    <!-- Route53 -->
+    <div id="svc-route53" class="svc-panel" style="display:none;">
+      <div class="flexbtns" style="margin-bottom:8px;">
+        <button id="r53ListZonesBtn" style="margin-top:0;">List Zones</button>
+        <select id="r53Zone" style="max-width:340px;"><option value="">— select hosted zone —</option></select>
+        <button id="r53GetZoneBtn" class="ghost" style="margin-top:0;">Zone Details</button>
+        <button id="r53ListRecordsBtn" style="margin-top:0;">List Records</button>
+      </div>
+      <div class="msg" id="r53Msg"></div>
+
+      <pre class="out" id="r53ZoneDetail" style="display:none; margin-bottom:12px;"></pre>
+
+      <input id="r53RecFilter" type="search" placeholder="Filter records (contains)…" style="display:none; margin-bottom:6px;">
+      <table id="r53RecordsTable" style="display:none;">
+        <thead><tr><th>Name</th><th>Type</th><th>TTL</th><th>Value(s)</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- change record -->
+      <div style="margin-top:18px; border-top:1px solid var(--border); padding-top:12px;">
+        <h2 style="font-size:12px;">Change Record (UPSERT / DELETE)</h2>
+        <div class="row">
+          <div style="flex: 3 1 220px;"><label>Record name</label><input id="r53RecName" placeholder="www.example.com."></div>
+          <div style="flex: 1 1 90px;"><label>Type</label><input id="r53RecType" placeholder="A / CNAME / TXT"></div>
+          <div style="flex: 1 1 90px;"><label>TTL</label><input id="r53RecTtl" type="number" min="0" value="300"></div>
+          <div style="flex: 1 1 120px;">
+            <label>Action</label>
+            <select id="r53RecAction"><option value="UPSERT">UPSERT</option><option value="DELETE">DELETE</option></select>
+          </div>
+        </div>
+        <label>Value(s) (comma/newline separated)</label>
+        <textarea id="r53RecValue" placeholder="1.2.3.4&#10;5.6.7.8"></textarea>
+        <button id="r53ChangeBtn">Apply Change</button>
+        <div class="msg" id="r53ChangeMsg"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+
+async function api(method, path, body) {
+  const opts = { method, headers: { "content-type": "application/json" } };
+  if (body !== undefined) opts.body = JSON.stringify(body);
+  const res = await fetch(path, opts);
+  let data = {};
+  try { data = await res.json(); } catch (_) {}
+  if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+  return data;
+}
+
+function setMsg(el, text, isErr) {
+  el.textContent = text || "";
+  el.classList.toggle("err", !!isErr);
+}
+
+function setLock(dotId, on) { $(dotId).classList.toggle("on", on); }
+
+async function refreshStatus() {
+  try {
+    const s = await api("GET", "/api/aws/status");
+    setLock("dot1", s.base);
+    setLock("dot2", s.active);
+    $("unlock1Btn").disabled = !s.base;
+    $("unlock2Btn").disabled = !s.active;
+    $("regionPill").textContent = "region: " + (s.region || "—");
+    if (s.active) {
+      try {
+        const id = await api("GET", "/api/aws/identity");
+        $("identityPill").textContent = "identity: " + (id.arn || id.account || "—");
+      } catch (_) { $("identityPill").textContent = "identity: —"; }
+    } else {
+      $("identityPill").textContent = "identity: —";
+    }
+  } catch (_) {}
+}
+
+// --- Lock #1: assume role ---
+$("lock1Btn").onclick = async () => {
+  setMsg($("msg1"), "Assuming role…");
+  try {
+    const r = await api("POST", "/api/aws/assume-role", {
+      exports: $("baseExports").value,
+      roleArn: $("roleArn").value,
+      region: $("region1").value,
+      sessionName: $("sessionName").value,
+    });
+    $("activeExports").value = r.exportsText;
+    $("region2").value = r.region || $("region1").value;
+    const exp = r.credentials.expiration ? ` · expires ${new Date(r.credentials.expiration).toLocaleTimeString()}` : "";
+    setMsg($("msg1"), `Assumed ${r.assumedRoleArn || "role"}${exp}. Credentials placed in Lock #2 → click Lock #2.`);
+  } catch (e) {
+    setMsg($("msg1"), e.message, true);
+  }
+  refreshStatus();
+};
+
+// --- Lock #2: activate ---
+$("lock2Btn").onclick = async () => {
+  setMsg($("msg2"), "Activating…");
+  try {
+    const r = await api("POST", "/api/aws/activate", {
+      exports: $("activeExports").value,
+      region: $("region2").value,
+    });
+    setMsg($("msg2"), `Active as ${r.identity.arn || r.identity.account}. Region ${r.region}.`);
+  } catch (e) {
+    setMsg($("msg2"), e.message, true);
+  }
+  refreshStatus();
+};
+
+$("unlock1Btn").onclick = async () => { await api("POST", "/api/aws/unlock", { which: "base" }); setMsg($("msg1"), "Unlocked #1."); refreshStatus(); };
+$("unlock2Btn").onclick = async () => { await api("POST", "/api/aws/unlock", { which: "active" }); setMsg($("msg2"), "Unlocked #2."); refreshStatus(); };
+
+// --- Subtabs (only Secrets active for now) ---
+// --- Subtabs: switch active button + visible service panel ---
+$("subtabs").addEventListener("click", (e) => {
+  const b = e.target.closest(".subtab"); if (!b || b.disabled) return;
+  document.querySelectorAll(".subtab").forEach((x) => x.classList.toggle("active", x === b));
+  document.querySelectorAll(".svc-panel").forEach((p) => {
+    p.style.display = p.id === `svc-${b.dataset.svc}` ? "" : "none";
+  });
+});
+
+// --- Secrets Manager ---
+$("secListBtn").onclick = async () => {
+  setMsg($("secMsg"), "Listing…");
+  try {
+    const q = encodeURIComponent($("secQuery").value || "");
+    const r = await api("GET", `/api/aws/secrets/list?query=${q}`);
+    renderSecrets(r.secrets);
+    setMsg($("secMsg"), `${r.secrets.length} secret(s).`);
+  } catch (e) {
+    setMsg($("secMsg"), e.message, true);
+    $("secTable").style.display = "none";
+  }
+};
+
+function renderSecrets(secrets) {
+  const tbody = $("secTable").querySelector("tbody");
+  tbody.innerHTML = secrets.map((s) => {
+    const changed = s.lastChangedDate ? new Date(s.lastChangedDate).toLocaleString() : "—";
+    const id = escapeAttr(s.arn || s.name);
+    return `<tr>
+      <td>${escapeHtml(s.name)}</td>
+      <td>${escapeHtml(s.description)}</td>
+      <td>${changed}</td>
+      <td class="actions">
+        <button data-get="${id}">Get</button>
+        <button data-desc="${id}">Describe</button>
+      </td></tr>`;
+  }).join("");
+  $("secTable").style.display = secrets.length ? "" : "none";
+}
+
+$("secTable").addEventListener("click", async (e) => {
+  const getBtn = e.target.closest("button[data-get]");
+  const descBtn = e.target.closest("button[data-desc]");
+  if (getBtn) return getSecret(getBtn.dataset.get);
+  if (descBtn) return describeSecret(descBtn.dataset.desc);
+});
+
+// Get / describe a secret directly by id or ARN (no listing needed).
+$("secGetDirectBtn").onclick = () => {
+  const id = $("secDirectId").value.trim();
+  if (!id) return setMsg($("secMsg"), "Enter a secret id or ARN.", true);
+  getSecret(id);
+};
+$("secDescDirectBtn").onclick = () => {
+  const id = $("secDirectId").value.trim();
+  if (!id) return setMsg($("secMsg"), "Enter a secret id or ARN.", true);
+  describeSecret(id);
+};
+
+async function getSecret(secretId) {
+  setMsg($("secMsg"), "Getting value…");
+  try {
+    const r = await api("POST", "/api/aws/secrets/get", { secretId });
+    $("secDetail").style.display = "";
+    $("secDetailTitle").textContent = r.name || secretId;
+    $("secDescribe").style.display = "none";
+    const v = r.secretString != null ? r.secretString : (r.secretBinary != null ? "(binary, base64) " + r.secretBinary : "");
+    const input = $("secValue");
+    input.value = v; input.type = "password"; $("secReveal").textContent = "Reveal";
+    setMsg($("secMsg"), `Fetched ${r.name}.`);
+  } catch (e) { setMsg($("secMsg"), e.message, true); }
+}
+
+async function describeSecret(secretId) {
+  setMsg($("secMsg"), "Describing…");
+  try {
+    const r = await api("POST", "/api/aws/secrets/describe", { secretId });
+    $("secDetail").style.display = "";
+    $("secDetailTitle").textContent = r.name || secretId;
+    const pre = $("secDescribe");
+    pre.style.display = ""; pre.textContent = JSON.stringify(r, null, 2);
+    setMsg($("secMsg"), `Described ${r.name}.`);
+  } catch (e) { setMsg($("secMsg"), e.message, true); }
+}
+
+$("secReveal").onclick = () => {
+  const input = $("secValue");
+  const hidden = input.type === "password";
+  input.type = hidden ? "text" : "password";
+  $("secReveal").textContent = hidden ? "Hide" : "Reveal";
+};
+$("secCopy").onclick = async () => {
+  try { await navigator.clipboard.writeText($("secValue").value); $("secCopy").textContent = "Copied"; setTimeout(() => ($("secCopy").textContent = "Copy"), 1000); } catch (_) {}
+};
+
+$("secPutBtn").onclick = async () => {
+  setMsg($("putMsg"), "Putting value…");
+  try {
+    const r = await api("POST", "/api/aws/secrets/put", {
+      secretId: $("putId").value,
+      secretString: $("putValue").value,
+    });
+    setMsg($("putMsg"), `Stored version ${r.versionId} for ${r.name}.`);
+  } catch (e) { setMsg($("putMsg"), e.message, true); }
+};
+
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+function escapeAttr(s) { return escapeHtml(s).replace(/'/g, "&#39;"); }
+
+// Client-side "contains" filter for a rendered table (case-insensitive).
+function filterRows(tableId, query) {
+  const q = (query || "").trim().toLowerCase();
+  document.querySelectorAll(`#${tableId} tbody tr`).forEach((tr) => {
+    tr.style.display = !q || tr.textContent.toLowerCase().includes(q) ? "" : "none";
+  });
+}
+function wireFilter(inputId, tableId) {
+  $(inputId).addEventListener("input", (e) => filterRows(tableId, e.target.value));
+}
+// Show the filter box when a list has rows, and clear any previous query.
+function resetFilter(inputId, tableId, count) {
+  const el = $(inputId);
+  el.value = "";
+  el.style.display = count ? "" : "none";
+  filterRows(tableId, "");
+}
+wireFilter("ecsSvcFilter", "ecsServicesTable");
+wireFilter("ecsTaskFilter", "ecsTasksTable");
+wireFilter("acmFilter", "acmTable");
+
+// ===================== ECS =====================
+$("ecsListClustersBtn").onclick = async () => {
+  setMsg($("ecsMsg"), "Listing clusters…");
+  try {
+    const r = await api("GET", "/api/aws/ecs/clusters");
+    const sel = $("ecsCluster");
+    sel.innerHTML = '<option value="">— select cluster —</option>' +
+      r.clusters.map((c) => `<option value="${escapeAttr(c.name)}">${escapeHtml(c.name)} (${c.activeServices} svc, ${c.runningTasks} tasks)</option>`).join("");
+    setMsg($("ecsMsg"), `${r.clusters.length} cluster(s). Pick one to load services.`);
+  } catch (e) { setMsg($("ecsMsg"), e.message, true); }
+};
+
+$("ecsCluster").onchange = async () => {
+  const cluster = $("ecsCluster").value;
+  $("ecsDetail").style.display = "none";
+  $("ecsTasksTable").style.display = "none";
+  $("ecsTaskFilter").style.display = "none";
+  if (!cluster) { $("ecsServicesTable").style.display = "none"; $("ecsSvcFilter").style.display = "none"; return; }
+  setMsg($("ecsMsg"), "Loading services…");
+  try {
+    const r = await api("GET", `/api/aws/ecs/services?cluster=${encodeURIComponent(cluster)}`);
+    const tbody = $("ecsServicesTable").querySelector("tbody");
+    tbody.innerHTML = r.services.map((s) => `<tr>
+      <td>${escapeHtml(s.name)}</td><td>${escapeHtml(s.status)}</td>
+      <td>${s.desired}</td><td>${s.running}</td><td>${escapeHtml(s.taskDefinition)}</td>
+      <td class="actions">
+        <button data-svc-desc="${escapeAttr(s.name)}">Describe</button>
+        <button data-svc-tasks="${escapeAttr(s.name)}">Tasks</button>
+      </td></tr>`).join("");
+    $("ecsServicesTable").style.display = r.services.length ? "" : "none";
+    resetFilter("ecsSvcFilter", "ecsServicesTable", r.services.length);
+    setMsg($("ecsMsg"), `${r.services.length} service(s).`);
+  } catch (e) { setMsg($("ecsMsg"), e.message, true); }
+};
+
+$("ecsServicesTable").addEventListener("click", async (e) => {
+  const cluster = $("ecsCluster").value;
+  const desc = e.target.closest("button[data-svc-desc]");
+  const tasks = e.target.closest("button[data-svc-tasks]");
+  if (desc) {
+    setMsg($("ecsMsg"), "Describing service…");
+    try {
+      const r = await api("POST", "/api/aws/ecs/service", { cluster, service: desc.dataset.svcDesc });
+      $("ecsDetail").style.display = ""; $("ecsDetail").textContent = JSON.stringify(r, null, 2);
+      $("updSvcName").value = desc.dataset.svcDesc;
+      setMsg($("ecsMsg"), `Described ${desc.dataset.svcDesc}.`);
+    } catch (e2) { setMsg($("ecsMsg"), e2.message, true); }
+  }
+  if (tasks) return loadTasks(cluster, tasks.dataset.svcTasks);
+});
+
+async function loadTasks(cluster, service) {
+  setMsg($("ecsMsg"), "Loading tasks…");
+  try {
+    const r = await api("GET", `/api/aws/ecs/tasks?cluster=${encodeURIComponent(cluster)}&service=${encodeURIComponent(service || "")}`);
+    const tbody = $("ecsTasksTable").querySelector("tbody");
+    tbody.innerHTML = r.tasks.map((t) => `<tr>
+      <td>${escapeHtml(t.id)}</td><td>${escapeHtml(t.lastStatus)}</td><td>${escapeHtml(t.desiredStatus)}</td>
+      <td>${escapeHtml(t.healthStatus || "—")}</td><td>${escapeHtml(t.taskDefinition)}</td>
+      <td class="actions"><button data-task-stop="${escapeAttr(t.taskArn)}">Stop</button></td></tr>`).join("");
+    $("ecsTasksTable").style.display = r.tasks.length ? "" : "none";
+    resetFilter("ecsTaskFilter", "ecsTasksTable", r.tasks.length);
+    setMsg($("ecsMsg"), `${r.tasks.length} task(s).`);
+  } catch (e) { setMsg($("ecsMsg"), e.message, true); }
+}
+
+$("ecsTasksTable").addEventListener("click", async (e) => {
+  const stop = e.target.closest("button[data-task-stop]");
+  if (!stop) return;
+  if (!confirm("Stop this task?")) return;
+  setMsg($("ecsMsg"), "Stopping task…");
+  try {
+    const r = await api("POST", "/api/aws/ecs/stop-task", { cluster: $("ecsCluster").value, task: stop.dataset.taskStop });
+    setMsg($("ecsMsg"), `Stop requested → ${r.lastStatus} (desired ${r.desiredStatus}).`);
+  } catch (e2) { setMsg($("ecsMsg"), e2.message, true); }
+});
+
+$("ecsUpdateBtn").onclick = async () => {
+  const cluster = $("ecsCluster").value;
+  if (!cluster) return setMsg($("ecsUpdateMsg"), "Select a cluster first.", true);
+  setMsg($("ecsUpdateMsg"), "Updating service…");
+  try {
+    const r = await api("POST", "/api/aws/ecs/update-service", {
+      cluster,
+      service: $("updSvcName").value,
+      desiredCount: $("updSvcDesired").value,
+      forceNewDeployment: $("updSvcForce").checked,
+    });
+    setMsg($("ecsUpdateMsg"), `Updated ${r.name}: desired ${r.desired}, running ${r.running} (${r.status}).`);
+  } catch (e) { setMsg($("ecsUpdateMsg"), e.message, true); }
+};
+
+// ===================== ACM =====================
+$("acmListBtn").onclick = async () => {
+  setMsg($("acmMsg"), "Listing certificates…");
+  try {
+    const r = await api("GET", "/api/aws/acm/list");
+    const tbody = $("acmTable").querySelector("tbody");
+    tbody.innerHTML = r.certificates.map((c) => `<tr>
+      <td>${escapeHtml(c.domainName)}</td><td>${escapeHtml(c.status || "—")}</td>
+      <td style="max-width:360px; overflow:hidden; text-overflow:ellipsis;">${escapeHtml(c.arn)}</td>
+      <td class="actions"><button data-cert="${escapeAttr(c.arn)}">Describe</button></td></tr>`).join("");
+    $("acmTable").style.display = r.certificates.length ? "" : "none";
+    resetFilter("acmFilter", "acmTable", r.certificates.length);
+    setMsg($("acmMsg"), `${r.certificates.length} certificate(s).`);
+  } catch (e) { setMsg($("acmMsg"), e.message, true); }
+};
+
+$("acmTable").addEventListener("click", async (e) => {
+  const btn = e.target.closest("button[data-cert]");
+  if (!btn) return;
+  setMsg($("acmMsg"), "Describing certificate…");
+  try {
+    const r = await api("POST", "/api/aws/acm/describe", { arn: btn.dataset.cert });
+    $("acmDetail").style.display = ""; $("acmDetail").textContent = JSON.stringify(r, null, 2);
+    setMsg($("acmMsg"), `Described ${r.domainName}.`);
+  } catch (e2) { setMsg($("acmMsg"), e2.message, true); }
+});
+
+$("acmRequestBtn").onclick = async () => {
+  setMsg($("acmRequestMsg"), "Requesting certificate…");
+  try {
+    const r = await api("POST", "/api/aws/acm/request", {
+      domainName: $("acmDomain").value,
+      subjectAlternativeNames: $("acmSans").value,
+    });
+    setMsg($("acmRequestMsg"), `Requested. ARN: ${r.certificateArn}. Describe it to get the DNS validation records.`);
+  } catch (e) { setMsg($("acmRequestMsg"), e.message, true); }
+};
+
+// ===================== S3 =====================
+$("s3ListBucketsBtn").onclick = async () => {
+  setMsg($("s3Msg"), "Listing buckets…");
+  try {
+    const r = await api("GET", "/api/aws/s3/buckets");
+    const sel = $("s3Bucket");
+    sel.innerHTML = '<option value="">— select bucket —</option>' +
+      r.buckets.map((b) => `<option value="${escapeAttr(b.name)}">${escapeHtml(b.name)}</option>`).join("");
+    setMsg($("s3Msg"), `${r.buckets.length} bucket(s). Pick one, then List Objects.`);
+  } catch (e) { setMsg($("s3Msg"), e.message, true); }
+};
+
+$("s3LocationBtn").onclick = async () => {
+  const bucket = $("s3Bucket").value;
+  if (!bucket) return setMsg($("s3Msg"), "Select a bucket first.", true);
+  setMsg($("s3Msg"), "Getting location…");
+  try {
+    const r = await api("GET", `/api/aws/s3/location?bucket=${encodeURIComponent(bucket)}`);
+    setMsg($("s3Msg"), `${bucket} is in ${r.region}.`);
+  } catch (e) { setMsg($("s3Msg"), e.message, true); }
+};
+
+$("s3ListObjectsBtn").onclick = async () => {
+  const bucket = $("s3Bucket").value;
+  if (!bucket) return setMsg($("s3Msg"), "Select a bucket first.", true);
+  $("s3Detail").style.display = "none";
+  setMsg($("s3Msg"), "Listing objects…");
+  try {
+    const prefix = encodeURIComponent($("s3Prefix").value || "");
+    const r = await api("GET", `/api/aws/s3/objects?bucket=${encodeURIComponent(bucket)}&prefix=${prefix}`);
+    const tbody = $("s3ObjectsTable").querySelector("tbody");
+    tbody.innerHTML = r.objects.map((o) => `<tr>
+      <td>${escapeHtml(o.key)}</td><td>${o.size}</td>
+      <td>${o.lastModified ? new Date(o.lastModified).toLocaleString() : "—"}</td>
+      <td class="actions">
+        <button data-s3-get="${escapeAttr(o.key)}">View</button>
+        <button data-s3-dl="${escapeAttr(o.key)}">Download</button>
+      </td></tr>`).join("");
+    $("s3ObjectsTable").style.display = r.objects.length ? "" : "none";
+    resetFilter("s3ObjFilter", "s3ObjectsTable", r.objects.length);
+    setMsg($("s3Msg"), `${r.objects.length} object(s)${r.truncated ? " (truncated at 1000)" : ""}.`);
+  } catch (e) { setMsg($("s3Msg"), e.message, true); $("s3ObjectsTable").style.display = "none"; }
+};
+
+$("s3ObjectsTable").addEventListener("click", async (e) => {
+  const get = e.target.closest("button[data-s3-get]");
+  const dl = e.target.closest("button[data-s3-dl]");
+  if (get) return viewS3Object(get.dataset.s3Get);
+  if (dl) return downloadS3Object(dl.dataset.s3Dl);
+});
+
+let s3Current = null; // { key, body }
+async function viewS3Object(key) {
+  const bucket = $("s3Bucket").value;
+  setMsg($("s3Msg"), "Fetching object…");
+  try {
+    const r = await api("POST", "/api/aws/s3/get", { bucket, key });
+    s3Current = { key: r.key, body: r.body };
+    $("s3Detail").style.display = "";
+    $("s3DetailTitle").textContent = `${r.key} · ${r.contentLength} bytes · ${r.contentType || "?"}`;
+    const pre = $("s3Body"); pre.style.display = ""; pre.textContent = r.body;
+    setMsg($("s3Msg"), `Fetched ${r.key}.`);
+  } catch (e) { setMsg($("s3Msg"), e.message, true); }
+}
+
+async function downloadS3Object(key) {
+  const bucket = $("s3Bucket").value;
+  try {
+    const r = await api("POST", "/api/aws/s3/get", { bucket, key });
+    triggerDownload(key.split("/").pop() || "object", r.body, r.contentType || "application/octet-stream");
+    setMsg($("s3Msg"), `Downloaded ${r.key}.`);
+  } catch (e) { setMsg($("s3Msg"), e.message, true); }
+}
+
+function triggerDownload(filename, text, type) {
+  const blob = new Blob([text], { type });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+$("s3Copy").onclick = async () => {
+  if (!s3Current) return;
+  try { await navigator.clipboard.writeText(s3Current.body); $("s3Copy").textContent = "Copied"; setTimeout(() => ($("s3Copy").textContent = "Copy"), 1000); } catch (_) {}
+};
+$("s3Download").onclick = () => {
+  if (!s3Current) return;
+  triggerDownload(s3Current.key.split("/").pop() || "object", s3Current.body, "application/octet-stream");
+};
+
+$("s3PutBtn").onclick = async () => {
+  const bucket = $("s3Bucket").value;
+  if (!bucket) return setMsg($("s3PutMsg"), "Select a bucket first.", true);
+  setMsg($("s3PutMsg"), "Putting object…");
+  try {
+    const r = await api("POST", "/api/aws/s3/put", {
+      bucket, key: $("s3PutKey").value, body: $("s3PutBody").value, contentType: $("s3PutType").value,
+    });
+    setMsg($("s3PutMsg"), `Stored ${r.key} (ETag ${r.etag}).`);
+  } catch (e) { setMsg($("s3PutMsg"), e.message, true); }
+};
+
+// ===================== Route53 =====================
+$("r53ListZonesBtn").onclick = async () => {
+  setMsg($("r53Msg"), "Listing zones…");
+  try {
+    const r = await api("GET", "/api/aws/route53/zones");
+    const sel = $("r53Zone");
+    sel.innerHTML = '<option value="">— select hosted zone —</option>' +
+      r.zones.map((z) => `<option value="${escapeAttr(z.id)}">${escapeHtml(z.name)} ${z.private ? "(private)" : ""} · ${z.recordCount} records</option>`).join("");
+    setMsg($("r53Msg"), `${r.zones.length} zone(s). Pick one, then List Records.`);
+  } catch (e) { setMsg($("r53Msg"), e.message, true); }
+};
+
+$("r53GetZoneBtn").onclick = async () => {
+  const id = $("r53Zone").value;
+  if (!id) return setMsg($("r53Msg"), "Select a zone first.", true);
+  setMsg($("r53Msg"), "Getting zone details…");
+  try {
+    const r = await api("GET", `/api/aws/route53/zone?id=${encodeURIComponent(id)}`);
+    $("r53ZoneDetail").style.display = ""; $("r53ZoneDetail").textContent = JSON.stringify(r, null, 2);
+    setMsg($("r53Msg"), `Zone ${r.name}.`);
+  } catch (e) { setMsg($("r53Msg"), e.message, true); }
+};
+
+$("r53ListRecordsBtn").onclick = async () => {
+  const id = $("r53Zone").value;
+  if (!id) return setMsg($("r53Msg"), "Select a zone first.", true);
+  setMsg($("r53Msg"), "Listing records…");
+  try {
+    const r = await api("GET", `/api/aws/route53/records?id=${encodeURIComponent(id)}`);
+    const tbody = $("r53RecordsTable").querySelector("tbody");
+    tbody.innerHTML = r.records.map((rec) => `<tr>
+      <td>${escapeHtml(rec.name)}</td><td>${escapeHtml(rec.type)}</td><td>${rec.ttl ?? "—"}</td>
+      <td style="max-width:360px; overflow:hidden; text-overflow:ellipsis;">${escapeHtml(rec.values.join(", "))}</td>
+      <td class="actions"><button data-r53-edit='${escapeAttr(JSON.stringify(rec))}'>Edit</button></td></tr>`).join("");
+    $("r53RecordsTable").style.display = r.records.length ? "" : "none";
+    resetFilter("r53RecFilter", "r53RecordsTable", r.records.length);
+    setMsg($("r53Msg"), `${r.records.length} record(s).`);
+  } catch (e) { setMsg($("r53Msg"), e.message, true); $("r53RecordsTable").style.display = "none"; }
+};
+
+// Clicking Edit copies a record into the Change form (for a quick UPSERT/DELETE).
+$("r53RecordsTable").addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-r53-edit]");
+  if (!btn) return;
+  const rec = JSON.parse(btn.dataset.r53Edit);
+  $("r53RecName").value = rec.name;
+  $("r53RecType").value = rec.type;
+  $("r53RecTtl").value = rec.ttl ?? 300;
+  $("r53RecValue").value = (rec.values || []).join("\n");
+  setMsg($("r53Msg"), `Loaded ${rec.name} (${rec.type}) into the Change form below.`);
+});
+
+$("r53ChangeBtn").onclick = async () => {
+  const id = $("r53Zone").value;
+  if (!id) return setMsg($("r53ChangeMsg"), "Select a zone first.", true);
+  const action = $("r53RecAction").value;
+  const name = $("r53RecName").value.trim();
+  if (!confirm(`${action} ${name} (${$("r53RecType").value}) in this zone?`)) return;
+  setMsg($("r53ChangeMsg"), "Applying change…");
+  try {
+    const r = await api("POST", "/api/aws/route53/change", {
+      id, action, name, type: $("r53RecType").value, ttl: $("r53RecTtl").value, value: $("r53RecValue").value,
+    });
+    setMsg($("r53ChangeMsg"), `Change ${r.changeId} → ${r.status}.`);
+  } catch (e) { setMsg($("r53ChangeMsg"), e.message, true); }
+};
+
+// ===================== Connect profile (save / clear / autoload) =====================
+$("saveProfileBtn").onclick = async () => {
+  setMsg($("msg1"), "Saving profile…");
+  try {
+    const r = await api("POST", "/api/aws/profile", {
+      baseExports: $("baseExports").value,
+      roleArn: $("roleArn").value,
+      region1: $("region1").value,
+      sessionName: $("sessionName").value,
+      region2: $("region2").value,
+    });
+    setMsg($("msg1"), `Saved profile (${r.fields.join(", ")}) to local file.`);
+  } catch (e) { setMsg($("msg1"), e.message, true); }
+};
+
+$("clearProfileBtn").onclick = async () => {
+  if (!confirm("Delete the saved local profile file?")) return;
+  try {
+    const r = await api("DELETE", "/api/aws/profile");
+    setMsg($("msg1"), r.cleared ? "Cleared saved profile." : "No saved profile to clear.");
+  } catch (e) { setMsg($("msg1"), e.message, true); }
+};
+
+async function loadProfile() {
+  try {
+    const r = await api("GET", "/api/aws/profile");
+    if (!r.exists || !r.profile) return;
+    const p = r.profile;
+    if (p.baseExports != null) $("baseExports").value = p.baseExports;
+    if (p.roleArn != null) $("roleArn").value = p.roleArn;
+    if (p.region1) $("region1").value = p.region1;
+    if (p.sessionName != null) $("sessionName").value = p.sessionName;
+    if (p.region2) $("region2").value = p.region2;
+    setMsg($("msg1"), "Loaded saved profile. Click Lock #1 to assume the role.");
+  } catch (_) { /* no profile / server not ready — ignore */ }
+}
+
+wireFilter("s3ObjFilter", "s3ObjectsTable");
+wireFilter("r53RecFilter", "r53RecordsTable");
+
+loadProfile();
+refreshStatus();
+setInterval(refreshStatus, 15000);
+</script>
+</body>
+</html>

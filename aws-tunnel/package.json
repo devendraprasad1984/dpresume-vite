@@ -1,0 +1,20 @@
+{
+  "name": "swiss-army-knife",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local single-user developer toolbox: CSV viewer, mic spectrum analyzer, and an AWS Tunnel (assume-role + Secrets Manager / ECS / ACM / S3 / Route53).",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@aws-sdk/client-acm": "^3.1104.0",
+    "@aws-sdk/client-ec2": "^3.1104.0",
+    "@aws-sdk/client-ecs": "^3.1104.0",
+    "@aws-sdk/client-route-53": "^3.1104.0",
+    "@aws-sdk/client-s3": "^3.1104.0",
+    "@aws-sdk/client-secrets-manager": "^3.600.0",
+    "@aws-sdk/client-sts": "^3.600.0"
+  }
+}

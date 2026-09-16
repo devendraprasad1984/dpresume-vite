@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swiss Army Knife</title>
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+<nav class="tabbar">
+  <button class="tab active" data-tab="csv">Secret CSV</button>
+  <button class="tab" data-tab="spectrum">Spectrum</button>
+  <button class="tab" data-tab="aws">AWS Tunnel</button>
+  <button class="tab" data-tab="dns">DNS Map</button>
+  <button class="tab" data-tab="livelogs">LiveLogs</button>
+</nav>
+
+<div id="csvPanel" class="panel">
+<header>
+  <h1>&#9608; Secret CSV</h1>
+  <span id="meta"></span>
+  <div class="spacer"></div>
+  <div class="quick" id="quick">
+    <button data-env="PP">PP</button>
+    <button data-env="QA">QA</button>
+    <button data-env="PROD">PROD</button>
+  </div>
+  <input type="search" id="search" placeholder="Filter rows…" autocomplete="off">
+  <label class="file">Open CSV<input type="file" id="fileInput" accept=".csv,text/csv" hidden></label>
+  <button id="reload" class="accent">Reload data.csv</button>
+</header>
+
+<div id="drop">
+  <p><strong>Drop a .csv file here</strong>, or click <em>Open CSV</em>.</p>
+  <p>Auto-loading <code>data.csv</code>… (works when served over http)</p>
+</div>
+
+<div id="wrap" class="hidden"><table id="table"><thead></thead><tbody></tbody></table></div>
+
+<canvas id="matrix"></canvas>
+</div><!-- /#csvPanel -->
+
+<div id="spectrumPanel" class="panel hidden">
+  <iframe id="spectrumFrame" allow="microphone" title="Spectrum — Mic Analyzer"></iframe>
+</div>
+
+<div id="awsPanel" class="panel hidden">
+  <iframe id="awsFrame" title="AWS Tunnel"></iframe>
+</div>
+
+<div id="dnsPanel" class="panel hidden">
+  <iframe id="dnsFrame" title="DNS Map"></iframe>
+</div>
+
+<div id="livelogsPanel" class="panel hidden">
+  <iframe id="livelogsFrame" title="LiveLogs"></iframe>
+</div>
+
+<script>
+// --- Tab switching (CSV viewer / Spectrum / AWS Tunnel; iframes lazy-loaded) ---
+(function tabs() {
+  const panels = {
+    csv: document.getElementById("csvPanel"),
+    spectrum: document.getElementById("spectrumPanel"),
+    aws: document.getElementById("awsPanel"),
+    dns: document.getElementById("dnsPanel"),
+    livelogs: document.getElementById("livelogsPanel"),
+  };
+  // iframe panels that load their document only on first activation.
+  const lazy = {
+    spectrum: { frame: document.getElementById("spectrumFrame"), src: "spectrum-analyzer.html", loaded: false },
+    aws: { frame: document.getElementById("awsFrame"), src: "aws.html", loaded: false },
+    dns: { frame: document.getElementById("dnsFrame"), src: "dns-map.html", loaded: false },
+    livelogs: { frame: document.getElementById("livelogsFrame"), src: "livelogs.html", loaded: false },
+  };
+  document.querySelector(".tabbar").addEventListener("click", e => {
+    const btn = e.target.closest(".tab"); if (!btn) return;
+    const tab = btn.dataset.tab;
+    document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t === btn));
+    Object.keys(panels).forEach(k => panels[k].classList.toggle("hidden", k !== tab));
+    // Lazy-load the iframe the first time its tab is opened, so it sizes against
+    // a visible (non-zero-width) container.
+    const l = lazy[tab];
+    if (l && !l.loaded) { l.frame.src = l.src; l.loaded = true; }
+  });
+})();
+
+const state = { headers: [], rows: [], sortCol: -1, sortDir: 1, filter: "", env: "" };
+
+// --- CSV parser: handles quotes, commas & newlines inside quotes, "" escapes ---
+function parseCSV(text) {
+  const rows = []; let row = [], field = "", i = 0, inQuotes = false;
+  text = text.replace(/\r\n?/g, "\n");
+  while (i < text.length) {
+    const c = text[i];
+    if (inQuotes) {
+      if (c === '"') {
+        if (text[i + 1] === '"') { field += '"'; i += 2; continue; }
+        inQuotes = false; i++; continue;
+      }
+      field += c; i++; continue;
+    }
+    if (c === '"') { inQuotes = true; i++; continue; }
+    if (c === ",") { row.push(field); field = ""; i++; continue; }
+    if (c === "\n") { row.push(field); rows.push(row); row = []; field = ""; i++; continue; }
+    field += c; i++;
+  }
+  if (field.length || row.length) { row.push(field); rows.push(row); }
+  return rows.filter(r => r.length && !(r.length === 1 && r[0] === ""));
+}
+
+function load(text) {
+  const parsed = parseCSV(text);
+  if (!parsed.length) { alert("CSV appears empty."); return; }
+  state.headers = parsed[0];
+  state.rows = parsed.slice(1);
+  state.sortCol = -1;
+  render();
+  document.getElementById("drop").classList.add("hidden");
+  document.getElementById("wrap").classList.remove("hidden");
+}
+
+function isNumeric(v) { return v !== "" && !isNaN(v); }
+
+// Index of the status/enable column (matched by header name), or -1.
+function statusCol() {
+  return state.headers.findIndex(h => {
+    const n = (h || "").trim().toLowerCase();
+    return n === "status" || n === "enable";
+  });
+}
+
+// Index of the password column (matched by header name, tolerant of typos), or -1.
+function passwordCol() {
+  return state.headers.findIndex(h => {
+    const n = (h || "").trim().toLowerCase();
+    return n.includes("pass") || n.includes("pwd") || n.includes("secret");
+  });
+}
+
+function render() {
+  const { headers, rows, sortCol, sortDir, filter } = state;
+  const sc = statusCol();
+  // Columns to hide: the status column, plus any column with a blank header
+  // (e.g. the empty trailing column produced by a trailing comma in the CSV).
+  const hidden = new Set(headers.flatMap((h, i) => (h || "").trim() === "" ? [i] : []));
+  if (sc >= 0) hidden.add(sc);
+  const pw = passwordCol();  // masked in display, real value still copyable
+  // Only keep rows whose status column is TRUE (when a status column exists).
+  let view = sc >= 0
+    ? rows.filter(r => (r[sc] || "").trim().toLowerCase() === "true")
+    : rows;
+  const baseCount = view.length;
+  // Quick pre-filter by the Env column (PP / QA / PROD buttons).
+  if (state.env) {
+    const ec = headers.findIndex(h => (h || "").trim().toLowerCase() === "env");
+    if (ec >= 0) view = view.filter(r => (r[ec] || "").trim().toLowerCase() === state.env.toLowerCase());
+  }
+  if (filter) {
+    const f = filter.toLowerCase();
+    view = view.filter(r => r.some(c => (c || "").toLowerCase().includes(f)));
+  }
+  if (sortCol >= 0) {
+    view = view.slice().sort((a, b) => {
+      const x = a[sortCol] ?? "", y = b[sortCol] ?? "";
+      if (isNumeric(x) && isNumeric(y)) return (x - y) * sortDir;
+      return x.localeCompare(y) * sortDir;
+    });
+  }
+  const thead = document.querySelector("#table thead");
+  thead.innerHTML = "<tr>" + headers.map((h, i) => {
+    if (hidden.has(i)) return "";
+    const arrow = i === sortCol ? `<span class="arrow">${sortDir > 0 ? "▲" : "▼"}</span>` : "";
+    return `<th data-i="${i}">${escapeHtml(h)}${arrow}</th>`;
+  }).join("") + "</tr>";
+  thead.querySelectorAll("th").forEach(th => th.onclick = () => {
+    const i = +th.dataset.i;
+    if (state.sortCol === i) state.sortDir *= -1; else { state.sortCol = i; state.sortDir = 1; }
+    render();
+  });
+  const tbody = document.querySelector("#table tbody");
+  tbody.innerHTML = view.map(r =>
+    "<tr>" + headers.map((_, i) => {
+      if (hidden.has(i)) return "";
+      const v = r[i] ?? "";
+      const e = escapeHtml(v);
+      // Password column: show bullets, but keep the real value in data-copy so Copy works.
+      const masked = i === pw && v !== "";
+      const shown = masked ? "••••••" : e;
+      const tip = masked ? "Hidden — click copy to grab it" : e;
+      return `<td class="${isNumeric(v) && !masked ? "num" : ""}" title="${tip}">` +
+        `<span class="cell"><button class="copy-btn" data-copy="${e}" title="Copy">${copyIcon}</button>` +
+        `<span class="txt">${shown}</span></span></td>`;
+    }).join("") + "</tr>"
+  ).join("");
+  const visibleCols = headers.length - hidden.size;
+  document.getElementById("meta").textContent =
+    `${view.length} of ${baseCount} rows · ${visibleCols} columns`;
+}
+
+const copyIcon = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+const checkIcon = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>';
+
+// Copy a cell's value when its clipboard icon is clicked (event-delegated).
+document.querySelector("#table tbody").addEventListener("click", e => {
+  const btn = e.target.closest(".copy-btn");
+  if (!btn) return;
+  const done = () => {
+    btn.classList.add("copied"); btn.innerHTML = checkIcon;
+    setTimeout(() => { btn.classList.remove("copied"); btn.innerHTML = copyIcon; }, 1000);
+  };
+  const text = btn.dataset.copy;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(() => {});
+  } else {
+    const ta = document.createElement("textarea");
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); done(); } catch (_) {}
+    ta.remove();
+  }
+});
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+// --- Inputs ---
+document.getElementById("fileInput").onchange = e => {
+  const f = e.target.files[0]; if (!f) return;
+  const r = new FileReader(); r.onload = () => load(r.result); r.readAsText(f);
+};
+document.getElementById("search").oninput = e => { state.filter = e.target.value; if (state.headers.length) render(); };
+document.getElementById("quick").addEventListener("click", e => {
+  const b = e.target.closest("button[data-env]"); if (!b) return;
+  state.env = state.env === b.dataset.env ? "" : b.dataset.env;  // click active button again to clear
+  document.querySelectorAll("#quick button").forEach(x => x.classList.toggle("active", x.dataset.env === state.env));
+  if (state.headers.length) render();
+});
+document.getElementById("reload").onclick = autoLoad;
+
+const drop = document.getElementById("drop");
+["dragenter", "dragover"].forEach(ev => document.addEventListener(ev, e => {
+  e.preventDefault(); drop.classList.add("drag");
+}));
+["dragleave", "drop"].forEach(ev => document.addEventListener(ev, e => {
+  e.preventDefault(); if (ev === "dragleave" && e.relatedTarget) return; drop.classList.remove("drag");
+}));
+document.addEventListener("drop", e => {
+  const f = e.dataTransfer.files[0]; if (!f) return;
+  const r = new FileReader(); r.onload = () => load(r.result); r.readAsText(f);
+});
+
+// --- Auto-load sibling data.csv (works over http; blocked on file://) ---
+function autoLoad() {
+  fetch("data.csv", { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(load)
+    .catch(() => { /* silently fall back to the drop zone */ });
+}
+autoLoad();
+
+// --- Matrix digital rain (below the table) ---
+(function matrixRain() {
+  const canvas = document.getElementById("matrix");
+  const ctx = canvas.getContext("2d");
+  const glyphs = "アカサタナハマヤラワガザダバパアイウエオ0123456789ABCDEFZ$#%&*+=<>".split("");
+  const fontSize = 16;
+  let cols = 0, drops = [];
+
+  function resize() {
+    // size the backing store to the element's CSS pixels
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+    cols = Math.max(1, Math.floor(canvas.width / fontSize));
+    drops = Array.from({ length: cols }, () => Math.floor(Math.random() * -20));
+  }
+
+  function draw() {
+    // translucent black fade -> leaves glowing trails
+    ctx.fillStyle = "rgba(0, 0, 0, 0.09)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = fontSize + "px 'Courier New', monospace";
+    for (let i = 0; i < drops.length; i++) {
+      const ch = glyphs[Math.floor(Math.random() * glyphs.length)];
+      const x = i * fontSize, y = drops[i] * fontSize;
+      // bright neon leading character with glow
+      ctx.shadowColor = "#00ff41"; ctx.shadowBlur = 8;
+      ctx.fillStyle = "#c9ffd6"; ctx.fillText(ch, x, y);
+      // dimmer green body
+      ctx.shadowBlur = 0; ctx.fillStyle = "#00b82e";
+      ctx.fillText(glyphs[Math.floor(Math.random() * glyphs.length)], x, y - fontSize);
+      if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
+      drops[i]++;
+    }
+  }
+
+  resize();
+  window.addEventListener("resize", resize);
+  setInterval(draw, 55);
+})();
+</script>
+</body>
+</html>

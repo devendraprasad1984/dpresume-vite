@@ -1,0 +1,18 @@
+node_modules/
+
+# Local-only Connect form profile — contains AWS secret access key. Never commit.
+connect-profile.local.json
+
+# Local CSV data may contain real credentials — never commit.
+data.csv
+
+# DNS Map local data may contain real internal hostnames — never commit.
+dns-map.local.txt
+
+# OS / editor / tooling cruft
+.DS_Store
+.claude/
+.playwright-mcp/
+
+# Local reference script (not part of the app)
+accesslogs.sh

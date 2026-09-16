@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DNS Map</title>
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+  <div class="left">
+    <div class="hint">One link per line: <code>a -&gt; b</code>. Chains ok:
+      <code>a -&gt; b -&gt; c</code>. Tag a node: <code>a [r53]</code>.</div>
+    <textarea id="input" spellcheck="false" placeholder="acme.com [r53] -> www.acme.com"></textarea>
+    <div class="row">
+      <button id="relayout">Re-layout</button>
+      <span id="status" class="status"></span>
+    </div>
+  </div>
+  <div class="right">
+    <svg id="svg">
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7"
+                markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#3a5445"></path>
+        </marker>
+      </defs>
+      <g id="edges"></g>
+      <g id="nodes"></g>
+    </svg>
+    <div id="footer" class="footer">0 nodes · 0 links</div>
+    <div id="legend" class="legend"></div>
+  </div>
+
+<script type="module">
+import { parseGraph } from "./lib/dns-graph.js";
+
+const SVGNS = "http://www.w3.org/2000/svg";
+const $ = (id) => document.getElementById(id);
+const input = $("input"), status = $("status");
+const gEdges = $("edges"), gNodes = $("nodes");
+
+let config = { default: "public", categories: {} };
+let sim = null;               // running animation frame id
+let nodes = [];               // {id, category, x, y, vx, vy, pinned, el, rectEl, textEl}
+let edges = [];               // {from, to, el}
+const byId = new Map();
+
+function colorFor(cat) {
+  const c = config.categories[cat] || config.categories[config.default];
+  return (c && c.color) || "#9ca3af";
+}
+
+function setStatus(text, isErr = false) {
+  status.textContent = text;
+  status.classList.toggle("err", isErr);
+}
+
+function renderLegend() {
+  const el = $("legend");
+  el.innerHTML = "";
+  for (const [, c] of Object.entries(config.categories)) {
+    const item = document.createElement("div");
+    item.className = "item";
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    dot.style.background = c.color;
+    item.appendChild(dot);
+    item.appendChild(document.createTextNode(c.label));
+    el.appendChild(item);
+  }
+}
+
+// --- Reconcile parsed graph into the live node/edge arrays (keep positions) ---
+function reconcile(text) {
+  const g = parseGraph(text, config);
+  const svg = $("svg");
+  const W = svg.clientWidth || 800, H = svg.clientHeight || 600;
+
+  const next = new Map();
+  for (const n of g.nodes) {
+    const existing = byId.get(n.id);
+    if (existing) {
+      existing.category = n.category;
+      next.set(n.id, existing);
+    } else {
+      next.set(n.id, {
+        id: n.id, category: n.category,
+        x: W / 2 + (Math.random() - 0.5) * 200,
+        y: H / 2 + (Math.random() - 0.5) * 200,
+        vx: 0, vy: 0, pinned: false,
+        el: null, rectEl: null, textEl: null,
+      });
+    }
+  }
+  byId.clear();
+  for (const [k, v] of next) byId.set(k, v);
+  nodes = [...next.values()];
+  edges = g.edges.map((e) => ({ ...e, el: null }));
+
+  buildSvg();
+  $("footer").textContent = `${nodes.length} nodes · ${edges.length} links`;
+  kick();
+}
+
+function buildSvg() {
+  gNodes.innerHTML = "";
+  gEdges.innerHTML = "";
+  for (const e of edges) {
+    const line = document.createElementNS(SVGNS, "line");
+    line.setAttribute("class", "edge");
+    line.setAttribute("marker-end", "url(#arrow)");
+    gEdges.appendChild(line);
+    e.el = line;
+  }
+  for (const n of nodes) {
+    const gEl = document.createElementNS(SVGNS, "g");
+    gEl.setAttribute("class", "node");
+    const rect = document.createElementNS(SVGNS, "rect");
+    rect.setAttribute("rx", "6"); rect.setAttribute("ry", "6");
+    rect.setAttribute("fill", colorFor(n.category));
+    const text = document.createElementNS(SVGNS, "text");
+    text.setAttribute("x", "10"); text.setAttribute("y", "0");
+    text.textContent = n.id;
+    gEl.appendChild(rect); gEl.appendChild(text);
+    gNodes.appendChild(gEl);
+    n.el = gEl; n.rectEl = rect; n.textEl = text;
+    sizeNode(n);
+    enableDrag(n);
+  }
+  // Re-measure after layout is available so widths reflect actual text.
+  requestAnimationFrame(() => { for (const n of nodes) sizeNode(n); draw(); });
+}
+
+function sizeNode(n) {
+  const pad = 10, h = 26;
+  const measured = n.textEl.getComputedTextLength();
+  const w = Math.max(60, (measured || n.id.length * 7.2 + 20) + pad * 2);
+  n.w = w; n.h = h;
+  n.rectEl.setAttribute("width", w);
+  n.rectEl.setAttribute("height", h);
+  n.rectEl.setAttribute("x", 0);
+  n.rectEl.setAttribute("y", -h / 2);
+  n.textEl.setAttribute("y", 0);
+  n.rectEl.setAttribute("fill", colorFor(n.category));
+}
+
+// --- Tiny force-directed layout ---
+function kick() { cooling = 1; if (!sim) sim = requestAnimationFrame(tick); }
+let cooling = 1;
+
+function tick() {
+  const svg = $("svg");
+  const W = svg.clientWidth || 800, H = svg.clientHeight || 600;
+  const REPULSE = 9000, SPRING = 0.02, LINK_LEN = 130, CENTER = 0.003, DAMP = 0.85;
+
+  for (const a of nodes) { a.fx = 0; a.fy = 0; }
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      const a = nodes[i], b = nodes[j];
+      let dx = a.x - b.x, dy = a.y - b.y;
+      let d2 = dx * dx + dy * dy || 0.01;
+      const f = REPULSE / d2;
+      const d = Math.sqrt(d2);
+      const ux = dx / d, uy = dy / d;
+      a.fx += ux * f; a.fy += uy * f;
+      b.fx -= ux * f; b.fy -= uy * f;
+    }
+  }
+  for (const e of edges) {
+    const a = byId.get(e.from), b = byId.get(e.to);
+    if (!a || !b) continue;
+    let dx = b.x - a.x, dy = b.y - a.y;
+    const d = Math.sqrt(dx * dx + dy * dy) || 0.01;
+    const f = (d - LINK_LEN) * SPRING;
+    const ux = dx / d, uy = dy / d;
+    a.fx += ux * f; a.fy += uy * f;
+    b.fx -= ux * f; b.fy -= uy * f;
+  }
+  let maxV = 0;
+  for (const n of nodes) {
+    n.fx += (W / 2 - n.x) * CENTER;
+    n.fy += (H / 2 - n.y) * CENTER;
+    if (n.pinned) { n.vx = 0; n.vy = 0; continue; }
+    n.vx = (n.vx + n.fx) * DAMP * cooling;
+    n.vy = (n.vy + n.fy) * DAMP * cooling;
+    n.x += n.vx; n.y += n.vy;
+    n.x = Math.max(60, Math.min(W - 60, n.x));
+    n.y = Math.max(30, Math.min(H - 30, n.y));
+    maxV = Math.max(maxV, Math.abs(n.vx), Math.abs(n.vy));
+  }
+  draw();
+  cooling *= 0.995;
+  if (maxV < 0.2 || cooling < 0.02) { sim = null; return; }
+  sim = requestAnimationFrame(tick);
+}
+
+function draw() {
+  for (const n of nodes) {
+    n.el.setAttribute("transform", `translate(${n.x - n.w / 2}, ${n.y})`);
+  }
+  for (const e of edges) {
+    const a = byId.get(e.from), b = byId.get(e.to);
+    if (!a || !b) continue;
+    // Clip endpoints to the target node's box edge so the arrow isn't hidden.
+    const p = clip(a, b);
+    e.el.setAttribute("x1", a.x); e.el.setAttribute("y1", a.y);
+    e.el.setAttribute("x2", p.x); e.el.setAttribute("y2", p.y);
+  }
+}
+
+function clip(a, b) {
+  const dx = b.x - a.x, dy = b.y - a.y;
+  const dist = Math.sqrt(dx * dx + dy * dy);
+  if (dist === 0) return { x: b.x, y: b.y };
+  const hw = b.w / 2 + 4, hh = b.h / 2 + 4;
+  const scale = Math.min(
+    Math.abs(hw / (dx || 1e-6)),
+    Math.abs(hh / (dy || 1e-6))
+  );
+  // Clamp: scale must not push the point past a or beyond b's far side.
+  const clampedScale = Math.min(Math.max(scale, 0), dist / (dist || 1));
+  return { x: b.x - dx * clampedScale, y: b.y - dy * clampedScale };
+}
+
+// --- Drag to pin ---
+function enableDrag(n) {
+  n.el.addEventListener("pointerdown", (ev) => {
+    ev.preventDefault();
+    n.el.setPointerCapture(ev.pointerId);
+    n.el.classList.add("dragging");
+    const svg = $("svg");
+    const rect = svg.getBoundingClientRect();
+    const move = (e) => {
+      n.x = e.clientX - rect.left;
+      n.y = e.clientY - rect.top;
+      n.pinned = true;
+      draw();
+    };
+    const up = (e) => {
+      n.el.classList.remove("dragging");
+      n.el.releasePointerCapture(ev.pointerId);
+      n.el.removeEventListener("pointermove", move);
+      n.el.removeEventListener("pointerup", up);
+      kick();
+    };
+    n.el.addEventListener("pointermove", move);
+    n.el.addEventListener("pointerup", up);
+  });
+}
+
+// --- Persistence ---
+let saveTimer = null;
+async function save() {
+  try {
+    const res = await fetch("/api/dns-map", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ text: input.value }),
+    });
+    if (!res.ok) throw new Error((await res.json()).error || "save failed");
+    setStatus("saved");
+  } catch (e) {
+    setStatus(e.message, true);
+  }
+}
+function scheduleSave() {
+  clearTimeout(saveTimer);
+  setStatus("editing…");
+  saveTimer = setTimeout(save, 500);
+}
+
+input.addEventListener("input", () => {
+  reconcile(input.value);
+  scheduleSave();
+});
+
+$("relayout").addEventListener("click", () => {
+  for (const n of nodes) n.pinned = false;
+  kick();
+});
+
+// --- Boot ---
+async function boot() {
+  try {
+    config = await (await fetch("./dns-map-categories.json")).json();
+  } catch {
+    /* keep defaults */
+  }
+  renderLegend();
+  try {
+    const data = await (await fetch("/api/dns-map")).json();
+    input.value = data.text || "";
+  } catch {
+    input.value = "";
+  }
+  reconcile(input.value);
+}
+boot();
+</script>
+</body>
+</html>

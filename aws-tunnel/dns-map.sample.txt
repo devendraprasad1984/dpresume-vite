@@ -1,0 +1,9 @@
+# DNS Map sample — fake data. One or more links per line: a -> b -> c
+# Optional [tag] after a node sets its category (see dns-map-categories.json).
+acme.com [r53] -> www.acme.com
+www.acme.com -> cdn.acme.com [cdn]
+cdn.acme.com -> alb-prod.acme.com [lb]
+alb-prod.acme.com -> api.internal.acme.com [app]
+api.internal.acme.com -> cache.acme.com [cdn]
+api.internal.acme.com -> db-primary.acme.com [db]
+db-primary.acme.com -> db-replica.acme.com [db]
