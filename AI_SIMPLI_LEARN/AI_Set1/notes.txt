@@ -1,0 +1,40 @@
+AI -  Artificial intelligence, kind of an intern with photographic memory. Machines that can think
+passing human intelligence to machine in the form of token which forms neural networks
+ML (algo, classical statistical problems), Deep Learning (able to recognize), gen AI(able to recognise and generate new things), neural networks
+GEN AI - Agentic AI - gen AI + can take steps without interventions and get the task completions
+perception - perceiving about knowledge
+whether it will rain? is a ML problem, it will give you probable answers
+
+Evolution
+~1950-70 - Turing test (alan turing), ask computer and it will response, scientist gave it a 75 year back as AI. teach computer to generate outcomes eg checker game
+2006 - cracker how to training deep neural network problem was solved
+2012 - a powerful computer brain that learned to look at picture and name in them, win the big contest - AlexNex deep learning model
+2014 - programs were set to compete, one create fake images and other detected fake images, improvement followed
+2017 - a clever trick was formed to let computers learn which words or parts of sentences to focus on without going through them one by one
+read paper and get context of it: Attention is all you need by google
+2020 - computer started learning from enourmous amount of text data, which sound like humans
+2022 - scientist taught computer to show their thinking steps (chat-of-thought), use tools, act in reasoning, and learn from human feedback
+2023 - frameworks like autoGPT started making LLMs into smart assistants that can think, plan steps, and do tasks on their own
+2025 and beyond - models became smart helper that can think, plan and do real taks on their own, like ordering a cake, scheduling events or typing code
+
+Traditional AI (calculator)->genAI(Artist)->AgenticAI(project manager)
+building own models are not being focussed as mostly big companies are making/maintaining most famous model
+people are making AI solutions and tools, MCP around those models
+
+Attention - is all you need and Transformers
+tune, remove noise for models is attention. older RNNs (read sentence and forget previous context). able to connect dots from query from previous context what they have worked upons
+self attention - it was a breakthrough bcoz, it connects, reads simultaneously and weighs what actually matters
+Transformer (encoder, decoder, multi head attention, positional encoding, feed forward, layered architecture) - modal / architecture which implments this attention concept eg self-attention, multi-headed. encoder/decoder-gpt, claude, gemini. encoder convers input into meaningful representation, decoder uses encoders output to generate final output
+
+NLP - Natural Language Processing - machine translation, speech recognition, sentiment analysis, example is google translations. evolved in 3 waves - rule based (Eliza program), statistical (Markov chaining | N-gram), deep learning - Elisa system 1960 - program to pretend therapist
+RNN - Recurrent Neural Network (lack words relation)
+LSTM - Long Short-Term memory (lack words relation)
+
+LLMs - Large Language Models (trained on trillions of words), pretrained, GPT-4o, DeepSeek-R1, LLaMA 3
+
+Agentic AI - doer eg image how self-driving cars work
+systems that operate on their own, making decision, interacting with system/internet word and get work done.
+work along side other agents to get bigger job done
+
+genAI (researcher, writter) - you being the owner, you give prompt it generates and shows doesnt do any action
+
