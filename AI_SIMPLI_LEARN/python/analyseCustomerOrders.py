@@ -16,17 +16,17 @@ class Category(Enum):
     ELECTRONICS = "Electronics"
     HEALTH = "Health & Beauty"
     KITCHEN = "Home & Kitchen"
-    SPORTS = "Sports & Outdoors"
+    CLOTHING = "Clothing"
 
 
 newline = "\n----------------------------------"
 products = [
     {"id": "001", "name": "Teeth Whitening Kit", "category": Category.HEALTH.value, "price": 1.99, "stock": 150, "total_revenue": 0},
     {"id": "002", "name": "Wireless Earbuds", "category": Category.ELECTRONICS.value, "price": 2.23, "stock": 200, "total_revenue": 0},
-    {"id": "003", "name": "Yoga Mat", "category": Category.SPORTS.value, "price": 1, "stock": 100, "total_revenue": 0},
+    {"id": "003", "name": "Yoga Mat", "category": Category.CLOTHING.value, "price": 1, "stock": 100, "total_revenue": 0},
     {"id": "004", "name": "Smart Watch", "category": Category.ELECTRONICS.value, "price": 5, "stock": 75, "total_revenue": 0},
     {"id": "005", "name": "Blender", "category": Category.KITCHEN.value, "price": 2.3, "stock": 120, "total_revenue": 0},
-    {"id": "006", "name": "Running Shoes", "category": Category.SPORTS.value, "price": 6, "stock": 80, "total_revenue": 0},
+    {"id": "006", "name": "Running Shoes", "category": Category.CLOTHING.value, "price": 6, "stock": 80, "total_revenue": 0},
     {"id": "007", "name": "LED Desk Lamp", "category": Category.KITCHEN.value, "price": 3.99, "stock": 60, "total_revenue": 0},
     {"id": "008", "name": "Hair Dryer", "category": Category.HEALTH.value, "price": 2.49, "stock": 90, "total_revenue": 0},
     {"id": "009", "name": "Gaming Mouse", "category": Category.ELECTRONICS.value, "price": 2.65, "stock": 150, "total_revenue": 0},
@@ -72,7 +72,7 @@ def generate_sample_orders():
     orders = []
     for i in range(1, 51):
         date = datetime.now() - timedelta(days=random.randint(0, 30))
-        customer = random.choice(customers)["name"]
+        cust = random.choice(customers)["name"]
         # sample picks 3 distinct products; choice could repeat the same one
         chosen_products = random.sample(products, 5)
         product_line_items = [
@@ -80,7 +80,7 @@ def generate_sample_orders():
             for p in chosen_products
         ]
         total_spend = sum([p["price"] for p in chosen_products])
-        order = Order(id=i, customer=customer, date=date.strftime("%Y-%m-%d"),
+        order = Order(id=i, customer=cust, date=date.strftime("%Y-%m-%d"),
                       product_line_items=product_line_items, total_spend=total_spend)
         orders.append(order)
     return orders
@@ -147,19 +147,22 @@ def generate_business_insights():
     all_products_id = []
     uniq_product_list = [],
     customers_who_purchase_electronics = []
+    customers_who_purchase_clothing = []
     for order in list_of_orders:
         # get price for every product for that order
-        print("order", order)
         customer_name = order.customer
         for order_line in order.product_line_items:
             pid = order_line.get("id")
             all_products_id.append(pid)  # appending all product in a list so unqiue can be found
             product = get_product_by_id(pid)
             is_electronics = product["category"] == Category.ELECTRONICS.value
+            is_clothing = product["category"] == Category.CLOTHING.value
             if product is not None:
                 product["total_revenue"] += order_line.get("price")
             if is_electronics:
                 customers_who_purchase_electronics.append(customer_name)
+            if is_clothing:
+                customers_who_purchase_clothing.append(customer_name)
 
     uniq_product_list = set(all_products_id)
     uniq_product_list_detail = [get_product_by_id(id) for id in uniq_product_list]
@@ -171,11 +174,24 @@ def generate_business_insights():
             if category["category_id"] == product["category"]:
                 category["revenue"] += round(product["total_revenue"], 2)
 
+    # top 3 highest paying customers
+    highest_paying_customers = sorted(list_of_orders, key=lambda order: order.total_spend, reverse=True)[:3]
+    top_3_highest_paying_customers = [x.customer for x in highest_paying_customers]
+
     business_insight["category_revenue"] = uniq_category
     business_insight["uniq_product_list"] = uniq_product_list
     business_insight["uniq_product_list_detail"] = uniq_product_list_detail
-    business_insight["customers_who_purchase_electronics"] = set([x for x in customers_who_purchase_electronics])
+    business_insight["customers_who_purchase_electronics"] = list(set([x for x in customers_who_purchase_electronics]))
+    business_insight["customers_who_purchase_clothing"] = list(set([x for x in customers_who_purchase_clothing]))
+    business_insight["top_3_highest_paying_customers"] = top_3_highest_paying_customers
     return business_insight
+
+
+def print_customer_report():
+    print("Print a summary of each customer’s total spending and their classification", newline)
+    for cust in customers:
+        print(f"{cust.get("name")} - {cust.get("total_purchase")} - {cust.get("customer_type")}")
+    print(newline)
 
 
 list_of_orders = generate_sample_orders()
@@ -183,16 +199,35 @@ analyse_customer_orders()
 business_insight = generate_business_insights()
 list_of_unique_product_categories = [x["category_id"] for x in get_unique_product_category()];
 
-print("All Products", products, newline)
+"""
+Organize and display data
+• Print a summary of each customer’s total spending and their classification
+• Use set operations to find customers who purchased from multiple categories
+• Identify common customers who bought both electronics and clothing
+"""
+
+# print("All Products", products, newline)
 print("All Unique product categories", list_of_unique_product_categories, newline)
 print("All Customers with total_price updated", newline)
 for customer in customers:
     print(f"{customer["name"], customer["email"], customer["total_purchase"], customer["customer_type"]}")
 
-print("Revenue by product category", newline)
-for category_revenue in business_insight["category_revenue"]:
-    print(f"{category_revenue["category_id"]} - {category_revenue["revenue"]}")
-
 print("unique product list from all orders", newline)
 print("uniq_product_list_detail", [x["id"] + "--" + x["name"] for x in business_insight["uniq_product_list_detail"]])
+
 print("customers_who_purchase_electronics", business_insight["customers_who_purchase_electronics"])
+print("customers_who_purchase_clothing", business_insight["customers_who_purchase_clothing"])
+
+common_customers_who_bought_both_electronics_clothing = business_insight["customers_who_purchase_electronics"]
+common_customers_who_bought_both_electronics_clothing.extend(business_insight["customers_who_purchase_clothing"])
+common_customers_who_bought_both_electronics_clothing = set(common_customers_who_bought_both_electronics_clothing)
+print("common_customers_who_bought_both_electronics_clothing", common_customers_who_bought_both_electronics_clothing)
+
+print("top_3_highest_paying_customers", business_insight["top_3_highest_paying_customers"], newline)
+
+print("Customer report - CUSTOMER_WISE_REPORT", newline)
+print_customer_report()
+
+print("Revenue by product category - CATEGORY_WISE_SALES", newline)
+for category_revenue in business_insight["category_revenue"]:
+    print(f"{category_revenue["category_id"]} - {category_revenue["revenue"]}")
