@@ -35,6 +35,11 @@ LLMs - Large Language Models (trained on trillions of words), pretrained, GPT-4o
 Agentic AI - doer eg image how self-driving cars work
 systems that operate on their own, making decision, interacting with system/internet word and get work done.
 work along side other agents to get bigger job done
-
 genAI (researcher, writter) - you being the owner, you give prompt it generates and shows doesnt do any action
+interactivity->memory->autonomy
+
+thinking techniq - ReAct - Reasoning (thought)->Action->Observation->Repeat (loop) ->lacks recovery from loss eg if number of attempts passes and no result found. feedback is not there, it doesnt reflect back on wrong results, why
+thinkging techniq - Reflection - initial action or output->Evaluate->Reflection->Refinement->it refines and learns from mistake, feedback loop
+thinking techniq - Chain-of-Thought - decompose problems->improves accuracy->is widely used in math and logic tasks->mimics human logic
+tech stack - infra layer->model layer->orchestration layer->application layer
 
