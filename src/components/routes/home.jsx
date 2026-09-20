@@ -1,6 +1,7 @@
 import React from "react";
 import homeExperiences from "../../core/homeExperiences.js";
 import useMobile from "../../hooks/useMobile.js";
+import CertsView from "../body/component/CertsView";
 import HomeAppsWrapper from "../body/component/homeAppsWrapper.jsx";
 import Right from "../body/component/right.jsx";
 
@@ -16,6 +17,7 @@ const Home = () => {
         {homeExperiences.role.map((role, index) => <li key={`role-${index}`}
                                                        dangerouslySetInnerHTML={{__html: role}}/>)}
       </ul>
+	    <CertsView/>
       <HomeAppsWrapper/>
       {isMobile && <Right/>}
     </div>

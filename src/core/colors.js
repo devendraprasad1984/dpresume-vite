@@ -39,6 +39,9 @@ const darkColors = {
   colordeeppurple: "#673ab7",
   colordeeporange: "#ff5722",
 };
+export const generateHexColor = () =>
+  `#${Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, "0")}`;
+
 const colors = {
   light: lightColors,
   dark: darkColors
