@@ -1,0 +1,67 @@
+foundation and design of agentic ai systems
+-----------
+e.g hotel booking person dealing with ticket booking and similar way machine would work by asking and confirm informationa nd completing journey
+find example of buying $1 car from ai chat bot
+AI chat context plus it able to connect back to previous context is important
+infra and information is key to AI systems
+keep monitoring how AI system is behaving and responding
+
+why the stacks matter
+--
+LLMOPS - Large Language Model Operations
+
+from Chatbots to AI Agents
+--
+travel chatbot around 2022 (is like a friend, give advises)
+AI Agent->is like a proper personnel assistant (act-or), it will do all aspects, do chain of decisions and get the job done
+underlying tech stack matters and how smart, fast and reliable that assistant is
+
+hellucinating (ai models which one to use and how much that model is trained on or context is missing also) - guessing and AI treats that guess as true
+
+how monitoring layer know what/how to evaluate
+---
+what AI is doing (chat, context, tools, shells etc), all of it needs to be passed for evaluation
+LLM as a Judge - evaluate tokens, output is good or not, generates metrics, reasonablity, tone of responses etc
+read about custome support agent, home design agent, airline chatbot
+when AI fails, trust breaks (microsofts Tay Chatbot, and Air Canada Chatbot)
+security layer has to be very robust, before anything entry, security gate has to be passed
+
+infra layer->model layer->application layer->orchestration layer
+read about Maya, where and how is the information is stored
+
+train model for relevant context
+
+every AI agent needs computing power for 2 very different jobs
+compute (training time) vs inference(serving time, running cost)
+
+Own (self hosting), Rent (cloud) or Mix
+
+provision throughput-->read about it
+
+pay per token model
+
+handling rush hour
+->slow ans, long waits, frustrated users, walking away
+->too much power, machines sit idle and money is wasted every hour
+
+vertical scaling, horizontal scaling auto scaling
+eg food delivery app via ai order placement, weekdays to weekends, most recent etc, automatically things to happen
+
+MLOPs - Machine Learning OPs
+
+no system including AI to be made productionised with Monitoring, Observability and Results monitoring too
+
+
+where AI Agents keep their data
+structured database (neat tables, customer orders), object storage (big files, documents, photos, audio video), vector databases (stores meaning, so AI can find similar ideas)->smart about knowing context even if some keywords are not mentioned in the query
+
+RAG - Retrieval Augmented Generation, build on top of vector DBs
+
+context traught - white paper
+
+security threats to AI agent
+prompt injection, tool injection, jailbreaking, data leakage -->guard rails layer
+defense: give agents only the access they need, and ask a human before risky actions
+
+
+

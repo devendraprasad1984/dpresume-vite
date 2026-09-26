@@ -43,3 +43,6 @@ thinkging techniq - Reflection - initial action or output->Evaluate->Reflection-
 thinking techniq - Chain-of-Thought - decompose problems->improves accuracy->is widely used in math and logic tasks->mimics human logic
 tech stack - infra layer->model layer->orchestration layer->application layer
 
+
+
+
