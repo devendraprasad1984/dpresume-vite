@@ -64,4 +64,101 @@ prompt injection, tool injection, jailbreaking, data leakage -->guard rails laye
 defense: give agents only the access they need, and ask a human before risky actions
 
 
+four layer
+kitchen->infra
+head/waiter->orc9
+seating,menu,what customer sees->application
+
+agentic ai orchestration and application layer
+eg AI assistant that was giving somewhat correct answers those days, but few months later has started giving wrong answers, what is missing?
+agenda has shifted, but model is not being updated
+
+head waiter:
+orc9 layer->agents manager, who does what and in what order, it has to be logical
+eg. travel agent to plan trip and itinerary is very important
+coordinating between the agents, ticket, website, price checking, hotel, cab, dining coordiations etc
+
+api==tools,
+MCP-Model Context Protocol->behind the scene API only are being called only based on context being given
+orc9 layer->decides who does what, coordinates tools apps agents, remembers progress and recovers from mistakes, keeps record so team can check and undo actions
+
+agentic framework: ready made toolkits-->work on its own, grows easily, shows its work, adapts easily
+e.g ikea delivery ready made furniture and you assemble at home following all instructions etc
+llama, langchain are frameworks
+
+
+langraph: works as a flowchart, scripted flowchart
+workflow: the route, steps in fixed order like working on a recipie
+agent: the decision maker, picks the path at each turn
+eg a loan request, documents complete? go to CIBIL to check credit score, missing? ask customer
+this is cost effective solution
+
+CrewAI: a team of specialist agents
+each agent crew is a specialist in a specific area
+each has a clear role and goal
+each gets its own skills and tools
+hand off between agents automatically
+the crew can be customised for any project
+
+AutoGen: agents that talk to each other
+open source kit from microsoft for building agents that solves problems chatting with each other like colleagues in meeting
+agents cross question each other and correct each others work
+
+crewAI and autogen - are costlier than langraph (its not autonomous, doesnt decison by itself)
+
+LangChain: the connector kit
+multi agent architecture, orchestrates between agents and tools
+connects tools like calc, db and apps
+lets the ai decide next steps
+carries out tasks based on your instructions
+3 superpowers, planning, using tools and memory
+can take autonomous decision with less cost
+
+A2A: agent to agent
+
+Planning->tool calling->memory
+planning->breaks a big goal into small steps and puts them in order, like a checklist
+tool calling->calls apps to get info and take actions like check calendar, send email etc
+memory->remembers what happened earlier, so never have to repeat
+
+out of available many tools, how agents pick the right one, this is called routing
+
+2 thinking styles
+step by step
+plan first
+chain of thought - CoT
+Plan and Execute
+AI model plan mode
+
+LLM call decides for next step, make decision, latency and token cost
+
+monitoring agents with LangSmith is a framework - is a tool that records and reviews every step an agent takes.
+monitoring must be paired with human controls to pause, reset or stop the agent
+catches wrong, biased or unsafe answers in real time, before customers sees them
+fixes small problems early, before they become expensive
+checks that the agents follows company rules, processes and tone
+MLFlow, LangFuse are similar frameworks for monitoring and observability
+
+Automation tools: Zapier(no-code platform), Make.com and n8n - automate tasks- read more compare them
+owning vs renting orc9 layer
+Modal as a Service - MaaS eg Amazon Bedrock, OpenAI, Cohere, Llama2, Mistral, MosaicML, Anthropic, Google Gemini
+flexibility and ownership leveragence
+
+
+
+Application Layer - the dining room in restaurant example, what user sees
+userful insights
+simple answers
+many channels
+build trust
+
+token streaming, word by word streaming
+
+
+
+
+
+
+
+
 
