@@ -1,7 +1,7 @@
 import {useEffect} from "react";
 
 const SELECTOR = ".reveal";
-const VISIBLE = "is-visible";
+const FLAG = "revealed";
 
 /**
  * Reveals every `.reveal` element once it scrolls into view.
@@ -9,6 +9,10 @@ const VISIBLE = "is-visible";
  * Mounted once from App so components only need the `reveal` class (plus an
  * optional `--stagger` custom property) to opt in. A MutationObserver picks up
  * nodes added by route changes.
+ *
+ * The visible state is stored in `data-revealed` rather than a class: React
+ * rewrites `className` wholesale on re-render, which would silently drop an
+ * imperatively added class and leave the element stuck at opacity 0.
  */
 const useReveal = () => {
   useEffect(() => {
@@ -21,7 +25,7 @@ const useReveal = () => {
     if (reduceMotion) {
       document
         .querySelectorAll(SELECTOR)
-        .forEach((node) => node.classList.add(VISIBLE));
+        .forEach((node) => (node.dataset[FLAG] = "true"));
       return undefined;
     }
 
@@ -29,7 +33,7 @@ const useReveal = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          entry.target.classList.add(VISIBLE);
+          entry.target.dataset[FLAG] = "true";
           observer.unobserve(entry.target);
         });
       },
@@ -38,7 +42,7 @@ const useReveal = () => {
 
     const observeAll = () => {
       document.querySelectorAll(SELECTOR).forEach((node) => {
-        if (node.classList.contains(VISIBLE)) return;
+        if (node.dataset[FLAG]) return;
         observer.observe(node);
       });
     };

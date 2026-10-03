@@ -4,7 +4,7 @@ import LeftMobile from "./component/leftMobile.jsx";
 
 const BodyMobile = () => {
   return <React.Fragment>
-    <div className="wid100 main-center mwid100 overflow"><AppRoutes/></div>
+    <div className="wid100 main-center mwid100 overflow bg-white p-5"><AppRoutes/></div>
   </React.Fragment>;
 };
 export default BodyMobile;

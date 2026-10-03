@@ -87,7 +87,7 @@
   will-change: opacity, transform;
 }
 
-.reveal.is-visible {
+.reveal[data-revealed] {
   opacity: 1;
   transform: none;
 }
@@ -202,6 +202,19 @@
   .link-sweep::after,
   .anim-shimmer::after {
     transition: none;
+  }
+
+  .dp-project,
+  .dp-project::before,
+  .dp-project__chevron,
+  .dp-project__panel,
+  .dp-project__panel-inner p {
+    transition: none !important;
+  }
+
+  .dp-project__panel-inner p {
+    opacity: 1;
+    transform: none;
   }
 
   .hover-lift:hover,

@@ -310,7 +310,6 @@ body::before {
 }
 
 .dp-role-list li:hover {
-  padding-left: 10px;
   border-bottom-color: var(--border-soft);
   color: var(--text-strong);
 }
@@ -512,6 +511,231 @@ a.skill-label:hover {
   color: #ffffff !important;
 }
 
+/* --- project cards ----------------------------------------------------------- */
+
+.dp-projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--12px, 12px);
+  width: 100%;
+}
+
+.dp-project {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 260ms var(--ease-out), box-shadow 260ms var(--ease-out),
+    transform 260ms var(--ease-out);
+}
+
+/* Gradient accent rail; grows to full height once the card is expanded. */
+.dp-project::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 14px;
+  inset-inline-start: 0;
+  width: 3px;
+  height: 26px;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(180deg, var(--brand), var(--accent));
+  transition: height 320ms var(--ease-out);
+}
+
+.dp-project:hover,
+.dp-project.is-open {
+  border-color: color-mix(in srgb, var(--brand) 42%, var(--border-soft));
+  box-shadow: var(--shadow-md);
+}
+
+.dp-project.is-open::before {
+  height: calc(100% - 28px);
+}
+
+.dp-project__head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "meta chevron"
+    "title chevron"
+    "tech chevron";
+  align-items: center;
+  justify-content: start;
+  gap: 6px 14px;
+  width: 100%;
+  /* Legacy `button {}` forces height:44px and clips the grid rows. */
+  height: auto;
+  min-height: 0;
+  padding: var(--14px, 14px) var(--18px, 18px);
+  padding-inline-start: var(--20px);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+  line-height: 1.45;
+}
+
+/* Legacy `button span {}` forces line-height:50px under 991px. */
+.dp-project__head span {
+  line-height: inherit;
+}
+
+.dp-project__meta {
+  grid-area: meta;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.dp-project__role {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.dp-project__period {
+  padding: 2px 9px;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  background: var(--surface-raised);
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--text-muted);
+}
+
+.dp-project__title {
+  grid-area: title;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.dp-project__tech {
+  grid-area: tech;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-block-start: 2px;
+}
+
+.dp-project__tag {
+  padding: 2px 9px;
+  border: 1px solid color-mix(in srgb, var(--brand) 26%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--brand) 9%, transparent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--brand);
+}
+
+.dp-project__chevron {
+  grid-area: chevron;
+  position: relative;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border-soft);
+  border-radius: 50%;
+  background: var(--surface-raised);
+  transition: transform 320ms var(--ease-spring), border-color 260ms var(--ease-out),
+    background 260ms var(--ease-out);
+}
+
+/* Chevron glyph drawn from two borders so it needs no icon font. */
+.dp-project__chevron::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 9px;
+  inset-inline-start: 10px;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--text-muted);
+  border-bottom: 2px solid var(--text-muted);
+  transform: rotate(45deg);
+  transition: border-color 260ms var(--ease-out);
+}
+
+.dp-project__head:hover .dp-project__chevron {
+  border-color: var(--brand);
+  background: color-mix(in srgb, var(--brand) 12%, transparent);
+}
+
+.dp-project__head:hover .dp-project__chevron::after {
+  border-color: var(--brand);
+}
+
+.dp-project.is-open .dp-project__chevron {
+  transform: rotate(180deg);
+  border-color: var(--brand);
+  background: color-mix(in srgb, var(--brand) 14%, transparent);
+}
+
+.dp-project.is-open .dp-project__chevron::after {
+  border-color: var(--brand);
+}
+
+.dp-project__visit {
+  position: absolute;
+  inset-block-start: 12px;
+  inset-inline-end: 52px;
+  z-index: 1;
+  padding: 3px 10px;
+  border: 1px solid color-mix(in srgb, var(--brand) 32%, transparent);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--brand) !important;
+  transition: background 240ms var(--ease-out), color 240ms var(--ease-out);
+}
+
+.dp-project__visit:hover {
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  border-color: transparent;
+  color: #ffffff !important;
+}
+
+/* 0fr -> 1fr animates to the content's natural height without a magic number. */
+.dp-project__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 320ms var(--ease-out);
+}
+
+.dp-project.is-open .dp-project__panel {
+  grid-template-rows: 1fr;
+}
+
+.dp-project__panel-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.dp-project__panel-inner p {
+  margin: 0;
+  padding: 0 var(--18px, 18px) var(--16px, 16px) var(--20px);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-soft);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 260ms var(--ease-out) 60ms, transform 260ms var(--ease-out) 60ms;
+}
+
+.dp-project.is-open .dp-project__panel-inner p {
+  opacity: 1;
+  transform: none;
+}
+
 /* --- generic link behaviour -------------------------------------------------- */
 
 .hyperlink {
@@ -555,6 +779,22 @@ a.skill-label:hover {
 
   .dp-avatar-wrap {
     align-self: flex-start;
+  }
+
+  /* Visit chip moves onto its own row so it can't collide with the title. */
+  .dp-project__visit {
+    position: static;
+    display: inline-block;
+    margin: 0 0 var(--10px, 10px) var(--18px, 18px);
+  }
+
+  .dp-project__head {
+    padding-inline: var(--14px, 14px);
+    padding-inline-start: var(--18px, 18px);
+  }
+
+  .dp-project__title {
+    font-size: 0.96rem;
   }
 
   .dp-nav {

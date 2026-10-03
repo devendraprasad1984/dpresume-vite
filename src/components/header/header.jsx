@@ -16,9 +16,9 @@ const Header = () => {
 
     <div className="relative wid100 glass dp-hero anim-fade-up" style={{"--stagger": 2}}>
       <div className="flex row flex-start align-center wid100 mflex-start gap5 mcol">
-        <div className="dp-avatar-wrap anim-float">
+        <a className="dp-avatar-wrap anim-float" href="/">
           <img src="images/my-pic.jpeg" className="logo" alt="Devendra Prasad"/>
-        </div>
+        </a>
 
         <div className="mcol flex row align-center wid100 space-between gap5">
           <div className="col left wid100">

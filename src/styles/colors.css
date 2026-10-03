@@ -86,10 +86,6 @@
   color: var(--color-white);
 }
 
-.bg-white {
-  background-color: white !important;
-  color: black;
-}
 
 .bg-danger {
   background-color: #dc3545 !important;
