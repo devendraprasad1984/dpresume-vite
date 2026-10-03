@@ -604,7 +604,7 @@ a.skill-label:hover {
   padding: 2px 9px;
   border: 1px solid var(--border-soft);
   border-radius: 999px;
-  background: var(--surface-raised);
+  background: var(--surface-2);
   font-size: 0.72rem;
   font-weight: 600;
   white-space: nowrap;
@@ -645,7 +645,7 @@ a.skill-label:hover {
   height: 28px;
   border: 1px solid var(--border-soft);
   border-radius: 50%;
-  background: var(--surface-raised);
+  background: var(--surface-2);
   transition: transform 320ms var(--ease-spring), border-color 260ms var(--ease-out),
     background 260ms var(--ease-out);
 }
@@ -725,7 +725,7 @@ a.skill-label:hover {
   padding: 0 var(--18px, 18px) var(--16px, 16px) var(--20px);
   font-size: 0.92rem;
   line-height: 1.65;
-  color: var(--text-soft);
+  color: var(--text-body);
   opacity: 0;
   transform: translateY(-4px);
   transition: opacity 260ms var(--ease-out) 60ms, transform 260ms var(--ease-out) 60ms;
@@ -734,6 +734,340 @@ a.skill-label:hover {
 .dp-project.is-open .dp-project__panel-inner p {
   opacity: 1;
   transform: none;
+}
+
+/* --- form controls ----------------------------------------------------------- */
+
+/* Selector shapes mirror legacy input.css so these win on source order rather
+   than on specificity escalation. */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input:not([type]),
+textarea,
+select {
+  /* `width` deliberately omitted: legacy input.css already sets it for the
+     types that need it, and forcing it here would override .wid70 / .wid30. */
+  margin: 4px 0;
+  padding: 11px 14px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-strong-soft);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-body);
+  font-family: inherit;
+  font-size: 0.94rem;
+  line-height: 1.45;
+  box-shadow: var(--shadow-xs);
+  transition: border-color 220ms var(--ease-out), box-shadow 220ms var(--ease-out),
+    background 220ms var(--ease-out);
+}
+
+/* Legacy input.css gives textarea a fixed height and a 2px bordered box. */
+textarea {
+  height: auto;
+  min-height: 132px;
+  padding: 12px 14px;
+  border: 1px solid var(--border-strong-soft);
+  border-radius: var(--radius-sm);
+  resize: vertical;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="url"]:hover,
+input[type="date"]:hover,
+input:not([type]):hover,
+textarea:hover,
+select:hover {
+  border-color: color-mix(in srgb, var(--brand) 40%, var(--border-strong-soft));
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+input:not([type]):focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--brand);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent);
+}
+
+::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background: var(--surface-sunken);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* :user-invalid only fires after interaction, so untouched fields stay neutral. */
+input:user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+  border-color: var(--danger);
+}
+
+input:user-invalid:focus,
+textarea:user-invalid:focus,
+select:user-invalid:focus {
+  box-shadow: 0 0 0 3px var(--danger-soft);
+}
+
+/* Native chevron is removed by appearance:none, so one is drawn inline. */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-inline-end: 38px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+[data-theme="dark"] select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  accent-color: var(--brand);
+  cursor: pointer;
+}
+
+input[type="range"] {
+  accent-color: var(--brand);
+  cursor: pointer;
+}
+
+input[type="file"] {
+  color: var(--text-body);
+}
+
+input[type="file"]::file-selector-button {
+  margin-inline-end: 10px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  color: var(--text-on-brand);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Button-ish inputs inherit `button { height: 44px }` from legacy button.css. */
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  width: auto;
+  height: auto;
+  padding: 11px 22px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  color: var(--text-on-brand) !important;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out),
+    filter 220ms var(--ease-out);
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-brand);
+  filter: brightness(1.05);
+}
+
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active {
+  transform: translateY(0);
+}
+
+/* `.bg-light` + `.btn` are each used in exactly one place: the passphrase input
+   group. They belong to the field's presentation, so they're themed here rather
+   than left as a white slab with unreadable sea-green text in dark mode. */
+.bg-light {
+  background: transparent !important;
+}
+
+.row.gap5.bg-light.pad5 {
+  padding: 0 !important;
+}
+
+.btn {
+  height: auto !important;
+  /* The parent .row stretches children, which made the button 54px against a
+     46px input. Center it and match the field height explicitly. */
+  align-self: center;
+  min-height: 46px !important;
+  padding: 11px 20px !important;
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+  background: var(--brand) !important;
+  color: #fff !important;
+  font-weight: 650;
+  font-size: var(--14px, 14px);
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn:hover {
+  background: var(--brand-strong) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -6px color-mix(in srgb, var(--brand) 55%, transparent);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* Dark-mode --brand (#818cf8) is light: white text on it is only ~3:1. Dark
+   text reaches ~5.7:1 and matches the active nav pill's treatment. */
+[data-theme="dark"] .btn {
+  color: #0f172a !important;
+}
+
+/* --- MUI field parity --------------------------------------------------------- */
+/* Verified against the live DOM on /#/apps: the underline variant is
+   .MuiInput-root > .MuiInputBase-input, and the selects are
+   .MuiOutlinedInput-root > .MuiNativeSelect-select. The INNER input must be
+   stripped first -- the generic input rule above otherwise draws a second,
+   nested border inside MUI's own field. */
+
+.MuiInputBase-input,
+.MuiSelect-nativeInput {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+}
+
+/* MUI pads its select to 56px tall; trim it so selects line up with the
+   46px native fields instead of standing 12px taller. */
+.MuiSelect-select,
+.MuiNativeSelect-select,
+.MuiOutlinedInput-root .MuiInputBase-input {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.MuiInputBase-input:focus,
+.MuiSelect-nativeInput:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.MuiInputBase-root,
+.MuiInputBase-input {
+  font-family: inherit !important;
+  color: var(--text-body) !important;
+}
+
+/* Give both MUI variants the same chrome as the native fields. */
+.MuiInput-root,
+.MuiOutlinedInput-root {
+  box-sizing: border-box !important;
+  min-height: 46px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--border-strong-soft) !important;
+  border-radius: var(--radius-sm) !important;
+  background: var(--surface) !important;
+  box-shadow: var(--shadow-xs) !important;
+  transition: border-color 220ms var(--ease-out), box-shadow 220ms var(--ease-out) !important;
+}
+
+.MuiInput-root:hover,
+.MuiOutlinedInput-root:hover {
+  border-color: color-mix(in srgb, var(--brand) 40%, var(--border-strong-soft)) !important;
+}
+
+.MuiInput-root.Mui-focused,
+.MuiOutlinedInput-root.Mui-focused {
+  border-color: var(--brand) !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent) !important;
+}
+
+/* MUI draws the underline with ::before/::after and the outline with a
+   fieldset -- both are redundant now that the root carries the border. */
+.MuiInput-underline::before,
+.MuiInput-underline::after,
+.MuiInput-root::before,
+.MuiInput-root::after {
+  display: none !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: 0 !important;
+}
+
+.MuiInputLabel-root {
+  color: var(--text-muted) !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: var(--brand) !important;
+}
+
+.MuiSvgIcon-root {
+  color: var(--text-muted) !important;
+}
+
+.MuiPaper-root {
+  background: var(--surface) !important;
+  color: var(--text-body) !important;
+}
+
+.MuiMenuItem-root:hover {
+  background: var(--brand-soft) !important;
+}
+
+.MuiMenuItem-root.Mui-selected {
+  background: color-mix(in srgb, var(--brand) 18%, transparent) !important;
 }
 
 /* --- generic link behaviour -------------------------------------------------- */

@@ -212,6 +212,18 @@
     transition: none !important;
   }
 
+  input,
+  textarea,
+  select {
+    transition: none !important;
+  }
+
+  input[type="submit"]:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover {
+    transform: none;
+  }
+
   .dp-project__panel-inner p {
     opacity: 1;
     transform: none;

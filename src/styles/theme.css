@@ -14,6 +14,9 @@
   --accent: #7c3aed;
   --accent-soft: #f5f3ff;
 
+  --danger: #dc2626;
+  --danger-soft: rgba(220, 38, 38, 0.12);
+
   --surface: #ffffff;
   --surface-2: #f8fafc;
   --surface-sunken: #f1f5f9;
@@ -79,6 +82,9 @@
   --brand-soft: rgba(129, 140, 248, 0.14);
   --accent: #c084fc;
   --accent-soft: rgba(192, 132, 252, 0.14);
+
+  --danger: #f87171;
+  --danger-soft: rgba(248, 113, 113, 0.16);
 
   --surface: #131c2e;
   --surface-2: #18243a;
