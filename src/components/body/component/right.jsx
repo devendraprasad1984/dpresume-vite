@@ -1,18 +1,18 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
 import Industry from "./industry.jsx";
 import Skills from "./skills.jsx";
 import LiveApps from "./liveApps.jsx";
 import Community from "./community.jsx";
 
+const panels = [LiveApps, Community, Skills, Industry];
+
 const Right = () => {
-  return <div className="gap10 col">
-    <div className="col">
-      <LiveApps/>
-      <Community/>
-      <Skills/>
-      <Industry/>
-    </div>
+  return <div className="col gap10">
+    {panels.map((Panel, index) => (
+      <div key={Panel.name} className="reveal" style={{"--stagger": index + 1}}>
+        <Panel/>
+      </div>
+    ))}
   </div>;
 };
+
 export default Right;

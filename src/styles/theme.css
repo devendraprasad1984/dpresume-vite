@@ -1,0 +1,135 @@
+/*
+  Modern design tokens.
+  Loaded AFTER root.css so it re-points the legacy --app-* variables at the new
+  palette. Existing components therefore re-skin without touching their markup.
+*/
+
+:root {
+  color-scheme: light;
+
+  /* --- new primitives --- */
+  --brand: #4f46e5;
+  --brand-strong: #4338ca;
+  --brand-soft: #eef2ff;
+  --accent: #7c3aed;
+  --accent-soft: #f5f3ff;
+
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --surface-sunken: #f1f5f9;
+  --surface-glass: rgba(255, 255, 255, 0.72);
+  --surface-glass-border: rgba(15, 23, 42, 0.08);
+
+  --page-bg: #eef1f8;
+  --page-glow-1: rgba(99, 102, 241, 0.18);
+  --page-glow-2: rgba(168, 85, 247, 0.14);
+
+  --text-strong: #0f172a;
+  --text-body: #273244;
+  --text-muted: #64748b;
+  --text-on-brand: #ffffff;
+
+  --border-soft: rgba(15, 23, 42, 0.08);
+  --border-strong-soft: rgba(15, 23, 42, 0.16);
+
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 10px 30px -12px rgba(15, 23, 42, 0.22);
+  --shadow-lg: 0 24px 60px -24px rgba(15, 23, 42, 0.35);
+  --shadow-brand: 0 18px 40px -20px rgba(79, 70, 229, 0.55);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* --- legacy token re-points --- */
+  --app-text-color: #273244;
+  --app-font-color: #273244;
+  --app-bg-color: #eef1f8;
+  --center-body-bg-color: transparent;
+  --app-bg-left-color: transparent;
+  --app-bg-center-color: transparent;
+  --app-bg-right-color: transparent;
+  --app-bg-header: transparent;
+  --app-bg-footer: transparent;
+  --footer-text-color: #64748b;
+  --border-color: rgba(15, 23, 42, 0.08);
+  --color-slate-blue: rgba(255, 255, 255, 0.72);
+  --color-slate-lighter-blue: #e0e7ff;
+  --hyperlink-color: #4f46e5;
+  --acitve-link-bg-color: #4f46e5;
+  --acitve-link-text-color: #ffffff;
+  --hover-bg-color: #eef2ff;
+  --hover-color: #4338ca;
+  --primary-button-color: #4f46e5;
+  --primary-button-color-hover: #4338ca;
+  --code-bg: #f1f5f9;
+  --background-color: #eef1f8;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --brand: #818cf8;
+  --brand-strong: #a5b4fc;
+  --brand-soft: rgba(129, 140, 248, 0.14);
+  --accent: #c084fc;
+  --accent-soft: rgba(192, 132, 252, 0.14);
+
+  --surface: #131c2e;
+  --surface-2: #18243a;
+  --surface-sunken: #0f1727;
+  --surface-glass: rgba(23, 34, 54, 0.72);
+  --surface-glass-border: rgba(148, 163, 184, 0.16);
+
+  --page-bg: #070b14;
+  --page-glow-1: rgba(99, 102, 241, 0.26);
+  --page-glow-2: rgba(168, 85, 247, 0.2);
+
+  --text-strong: #f1f5f9;
+  --text-body: #dbe3f0;
+  --text-muted: #94a3b8;
+  --text-on-brand: #0b1220;
+
+  --border-soft: rgba(148, 163, 184, 0.16);
+  --border-strong-soft: rgba(148, 163, 184, 0.3);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 14px 34px -14px rgba(0, 0, 0, 0.75);
+  --shadow-lg: 0 28px 70px -28px rgba(0, 0, 0, 0.85);
+  --shadow-brand: 0 18px 44px -20px rgba(129, 140, 248, 0.5);
+
+  /* legacy token re-points */
+  --app-text-color: #dbe3f0;
+  --app-font-color: #dbe3f0;
+  --app-bg-color: #070b14;
+  --footer-text-color: #94a3b8;
+  --border-color: rgba(148, 163, 184, 0.16);
+  --color-slate-blue: rgba(23, 34, 54, 0.72);
+  --color-slate-lighter-blue: rgba(129, 140, 248, 0.2);
+  --hyperlink-color: #a5b4fc;
+  --acitve-link-bg-color: #818cf8;
+  --acitve-link-text-color: #0b1220;
+  --hover-bg-color: rgba(129, 140, 248, 0.14);
+  --hover-color: #c7d2fe;
+  --primary-button-color: #818cf8;
+  --primary-button-color-hover: #a5b4fc;
+  --code-bg: #0f1727;
+  --background-color: #070b14;
+
+  --color-white: #f1f5f9;
+  --color-glass: rgba(23, 34, 54, 0.75);
+  --color-fg-default: #f1f5f9;
+  --color-fg-muted: #cbd5f5;
+  --color-fg-subtle: #94a3b8;
+  --color-bg-default: #131c2e;
+  --color-bg-subtle: #18243a;
+  --color-bg-inset: #0f1727;
+  --color-border-default: rgba(148, 163, 184, 0.16);
+  --copy-color: rgba(241, 245, 249, 0.88);
+}

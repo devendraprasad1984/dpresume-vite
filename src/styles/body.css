@@ -3,10 +3,6 @@
   background-color: var(--center-body-bg-color);
 }
 
-body * {
-  color: #454848;
-}
-
 .main-left {
   height: auto;
   max-height: var(--container-height);

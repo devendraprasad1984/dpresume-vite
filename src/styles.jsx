@@ -1,7 +1,9 @@
 import React from "react";
 
+import "./styles/tailwind.css";
 import "./styles/fontFaces.css";
 import "./styles/root.css";
+import "./styles/theme.css";
 import "./styles/control.css";
 import "./styles/colors.css";
 import "./styles/gimic.css";
@@ -22,6 +24,8 @@ import "./styles/override.css";
 import "./styles/_spinner.css";
 import "./styles/jsTest.css";
 import "./styles/grid-flex.css";
+import "./styles/animations.css";
+import "./styles/modern.css";
 
 function Styles() {
   return null;

@@ -1,28 +1,23 @@
-import {useMemo} from "react";
-import {generateHexColor} from "../../../core/colors";
+const certs = ["cert1.png", "cert2.png", "cert3.png"];
 
-const imgStyle = {
-	padding: "10px",
-	height: "220px",
-	width: "350px"
-};
-const certs = [
-	"cert1.png",
-	"cert2.png",
-	"cert3.png"
-];
 const CertsView = () => {
-	return <div className="col gap2 margin--y-20">
-		<h2 className="underline bold text-success">Certificates</h2>
-		<div className="grid grid3x3 pad5 gap5 mflex mcol">
-			{certs.map((c, i) => {
-				const color = useMemo(() => generateHexColor(), []);
-				const colorStyle = {border: `5px solid ${color}`};
-				return <a href={`/images/${c}`} target="_blank">
-					<img key={`cert-${c}-${i}`} style={{...imgStyle, ...colorStyle}} height="200px" width="200px" src={`/images/${c}`}/>
-				</a>
-			})}
-		</div>
-	</div>;
+  return <div className="col gap5 margin--y-20">
+    <h2 className="dp-card__title">Certificates</h2>
+    <div className="dp-certs">
+      {certs.map((cert, index) => (
+        <a
+          key={cert}
+          className="dp-cert reveal"
+          style={{"--stagger": index + 1}}
+          href={`/images/${cert}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={`/images/${cert}`} alt={`Certificate ${index + 1}`} loading="lazy"/>
+        </a>
+      ))}
+    </div>
+  </div>;
 };
+
 export default CertsView;

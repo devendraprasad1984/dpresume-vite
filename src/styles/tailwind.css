@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/*
+  Tailwind v4 emits everything inside cascade layers (theme/base/components/utilities).
+  Every legacy stylesheet in this project is UNLAYERED, and unlayered CSS always wins
+  over layered CSS regardless of source order. That means pre-existing classes such as
+  .flex, .grid, .relative, .text-white, .bg-dark and .active keep their original
+  behaviour and Tailwind cannot silently break the layout.
+
+  Consequence: when a Tailwind utility must beat a legacy rule, use the `!` important
+  modifier (e.g. `block!`) or reach for a vanilla class in modern.css.
+*/
+
+@source "../components";
+@source "../App.jsx";
+
+@theme {
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-300: #a5b4fc;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-accent-400: #c084fc;
+  --color-accent-500: #a855f7;
+  --color-accent-600: #7c3aed;
+}

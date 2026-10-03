@@ -1,15 +1,12 @@
-import useMobile from "../../../hooks/useMobile.js";
 import PrintList from "./printList.jsx";
 
-const gridIfMobile = "grid autofit150";
+const skills = ["Javascript", "React.JS", "AEM", "Python", "MySql"];
+
 const Skills = () => {
-  const isMobile = useMobile();
-  const extendedClass = `${isMobile ? gridIfMobile : " "}`;
-  return <div className={`pad10`}>
-    <div className="size24 bold">Skills</div>
-    <ul className={`margin--y-10 flix ${extendedClass}`}>
-      {PrintList(["Javascript", "React.JS", "AEM", "Python", "MySql"], "counter-color-light-blue", "grid2x2")}
-    </ul>
+  return <div className="dp-card hover-lift anim-shimmer">
+    <div className="dp-card__title">Skills</div>
+    {PrintList(skills, "counter-color-light-blue", "flix")}
   </div>;
 };
+
 export default Skills;

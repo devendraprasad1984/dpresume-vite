@@ -2,20 +2,23 @@ import Footer from "./components/footer/footer.jsx";
 import Header from "./components/header/header.jsx";
 import BodyDesktop from "./components/body/bodyDesktop.jsx";
 import useMobile from "./hooks/useMobile.js";
+import useReveal from "./hooks/useReveal.js";
 import bodyMobile from "./components/body/bodyMobile.jsx";
 import Styles from "./styles.jsx";
 
 function App() {
   const isMobile = useMobile();
   const MainBody = isMobile ? bodyMobile : BodyDesktop;
+  useReveal();
+
   return <>
     <Styles/>
     <div className="col space-between main-outer pad10 center">
-      <header className="header"><Header/></header>
+      <header className="header anim-fade-down"><Header/></header>
       <section className="body flex row mcol space-between wid100">
         <MainBody/>
       </section>
-      <footer className="footer"><Footer/></footer>
+      <footer className="footer reveal"><Footer/></footer>
     </div>
   </>;
 }

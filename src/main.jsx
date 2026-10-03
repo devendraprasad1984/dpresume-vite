@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./styles/index.css";
 import App from "./App.jsx";
 import {HashRouter} from "react-router-dom";
-import "./styles/index.css";
 
 //create root dependency and lifecycle
 ReactDOM.createRoot(document.getElementById("root")).render(
