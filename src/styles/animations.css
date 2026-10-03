@@ -218,6 +218,10 @@
     transition: none !important;
   }
 
+  .dp-compare__card {
+    transition: none !important;
+  }
+
   input[type="submit"]:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover {

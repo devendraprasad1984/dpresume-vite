@@ -17,6 +17,11 @@
   --danger: #dc2626;
   --danger-soft: rgba(220, 38, 38, 0.12);
 
+  --positive: #059669;
+  --positive-soft: rgba(5, 150, 105, 0.12);
+  --warn: #b45309;
+  --warn-soft: rgba(180, 83, 9, 0.12);
+
   --surface: #ffffff;
   --surface-2: #f8fafc;
   --surface-sunken: #f1f5f9;
@@ -85,6 +90,11 @@
 
   --danger: #f87171;
   --danger-soft: rgba(248, 113, 113, 0.16);
+
+  --positive: #34d399;
+  --positive-soft: rgba(52, 211, 153, 0.16);
+  --warn: #fbbf24;
+  --warn-soft: rgba(251, 191, 36, 0.16);
 
   --surface: #131c2e;
   --surface-2: #18243a;

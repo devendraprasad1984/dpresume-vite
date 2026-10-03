@@ -50,6 +50,40 @@ body::before {
   overflow: visible;
 }
 
+/* The legacy `html, body { overflow-x: hidden; overflow-y: scroll }` rule made
+   BODY itself a scroll container (computed "hidden scroll"). A sticky descendant
+   then resolves against body's full-height scrollport rather than the viewport,
+   so it silently never pins. The same declarations on <html> propagate to the
+   viewport and keep both the horizontal-overflow guard and the stable scrollbar
+   gutter, so body can safely return to visible. */
+body {
+  overflow: visible;
+}
+
+/* Read-along sidebar. The rail is taller than the viewport, so it scrolls with
+   the page until its bottom edge reaches the bottom of the screen and then pins
+   there -- every card stays reachable without a nested scrollbar.
+
+   The negative `top` is the mechanism: sticky offsets are minimum constraints,
+   so `bottom` would only ever pull the rail UP and can never engage for a box
+   that already starts at the top of its container. calc(100vh - railHeight)
+   instead lets the rail scroll up until its bottom meets the viewport bottom.
+   --dp-rail-h is published by useRailHeight; min() means a rail shorter than
+   the viewport simply pins near the top instead, and an unset variable degrades
+   to the same safe top-pinned behaviour.
+
+   align-self is load-bearing: .body is a flex row, so without it the rail
+   stretches to the full row height and sticky never engages. Scoped to match
+   useMobile's 768px breakpoint, below which <Right/> renders inline from
+   bodyMobile instead. */
+@media (min-width: 769px) {
+  .main-right {
+    position: sticky;
+    top: min(var(--20px), calc(100vh - var(--dp-rail-h, 0px) - var(--20px)));
+    align-self: flex-start;
+  }
+}
+
 /* --- surfaces -------------------------------------------------------------- */
 
 .glass,
@@ -1070,6 +1104,130 @@ input[type="reset"]:active {
   background: color-mix(in srgb, var(--brand) 18%, transparent) !important;
 }
 
+/* --- monolith vs micro-frontend comparison ----------------------------------- */
+/* Legacy shared.css has `ul { padding: unset !important }`, so indentation is
+   applied to the <li> instead -- an un-!important padding on the <ul> would be
+   silently dropped. routes.css also strips list markers globally, hence the
+   custom ::before glyphs. */
+
+.dp-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--20px, 20px);
+  margin-top: var(--20px, 20px);
+}
+
+.dp-compare__card {
+  position: relative;
+  overflow: hidden;
+  padding: var(--20px, 20px);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 260ms var(--ease-out), box-shadow 260ms var(--ease-out),
+    transform 260ms var(--ease-out);
+}
+
+/* Accent strip: amber reads as the legacy/caution option, brand as the modern one. */
+.dp-compare__card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--dp-compare-accent);
+}
+
+.dp-compare__card--mono {
+  --dp-compare-accent: var(--warn);
+}
+
+.dp-compare__card--mfe {
+  --dp-compare-accent: var(--brand);
+}
+
+.dp-compare__card:hover {
+  border-color: color-mix(in srgb, var(--dp-compare-accent) 45%, var(--border-soft));
+  box-shadow: var(--shadow-md);
+}
+
+.dp-compare__title {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.dp-compare__tagline {
+  margin: 4px 0 var(--15px, 15px);
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.dp-compare__label {
+  margin: var(--15px, 15px) 0 var(--5px, 5px);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.dp-compare__label--pro {
+  color: var(--positive);
+}
+
+.dp-compare__label--con {
+  color: var(--warn);
+}
+
+.dp-compare__list {
+  margin: 0;
+  list-style: none;
+}
+
+.dp-compare__list li {
+  position: relative;
+  padding: 3px 0 3px 22px;
+  color: var(--text-body);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.dp-compare__list li::before {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.dp-compare__list--pro li::before {
+  content: "\2713";
+  color: var(--positive);
+}
+
+.dp-compare__list--con li::before {
+  content: "\2715";
+  color: var(--warn);
+}
+
+.dp-compare__verdict {
+  margin: var(--20px, 20px) 0 0;
+  padding: var(--15px, 15px);
+  border-left: 3px solid var(--brand);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--brand-soft);
+  color: var(--text-body);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.dp-compare__verdict strong {
+  color: var(--text-strong);
+}
+
 /* --- generic link behaviour -------------------------------------------------- */
 
 .hyperlink {
@@ -1107,6 +1265,15 @@ input[type="reset"]:active {
 }
 
 @media (max-width: 768px) {
+  .dp-compare {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--15px, 15px);
+  }
+
+  .dp-compare__card {
+    padding: var(--15px, 15px);
+  }
+
   .dp-hero {
     padding: var(--15px);
   }
