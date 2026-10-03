@@ -1,0 +1,47 @@
+.dp-exp-dash__title {
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  letter-spacing: 0.5px;
+}
+
+.dp-exp-dash {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.dp-exp-dash__card {
+  position: relative;
+  padding: 20px 16px;
+  border-radius: 14px;
+  background: var(--color-glass, rgba(241, 241, 241, 0.75));
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-top: 4px solid var(--stat-color, #5838be);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dp-exp-dash__card:hover {
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+}
+
+.dp-exp-dash__value {
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.dp-exp-dash__label {
+  margin-top: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .dp-exp-dash {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

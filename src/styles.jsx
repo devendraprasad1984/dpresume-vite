@@ -26,6 +26,7 @@ import "./styles/jsTest.css";
 import "./styles/grid-flex.css";
 import "./styles/animations.css";
 import "./styles/modern.css";
+import "./styles/experienceDashboard.css";
 
 function Styles() {
   return null;
