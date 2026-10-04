@@ -94,5 +94,18 @@ morgan stanley - advisors ask questions acros 100000 research docs, 98%
 linkedin -
 doordash -
 
+RAG Architecture - 2 parts
+1 ingestion - done in advance, and store docs for searching
+2 querying  - for every question, find the right chunk, then answer
+
+vector db:
+    stores meaning as numbers (embeddings model is trained responsible for words into numbers sets, tripplets, +ve, -ve, neutral)
+    similar ideas sit together
+    matches by meaning, not exact words
+    examples pinecone, chroma, FAISS
+
+
+ingestion process: collection info->clean->cut into small chunks->turn chunks into numbers->store in vector db
+querying(answer a question) - ask question->turned into numbers->vector db finds closest chunks->best match is picked->matches are added to the prompt->AI writes the answer with sources
 
 
