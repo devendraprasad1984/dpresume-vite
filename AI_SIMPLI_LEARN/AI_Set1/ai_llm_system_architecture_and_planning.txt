@@ -107,5 +107,7 @@ vector db:
 
 ingestion process: collection info->clean->cut into small chunks->turn chunks into numbers->store in vector db
 querying(answer a question) - ask question->turned into numbers->vector db finds closest chunks->best match is picked->matches are added to the prompt->AI writes the answer with sources
+k-experimental value, keep tweaking to get an optimal number for better outcome
+
 
 
