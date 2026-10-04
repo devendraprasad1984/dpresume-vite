@@ -20,7 +20,7 @@ brew install python-gdbm@3.14
 =========================================
 
 
-AI_SIMPLI_LEARN/LLM_Internals_Planning_Systems/Demos/Lesson_02_Designing_and_Deploying_Intelligent_Agents/Demo_01_Building_a_RAG_Powered_FAQ_Agent_with_Custom_Knowledge/Demo_01_Building_a_RAG_Powered_FAQ_Agent_with_Custom_Knowledge.ipynb:80
-
+Demo_01_Building_a_RAG_Powered_FAQ_Agent_with_Custom_Knowledge.ipynb
+:80
 2ABecnfxzhRg4M5D6pBKiqxXVhmGB2WvQ0aYKkbTCPsj0JLKsZPfJQQJ99BDAC77bzfXJ3w3AAABACOGi3sC
 

@@ -53,3 +53,46 @@ ReAct (Think, Act, Check, Repeat) - reasoning and acting, LLMs can reason and ac
 chatgpt, jasper, copy.ai, loveable, canva
 otter.ai, fathom
 
+
+RAG - giving AI your company knowledge - Retrieval Augmented Generation
+trained on generic data
+why RAG - 3 problems with AI
+doesnt know you - it has never see your company policies, data
+out of data - its knowledge stops at training date, last week's change price, no idea
+make things up - when it doesnt know, it may guess confidently, this is called hellucination
+
+fine tuning and RAG are kind of siblings
+
+RAG works in 2 simple ways - always needs vector databases
+1. retrieval - find most relevant info from docs/resources available
+2. augmented generation - write answers using the retrieved information to generate a response
+e.g. openbook
+grounded in the response, use context based, custom knowledge. dont use generic wide knowledge, remain in my context, custom context
+
+RAG vs Fine Tuning
+rag looks up your doc at ans time, FT retrains the model on your example
+rag example open-book exam, FT study for closed-book exam
+rag just update the doc, FT retrains the model again
+rag shows its sources, it can point, FT, no knowledge is blended in
+rag cost is lower and is quicker, FT is costly and is slow
+rag is best for facts policies, prices and products, FT is for tone, behaviour and format
+
+what gives better result
+RAG wins
+    for knowledge RAG consistently beat fine tuning
+    worked for both familiar and brand new facts
+    fine tuning alone struggles to teach new facts
+    use for policie, product info, prices and FAQs
+Combine both
+    MS farming study, fine turning added 6+ points
+    adding RAG on top of it, added 5more points
+    fine tuning shapes how it talks, RAG what is says
+    start with RAG add fine tuning only if needed
+
+RAG in real world - read more
+morgan stanley - advisors ask questions acros 100000 research docs, 98%
+linkedin -
+doordash -
+
+
+
