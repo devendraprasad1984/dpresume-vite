@@ -1,0 +1,55 @@
+LLM internals and planning systems
+new skills for AI Era - key focus areas
+track AI, accuracy, safety. and drift
+design experiences that adapt to each user
+work closely with data and AI Teams
+make sure the AI behaves fairly and safely
+
+5 stages of buiding a product - the product journey
+1.discover:
+2.plan:
+3.design and build:
+4.launch:
+5.grow and improve:
+
+stage1: discover what people need
+ai reads huge data and feedback
+market research and user interviews - scan the market and talk to customers and find the pattern
+
+stag2: plan the product what to build
+prioritize features and create a roadmap
+forcast risks, delays
+goals and KPIs - suggest realistic targets - KPI shows success
+
+stage3: design and build the product
+automate: create wireframes and prototypes
+prototyping: develop the product iteratively
+quality checks: test with users and gather feedback
+
+stage4: launch the product
+release the product to the market
+monitor performance and user feedback - personalise
+sales forecast
+
+5 part of prompt recipe
+role: who the ai should be
+task: what to do
+context: key details
+format: how to answer
+example: show what a good example looks like, optional
+
+prompting technique
+zero shot, one shot, few shot
+
+tokeniser: logic at which token is parsed, token is a set of words in a sentences, that makes sense so llms can make sense and predict next word to make sentences
+
+read more about STOP words, all such words are stripped off by tokeniser, eg a, an, the, and between etc
+
+how AI reasons - chain of thoughts and ReAct
+===
+CoT - step by step reasoning, break down complex problems into smaller steps, helps LLMs to reason and solve problems better
+ReAct (Think, Act, Check, Repeat) - reasoning and acting, LLMs can reason and act in the same prompt,
+
+chatgpt, jasper, copy.ai, loveable, canva
+otter.ai, fathom
+
