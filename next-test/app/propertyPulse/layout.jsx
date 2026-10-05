@@ -11,6 +11,9 @@ export const metadata = {
 export default function PropertyPulseLayout({children}) {
 	return <div className="container mx-auto wl-full">
 		<div className="top-0">App Header</div>
+		<ul className="flex flex-row grow shrink-0 p-2 bg-blue-50">
+			<li><a href="/propertyPulse/properties">Properties</a></li>
+		</ul>
 		<main className="w-full h-full">{children}</main>
 		<div className="bottom-0 absolute">App Footer</div>
 	</div>;
