@@ -1,6 +1,11 @@
 export const metadata = {
 	title: "Property Pulse",
 	description: "Property Pulse Layout - for every page under property pulse",
+	icons:{
+		icon: "./prop_pulse.ico",
+		shortcut: "./prop_pulse.ico",
+		apple: "./prop_pulse.ico"
+	}
 };
 
 export default function PropertyPulseLayout({children}) {
