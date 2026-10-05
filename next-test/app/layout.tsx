@@ -3,7 +3,14 @@ import type {Metadata} from "next";
 import "./globals.css";
 import GlobalNav from "@/app/_components/globalNav";
 import {SofiaPro} from "@/app/font";
+import {Geist} from "next/font/google"
 
+const geist = Geist({
+	subsets: ['latin'],
+	weight: ['400', '500', '600', '700'],
+	variable: '--font-geist-sans',
+	display: 'swap',
+})
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -17,7 +24,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={`${SofiaPro.className} ${SofiaPro.variable} antialiased h-full min-h-full flex flex-col`}>
+        <body className={`${geist.className} ${geist.variable} ${SofiaPro.className} ${SofiaPro.variable} antialiased h-full min-h-full flex flex-col`}>
         <GlobalNav/>
         <div>
             {children}
