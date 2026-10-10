@@ -1,0 +1,74 @@
+ACME CORPORATION
+Human Resources Policy Handbook - Employee Leave Policy
+
+Document ID: HR-POL-004
+Version: 3.0
+Effective date: 1 September 2026
+Owner: Human Resources Department
+Applies to: All full-time employees of ACME Corporation
+
+WHAT CHANGED IN VERSION 3.0 (SEPTEMBER 2026)
+Annual leave has increased from 22 to 24 days per year. The increase adds 2 new wellness days, which are included in the 24-day total (see Section 4.2 and Section 4.5).
+
+
+1. PURPOSE AND SCOPE
+
+This policy explains the types of leave available to employees of ACME Corporation, how much leave employees are entitled to, and how to request it. It applies to all full-time employees. Part-time employees receive leave on a pro-rata basis, in proportion to their contracted working hours.
+
+
+2. DEFINITIONS
+
+Leave year: the period from 1 January to 31 December.
+Working day: Monday to Friday, excluding public holidays.
+Line manager: the person the employee reports to directly.
+
+
+3. REQUESTING LEAVE
+
+3.1 All leave must be requested through the HR portal and approved by the employee's line manager.
+3.2 Annual leave of more than 5 consecutive working days must be requested at least 2 weeks in advance.
+3.3 Sick leave and bereavement leave may be recorded after the absence, within 2 working days of returning to work.
+
+
+4. ANNUAL LEAVE
+
+4.1 Eligibility. All full-time employees are eligible for paid annual leave from their first day of employment.
+
+4.2 Entitlement. ACME Corporation offers every full-time employee 24 days of paid annual leave per leave year. This total includes 2 wellness days (see Section 4.5).
+
+4.3 Accrual. Annual leave accrues at a rate of 2 days per completed month of service. Employees who join part-way through the year receive a pro-rata entitlement.
+
+4.4 Carry forward. Employees may carry forward up to 5 unused days of annual leave into the next leave year. Carried-forward days must be used by 31 March of the following year, or they will lapse. Unused days above this limit are not paid out.
+
+4.5 Wellness days. Two of the 24 annual leave days are wellness days, intended for rest and mental health. Wellness days can be taken at short notice, with approval from the line manager on the same day. Wellness days cannot be carried forward to the next leave year.
+
+
+5. SICK LEAVE
+
+5.1 Employees are entitled to 10 days of paid sick leave per leave year.
+5.2 A medical certificate is required for any sick leave of more than 2 consecutive working days.
+5.3 Unused sick leave cannot be carried forward to the next year and is not paid out.
+
+
+6. PARENTAL LEAVE
+
+6.1 Maternity leave. Eligible employees are entitled to 26 weeks of paid maternity leave.
+6.2 Paternity leave. Eligible employees are entitled to 15 working days of paid paternity leave, to be taken within 6 months of the birth or adoption of a child.
+6.3 Adoption leave. Primary caregivers adopting a child under 1 year of age are entitled to 12 weeks of paid adoption leave.
+
+
+7. PUBLIC HOLIDAYS
+
+ACME Corporation observes 12 paid public holidays each year. The list of holidays for each location is published on the HR portal in December for the following year.
+
+
+8. OTHER TYPES OF LEAVE
+
+8.1 Bereavement leave: up to 5 working days of paid leave following the death of an immediate family member.
+8.2 Marriage leave: 3 working days of paid leave for an employee's own wedding.
+8.3 Leave without pay: may be granted for up to 3 months at the discretion of the line manager and HR, after all paid annual leave has been used.
+
+
+9. CONTACT
+
+Questions about this policy can be sent to the HR team at hr@acme.example or raised through the HR portal.
