@@ -4,5 +4,20 @@ smarter end to end processing in controlled fashion
 
 RAG: AI that looks things up before it answers, like an open-book exams
 AI Agent: AI that doesnt just answer, it plans and taskes actions
-Agent
+Agent loop: plan->act->check->repeat until the goal is met
+Teams of agents: a supervisor plus specialists beats one  "do-everything" agent
+Today: the two most popular tools for building those teams
+
+engage and think - consider travel agent, event agent for wedding planning
+kind of individual agents working hand in hand with others
+
+basic build blocks: nodes(steps)->edges(arrows)->state(shared node)->guards(if/then checks)->cycles(loop back)
+
+=============
+framework for building multi-agent systems
+autogen from microsoft
+crewAI
+
+
+
 
