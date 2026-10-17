@@ -21,7 +21,7 @@ const BehindBars = () => {
         <a className="text-primary" href="/docs/large-scale-web-app.pdf" target="_blank">large-scale-web-app</a>
 	      <a className="text-primary" href="/docs/ydkjs.pdf" target="_blank">ydkjs</a>
       </div>
-	    <div className"col gap2">
+	    <div className="col gap2">
 		    <span>https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/up%20%26%20going</span>
 	    </div>
       <div>
