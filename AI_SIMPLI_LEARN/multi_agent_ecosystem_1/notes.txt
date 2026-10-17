@@ -1,0 +1,8 @@
+multi agent system
+agentic workflow with LangGraph and CrewAi
+smarter end to end processing in controlled fashion
+
+RAG: AI that looks things up before it answers, like an open-book exams
+AI Agent: AI that doesnt just answer, it plans and taskes actions
+Agent
+
