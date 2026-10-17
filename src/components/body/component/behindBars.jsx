@@ -19,6 +19,7 @@ const BehindBars = () => {
         <a className="text-primary" href="/docs/my_notes.txt" target="_blank">notes</a>
         <a className="text-primary" href="/docs/packOf30InterviewPrep.pdf" target="_blank">packOf30InterviewPrep</a>
         <a className="text-primary" href="/docs/large-scale-web-app.pdf" target="_blank">large-scale-web-app</a>
+	      <a className="text-primary" href="/docs/ydkjs.pdf" target="_blank">ydkjs</a>
       </div>
       <div>
         <img src="/docs/lalaji_gyan.png" style={{
