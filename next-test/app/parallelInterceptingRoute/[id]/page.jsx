@@ -12,6 +12,7 @@ export default async function photoIdPage(props) {
 		{found && <Image src={photo}
 		                 className="w-full object-cover aspect-square"
 		                 width={100}
+		                 alt="basic"
 		                 height={100}
 		                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 		/>}
