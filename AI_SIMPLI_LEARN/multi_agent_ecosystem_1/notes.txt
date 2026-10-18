@@ -38,3 +38,4 @@ crewai
 build set of agents with clear roles for mini agents
 roles(job title)->agents(the workflow)->tools(their equipment)->memory(notes they keep)->permission(whats allowed)->coordination(who goes wgen and how)
 
+
