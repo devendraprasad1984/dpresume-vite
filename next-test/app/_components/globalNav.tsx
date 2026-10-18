@@ -10,6 +10,7 @@ const GlobalNav = () => {
 			<Link href="/checkout" className={`${hoverClass}`}>Checkout</Link>
 			<Link href="/dashboard" className={`${hoverClass}`}>Dashboard</Link>
 			<Link href="/propertyPulse" className={`${hoverClass}`}>Property Pulse App</Link>
+			<Link href="/parallelInterceptingRoute" className={`${hoverClass}`}>Parallel Intercepting Route App</Link>
 		</div>
 	);
 };
