@@ -19,5 +19,22 @@ autogen from microsoft
 crewAI
 
 
+autogen
+---------
+free opensource framework for building multi-agent systems by microsoft. combine agents a group fashion
+setup from description->agent talk in a group chat->can wrote and run code->runs on your server->a human can step in
+five parts or blocks of autogen
+agent:a team member->group chat: the meeting->code running: runs code safely->user proxy: stands in for your->config: the setup sheet
 
+security and privacy: why self hosting matters
+runs on own servers
+data stays in prem->right people access only->locked data encrypted->every step recorded, logs and observability
+
+setup an autogen agent in 4 steps
+install->connect ai model (BYOM - Bring Your Own Model)->give agent a job title->give it a task and run
+
+crewai
+----
+build set of agents with clear roles for mini agents
+roles(job title)->agents(the workflow)->tools(their equipment)->memory(notes they keep)->permission(whats allowed)->coordination(who goes wgen and how)
 
