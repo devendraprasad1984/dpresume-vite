@@ -1,5 +1,6 @@
-import {imageMap} from "../../imageMap";
-import Modal from "../../modal";
+import Image from "next/image";
+import {imageMap} from "../imageMap";
+import Modal from "../modal";
 
 export default async function InterceptingModal(props) {
 	const params = await props.params;
