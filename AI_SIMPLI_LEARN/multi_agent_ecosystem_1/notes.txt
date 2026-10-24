@@ -48,4 +48,31 @@ crewai
 build set of agents with clear roles for mini agents
 roles(job title)->agents(the workflow)->tools(their equipment)->memory(notes they keep)->permission(whats allowed)->coordination(who goes wgen and how)
 
+N8N - no code + code(logic) platform -> tool for agentic and non-agentic workflows - mostly used by business and operations teams for automation tasks
+agentic flow with n8n(nodemation) - for non-ai workflows also
+connects to 400+ apps like gmail, slack etc
+starts by itself when something happens
+free to run into your own servers
+adds ai agents as step in the flow
+visual so business teams can read it
+resusable: copy a workflow change one box
+
+workflow system: trigger->steps->results
+each box (node) does one job: fetch, change or send
+it starts with a trigger: a new email, a form, or 9am daily
+information passes from box to box until result is ready
+start wioth 3 boxes: grow to 30 when you need
+
+five kinds of boxes(nodes)
+trigger: start the flow, like new order popping up on screen
+action: does something, send an email, updates the sheet
+logic: picks the path, urgent or not, veg or non veg
+data: tidies the details, like fixing a phone number format
+integration: ready made plugs for apps like gmail, slack
+
+n8n operates in rent, own or both types
+sample demo: app.n8n.cloud
+try local runs
+
+
 
