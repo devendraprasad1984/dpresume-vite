@@ -33,6 +33,16 @@ data stays in prem->right people access only->locked data encrypted->every step 
 setup an autogen agent in 4 steps
 install->connect ai model (BYOM - Bring Your Own Model)->give agent a job title->give it a task and run
 
+Autogen
+part1: generate->check->fix
+part2: making chain reliable
+    improve each try(send checkers feedback)
+    recover on its own, or stop or flag to human
+    set limit eg try only max 3 times
+
+
+
+
 crewai
 ----
 build set of agents with clear roles for mini agents
