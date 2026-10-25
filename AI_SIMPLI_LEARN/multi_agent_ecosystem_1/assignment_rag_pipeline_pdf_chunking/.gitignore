@@ -1,0 +1,9 @@
+# Python / RAG pipeline runtime artifacts
+.venv/
+__pycache__/
+*.pyc
+
+# Generated at runtime (reproducible via `python rag_pipeline.py`)
+pdfs/
+faiss_index/
+outputs/
