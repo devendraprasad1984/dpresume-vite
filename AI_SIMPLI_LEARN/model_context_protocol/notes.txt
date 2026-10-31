@@ -11,6 +11,34 @@ so it become like an adapter each connecting app adhers.
 3 AI apps + 3 tools = 6 connection, add one more tool and you just build 1 more
 
 
+before and after MCP
+without MCP, every connection is hand built and breaks easily. With MCP, any AI app can plug into any MCP server
+
+three roles: Host, Client, Server - think of ordering food system
+host (M - Model):  the ai app you use chatgpt, claude, like the swiggy app
+client (C - Context): the connector inside the app, one per server, like delivery partner
+server (P - Protocol): offers tools and data like the restaurant and menu
+
+they talk in JSON RPC: a standard "order slip" every side understands
+
+How messsages travel: same computer or internet
+stdio: both sides on the same computer, like an office intercom. HTTP: over the internet, like a phone call
+MCP host: AI application: mcp client1<->protocol layer<->transport layer(stdio|SSE(streameable event)|HTTP): MCP Server->server with sources and tools<->protocol layer<->server1<->local file system or DB | remote resources
+
+The handshake: 3 way handshake: how connection starts
+like start a phone call: hello I am chatgpt->hi I am marketIntel, here is what I offer->great, lets talk
+greeting exchange: client hello->server hello->client ready
+
+what MCP offers
+tools: action the AI can ask for like placing an order
+resources: information AI can read like the menu card
+prompts: ready made instructions like chef's set combos
+
+marketintel examples offers 7 tools: search, competetors, pricing, news and more
+
+
+fastMCP python tool
+@mcp.tool, @mcp.resource, @mcp.prompt, mcp.run(transport="http|sse", port=8002) - OSI modelling (read it)
 
 
 
