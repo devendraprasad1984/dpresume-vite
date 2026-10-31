@@ -1,0 +1,16 @@
+MCP: Modal Context Protocol
+analogy, type c adapter for android devices
+
+the wiring mess: M x N problem
+without a standard, every AI app needs its own custom connection  to every tool. Each one is built, tested and fixed separately/
+e.g. a AI Apps x 3 tools = 9 connections. Add one more tool and you build 3 more
+
+how MCP fixes it - brings protocol or standardisation ie connect once and all behaves are same
+with one shared standard, each AI ap[p and each tool connects once to MCP. Just like UPI: every bank joined one network, so any app can pay any bank.
+so it become like an adapter each connecting app adhers.
+3 AI apps + 3 tools = 6 connection, add one more tool and you just build 1 more
+
+
+
+
+
