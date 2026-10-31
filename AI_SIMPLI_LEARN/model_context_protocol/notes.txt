@@ -42,3 +42,8 @@ fastMCP python tool
 
 
 
+
+end to end request flow - read maketIntel pdf in session material
+claude<>anthropic cloud, MCP client<>ngrok tunnel (https://xyz.ngrok-free.app)<>your laptop marketIntel server<>Tavily API (live web data)
+your http server prints http who connected | INIT client name | CALL tool + arguments | DONE timing
+
