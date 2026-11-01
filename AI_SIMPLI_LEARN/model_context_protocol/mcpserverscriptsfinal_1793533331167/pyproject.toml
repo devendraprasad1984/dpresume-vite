@@ -1,0 +1,20 @@
+[project]
+name = "mcpserverscriptsfinal-1793533331167"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "devendra", email = "devendra.prasad2@bhn.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastmcp>=4.1.4",
+    "tavily-python>=0.8.5",
+]
+
+[project.scripts]
+mcpserverscriptsfinal-1793533331167 = "mcpserverscriptsfinal_1793533331167:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"

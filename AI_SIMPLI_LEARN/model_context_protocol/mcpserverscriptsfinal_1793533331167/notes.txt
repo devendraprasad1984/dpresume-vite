@@ -1,0 +1,73 @@
+
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv --version
+Step 3: Add your settings (.env)
+
+Copy .env.example to .env. Paste your Tavily key if you have one; otherwise leave it empty.
+TAVILY_API_KEY=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
+TAVILY_DEPTH=basic
+PORT=8000
+
+
+uv run server.py
+uv run fastmcp dev inspector server.py
+
+
+uv run python test_client.py
+curl http://localhost:8000/health
+
+uv run fastmcp list server.py
+uv run fastmcp call server.py list_competitors name=NVIDIA
+
+
+Go to ngrok.com and click Sign up. It is free. Use your email, Google or GitHub, and
+confirm your email if ngrok asks.
+After you sign in you land on the ngrok dashboard (dashboard.ngrok.com).
+Open the authtoken page: https://dashboard.ngrok.com/get-started/your-authtoken.
+In the dashboard menu this is under Getting Started > Your Authtoken.
+Click the copy icon next to the token. Keep it private, like a password. You will paste it into
+the terminal in the next step.
+
+
+Install ngrok. On a Mac: brew install ngrok. On Windows or Linux, download it from
+ngrok.com/download.
+2. Register your token once (replace the placeholder with the token you copied):
+ngrok config add-authtoken <YOUR_TOKEN>
+
+
+Make sure the MarketIntel server from Step 4 is still running, then start the tunnel in a third
+terminal:
+ngrok http 8000
+4. Find the Forwarding line in the ngrok window and copy the https address, for example
+https://a1b2-203-0-113-9.ngrok-free.app. Your MCP URL is that address plus /mcp:
+https://a1b2-203-0-113-9.ngrok-free.app/mcp
+5. Verify from a browser: open the address plus /health. You should see JSON with
+"status": "ok". If ngrok shows a warning page first, click Visit Site; that page is only for
+browsers. The server terminal logs this hit with your IP.
+
+
+Step 8: Connect Claude
+You can use a free Claude account. On the Free plan you can add one custom connector, so if
+you already added one, remove it first. Menu names change from time to time; the paths below
+are the current ones from Claude's help pages.
+1. Open claude.ai in your browser (or the Claude desktop app) and sign in.
+MarketIntel MCP Demo | Page 4
+MarketIntel MCP Demo | Page 5
+2. Go to Customize > Connectors. Direct link: claude.ai/customize/connectors. In some
+older versions this is called Settings > Connectors.
+3. Click Add custom connector.
+4. Fill in the dialog:
+• Name: MarketIntel
+• MCP server URL: your ngrok address ending in /mcp
+• Authentication: choose No sign-in (this demo server has no login). If your dialog shows
+OAuth Client ID and Secret under Advanced settings, leave them empty.
+• Transport: leave the default. A URL ending in /mcp is correct.
+5. Click Add. Watch your server terminal: you should see [HTTP] lines and usually [INIT]
+and [LIST] as Claude connects and reads the tool list.
+6. Open a new chat, click the + button, choose Connectors, and switch MarketIntel on for
+this conversation.
+Team or Enterprise plan: an Owner must first add the connector in Organization settings >
+Connectors. You then go to Customize > Connectors, find MarketIntel (it has a Custom label)
+and click Connect.
+
+
