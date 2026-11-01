@@ -38,6 +38,14 @@ ngrok config add-authtoken <YOUR_TOKEN>
 Make sure the MarketIntel server from Step 4 is still running, then start the tunnel in a third
 terminal:
 ngrok http 8000
+
+ngrok config auth-token
+
+https://dashboard.ngrok.com/signup
+https://dashboard.ngrok.com/endpoints
+
+
+
 4. Find the Forwarding line in the ngrok window and copy the https address, for example
 https://a1b2-203-0-113-9.ngrok-free.app. Your MCP URL is that address plus /mcp:
 https://a1b2-203-0-113-9.ngrok-free.app/mcp
