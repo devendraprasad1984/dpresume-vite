@@ -1,0 +1,18 @@
+
+being transparent, user should know what AI is thinking and doing in transparent way
+
+answering vs acting: reactive ai vs agentic ai
+
+reactive ai answers when you ask, an agentic ai takes steps on its own to reach a goal
+that changes what the screen must show
+
+how it behaves: answers only when you asked vs takes steps automatically to achieve outcome
+
+
+why users stop trusting agents
+when an agent acts on its own, three worries appear. each one has design fix
+i cant stop it, fix clear undo and override buttons
+why did it do that, fix a short simple reason
+is it even true, fix show its confidence
+
+
