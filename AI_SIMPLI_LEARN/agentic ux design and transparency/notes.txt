@@ -16,5 +16,16 @@ why did it do that, fix a short simple reason - red signals
 is it even true, fix show its confidence - red signals
 always study what agent is doing and generating
 thinking........ expand arrows, see what its thinking, planning, running commands and always weighs test manually what it has been generating
+for any ai solutions, provide a confidence meter so trust on ai solutions is maintained
+
+six principals of agentic ux
+1 clearity - plain words ie your flight leaves at 6:10am
+2 transparency - say why it chose something and how sure it is, eg gemini always gives summary of what is doing, whichever links is souring from, it shows
+3 predictablity - same pattern every time, so users know what comes next. eg red light always means stop, green is go
+4 user control - easy undo, edit or confirm, especially before anything import
+5 fail safe design - when unsure of failing, fall back safely, ask a person or do nothing
+6 feedback loop - learn from thumbs up/down and from every correction. always remember how convinient you can make for the user will use your ai solution. It needs to optional but always design feedback loop
+the hardest balance: let the agent do the work, but keep the user in charge
+
 
 
