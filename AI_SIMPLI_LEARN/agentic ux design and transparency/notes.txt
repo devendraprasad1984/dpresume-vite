@@ -28,4 +28,3 @@ six principals of agentic ux
 the hardest balance: let the agent do the work, but keep the user in charge
 
 
-
