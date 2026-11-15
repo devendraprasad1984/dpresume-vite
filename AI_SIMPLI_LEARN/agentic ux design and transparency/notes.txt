@@ -11,8 +11,10 @@ how it behaves: answers only when you asked vs takes steps automatically to achi
 
 why users stop trusting agents
 when an agent acts on its own, three worries appear. each one has design fix
-i cant stop it, fix clear undo and override buttons
-why did it do that, fix a short simple reason
-is it even true, fix show its confidence
+i cant stop it, fix clear undo and override buttons--big red signals
+why did it do that, fix a short simple reason - red signals
+is it even true, fix show its confidence - red signals
+always study what agent is doing and generating
+thinking........ expand arrows, see what its thinking, planning, running commands and always weighs test manually what it has been generating
 
 
