@@ -1,14 +1,14 @@
 import homeExperiences from "../../../core/homeExperiences.js";
 
 const PALETTE = [
-  "#5838be",
-  "#008577",
-  "#e91e63",
-  "#ff9800",
-  "#3f51b5",
-  "#5ac72b",
-  "#673ab7",
-  "#00b5ad",
+  "#000000",
+  "#262626",
+  "#404040",
+  "#595959",
+  "#737373",
+  "#1a1a1a",
+  "#333333",
+  "#4d4d4d",
 ];
 
 const decode = (html) =>

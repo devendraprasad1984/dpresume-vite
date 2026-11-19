@@ -16,7 +16,7 @@
   border-radius: 14px;
   background: var(--color-glass, rgba(241, 241, 241, 0.75));
   border: 1px solid rgba(0, 0, 0, 0.06);
-  border-top: 4px solid var(--stat-color, #5838be);
+  border-top: 4px solid var(--stat-color, #000000);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;

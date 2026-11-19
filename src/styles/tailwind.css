@@ -15,13 +15,13 @@
 @source "../App.jsx";
 
 @theme {
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-300: #a5b4fc;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-accent-400: #c084fc;
-  --color-accent-500: #a855f7;
-  --color-accent-600: #7c3aed;
+  --color-brand-50: #fafafa;
+  --color-brand-100: #f2f2f2;
+  --color-brand-300: #a3a3a3;
+  --color-brand-500: #404040;
+  --color-brand-600: #000000;
+  --color-brand-700: #262626;
+  --color-accent-400: #a3a3a3;
+  --color-accent-500: #595959;
+  --color-accent-600: #404040;
 }

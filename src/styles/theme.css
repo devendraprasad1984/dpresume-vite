@@ -8,11 +8,11 @@
   color-scheme: light;
 
   /* --- new primitives --- */
-  --brand: #4f46e5;
-  --brand-strong: #4338ca;
-  --brand-soft: #eef2ff;
-  --accent: #7c3aed;
-  --accent-soft: #f5f3ff;
+  --brand: #000000;
+  --brand-strong: #262626;
+  --brand-soft: #f2f2f2;
+  --accent: #404040;
+  --accent-soft: #f2f2f2;
 
   --danger: #dc2626;
   --danger-soft: rgba(220, 38, 38, 0.12);
@@ -23,28 +23,28 @@
   --warn-soft: rgba(180, 83, 9, 0.12);
 
   --surface: #ffffff;
-  --surface-2: #f8fafc;
-  --surface-sunken: #f1f5f9;
-  --surface-glass: rgba(255, 255, 255, 0.72);
-  --surface-glass-border: rgba(15, 23, 42, 0.08);
+  --surface-2: #fafafa;
+  --surface-sunken: #f2f2f2;
+  --surface-glass: rgba(255, 255, 255, 0.85);
+  --surface-glass-border: rgba(0, 0, 0, 0.1);
 
-  --page-bg: #eef1f8;
-  --page-glow-1: rgba(99, 102, 241, 0.18);
-  --page-glow-2: rgba(168, 85, 247, 0.14);
+  --page-bg: #ffffff;
+  --page-glow-1: rgba(0, 0, 0, 0.03);
+  --page-glow-2: rgba(0, 0, 0, 0.02);
 
-  --text-strong: #0f172a;
-  --text-body: #273244;
-  --text-muted: #64748b;
+  --text-strong: #000000;
+  --text-body: #1a1a1a;
+  --text-muted: #595959;
   --text-on-brand: #ffffff;
 
-  --border-soft: rgba(15, 23, 42, 0.08);
-  --border-strong-soft: rgba(15, 23, 42, 0.16);
+  --border-soft: rgba(0, 0, 0, 0.12);
+  --border-strong-soft: rgba(0, 0, 0, 0.24);
 
-  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.06);
-  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 10px 30px -12px rgba(15, 23, 42, 0.22);
-  --shadow-lg: 0 24px 60px -24px rgba(15, 23, 42, 0.35);
-  --shadow-brand: 0 18px 40px -20px rgba(79, 70, 229, 0.55);
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 30px -12px rgba(0, 0, 0, 0.22);
+  --shadow-lg: 0 24px 60px -24px rgba(0, 0, 0, 0.35);
+  --shadow-brand: 0 18px 40px -20px rgba(0, 0, 0, 0.45);
 
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -55,38 +55,38 @@
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* --- legacy token re-points --- */
-  --app-text-color: #273244;
-  --app-font-color: #273244;
-  --app-bg-color: #eef1f8;
+  --app-text-color: #1a1a1a;
+  --app-font-color: #1a1a1a;
+  --app-bg-color: #ffffff;
   --center-body-bg-color: transparent;
   --app-bg-left-color: transparent;
   --app-bg-center-color: transparent;
   --app-bg-right-color: transparent;
   --app-bg-header: transparent;
   --app-bg-footer: transparent;
-  --footer-text-color: #64748b;
-  --border-color: rgba(15, 23, 42, 0.08);
-  --color-slate-blue: rgba(255, 255, 255, 0.72);
-  --color-slate-lighter-blue: #e0e7ff;
-  --hyperlink-color: #4f46e5;
-  --acitve-link-bg-color: #4f46e5;
+  --footer-text-color: #595959;
+  --border-color: rgba(0, 0, 0, 0.12);
+  --color-slate-blue: rgba(255, 255, 255, 0.85);
+  --color-slate-lighter-blue: #e5e5e5;
+  --hyperlink-color: #000000;
+  --acitve-link-bg-color: #000000;
   --acitve-link-text-color: #ffffff;
-  --hover-bg-color: #eef2ff;
-  --hover-color: #4338ca;
-  --primary-button-color: #4f46e5;
-  --primary-button-color-hover: #4338ca;
-  --code-bg: #f1f5f9;
-  --background-color: #eef1f8;
+  --hover-bg-color: #f2f2f2;
+  --hover-color: #000000;
+  --primary-button-color: #000000;
+  --primary-button-color-hover: #262626;
+  --code-bg: #f2f2f2;
+  --background-color: #ffffff;
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --brand: #818cf8;
-  --brand-strong: #a5b4fc;
-  --brand-soft: rgba(129, 140, 248, 0.14);
-  --accent: #c084fc;
-  --accent-soft: rgba(192, 132, 252, 0.14);
+  --brand: #f5f5f5;
+  --brand-strong: #ffffff;
+  --brand-soft: rgba(255, 255, 255, 0.1);
+  --accent: #bdbdbd;
+  --accent-soft: rgba(255, 255, 255, 0.1);
 
   --danger: #f87171;
   --danger-soft: rgba(248, 113, 113, 0.16);
@@ -96,56 +96,56 @@
   --warn: #fbbf24;
   --warn-soft: rgba(251, 191, 36, 0.16);
 
-  --surface: #131c2e;
-  --surface-2: #18243a;
-  --surface-sunken: #0f1727;
-  --surface-glass: rgba(23, 34, 54, 0.72);
-  --surface-glass-border: rgba(148, 163, 184, 0.16);
+  --surface: #141414;
+  --surface-2: #1c1c1c;
+  --surface-sunken: #0a0a0a;
+  --surface-glass: rgba(20, 20, 20, 0.75);
+  --surface-glass-border: rgba(255, 255, 255, 0.14);
 
-  --page-bg: #070b14;
-  --page-glow-1: rgba(99, 102, 241, 0.26);
-  --page-glow-2: rgba(168, 85, 247, 0.2);
+  --page-bg: #000000;
+  --page-glow-1: rgba(255, 255, 255, 0.05);
+  --page-glow-2: rgba(255, 255, 255, 0.03);
 
-  --text-strong: #f1f5f9;
-  --text-body: #dbe3f0;
-  --text-muted: #94a3b8;
-  --text-on-brand: #0b1220;
+  --text-strong: #ffffff;
+  --text-body: #e5e5e5;
+  --text-muted: #a3a3a3;
+  --text-on-brand: #000000;
 
-  --border-soft: rgba(148, 163, 184, 0.16);
-  --border-strong-soft: rgba(148, 163, 184, 0.3);
+  --border-soft: rgba(255, 255, 255, 0.14);
+  --border-strong-soft: rgba(255, 255, 255, 0.28);
 
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
   --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.45);
   --shadow-md: 0 14px 34px -14px rgba(0, 0, 0, 0.75);
   --shadow-lg: 0 28px 70px -28px rgba(0, 0, 0, 0.85);
-  --shadow-brand: 0 18px 44px -20px rgba(129, 140, 248, 0.5);
+  --shadow-brand: 0 18px 44px -20px rgba(255, 255, 255, 0.25);
 
   /* legacy token re-points */
-  --app-text-color: #dbe3f0;
-  --app-font-color: #dbe3f0;
-  --app-bg-color: #070b14;
-  --footer-text-color: #94a3b8;
-  --border-color: rgba(148, 163, 184, 0.16);
-  --color-slate-blue: rgba(23, 34, 54, 0.72);
-  --color-slate-lighter-blue: rgba(129, 140, 248, 0.2);
-  --hyperlink-color: #a5b4fc;
-  --acitve-link-bg-color: #818cf8;
-  --acitve-link-text-color: #0b1220;
-  --hover-bg-color: rgba(129, 140, 248, 0.14);
-  --hover-color: #c7d2fe;
-  --primary-button-color: #818cf8;
-  --primary-button-color-hover: #a5b4fc;
-  --code-bg: #0f1727;
-  --background-color: #070b14;
+  --app-text-color: #e5e5e5;
+  --app-font-color: #e5e5e5;
+  --app-bg-color: #000000;
+  --footer-text-color: #a3a3a3;
+  --border-color: rgba(255, 255, 255, 0.14);
+  --color-slate-blue: rgba(20, 20, 20, 0.75);
+  --color-slate-lighter-blue: rgba(255, 255, 255, 0.16);
+  --hyperlink-color: #ffffff;
+  --acitve-link-bg-color: #f5f5f5;
+  --acitve-link-text-color: #000000;
+  --hover-bg-color: rgba(255, 255, 255, 0.1);
+  --hover-color: #ffffff;
+  --primary-button-color: #f5f5f5;
+  --primary-button-color-hover: #ffffff;
+  --code-bg: #0a0a0a;
+  --background-color: #000000;
 
-  --color-white: #f1f5f9;
-  --color-glass: rgba(23, 34, 54, 0.75);
-  --color-fg-default: #f1f5f9;
-  --color-fg-muted: #cbd5f5;
-  --color-fg-subtle: #94a3b8;
-  --color-bg-default: #131c2e;
-  --color-bg-subtle: #18243a;
-  --color-bg-inset: #0f1727;
-  --color-border-default: rgba(148, 163, 184, 0.16);
-  --copy-color: rgba(241, 245, 249, 0.88);
+  --color-white: #f5f5f5;
+  --color-glass: rgba(20, 20, 20, 0.75);
+  --color-fg-default: #f5f5f5;
+  --color-fg-muted: #d4d4d4;
+  --color-fg-subtle: #a3a3a3;
+  --color-bg-default: #141414;
+  --color-bg-subtle: #1c1c1c;
+  --color-bg-inset: #0a0a0a;
+  --color-border-default: rgba(255, 255, 255, 0.14);
+  --copy-color: rgba(245, 245, 245, 0.88);
 }
