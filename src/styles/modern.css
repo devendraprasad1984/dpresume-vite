@@ -120,7 +120,7 @@ body {
   width: 4px;
   height: 18px;
   border-radius: var(--radius-pill);
-  background: linear-gradient(180deg, var(--brand), var(--accent));
+  background: var(--accent);
 }
 
 /* --- navigation ------------------------------------------------------------ */
@@ -169,7 +169,7 @@ body {
 
 .dp-nav__link.active {
   color: var(--text-on-brand) !important;
-  background: linear-gradient(135deg, var(--brand), var(--accent));
+  background: var(--brand);
   box-shadow: var(--shadow-brand);
 }
 
@@ -188,7 +188,7 @@ body {
   align-self: center;
   padding: 3px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--brand), var(--accent));
+  background: var(--brand);
 }
 
 .logo {
@@ -362,7 +362,7 @@ body {
   min-width: 26px;
   height: 26px;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--brand), var(--accent));
+  background: var(--brand);
   color: var(--text-on-brand) !important;
   font-size: 0.78rem !important;
   font-weight: 700;
@@ -501,7 +501,7 @@ a.skill-label:hover {
 
 .badge {
   padding: 3px 11px;
-  background: linear-gradient(135deg, var(--brand), var(--accent));
+  background: var(--brand);
   color: #ffffff !important;
   font-size: 0.75rem;
   font-weight: 600;
@@ -540,7 +540,7 @@ a.skill-label:hover {
 }
 
 .dp-badge--solid {
-  background: linear-gradient(135deg, var(--brand), var(--accent));
+  background: var(--brand);
   border-color: transparent;
   color: #ffffff !important;
 }
@@ -574,7 +574,7 @@ a.skill-label:hover {
   width: 3px;
   height: 26px;
   border-radius: 0 3px 3px 0;
-  background: linear-gradient(180deg, var(--brand), var(--accent));
+  background: var(--accent);
   transition: height 320ms var(--ease-out);
 }
 
@@ -733,7 +733,7 @@ a.skill-label:hover {
 }
 
 .dp-project__visit:hover {
-  background: linear-gradient(135deg, var(--brand), var(--accent));
+  background: var(--brand);
   border-color: transparent;
   color: #ffffff !important;
 }
@@ -913,7 +913,7 @@ input[type="file"]::file-selector-button {
   padding: 8px 14px;
   border: 0;
   border-radius: var(--radius-pill);
-  background: linear-gradient(135deg, var(--brand), var(--accent));
+  background: var(--brand);
   color: var(--text-on-brand);
   font-weight: 700;
   cursor: pointer;
@@ -928,7 +928,7 @@ input[type="reset"] {
   padding: 11px 22px;
   border: 0;
   border-radius: var(--radius-pill);
-  background: linear-gradient(135deg, var(--brand), var(--accent));
+  background: var(--brand);
   color: var(--text-on-brand) !important;
   font-family: inherit;
   font-size: 0.92rem;
@@ -1310,4 +1310,129 @@ input[type="reset"]:active {
   .dp-certs {
     grid-template-columns: 1fr;
   }
+}
+
+/* ---------------------------------------------------------------------------
+   elishaterada.com-inspired look: Manrope UI text, serif display headings,
+   deep-green / cream palette, orange call-to-action, squared corners.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Baskerville, Georgia, serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4,
+.dp-name,
+.dp-years,
+.dp-headline,
+.dp-card__title,
+.dp-project__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-strong);
+}
+
+.dp-name {
+  font-size: clamp(2rem, 4.4vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.dp-years {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 600;
+}
+
+.dp-card__title {
+  font-size: 1.35rem;
+}
+
+.dp-role,
+.dp-nav__link {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.dp-nav {
+  background: var(--brand);
+  border: 1px solid var(--brand);
+  border-radius: var(--radius-sm);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.dp-nav__link {
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem !important;
+  font-weight: 700;
+  color: #f4eee0 !important;
+}
+
+.dp-nav__link:hover {
+  color: #f2abc2 !important;
+  background: transparent;
+  transform: none;
+}
+
+.dp-nav__link.active {
+  color: #132e29 !important;
+  background: #ed9b65;
+  box-shadow: none;
+}
+
+.dp-card,
+.glass,
+.dp-project,
+.dp-badge,
+.dp-contact__chip,
+.dp-leader,
+.dp-cert,
+.dp-quicklinks .hyperlink,
+.skill-label,
+input, textarea, select {
+  border-radius: var(--radius-md) !important;
+}
+
+.dp-avatar-wrap,
+.dp-card__title::before,
+.dp-project::before {
+  background: var(--accent);
+}
+
+.btn {
+  border-radius: var(--radius-sm) !important;
+  background: #ed9b65 !important;
+  color: #132e29 !important;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background: #e08a50 !important;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .dp-nav {
+  background: #0f2622;
+  border-color: rgba(244, 238, 224, 0.2);
+}
+
+.dp-name,
+.dp-years {
+  background: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  animation: none !important;
+  color: var(--text-strong) !important;
+}
+
+.dp-avatar-wrap,
+.dp-card__title::before,
+.dp-project::before {
+  background: var(--accent) !important;
 }

@@ -1,0 +1,234 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link "Home" [ref=e9] [cursor=pointer]:
+              - /url: "#/"
+          - listitem [ref=e10]:
+            - link "About" [ref=e11] [cursor=pointer]:
+              - /url: "#/about"
+          - listitem [ref=e12]:
+            - link "Projects" [ref=e13] [cursor=pointer]:
+              - /url: "#/projects"
+          - listitem [ref=e14]:
+            - link "Apps" [ref=e15] [cursor=pointer]:
+              - /url: "#/apps"
+          - listitem [ref=e16]:
+            - link "JS" [ref=e17] [cursor=pointer]:
+              - /url: "#/js-concepts"
+        - button "Switch to dark theme" [ref=e18] [cursor=pointer]:
+          - generic [aria-hidden] [ref=e19]: 🌙
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - link [ref=e22] [cursor=pointer]:
+            - /url: /
+            - img "Devendra Prasad" [ref=e23]
+          - generic [ref=e24]:
+            - generic [ref=e25]:
+              - generic [ref=e26]: Devendra Prasad
+              - generic [ref=e27]: Senior Staff Software Engineer
+            - generic [ref=e28]:
+              - generic [ref=e29]: 19 yrs
+              - generic [ref=e30]:
+                - link "CV" [ref=e31] [cursor=pointer]:
+                  - /url: /docs/dpresume.pdf#view=FitH
+                - link "Linkedin" [ref=e32] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/devendraprasad/overlay/contact-info/
+                - link "Github" [ref=e33] [cursor=pointer]:
+                  - /url: https://github.com/devendraprasad1984?tab=repositories
+                - link "Algo" [ref=e34] [cursor=pointer]:
+                  - /url: https://www.hackerrank.com/profile/devendraprasad11
+        - generic [ref=e35]:
+          - link "devendraprasad1984@gmail.com" [ref=e36] [cursor=pointer]:
+            - /url: mailto:devendraprasad1984@gmail.com
+            - generic [aria-hidden] [ref=e37]: ✉️
+            - text: devendraprasad1984@gmail.com
+          - link "+91-(958)-279-7772" [ref=e38] [cursor=pointer]:
+            - /url: tel:+919582797772
+            - generic [aria-hidden] [ref=e39]: 📞
+            - text: +91-(958)-279-7772
+  - generic [ref=e40]:
+    - generic [ref=e42]:
+      - generic [ref=e43]: About me
+      - generic [ref=e45]:
+        - list [ref=e46]:
+          - listitem [ref=e47]: ☆ Passionate frontend software engineer. A React/Javascript enthusiast, I have variety of frontend development experience
+          - listitem [ref=e48]:
+            - text: ☆
+            - strong [ref=e49]: "Blackhawk Network India Pvt Ltd (BHN): 2yrs"
+          - listitem [ref=e50]: "☆ Fictiv India Pvt Ltd: 2months"
+          - listitem [ref=e51]: "☆ Thoughtworks via Geektrust (Contact to hire): 6months"
+          - listitem [ref=e52]: ☆ Royal Bank of Scotland (RBS) - 10yrs
+          - listitem [ref=e53]: ☆ Syntel Inc - 1.3yrs
+        - generic [ref=e55]:
+          - textbox "enter passphrase" [ref=e56]
+          - button "Open" [ref=e57] [cursor=pointer]
+    - generic [ref=e59]:
+      - generic [ref=e61]:
+        - generic [ref=e62]: Live Apps
+        - list [ref=e63]:
+          - listitem [ref=e64]:
+            - link "giftcards.com" [ref=e65] [cursor=pointer]:
+              - /url: https://giftcards.com/us/en
+          - listitem [ref=e66]:
+            - link "giftcards.ca" [ref=e67] [cursor=pointer]:
+              - /url: https://giftcards.com/ca/en
+          - listitem [ref=e68]:
+            - link "giftcards.co.uk" [ref=e69] [cursor=pointer]:
+              - /url: https://giftcards.com/uk/en
+          - listitem [ref=e70]:
+            - link "Chase Palm" [ref=e71] [cursor=pointer]:
+              - /url: https://reservebusiness.giftcards.com
+      - generic [ref=e73]:
+        - generic [ref=e74]: Community
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: Oneliners
+              - generic [ref=e79]: core javascript utility helper methods
+              - generic [ref=e80]:
+                - text: npm i oneliners
+                - link "read me" [ref=e81] [cursor=pointer]:
+                  - /url: https://www.npmjs.com/package/oneliners
+      - generic [ref=e83]:
+        - generic [ref=e84]: Skills
+        - list [ref=e85]:
+          - listitem [ref=e86]:
+            - generic [ref=e87]: Javascript
+          - listitem [ref=e88]:
+            - generic [ref=e89]: typescript
+          - listitem [ref=e90]:
+            - generic [ref=e91]: NextJs16
+          - listitem [ref=e92]:
+            - generic [ref=e93]: React19
+          - listitem [ref=e94]:
+            - generic [ref=e95]: AEM
+          - listitem [ref=e96]:
+            - generic [ref=e97]: Python
+          - listitem [ref=e98]:
+            - generic [ref=e99]: MySql
+          - listitem [ref=e100]:
+            - generic [ref=e101]: mongodb
+          - listitem [ref=e102]:
+            - generic [ref=e103]: NodeJs
+          - listitem [ref=e104]:
+            - generic [ref=e105]: ExpressJs
+          - listitem [ref=e106]:
+            - generic [ref=e107]: HTML5
+          - listitem [ref=e108]:
+            - generic [ref=e109]: CSS3
+          - listitem [ref=e110]:
+            - generic [ref=e111]: SASS
+          - listitem [ref=e112]:
+            - generic [ref=e113]: Bootstrap
+          - listitem [ref=e114]:
+            - generic [ref=e115]: TailwindCss
+          - listitem [ref=e116]:
+            - generic [ref=e117]: GitHub
+          - listitem [ref=e118]:
+            - generic [ref=e119]: GitLab
+          - listitem [ref=e120]:
+            - generic [ref=e121]: Jira
+          - listitem [ref=e122]:
+            - generic [ref=e123]: Agile Methodology
+      - generic [ref=e125]:
+        - generic [ref=e126]: Leaders I work(ed) with...
+        - list [ref=e127]:
+          - listitem [ref=e128]:
+            - link "Yulia Groza VP Engineering, Commerce Solutions at Blackhawk Network" [ref=e129] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/yuliagroza/
+              - generic [ref=e130]: Yulia Groza
+              - generic [ref=e131]: VP Engineering, Commerce Solutions at Blackhawk Network
+          - listitem [ref=e132]:
+            - link "Brian Lewis Global Design Leader & Distinguished Engineer, at Blackhawk Network" [ref=e133] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/briantlewis/
+              - generic [ref=e134]: Brian Lewis
+              - generic [ref=e135]: Global Design Leader & Distinguished Engineer, at Blackhawk Network
+          - listitem [ref=e136]:
+            - link "Renjith Chandran Pillai Senior Director of Engineering at Blackhawk Network" [ref=e137] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/renjith-pillai/
+              - generic [ref=e138]: Renjith Chandran Pillai
+              - generic [ref=e139]: Senior Director of Engineering at Blackhawk Network
+          - listitem [ref=e140]:
+            - link "Sachin Lala Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN" [ref=e141] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/sachinlala/
+              - generic [ref=e142]: Sachin Lala
+              - generic [ref=e143]: Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN
+          - listitem [ref=e144]:
+            - link "Parag Jain CIO|CTO| Seasoned IT leader| GCC Leadership| BFSI Leader| AI Leader| Wholesale and Investment Banking" [ref=e145] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/paragjain78/
+              - generic [ref=e146]: Parag Jain
+              - generic [ref=e147]: CIO|CTO| Seasoned IT leader| GCC Leadership| BFSI Leader| AI Leader| Wholesale and Investment Banking
+          - listitem [ref=e148]:
+            - link "Amit Kumar Gupta Director at NATWEST Group India" [ref=e149] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/amit-kumar-a996619/
+              - generic [ref=e150]: Amit Kumar Gupta
+              - generic [ref=e151]: Director at NATWEST Group India
+  - contentinfo [ref=e152]:
+    - generic [ref=e153]:
+      - heading "Work experience links" [level=2] [ref=e154]
+      - generic [ref=e155]:
+        - generic [ref=e156]:
+          - link "BMI" [ref=e157] [cursor=pointer]:
+            - /url: /bmi/
+          - link "DragD3" [ref=e158] [cursor=pointer]:
+            - /url: /dragd3/
+          - link "React Vanilla JS" [ref=e159] [cursor=pointer]:
+            - /url: /react-vanila-js/#/
+          - link "Geek Admin" [ref=e160] [cursor=pointer]:
+            - /url: /geek_admin/
+        - generic [ref=e161]:
+          - link "KANBAN" [ref=e162] [cursor=pointer]:
+            - /url: /kanban/
+          - link "kathi.com" [ref=e163] [cursor=pointer]:
+            - /url: /kaathi.com/
+          - link "Lazy search" [ref=e164] [cursor=pointer]:
+            - /url: /debounceExampleLazySearch/
+          - link "Comment & Reply" [ref=e165] [cursor=pointer]:
+            - /url: /ciim/
+        - generic [ref=e166]:
+          - link "MOCHA" [ref=e167] [cursor=pointer]:
+            - /url: /mocha/mocha.html
+          - link "voice banking" [ref=e168] [cursor=pointer]:
+            - /url: /dpvoicebanking/
+          - link "type ORM" [ref=e169] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs/tree/master/ts-node-postgres-orm-api
+          - link "Web components" [ref=e170] [cursor=pointer]:
+            - /url: /customTagging/jsReadHTMLAttributes.html
+          - link "NODE.JS Practice app" [ref=e171] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs
+          - link "Tornado practice" [ref=e172] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python/tree/master/tornadoPractice
+          - link "Python practice" [ref=e173] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python
+        - generic [ref=e174]:
+          - link "WIP" [ref=e175] [cursor=pointer]:
+            - /url: ""
+          - link "PracticingJS" [ref=e176] [cursor=pointer]:
+            - /url: /docs/packOf30InterviewPrep.pdf#view=FitH
+      - generic [ref=e177]:
+        - generic [ref=e178]:
+          - strong [ref=e179]: "Learning:"
+          - generic [ref=e180]: devops
+          - generic [ref=e181]: graphql
+          - generic [ref=e182]: UI design system
+          - generic [ref=e183]: Web3
+          - generic [ref=e184]: FE architecture
+          - generic [ref=e185]: system design
+          - generic [ref=e186]: node
+        - generic [ref=e187]:
+          - strong [ref=e188]: "Agile:"
+          - generic [ref=e189]: Agile Planning
+          - generic [ref=e190]: Estimation
+          - generic [ref=e191]: Sprint
+          - generic [ref=e192]: Retro
+          - generic [ref=e193]: Review
+          - generic [ref=e194]: Speedback
+        - generic [ref=e195]:
+          - strong [ref=e196]: "Hobbies:"
+          - generic [ref=e197]: upskilling
+          - generic [ref=e198]: music
+          - generic [ref=e199]: movies
+      - img "signature" [ref=e200]

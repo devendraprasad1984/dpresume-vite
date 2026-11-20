@@ -1,0 +1,135 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - link "Skip to content" [ref=f1e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner [ref=f1e4]:
+      - link "Elisha Terada, home" [ref=f1e5] [cursor=pointer]:
+        - /url: /
+        - text: Elisha Terada.
+      - navigation "Main navigation" [ref=f1e6]:
+        - link "Projects" [ref=f1e7] [cursor=pointer]:
+          - /url: /projects
+        - link "Explainers" [ref=f1e8] [cursor=pointer]:
+          - /url: /explainers
+        - link "Writing" [ref=f1e9] [cursor=pointer]:
+          - /url: /writing
+        - link "About" [ref=f1e10] [cursor=pointer]:
+          - /url: /about
+      - link "Get in touch" [ref=f1e11] [cursor=pointer]:
+        - /url: https://docs.google.com/forms/d/e/1FAIpQLSew131_4Z8xKt5r3PcCl4YSiXG59OB-_WoUUjpZHzm8EXpDtA/viewform?usp=dialog
+    - main [ref=f1e15]:
+      - generic [ref=f1e17]:
+        - region "There’s a better way. Let’s build it." [ref=f1e18]:
+          - figure "An ASCII Japanese garden with a pink cherry blossom tree, drifting petals, three swimming koi, and a curved stepping-stone path. A faint network beneath the pond carries a slow copper signal between connected points, leaving gentle ripples. Raked sand, moss-covered rocks, and a small arched timber bridge extend the garden around the tree and pond.":
+            - 'button "Stir the garden: click, tap, or press Enter for petals and pond ripples. Hover left or right, or use the arrow keys, to sway the cherry tree." [ref=f1e19] [cursor=pointer]'
+            - generic [ref=f1e22]:
+              - generic [ref=f1e23]:
+                - blockquote [ref=f1e24]:
+                  - paragraph [ref=f1e25]: “Once you spot a promising idea, you build it.”
+                - paragraph [ref=f1e26]:
+                  - link "Tim Brown, Strategy by Design, quotation source" [ref=f1e27] [cursor=pointer]:
+                    - /url: https://www.fastcompany.com/52795/strategy-design
+                    - text: Tim Brown
+                  - generic [ref=f1e28]: · Strategy by Design
+              - generic [aria-hidden]:
+                - blockquote:
+                  - paragraph: “Prototypes help us move from ideas to action.”
+                - paragraph:
+                  - link:
+                    - /url: https://www.ideou.com/blogs/inspiration/learn-more-before-you-invest-more
+                    - text: Brendan Boyle
+                  - generic: · Learn More Before You Invest More
+              - generic [aria-hidden]:
+                - blockquote:
+                  - paragraph: “Consider everything an experiment.”
+                - paragraph:
+                  - link:
+                    - /url: https://www.listsofnote.com/p/consider-everything-an-experiment
+                    - text: Corita Kent
+                  - generic: · Art Department Rules
+              - generic [aria-hidden]:
+                - blockquote:
+                  - paragraph: “Less, but better – because it concentrates on the essential aspects, and the products are not burdened with non-essentials.”
+                - paragraph:
+                  - link:
+                    - /url: https://www.vitsoe.com/gb/about/good-design
+                    - text: Dieter Rams
+                  - generic: · Ten principles for good design
+          - generic [ref=f1e29]:
+            - heading [level=1] [ref=f1e30]:
+              - text: There’s a better way.
+              - emphasis [ref=f1e31]: Let’s build it.
+            - paragraph [ref=f1e32]: I connect real problems with new possibilities in design, engineering, and AI. Then I build working experiences that teams can try, improve, and put to use.
+          - generic [ref=f1e33]:
+            - link "Let’s talk" [ref=f1e34] [cursor=pointer]:
+              - /url: https://docs.google.com/forms/d/e/1FAIpQLSew131_4Z8xKt5r3PcCl4YSiXG59OB-_WoUUjpZHzm8EXpDtA/viewform?usp=dialog
+            - link "Public projects" [ref=f1e38] [cursor=pointer]:
+              - /url: "#selected-work"
+        - region "Public projects." [ref=f1e41]:
+          - generic [ref=f1e42]:
+            - img "Elisha Terada" [ref=f1e44]
+            - generic [ref=f1e45]:
+              - paragraph [ref=f1e46]: I help leaders choose what’s worth building. Making products keeps that advice current.
+              - paragraph [ref=f1e47]:
+                - text: Technical Innovation Director at
+                - link "Fresh Consulting" [ref=f1e48] [cursor=pointer]:
+                  - /url: https://www.freshconsulting.com/
+                - text: . Co-founder of
+                - link "Brancher.ai" [ref=f1e49] [cursor=pointer]:
+                  - /url: https://www.brancher.ai/
+                - text: .
+          - heading [level=2] [ref=f1e50]:
+            - text: Public
+            - emphasis [ref=f1e51]: projects.
+          - paragraph [ref=f1e52]: My consulting spans B2B products, SaaS and internal systems, often under NDA. These self-directed products and ventures show how I build in public.
+          - generic [ref=f1e53]:
+            - link [ref=f1e54] [cursor=pointer]:
+              - /url: /projects/somewhere-together
+              - 'img "October 19, 2026 staged local gameplay: a flying car above the current Somewhere Together island, waterways, and coastline" [ref=f1e56]'
+              - heading "Somewhere Together" [level=3] [ref=f1e58]
+              - paragraph [ref=f1e62]: "A multiplayer product: from the experience people need to the systems that keep it shared."
+            - link [ref=f1e63] [cursor=pointer]:
+              - /url: /projects/yonde-mite
+              - generic "YondeMite native phone and tablet prototype" [ref=f1e65]:
+                - img "Complete YondeMite phone Home screen, including original manga discovery, reading languages, Read chapter action and Home, Library and More navigation" [ref=f1e67]
+                - img "Complete native tablet reader with manga and a Reading help sheet showing English dialogue, original Japanese and Japanese reading assistance" [ref=f1e69]
+              - heading "YondeMite" [level=3] [ref=f1e71]
+              - paragraph [ref=f1e75]: Private beta · In progress
+              - paragraph [ref=f1e76]: "A more engaging way to learn languages: stories first, support when you need it."
+            - link [ref=f1e77] [cursor=pointer]:
+              - /url: /projects/everyday-wins
+              - img "Everyday Wins live homepage with free guides, opportunity filters and the grant preparation workspace entry" [ref=f1e79]
+              - heading "Everyday Wins" [level=3] [ref=f1e81]
+              - paragraph [ref=f1e85]: Free guides live · Workspace in pilot
+              - paragraph [ref=f1e86]: Free practical guides for everyday tasks, with a grant preparation workspace in pilot.
+            - link [ref=f1e87] [cursor=pointer]:
+              - /url: /projects/brancher-ai
+              - img "Brancher.ai cover image" [ref=f1e89]
+              - heading "Brancher.ai" [level=3] [ref=f1e91]
+              - paragraph [ref=f1e95]: Co-founded a no-code AI platform, from product direction to launch.
+          - generic [ref=f1e96]:
+            - link "All public projects" [ref=f1e97] [cursor=pointer]:
+              - /url: /projects
+            - link "Follow the work on X" [ref=f1e101] [cursor=pointer]:
+              - /url: https://x.com/elishaterada
+    - contentinfo [ref=f1e105]:
+      - paragraph [ref=f1e106]: Have a technology decision to make?
+      - link "Start a conversation." [ref=f1e107] [cursor=pointer]:
+        - /url: https://docs.google.com/forms/d/e/1FAIpQLSew131_4Z8xKt5r3PcCl4YSiXG59OB-_WoUUjpZHzm8EXpDtA/viewform?usp=dialog
+      - generic [ref=f1e112]:
+        - generic [ref=f1e113]: © 2026 Elisha Terada
+        - link "Projects" [ref=f1e114] [cursor=pointer]:
+          - /url: /projects
+        - link "Explainers" [ref=f1e115] [cursor=pointer]:
+          - /url: /explainers
+        - link "Writing" [ref=f1e116] [cursor=pointer]:
+          - /url: /writing
+        - link "About" [ref=f1e117] [cursor=pointer]:
+          - /url: /about
+        - link "Follow on X" [ref=f1e118] [cursor=pointer]:
+          - /url: https://x.com/elishaterada
+        - link "LinkedIn" [ref=f1e119] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/elishaterada/
+      - group [ref=f1e120]:
+        - generic "Display preferences" [ref=f1e121] [cursor=pointer]
+  - alert [ref=f1e122]
