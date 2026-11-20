@@ -1,0 +1,396 @@
+- generic [ref=f19e3]:
+  - banner [ref=f19e4]:
+    - generic [ref=f19e5]:
+      - list [ref=f19e6]:
+        - listitem [ref=f19e7]:
+          - link "Home" [ref=f19e8] [cursor=pointer]:
+            - /url: "#/"
+        - listitem [ref=f19e9]:
+          - link "About" [ref=f19e10] [cursor=pointer]:
+            - /url: "#/about"
+        - listitem [ref=f19e11]:
+          - link "Projects" [ref=f19e12] [cursor=pointer]:
+            - /url: "#/projects"
+        - listitem [ref=f19e13]:
+          - link "Apps" [ref=f19e14] [cursor=pointer]:
+            - /url: "#/apps"
+        - listitem [ref=f19e15]:
+          - link "JS" [ref=f19e16] [cursor=pointer]:
+            - /url: "#/js-concepts"
+        - listitem [ref=f19e17]:
+          - button "Switch to dark theme" [ref=f19e18] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f19e19]: 🌙
+      - generic [ref=f19e20]:
+        - generic [ref=f19e21]:
+          - link [ref=f19e22] [cursor=pointer]:
+            - /url: /
+            - img "Devendra Prasad" [ref=f19e23]
+          - generic [ref=f19e24]:
+            - generic [ref=f19e25]:
+              - generic [ref=f19e26]: Devendra Prasad
+              - generic [ref=f19e27]: Senior Staff Software Engineer
+            - generic [ref=f19e28]:
+              - generic [ref=f19e29]: 19 yrs
+              - generic [ref=f19e30]:
+                - link "CV" [ref=f19e31] [cursor=pointer]:
+                  - /url: /docs/dpresume.pdf#view=FitH
+                - link "Linkedin" [ref=f19e32] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/devendraprasad/overlay/contact-info/
+                - link "Github" [ref=f19e33] [cursor=pointer]:
+                  - /url: https://github.com/devendraprasad1984?tab=repositories
+                - link "Algo" [ref=f19e34] [cursor=pointer]:
+                  - /url: https://www.hackerrank.com/profile/devendraprasad11
+        - generic [ref=f19e35]:
+          - link "devendraprasad1984@gmail.com" [ref=f19e36] [cursor=pointer]:
+            - /url: mailto:devendraprasad1984@gmail.com
+            - generic [aria-hidden] [ref=f19e37]: ✉️
+            - text: devendraprasad1984@gmail.com
+          - link "+91-(958)-279-7772" [ref=f19e38] [cursor=pointer]:
+            - /url: tel:+919582797772
+            - generic [aria-hidden] [ref=f19e39]: 📞
+            - text: +91-(958)-279-7772
+  - generic [ref=f19e42]:
+    - region "Home banner" [ref=f19e43]:
+      - generic [ref=f19e45]:
+        - heading [level=1] [ref=f19e46]:
+          - text: There’s a better way.
+          - emphasis [ref=f19e47]: Let’s build it.
+        - paragraph [ref=f19e48]: Senior Staff Frontend Engineer, 19 years turning real problems into fast, maintainable web experiences.
+    - generic [ref=f19e49]:
+      - generic [ref=f19e50]: In the role of Senior Staff Frontend ===>
+      - text: Principal / Architect frontend, I
+    - generic [ref=f19e51]:
+      - heading "Experience by the Numbers" [level=2] [ref=f19e52]
+      - generic [ref=f19e53]:
+        - generic [ref=f19e54]:
+          - generic [ref=f19e55]: 18%
+          - generic [ref=f19e56]: Conversion lift
+        - generic [ref=f19e57]:
+          - generic [ref=f19e58]: 60%
+          - generic [ref=f19e59]: Faster dev (AI)
+        - generic [ref=f19e60]:
+          - generic [ref=f19e61]: 40%
+          - generic [ref=f19e62]: Faster deploys
+        - generic [ref=f19e63]:
+          - generic [ref=f19e64]: $1.5M
+          - generic [ref=f19e65]: Yearly savings
+        - generic [ref=f19e66]:
+          - generic [ref=f19e67]: 0.5m
+          - generic [ref=f19e68]: Build time (was 5m)
+        - generic [ref=f19e69]:
+          - generic [ref=f19e70]: 20%
+          - generic [ref=f19e71]: Fewer support queries
+        - generic [ref=f19e72]:
+          - generic [ref=f19e73]: "23"
+          - generic [ref=f19e74]: Key achievements
+        - generic [ref=f19e75]:
+          - generic [ref=f19e76]: "3"
+          - generic [ref=f19e77]: Measurable wins
+        - generic [ref=f19e78]:
+          - generic [ref=f19e79]: "7"
+          - generic [ref=f19e80]: Core technologies
+    - list [ref=f19e81]:
+      - listitem [ref=f19e82]: Built scalable frontend platforms by leading teams, improving architecture, performance, accessibility, CI/CD, and automation to deliver better user experiences faster.
+      - listitem [ref=f19e83]: I’m a frontend architect and engineering leader focused on building scalable, high-performance digital commerce platforms. I specialize in React, Next.js, micro-frontends, monorepos, and CMS-driven architectures, with deep experience leading global multi-tenant frontend systems for high-traffic e-commerce products such as giftcards.com.My work combines architecture, platform modernization, and engineering excellence. I’ve led migration initiatives from AEM to Next.js and Payload CMS, driving major cost savings, improving flexibility, and reducing platform complexity. I also designed reusable micro-frontend patterns and improved CI/CD pipelines, helping teams accelerate development, shorten deployment cycles, and ship more reliably at scale.I care deeply about customer experience and measurable outcomes. From redesigning product detail pages for greater fee transparency to improving checkout journeys, I focus on performance, Core Web Vitals, conversion, and trust. Along the way, I’ve helped increase conversion, reduce support load, and strengthen platform stability.Beyond delivery, I contribute to technical roadmaps, engineering standards, architecture reviews, hiring, mentoring, and cross-team enablement. I’m also passionate about AI-assisted engineering, GitHub Copilot, spec-driven development, and building strong frontend practices around quality, security, and maintainability.
+      - listitem [ref=f19e84]: I am a github co-pilot AI practitioner and spec driven development
+      - listitem [ref=f19e85]: I am the architect and lead the global multi-tenant frontend architecture for high-traffic e-commerce platform (giftcards.com), driving system availability using AEM Cloud, scale, and performance
+      - listitem [ref=f19e86]:
+        - text: I drive the platform migration efforts which saves lot of cost to department eg. Get rid of AEM licensing by moving over to
+        - generic [ref=f19e87]: NextJS & PayloadCMS platform which would save $1.5 million per year
+      - listitem [ref=f19e88]: I engineered micro-frontend architecture for giftcards.com, reusable patterns across apps, cutting development times by 60% by AI adoption and deployment times by approx 40% by improving build and CI/CD pipelines
+      - listitem [ref=f19e89]: I redesigned PDP for giftcards.com by view fee transparency which improved CWV to green zone, increased conversion by 18% and reduced customer queries by 20% saving lot of time to support desk
+      - listitem [ref=f19e90]: I improve checkout process which would increase conversion metric and transparency to customers
+      - listitem [ref=f19e91]: I help set engineering standards, technical roadmapping for D2C, and mentoring Senior/Staff engineers
+      - listitem [ref=f19e92]: I have successfully dealt with many enterprise apps while working in small/big organizations
+      - listitem [ref=f19e93]: I standardize TDD & spec driven frontend development mainly ReactJS, NextJS, HTML, CSS, Javascript
+      - listitem [ref=f19e94]: I design and implement enterprise-scale web architectures using React, Next.js, Micro-frontends, and Monorepos, seamlessly integrating CMS solutions like and Payload CMS and Adobe Experience Manager (AEM)
+      - listitem [ref=f19e95]: I established automated CI/CD pipelines (GitHub Actions, SonarQube, Snyk) to enforce security scanning, automated testing attachments in pipeline, and zero-downtime releases and saving dev time
+      - listitem [ref=f19e96]: I practice client-server + MonoRepo + REST + Monolithic + Microservice + Micro frontend architectures
+      - listitem [ref=f19e97]: I reduced frontend build time from 5+mins to 0.5min by using eslint & snapshot caching
+      - listitem [ref=f19e98]: I contribute to engineering metrics, working groups, architecture design and leadership discussions
+      - listitem [ref=f19e99]: I govern code quality using sonarqube, git hooks, snyk scans and constant review cycle
+      - listitem [ref=f19e100]: My apps follow auth patterns e.g OAuth2.0 & JWT tokens
+      - listitem [ref=f19e101]: I make applications safe from XSS, CSRF, and vulnerabilities and error free by constant review and iteration
+      - listitem [ref=f19e102]: I Code. Collaborate. Build. Change. Incident. Release. Triage
+      - listitem [ref=f19e103]: I help in recruiting, growing and enabling a team
+      - listitem [ref=f19e104]: I am a code reviewer, mentor, and face to dev team
+      - listitem [ref=f19e105]: Lead end-to-end operational lifecycle management—driving architecture design, release strategies, incidents, triage, and SLA metrics across teams
+      - listitem [ref=f19e106]: I am co-developer in BHN design system and help onboarding and cross team development
+      - listitem [ref=f19e107]: I use JIRA | Rally | Leankit | Trello for agility, bug tracking and backlog grooming
+    - generic [ref=f19e108]:
+      - heading "Certificates" [level=2] [ref=f19e109]
+      - generic [ref=f19e110]:
+        - link [ref=f19e111] [cursor=pointer]:
+          - /url: /images/cert1.png
+          - img "Certificate 1" [ref=f19e112]
+        - link [ref=f19e113] [cursor=pointer]:
+          - /url: /images/cert2.png
+          - img "Certificate 2" [ref=f19e114]
+        - link [ref=f19e115] [cursor=pointer]:
+          - /url: /images/cert3.png
+          - img "Certificate 3" [ref=f19e116]
+    - generic [ref=f19e117]:
+      - heading "Sample Apps / Micro Frontends" [level=2] [ref=f19e118]
+      - generic [ref=f19e119]:
+        - generic [ref=f19e120]:
+          - generic [ref=f19e121]: Sample App - 1
+          - generic [ref=f19e122]:
+            - generic [ref=f19e123]:
+              - generic [ref=f19e124]:
+                - generic [ref=f19e125]: "Counter:"
+                - generic [ref=f19e126]: "0"
+                - button "reset" [ref=f19e127] [cursor=pointer]
+              - generic [ref=f19e128]:
+                - generic [ref=f19e129]: "Context count: 0"
+                - generic [ref=f19e130]:
+                  - button "INCREASE" [ref=f19e131] [cursor=pointer]
+                  - button "DECREASE" [ref=f19e132] [cursor=pointer]
+            - heading "Redux counter app" [level=2] [ref=f19e133]
+            - generic [ref=f19e134]:
+              - generic [ref=f19e135]:
+                - generic [ref=f19e136]: "count: 0"
+                - generic [ref=f19e137]:
+                  - button "UP" [ref=f19e138] [cursor=pointer]
+                  - button "DOWN" [ref=f19e139] [cursor=pointer]
+                  - button "ASYNC UP" [ref=f19e140] [cursor=pointer]
+                  - button "ASYNC DOWN" [ref=f19e141] [cursor=pointer]
+              - generic [ref=f19e142]: no forms found
+        - generic [ref=f19e143]: Sample App - 2
+        - generic [ref=f19e144]:
+          - group "Via HTML Form" [ref=f19e145]:
+            - heading "Via HTML Form" [level=1] [ref=f19e147]
+            - generic [ref=f19e148]:
+              - generic [ref=f19e149]:
+                - textbox [ref=f19e150]: Devendra_1
+                - textbox [ref=f19e151]: Prasad
+                - spinbutton [ref=f19e152]
+                - generic [ref=f19e153]:
+                  - button "Submit form" [ref=f19e154] [cursor=pointer]
+                  - button "Submit Vanilla" [ref=f19e155] [cursor=pointer]
+              - generic [ref=f19e156]: "Data: null"
+              - generic [ref=f19e157]: "Watch firstname: Devendra_1"
+            - separator [ref=f19e158]
+          - group "Via Vanilla custom Form" [ref=f19e159]:
+            - heading "Via Vanilla custom Form" [level=1] [ref=f19e161]
+            - generic [ref=f19e162]:
+              - textbox [ref=f19e163]: Devendra_3
+              - textbox [ref=f19e164]: Prasad_4
+              - button "Submit Vanilla" [ref=f19e165] [cursor=pointer]
+              - generic [ref=f19e166]: "Data: null"
+            - separator [ref=f19e167]
+          - group "Material UI form" [ref=f19e168]:
+            - heading "Material UI form" [level=1] [ref=f19e170]
+            - generic [ref=f19e171]:
+              - textbox "enter name" [ref=f19e173]
+              - generic [ref=f19e174]:
+                - generic: Enter age
+                - generic [ref=f19e175]:
+                  - combobox "Enter age" [ref=f19e176] [cursor=pointer]
+                  - textbox [aria-hidden]:
+                    - /placeholder: enter age
+                  - group [aria-hidden]:
+                    - generic: Age
+              - button "Click to submit form" [ref=f19e177] [cursor=pointer]
+              - generic [ref=f19e178]: "Data: null"
+        - generic [ref=f19e179]:
+          - generic [ref=f19e181]:
+            - article [ref=f19e182]:
+              - heading "Monolith" [level=4] [ref=f19e183]
+              - paragraph [ref=f19e184]: One codebase, one build, one deploy.
+              - paragraph [ref=f19e185]: Strengths
+              - list [ref=f19e186]:
+                - listitem [ref=f19e187]: ✓ Simplest mental model — a single repo, toolchain and build
+                - listitem [ref=f19e188]: ✓ Sharing code is just an import; no runtime integration cost
+                - listitem [ref=f19e189]: ✓ One bundle, so dependency versions and UI stay consistent by default
+                - listitem [ref=f19e190]: ✓ Local development, debugging and end-to-end testing are straightforward
+              - paragraph [ref=f19e191]: Trade-offs
+              - list [ref=f19e192]:
+                - listitem [ref=f19e193]: ✕ Every team rides the same release train — one bad merge blocks everyone
+                - listitem [ref=f19e194]: ✕ Build and CI times grow with the codebase
+                - listitem [ref=f19e195]: ✕ Framework and major-version upgrades become all-or-nothing events
+                - listitem [ref=f19e196]: ✕ Ownership boundaries blur as the application grows
+            - article [ref=f19e197]:
+              - heading "Micro Frontends" [level=4] [ref=f19e198]
+              - paragraph [ref=f19e199]: Independent apps per team, composed at runtime.
+              - paragraph [ref=f19e200]: Strengths
+              - list [ref=f19e201]:
+                - listitem [ref=f19e202]: ✓ Teams ship on their own cadence with no shared release train
+                - listitem [ref=f19e203]: ✓ Failure and upgrade blast radius stays scoped to one domain
+                - listitem [ref=f19e204]: ✓ Stacks can diverge, so upgrades happen incrementally
+                - listitem [ref=f19e205]: ✓ Ownership mirrors team boundaries instead of fighting them
+              - paragraph [ref=f19e206]: Trade-offs
+              - list [ref=f19e207]:
+                - listitem [ref=f19e208]: ✕ Duplicate dependencies inflate total bytes without deliberate sharing
+                - listitem [ref=f19e209]: ✕ Runtime composition, routing and shared state add real complexity
+                - listitem [ref=f19e210]: ✕ Cross-app consistency needs a design system plus governance
+                - listitem [ref=f19e211]: ✕ Local development, observability and E2E testing get harder
+          - paragraph [ref=f19e212]:
+            - strong [ref=f19e213]: "In practice:"
+            - text: stay a monolith until deploy contention, team count or domain boundaries make the shared release train the bottleneck. Micro frontends buy autonomy, and you pay for it in infrastructure.
+    - generic [ref=f19e214]:
+      - generic [ref=f19e216]:
+        - generic [ref=f19e217]: Live Apps
+        - list [ref=f19e218]:
+          - listitem [ref=f19e219]:
+            - link "giftcards.com" [ref=f19e220] [cursor=pointer]:
+              - /url: https://giftcards.com/us/en
+          - listitem [ref=f19e221]:
+            - link "giftcards.ca" [ref=f19e222] [cursor=pointer]:
+              - /url: https://giftcards.com/ca/en
+          - listitem [ref=f19e223]:
+            - link "giftcards.co.uk" [ref=f19e224] [cursor=pointer]:
+              - /url: https://giftcards.com/uk/en
+          - listitem [ref=f19e225]:
+            - link "Chase Palm" [ref=f19e226] [cursor=pointer]:
+              - /url: https://reservebusiness.giftcards.com
+      - generic [ref=f19e228]:
+        - generic [ref=f19e229]: Community
+        - list [ref=f19e230]:
+          - listitem [ref=f19e231]:
+            - generic [ref=f19e232]:
+              - generic [ref=f19e233]: Oneliners
+              - generic [ref=f19e234]: core javascript utility helper methods
+              - generic [ref=f19e235]:
+                - text: npm i oneliners
+                - link "read me" [ref=f19e236] [cursor=pointer]:
+                  - /url: https://www.npmjs.com/package/oneliners
+      - generic [ref=f19e238]:
+        - generic [ref=f19e239]: Skills
+        - list [ref=f19e240]:
+          - listitem [ref=f19e241]:
+            - generic [ref=f19e242]: Javascript
+          - listitem [ref=f19e243]:
+            - generic [ref=f19e244]: typescript
+          - listitem [ref=f19e245]:
+            - generic [ref=f19e246]: NextJs16
+          - listitem [ref=f19e247]:
+            - generic [ref=f19e248]: React19
+          - listitem [ref=f19e249]:
+            - generic [ref=f19e250]: AEM
+          - listitem [ref=f19e251]:
+            - generic [ref=f19e252]: Python
+          - listitem [ref=f19e253]:
+            - generic [ref=f19e254]: MySql
+          - listitem [ref=f19e255]:
+            - generic [ref=f19e256]: mongodb
+          - listitem [ref=f19e257]:
+            - generic [ref=f19e258]: NodeJs
+          - listitem [ref=f19e259]:
+            - generic [ref=f19e260]: ExpressJs
+          - listitem [ref=f19e261]:
+            - generic [ref=f19e262]: HTML5
+          - listitem [ref=f19e263]:
+            - generic [ref=f19e264]: CSS3
+          - listitem [ref=f19e265]:
+            - generic [ref=f19e266]: SASS
+          - listitem [ref=f19e267]:
+            - generic [ref=f19e268]: Bootstrap
+          - listitem [ref=f19e269]:
+            - generic [ref=f19e270]: TailwindCss
+          - listitem [ref=f19e271]:
+            - generic [ref=f19e272]: GitHub
+          - listitem [ref=f19e273]:
+            - generic [ref=f19e274]: GitLab
+          - listitem [ref=f19e275]:
+            - generic [ref=f19e276]: Jira
+          - listitem [ref=f19e277]:
+            - generic [ref=f19e278]: Agile Methodology
+      - generic [ref=f19e280]:
+        - generic [ref=f19e281]: Leaders I work(ed) with...
+        - list [ref=f19e282]:
+          - listitem [ref=f19e283]:
+            - link "Yulia Groza VP Engineering, Commerce Solutions at Blackhawk Network" [ref=f19e285] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/yuliagroza/
+              - generic [ref=f19e286]: Yulia Groza
+              - generic [ref=f19e287]: VP Engineering, Commerce Solutions at Blackhawk Network
+          - listitem [ref=f19e288]:
+            - link "Brian Lewis Global Design Leader & Distinguished Engineer, at Blackhawk Network" [ref=f19e290] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/briantlewis/
+              - generic [ref=f19e291]: Brian Lewis
+              - generic [ref=f19e292]: Global Design Leader & Distinguished Engineer, at Blackhawk Network
+          - listitem [ref=f19e293]:
+            - link "Renjith Chandran Pillai Senior Director of Engineering at Blackhawk Network" [ref=f19e295] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/renjith-pillai/
+              - generic [ref=f19e296]: Renjith Chandran Pillai
+              - generic [ref=f19e297]: Senior Director of Engineering at Blackhawk Network
+          - listitem [ref=f19e298]:
+            - link "Sachin Lala Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN" [ref=f19e300] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/sachinlala/
+              - generic [ref=f19e301]: Sachin Lala
+              - generic [ref=f19e302]: Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN
+          - listitem [ref=f19e303]:
+            - link "Parag Jain CIO|CTO| Seasoned IT leader| GCC Leadership| BFSI Leader| AI Leader| Wholesale and Investment Banking" [ref=f19e305] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/paragjain78/
+              - generic [ref=f19e306]: Parag Jain
+              - generic [ref=f19e307]: CIO|CTO| Seasoned IT leader| GCC Leadership| BFSI Leader| AI Leader| Wholesale and Investment Banking
+          - listitem [ref=f19e308]:
+            - link "Amit Kumar Gupta Director at NATWEST Group India" [ref=f19e310] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/amit-kumar-a996619/
+              - generic [ref=f19e311]: Amit Kumar Gupta
+              - generic [ref=f19e312]: Director at NATWEST Group India
+  - contentinfo [ref=f19e313]:
+    - generic [ref=f19e314]:
+      - heading "Work experience links" [level=2] [ref=f19e315]
+      - generic [ref=f19e316]:
+        - generic [ref=f19e317]:
+          - link "BMI" [ref=f19e318] [cursor=pointer]:
+            - /url: /bmi/
+          - link "DragD3" [ref=f19e319] [cursor=pointer]:
+            - /url: /dragd3/
+          - link "React Vanilla JS" [ref=f19e320] [cursor=pointer]:
+            - /url: /react-vanila-js/#/
+          - link "Geek Admin" [ref=f19e321] [cursor=pointer]:
+            - /url: /geek_admin/
+        - generic [ref=f19e322]:
+          - link "KANBAN" [ref=f19e323] [cursor=pointer]:
+            - /url: /kanban/
+          - link "kathi.com" [ref=f19e324] [cursor=pointer]:
+            - /url: /kaathi.com/
+          - link "Lazy search" [ref=f19e325] [cursor=pointer]:
+            - /url: /debounceExampleLazySearch/
+          - link "Comment & Reply" [ref=f19e326] [cursor=pointer]:
+            - /url: /ciim/
+        - generic [ref=f19e327]:
+          - link "MOCHA" [ref=f19e328] [cursor=pointer]:
+            - /url: /mocha/mocha.html
+          - link "voice banking" [ref=f19e329] [cursor=pointer]:
+            - /url: /dpvoicebanking/
+          - link "type ORM" [ref=f19e330] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs/tree/master/ts-node-postgres-orm-api
+          - link "Web components" [ref=f19e331] [cursor=pointer]:
+            - /url: /customTagging/jsReadHTMLAttributes.html
+          - link "NODE.JS Practice app" [ref=f19e332] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs
+          - link "Tornado practice" [ref=f19e333] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python/tree/master/tornadoPractice
+          - link "Python practice" [ref=f19e334] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python
+        - generic [ref=f19e335]:
+          - link "WIP" [ref=f19e336] [cursor=pointer]:
+            - /url: ""
+          - link "PracticingJS" [ref=f19e337] [cursor=pointer]:
+            - /url: /docs/packOf30InterviewPrep.pdf#view=FitH
+      - generic [ref=f19e338]:
+        - generic [ref=f19e339]:
+          - strong [ref=f19e340]: "Learning:"
+          - generic [ref=f19e341]: devops
+          - generic [ref=f19e342]: graphql
+          - generic [ref=f19e343]: UI design system
+          - generic [ref=f19e344]: Web3
+          - generic [ref=f19e345]: FE architecture
+          - generic [ref=f19e346]: system design
+          - generic [ref=f19e347]: node
+        - generic [ref=f19e348]:
+          - strong [ref=f19e349]: "Agile:"
+          - generic [ref=f19e350]: Agile Planning
+          - generic [ref=f19e351]: Estimation
+          - generic [ref=f19e352]: Sprint
+          - generic [ref=f19e353]: Retro
+          - generic [ref=f19e354]: Review
+          - generic [ref=f19e355]: Speedback
+        - generic [ref=f19e356]:
+          - strong [ref=f19e357]: "Hobbies:"
+          - generic [ref=f19e358]: upskilling
+          - generic [ref=f19e359]: music
+          - generic [ref=f19e360]: movies
+      - img "signature" [ref=f19e361]

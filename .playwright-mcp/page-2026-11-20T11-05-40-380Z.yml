@@ -1,0 +1,136 @@
+- generic [ref=f19e3]:
+  - banner [ref=f19e4]:
+    - generic [ref=f19e5]:
+      - list [ref=f19e6]:
+        - listitem [ref=f19e7]:
+          - link "Home" [ref=f19e8] [cursor=pointer]:
+            - /url: "#/"
+        - listitem [ref=f19e9]:
+          - link "About" [ref=f19e10] [cursor=pointer]:
+            - /url: "#/about"
+        - listitem [ref=f19e11]:
+          - link "Projects" [ref=f19e12] [cursor=pointer]:
+            - /url: "#/projects"
+        - listitem [ref=f19e13]:
+          - link "Apps" [ref=f19e14] [cursor=pointer]:
+            - /url: "#/apps"
+        - listitem [ref=f19e15]:
+          - link "JS" [ref=f19e16] [cursor=pointer]:
+            - /url: "#/js-concepts"
+        - listitem [ref=f19e17]:
+          - button "Switch to dark theme" [ref=f19e18] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f19e19]: 🌙
+      - generic [ref=f19e20]:
+        - generic [ref=f19e21]:
+          - link [ref=f19e22] [cursor=pointer]:
+            - /url: /
+            - img "Devendra Prasad" [ref=f19e23]
+          - generic [ref=f19e24]:
+            - generic [ref=f19e25]:
+              - generic [ref=f19e26]: Devendra Prasad
+              - generic [ref=f19e27]: Senior Staff Software Engineer
+            - generic [ref=f19e28]:
+              - generic [ref=f19e29]: 19 yrs
+              - generic [ref=f19e30]:
+                - link "CV" [ref=f19e31] [cursor=pointer]:
+                  - /url: /docs/dpresume.pdf#view=FitH
+                - link "Linkedin" [ref=f19e32] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/devendraprasad/overlay/contact-info/
+                - link "Github" [ref=f19e33] [cursor=pointer]:
+                  - /url: https://github.com/devendraprasad1984?tab=repositories
+                - link "Algo" [ref=f19e34] [cursor=pointer]:
+                  - /url: https://www.hackerrank.com/profile/devendraprasad11
+        - generic [ref=f19e35]:
+          - link "devendraprasad1984@gmail.com" [ref=f19e36] [cursor=pointer]:
+            - /url: mailto:devendraprasad1984@gmail.com
+            - generic [aria-hidden] [ref=f19e37]: ✉️
+            - text: devendraprasad1984@gmail.com
+          - link "+91-(958)-279-7772" [ref=f19e38] [cursor=pointer]:
+            - /url: tel:+919582797772
+            - generic [aria-hidden] [ref=f19e39]: 📞
+            - text: +91-(958)-279-7772
+  - generic [ref=f19e362]:
+    - heading "Some of my practice apps" [level=2] [ref=f19e363]
+    - generic [ref=f19e364]:
+      - generic [ref=f19e366]:
+        - combobox [ref=f19e367] [cursor=pointer]:
+          - option "Netflix" [selected]
+          - option "Simple form"
+          - option "Geektrust admin UI"
+          - option "Vanilla JS Home app"
+          - option "Vanilla JS Redux counter App"
+          - option "sample js functions"
+          - option "Redux Sample"
+          - option "Context Sample"
+        - group [aria-hidden]:
+          - generic: Choose an app
+      - button "Show" [ref=f19e368] [cursor=pointer]
+    - button "Redux Sample" [ref=f19e370] [cursor=pointer]
+    - generic [ref=f19e371]: Netflix
+    - heading "Netflix home" [level=1] [ref=f19e374]
+  - contentinfo [ref=f19e313]:
+    - generic [ref=f19e314]:
+      - heading "Work experience links" [level=2] [ref=f19e315]
+      - generic [ref=f19e316]:
+        - generic [ref=f19e317]:
+          - link "BMI" [ref=f19e318] [cursor=pointer]:
+            - /url: /bmi/
+          - link "DragD3" [ref=f19e319] [cursor=pointer]:
+            - /url: /dragd3/
+          - link "React Vanilla JS" [ref=f19e320] [cursor=pointer]:
+            - /url: /react-vanila-js/#/
+          - link "Geek Admin" [ref=f19e321] [cursor=pointer]:
+            - /url: /geek_admin/
+        - generic [ref=f19e322]:
+          - link "KANBAN" [ref=f19e323] [cursor=pointer]:
+            - /url: /kanban/
+          - link "kathi.com" [ref=f19e324] [cursor=pointer]:
+            - /url: /kaathi.com/
+          - link "Lazy search" [ref=f19e325] [cursor=pointer]:
+            - /url: /debounceExampleLazySearch/
+          - link "Comment & Reply" [ref=f19e326] [cursor=pointer]:
+            - /url: /ciim/
+        - generic [ref=f19e327]:
+          - link "MOCHA" [ref=f19e328] [cursor=pointer]:
+            - /url: /mocha/mocha.html
+          - link "voice banking" [ref=f19e329] [cursor=pointer]:
+            - /url: /dpvoicebanking/
+          - link "type ORM" [ref=f19e330] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs/tree/master/ts-node-postgres-orm-api
+          - link "Web components" [ref=f19e331] [cursor=pointer]:
+            - /url: /customTagging/jsReadHTMLAttributes.html
+          - link "NODE.JS Practice app" [ref=f19e332] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs
+          - link "Tornado practice" [ref=f19e333] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python/tree/master/tornadoPractice
+          - link "Python practice" [ref=f19e334] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python
+        - generic [ref=f19e335]:
+          - link "WIP" [ref=f19e336] [cursor=pointer]:
+            - /url: ""
+          - link "PracticingJS" [ref=f19e337] [cursor=pointer]:
+            - /url: /docs/packOf30InterviewPrep.pdf#view=FitH
+      - generic [ref=f19e338]:
+        - generic [ref=f19e339]:
+          - strong [ref=f19e340]: "Learning:"
+          - generic [ref=f19e341]: devops
+          - generic [ref=f19e342]: graphql
+          - generic [ref=f19e343]: UI design system
+          - generic [ref=f19e344]: Web3
+          - generic [ref=f19e345]: FE architecture
+          - generic [ref=f19e346]: system design
+          - generic [ref=f19e347]: node
+        - generic [ref=f19e348]:
+          - strong [ref=f19e349]: "Agile:"
+          - generic [ref=f19e350]: Agile Planning
+          - generic [ref=f19e351]: Estimation
+          - generic [ref=f19e352]: Sprint
+          - generic [ref=f19e353]: Retro
+          - generic [ref=f19e354]: Review
+          - generic [ref=f19e355]: Speedback
+        - generic [ref=f19e356]:
+          - strong [ref=f19e357]: "Hobbies:"
+          - generic [ref=f19e358]: upskilling
+          - generic [ref=f19e359]: music
+          - generic [ref=f19e360]: movies
+      - img "signature" [ref=f19e361]
