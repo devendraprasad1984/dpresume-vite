@@ -1,0 +1,359 @@
+- generic [ref=f10e3]:
+  - banner [ref=f10e4]:
+    - generic [ref=f10e5]:
+      - generic [ref=f10e6]:
+        - list [ref=f10e7]:
+          - listitem [ref=f10e8]:
+            - link "Home" [ref=f10e9] [cursor=pointer]:
+              - /url: "#/"
+          - listitem [ref=f10e10]:
+            - link "About" [ref=f10e11] [cursor=pointer]:
+              - /url: "#/about"
+          - listitem [ref=f10e12]:
+            - link "Projects" [ref=f10e13] [cursor=pointer]:
+              - /url: "#/projects"
+          - listitem [ref=f10e14]:
+            - link "Apps" [ref=f10e15] [cursor=pointer]:
+              - /url: "#/apps"
+          - listitem [ref=f10e16]:
+            - link "JS" [ref=f10e17] [cursor=pointer]:
+              - /url: "#/js-concepts"
+        - button "Switch to dark theme" [ref=f10e18] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f10e19]: 🌙
+      - generic [ref=f10e20]:
+        - generic [ref=f10e21]:
+          - link [ref=f10e22] [cursor=pointer]:
+            - /url: /
+            - img "Devendra Prasad" [ref=f10e23]
+          - generic [ref=f10e24]:
+            - generic [ref=f10e25]:
+              - generic [ref=f10e26]: Devendra Prasad
+              - generic [ref=f10e27]: Senior Staff Software Engineer
+            - generic [ref=f10e28]:
+              - generic [ref=f10e29]: 19 yrs
+              - generic [ref=f10e30]:
+                - link "CV" [ref=f10e31] [cursor=pointer]:
+                  - /url: /docs/dpresume.pdf#view=FitH
+                - link "Linkedin" [ref=f10e32] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/devendraprasad/overlay/contact-info/
+                - link "Github" [ref=f10e33] [cursor=pointer]:
+                  - /url: https://github.com/devendraprasad1984?tab=repositories
+                - link "Algo" [ref=f10e34] [cursor=pointer]:
+                  - /url: https://www.hackerrank.com/profile/devendraprasad11
+        - generic [ref=f10e35]:
+          - link "devendraprasad1984@gmail.com" [ref=f10e36] [cursor=pointer]:
+            - /url: mailto:devendraprasad1984@gmail.com
+            - generic [aria-hidden] [ref=f10e37]: ✉️
+            - text: devendraprasad1984@gmail.com
+          - link "+91-(958)-279-7772" [ref=f10e38] [cursor=pointer]:
+            - /url: tel:+919582797772
+            - generic [aria-hidden] [ref=f10e39]: 📞
+            - text: +91-(958)-279-7772
+  - generic [ref=f10e40]:
+    - generic [ref=f10e42]:
+      - article [ref=f10e43]:
+        - button "Senior Staff Frontend @ Blackhawk Network (BHN) Oct 2022 – present giftcards.com / shop.giftcards.com AEM React 18 Storybook JavaScript" [ref=f10e45] [cursor=pointer]:
+          - generic [ref=f10e46]:
+            - generic [ref=f10e47]: Senior Staff Frontend @ Blackhawk Network (BHN)
+            - generic [ref=f10e48]: Oct 2022 – present
+          - generic [ref=f10e49]: giftcards.com / shop.giftcards.com
+          - generic [ref=f10e50]:
+            - generic [ref=f10e51]: AEM
+            - generic [ref=f10e52]: React 18
+            - generic [ref=f10e53]: Storybook
+            - generic [ref=f10e54]: JavaScript
+        - link "Visit ↗" [ref=f10e56] [cursor=pointer]:
+          - /url: https://www.giftcards.com
+        - paragraph [ref=f10e57]: Built on Adobe Experience Manager (AEM) as backbone for the site, this project transforms the legacy site. The legacy site is on WordPress and has scalability / multi-tenancy concerns. Using AEM, the framework itself gives multi-tenant and multi-lingual support for site management. We are using core HTML/JavaScript and React 18 for frontend development, using Storybook as a tool to test our components.
+      - article [ref=f10e58]:
+        - button "Lead UI Developer @ Fictiv Platform Aug 2022 – Oct 2022 MP Level Calculations React Dashboards Analytics" [ref=f10e60] [cursor=pointer]:
+          - generic [ref=f10e61]:
+            - generic [ref=f10e62]: Lead UI Developer @ Fictiv Platform
+            - generic [ref=f10e63]: Aug 2022 – Oct 2022
+          - generic [ref=f10e64]: MP Level Calculations
+          - generic [ref=f10e65]:
+            - generic [ref=f10e66]: React
+            - generic [ref=f10e67]: Dashboards
+            - generic [ref=f10e68]: Analytics
+        - link "Visit ↗" [ref=f10e70] [cursor=pointer]:
+          - /url: https://www.fictiv.com
+        - paragraph [ref=f10e71]: MP i.e. Manufacturing Partner — here at Fictiv, each MP gets a score for their performance. The idea is to onboard on the dashboard so partners can improvise, and results are automated.
+      - article [ref=f10e72]:
+        - button "Lead UI Developer @ Thoughtworks via Geektrust Jan 2022 – Aug 2022 Kroger Customers Tech — Checkout, Flash Sales and Analytics React Node.js REST Analytics" [ref=f10e74] [cursor=pointer]:
+          - generic [ref=f10e75]:
+            - generic [ref=f10e76]: Lead UI Developer @ Thoughtworks via Geektrust
+            - generic [ref=f10e77]: Jan 2022 – Aug 2022
+          - generic [ref=f10e78]: Kroger Customers Tech — Checkout, Flash Sales and Analytics
+          - generic [ref=f10e79]:
+            - generic [ref=f10e80]: React
+            - generic [ref=f10e81]: Node.js
+            - generic [ref=f10e82]: REST
+            - generic [ref=f10e83]: Analytics
+        - paragraph [ref=f10e85]: This project is about the flash sale items alongside checkout while shopping. We present flash sales to users on discounts, and they can order it. The node-based REST APIs are the same serving iOS, Android and Web (React based) platforms.
+      - article [ref=f10e86]:
+        - button "Lead UI Developer @ Thoughtworks via Geektrust Oct 2021 – Jan 2022 FAB — First Abu Dhabi Bank, Colleague Experience Portal React MS Dynamics PowerApps" [ref=f10e88] [cursor=pointer]:
+          - generic [ref=f10e89]:
+            - generic [ref=f10e90]: Lead UI Developer @ Thoughtworks via Geektrust
+            - generic [ref=f10e91]: Oct 2021 – Jan 2022
+          - generic [ref=f10e92]: FAB — First Abu Dhabi Bank, Colleague Experience Portal
+          - generic [ref=f10e93]:
+            - generic [ref=f10e94]: React
+            - generic [ref=f10e95]: MS Dynamics
+            - generic [ref=f10e96]: PowerApps
+        - paragraph [ref=f10e98]: At FAB, the PoC was to combine MS Dynamics, PowerApps and React to see how extensible the app can become.
+      - article [ref=f10e99]:
+        - button "Tech Lead Developer @ Natwest / RBS group Mar 2021 – Sep 2021 CeX — Colleague Experience Group Economics Team Python 3 Django REST Postgres React D3" [ref=f10e101] [cursor=pointer]:
+          - generic [ref=f10e102]:
+            - generic [ref=f10e103]: Tech Lead Developer @ Natwest / RBS group
+            - generic [ref=f10e104]: Mar 2021 – Sep 2021
+          - generic [ref=f10e105]: CeX — Colleague Experience Group Economics Team
+          - generic [ref=f10e106]:
+            - generic [ref=f10e107]: Python 3
+            - generic [ref=f10e108]: Django REST
+            - generic [ref=f10e109]: Postgres
+            - generic [ref=f10e110]: React
+            - generic [ref=f10e111]: D3
+        - paragraph [ref=f10e113]: A regression project for Risk Based Markets economic factors that produces risk weights on scenario variables. To achieve this, we hook Univar and Moody's analytics APIs, get data snapshots and run regression & analytics over it. We used internal SSO, Python 3, Django, Django REST, Postgres, React and D3 to achieve the output.
+      - article [ref=f10e114]:
+        - button "Tech Lead Developer @ Natwest / RBS group Aug 2020 – Jan 2021 Smart Disability Initiatives React React Native Social platform" [ref=f10e116] [cursor=pointer]:
+          - generic [ref=f10e117]:
+            - generic [ref=f10e118]: Tech Lead Developer @ Natwest / RBS group
+            - generic [ref=f10e119]: Aug 2020 – Jan 2021
+          - generic [ref=f10e120]: Smart Disability Initiatives
+          - generic [ref=f10e121]:
+            - generic [ref=f10e122]: React
+            - generic [ref=f10e123]: React Native
+            - generic [ref=f10e124]: Social platform
+        - paragraph [ref=f10e126]: I opted to be in the disability initiative and contributed by building a social network platform for disabled carers and NGOs, alongside work for the CII-IBDN Indian government body and a React & React Native app for the BDF (Business Disability Forum) group in the UK.
+      - article [ref=f10e127]:
+        - button "Tech Lead Developer @ Natwest / RBS group Jul 2019 – Nov 2020 Arria NLG Budgets and Forecasts Narratives MVC Python 3 Tornado React Oracle 11g" [ref=f10e129] [cursor=pointer]:
+          - generic [ref=f10e130]:
+            - generic [ref=f10e131]: Tech Lead Developer @ Natwest / RBS group
+            - generic [ref=f10e132]: Jul 2019 – Nov 2020
+          - generic [ref=f10e133]: Arria NLG Budgets and Forecasts Narratives
+          - generic [ref=f10e134]:
+            - generic [ref=f10e135]: MVC
+            - generic [ref=f10e136]: Python 3
+            - generic [ref=f10e137]: Tornado
+            - generic [ref=f10e138]: React
+            - generic [ref=f10e139]: Oracle 11g
+        - paragraph [ref=f10e141]: Natural language generation for budgets and forecast narratives. This project has MVC, Python 3 & Tornado, JavaScript, React and SQL & PL/SQL on an Oracle 11g stack.
+      - article [ref=f10e142]:
+        - button "Tech Lead Developer @ Natwest / RBS group Oct 2011 – Jan 2015 CNMS — Cash Nostro Management System Enterprise web SQL" [ref=f10e144] [cursor=pointer]:
+          - generic [ref=f10e145]:
+            - generic [ref=f10e146]: Tech Lead Developer @ Natwest / RBS group
+            - generic [ref=f10e147]: Oct 2011 – Jan 2015
+          - generic [ref=f10e148]: CNMS — Cash Nostro Management System
+          - generic [ref=f10e149]:
+            - generic [ref=f10e150]: Enterprise web
+            - generic [ref=f10e151]: SQL
+        - paragraph [ref=f10e153]: Cash Nostro Management System — reconciliation and management of nostro cash positions across the bank.
+      - article [ref=f10e154]:
+        - button "Software Engineer @ Syntel Mar 2011 – Sep 2011 MarkDown Optimization tool Excel Unix HTML" [ref=f10e156] [cursor=pointer]:
+          - generic [ref=f10e157]:
+            - generic [ref=f10e158]: Software Engineer @ Syntel
+            - generic [ref=f10e159]: Mar 2011 – Sep 2011
+          - generic [ref=f10e160]: MarkDown Optimization tool
+          - generic [ref=f10e161]:
+            - generic [ref=f10e162]: Excel
+            - generic [ref=f10e163]: Unix
+            - generic [ref=f10e164]: HTML
+        - paragraph [ref=f10e166]: MarkDown optimization tool in Excel and an information publisher in Excel + Unix + HTML for the Belk Retail client in the US.
+      - article [ref=f10e167]:
+        - button "Software Engineer @ 9 Dimensions Sep 2009 – Mar 2011 Performance Risk Valuation investment technique tool Excel SOAP APIs Dashboards" [ref=f10e169] [cursor=pointer]:
+          - generic [ref=f10e170]:
+            - generic [ref=f10e171]: Software Engineer @ 9 Dimensions
+            - generic [ref=f10e172]: Sep 2009 – Mar 2011
+          - generic [ref=f10e173]: Performance Risk Valuation investment technique tool
+          - generic [ref=f10e174]:
+            - generic [ref=f10e175]: Excel
+            - generic [ref=f10e176]: SOAP APIs
+            - generic [ref=f10e177]: Dashboards
+        - paragraph [ref=f10e179]: Performance Risk Valuation investment technique tool in Excel, consuming SOAP APIs and bringing up user dashboards for finance variables and information presentation.
+      - article [ref=f10e180]:
+        - button "Freelance Software Developer @ Independent Sep 2008 – Aug 2009 Restaurant Management System (PoS) PoS Desktop" [ref=f10e182] [cursor=pointer]:
+          - generic [ref=f10e183]:
+            - generic [ref=f10e184]: Freelance Software Developer @ Independent
+            - generic [ref=f10e185]: Sep 2008 – Aug 2009
+          - generic [ref=f10e186]: Restaurant Management System (PoS)
+          - generic [ref=f10e187]:
+            - generic [ref=f10e188]: PoS
+            - generic [ref=f10e189]: Desktop
+        - paragraph [ref=f10e191]: Restaurant Management System point-of-sale application, built during the recession period as an independent developer.
+      - article [ref=f10e192]:
+        - button "Software Developer @ DAVIM Aug 2007 – Aug 2008 Library Management System VB 6.0 Mentoring" [ref=f10e194] [cursor=pointer]:
+          - generic [ref=f10e195]:
+            - generic [ref=f10e196]: Software Developer @ DAVIM
+            - generic [ref=f10e197]: Aug 2007 – Aug 2008
+          - generic [ref=f10e198]: Library Management System
+          - generic [ref=f10e199]:
+            - generic [ref=f10e200]: VB 6.0
+            - generic [ref=f10e201]: Mentoring
+        - paragraph [ref=f10e203]: Library Management System in VB 6.0, alongside mentoring MCA students.
+    - generic [ref=f10e205]:
+      - generic [ref=f10e207]:
+        - generic [ref=f10e208]: Live Apps
+        - list [ref=f10e209]:
+          - listitem [ref=f10e210]:
+            - link "giftcards.com" [ref=f10e211] [cursor=pointer]:
+              - /url: https://giftcards.com/us/en
+          - listitem [ref=f10e212]:
+            - link "giftcards.ca" [ref=f10e213] [cursor=pointer]:
+              - /url: https://giftcards.com/ca/en
+          - listitem [ref=f10e214]:
+            - link "giftcards.co.uk" [ref=f10e215] [cursor=pointer]:
+              - /url: https://giftcards.com/uk/en
+          - listitem [ref=f10e216]:
+            - link "Chase Palm" [ref=f10e217] [cursor=pointer]:
+              - /url: https://reservebusiness.giftcards.com
+      - generic [ref=f10e219]:
+        - generic [ref=f10e220]: Community
+        - list [ref=f10e221]:
+          - listitem [ref=f10e222]:
+            - generic [ref=f10e223]:
+              - generic [ref=f10e224]: Oneliners
+              - generic [ref=f10e225]: core javascript utility helper methods
+              - generic [ref=f10e226]:
+                - text: npm i oneliners
+                - link "read me" [ref=f10e227] [cursor=pointer]:
+                  - /url: https://www.npmjs.com/package/oneliners
+      - generic [ref=f10e229]:
+        - generic [ref=f10e230]: Skills
+        - list [ref=f10e231]:
+          - listitem [ref=f10e232]:
+            - generic [ref=f10e233]: Javascript
+          - listitem [ref=f10e234]:
+            - generic [ref=f10e235]: typescript
+          - listitem [ref=f10e236]:
+            - generic [ref=f10e237]: NextJs16
+          - listitem [ref=f10e238]:
+            - generic [ref=f10e239]: React19
+          - listitem [ref=f10e240]:
+            - generic [ref=f10e241]: AEM
+          - listitem [ref=f10e242]:
+            - generic [ref=f10e243]: Python
+          - listitem [ref=f10e244]:
+            - generic [ref=f10e245]: MySql
+          - listitem [ref=f10e246]:
+            - generic [ref=f10e247]: mongodb
+          - listitem [ref=f10e248]:
+            - generic [ref=f10e249]: NodeJs
+          - listitem [ref=f10e250]:
+            - generic [ref=f10e251]: ExpressJs
+          - listitem [ref=f10e252]:
+            - generic [ref=f10e253]: HTML5
+          - listitem [ref=f10e254]:
+            - generic [ref=f10e255]: CSS3
+          - listitem [ref=f10e256]:
+            - generic [ref=f10e257]: SASS
+          - listitem [ref=f10e258]:
+            - generic [ref=f10e259]: Bootstrap
+          - listitem [ref=f10e260]:
+            - generic [ref=f10e261]: TailwindCss
+          - listitem [ref=f10e262]:
+            - generic [ref=f10e263]: GitHub
+          - listitem [ref=f10e264]:
+            - generic [ref=f10e265]: GitLab
+          - listitem [ref=f10e266]:
+            - generic [ref=f10e267]: Jira
+          - listitem [ref=f10e268]:
+            - generic [ref=f10e269]: Agile Methodology
+      - generic [ref=f10e271]:
+        - generic [ref=f10e272]: Leaders I work(ed) with...
+        - list [ref=f10e273]:
+          - listitem [ref=f10e274]:
+            - link "Yulia Groza VP Engineering, Commerce Solutions at Blackhawk Network" [ref=f10e276] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/yuliagroza/
+              - generic [ref=f10e277]: Yulia Groza
+              - generic [ref=f10e278]: VP Engineering, Commerce Solutions at Blackhawk Network
+          - listitem [ref=f10e279]:
+            - link "Brian Lewis Global Design Leader & Distinguished Engineer, at Blackhawk Network" [ref=f10e281] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/briantlewis/
+              - generic [ref=f10e282]: Brian Lewis
+              - generic [ref=f10e283]: Global Design Leader & Distinguished Engineer, at Blackhawk Network
+          - listitem [ref=f10e284]:
+            - link "Renjith Chandran Pillai Senior Director of Engineering at Blackhawk Network" [ref=f10e286] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/renjith-pillai/
+              - generic [ref=f10e287]: Renjith Chandran Pillai
+              - generic [ref=f10e288]: Senior Director of Engineering at Blackhawk Network
+          - listitem [ref=f10e289]:
+            - link "Sachin Lala Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN" [ref=f10e291] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/sachinlala/
+              - generic [ref=f10e292]: Sachin Lala
+              - generic [ref=f10e293]: Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN
+          - listitem [ref=f10e294]:
+            - link "Parag Jain CIO|CTO| Seasoned IT leader| GCC Leadership| BFSI Leader| AI Leader| Wholesale and Investment Banking" [ref=f10e296] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/paragjain78/
+              - generic [ref=f10e297]: Parag Jain
+              - generic [ref=f10e298]: CIO|CTO| Seasoned IT leader| GCC Leadership| BFSI Leader| AI Leader| Wholesale and Investment Banking
+          - listitem [ref=f10e299]:
+            - link "Amit Kumar Gupta Director at NATWEST Group India" [ref=f10e301] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/amit-kumar-a996619/
+              - generic [ref=f10e302]: Amit Kumar Gupta
+              - generic [ref=f10e303]: Director at NATWEST Group India
+  - contentinfo [ref=f10e304]:
+    - generic [ref=f10e305]:
+      - heading "Work experience links" [level=2] [ref=f10e306]
+      - generic [ref=f10e307]:
+        - generic [ref=f10e308]:
+          - link "BMI" [ref=f10e309] [cursor=pointer]:
+            - /url: /bmi/
+          - link "DragD3" [ref=f10e310] [cursor=pointer]:
+            - /url: /dragd3/
+          - link "React Vanilla JS" [ref=f10e311] [cursor=pointer]:
+            - /url: /react-vanila-js/#/
+          - link "Geek Admin" [ref=f10e312] [cursor=pointer]:
+            - /url: /geek_admin/
+        - generic [ref=f10e313]:
+          - link "KANBAN" [ref=f10e314] [cursor=pointer]:
+            - /url: /kanban/
+          - link "kathi.com" [ref=f10e315] [cursor=pointer]:
+            - /url: /kaathi.com/
+          - link "Lazy search" [ref=f10e316] [cursor=pointer]:
+            - /url: /debounceExampleLazySearch/
+          - link "Comment & Reply" [ref=f10e317] [cursor=pointer]:
+            - /url: /ciim/
+        - generic [ref=f10e318]:
+          - link "MOCHA" [ref=f10e319] [cursor=pointer]:
+            - /url: /mocha/mocha.html
+          - link "voice banking" [ref=f10e320] [cursor=pointer]:
+            - /url: /dpvoicebanking/
+          - link "type ORM" [ref=f10e321] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs/tree/master/ts-node-postgres-orm-api
+          - link "Web components" [ref=f10e322] [cursor=pointer]:
+            - /url: /customTagging/jsReadHTMLAttributes.html
+          - link "NODE.JS Practice app" [ref=f10e323] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs
+          - link "Tornado practice" [ref=f10e324] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python/tree/master/tornadoPractice
+          - link "Python practice" [ref=f10e325] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python
+        - generic [ref=f10e326]:
+          - link "WIP" [ref=f10e327] [cursor=pointer]:
+            - /url: ""
+          - link "PracticingJS" [ref=f10e328] [cursor=pointer]:
+            - /url: /docs/packOf30InterviewPrep.pdf#view=FitH
+      - generic [ref=f10e329]:
+        - generic [ref=f10e330]:
+          - strong [ref=f10e331]: "Learning:"
+          - generic [ref=f10e332]: devops
+          - generic [ref=f10e333]: graphql
+          - generic [ref=f10e334]: UI design system
+          - generic [ref=f10e335]: Web3
+          - generic [ref=f10e336]: FE architecture
+          - generic [ref=f10e337]: system design
+          - generic [ref=f10e338]: node
+        - generic [ref=f10e339]:
+          - strong [ref=f10e340]: "Agile:"
+          - generic [ref=f10e341]: Agile Planning
+          - generic [ref=f10e342]: Estimation
+          - generic [ref=f10e343]: Sprint
+          - generic [ref=f10e344]: Retro
+          - generic [ref=f10e345]: Review
+          - generic [ref=f10e346]: Speedback
+        - generic [ref=f10e347]:
+          - strong [ref=f10e348]: "Hobbies:"
+          - generic [ref=f10e349]: upskilling
+          - generic [ref=f10e350]: music
+          - generic [ref=f10e351]: movies
+      - img "signature" [ref=f10e352]

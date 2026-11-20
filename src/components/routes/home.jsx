@@ -2,6 +2,7 @@ import homeExperiences from "../../core/homeExperiences.js";
 import useMobile from "../../hooks/useMobile.js";
 import CertsView from "../body/component/CertsView";
 import ExperienceDashboard from "../body/component/ExperienceDashboard.jsx";
+import MatrixBanner from "../body/component/MatrixBanner.jsx";
 import HomeAppsWrapper from "../body/component/homeAppsWrapper.jsx";
 import Right from "../body/component/right.jsx";
 
@@ -9,6 +10,7 @@ const Home = () => {
   const isMobile = useMobile();
 
   return <div className="col gap5">
+    <MatrixBanner/>
     <div className="dp-headline anim-fade-up" style={{"--stagger": 1}}>
       <span>In the role of <b>Senior Staff Frontend</b> {`===>`} </span>
       <span className="anim-gradient-text">Principal / Architect frontend</span>
@@ -18,7 +20,10 @@ const Home = () => {
 	  <ExperienceDashboard/>
 
 	  <ul className="dp-prose dp-role-list">
-      {homeExperiences.role.map((role, index) => (
+      {homeExperiences.role
+        .filter((role) => role.replace(/<br\s*\/?>|\s/g, "") !== "")
+        .map((role) => role.replace(/^\s*(&#8226;|•)\s*/, ""))
+        .map((role, index) => (
         <li
           key={`role-${index}`}
           className="reveal"

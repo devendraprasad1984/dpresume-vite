@@ -34,9 +34,10 @@ const leaders = [
 const Industry = () => {
   return <div className="dp-card hover-lift anim-shimmer">
     <div className="dp-card__title">Leaders I work(ed) with...</div>
-    <ul>
+    <ul className="dp-ranked">
       {leaders.map((person) => (
         <li key={person.linkedIn}>
+          <span className="dp-ranked__num" aria-hidden="true"/>
           <a
             className="dp-leader col"
             href={person.linkedIn}

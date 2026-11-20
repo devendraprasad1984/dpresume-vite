@@ -1,0 +1,512 @@
+- generic [ref=f14e3]:
+  - banner [ref=f14e4]:
+    - generic [ref=f14e5]:
+      - list [ref=f14e6]:
+        - listitem [ref=f14e7]:
+          - link "Home" [ref=f14e8] [cursor=pointer]:
+            - /url: "#/"
+        - listitem [ref=f14e9]:
+          - link "About" [ref=f14e10] [cursor=pointer]:
+            - /url: "#/about"
+        - listitem [ref=f14e11]:
+          - link "Projects" [ref=f14e12] [cursor=pointer]:
+            - /url: "#/projects"
+        - listitem [ref=f14e13]:
+          - link "Apps" [ref=f14e14] [cursor=pointer]:
+            - /url: "#/apps"
+        - listitem [ref=f14e15]:
+          - link "JS" [ref=f14e16] [cursor=pointer]:
+            - /url: "#/js-concepts"
+        - listitem [ref=f14e17]:
+          - button "Switch to dark theme" [ref=f14e18] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f14e19]: 🌙
+      - generic [ref=f14e20]:
+        - generic [ref=f14e21]:
+          - link [ref=f14e22] [cursor=pointer]:
+            - /url: /
+            - img "Devendra Prasad" [ref=f14e23]
+          - generic [ref=f14e24]:
+            - generic [ref=f14e25]:
+              - generic [ref=f14e26]: Devendra Prasad
+              - generic [ref=f14e27]: Senior Staff Software Engineer
+            - generic [ref=f14e28]:
+              - generic [ref=f14e29]: 19 yrs
+              - generic [ref=f14e30]:
+                - link "CV" [ref=f14e31] [cursor=pointer]:
+                  - /url: /docs/dpresume.pdf#view=FitH
+                - link "Linkedin" [ref=f14e32] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/devendraprasad/overlay/contact-info/
+                - link "Github" [ref=f14e33] [cursor=pointer]:
+                  - /url: https://github.com/devendraprasad1984?tab=repositories
+                - link "Algo" [ref=f14e34] [cursor=pointer]:
+                  - /url: https://www.hackerrank.com/profile/devendraprasad11
+        - generic [ref=f14e35]:
+          - link "devendraprasad1984@gmail.com" [ref=f14e36] [cursor=pointer]:
+            - /url: mailto:devendraprasad1984@gmail.com
+            - generic [aria-hidden] [ref=f14e37]: ✉️
+            - text: devendraprasad1984@gmail.com
+          - link "+91-(958)-279-7772" [ref=f14e38] [cursor=pointer]:
+            - /url: tel:+919582797772
+            - generic [aria-hidden] [ref=f14e39]: 📞
+            - text: +91-(958)-279-7772
+  - generic [ref=f14e40]:
+    - generic [ref=f14e363]:
+      - generic [ref=f14e364]: JS Core concepts
+      - generic [ref=f14e365]:
+        - heading "Design Pattern Table" [level=1] [ref=f14e366]
+        - generic [ref=f14e367]:
+          - generic [ref=f14e368]: Design patterns are broadly classified into 3 categories viz creational, structural, behavioural
+          - generic [ref=f14e369]:
+            - generic [ref=f14e370]: Creational Design Pattern
+            - generic [ref=f14e371]:
+              - generic [ref=f14e372]: Factory method
+              - generic [ref=f14e373]: Makes an instance of several derived classes based on interfaced data or events
+            - generic [ref=f14e374]:
+              - generic [ref=f14e375]: Abstract factory
+              - generic [ref=f14e376]: creates an instance of several families of classes without detailing concrete classes
+            - generic [ref=f14e377]:
+              - generic [ref=f14e378]: Builder
+              - generic [ref=f14e379]: Separates object construction from its representations; always creates the same type of objects
+            - generic [ref=f14e380]:
+              - generic [ref=f14e381]: Prototype
+              - generic [ref=f14e382]: fully initialised instance used for copying or cloning
+          - generic [ref=f14e383]:
+            - generic [ref=f14e384]: Structural Design Pattern
+            - generic [ref=f14e385]:
+              - generic [ref=f14e386]: Singleton
+              - generic [ref=f14e387]: A class with only single instance with global access points, gloabl data sharing object eg logger / context object / redux global state
+            - generic [ref=f14e388]:
+              - generic [ref=f14e389]: Adapter
+              - generic [ref=f14e390]: matches interfaces of different classes so that classes can work together despite incompatible interfaces
+            - generic [ref=f14e391]:
+              - generic [ref=f14e392]: Bridge
+              - generic [ref=f14e393]: Separates an objects interface from its implementation so that the two can vary independently
+            - generic [ref=f14e394]:
+              - generic [ref=f14e395]: Composite
+              - generic [ref=f14e396]: A structure of simple and composite objects that makes the total object more that just the sum of its parts
+            - generic [ref=f14e397]:
+              - generic [ref=f14e398]: Decorator
+              - generic [ref=f14e399]: Dynamically adds alternate processing of objects
+            - generic [ref=f14e400]:
+              - generic [ref=f14e401]: Facade
+              - generic [ref=f14e402]: A single class that hides the complexity of an entire ecosystem
+            - generic [ref=f14e403]:
+              - generic [ref=f14e404]: Flyweight
+              - generic [ref=f14e405]: A fine grained instance used for efficient sharing of information that is contained elsewhere
+            - generic [ref=f14e406]:
+              - generic [ref=f14e407]: Proxy
+              - generic [ref=f14e408]: A placeholder object representing the true object
+          - generic [ref=f14e409]:
+            - generic [ref=f14e410]: Behavioural Design Pattern
+            - generic [ref=f14e411]:
+              - generic [ref=f14e412]: Interpreter
+              - generic [ref=f14e413]: A way to include language elements in an application to match the grammar of the intended language
+            - generic [ref=f14e414]:
+              - generic [ref=f14e415]: Template method
+              - generic [ref=f14e416]: Creates the shell of an algorithm in a method, then defers the exact steps to a subclass
+            - generic [ref=f14e417]:
+              - generic [ref=f14e418]: Chain of responsibility
+              - generic [ref=f14e419]: A way of passing a request between a chain of objects to find the object that can handle the request
+            - generic [ref=f14e420]:
+              - generic [ref=f14e421]: Command
+              - generic [ref=f14e422]: A way to separate the execution of a command from its invoker
+            - generic [ref=f14e423]:
+              - generic [ref=f14e424]: Iterator
+              - generic [ref=f14e425]: sequentially access the elements of a collection without knowing the inner working of the collection eg GenericList(T)
+            - generic [ref=f14e426]:
+              - generic [ref=f14e427]: Mediator
+              - generic [ref=f14e428]: defines simplified communications between classes to prevent a group of classes from referring explicitly to each other
+            - generic [ref=f14e429]:
+              - generic [ref=f14e430]: Memento
+              - generic [ref=f14e431]: captures an objects internal state to be able to restore it later
+            - generic [ref=f14e432]:
+              - generic [ref=f14e433]: Observer
+              - generic [ref=f14e434]: A way of notifying change to number of classes to ensure consistency between the classes
+            - generic [ref=f14e435]:
+              - generic [ref=f14e436]: State
+              - generic [ref=f14e437]: Alters an objects behaviour when its state changes, eg form depending on state of a reducer triggering middleware
+            - generic [ref=f14e438]:
+              - generic [ref=f14e439]: Strategy
+              - generic [ref=f14e440]: Encapsulates an algo inside a class, separating the selection from its implementation
+            - generic [ref=f14e441]:
+              - generic [ref=f14e442]: Visitor
+              - generic [ref=f14e443]: Adds a new operation to a class without changing the class
+      - generic [ref=f14e444]:
+        - generic [ref=f14e445]: JS Design Pattern
+        - generic [ref=f14e446]:
+          - generic [ref=f14e447]: Creational design pattern
+          - generic [ref=f14e449]:
+            - generic [ref=f14e450]:
+              - code [ref=f14e451]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+              - code [ref=f14e452]: "const newObject = {}; const newObject = Object.create(Object.prototype); const newObject = new Object(); newObject.someKey=\"Hello World\"; newObject[\"someKey1\"]=\"Hello World\"; var key = newObject.someKey; var key1 = newObject[\"someKey1\"]; //eg. person object creation const person = Object(null); defineProps(person, \"car\", \"delorean\"); defineProps(person, \"dob\", \"xx-xx-xxxx\"); defineProps(person, \"hasBeard\", \"true\"); //drive is a person const driver = Object.create(person); defineProp(driver,\"topSpead\", \"100mph\"); console.log(\"driver is old\", driver.dob); console.log(\"driver is running at\", driver.topSpeed);"
+            - button "Copy Code" [ref=f14e453] [cursor=pointer]
+          - generic [ref=f14e457]:
+            - generic [ref=f14e458]:
+              - code [ref=f14e459]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+              - code [ref=f14e460]: "class car{ constructor(model, year, miles){ this.model = model; this.year = year; this.miles = miles; } //defining any method here will be associated with all objects created with this class //to have some global generic method on all objects but defined once, will go with prototype inheritance } car.prototype.toString=function(){ return \"this.model has done this.miles\" } //usage console.log(new car(\"Honda Civic\", 2009, 20000).toString()); console.log(new car(\"Ford Mondeo\", 2010, 10000).toString());"
+            - button "Copy Code" [ref=f14e461] [cursor=pointer]
+          - generic [ref=f14e464]: Modules are created to keep private scoped work and avoid memory leaks, thanks to closures. in JS, there is no access modifiers, so technical there is nothing called public or private, but using closures lexical scoping, we use it mimic public/private aspects.
+          - generic [ref=f14e465]: A workaround to keep privacy aspects, we use weekMap()
+          - generic [ref=f14e467]:
+            - generic [ref=f14e468]:
+              - code [ref=f14e469]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+              - code [ref=f14e470]: "//Module pattern: Object literals, private vars/functions are namespaced into testModules let counter=0; //private variable; let items=[]; const log=val=>console.log(val); //private function const testModule={ prop1:\"prop1\", //this is public variable incrementCounter(){ counter++; log(\"incremented - \"+counter); }, resetCounter:()=>{counter=0;}, addItem:(values)=>{ items.push(values); }, getItemCount:()=>items.length;, getTotal:()=>items.reduce((sum, item)=>sum+item?.price, 0) } export default testModule; //usage import testModule from \"./testModule.js\"; //this can come from https also, just need module exposed testModule.incrementCounter(); testModule.addItem({item: \"bread\", price: 10}); testModule.addItem({item: \"butter\", price: 15}); console.log(testModule.getItemCount(), testModule.getTotal())"
+            - button "Copy Code" [ref=f14e471] [cursor=pointer]
+      - generic [ref=f14e474]:
+        - generic [ref=f14e475]:
+          - generic [ref=f14e476]: Creational design patterns
+          - generic [ref=f14e477]:
+            - generic [ref=f14e478]: Factory method
+            - generic [ref=f14e479]: Creates instances of several derived types based on input, hiding the constructors.
+            - generic [ref=f14e481]:
+              - generic [ref=f14e482]:
+                - code [ref=f14e483]: 1 2 3 4 5 6 7 8 9 10 11
+                - code [ref=f14e484]: "class Car { drive() { return \"car\"; } } class Bike { drive() { return \"bike\"; } } const vehicleFactory = (type) => { const map = { car: Car, bike: Bike }; if (!map[type]) throw new Error(\"unknown vehicle \" + type); return new map[type](); }; //usage vehicleFactory(\"bike\").drive();"
+              - button "Copy Code" [ref=f14e485] [cursor=pointer]
+          - generic [ref=f14e488]:
+            - generic [ref=f14e489]: Abstract factory
+            - generic [ref=f14e490]: Creates whole families of related objects without naming concrete classes.
+            - generic [ref=f14e492]:
+              - generic [ref=f14e493]:
+                - code [ref=f14e494]: 1 2 3 4 5 6 7 8 9
+                - code [ref=f14e495]: "const lightTheme = { button: () => ({ bg: \"#fff\" }), input: () => ({ border: \"#000\" }) }; const darkTheme = { button: () => ({ bg: \"#000\" }), input: () => ({ border: \"#fff\" }) }; const uiFactory = (mode) => (mode === \"dark\" ? darkTheme : lightTheme); //usage const ui = uiFactory(\"dark\"); ui.button(); ui.input();"
+              - button "Copy Code" [ref=f14e496] [cursor=pointer]
+          - generic [ref=f14e499]:
+            - generic [ref=f14e500]: Builder
+            - generic [ref=f14e501]: Separates construction from representation; build step by step, finish with build().
+            - generic [ref=f14e503]:
+              - generic [ref=f14e504]:
+                - code [ref=f14e505]: 1 2 3 4 5 6 7 8 9 10
+                - code [ref=f14e506]: "class RequestBuilder { #req = { method: \"GET\", headers: {} }; method(m) { this.#req.method = m; return this; } header(k, v) { this.#req.headers[k] = v; return this; } body(b) { this.#req.body = JSON.stringify(b); return this; } build() { return { ...this.#req }; } } //usage const req = new RequestBuilder().method(\"POST\").header(\"x-id\", \"1\").body({ a: 1 }).build();"
+              - button "Copy Code" [ref=f14e507] [cursor=pointer]
+          - generic [ref=f14e510]:
+            - generic [ref=f14e511]: Prototype
+            - generic [ref=f14e512]: Clone a fully initialised instance instead of building a new one from scratch.
+            - generic [ref=f14e514]:
+              - generic [ref=f14e515]:
+                - code [ref=f14e516]: 1 2 3 4 5 6 7 8 9 10
+                - code [ref=f14e517]: "const proto = { greet() { return \"hi \" + this.name; } }; const user = Object.create(proto, { name: { value: \"dev\", writable: true } }); const clone = Object.assign(Object.create(Object.getPrototypeOf(user)), user); const deepCopy = structuredClone({ a: { b: 1 } }); //usage clone.greet();"
+              - button "Copy Code" [ref=f14e518] [cursor=pointer]
+        - generic [ref=f14e521]:
+          - generic [ref=f14e522]: Structural design patterns
+          - generic [ref=f14e523]:
+            - generic [ref=f14e524]: Singleton
+            - generic [ref=f14e525]: One instance with a global access point, e.g. logger, context or redux store.
+            - generic [ref=f14e527]:
+              - generic [ref=f14e528]:
+                - code [ref=f14e529]: 1 2 3 4 5 6 7 8 9 10 11 12
+                - code [ref=f14e530]: "class Logger { static #instance; constructor() { if (Logger.#instance) return Logger.#instance; this.logs = []; Logger.#instance = this; } log(msg) { this.logs.push(msg); } } //usage new Logger() === new Logger(); //true"
+              - button "Copy Code" [ref=f14e531] [cursor=pointer]
+          - generic [ref=f14e534]:
+            - generic [ref=f14e535]: Adapter
+            - generic [ref=f14e536]: Makes incompatible interfaces work together.
+            - generic [ref=f14e538]:
+              - generic [ref=f14e539]:
+                - code [ref=f14e540]: 1 2 3 4 5 6 7 8
+                - code [ref=f14e541]: "const oldApi = { getUsers: () => [[\"1\", \"dev\"]] }; const userAdapter = { fetchUsers: () => oldApi.getUsers().map(([id, name]) => ({ id, name })) }; //usage userAdapter.fetchUsers();"
+              - button "Copy Code" [ref=f14e542] [cursor=pointer]
+          - generic [ref=f14e545]:
+            - generic [ref=f14e546]: Bridge
+            - generic [ref=f14e547]: Separates an abstraction from its implementation so both can vary independently.
+            - generic [ref=f14e549]:
+              - generic [ref=f14e550]:
+                - code [ref=f14e551]: 1 2 3 4 5 6 7 8 9 10
+                - code [ref=f14e552]: "const canvasRenderer = { circle: (r) => \"canvas circle \" + r }; const svgRenderer = { circle: (r) => \"svg circle \" + r }; class Circle { constructor(renderer, r) { this.renderer = renderer; this.r = r; } draw() { return this.renderer.circle(this.r); } } //usage new Circle(svgRenderer, 5).draw();"
+              - button "Copy Code" [ref=f14e553] [cursor=pointer]
+          - generic [ref=f14e556]:
+            - generic [ref=f14e557]: Composite
+            - generic [ref=f14e558]: Treats single objects and groups of objects uniformly, like a tree.
+            - generic [ref=f14e560]:
+              - generic [ref=f14e561]:
+                - code [ref=f14e562]: 1 2 3 4 5 6 7 8 9 10 11
+                - code [ref=f14e563]: "class File { constructor(size) { this.size = size; } getSize() { return this.size; } } class Folder { constructor(...children) { this.children = children; } getSize() { return this.children.reduce((s, c) => s + c.getSize(), 0); } } //usage new Folder(new File(10), new Folder(new File(5), new File(1))).getSize(); //16"
+              - button "Copy Code" [ref=f14e564] [cursor=pointer]
+          - generic [ref=f14e567]:
+            - generic [ref=f14e568]: Decorator
+            - generic [ref=f14e569]: Dynamically adds behaviour to an object or function without changing it.
+            - generic [ref=f14e571]:
+              - generic [ref=f14e572]:
+                - code [ref=f14e573]: 1 2 3 4 5 6 7 8 9
+                - code [ref=f14e574]: "const withLogging = (fn) => (...args) => { console.log(\"calling\", fn.name, args); return fn(...args); }; const add = (a, b) => a + b; //usage withLogging(add)(1, 2);"
+              - button "Copy Code" [ref=f14e575] [cursor=pointer]
+          - generic [ref=f14e578]:
+            - generic [ref=f14e579]: Facade
+            - generic [ref=f14e580]: A single simple interface hiding a complex subsystem.
+            - generic [ref=f14e582]:
+              - generic [ref=f14e583]:
+                - code [ref=f14e584]: 1 2 3 4 5 6 7 8 9 10 11
+                - code [ref=f14e585]: "const auth = { login: () => \"token\" }; const cart = { load: (t) => [\"item\"] }; const prices = { total: (items) => items.length * 10 }; const checkoutFacade = () => { const token = auth.login(); return prices.total(cart.load(token)); }; //usage checkoutFacade();"
+              - button "Copy Code" [ref=f14e586] [cursor=pointer]
+          - generic [ref=f14e589]:
+            - generic [ref=f14e590]: Flyweight
+            - generic [ref=f14e591]: Share fine grained objects to save memory.
+            - generic [ref=f14e593]:
+              - generic [ref=f14e594]:
+                - code [ref=f14e595]: 1 2 3 4 5 6 7 8 9
+                - code [ref=f14e596]: "const cache = new Map(); const getIcon = (name) => { if (!cache.has(name)) cache.set(name, { name, svg: \"<svg/>\" }); return cache.get(name); }; //usage getIcon(\"home\") === getIcon(\"home\"); //true, one shared instance"
+              - button "Copy Code" [ref=f14e597] [cursor=pointer]
+          - generic [ref=f14e600]:
+            - generic [ref=f14e601]: Proxy
+            - generic [ref=f14e602]: A placeholder that controls access to the real object.
+            - generic [ref=f14e604]:
+              - generic [ref=f14e605]:
+                - code [ref=f14e606]: 1 2 3 4 5 6 7 8 9 10 11 12 13
+                - code [ref=f14e607]: "const target = { name: \"dev\" }; const guarded = new Proxy(target, { get: (obj, key) => (key in obj ? obj[key] : \"n/a\"), set: (obj, key, value) => { if (key === \"name\" && typeof value !== \"string\") throw new TypeError(\"name must be string\"); obj[key] = value; return true; } }); //usage guarded.age; //\"n/a\""
+              - button "Copy Code" [ref=f14e608] [cursor=pointer]
+        - generic [ref=f14e611]:
+          - generic [ref=f14e612]: Behavioural design patterns
+          - generic [ref=f14e613]:
+            - generic [ref=f14e614]: Interpreter
+            - generic [ref=f14e615]: Evaluate sentences of a small language by its grammar.
+            - generic [ref=f14e617]:
+              - generic [ref=f14e618]:
+                - code [ref=f14e619]: 1 2 3 4 5 6 7 8
+                - code [ref=f14e620]: "const evaluate = (expr) => { const [a, op, b] = expr.split(\" \"); const ops = { \"+\": (x, y) => x + y, \"-\": (x, y) => x - y, \"*\": (x, y) => x * y }; return ops[op](Number(a), Number(b)); }; //usage evaluate(\"3 * 4\"); //12"
+              - button "Copy Code" [ref=f14e621] [cursor=pointer]
+          - generic [ref=f14e624]:
+            - generic [ref=f14e625]: Template method
+            - generic [ref=f14e626]: Defines the skeleton of an algorithm; subclasses fill in the steps.
+            - generic [ref=f14e628]:
+              - generic [ref=f14e629]:
+                - code [ref=f14e630]: 1 2 3 4 5 6 7 8 9 10 11 12
+                - code [ref=f14e631]: "class Report { generate() { return [this.header(), this.body(), this.footer()].join(\"\\n\"); } header() { return \"== report ==\"; } footer() { return \"== end ==\"; } body() { throw new Error(\"implement body\"); } } class SalesReport extends Report { body() { return \"sales data\"; } } //usage new SalesReport().generate();"
+              - button "Copy Code" [ref=f14e632] [cursor=pointer]
+          - generic [ref=f14e635]:
+            - generic [ref=f14e636]: Chain of responsibility
+            - generic [ref=f14e637]: Pass a request along handlers until one handles it (express / redux middleware).
+            - generic [ref=f14e639]:
+              - generic [ref=f14e640]:
+                - code [ref=f14e641]: 1 2 3 4 5 6 7 8 9 10 11 12 13
+                - code [ref=f14e642]: "const chain = (...handlers) => (req) => { for (const h of handlers) { const res = h(req); if (res) return res; } }; const auth = (r) => (!r.user ? \"401\" : null); const admin = (r) => (r.user !== \"admin\" ? \"403\" : null); const ok = () => \"200\"; //usage chain(auth, admin, ok)({ user: \"admin\" });"
+              - button "Copy Code" [ref=f14e643] [cursor=pointer]
+          - generic [ref=f14e646]:
+            - generic [ref=f14e647]: Command
+            - generic [ref=f14e648]: Encapsulates a request as an object so it can be queued, logged or undone.
+            - generic [ref=f14e650]:
+              - generic [ref=f14e651]:
+                - code [ref=f14e652]: 1 2 3 4 5 6 7 8 9 10
+                - code [ref=f14e653]: "const history = []; const run = (cmd) => { cmd.exec(); history.push(cmd); }; const undo = () => history.pop()?.undo(); let count = 0; const increment = { exec: () => count++, undo: () => count-- }; //usage run(increment); undo();"
+              - button "Copy Code" [ref=f14e654] [cursor=pointer]
+          - generic [ref=f14e657]:
+            - generic [ref=f14e658]: Iterator
+            - generic [ref=f14e659]: Sequentially access a collection without knowing how it is stored.
+            - generic [ref=f14e661]:
+              - generic [ref=f14e662]:
+                - code [ref=f14e663]: 1 2 3 4 5 6 7 8 9
+                - code [ref=f14e664]: "class Range { constructor(start, end) { this.start = start; this.end = end; } *[Symbol.iterator]() { for (let i = this.start; i <= this.end; i++) yield i; } } //usage [...new Range(1, 5)]; //[1,2,3,4,5]"
+              - button "Copy Code" [ref=f14e665] [cursor=pointer]
+          - generic [ref=f14e668]:
+            - generic [ref=f14e669]: Mediator
+            - generic [ref=f14e670]: Objects talk through a mediator instead of referring to each other.
+            - generic [ref=f14e672]:
+              - generic [ref=f14e673]:
+                - code [ref=f14e674]: 1 2 3 4 5 6 7 8 9 10 11
+                - code [ref=f14e675]: "class ChatRoom { users = new Set(); join(user) { this.users.add(user); user.room = this; } send(from, msg) { this.users.forEach((u) => u !== from && u.receive(msg)); } } //usage const room = new ChatRoom(); room.join({ receive: console.log });"
+              - button "Copy Code" [ref=f14e676] [cursor=pointer]
+          - generic [ref=f14e679]:
+            - generic [ref=f14e680]: Memento
+            - generic [ref=f14e681]: Capture and restore an object's internal state.
+            - generic [ref=f14e683]:
+              - generic [ref=f14e684]:
+                - code [ref=f14e685]: 1 2 3 4 5 6 7 8 9 10 11 12
+                - code [ref=f14e686]: "class Editor { text = \"\"; save() { return { text: this.text }; } restore(memento) { this.text = memento.text; } } //usage const editor = new Editor(); editor.text = \"v1\"; const snapshot = editor.save(); editor.text = \"v2\"; editor.restore(snapshot); //back to v1"
+              - button "Copy Code" [ref=f14e687] [cursor=pointer]
+          - generic [ref=f14e690]:
+            - generic [ref=f14e691]: Observer
+            - generic [ref=f14e692]: Notify many subscribers when state changes (events, redux subscribe).
+            - generic [ref=f14e694]:
+              - generic [ref=f14e695]:
+                - code [ref=f14e696]: 1 2 3 4 5 6 7 8 9 10 11
+                - code [ref=f14e697]: "class Subject { #subs = new Set(); subscribe(fn) { this.#subs.add(fn); return () => this.#subs.delete(fn); } notify(data) { this.#subs.forEach((fn) => fn(data)); } } //usage const subject = new Subject(); const unsubscribe = subject.subscribe((d) => console.log(\"got\", d)); subject.notify(1); unsubscribe();"
+              - button "Copy Code" [ref=f14e698] [cursor=pointer]
+          - generic [ref=f14e701]:
+            - generic [ref=f14e702]: State
+            - generic [ref=f14e703]: Behaviour changes when the state changes, e.g. a reducer driving a form.
+            - generic [ref=f14e705]:
+              - generic [ref=f14e706]:
+                - code [ref=f14e707]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+                - code [ref=f14e708]: "const states = { idle: { next: \"loading\" }, loading: { next: \"success\" }, success: { next: \"idle\" } }; class Fetcher { state = \"idle\"; next() { this.state = states[this.state].next; } } //usage const f = new Fetcher(); f.next(); //loading"
+              - button "Copy Code" [ref=f14e709] [cursor=pointer]
+          - generic [ref=f14e712]:
+            - generic [ref=f14e713]: Strategy
+            - generic [ref=f14e714]: Encapsulate interchangeable algorithms and pick one at runtime.
+            - generic [ref=f14e716]:
+              - generic [ref=f14e717]:
+                - code [ref=f14e718]: 1 2 3 4 5 6 7 8 9
+                - code [ref=f14e719]: "const strategies = { ascending: (a, b) => a - b, descending: (a, b) => b - a }; const sortBy = (list, type) => [...list].sort(strategies[type]); //usage sortBy([3, 1, 2], \"descending\");"
+              - button "Copy Code" [ref=f14e720] [cursor=pointer]
+          - generic [ref=f14e723]:
+            - generic [ref=f14e724]: Visitor
+            - generic [ref=f14e725]: Adds a new operation to a structure without changing its classes.
+            - generic [ref=f14e727]:
+              - generic [ref=f14e728]:
+                - code [ref=f14e729]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+                - code [ref=f14e730]: "class Num { constructor(v) { this.v = v; } accept(visitor) { return visitor.num(this); } } class Add { constructor(l, r) { this.l = l; this.r = r; } accept(visitor) { return visitor.add(this); } } const evaluator = { num: (n) => n.v, add: (a) => a.l.accept(evaluator) + a.r.accept(evaluator) }; const printer = { num: (n) => String(n.v), add: (a) => \"(\" + a.l.accept(printer) + \" + \" + a.r.accept(printer) + \")\" }; //usage const tree = new Add(new Num(1), new Num(2)); tree.accept(evaluator); //3 tree.accept(printer); //(1 + 2)"
+              - button "Copy Code" [ref=f14e731] [cursor=pointer]
+    - generic [ref=f14e215]:
+      - generic [ref=f14e217]:
+        - generic [ref=f14e218]: Live Apps
+        - list [ref=f14e219]:
+          - listitem [ref=f14e220]:
+            - link "giftcards.com" [ref=f14e221] [cursor=pointer]:
+              - /url: https://giftcards.com/us/en
+          - listitem [ref=f14e222]:
+            - link "giftcards.ca" [ref=f14e223] [cursor=pointer]:
+              - /url: https://giftcards.com/ca/en
+          - listitem [ref=f14e224]:
+            - link "giftcards.co.uk" [ref=f14e225] [cursor=pointer]:
+              - /url: https://giftcards.com/uk/en
+          - listitem [ref=f14e226]:
+            - link "Chase Palm" [ref=f14e227] [cursor=pointer]:
+              - /url: https://reservebusiness.giftcards.com
+      - generic [ref=f14e229]:
+        - generic [ref=f14e230]: Community
+        - list [ref=f14e231]:
+          - listitem [ref=f14e232]:
+            - generic [ref=f14e233]:
+              - generic [ref=f14e234]: Oneliners
+              - generic [ref=f14e235]: core javascript utility helper methods
+              - generic [ref=f14e236]:
+                - text: npm i oneliners
+                - link "read me" [ref=f14e237] [cursor=pointer]:
+                  - /url: https://www.npmjs.com/package/oneliners
+      - generic [ref=f14e239]:
+        - generic [ref=f14e240]: Skills
+        - list [ref=f14e241]:
+          - listitem [ref=f14e242]:
+            - generic [ref=f14e243]: Javascript
+          - listitem [ref=f14e244]:
+            - generic [ref=f14e245]: typescript
+          - listitem [ref=f14e246]:
+            - generic [ref=f14e247]: NextJs16
+          - listitem [ref=f14e248]:
+            - generic [ref=f14e249]: React19
+          - listitem [ref=f14e250]:
+            - generic [ref=f14e251]: AEM
+          - listitem [ref=f14e252]:
+            - generic [ref=f14e253]: Python
+          - listitem [ref=f14e254]:
+            - generic [ref=f14e255]: MySql
+          - listitem [ref=f14e256]:
+            - generic [ref=f14e257]: mongodb
+          - listitem [ref=f14e258]:
+            - generic [ref=f14e259]: NodeJs
+          - listitem [ref=f14e260]:
+            - generic [ref=f14e261]: ExpressJs
+          - listitem [ref=f14e262]:
+            - generic [ref=f14e263]: HTML5
+          - listitem [ref=f14e264]:
+            - generic [ref=f14e265]: CSS3
+          - listitem [ref=f14e266]:
+            - generic [ref=f14e267]: SASS
+          - listitem [ref=f14e268]:
+            - generic [ref=f14e269]: Bootstrap
+          - listitem [ref=f14e270]:
+            - generic [ref=f14e271]: TailwindCss
+          - listitem [ref=f14e272]:
+            - generic [ref=f14e273]: GitHub
+          - listitem [ref=f14e274]:
+            - generic [ref=f14e275]: GitLab
+          - listitem [ref=f14e276]:
+            - generic [ref=f14e277]: Jira
+          - listitem [ref=f14e278]:
+            - generic [ref=f14e279]: Agile Methodology
+      - generic [ref=f14e281]:
+        - generic [ref=f14e282]: Leaders I work(ed) with...
+        - list [ref=f14e283]:
+          - listitem [ref=f14e284]:
+            - link "Yulia Groza VP Engineering, Commerce Solutions at Blackhawk Network" [ref=f14e286] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/yuliagroza/
+              - generic [ref=f14e287]: Yulia Groza
+              - generic [ref=f14e288]: VP Engineering, Commerce Solutions at Blackhawk Network
+          - listitem [ref=f14e289]:
+            - link "Brian Lewis Global Design Leader & Distinguished Engineer, at Blackhawk Network" [ref=f14e291] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/briantlewis/
+              - generic [ref=f14e292]: Brian Lewis
+              - generic [ref=f14e293]: Global Design Leader & Distinguished Engineer, at Blackhawk Network
+          - listitem [ref=f14e294]:
+            - link "Renjith Chandran Pillai Senior Director of Engineering at Blackhawk Network" [ref=f14e296] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/renjith-pillai/
+              - generic [ref=f14e297]: Renjith Chandran Pillai
+              - generic [ref=f14e298]: Senior Director of Engineering at Blackhawk Network
+          - listitem [ref=f14e299]:
+            - link "Sachin Lala Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN" [ref=f14e301] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/sachinlala/
+              - generic [ref=f14e302]: Sachin Lala
+              - generic [ref=f14e303]: Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN
+          - listitem [ref=f14e304]:
+            - link "Parag Jain CIO|CTO| Seasoned IT leader| GCC Leadership| BFSI Leader| AI Leader| Wholesale and Investment Banking" [ref=f14e306] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/paragjain78/
+              - generic [ref=f14e307]: Parag Jain
+              - generic [ref=f14e308]: CIO|CTO| Seasoned IT leader| GCC Leadership| BFSI Leader| AI Leader| Wholesale and Investment Banking
+          - listitem [ref=f14e309]:
+            - link "Amit Kumar Gupta Director at NATWEST Group India" [ref=f14e311] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/amit-kumar-a996619/
+              - generic [ref=f14e312]: Amit Kumar Gupta
+              - generic [ref=f14e313]: Director at NATWEST Group India
+  - contentinfo [ref=f14e314]:
+    - generic [ref=f14e315]:
+      - heading "Work experience links" [level=2] [ref=f14e316]
+      - generic [ref=f14e317]:
+        - generic [ref=f14e318]:
+          - link "BMI" [ref=f14e319] [cursor=pointer]:
+            - /url: /bmi/
+          - link "DragD3" [ref=f14e320] [cursor=pointer]:
+            - /url: /dragd3/
+          - link "React Vanilla JS" [ref=f14e321] [cursor=pointer]:
+            - /url: /react-vanila-js/#/
+          - link "Geek Admin" [ref=f14e322] [cursor=pointer]:
+            - /url: /geek_admin/
+        - generic [ref=f14e323]:
+          - link "KANBAN" [ref=f14e324] [cursor=pointer]:
+            - /url: /kanban/
+          - link "kathi.com" [ref=f14e325] [cursor=pointer]:
+            - /url: /kaathi.com/
+          - link "Lazy search" [ref=f14e326] [cursor=pointer]:
+            - /url: /debounceExampleLazySearch/
+          - link "Comment & Reply" [ref=f14e327] [cursor=pointer]:
+            - /url: /ciim/
+        - generic [ref=f14e328]:
+          - link "MOCHA" [ref=f14e329] [cursor=pointer]:
+            - /url: /mocha/mocha.html
+          - link "voice banking" [ref=f14e330] [cursor=pointer]:
+            - /url: /dpvoicebanking/
+          - link "type ORM" [ref=f14e331] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs/tree/master/ts-node-postgres-orm-api
+          - link "Web components" [ref=f14e332] [cursor=pointer]:
+            - /url: /customTagging/jsReadHTMLAttributes.html
+          - link "NODE.JS Practice app" [ref=f14e333] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs
+          - link "Tornado practice" [ref=f14e334] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python/tree/master/tornadoPractice
+          - link "Python practice" [ref=f14e335] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python
+        - generic [ref=f14e336]:
+          - link "WIP" [ref=f14e337] [cursor=pointer]:
+            - /url: ""
+          - link "PracticingJS" [ref=f14e338] [cursor=pointer]:
+            - /url: /docs/packOf30InterviewPrep.pdf#view=FitH
+      - generic [ref=f14e339]:
+        - generic [ref=f14e340]:
+          - strong [ref=f14e341]: "Learning:"
+          - generic [ref=f14e342]: devops
+          - generic [ref=f14e343]: graphql
+          - generic [ref=f14e344]: UI design system
+          - generic [ref=f14e345]: Web3
+          - generic [ref=f14e346]: FE architecture
+          - generic [ref=f14e347]: system design
+          - generic [ref=f14e348]: node
+        - generic [ref=f14e349]:
+          - strong [ref=f14e350]: "Agile:"
+          - generic [ref=f14e351]: Agile Planning
+          - generic [ref=f14e352]: Estimation
+          - generic [ref=f14e353]: Sprint
+          - generic [ref=f14e354]: Retro
+          - generic [ref=f14e355]: Review
+          - generic [ref=f14e356]: Speedback
+        - generic [ref=f14e357]:
+          - strong [ref=f14e358]: "Hobbies:"
+          - generic [ref=f14e359]: upskilling
+          - generic [ref=f14e360]: music
+          - generic [ref=f14e361]: movies
+      - img "signature" [ref=f14e362]

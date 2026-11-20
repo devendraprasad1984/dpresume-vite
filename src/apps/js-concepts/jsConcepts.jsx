@@ -1,6 +1,7 @@
 import React from "react";
 import DesignConceptTable from "./designConceptTable.jsx";
 import Creational from "./creational.jsx";
+import DesignPatterns from "./designPatterns.jsx";
 
 const JsConcepts = () => {
   return <div className="col gap10">
@@ -13,6 +14,7 @@ const JsConcepts = () => {
       <div className="bold size20">JS Design Pattern</div>
       <Creational/>
     </div>
+    <DesignPatterns/>
   </div>;
 };
 export default JsConcepts;

@@ -25,9 +25,10 @@ const ProjectList = () => {
         return (
           <article
             key={project.id}
-            className={`dp-project reveal hover-lift${open ? " is-open" : ""}`}
+            className={`dp-project dp-ranked-row reveal hover-lift${open ? " is-open" : ""}`}
             style={{ "--stagger": index }}
           >
+            <span className="dp-ranked__num" aria-hidden="true" />
             <button
               type="button"
               className="dp-project__head"

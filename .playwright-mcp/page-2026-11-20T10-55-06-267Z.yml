@@ -1,0 +1,1037 @@
+- generic [ref=f14e3]:
+  - banner [ref=f14e4]:
+    - generic [ref=f14e5]:
+      - list [ref=f14e6]:
+        - listitem [ref=f14e7]:
+          - link "Home" [ref=f14e8] [cursor=pointer]:
+            - /url: "#/"
+        - listitem [ref=f14e9]:
+          - link "About" [ref=f14e10] [cursor=pointer]:
+            - /url: "#/about"
+        - listitem [ref=f14e11]:
+          - link "Projects" [ref=f14e12] [cursor=pointer]:
+            - /url: "#/projects"
+        - listitem [ref=f14e13]:
+          - link "Apps" [ref=f14e14] [cursor=pointer]:
+            - /url: "#/apps"
+        - listitem [ref=f14e15]:
+          - link "JS" [ref=f14e16] [cursor=pointer]:
+            - /url: "#/js-concepts"
+        - listitem [ref=f14e17]:
+          - button "Switch to dark theme" [ref=f14e18] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f14e19]: 🌙
+      - generic [ref=f14e20]:
+        - generic [ref=f14e21]:
+          - link [ref=f14e22] [cursor=pointer]:
+            - /url: /
+            - img "Devendra Prasad" [ref=f14e23]
+          - generic [ref=f14e24]:
+            - generic [ref=f14e25]:
+              - generic [ref=f14e26]: Devendra Prasad
+              - generic [ref=f14e27]: Senior Staff Software Engineer
+            - generic [ref=f14e28]:
+              - generic [ref=f14e29]: 19 yrs
+              - generic [ref=f14e30]:
+                - link "CV" [ref=f14e31] [cursor=pointer]:
+                  - /url: /docs/dpresume.pdf#view=FitH
+                - link "Linkedin" [ref=f14e32] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/devendraprasad/overlay/contact-info/
+                - link "Github" [ref=f14e33] [cursor=pointer]:
+                  - /url: https://github.com/devendraprasad1984?tab=repositories
+                - link "Algo" [ref=f14e34] [cursor=pointer]:
+                  - /url: https://www.hackerrank.com/profile/devendraprasad11
+        - generic [ref=f14e35]:
+          - link "devendraprasad1984@gmail.com" [ref=f14e36] [cursor=pointer]:
+            - /url: mailto:devendraprasad1984@gmail.com
+            - generic [aria-hidden] [ref=f14e37]: ✉️
+            - text: devendraprasad1984@gmail.com
+          - link "+91-(958)-279-7772" [ref=f14e38] [cursor=pointer]:
+            - /url: tel:+919582797772
+            - generic [aria-hidden] [ref=f14e39]: 📞
+            - text: +91-(958)-279-7772
+  - generic [ref=f14e40]:
+    - generic [ref=f14e363]:
+      - generic [ref=f14e364]: JS Core concepts
+      - generic [ref=f14e365]:
+        - heading "Design Pattern Table" [level=1] [ref=f14e366]
+        - generic [ref=f14e367]:
+          - generic [ref=f14e368]: Design patterns are broadly classified into 3 categories viz creational, structural, behavioural
+          - generic [ref=f14e369]:
+            - generic [ref=f14e370]: Creational Design Pattern
+            - generic [ref=f14e371]:
+              - generic [ref=f14e372]: Factory method
+              - generic [ref=f14e373]: Makes an instance of several derived classes based on interfaced data or events
+            - generic [ref=f14e374]:
+              - generic [ref=f14e375]: Abstract factory
+              - generic [ref=f14e376]: creates an instance of several families of classes without detailing concrete classes
+            - generic [ref=f14e377]:
+              - generic [ref=f14e378]: Builder
+              - generic [ref=f14e379]: Separates object construction from its representations; always creates the same type of objects
+            - generic [ref=f14e380]:
+              - generic [ref=f14e381]: Prototype
+              - generic [ref=f14e382]: fully initialised instance used for copying or cloning
+          - generic [ref=f14e383]:
+            - generic [ref=f14e384]: Structural Design Pattern
+            - generic [ref=f14e385]:
+              - generic [ref=f14e386]: Singleton
+              - generic [ref=f14e387]: A class with only single instance with global access points, gloabl data sharing object eg logger / context object / redux global state
+            - generic [ref=f14e388]:
+              - generic [ref=f14e389]: Adapter
+              - generic [ref=f14e390]: matches interfaces of different classes so that classes can work together despite incompatible interfaces
+            - generic [ref=f14e391]:
+              - generic [ref=f14e392]: Bridge
+              - generic [ref=f14e393]: Separates an objects interface from its implementation so that the two can vary independently
+            - generic [ref=f14e394]:
+              - generic [ref=f14e395]: Composite
+              - generic [ref=f14e396]: A structure of simple and composite objects that makes the total object more that just the sum of its parts
+            - generic [ref=f14e397]:
+              - generic [ref=f14e398]: Decorator
+              - generic [ref=f14e399]: Dynamically adds alternate processing of objects
+            - generic [ref=f14e400]:
+              - generic [ref=f14e401]: Facade
+              - generic [ref=f14e402]: A single class that hides the complexity of an entire ecosystem
+            - generic [ref=f14e403]:
+              - generic [ref=f14e404]: Flyweight
+              - generic [ref=f14e405]: A fine grained instance used for efficient sharing of information that is contained elsewhere
+            - generic [ref=f14e406]:
+              - generic [ref=f14e407]: Proxy
+              - generic [ref=f14e408]: A placeholder object representing the true object
+          - generic [ref=f14e409]:
+            - generic [ref=f14e410]: Behavioural Design Pattern
+            - generic [ref=f14e411]:
+              - generic [ref=f14e412]: Interpreter
+              - generic [ref=f14e413]: A way to include language elements in an application to match the grammar of the intended language
+            - generic [ref=f14e414]:
+              - generic [ref=f14e415]: Template method
+              - generic [ref=f14e416]: Creates the shell of an algorithm in a method, then defers the exact steps to a subclass
+            - generic [ref=f14e417]:
+              - generic [ref=f14e418]: Chain of responsibility
+              - generic [ref=f14e419]: A way of passing a request between a chain of objects to find the object that can handle the request
+            - generic [ref=f14e420]:
+              - generic [ref=f14e421]: Command
+              - generic [ref=f14e422]: A way to separate the execution of a command from its invoker
+            - generic [ref=f14e423]:
+              - generic [ref=f14e424]: Iterator
+              - generic [ref=f14e425]: sequentially access the elements of a collection without knowing the inner working of the collection eg GenericList(T)
+            - generic [ref=f14e426]:
+              - generic [ref=f14e427]: Mediator
+              - generic [ref=f14e428]: defines simplified communications between classes to prevent a group of classes from referring explicitly to each other
+            - generic [ref=f14e429]:
+              - generic [ref=f14e430]: Memento
+              - generic [ref=f14e431]: captures an objects internal state to be able to restore it later
+            - generic [ref=f14e432]:
+              - generic [ref=f14e433]: Observer
+              - generic [ref=f14e434]: A way of notifying change to number of classes to ensure consistency between the classes
+            - generic [ref=f14e435]:
+              - generic [ref=f14e436]: State
+              - generic [ref=f14e437]: Alters an objects behaviour when its state changes, eg form depending on state of a reducer triggering middleware
+            - generic [ref=f14e438]:
+              - generic [ref=f14e439]: Strategy
+              - generic [ref=f14e440]: Encapsulates an algo inside a class, separating the selection from its implementation
+            - generic [ref=f14e441]:
+              - generic [ref=f14e442]: Visitor
+              - generic [ref=f14e443]: Adds a new operation to a class without changing the class
+      - generic [ref=f14e444]:
+        - generic [ref=f14e445]: JS Design Pattern
+        - generic [ref=f14e446]:
+          - generic [ref=f14e447]: Creational design pattern
+          - generic [ref=f14e449]:
+            - code [ref=f14e734]:
+              - generic [ref=f14e735]: "1"
+              - generic [ref=f14e736]: "2"
+              - text: "const newObject = {};"
+              - generic [ref=f14e737]: "3"
+              - text: const newObject = Object.create(Object.prototype);
+              - generic [ref=f14e738]: "4"
+              - text: const newObject = new Object();
+              - generic [ref=f14e739]: "5"
+              - text: newObject.someKey="Hello World";
+              - generic [ref=f14e740]: "6"
+              - text: newObject["someKey1"]="Hello World";
+              - generic [ref=f14e741]: "7"
+              - text: var key = newObject.someKey;
+              - generic [ref=f14e742]: "8"
+              - text: var key1 = newObject["someKey1"];
+              - generic [ref=f14e743]: "9"
+              - text: //eg. person object creation
+              - generic [ref=f14e744]: "10"
+              - text: const person = Object(null);
+              - generic [ref=f14e745]: "11"
+              - text: defineProps(person, "car", "delorean");
+              - generic [ref=f14e746]: "12"
+              - text: defineProps(person, "dob", "xx-xx-xxxx");
+              - generic [ref=f14e747]: "13"
+              - text: defineProps(person, "hasBeard", "true");
+              - generic [ref=f14e748]: "14"
+              - text: //drive is a person
+              - generic [ref=f14e749]: "15"
+              - text: const driver = Object.create(person);
+              - generic [ref=f14e750]: "16"
+              - text: defineProp(driver,"topSpead", "100mph");
+              - generic [ref=f14e751]: "17"
+              - text: console.log("driver is old", driver.dob);
+              - generic [ref=f14e752]: "18"
+              - text: console.log("driver is running at", driver.topSpeed);
+              - generic [ref=f14e753]: "19"
+            - button "Copy Code" [ref=f14e453] [cursor=pointer]
+          - generic [ref=f14e457]:
+            - code [ref=f14e754]:
+              - generic [ref=f14e755]: "1"
+              - generic [ref=f14e756]: "2"
+              - text: "class car{"
+              - generic [ref=f14e757]: "3"
+              - text: "constructor(model, year, miles){"
+              - generic [ref=f14e758]: "4"
+              - text: this.model = model;
+              - generic [ref=f14e759]: "5"
+              - text: this.year = year;
+              - generic [ref=f14e760]: "6"
+              - text: this.miles = miles;
+              - generic [ref=f14e761]: "7"
+              - text: "}"
+              - generic [ref=f14e762]: "8"
+              - text: //defining any method here will be associated with all objects created with this class
+              - generic [ref=f14e763]: "9"
+              - text: //to have some global generic method on all objects but defined once, will go with prototype inheritance
+              - generic [ref=f14e764]: "10"
+              - text: "}"
+              - generic [ref=f14e765]: "11"
+              - text: "car.prototype.toString=function(){"
+              - generic [ref=f14e766]: "12"
+              - text: return "this.model has done this.miles"
+              - generic [ref=f14e767]: "13"
+              - text: "}"
+              - generic [ref=f14e768]: "14"
+              - text: //usage
+              - generic [ref=f14e769]: "15"
+              - text: console.log(new car("Honda Civic", 2009, 20000).toString());
+              - generic [ref=f14e770]: "16"
+              - text: console.log(new car("Ford Mondeo", 2010, 10000).toString());
+              - generic [ref=f14e771]: "17"
+            - button "Copy Code" [ref=f14e461] [cursor=pointer]
+          - generic [ref=f14e464]: Modules are created to keep private scoped work and avoid memory leaks, thanks to closures. in JS, there is no access modifiers, so technical there is nothing called public or private, but using closures lexical scoping, we use it mimic public/private aspects.
+          - generic [ref=f14e465]: A workaround to keep privacy aspects, we use weekMap()
+          - generic [ref=f14e467]:
+            - code [ref=f14e772]:
+              - generic [ref=f14e773]: "1"
+              - generic [ref=f14e774]: "2"
+              - text: "//Module pattern: Object literals, private vars/functions are namespaced into testModules"
+              - generic [ref=f14e775]: "3"
+              - text: let counter=0; //private variable;
+              - generic [ref=f14e776]: "4"
+              - text: let items=[];
+              - generic [ref=f14e777]: "5"
+              - text: const log=val=>console.log(val); //private function
+              - generic [ref=f14e778]: "6"
+              - text: "const testModule={"
+              - generic [ref=f14e779]: "7"
+              - text: prop1:"prop1", //this is public variable
+              - generic [ref=f14e780]: "8"
+              - text: "incrementCounter(){"
+              - generic [ref=f14e781]: "9"
+              - text: counter++;
+              - generic [ref=f14e782]: "10"
+              - text: log("incremented - "+counter);
+              - generic [ref=f14e783]: "11"
+              - text: "},"
+              - generic [ref=f14e784]: "12"
+              - text: "resetCounter:()=>{counter=0;},"
+              - generic [ref=f14e785]: "13"
+              - text: "addItem:(values)=>{"
+              - generic [ref=f14e786]: "14"
+              - text: items.push(values);
+              - generic [ref=f14e787]: "15"
+              - text: "},"
+              - generic [ref=f14e788]: "16"
+              - text: getItemCount:()=>items.length;,
+              - generic [ref=f14e789]: "17"
+              - text: getTotal:()=>items.reduce((sum, item)=>sum+item?.price, 0)
+              - generic [ref=f14e790]: "18"
+              - text: "}"
+              - generic [ref=f14e791]: "19"
+              - text: export default testModule;
+              - generic [ref=f14e792]: "20"
+              - text: //usage
+              - generic [ref=f14e793]: "21"
+              - text: import testModule from "./testModule.js"; //this can come from https also, just need module exposed
+              - generic [ref=f14e794]: "22"
+              - text: testModule.incrementCounter();
+              - generic [ref=f14e795]: "23"
+              - text: "testModule.addItem({item: \"bread\", price: 10});"
+              - generic [ref=f14e796]: "24"
+              - text: "testModule.addItem({item: \"butter\", price: 15});"
+              - generic [ref=f14e797]: "25"
+              - text: console.log(testModule.getItemCount(), testModule.getTotal())
+              - generic [ref=f14e798]: "26"
+            - button "Copy Code" [ref=f14e471] [cursor=pointer]
+      - generic [ref=f14e474]:
+        - generic [ref=f14e475]:
+          - generic [ref=f14e476]: Creational design patterns
+          - generic [ref=f14e477]:
+            - generic [ref=f14e478]: Factory method
+            - generic [ref=f14e479]: Creates instances of several derived types based on input, hiding the constructors.
+            - generic [ref=f14e481]:
+              - code [ref=f14e799]:
+                - generic [ref=f14e800]: "1"
+                - text: "class Car { drive() { return \"car\"; } }"
+                - generic [ref=f14e801]: "2"
+                - text: "class Bike { drive() { return \"bike\"; } }"
+                - generic [ref=f14e802]: "3"
+                - generic [ref=f14e803]: "4"
+                - text: "const vehicleFactory = (type) => {"
+                - generic [ref=f14e804]: "5"
+                - text: "const map = { car: Car, bike: Bike };"
+                - generic [ref=f14e805]: "6"
+                - text: if (!map[type]) throw new Error("unknown vehicle " + type);
+                - generic [ref=f14e806]: "7"
+                - text: return new map[type]();
+                - generic [ref=f14e807]: "8"
+                - text: "};"
+                - generic [ref=f14e808]: "9"
+                - generic [ref=f14e809]: "10"
+                - text: //usage
+                - generic [ref=f14e810]: "11"
+                - text: vehicleFactory("bike").drive();
+              - button "Copy Code" [ref=f14e485] [cursor=pointer]
+          - generic [ref=f14e488]:
+            - generic [ref=f14e489]: Abstract factory
+            - generic [ref=f14e490]: Creates whole families of related objects without naming concrete classes.
+            - generic [ref=f14e492]:
+              - code [ref=f14e811]:
+                - generic [ref=f14e812]: "1"
+                - text: "const lightTheme = { button: () => ({ bg: \"#fff\" }), input: () => ({ border: \"#000\" }) };"
+                - generic [ref=f14e813]: "2"
+                - text: "const darkTheme = { button: () => ({ bg: \"#000\" }), input: () => ({ border: \"#fff\" }) };"
+                - generic [ref=f14e814]: "3"
+                - generic [ref=f14e815]: "4"
+                - text: "const uiFactory = (mode) => (mode === \"dark\" ? darkTheme : lightTheme);"
+                - generic [ref=f14e816]: "5"
+                - generic [ref=f14e817]: "6"
+                - text: //usage
+                - generic [ref=f14e818]: "7"
+                - text: const ui = uiFactory("dark");
+                - generic [ref=f14e819]: "8"
+                - text: ui.button();
+                - generic [ref=f14e820]: "9"
+                - text: ui.input();
+              - button "Copy Code" [ref=f14e496] [cursor=pointer]
+          - generic [ref=f14e499]:
+            - generic [ref=f14e500]: Builder
+            - generic [ref=f14e501]: Separates construction from representation; build step by step, finish with build().
+            - generic [ref=f14e503]:
+              - code [ref=f14e821]:
+                - generic [ref=f14e822]: "1"
+                - text: "class RequestBuilder {"
+                - generic [ref=f14e823]: "2"
+                - text: "#req = { method: \"GET\", headers: {} };"
+                - generic [ref=f14e824]: "3"
+                - text: "method(m) { this.#req.method = m; return this; }"
+                - generic [ref=f14e825]: "4"
+                - text: "header(k, v) { this.#req.headers[k] = v; return this; }"
+                - generic [ref=f14e826]: "5"
+                - text: "body(b) { this.#req.body = JSON.stringify(b); return this; }"
+                - generic [ref=f14e827]: "6"
+                - text: "build() { return { ...this.#req }; }"
+                - generic [ref=f14e828]: "7"
+                - text: "}"
+                - generic [ref=f14e829]: "8"
+                - generic [ref=f14e830]: "9"
+                - text: //usage
+                - generic [ref=f14e831]: "10"
+                - text: "const req = new RequestBuilder().method(\"POST\").header(\"x-id\", \"1\").body({ a: 1 }).build();"
+              - button "Copy Code" [ref=f14e507] [cursor=pointer]
+          - generic [ref=f14e510]:
+            - generic [ref=f14e511]: Prototype
+            - generic [ref=f14e512]: Clone a fully initialised instance instead of building a new one from scratch.
+            - generic [ref=f14e514]:
+              - code [ref=f14e832]:
+                - generic [ref=f14e833]: "1"
+                - text: "const proto = {"
+                - generic [ref=f14e834]: "2"
+                - text: "greet() { return \"hi \" + this.name; }"
+                - generic [ref=f14e835]: "3"
+                - text: "};"
+                - generic [ref=f14e836]: "4"
+                - generic [ref=f14e837]: "5"
+                - text: "const user = Object.create(proto, { name: { value: \"dev\", writable: true } });"
+                - generic [ref=f14e838]: "6"
+                - text: const clone = Object.assign(Object.create(Object.getPrototypeOf(user)), user);
+                - generic [ref=f14e839]: "7"
+                - text: "const deepCopy = structuredClone({ a: { b: 1 } });"
+                - generic [ref=f14e840]: "8"
+                - generic [ref=f14e841]: "9"
+                - text: //usage
+                - generic [ref=f14e842]: "10"
+                - text: clone.greet();
+              - button "Copy Code" [ref=f14e518] [cursor=pointer]
+        - generic [ref=f14e521]:
+          - generic [ref=f14e522]: Structural design patterns
+          - generic [ref=f14e523]:
+            - generic [ref=f14e524]: Singleton
+            - generic [ref=f14e525]: One instance with a global access point, e.g. logger, context or redux store.
+            - generic [ref=f14e527]:
+              - code [ref=f14e843]:
+                - generic [ref=f14e844]: "1"
+                - text: "class Logger {"
+                - generic [ref=f14e845]: "2"
+                - text: "static #instance;"
+                - generic [ref=f14e846]: "3"
+                - text: "constructor() {"
+                - generic [ref=f14e847]: "4"
+                - text: if (Logger.#instance) return Logger.#instance;
+                - generic [ref=f14e848]: "5"
+                - text: this.logs = [];
+                - generic [ref=f14e849]: "6"
+                - text: Logger.#instance = this;
+                - generic [ref=f14e850]: "7"
+                - text: "}"
+                - generic [ref=f14e851]: "8"
+                - text: "log(msg) { this.logs.push(msg); }"
+                - generic [ref=f14e852]: "9"
+                - text: "}"
+                - generic [ref=f14e853]: "10"
+                - generic [ref=f14e854]: "11"
+                - text: //usage
+                - generic [ref=f14e855]: "12"
+                - text: new Logger() === new Logger(); //true
+              - button "Copy Code" [ref=f14e531] [cursor=pointer]
+          - generic [ref=f14e534]:
+            - generic [ref=f14e535]: Adapter
+            - generic [ref=f14e536]: Makes incompatible interfaces work together.
+            - generic [ref=f14e538]:
+              - code [ref=f14e856]:
+                - generic [ref=f14e857]: "1"
+                - text: "const oldApi = { getUsers: () => [[\"1\", \"dev\"]] };"
+                - generic [ref=f14e858]: "2"
+                - generic [ref=f14e859]: "3"
+                - text: "const userAdapter = {"
+                - generic [ref=f14e860]: "4"
+                - text: "fetchUsers: () => oldApi.getUsers().map(([id, name]) => ({ id, name }))"
+                - generic [ref=f14e861]: "5"
+                - text: "};"
+                - generic [ref=f14e862]: "6"
+                - generic [ref=f14e863]: "7"
+                - text: //usage
+                - generic [ref=f14e864]: "8"
+                - text: userAdapter.fetchUsers();
+              - button "Copy Code" [ref=f14e542] [cursor=pointer]
+          - generic [ref=f14e545]:
+            - generic [ref=f14e546]: Bridge
+            - generic [ref=f14e547]: Separates an abstraction from its implementation so both can vary independently.
+            - generic [ref=f14e549]:
+              - code [ref=f14e865]:
+                - generic [ref=f14e866]: "1"
+                - text: "const canvasRenderer = { circle: (r) => \"canvas circle \" + r };"
+                - generic [ref=f14e867]: "2"
+                - text: "const svgRenderer = { circle: (r) => \"svg circle \" + r };"
+                - generic [ref=f14e868]: "3"
+                - generic [ref=f14e869]: "4"
+                - text: "class Circle {"
+                - generic [ref=f14e870]: "5"
+                - text: "constructor(renderer, r) { this.renderer = renderer; this.r = r; }"
+                - generic [ref=f14e871]: "6"
+                - text: "draw() { return this.renderer.circle(this.r); }"
+                - generic [ref=f14e872]: "7"
+                - text: "}"
+                - generic [ref=f14e873]: "8"
+                - generic [ref=f14e874]: "9"
+                - text: //usage
+                - generic [ref=f14e875]: "10"
+                - text: new Circle(svgRenderer, 5).draw();
+              - button "Copy Code" [ref=f14e553] [cursor=pointer]
+          - generic [ref=f14e556]:
+            - generic [ref=f14e557]: Composite
+            - generic [ref=f14e558]: Treats single objects and groups of objects uniformly, like a tree.
+            - generic [ref=f14e560]:
+              - code [ref=f14e876]:
+                - generic [ref=f14e877]: "1"
+                - text: "class File {"
+                - generic [ref=f14e878]: "2"
+                - text: "constructor(size) { this.size = size; }"
+                - generic [ref=f14e879]: "3"
+                - text: "getSize() { return this.size; }"
+                - generic [ref=f14e880]: "4"
+                - text: "}"
+                - generic [ref=f14e881]: "5"
+                - text: "class Folder {"
+                - generic [ref=f14e882]: "6"
+                - text: "constructor(...children) { this.children = children; }"
+                - generic [ref=f14e883]: "7"
+                - text: "getSize() { return this.children.reduce((s, c) => s + c.getSize(), 0); }"
+                - generic [ref=f14e884]: "8"
+                - text: "}"
+                - generic [ref=f14e885]: "9"
+                - generic [ref=f14e886]: "10"
+                - text: //usage
+                - generic [ref=f14e887]: "11"
+                - text: new Folder(new File(10), new Folder(new File(5), new File(1))).getSize(); //16
+              - button "Copy Code" [ref=f14e564] [cursor=pointer]
+          - generic [ref=f14e567]:
+            - generic [ref=f14e568]: Decorator
+            - generic [ref=f14e569]: Dynamically adds behaviour to an object or function without changing it.
+            - generic [ref=f14e571]:
+              - code [ref=f14e888]:
+                - generic [ref=f14e889]: "1"
+                - text: "const withLogging = (fn) => (...args) => {"
+                - generic [ref=f14e890]: "2"
+                - text: console.log("calling", fn.name, args);
+                - generic [ref=f14e891]: "3"
+                - text: return fn(...args);
+                - generic [ref=f14e892]: "4"
+                - text: "};"
+                - generic [ref=f14e893]: "5"
+                - generic [ref=f14e894]: "6"
+                - text: const add = (a, b) => a + b;
+                - generic [ref=f14e895]: "7"
+                - generic [ref=f14e896]: "8"
+                - text: //usage
+                - generic [ref=f14e897]: "9"
+                - text: withLogging(add)(1, 2);
+              - button "Copy Code" [ref=f14e575] [cursor=pointer]
+          - generic [ref=f14e578]:
+            - generic [ref=f14e579]: Facade
+            - generic [ref=f14e580]: A single simple interface hiding a complex subsystem.
+            - generic [ref=f14e582]:
+              - code [ref=f14e898]:
+                - generic [ref=f14e899]: "1"
+                - text: "const auth = { login: () => \"token\" };"
+                - generic [ref=f14e900]: "2"
+                - text: "const cart = { load: (t) => [\"item\"] };"
+                - generic [ref=f14e901]: "3"
+                - text: "const prices = { total: (items) => items.length * 10 };"
+                - generic [ref=f14e902]: "4"
+                - generic [ref=f14e903]: "5"
+                - text: "const checkoutFacade = () => {"
+                - generic [ref=f14e904]: "6"
+                - text: const token = auth.login();
+                - generic [ref=f14e905]: "7"
+                - text: return prices.total(cart.load(token));
+                - generic [ref=f14e906]: "8"
+                - text: "};"
+                - generic [ref=f14e907]: "9"
+                - generic [ref=f14e908]: "10"
+                - text: //usage
+                - generic [ref=f14e909]: "11"
+                - text: checkoutFacade();
+              - button "Copy Code" [ref=f14e586] [cursor=pointer]
+          - generic [ref=f14e589]:
+            - generic [ref=f14e590]: Flyweight
+            - generic [ref=f14e591]: Share fine grained objects to save memory.
+            - generic [ref=f14e593]:
+              - code [ref=f14e910]:
+                - generic [ref=f14e911]: "1"
+                - text: const cache = new Map();
+                - generic [ref=f14e912]: "2"
+                - generic [ref=f14e913]: "3"
+                - text: "const getIcon = (name) => {"
+                - generic [ref=f14e914]: "4"
+                - text: "if (!cache.has(name)) cache.set(name, { name, svg: \"<svg/>\" });"
+                - generic [ref=f14e915]: "5"
+                - text: return cache.get(name);
+                - generic [ref=f14e916]: "6"
+                - text: "};"
+                - generic [ref=f14e917]: "7"
+                - generic [ref=f14e918]: "8"
+                - text: //usage
+                - generic [ref=f14e919]: "9"
+                - text: getIcon("home") === getIcon("home"); //true, one shared instance
+              - button "Copy Code" [ref=f14e597] [cursor=pointer]
+          - generic [ref=f14e600]:
+            - generic [ref=f14e601]: Proxy
+            - generic [ref=f14e602]: A placeholder that controls access to the real object.
+            - generic [ref=f14e604]:
+              - code [ref=f14e920]:
+                - generic [ref=f14e921]: "1"
+                - text: "const target = { name: \"dev\" };"
+                - generic [ref=f14e922]: "2"
+                - generic [ref=f14e923]: "3"
+                - text: "const guarded = new Proxy(target, {"
+                - generic [ref=f14e924]: "4"
+                - text: "get: (obj, key) => (key in obj ? obj[key] : \"n/a\"),"
+                - generic [ref=f14e925]: "5"
+                - text: "set: (obj, key, value) => {"
+                - generic [ref=f14e926]: "6"
+                - text: if (key === "name" && typeof value !== "string") throw new TypeError("name must be string");
+                - generic [ref=f14e927]: "7"
+                - text: obj[key] = value;
+                - generic [ref=f14e928]: "8"
+                - text: return true;
+                - generic [ref=f14e929]: "9"
+                - text: "}"
+                - generic [ref=f14e930]: "10"
+                - text: "});"
+                - generic [ref=f14e931]: "11"
+                - generic [ref=f14e932]: "12"
+                - text: //usage
+                - generic [ref=f14e933]: "13"
+                - text: guarded.age; //"n/a"
+              - button "Copy Code" [ref=f14e608] [cursor=pointer]
+        - generic [ref=f14e611]:
+          - generic [ref=f14e612]: Behavioural design patterns
+          - generic [ref=f14e613]:
+            - generic [ref=f14e614]: Interpreter
+            - generic [ref=f14e615]: Evaluate sentences of a small language by its grammar.
+            - generic [ref=f14e617]:
+              - code [ref=f14e934]:
+                - generic [ref=f14e935]: "1"
+                - text: "const evaluate = (expr) => {"
+                - generic [ref=f14e936]: "2"
+                - text: const [a, op, b] = expr.split(" ");
+                - generic [ref=f14e937]: "3"
+                - text: "const ops = { \"+\": (x, y) => x + y, \"-\": (x, y) => x - y, \"*\": (x, y) => x * y };"
+                - generic [ref=f14e938]: "4"
+                - text: return ops[op](Number(a), Number(b));
+                - generic [ref=f14e939]: "5"
+                - text: "};"
+                - generic [ref=f14e940]: "6"
+                - generic [ref=f14e941]: "7"
+                - text: //usage
+                - generic [ref=f14e942]: "8"
+                - text: evaluate("3 * 4"); //12
+              - button "Copy Code" [ref=f14e621] [cursor=pointer]
+          - generic [ref=f14e624]:
+            - generic [ref=f14e625]: Template method
+            - generic [ref=f14e626]: Defines the skeleton of an algorithm; subclasses fill in the steps.
+            - generic [ref=f14e628]:
+              - code [ref=f14e943]:
+                - generic [ref=f14e944]: "1"
+                - text: "class Report {"
+                - generic [ref=f14e945]: "2"
+                - text: "generate() { return [this.header(), this.body(), this.footer()].join(\"\\n\"); }"
+                - generic [ref=f14e946]: "3"
+                - text: "header() { return \"== report ==\"; }"
+                - generic [ref=f14e947]: "4"
+                - text: "footer() { return \"== end ==\"; }"
+                - generic [ref=f14e948]: "5"
+                - text: "body() { throw new Error(\"implement body\"); }"
+                - generic [ref=f14e949]: "6"
+                - text: "}"
+                - generic [ref=f14e950]: "7"
+                - text: "class SalesReport extends Report {"
+                - generic [ref=f14e951]: "8"
+                - text: "body() { return \"sales data\"; }"
+                - generic [ref=f14e952]: "9"
+                - text: "}"
+                - generic [ref=f14e953]: "10"
+                - generic [ref=f14e954]: "11"
+                - text: //usage
+                - generic [ref=f14e955]: "12"
+                - text: new SalesReport().generate();
+              - button "Copy Code" [ref=f14e632] [cursor=pointer]
+          - generic [ref=f14e635]:
+            - generic [ref=f14e636]: Chain of responsibility
+            - generic [ref=f14e637]: Pass a request along handlers until one handles it (express / redux middleware).
+            - generic [ref=f14e639]:
+              - code [ref=f14e956]:
+                - generic [ref=f14e957]: "1"
+                - text: "const chain = (...handlers) => (req) => {"
+                - generic [ref=f14e958]: "2"
+                - text: "for (const h of handlers) {"
+                - generic [ref=f14e959]: "3"
+                - text: const res = h(req);
+                - generic [ref=f14e960]: "4"
+                - text: if (res) return res;
+                - generic [ref=f14e961]: "5"
+                - text: "}"
+                - generic [ref=f14e962]: "6"
+                - text: "};"
+                - generic [ref=f14e963]: "7"
+                - generic [ref=f14e964]: "8"
+                - text: "const auth = (r) => (!r.user ? \"401\" : null);"
+                - generic [ref=f14e965]: "9"
+                - text: "const admin = (r) => (r.user !== \"admin\" ? \"403\" : null);"
+                - generic [ref=f14e966]: "10"
+                - text: const ok = () => "200";
+                - generic [ref=f14e967]: "11"
+                - generic [ref=f14e968]: "12"
+                - text: //usage
+                - generic [ref=f14e969]: "13"
+                - text: "chain(auth, admin, ok)({ user: \"admin\" });"
+              - button "Copy Code" [ref=f14e643] [cursor=pointer]
+          - generic [ref=f14e646]:
+            - generic [ref=f14e647]: Command
+            - generic [ref=f14e648]: Encapsulates a request as an object so it can be queued, logged or undone.
+            - generic [ref=f14e650]:
+              - code [ref=f14e970]:
+                - generic [ref=f14e971]: "1"
+                - text: const history = [];
+                - generic [ref=f14e972]: "2"
+                - text: "const run = (cmd) => { cmd.exec(); history.push(cmd); };"
+                - generic [ref=f14e973]: "3"
+                - text: const undo = () => history.pop()?.undo();
+                - generic [ref=f14e974]: "4"
+                - generic [ref=f14e975]: "5"
+                - text: let count = 0;
+                - generic [ref=f14e976]: "6"
+                - text: "const increment = { exec: () => count++, undo: () => count-- };"
+                - generic [ref=f14e977]: "7"
+                - generic [ref=f14e978]: "8"
+                - text: //usage
+                - generic [ref=f14e979]: "9"
+                - text: run(increment);
+                - generic [ref=f14e980]: "10"
+                - text: undo();
+              - button "Copy Code" [ref=f14e654] [cursor=pointer]
+          - generic [ref=f14e657]:
+            - generic [ref=f14e658]: Iterator
+            - generic [ref=f14e659]: Sequentially access a collection without knowing how it is stored.
+            - generic [ref=f14e661]:
+              - code [ref=f14e981]:
+                - generic [ref=f14e982]: "1"
+                - text: "class Range {"
+                - generic [ref=f14e983]: "2"
+                - text: "constructor(start, end) { this.start = start; this.end = end; }"
+                - generic [ref=f14e984]: "3"
+                - text: "*[Symbol.iterator]() {"
+                - generic [ref=f14e985]: "4"
+                - text: for (let i = this.start; i <= this.end; i++) yield i;
+                - generic [ref=f14e986]: "5"
+                - text: "}"
+                - generic [ref=f14e987]: "6"
+                - text: "}"
+                - generic [ref=f14e988]: "7"
+                - generic [ref=f14e989]: "8"
+                - text: //usage
+                - generic [ref=f14e990]: "9"
+                - text: "[...new Range(1, 5)]; //[1,2,3,4,5]"
+              - button "Copy Code" [ref=f14e665] [cursor=pointer]
+          - generic [ref=f14e668]:
+            - generic [ref=f14e669]: Mediator
+            - generic [ref=f14e670]: Objects talk through a mediator instead of referring to each other.
+            - generic [ref=f14e672]:
+              - code [ref=f14e991]:
+                - generic [ref=f14e992]: "1"
+                - text: "class ChatRoom {"
+                - generic [ref=f14e993]: "2"
+                - text: users = new Set();
+                - generic [ref=f14e994]: "3"
+                - text: "join(user) { this.users.add(user); user.room = this; }"
+                - generic [ref=f14e995]: "4"
+                - text: "send(from, msg) {"
+                - generic [ref=f14e996]: "5"
+                - text: this.users.forEach((u) => u !== from && u.receive(msg));
+                - generic [ref=f14e997]: "6"
+                - text: "}"
+                - generic [ref=f14e998]: "7"
+                - text: "}"
+                - generic [ref=f14e999]: "8"
+                - generic [ref=f14e1000]: "9"
+                - text: //usage
+                - generic [ref=f14e1001]: "10"
+                - text: const room = new ChatRoom();
+                - generic [ref=f14e1002]: "11"
+                - text: "room.join({ receive: console.log });"
+              - button "Copy Code" [ref=f14e676] [cursor=pointer]
+          - generic [ref=f14e679]:
+            - generic [ref=f14e680]: Memento
+            - generic [ref=f14e681]: Capture and restore an object's internal state.
+            - generic [ref=f14e683]:
+              - code [ref=f14e1003]:
+                - generic [ref=f14e1004]: "1"
+                - text: "class Editor {"
+                - generic [ref=f14e1005]: "2"
+                - text: text = "";
+                - generic [ref=f14e1006]: "3"
+                - text: "save() { return { text: this.text }; }"
+                - generic [ref=f14e1007]: "4"
+                - text: "restore(memento) { this.text = memento.text; }"
+                - generic [ref=f14e1008]: "5"
+                - text: "}"
+                - generic [ref=f14e1009]: "6"
+                - generic [ref=f14e1010]: "7"
+                - text: //usage
+                - generic [ref=f14e1011]: "8"
+                - text: const editor = new Editor();
+                - generic [ref=f14e1012]: "9"
+                - text: editor.text = "v1";
+                - generic [ref=f14e1013]: "10"
+                - text: const snapshot = editor.save();
+                - generic [ref=f14e1014]: "11"
+                - text: editor.text = "v2";
+                - generic [ref=f14e1015]: "12"
+                - text: editor.restore(snapshot); //back to v1
+              - button "Copy Code" [ref=f14e687] [cursor=pointer]
+          - generic [ref=f14e690]:
+            - generic [ref=f14e691]: Observer
+            - generic [ref=f14e692]: Notify many subscribers when state changes (events, redux subscribe).
+            - generic [ref=f14e694]:
+              - code [ref=f14e1016]:
+                - generic [ref=f14e1017]: "1"
+                - text: "class Subject {"
+                - generic [ref=f14e1018]: "2"
+                - text: "#subs = new Set();"
+                - generic [ref=f14e1019]: "3"
+                - text: "subscribe(fn) { this.#subs.add(fn); return () => this.#subs.delete(fn); }"
+                - generic [ref=f14e1020]: "4"
+                - text: "notify(data) { this.#subs.forEach((fn) => fn(data)); }"
+                - generic [ref=f14e1021]: "5"
+                - text: "}"
+                - generic [ref=f14e1022]: "6"
+                - generic [ref=f14e1023]: "7"
+                - text: //usage
+                - generic [ref=f14e1024]: "8"
+                - text: const subject = new Subject();
+                - generic [ref=f14e1025]: "9"
+                - text: const unsubscribe = subject.subscribe((d) => console.log("got", d));
+                - generic [ref=f14e1026]: "10"
+                - text: subject.notify(1);
+                - generic [ref=f14e1027]: "11"
+                - text: unsubscribe();
+              - button "Copy Code" [ref=f14e698] [cursor=pointer]
+          - generic [ref=f14e701]:
+            - generic [ref=f14e702]: State
+            - generic [ref=f14e703]: Behaviour changes when the state changes, e.g. a reducer driving a form.
+            - generic [ref=f14e705]:
+              - code [ref=f14e1028]:
+                - generic [ref=f14e1029]: "1"
+                - text: "const states = {"
+                - generic [ref=f14e1030]: "2"
+                - text: "idle: { next: \"loading\" },"
+                - generic [ref=f14e1031]: "3"
+                - text: "loading: { next: \"success\" },"
+                - generic [ref=f14e1032]: "4"
+                - text: "success: { next: \"idle\" }"
+                - generic [ref=f14e1033]: "5"
+                - text: "};"
+                - generic [ref=f14e1034]: "6"
+                - generic [ref=f14e1035]: "7"
+                - text: "class Fetcher {"
+                - generic [ref=f14e1036]: "8"
+                - text: state = "idle";
+                - generic [ref=f14e1037]: "9"
+                - text: "next() { this.state = states[this.state].next; }"
+                - generic [ref=f14e1038]: "10"
+                - text: "}"
+                - generic [ref=f14e1039]: "11"
+                - generic [ref=f14e1040]: "12"
+                - text: //usage
+                - generic [ref=f14e1041]: "13"
+                - text: const f = new Fetcher();
+                - generic [ref=f14e1042]: "14"
+                - text: f.next(); //loading
+              - button "Copy Code" [ref=f14e709] [cursor=pointer]
+          - generic [ref=f14e712]:
+            - generic [ref=f14e713]: Strategy
+            - generic [ref=f14e714]: Encapsulate interchangeable algorithms and pick one at runtime.
+            - generic [ref=f14e716]:
+              - code [ref=f14e1043]:
+                - generic [ref=f14e1044]: "1"
+                - text: "const strategies = {"
+                - generic [ref=f14e1045]: "2"
+                - text: "ascending: (a, b) => a - b,"
+                - generic [ref=f14e1046]: "3"
+                - text: "descending: (a, b) => b - a"
+                - generic [ref=f14e1047]: "4"
+                - text: "};"
+                - generic [ref=f14e1048]: "5"
+                - generic [ref=f14e1049]: "6"
+                - text: const sortBy = (list, type) => [...list].sort(strategies[type]);
+                - generic [ref=f14e1050]: "7"
+                - generic [ref=f14e1051]: "8"
+                - text: //usage
+                - generic [ref=f14e1052]: "9"
+                - text: sortBy([3, 1, 2], "descending");
+              - button "Copy Code" [ref=f14e720] [cursor=pointer]
+          - generic [ref=f14e723]:
+            - generic [ref=f14e724]: Visitor
+            - generic [ref=f14e725]: Adds a new operation to a structure without changing its classes.
+            - generic [ref=f14e727]:
+              - code [ref=f14e1053]:
+                - generic [ref=f14e1054]: "1"
+                - text: "class Num { constructor(v) { this.v = v; } accept(visitor) { return visitor.num(this); } }"
+                - generic [ref=f14e1055]: "2"
+                - text: "class Add { constructor(l, r) { this.l = l; this.r = r; } accept(visitor) { return visitor.add(this); } }"
+                - generic [ref=f14e1056]: "3"
+                - generic [ref=f14e1057]: "4"
+                - text: "const evaluator = {"
+                - generic [ref=f14e1058]: "5"
+                - text: "num: (n) => n.v,"
+                - generic [ref=f14e1059]: "6"
+                - text: "add: (a) => a.l.accept(evaluator) + a.r.accept(evaluator)"
+                - generic [ref=f14e1060]: "7"
+                - text: "};"
+                - generic [ref=f14e1061]: "8"
+                - text: "const printer = {"
+                - generic [ref=f14e1062]: "9"
+                - text: "num: (n) => String(n.v),"
+                - generic [ref=f14e1063]: "10"
+                - text: "add: (a) => \"(\" + a.l.accept(printer) + \" + \" + a.r.accept(printer) + \")\""
+                - generic [ref=f14e1064]: "11"
+                - text: "};"
+                - generic [ref=f14e1065]: "12"
+                - generic [ref=f14e1066]: "13"
+                - text: //usage
+                - generic [ref=f14e1067]: "14"
+                - text: const tree = new Add(new Num(1), new Num(2));
+                - generic [ref=f14e1068]: "15"
+                - text: tree.accept(evaluator); //3
+                - generic [ref=f14e1069]: "16"
+                - text: tree.accept(printer); //(1 + 2)
+              - button "Copy Code" [ref=f14e731] [cursor=pointer]
+    - generic [ref=f14e215]:
+      - generic [ref=f14e217]:
+        - generic [ref=f14e218]: Live Apps
+        - list [ref=f14e219]:
+          - listitem [ref=f14e220]:
+            - link "giftcards.com" [ref=f14e221] [cursor=pointer]:
+              - /url: https://giftcards.com/us/en
+          - listitem [ref=f14e222]:
+            - link "giftcards.ca" [ref=f14e223] [cursor=pointer]:
+              - /url: https://giftcards.com/ca/en
+          - listitem [ref=f14e224]:
+            - link "giftcards.co.uk" [ref=f14e225] [cursor=pointer]:
+              - /url: https://giftcards.com/uk/en
+          - listitem [ref=f14e226]:
+            - link "Chase Palm" [ref=f14e227] [cursor=pointer]:
+              - /url: https://reservebusiness.giftcards.com
+      - generic [ref=f14e229]:
+        - generic [ref=f14e230]: Community
+        - list [ref=f14e231]:
+          - listitem [ref=f14e232]:
+            - generic [ref=f14e233]:
+              - generic [ref=f14e234]: Oneliners
+              - generic [ref=f14e235]: core javascript utility helper methods
+              - generic [ref=f14e236]:
+                - text: npm i oneliners
+                - link "read me" [ref=f14e237] [cursor=pointer]:
+                  - /url: https://www.npmjs.com/package/oneliners
+      - generic [ref=f14e239]:
+        - generic [ref=f14e240]: Skills
+        - list [ref=f14e241]:
+          - listitem [ref=f14e242]:
+            - generic [ref=f14e243]: Javascript
+          - listitem [ref=f14e244]:
+            - generic [ref=f14e245]: typescript
+          - listitem [ref=f14e246]:
+            - generic [ref=f14e247]: NextJs16
+          - listitem [ref=f14e248]:
+            - generic [ref=f14e249]: React19
+          - listitem [ref=f14e250]:
+            - generic [ref=f14e251]: AEM
+          - listitem [ref=f14e252]:
+            - generic [ref=f14e253]: Python
+          - listitem [ref=f14e254]:
+            - generic [ref=f14e255]: MySql
+          - listitem [ref=f14e256]:
+            - generic [ref=f14e257]: mongodb
+          - listitem [ref=f14e258]:
+            - generic [ref=f14e259]: NodeJs
+          - listitem [ref=f14e260]:
+            - generic [ref=f14e261]: ExpressJs
+          - listitem [ref=f14e262]:
+            - generic [ref=f14e263]: HTML5
+          - listitem [ref=f14e264]:
+            - generic [ref=f14e265]: CSS3
+          - listitem [ref=f14e266]:
+            - generic [ref=f14e267]: SASS
+          - listitem [ref=f14e268]:
+            - generic [ref=f14e269]: Bootstrap
+          - listitem [ref=f14e270]:
+            - generic [ref=f14e271]: TailwindCss
+          - listitem [ref=f14e272]:
+            - generic [ref=f14e273]: GitHub
+          - listitem [ref=f14e274]:
+            - generic [ref=f14e275]: GitLab
+          - listitem [ref=f14e276]:
+            - generic [ref=f14e277]: Jira
+          - listitem [ref=f14e278]:
+            - generic [ref=f14e279]: Agile Methodology
+      - generic [ref=f14e281]:
+        - generic [ref=f14e282]: Leaders I work(ed) with...
+        - list [ref=f14e283]:
+          - listitem [ref=f14e284]:
+            - link "Yulia Groza VP Engineering, Commerce Solutions at Blackhawk Network" [ref=f14e286] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/yuliagroza/
+              - generic [ref=f14e287]: Yulia Groza
+              - generic [ref=f14e288]: VP Engineering, Commerce Solutions at Blackhawk Network
+          - listitem [ref=f14e289]:
+            - link "Brian Lewis Global Design Leader & Distinguished Engineer, at Blackhawk Network" [ref=f14e291] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/briantlewis/
+              - generic [ref=f14e292]: Brian Lewis
+              - generic [ref=f14e293]: Global Design Leader & Distinguished Engineer, at Blackhawk Network
+          - listitem [ref=f14e294]:
+            - link "Renjith Chandran Pillai Senior Director of Engineering at Blackhawk Network" [ref=f14e296] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/renjith-pillai/
+              - generic [ref=f14e297]: Renjith Chandran Pillai
+              - generic [ref=f14e298]: Senior Director of Engineering at Blackhawk Network
+          - listitem [ref=f14e299]:
+            - link "Sachin Lala Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN" [ref=f14e301] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/sachinlala/
+              - generic [ref=f14e302]: Sachin Lala
+              - generic [ref=f14e303]: Managing Director @ Goldman Sach & former Distinguish Engineer @ BHN
+          - listitem [ref=f14e304]:
+            - link "Parag Jain CIO|CTO| Seasoned IT leader| GCC Leadership| BFSI Leader| AI Leader| Wholesale and Investment Banking" [ref=f14e306] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/paragjain78/
+              - generic [ref=f14e307]: Parag Jain
+              - generic [ref=f14e308]: CIO|CTO| Seasoned IT leader| GCC Leadership| BFSI Leader| AI Leader| Wholesale and Investment Banking
+          - listitem [ref=f14e309]:
+            - link "Amit Kumar Gupta Director at NATWEST Group India" [ref=f14e311] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/amit-kumar-a996619/
+              - generic [ref=f14e312]: Amit Kumar Gupta
+              - generic [ref=f14e313]: Director at NATWEST Group India
+  - contentinfo [ref=f14e314]:
+    - generic [ref=f14e315]:
+      - heading "Work experience links" [level=2] [ref=f14e316]
+      - generic [ref=f14e317]:
+        - generic [ref=f14e318]:
+          - link "BMI" [ref=f14e319] [cursor=pointer]:
+            - /url: /bmi/
+          - link "DragD3" [ref=f14e320] [cursor=pointer]:
+            - /url: /dragd3/
+          - link "React Vanilla JS" [ref=f14e321] [cursor=pointer]:
+            - /url: /react-vanila-js/#/
+          - link "Geek Admin" [ref=f14e322] [cursor=pointer]:
+            - /url: /geek_admin/
+        - generic [ref=f14e323]:
+          - link "KANBAN" [ref=f14e324] [cursor=pointer]:
+            - /url: /kanban/
+          - link "kathi.com" [ref=f14e325] [cursor=pointer]:
+            - /url: /kaathi.com/
+          - link "Lazy search" [ref=f14e326] [cursor=pointer]:
+            - /url: /debounceExampleLazySearch/
+          - link "Comment & Reply" [ref=f14e327] [cursor=pointer]:
+            - /url: /ciim/
+        - generic [ref=f14e328]:
+          - link "MOCHA" [ref=f14e329] [cursor=pointer]:
+            - /url: /mocha/mocha.html
+          - link "voice banking" [ref=f14e330] [cursor=pointer]:
+            - /url: /dpvoicebanking/
+          - link "type ORM" [ref=f14e331] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs/tree/master/ts-node-postgres-orm-api
+          - link "Web components" [ref=f14e332] [cursor=pointer]:
+            - /url: /customTagging/jsReadHTMLAttributes.html
+          - link "NODE.JS Practice app" [ref=f14e333] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/nodejs
+          - link "Tornado practice" [ref=f14e334] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python/tree/master/tornadoPractice
+          - link "Python practice" [ref=f14e335] [cursor=pointer]:
+            - /url: https://github.com/devendraprasad1984/python
+        - generic [ref=f14e336]:
+          - link "WIP" [ref=f14e337] [cursor=pointer]:
+            - /url: ""
+          - link "PracticingJS" [ref=f14e338] [cursor=pointer]:
+            - /url: /docs/packOf30InterviewPrep.pdf#view=FitH
+      - generic [ref=f14e339]:
+        - generic [ref=f14e340]:
+          - strong [ref=f14e341]: "Learning:"
+          - generic [ref=f14e342]: devops
+          - generic [ref=f14e343]: graphql
+          - generic [ref=f14e344]: UI design system
+          - generic [ref=f14e345]: Web3
+          - generic [ref=f14e346]: FE architecture
+          - generic [ref=f14e347]: system design
+          - generic [ref=f14e348]: node
+        - generic [ref=f14e349]:
+          - strong [ref=f14e350]: "Agile:"
+          - generic [ref=f14e351]: Agile Planning
+          - generic [ref=f14e352]: Estimation
+          - generic [ref=f14e353]: Sprint
+          - generic [ref=f14e354]: Retro
+          - generic [ref=f14e355]: Review
+          - generic [ref=f14e356]: Speedback
+        - generic [ref=f14e357]:
+          - strong [ref=f14e358]: "Hobbies:"
+          - generic [ref=f14e359]: upskilling
+          - generic [ref=f14e360]: music
+          - generic [ref=f14e361]: movies
+      - img "signature" [ref=f14e362]

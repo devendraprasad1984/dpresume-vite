@@ -1436,3 +1436,434 @@ input, textarea, select {
 .dp-project::before {
   background: var(--accent) !important;
 }
+
+/* --- matrix banner ---------------------------------------------------------- */
+
+.dp-banner {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  border-radius: var(--radius-md);
+  background: #132e29;
+  display: flex;
+  align-items: center;
+}
+
+.dp-banner__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.dp-banner__content {
+  position: relative;
+  max-width: 640px;
+  padding: 40px clamp(20px, 5vw, 56px);
+  background: radial-gradient(closest-side, rgba(19, 46, 41, 0.92), rgba(19, 46, 41, 0));
+}
+
+.dp-banner__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  color: #f4eee0 !important;
+}
+
+.dp-banner__title em {
+  display: block;
+  color: #f2abc2;
+  font-style: italic;
+}
+
+.dp-banner__sub {
+  margin: 18px 0 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d9d6c8;
+}
+
+/* --- readable body copy ----------------------------------------------------- */
+
+.dp-prose,
+.dp-role-list li,
+.star-list li,
+.dp-leader,
+.dp-project__panel-inner p {
+  font-size: 1.125rem !important;
+  line-height: 1.7 !important;
+  color: var(--text-body);
+}
+
+.dp-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  line-height: 1.4;
+}
+
+.dp-prose,
+.star-list {
+  max-width: 72ch;
+}
+
+.dp-role-list,
+.star-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dp-role-list li,
+.star-list li {
+  position: relative;
+  padding: 10px 0 10px 1.4rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.dp-role-list li::before,
+.star-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.2em;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+}
+
+.skill-label,
+.dp-contact__chip,
+.dp-quicklinks .hyperlink {
+  font-size: 0.95rem;
+}
+
+/* --- Netflix-style ranked tiles -------------------------------------------- */
+
+.dp-ranked {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: rank;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dp-ranked li,
+.dp-ranked-row {
+  counter-increment: rank;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dp-ranked__num::before {
+  content: counter(rank);
+  display: block;
+  min-width: 2.6rem;
+  text-align: right;
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.08em;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--brand);
+  transition: -webkit-text-stroke-color 260ms var(--ease-out), color 260ms var(--ease-out);
+}
+
+.dp-ranked li:hover .dp-ranked__num::before,
+.dp-ranked-row:hover .dp-ranked__num::before {
+  color: var(--accent);
+  -webkit-text-stroke-color: var(--accent);
+}
+
+.dp-ranked .dp-leader {
+  flex: 1;
+  min-width: 0;
+  background: var(--surface-2);
+  border: 1px solid var(--border-soft);
+}
+
+[data-theme="dark"] .dp-ranked__num::before {
+  -webkit-text-stroke-color: #f4eee0;
+}
+
+.dp-projects {
+  counter-reset: rank;
+}
+
+.dp-project.dp-ranked-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 1.25rem;
+  align-items: start;
+  padding: 1rem 0 0 2rem;
+}
+
+.dp-project.dp-ranked-row > * {
+  grid-column: 2;
+}
+
+.dp-project.dp-ranked-row > .dp-ranked__num {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 3.4rem;
+}
+
+.dp-project.dp-ranked-row .dp-ranked__num::before {
+  min-width: 0;
+  font-size: 4.5rem;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .dp-project.dp-ranked-row {
+    column-gap: 0.75rem;
+    padding: 0.75rem 0 0 1.25rem;
+  }
+  .dp-project.dp-ranked-row > .dp-ranked__num {
+    min-width: 2.2rem;
+  }
+  .dp-project.dp-ranked-row .dp-ranked__num::before {
+    font-size: 3rem;
+  }
+}
+
+/* --- Home role list: big outlined numbers, no boxes -------------------------- */
+
+.dp-role-list {
+  counter-reset: rank;
+  max-width: none;
+}
+
+.dp-role-list li {
+  counter-increment: rank;
+  padding: 1rem 0 1rem 5rem;
+  border-bottom: 0;
+  min-height: 4.5rem;
+}
+
+.dp-role-list li::before {
+  content: counter(rank);
+  top: 0.5rem;
+  left: 0;
+  width: auto;
+  height: auto;
+  background: none;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.08em;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--brand);
+  transition: -webkit-text-stroke-color 260ms var(--ease-out), color 260ms var(--ease-out);
+}
+
+.dp-role-list li:hover::before {
+  color: var(--accent);
+  -webkit-text-stroke-color: var(--accent);
+}
+
+[data-theme="dark"] .dp-role-list li::before {
+  -webkit-text-stroke-color: #f4eee0;
+}
+
+@media (max-width: 640px) {
+  .dp-role-list li {
+    padding-left: 3.5rem;
+  }
+  .dp-role-list li::before {
+    font-size: 2.4rem;
+  }
+}
+
+/* --- Full-width nav with theme switcher inside ------------------------------- */
+
+.dp-nav {
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.dp-nav .dp-nav__toggle {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.dp-nav .dp-theme-toggle {
+  height: 36px;
+  width: 36px;
+  background: rgba(244, 238, 224, 0.12);
+  border-color: rgba(244, 238, 224, 0.3);
+  box-shadow: none;
+}
+
+/* Leaders: number lives inside the tile box */
+.dp-ranked li {
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem 0.75rem 1.25rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+}
+
+.dp-ranked li .dp-ranked__num::before {
+  min-width: 2rem;
+  font-size: 3.25rem;
+  text-align: left;
+}
+
+.dp-ranked .dp-leader,
+.dp-ranked .dp-leader:hover {
+  background: none;
+  border: 0;
+  padding: 0;
+  transform: none;
+}
+
+/* Rotating banner phrases */
+.dp-banner__title {
+  min-height: 3.6em;
+  animation: dp-phrase-in 450ms var(--ease-out) both;
+}
+
+@keyframes dp-phrase-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dp-banner__title { animation: none; }
+}
+
+/* Banner: full-width content and a fixed-size layout so phrase changes never shift anything */
+.dp-banner {
+  height: 320px;
+  min-height: 0;
+}
+
+.dp-banner__content {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  padding: 0 clamp(20px, 5vw, 56px);
+  background: none;
+}
+
+.dp-banner__title {
+  min-height: 0;
+  font-size: clamp(1.3rem, 4.2vw, 3.5rem);
+  line-height: 1.2;
+  height: 2.4em;
+}
+
+.dp-banner__title,
+.dp-banner__title em {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dp-banner__sub {
+  height: 3.2em;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .dp-banner {
+    height: 260px;
+  }
+  .dp-banner__sub {
+    height: 4.8em;
+    font-size: 1rem;
+  }
+}
+
+/* --- Home role list: plain, simple numbers ---------------------------------- */
+
+.dp-role-list li {
+  padding: 10px 0 10px 2.5rem;
+  min-height: 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.dp-role-list li::before {
+  content: counter(rank) ".";
+  top: 10px;
+  width: 2rem;
+  font-family: inherit;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: var(--accent);
+  -webkit-text-stroke: 0;
+}
+
+.dp-role-list li:hover::before {
+  color: var(--accent);
+  -webkit-text-stroke: 0;
+}
+
+[data-theme="dark"] .dp-role-list li::before {
+  -webkit-text-stroke: 0;
+}
+
+@media (max-width: 640px) {
+  .dp-role-list li {
+    padding-left: 2.25rem;
+  }
+  .dp-role-list li::before {
+    font-size: 1.125rem;
+  }
+}
+
+/* Home role list: two-digit numbers (01, 02, ...) */
+.dp-role-list li::before {
+  content: counter(rank, decimal-leading-zero);
+  font-variant-numeric: tabular-nums;
+  width: 2.25rem;
+}
+
+.dp-role-list li {
+  padding-left: 3rem;
+}
+
+/* --- Dark footer with light text -------------------------------------------- */
+
+footer.footer {
+  background: #14231c;
+  color: #f4eee0;
+}
+
+footer.footer .glass {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none;
+}
+
+footer.footer,
+footer.footer h2,
+footer.footer strong,
+footer.footer a,
+footer.footer .hyperlink {
+  color: #f4eee0 !important;
+}
+
+footer.footer .dp-footer-group .hyperlink:hover {
+  background: rgba(244, 238, 224, 0.12) !important;
+  color: #fff !important;
+}
+
+footer.footer .sign {
+  filter: invert(1);
+  opacity: 0.85;
+}
