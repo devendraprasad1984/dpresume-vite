@@ -1867,3 +1867,31 @@ footer.footer .sign {
   filter: invert(1);
   opacity: 0.85;
 }
+
+/* --- Resume (markdown) view -------------------------------------------------- */
+
+.dp-resume-md {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding: 1.25rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border-soft);
+  color: var(--text-body);
+  margin: 0;
+}
+
+.dp-nav .dp-nav__download {
+  white-space: nowrap;
+}
+
+.dp-earlier {
+  margin: 1rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-soft);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-body);
+}

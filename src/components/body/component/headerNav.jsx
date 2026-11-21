@@ -6,7 +6,8 @@ const navItems = [
   {to: "/about", label: "About"},
   {to: "/projects", label: "Projects"},
   {to: "/apps", label: "Apps"},
-  {to: "/js-concepts", label: "JS"}
+  {to: "/js-concepts", label: "JS"},
+  {to: "/resume", label: "CV.md"}
 ];
 
 const HeaderNav = () => {

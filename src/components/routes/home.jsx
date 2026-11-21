@@ -33,6 +33,8 @@ const Home = () => {
       ))}
     </ul>
 
+    <p className="dp-prose dp-earlier">{homeExperiences.earlier}</p>
+
     <CertsView/>
     <HomeAppsWrapper/>
     {isMobile && <Right/>}

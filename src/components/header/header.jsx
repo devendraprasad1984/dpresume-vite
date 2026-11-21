@@ -41,6 +41,14 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
+              <a
+                className="hyperlink anim-fade-left"
+                style={{"--stagger": quickLinks.length + 3}}
+                href="/docs/devendra_prasad.md"
+                download="devendra_prasad.md"
+              >
+                Download CV (.md)
+              </a>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import JsConcepts from "../apps/js-concepts/jsConcepts.jsx";
 import About from "./routes/about.jsx";
 import Home from "./routes/home.jsx";
 import ProjectList from "./routes/projectList.jsx";
+import Resume from "./routes/resume.jsx";
 
 const AppRoutes = () => {
   return <Routes>
@@ -12,6 +13,7 @@ const AppRoutes = () => {
     <Route path="/projects" element={<ProjectList/>}/>
     <Route path="/apps/:id" element={<AppsHome/>}/>
     <Route path="/apps" element={<AppsHome/>}/>
+    <Route path="/resume" element={<Resume/>}/>
     <Route path="/js-concepts" element={<JsConcepts/>}/>
   </Routes>;
 };
